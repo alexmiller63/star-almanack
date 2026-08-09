@@ -388,3 +388,39 @@ The goal is not merely to publish astronomical data.
 
 The goal is to translate the machinery of astronomy into the experience of walking outside, looking up, and knowing what you are looking at.
 
+### What Makes a Most Ordinary Day?
+
+A Most Ordinary Day should be deliberately unremarkable. It should not mark the beginning or end of a month, season, or year, and it should not fall conveniently in the middle of one. It should avoid solstices, equinoxes, major holidays, leap-day effects, and other dates that already carry obvious calendrical or astronomical significance.
+
+Its time should be similarly ordinary. Midnight, noon, the top of an hour, and other neat boundaries should be avoided. A time such as 10:53 UTC is preferable precisely because neither the hour nor the minute looks specially chosen.
+
+At the same time, a Most Ordinary Day must be useful. When converted into civil time around the world, it should demonstrate a variety of results. It should encounter both standard time and daylight-saving time where those systems are used, illustrate that different parts of the world can be on different calendar dates at the same instant, and work naturally with unusual civil-time offsets such as India's half-hour offset and Nepal's 45-minute offset.
+
+The convention should also remain useful from year to year. A candidate should therefore avoid dates whose character changes substantially because of leap years or recurring clock changes.
+
+No single candidate satisfying these requirements is uniquely the most ordinary. Choosing one by preference would give arbitrary importance to the chooser's taste. Star Almanack therefore selected several equally acceptable candidates and allowed a physical random process—a real quarter flipped twice—to make the final choice.
+
+The 4 candidates were:
+
+- **HH — February 7, 03:17 UTC**
+
+- **HT — May 23, 18:41 UTC**
+
+- **TH — August 9, 10:53 UTC**
+
+- **TT — November 17, 22:29 UTC**
+
+A real quarter was then flipped twice.
+
+**First flip: Tails**
+
+**Second flip: Heads**
+
+The result was **TH**.
+
+Therefore, the Most Ordinary Day is:
+
+**August 9 at 10:53 UTC**
+
+The Most Ordinary Day is thus carefully designed to be useful and deliberately prevented from being special.
+
