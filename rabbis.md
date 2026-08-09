@@ -162,3 +162,7 @@ We draw the lines.
 
 And sometimes it takes two rabbis, standing on the far side of the world and disagreeing about Shabbat, to discover why the lines are necessary.
 
+When I was learning to fly, I was taught to use Zulu time—the common aviation name for the universal time reference associated with Greenwich. The conversion seemed simple: take today’s date and convert the local hour to Zulu time. But there was a subtle error in that instruction. Sometimes the conversion crosses midnight. When that happens, the hour changes and the date must change with it. A correct time attached to the wrong date is still the wrong time.
+
+Years later, this struck me as a real-world version of the problem faced by the two rabbis. We do not merely need a common clock. We need a common way of saying which day that clock belongs to.
+
