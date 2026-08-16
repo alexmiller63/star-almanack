@@ -2,173 +2,187 @@
 
 These 80 objects extend the preserved 20-object validation set to a working catalog of 100 objects.
 
-The preserved 20 were independently regenerated before this expansion.
-
-**Regression result: 20/20 PASS**
-
 Best visibility is defined as meridian transit at 9:00 PM local apparent solar time.
+
+Season convention:
+
+- Winter — December through February
+
+- Spring — March through May
+
+- Summer — June through August
+
+- Autumn — September through November
 
 ## 40 Additional Stars
 
-- Sirius — Feb 13
+| Star | Bayer designation | Best visibility | Season |
 
-- Rigel — Jan 21
+|---|---|---|---|
 
-- Capella — Jan 22
+| Sirius | α Canis Majoris | Feb 13 | Winter |
 
-- Betelgeuse — Jan 31
+| Rigel | β Orionis | Jan 21 | Winter |
 
-- Procyon — Feb 27
+| Capella | α Aurigae | Jan 22 | Winter |
 
-- Pollux — Feb 28
+| Betelgeuse | α Orionis | Jan 31 | Winter |
 
-- Regulus — Apr 8
+| Procyon | α Canis Minoris | Feb 27 | Winter |
 
-- Spica — May 29
+| Pollux | β Geminorum | Feb 28 | Winter |
 
-- Arcturus — Jun 11
+| Regulus | α Leonis | Apr 8 | Spring |
 
-- Antares — Jul 13
+| Spica | α Virginis | May 29 | Spring |
 
-- Vega — Aug 15
+| Arcturus | α Boötis | Jun 11 | Summer |
 
-- Albireo — Aug 29
+| Antares | α Scorpii | Jul 13 | Summer |
 
-- Altair — Sep 4
+| Vega | α Lyrae | Aug 15 | Summer |
 
-- Deneb — Sep 18
+| Albireo | β Cygni | Aug 29 | Summer |
 
-- Aldebaran — Jan 12
+| Altair | α Aquilae | Sep 4 | Autumn |
 
-- Hadar — Jun 8
+| Deneb | α Cygni | Sep 18 | Autumn |
 
-- Mimosa — May 20
+| Aldebaran | α Tauri | Jan 12 | Winter |
 
-- Gacrux — May 16
+| Hadar | β Centauri | Jun 8 | Summer |
 
-- Alioth — May 22
+| Mimosa | β Crucis | May 20 | Spring |
 
-- Mizar — May 29
+| Gacrux | γ Crucis | May 16 | Spring |
 
-- Merak — Apr 23
+| Alioth | ε Ursae Majoris | May 22 | Spring |
 
-- Phecda — May 6
+| Mizar | ζ Ursae Majoris | May 29 | Spring |
 
-- Megrez — May 12
+| Merak | β Ursae Majoris | Apr 23 | Spring |
 
-- Alnilam — Jan 27
+| Phecda | γ Ursae Majoris | May 6 | Spring |
 
-- Alnitak — Jan 28
+| Megrez | δ Ursae Majoris | May 12 | Spring |
 
-- Mintaka — Jan 26
+| Alnilam | ε Orionis | Jan 27 | Winter |
 
-- Saiph — Jan 29
+| Alnitak | ζ Orionis | Jan 28 | Winter |
 
-- Elnath — Jan 24
+| Mintaka | δ Orionis | Jan 26 | Winter |
 
-- Mirfak — Dec 27
+| Saiph | κ Orionis | Jan 29 | Winter |
 
-- Algol — Dec 24
+| Elnath | β Tauri | Jan 24 | Winter |
 
-- Denebola — May 5
+| Mirfak | α Persei | Dec 27 | Winter |
 
-- Alphecca — Jun 30
+| Algol | β Persei | Dec 24 | Winter |
 
-- Rasalhague — Jul 29
+| Denebola | β Leonis | May 5 | Spring |
 
-- Shaula — Jul 29
+| Alphecca | α Coronae Borealis | Jun 30 | Summer |
 
-- Kaus Australis — Aug 11
+| Rasalhague | α Ophiuchi | Jul 29 | Summer |
 
-- Nunki — Aug 20
+| Shaula | λ Scorpii | Jul 29 | Summer |
 
-- Enif — Oct 5
+| Kaus Australis | ε Sagittarii | Aug 11 | Summer |
 
-- Markab — Oct 27
+| Nunki | σ Sagittarii | Aug 20 | Summer |
 
-- Alpheratz — Nov 12
+| Enif | ε Pegasi | Oct 5 | Autumn |
 
-- Kochab — Jun 19
+| Markab | α Pegasi | Oct 27 | Autumn |
+
+| Alpheratz | α Andromedae | Nov 12 | Autumn |
+
+| Kochab | β Ursae Minoris | Jun 19 | Summer |
 
 ## 40 Additional Messier Objects
 
-- M1 — Crab Nebula — Jan 26
+| Object | Common name/type | Best visibility | Season |
 
-- M2 — Globular Cluster — Oct 2
+|---|---|---|---|
 
-- M3 — Globular Cluster — Jun 3
+| M1 | Crab Nebula | Jan 26 | Winter |
 
-- M4 — Globular Cluster — Jul 12
+| M2 | Globular Cluster | Oct 2 | Autumn |
 
-- M5 — Globular Cluster — Jun 26
+| M3 | Globular Cluster | Jun 3 | Summer |
 
-- M6 — Butterfly Cluster — Jul 31
+| M4 | Globular Cluster | Jul 12 | Summer |
 
-- M7 — Ptolemy's Cluster — Aug 3
+| M5 | Globular Cluster | Jun 26 | Summer |
 
-- M10 — Globular Cluster — Jul 20
+| M6 | Butterfly Cluster | Jul 31 | Summer |
 
-- M11 — Wild Duck Cluster — Aug 18
+| M7 | Ptolemy's Cluster | Aug 3 | Summer |
 
-- M12 — Globular Cluster — Jul 17
+| M10 | Globular Cluster | Jul 20 | Summer |
 
-- M15 — Globular Cluster — Oct 1
+| M11 | Wild Duck Cluster | Aug 18 | Summer |
 
-- M16 — Eagle Nebula — Aug 10
+| M12 | Globular Cluster | Jul 17 | Summer |
 
-- M17 — Omega Nebula — Aug 10
+| M15 | Globular Cluster | Oct 1 | Autumn |
 
-- M22 — Globular Cluster — Aug 14
+| M16 | Eagle Nebula | Aug 10 | Summer |
 
-- M24 — Sagittarius Star Cloud — Aug 9
+| M17 | Omega Nebula | Aug 10 | Summer |
 
-- M33 — Triangulum Galaxy — Dec 2
+| M22 | Globular Cluster | Aug 14 | Summer |
 
-- M34 — Open Cluster — Dec 18
+| M24 | Sagittarius Star Cloud | Aug 9 | Summer |
 
-- M35 — Open Cluster — Feb 4
+| M33 | Triangulum Galaxy | Dec 2 | Winter |
 
-- M36 — Open Cluster — Jan 27
+| M34 | Open Cluster | Dec 18 | Winter |
 
-- M37 — Open Cluster — Jan 31
+| M35 | Open Cluster | Feb 4 | Winter |
 
-- M38 — Open Cluster — Jan 25
+| M36 | Open Cluster | Jan 27 | Winter |
 
-- M39 — Open Cluster — Oct 2
+| M37 | Open Cluster | Jan 31 | Winter |
 
-- M41 — Open Cluster — Feb 13
+| M38 | Open Cluster | Jan 25 | Winter |
 
-- M46 — Open Cluster — Feb 27
+| M39 | Open Cluster | Oct 2 | Autumn |
 
-- M47 — Open Cluster — Feb 26
+| M41 | Open Cluster | Feb 13 | Winter |
 
-- M50 — Open Cluster — Feb 17
+| M46 | Open Cluster | Feb 27 | Winter |
 
-- M52 — Open Cluster — Nov 1
+| M47 | Open Cluster | Feb 26 | Winter |
 
-- M63 — Sunflower Galaxy — May 27
+| M50 | Open Cluster | Feb 17 | Winter |
 
-- M64 — Black Eye Galaxy — May 22
+| M52 | Open Cluster | Nov 1 | Autumn |
 
-- M65 — Galaxy — Apr 27
+| M63 | Sunflower Galaxy | May 27 | Spring |
 
-- M66 — Galaxy — Apr 28
+| M64 | Black Eye Galaxy | May 22 | Spring |
 
-- M67 — Open Cluster — Mar 18
+| M65 | Galaxy | Apr 27 | Spring |
 
-- M81 — Bode's Galaxy — Apr 5
+| M66 | Galaxy | Apr 28 | Spring |
 
-- M82 — Cigar Galaxy — Apr 5
+| M67 | Open Cluster | Mar 18 | Spring |
 
-- M92 — Globular Cluster — Jul 25
+| M81 | Bode's Galaxy | Apr 5 | Spring |
 
-- M97 — Owl Nebula — Apr 26
+| M82 | Cigar Galaxy | Apr 5 | Spring |
 
-- M101 — Pinwheel Galaxy — Jun 8
+| M92 | Globular Cluster | Jul 25 | Summer |
 
-- M104 — Sombrero Galaxy — May 18
+| M97 | Owl Nebula | Apr 26 | Spring |
 
-- M106 — Galaxy — May 13
+| M101 | Pinwheel Galaxy | Jun 8 | Summer |
 
-- M110 — Satellite Galaxy of M31 — Nov 20
+| M104 | Sombrero Galaxy | May 18 | Spring |
+
+| M106 | Galaxy | May 13 | Spring |
+
+| M110 | Satellite Galaxy of M31 | Nov 20 | Autumn |
 
