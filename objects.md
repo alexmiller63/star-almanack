@@ -1,172 +1,174 @@
-Star Almanack — 80 Additional Candidate Objects
+# Star Almanack — 80 Additional Candidate Objects
 
-Original 20 preserved unchanged
+These 80 objects extend the preserved 20-object validation set to a working catalog of 100 objects.
 
-Adds: 40 stars + 40 Messier objects
+The preserved 20 were independently regenerated before this expansion.
 
-Final candidate catalog: 50 stars + 50 Messier objects = 100
+**Regression result: 20/20 PASS**
 
-ADDITIONAL STARS — 40
+Best visibility is defined as meridian transit at 9:00 PM local apparent solar time.
 
-01. Sirius — α Canis Majoris
+## 40 Additional Stars
 
-02. Rigel — β Orionis
+- Sirius — Feb 13
 
-03. Capella — α Aurigae
+- Rigel — Jan 21
 
-04. Betelgeuse — α Orionis
+- Capella — Jan 22
 
-05. Procyon — α Canis Minoris
+- Betelgeuse — Jan 31
 
-06. Pollux — β Geminorum
+- Procyon — Feb 27
 
-07. Regulus — α Leonis
+- Pollux — Feb 28
 
-08. Spica — α Virginis
+- Regulus — Apr 8
 
-09. Arcturus — α Boötis
+- Spica — May 29
 
-10. Antares — α Scorpii
+- Arcturus — Jun 11
 
-11. Vega — α Lyrae
+- Antares — Jul 13
 
-12. Albireo — β Cygni
+- Vega — Aug 15
 
-13. Altair — α Aquilae
+- Albireo — Aug 29
 
-14. Deneb — α Cygni
+- Altair — Sep 4
 
-15. Aldebaran — α Tauri
+- Deneb — Sep 18
 
-16. Hadar — β Centauri
+- Aldebaran — Jan 12
 
-17. Mimosa — β Crucis
+- Hadar — Jun 8
 
-18. Gacrux — γ Crucis
+- Mimosa — May 20
 
-19. Alioth — ε Ursae Majoris
+- Gacrux — May 16
 
-20. Mizar — ζ Ursae Majoris
+- Alioth — May 22
 
-21. Merak — β Ursae Majoris
+- Mizar — May 29
 
-22. Phecda — γ Ursae Majoris
+- Merak — Apr 23
 
-23. Megrez — δ Ursae Majoris
+- Phecda — May 6
 
-24. Alnilam — ε Orionis
+- Megrez — May 12
 
-25. Alnitak — ζ Orionis
+- Alnilam — Jan 27
 
-26. Mintaka — δ Orionis
+- Alnitak — Jan 28
 
-27. Saiph — κ Orionis
+- Mintaka — Jan 26
 
-28. Elnath — β Tauri
+- Saiph — Jan 29
 
-29. Mirfak — α Persei
+- Elnath — Jan 24
 
-30. Algol — β Persei
+- Mirfak — Dec 27
 
-31. Denebola — β Leonis
+- Algol — Dec 24
 
-32. Alphecca — α Coronae Borealis
+- Denebola — May 5
 
-33. Rasalhague — α Ophiuchi
+- Alphecca — Jun 30
 
-34. Shaula — λ Scorpii
+- Rasalhague — Jul 29
 
-35. Kaus Australis — ε Sagittarii
+- Shaula — Jul 29
 
-36. Nunki — σ Sagittarii
+- Kaus Australis — Aug 11
 
-37. Enif — ε Pegasi
+- Nunki — Aug 20
 
-38. Markab — α Pegasi
+- Enif — Oct 5
 
-39. Alpheratz — α Andromedae
+- Markab — Oct 27
 
-40. Kochab — β Ursae Minoris
+- Alpheratz — Nov 12
 
-ADDITIONAL MESSIER OBJECTS — 40
+- Kochab — Jun 19
 
-01. M1 — Crab Nebula
+## 40 Additional Messier Objects
 
-02. M2 — globular cluster
+- M1 — Crab Nebula — Jan 26
 
-03. M3 — globular cluster
+- M2 — Globular Cluster — Oct 2
 
-04. M4 — globular cluster
+- M3 — Globular Cluster — Jun 3
 
-05. M5 — globular cluster
+- M4 — Globular Cluster — Jul 12
 
-06. M6 — Butterfly Cluster
+- M5 — Globular Cluster — Jun 26
 
-07. M7 — Ptolemy's Cluster
+- M6 — Butterfly Cluster — Jul 31
 
-08. M10 — globular cluster
+- M7 — Ptolemy's Cluster — Aug 3
 
-09. M11 — Wild Duck Cluster
+- M10 — Globular Cluster — Jul 20
 
-10. M12 — globular cluster
+- M11 — Wild Duck Cluster — Aug 18
 
-11. M15 — globular cluster
+- M12 — Globular Cluster — Jul 17
 
-12. M16 — Eagle Nebula
+- M15 — Globular Cluster — Oct 1
 
-13. M17 — Omega Nebula
+- M16 — Eagle Nebula — Aug 10
 
-14. M22 — globular cluster
+- M17 — Omega Nebula — Aug 10
 
-15. M24 — Sagittarius Star Cloud
+- M22 — Globular Cluster — Aug 14
 
-16. M33 — Triangulum Galaxy
+- M24 — Sagittarius Star Cloud — Aug 9
 
-17. M34 — open cluster
+- M33 — Triangulum Galaxy — Dec 2
 
-18. M35 — open cluster
+- M34 — Open Cluster — Dec 18
 
-19. M36 — open cluster
+- M35 — Open Cluster — Feb 4
 
-20. M37 — open cluster
+- M36 — Open Cluster — Jan 27
 
-21. M38 — open cluster
+- M37 — Open Cluster — Jan 31
 
-22. M39 — open cluster
+- M38 — Open Cluster — Jan 25
 
-23. M41 — open cluster
+- M39 — Open Cluster — Oct 2
 
-24. M46 — open cluster
+- M41 — Open Cluster — Feb 13
 
-25. M47 — open cluster
+- M46 — Open Cluster — Feb 27
 
-26. M50 — open cluster
+- M47 — Open Cluster — Feb 26
 
-27. M52 — open cluster
+- M50 — Open Cluster — Feb 17
 
-28. M63 — Sunflower Galaxy
+- M52 — Open Cluster — Nov 1
 
-29. M64 — Black Eye Galaxy
+- M63 — Sunflower Galaxy — May 27
 
-30. M65 — galaxy
+- M64 — Black Eye Galaxy — May 22
 
-31. M66 — galaxy
+- M65 — Galaxy — Apr 27
 
-32. M67 — open cluster
+- M66 — Galaxy — Apr 28
 
-33. M81 — Bode's Galaxy
+- M67 — Open Cluster — Mar 18
 
-34. M82 — Cigar Galaxy
+- M81 — Bode's Galaxy — Apr 5
 
-35. M92 — globular cluster
+- M82 — Cigar Galaxy — Apr 5
 
-36. M97 — Owl Nebula
+- M92 — Globular Cluster — Jul 25
 
-37. M101 — Pinwheel Galaxy
+- M97 — Owl Nebula — Apr 26
 
-38. M104 — Sombrero Galaxy
+- M101 — Pinwheel Galaxy — Jun 8
 
-39. M106 — galaxy
+- M104 — Sombrero Galaxy — May 18
 
-40. M110 — satellite galaxy of M31
+- M106 — Galaxy — May 13
+
+- M110 — Satellite Galaxy of M31 — Nov 20
 
