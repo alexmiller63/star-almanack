@@ -542,3 +542,147 @@ The Almanack can simply say:
 
 The equations explain where that simple statement comes from.
 
+## The ISO Week Calendar
+
+The familiar Gregorian calendar divides the year into months of unequal length. For an almanac organized around repeating weeks, another calendar is useful: the **ISO week-date calendar**.
+
+An ISO date has 3 components:
+
+$$
+
+(\text{week-year},\text{week number},\text{weekday}).
+
+$$
+
+The weekdays are numbered
+
+$$
+
+1,2,3,4,5,6,7
+
+$$
+
+from Monday through Sunday.
+
+Thus Monday is day 1 and Sunday is day 7.
+
+### The First Week of the Year
+
+The central rule is simple:
+
+> **ISO week 1 is the week containing the first Thursday of the Gregorian year.**
+
+An equivalent definition is that week 1 is the week containing January 4.
+
+Because every ISO week begins on Monday, the beginning of the ISO year may occur in the final days of December of the preceding Gregorian year.
+
+Similarly, the final ISO week may extend into the first days of January of the following Gregorian year.
+
+This means that the ISO week-year of a date is not always the same as its Gregorian year.
+
+For example, January 1 can sometimes belong to the final ISO week of the preceding year.
+
+### Why Thursday?
+
+Thursday provides an elegant way to determine which year owns a week.
+
+Every Monday-through-Sunday week contains exactly 1 Thursday. The Gregorian year containing that Thursday determines the ISO week-year.
+
+Equivalently, a week belongs to the year containing the majority of its days.
+
+At least 4 of the week's 7 days must therefore fall within its ISO week-year.
+
+### 52 or 53 Weeks
+
+An ordinary ISO week-year contains
+
+$$
+
+52\times7=364
+
+$$
+
+days represented by 52 complete weeks.
+
+Because a Gregorian year contains 365 days, or 366 in a leap year, the calendar cannot always fit into exactly 52 ISO weeks.
+
+Some ISO years therefore contain a 53rd week.
+
+An ISO year has 53 weeks when January 1 falls on a Thursday, or when a leap year begins on a Wednesday.
+
+Thus
+
+$$
+
+W_{\max}\in\{52,53\}.
+
+$$
+
+### Calculating the ISO Week Number
+
+Let $N$ be the ordinal day of the Gregorian year, with January 1 equal to 1.
+
+Let $d$ be the ISO weekday number:
+
+$$
+
+1\leq d\leq7.
+
+$$
+
+A useful preliminary expression for the week number is
+
+$$
+
+W=
+
+\left\lfloor
+
+\frac{N-d+10}{7}
+
+\right\rfloor.
+
+$$
+
+The floor function
+
+$$
+
+\lfloor x\rfloor
+
+$$
+
+means the greatest integer less than or equal to $x$.
+
+Values near the beginning and end of the Gregorian year require checking whether the date actually belongs to the preceding or following ISO week-year.
+
+That apparent complication is not an error in the system.
+
+It is the feature that allows every ISO week to remain an intact Monday-through-Sunday unit.
+
+### Why the Almanack Uses It
+
+For the *Star Almanack*, the ISO calendar provides something the ordinary month calendar does not:
+
+**a continuous sequence of complete, consistently numbered weeks.**
+
+Astronomical events do not care whether a civil month contains 28, 29, 30, or 31 days. Observing plans are often naturally expressed in weeks.
+
+The Gregorian calendar can tell us:
+
+**Aug 17, 2026**
+
+The ISO week calendar can tell us:
+
+**2026-W34-1**
+
+The first expression identifies a civil date.
+
+The second tells us immediately that the date is Monday of week 34.
+
+Both describe the same day.
+
+They organize it differently.
+
+The *Star Almanack* uses both because each answers a different question.
+
