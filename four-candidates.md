@@ -19,3 +19,22 @@ And these are the 4 I think we should publish, regardless of which one wins.
 
 Now we can toss the coins.
 
+&&&&&&&&&&&
+
+Time
+
+Good. I checked the offset geometry before choosing them. For inhabited locations, the civil-time range reaches from UTC−11 to UTC+14; UTC−12 also exists but is associated with uninhabited U.S. islands. 
+
+So if we want inhabited places on both May 11 and May 12, every candidate needs to be at or after 10:00 UTC: at UTC+14, 10:00 UTC becomes midnight on May 12. 
+
+I propose these 4 replacement candidates:
+
+* 10:17 UTC
+* 10:43 UTC
+* 11:07 UTC
+* 11:37 UTC
+
+All 4 avoid exact hours, half hours, quarter hours, and obvious numerical patterns. All 4 guarantee that Kiritimati at UTC+14 has reached May 12, while most of the world remains on May 11. They also work nicely with the unusual +05:30, +05:45, +09:30, +10:30, and +12:45 offsets we want represented. 
+
+These would replace—not supplement—the previous 4 time candidates. Then we publish these 4 and let the quarter choose again.
+
