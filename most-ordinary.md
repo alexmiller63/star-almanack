@@ -260,19 +260,45 @@ This raises an interesting question.
 
 If May 11 is our Most Ordinary Day, what happens when someone on Kiritimati quite correctly looks at a calendar and says that it is May 12?
 
-For the *Star Almanack*, the answer is simple:
+There is an additional irony.
+
+May 12 would itself have been rejected as a candidate for the Most Ordinary Day. May 12 is the **International Day of Plant Health**, established by the United Nations to raise awareness of the importance of healthy plants to food security, ecosystems, biodiversity, and economic development.
+
+Yet in several places around the world, our selected instant has already become May 12.
+
+This does not mean that our rigorous treatment has failed.
+
+Quite the opposite.
+
+This is a book about astronomy, and astronomical instants in the *Star Almanack* are expressed in UTC. May 11 is the date of the instant in UTC. May 12 is a local civil date attached to precisely the same physical instant.
 
 **UTC is king.**
 
-The astronomical instant is identified as May 11, 2026 at 11:07 UTC.
+A uniform expression of time is necessary when discussing astronomy. The same astronomical event cannot acquire a different identity merely because observers in different places set their clocks differently. UTC serves as the common reference.
 
-The local dates and times are translations of that instant into civil conventions. They are enormously useful, but they do not redefine the astronomical reference instant.
+But once that single instant is translated into local civil times throughout a spherical world, a change of date somewhere becomes unavoidable.
+
+That is why an International Date Line is necessary.
+
+UTC gives us **one instant**.
+
+Local time gives us **many clocks**.
+
+The International Date Line allows those clocks to have **different dates without contradiction**.
+
+The difference is not a defect in the system.
+
+It is the phenomenon the system was designed to describe.
 
 This is precisely the problem encountered by the two travelers in *The Parable of the Two Rabbis*.
 
 Nature supplies one instant.
 
 Human beings can attach different dates to it.
+
+Nature gives us the motion.
+
+We supply the conventions that let us describe it consistently.
 
 That is why the *Star Almanack* gives astronomical events in UTC first.
 
