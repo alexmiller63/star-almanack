@@ -310,3 +310,53 @@ The original 20-object validation set remains preserved separately within this d
 
 The 80-object expansion provides a broader range of right ascensions, declination bands, observing seasons, stellar landmarks, clusters, nebulae, and galaxies for development of the 2026 Almanack.
 
+## Arctic and Antarctic Objects
+
+Arctic and Antarctic objects require a different interpretation of
+
+best visibility from objects in the Northern, Tropical, and Southern
+
+declination bands.
+
+They are therefore not assigned an observing season.
+
+At sufficiently favorable terrestrial latitudes, an Arctic or
+
+Antarctic object may be circumpolar and remain above the horizon
+
+throughout the year. At other latitudes, the same object may rise and
+
+set, remain very low above the horizon, or never become visible at all.
+
+Star Almanack nevertheless retains a best-visibility date for these
+
+objects.
+
+For an Arctic or Antarctic object, the best-visibility date identifies
+
+when the object transits the local meridian at 9:00 PM local apparent
+
+solar time. At meridian transit the object reaches its greatest altitude
+
+for that daily passage.
+
+The date therefore describes favorable evening placement rather than
+
+the beginning or center of an observing season.
+
+This distinction is particularly useful near the limits of an object's
+
+visibility. An object that barely rises from a particular latitude is
+
+most favorably placed when its meridian transit occurs at a convenient
+
+evening hour. Roughly six months away from that date, its corresponding
+
+meridian transit occurs approximately twelve hours away in local time,
+
+and the object may be below the horizon at 9:00 PM.
+
+For this reason, Arctic and Antarctic objects retain their
+
+best-visibility dates even though they are not assigned seasons.
+
