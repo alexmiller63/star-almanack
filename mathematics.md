@@ -2,11 +2,11 @@
 
 Stephen Hawking tells a story in *A Brief History of Time* about being warned that every equation he included would reduce the book's sales. He therefore tried to write the book without equations, but ultimately allowed himself one: Einstein's famous equation,
 
-\[
+$$
 
 E = mc^2
 
-\]
+$$
 
 The *Star Almanack* takes a similar approach to mathematics. The mathematics underneath the Almanack may be precise. The reader's interface to the sky should remain simple.
 
@@ -52,37 +52,37 @@ Local apparent time is sometimes called **sundial time**. It follows the apparen
 
 At meridian transit, the object's hour angle is 0. Therefore,
 
-\[
+$$
 
-\mathrm{LST}=\alpha_{\text{object}}
+\mathrm{LST} = \alpha_{\text{object}}
 
-\]
+$$
 
-where LST is local sidereal time and \(\alpha_{\text{object}}\) is the object's right ascension.
+where LST is local sidereal time and $\alpha_{\text{object}}$ is the object's right ascension.
 
 At **9:00 PM local apparent time**, the apparent Sun has an hour angle of 9 hours. Therefore,
 
-\[
+$$
 
-\mathrm{LST}=\alpha_\odot+9\mathrm{h}
+\mathrm{LST} = \alpha_\odot + 9\mathrm{h}
 
-\]
+$$
 
 Combining the two expressions gives:
 
-\[
+$$
 
-\alpha_{\text{object}}=\alpha_\odot+9\mathrm{h}
+\alpha_{\text{object}} = \alpha_\odot + 9\mathrm{h}
 
-\]
+$$
 
 and therefore:
 
-\[
+$$
 
-\boxed{\alpha_\odot=\alpha_{\text{object}}-9\mathrm{h}}
+\boxed{\alpha_\odot = \alpha_{\text{object}} - 9\mathrm{h}}
 
-\]
+$$
 
 That is the mathematical heart of the calculation.
 
@@ -206,11 +206,11 @@ The calculations behind the *Star Almanack* may use right ascension, local sider
 
 The internal calculation can say:
 
-\[
+$$
 
-\alpha_\odot=\alpha_{\text{object}}-9\mathrm{h}
+\alpha_\odot = \alpha_{\text{object}} - 9\mathrm{h}
 
-\]
+$$
 
 The Almanack can say:
 
