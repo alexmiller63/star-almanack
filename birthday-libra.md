@@ -1,3 +1,5 @@
+# My Libra Birthday Disappointment
+
 My birthday is October 9.
 
 That makes me a Libra.
@@ -40,11 +42,11 @@ This is the sky you actually encounter when you walk outside.
 
 It is not abstract or symbolic. It is specific. It depends on the exact date, the exact hour, and your exact location on Earth. At any given moment, some constellations are above the horizon, and others are below it. Some are hidden in daylight. Some have just risen. Some are about to set. And some are placed perfectly for you to look up and recognize them.
 
-The Star Almanac is concerned with that second sky.
+The *Star Almanac* is concerned with that second sky.
 
 My failed search for Libra eventually led me to a much more useful question than, “What constellation belongs to this time of year?”
 
 The question is:
 
-What can I actually go outside and see tonight?
+**What can I actually go outside and see tonight?**
 
