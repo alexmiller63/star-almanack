@@ -156,3 +156,29 @@ The goal is therefore:
 
 **Introduce the symbol clearly once, then let the symbol do the work.**
 
+## Classification Order
+
+Star Almanack presents an object's reader-facing classification in the order:
+
+**Declination band + observing season**
+
+For example:
+
+- **Northern Summer**
+
+- **Tropical Winter**
+
+- **Southern Spring**
+
+This ordering is intentional.
+
+Astronomical convention normally places right ascension before declination. Star Almanack reverses that conceptual order for its reader-facing classification.
+
+The declination band comes first because it tells the reader **where** the object lies in the celestial sphere. The observing season comes second because it tells the reader **when** the object is favorably placed in the evening sky.
+
+Arctic and Antarctic objects are not assigned an observing season and are therefore identified simply as:
+
+- **Arctic**
+
+- **Antarctic**
+
