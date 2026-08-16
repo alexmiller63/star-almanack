@@ -1,12 +1,18 @@
-# Star Almanack — 80 Additional Candidate Objects
+# Star Almanack — Candidate Objects
 
-These 80 objects extend the preserved 20-object validation set to a working catalog of 100 objects.
+This document contains the expanded working catalog of stars and Messier objects used in the development and testing of Star Almanack.
 
-Best visibility is defined as meridian transit at 9:00 PM local apparent solar time.
+Best visibility is defined as the annual moment when an object transits the local meridian at 9:00 PM local apparent solar time.
+
+For an object with right ascension α:
+
+α_sun = α_object − 9h
+
+The annual instant at which the apparent Sun reaches that right ascension determines the object's best-visibility date.
 
 ## Declination Bands
 
-Star Almanack groups objects by declination using Earth's axial tilt as the basis for the boundaries:
+Star Almanack groups objects into five declination bands based approximately on Earth's axial tilt:
 
 - **Arctic:** +66.5° to +90°
 
@@ -18,15 +24,103 @@ Star Almanack groups objects by declination using Earth's axial tilt as the basi
 
 - **Antarctic:** −90° to −66.5°
 
-Season convention:
+These categories provide a simple physical description of an object's position north or south of the celestial equator without requiring the reader to work directly with declination coordinates.
 
-- Winter — December through February
+## Season Convention
 
-- Spring — March through May
+Star Almanack uses astronomical rather than meteorological seasons.
 
-- Summer — June through August
+Season boundaries are defined by the calculated apparent solar-longitude crossings:
 
-- Autumn — September through November
+- **0° — March equinox — Spring begins**
+
+- **90° — June solstice — Summer begins**
+
+- **180° — September equinox — Autumn begins**
+
+- **270° — December solstice — Winter begins**
+
+For 2026, the calculated boundaries are:
+
+- March equinox — Mar 20, 14:45:58 UTC
+
+- June solstice — Jun 21, 08:24:31 UTC
+
+- September equinox — Sep 23, 00:05:13 UTC
+
+- December solstice — Dec 21, 20:50:15 UTC
+
+These four boundaries are calculated using the same solar-longitude machinery used for the twelve zodiac ingresses.
+
+Published U.S. Naval Observatory values agree with all four calculations to the Observatory's published one-minute precision.
+
+For **Arctic** and **Antarctic** objects, Star Almanack does not assign a single observing season. Their season field is left blank.
+
+---
+
+# Original 20-Object Validation Set
+
+The original expanded test set consists of 10 stars and 10 Messier objects.
+
+These results are preserved as regression cases.
+
+## 10 Stars
+
+| Star | Bayer designation | Best visibility |
+
+|---|---|---|
+
+| Canopus | α Carinae | Feb 7 |
+
+| Alpha Centauri | α Centauri | Jun 16 |
+
+| Achernar | α Eridani | Dec 3 |
+
+| Acrux | α Crucis | May 15 |
+
+| Bellatrix | γ Orionis | Jan 24 |
+
+| Fomalhaut | α Piscis Austrini | Oct 25 |
+
+| Castor | α Geminorum | Feb 26 |
+
+| Alkaid | η Ursae Majoris | Jun 4 |
+
+| Dubhe | α Ursae Majoris | Apr 23 |
+
+| Polaris | α Ursae Minoris | Dec 16 |
+
+## 10 Messier Objects
+
+| Object | Common name/type | Best visibility |
+
+|---|---|---|
+
+| M31 | Andromeda Galaxy | Nov 20 |
+
+| M42 | Orion Nebula | Jan 26 |
+
+| M45 | Pleiades | Jan 1 |
+
+| M44 | Beehive Cluster | Mar 15 |
+
+| M13 | Hercules Cluster | Jul 16 |
+
+| M57 | Ring Nebula | Aug 19 |
+
+| M8 | Lagoon Nebula | Aug 6 |
+
+| M20 | Trifid Nebula | Aug 6 |
+
+| M27 | Dumbbell Nebula | Sep 6 |
+
+| M51 | Whirlpool Galaxy | May 31 |
+
+---
+
+# 80 Additional Candidate Objects
+
+These 80 objects extend the original 20-object set to a working catalog of 100 objects.
 
 ## 40 Additional Stars
 
@@ -50,7 +144,7 @@ Season convention:
 
 | Spica | α Virginis | May 29 | Spring | Tropical |
 
-| Arcturus | α Boötis | Jun 11 | Summer | Tropical |
+| Arcturus | α Boötis | Jun 11 | Spring | Tropical |
 
 | Antares | α Scorpii | Jul 13 | Summer | Southern |
 
@@ -58,13 +152,13 @@ Season convention:
 
 | Albireo | β Cygni | Aug 29 | Summer | Northern |
 
-| Altair | α Aquilae | Sep 4 | Autumn | Tropical |
+| Altair | α Aquilae | Sep 4 | Summer | Tropical |
 
-| Deneb | α Cygni | Sep 18 | Autumn | Northern |
+| Deneb | α Cygni | Sep 18 | Summer | Northern |
 
 | Aldebaran | α Tauri | Jan 12 | Winter | Tropical |
 
-| Hadar | β Centauri | Jun 8 | Summer | Southern |
+| Hadar | β Centauri | Jun 8 | Spring | Southern |
 
 | Mimosa | β Crucis | May 20 | Spring | Southern |
 
@@ -112,7 +206,7 @@ Season convention:
 
 | Alpheratz | α Andromedae | Nov 12 | Autumn | Northern |
 
-| Kochab | β Ursae Minoris | Jun 19 | Summer | Arctic |
+| Kochab | β Ursae Minoris | Jun 19 | — | Arctic |
 
 ## 40 Additional Messier Objects
 
@@ -124,7 +218,7 @@ Season convention:
 
 | M2 | Globular Cluster | Oct 2 | Autumn | Tropical |
 
-| M3 | Globular Cluster | Jun 3 | Summer | Northern |
+| M3 | Globular Cluster | Jun 3 | Spring | Northern |
 
 | M4 | Globular Cluster | Jul 12 | Summer | Southern |
 
@@ -150,9 +244,9 @@ Season convention:
 
 | M24 | Sagittarius Star Cloud | Aug 9 | Summer | Tropical |
 
-| M33 | Triangulum Galaxy | Dec 2 | Winter | Northern |
+| M33 | Triangulum Galaxy | Dec 2 | Autumn | Northern |
 
-| M34 | Open Cluster | Dec 18 | Winter | Northern |
+| M34 | Open Cluster | Dec 18 | Autumn | Northern |
 
 | M35 | Open Cluster | Feb 4 | Winter | Northern |
 
@@ -182,21 +276,37 @@ Season convention:
 
 | M66 | Galaxy | Apr 28 | Spring | Tropical |
 
-| M67 | Open Cluster | Mar 18 | Spring | Tropical |
+| M67 | Open Cluster | Mar 18 | Winter | Tropical |
 
-| M81 | Bode's Galaxy | Apr 5 | Spring | Arctic |
+| M81 | Bode's Galaxy | Apr 5 | — | Arctic |
 
-| M82 | Cigar Galaxy | Apr 5 | Spring | Arctic |
+| M82 | Cigar Galaxy | Apr 5 | — | Arctic |
 
 | M92 | Globular Cluster | Jul 25 | Summer | Northern |
 
 | M97 | Owl Nebula | Apr 26 | Spring | Northern |
 
-| M101 | Pinwheel Galaxy | Jun 8 | Summer | Northern |
+| M101 | Pinwheel Galaxy | Jun 8 | Spring | Northern |
 
 | M104 | Sombrero Galaxy | May 18 | Spring | Tropical |
 
 | M106 | Galaxy | May 13 | Spring | Northern |
 
 | M110 | Satellite Galaxy of M31 | Nov 20 | Autumn | Northern |
+
+---
+
+# Working Catalog
+
+The current Star Almanack working catalog therefore contains:
+
+- 50 stars
+
+- 50 Messier objects
+
+- 100 objects total
+
+The original 20-object validation set remains preserved separately within this document so that later changes to the calculations can be checked against the historical results.
+
+The 80-object expansion provides a broader range of right ascensions, declination bands, observing seasons, stellar landmarks, clusters, nebulae, and galaxies for development of the 2026 Almanack.
 
