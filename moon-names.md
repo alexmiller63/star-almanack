@@ -168,3 +168,23 @@ The remaining Full Moons receive their ordinary seasonal names.
 
 This makes the naming system a consequence of the astronomy rather than a property of the Gregorian calendar.
 
+### Frost Moon
+
+Star Almanack normally uses 12 recurring Full Moon names aligned with the natural seasons.
+
+**Frost Moon** is a 13th, rarely used name.
+
+It is used when the astronomical arrangement of the Full Moons places an additional lunation between the Hunter's Moon and the Moon Before Yule.
+
+In such a year, the autumn sequence becomes:
+
+**Harvest Moon → Hunter's Moon → Frost Moon → Moon Before Yule**
+
+Frost Moon does not replace the seasonal Blue Moon and should not be confused with it.
+
+A **Blue Moon** is an intercalary designation produced when an astronomical season contains 4 Full Moons; under the traditional seasonal rule, the 3rd is the Blue Moon.
+
+The **Frost Moon**, by contrast, preserves the astronomical meanings of the Harvest Moon and Moon Before Yule when their positions create room for an additional named Full Moon between them.
+
+The name Frost Moon is traditional rather than newly coined by Star Almanack. Star Almanack uses it in this specialized position because its seasonal meaning is appropriate and because it allows the other astronomically anchored Moon names to retain their meanings.
+
