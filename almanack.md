@@ -888,3 +888,223 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 `ISO2026-W20-chart.png` — chart slot.
 
+## ISO 2026-W21
+
+**ISO dates:** 2026-W21-1 through 2026-W21-7  
+
+**Civil dates:** May 18, 2026 – May 24, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, May 18, 2026 | ♉ 29 | Best visibility: M104 — Sombrero Galaxy — Tropical Spring |
+
+| Tue, May 19, 2026 | ♉ 30 | — |
+
+| Wed, May 20, 2026 | ♉ 31 | Best visibility: Mimosa (β Crucis) — Southern Spring |
+
+| Thu, May 21, 2026 | ♊ (Gemini) 1 | ♊ Gemini ingress (60°) — 00:36:44 UTC |
+
+| Fri, May 22, 2026 | ♊ 2 | Best visibility: Alioth (ε Ursae Majoris) — Northern Spring<br>Best visibility: M64 — Black Eye Galaxy — Tropical Spring |
+
+| Sat, May 23, 2026 | ♊ 3 | 🌓 First Quarter — 11:10:57 UTC |
+
+| Sun, May 24, 2026 | ♊ 4 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, May 18, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♉ 27°05′ | ♊ 13°44′ | ♊ 1°14′ | ♊ 28°45′ | ♈ 29°18′ | ♋ 21°33′ | ♈ 10°57′ |
+
+### Sky Note
+
+☿ lies about 4° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+
+### Chart
+
+`ISO2026-W21-chart.png` — chart slot.
+
+## ISO 2026-W22
+
+**ISO dates:** 2026-W22-1 through 2026-W22-7  
+
+**Civil dates:** May 25, 2026 – May 31, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, May 25, 2026 | ♊ 5 | — |
+
+| Tue, May 26, 2026 | ♊ 6 | — |
+
+| Wed, May 27, 2026 | ♊ 7 | Best visibility: M63 — Sunflower Galaxy — Northern Spring |
+
+| Thu, May 28, 2026 | ♊ 8 | — |
+
+| Fri, May 29, 2026 | ♊ 9 | Best visibility: Spica (α Virginis) — Tropical Spring<br>Best visibility: Mizar (ζ Ursae Majoris) — Northern Spring |
+
+| Sat, May 30, 2026 | ♊ 10 | — |
+
+| Sun, May 31, 2026 | ♊ 11 | 🌕 Full Moon — 08:45:16 UTC — Flower Moon<br>Best visibility: M51 — Whirlpool Galaxy — Northern Spring |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, May 25, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♊ 3°49′ | ♍ 22°18′ | ♊ 16°02′ | ♋ 7°06′ | ♉ 4°33′ | ♋ 22°47′ | ♈ 11°38′ |
+
+### Sky Note
+
+☿ lies about 12° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+
+### Chart
+
+`ISO2026-W22-chart.png` — chart slot.
+
+## ISO 2026-W23
+
+**ISO dates:** 2026-W23-1 through 2026-W23-7  
+
+**Civil dates:** Jun 01, 2026 – Jun 07, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jun 01, 2026 | ♊ 12 | — |
+
+| Tue, Jun 02, 2026 | ♊ 13 | — |
+
+| Wed, Jun 03, 2026 | ♊ 14 | Best visibility: M3 — Globular Cluster — Northern Spring |
+
+| Thu, Jun 04, 2026 | ♊ 15 | Best visibility: Alkaid (η Ursae Majoris) — Northern Spring |
+
+| Fri, Jun 05, 2026 | ♊ 16 | — |
+
+| Sat, Jun 06, 2026 | ♊ 17 | — |
+
+| Sun, Jun 07, 2026 | ♊ 18 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jun 1, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♊ 10°32′ | ♐ 17°29′ | ♊ 29°09′ | ♋ 15°24′ | ♉ 9°46′ | ♋ 24°04′ | ♈ 12°15′ |
+
+### Sky Note
+
+♀ and ♃ are separated by about 9° in the Monday snapshot, forming a close pairing in the evening sky after sunset.
+
+### Chart
+
+`ISO2026-W23-chart.png` — chart slot.
+
+## ISO 2026-W24
+
+**ISO dates:** 2026-W24-1 through 2026-W24-7  
+
+**Civil dates:** Jun 08, 2026 – Jun 14, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jun 08, 2026 | ♊ 19 | 🌗 Last Quarter — 10:00:32 UTC<br>Best visibility: Hadar (β Centauri) — Southern Spring<br>Best visibility: M101 — Pinwheel Galaxy — Northern Spring |
+
+| Tue, Jun 09, 2026 | ♊ 20 | — |
+
+| Wed, Jun 10, 2026 | ♊ 21 | — |
+
+| Thu, Jun 11, 2026 | ♊ 22 | Best visibility: Arcturus (α Boötis) — Tropical Spring |
+
+| Fri, Jun 12, 2026 | ♊ 23 | — |
+
+| Sat, Jun 13, 2026 | ♊ 24 | — |
+
+| Sun, Jun 14, 2026 | ♊ 25 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jun 8, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♊ 17°14′ | ♓ 12°16′ | ♋ 10°01′ | ♋ 23°38′ | ♉ 14°56′ | ♋ 25°25′ | ♈ 12°48′ |
+
+### Sky Note
+
+♀ and ♃ are separated by about 2° in the Monday snapshot, forming a close pairing in the evening sky after sunset.
+
+### Chart
+
+`ISO2026-W24-chart.png` — chart slot.
+
+## ISO 2026-W25
+
+**ISO dates:** 2026-W25-1 through 2026-W25-7  
+
+**Civil dates:** Jun 15, 2026 – Jun 21, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jun 15, 2026 | ♊ 26 | 🌑 New Moon — 02:54:07 UTC |
+
+| Tue, Jun 16, 2026 | ♊ 27 | Best visibility: Alpha Centauri (α Centauri) — Southern Spring |
+
+| Wed, Jun 17, 2026 | ♊ 28 | — |
+
+| Thu, Jun 18, 2026 | ♊ 29 | — |
+
+| Fri, Jun 19, 2026 | ♊ 30 | Best visibility: Kochab (β Ursae Minoris) — Arctic |
+
+| Sat, Jun 20, 2026 | ♊ 31 | — |
+
+| Sun, Jun 21, 2026 | ♋ (Cancer) 1 | 🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jun 15, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♊ 23°56′ | ♊ 22°12′ | ♋ 18°24′ | ♌ 1°48′ | ♉ 20°03′ | ♋ 26°49′ | ♈ 13°18′ |
+
+### Sky Note
+
+♀ and ♃ are separated by about 5° in the Monday snapshot, forming a close pairing in the evening sky after sunset. ☽ is also about 2° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W25-chart.png` — chart slot.
+
