@@ -668,3 +668,223 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 `ISO2026-W15-chart.png` — chart slot.
 
+## ISO 2026-W16
+
+**ISO dates:** 2026-W16-1 through 2026-W16-7  
+
+**Civil dates:** Apr 13, 2026 – Apr 19, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Apr 13, 2026 | ♈ 25 | — |
+
+| Tue, Apr 14, 2026 | ♈ 26 | — |
+
+| Wed, Apr 15, 2026 | ♈ 27 | — |
+
+| Thu, Apr 16, 2026 | ♈ 28 | — |
+
+| Fri, Apr 17, 2026 | ♈ 29 | 🌑 New Moon — 11:51:46 UTC |
+
+| Sat, Apr 18, 2026 | ♈ 30 | — |
+
+| Sun, Apr 19, 2026 | ♈ 31 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Apr 13, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♈ 23°05′ | ♒ 25°10′ | ♓ 27°04′ | ♉ 16°22′ | ♈ 2°29′ | ♋ 16°46′ | ♈ 7°02′ |
+
+### Sky Note
+
+♂ and ♄ are separated by about 5° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+
+### Chart
+
+`ISO2026-W16-chart.png` — chart slot.
+
+## ISO 2026-W17
+
+**ISO dates:** 2026-W17-1 through 2026-W17-7  
+
+**Civil dates:** Apr 20, 2026 – Apr 26, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Apr 20, 2026 | ♉ (Taurus) 1 | ♉ Taurus ingress (30°) — 01:39:07 UTC |
+
+| Tue, Apr 21, 2026 | ♉ 2 | — |
+
+| Wed, Apr 22, 2026 | ♉ 3 | — |
+
+| Thu, Apr 23, 2026 | ♉ 4 | Best visibility: Dubhe (α Ursae Majoris) — Northern Spring<br>Best visibility: Merak (β Ursae Majoris) — Northern Spring |
+
+| Fri, Apr 24, 2026 | ♉ 5 | 🌓 First Quarter — 02:31:44 UTC |
+
+| Sat, Apr 25, 2026 | ♉ 6 | — |
+
+| Sun, Apr 26, 2026 | ♉ 7 | Best visibility: M97 — Owl Nebula — Northern Spring |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Apr 20, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♈ 29°56′ | ♊ 4°47′ | ♈ 7°11′ | ♉ 24°55′ | ♈ 7°54′ | ♋ 17°31′ | ♈ 7°52′ |
+
+### Sky Note
+
+♂ and ♄ are separated by about 0° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+
+### Chart
+
+`ISO2026-W17-chart.png` — chart slot.
+
+## ISO 2026-W18
+
+**ISO dates:** 2026-W18-1 through 2026-W18-7  
+
+**Civil dates:** Apr 27, 2026 – May 03, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Apr 27, 2026 | ♉ 8 | Best visibility: M65 — Galaxy — Tropical Spring |
+
+| Tue, Apr 28, 2026 | ♉ 9 | Best visibility: M66 — Galaxy — Tropical Spring |
+
+| Wed, Apr 29, 2026 | ♉ 10 | — |
+
+| Thu, Apr 30, 2026 | ♉ 11 | — |
+
+| Fri, May 01, 2026 | ♉ 12 | 🌕 Full Moon — 17:23:15 UTC — Milk Moon |
+
+| Sat, May 02, 2026 | ♉ 13 | — |
+
+| Sun, May 03, 2026 | ♉ 14 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Apr 27, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♉ 6°45′ | ♍ 12°26′ | ♈ 18°44′ | ♊ 3°26′ | ♈ 13°18′ | ♋ 18°22′ | ♈ 8°41′ |
+
+### Sky Note
+
+♂ and ♄ are separated by about 5° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+
+### Chart
+
+`ISO2026-W18-chart.png` — chart slot.
+
+## ISO 2026-W19
+
+**ISO dates:** 2026-W19-1 through 2026-W19-7  
+
+**Civil dates:** May 04, 2026 – May 10, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, May 04, 2026 | ♉ 15 | — |
+
+| Tue, May 05, 2026 | ♉ 16 | Cross-quarter point — Beltane — 11:49 UTC<br>Best visibility: Denebola (β Leonis) — Tropical Spring |
+
+| Wed, May 06, 2026 | ♉ 17 | Best visibility: Phecda (γ Ursae Majoris) — Northern Spring |
+
+| Thu, May 07, 2026 | ♉ 18 | — |
+
+| Fri, May 08, 2026 | ♉ 19 | — |
+
+| Sat, May 09, 2026 | ♉ 20 | 🌗 Last Quarter — 21:10:33 UTC |
+
+| Sun, May 10, 2026 | ♉ 21 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, May 4, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♉ 13°33′ | ♐ 8°41′ | ♉ 1°42′ | ♊ 11°55′ | ♈ 18°40′ | ♋ 19°20′ | ♈ 9°29′ |
+
+### Sky Note
+
+♂ and ♄ are separated by about 9° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ☿ is also about 12° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W19-chart.png` — chart slot.
+
+## ISO 2026-W20
+
+**ISO dates:** 2026-W20-1 through 2026-W20-7  
+
+**Civil dates:** May 11, 2026 – May 17, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, May 11, 2026 | ♉ 22 | — |
+
+| Tue, May 12, 2026 | ♉ 23 | Best visibility: Megrez (δ Ursae Majoris) — Northern Spring |
+
+| Wed, May 13, 2026 | ♉ 24 | Best visibility: M106 — Galaxy — Northern Spring |
+
+| Thu, May 14, 2026 | ♉ 25 | — |
+
+| Fri, May 15, 2026 | ♉ 26 | Best visibility: Acrux (α Crucis) — Southern Spring |
+
+| Sat, May 16, 2026 | ♉ 27 | 🌑 New Moon — 20:01:01 UTC<br>Best visibility: Gacrux (γ Crucis) — Southern Spring |
+
+| Sun, May 17, 2026 | ♉ 28 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, May 11, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♉ 20°20′ | ♓ 3°23′ | ♉ 16°02′ | ♊ 20°21′ | ♈ 24°00′ | ♋ 20°24′ | ♈ 10°14′ |
+
+### Sky Note
+
+☿ lies about 4° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+
+### Chart
+
+`ISO2026-W20-chart.png` — chart slot.
+
