@@ -124,23 +124,25 @@ Star Almanack does not use the later convention in which the second Full Moon oc
 
 ## Frost Moon
 
-Star Almanack normally uses 12 recurring Full Moon names.
+Star Almanack normally uses 12 recurring Full Moon names aligned with the natural seasons.
 
-**Frost Moon** is a 13th, rarely used name.
+**Frost Moon** is a 13th name used when the astronomical arrangement places an additional Full Moon between the Hunter's Moon and the Moon Before Yule.
 
-It is used when the astronomical arrangement places an additional Full Moon between the Hunter's Moon and the Moon Before Yule.
-
-In such a year, the sequence becomes:
+In such a year, the autumn sequence becomes:
 
 **Harvest Moon → Hunter's Moon → Frost Moon → Moon Before Yule**
 
-Frost Moon is not another form of Blue Moon.
+Frost Moon serves as a **shepherd** in the Star Almanack naming system. Its purpose is to keep the Harvest Moon and Moon Before Yule in their proper astronomical positions when an additional lunation falls between them. Frost Moon does not displace an ordinary Moon name; it names the otherwise additional lunation so that the anchored names remain where they belong.
 
-A Blue Moon results from the 4-Full-Moon seasonal intercalation rule.
+Frost Moon is not another form of Blue Moon and should not be confused with it.
 
-Frost Moon instead provides a traditional seasonal name for an additional late-autumn lunation when the protected positions of the Harvest Moon and Moon Before Yule require one.
+A **Blue Moon** is strictly defined as the 3rd Full Moon in an astronomical season containing 4 Full Moons. When a Full Moon qualifies both for the Frost Moon position and as a Blue Moon, **Blue Moon takes precedence**.
 
-The name **Frost Moon** is traditional. Star Almanack has not invented the name; it assigns the existing name to this specialized position in its astronomical naming system.
+Frost Moon is therefore a secondary intercalary name. It is used only when the additional late-autumn lunation requires a name and no higher-priority designation applies.
+
+The name **Frost Moon** is traditional rather than newly coined by Star Almanack. Star Almanack assigns that existing name this specialized shepherding role because its seasonal meaning is appropriate.
+
+In this way, Frost Moon does not alter the astronomical structure of the naming system. It preserves it.
 
 ## Calculation Principle
 
@@ -168,35 +170,11 @@ The remaining Full Moons receive their ordinary seasonal names.
 
 This makes the naming system a consequence of the astronomy rather than a property of the Gregorian calendar.
 
-### Frost Moon
-
-Star Almanack normally uses 12 recurring Full Moon names aligned with the natural seasons.
-
-**Frost Moon** is a 13th, rarely used name.
-
-It is used when the astronomical arrangement of the Full Moons places an additional lunation between the Hunter's Moon and the Moon Before Yule.
-
-In such a year, the autumn sequence becomes:
-
-**Harvest Moon → Hunter's Moon → Frost Moon → Moon Before Yule**
-
-Frost Moon does not replace the seasonal Blue Moon and should not be confused with it.
-
-A **Blue Moon** is an intercalary designation produced when an astronomical season contains 4 Full Moons; under the traditional seasonal rule, the 3rd is the Blue Moon.
-
-The **Frost Moon**, by contrast, preserves the astronomical meanings of the Harvest Moon and Moon Before Yule when their positions create room for an additional named Full Moon between them.
-
-The name Frost Moon is traditional rather than newly coined by Star Almanack. Star Almanack uses it in this specialized position because its seasonal meaning is appropriate and because it allows the other astronomically anchored Moon names to retain their meanings.
-
 ## 2026–2045 Yule-to-Yule Calculation Test
 
-Each cycle begins immediately after the December solstice with the
+Each cycle begins immediately after the December solstice with the **Moon After Yule** and ends with the following **Moon Before Yule**.
 
-**Moon After Yule** and ends with the following **Moon Before Yule**.
-
-Yule is defined astronomically as the December solstice, not as a fixed
-
-civil calendar date.
+Yule is defined astronomically as the December solstice, not as a fixed civil calendar date.
 
 ### Yule 2025–Yule 2026
 
