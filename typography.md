@@ -182,6 +182,70 @@ Arctic and Antarctic objects are not assigned an observing season and are theref
 
 - **Antarctic**
 
+## Constellation Chart Star Labels
+
+Constellation charts should identify principal named stars using:
+
+**proper name + Greek letter + magnitude**
+
+For example:
+
+`Deneb · α · mag 1.3`
+
+`Albireo · β · mag 3.1`
+
+`Sadr · γ · mag 2.2`
+
+Only the Greek letter is shown on the chart. The full Bayer designation, such as `α Cygni`, is not required in the chart label.
+
+The full Bayer designation may be given in accompanying object text or reference material where useful.
+
+This convention keeps constellation charts visually compact while preserving the relationship between the proper star name and its Bayer letter.
+
+## Magnitude Presentation
+
+Star Almanack deliberately uses different magnitude precision in constellation charts and dated Almanack entries.
+
+### Constellation Charts
+
+On constellation charts, stellar magnitude is shown to **one decimal place**.
+
+For example:
+
+`Deneb · α · mag 1.3`
+
+`Sadr · γ · mag 2.2`
+
+The decimal value is useful on a chart because nearby stars can be compared directly. A reader can see that one plotted star is slightly brighter or fainter than another.
+
+### Dated Almanack Entries
+
+When a star appears in the Almanack because its best-visibility date falls on that date, magnitude is presented as a **whole-number magnitude class**.
+
+The reader-facing values are:
+
+`mag 1`
+
+`mag 2`
+
+`mag 3`
+
+`mag 4`
+
+`mag 5`
+
+`mag 6`
+
+For example, a star whose underlying catalog magnitude is 2.2 is presented in the dated Almanack entry as:
+
+`mag 2`
+
+The decimal catalog magnitude remains available in the underlying astronomical data.
+
+This is an intentional presentation choice. Decimal precision is useful when comparing nearby stars on a chart, but the whole-number magnitude class is more useful as a practical description of a star in a calendar entry.
+
+**Preserve the precise value in the data; present the precision appropriate to the reader's task.**
+
 ## Weekly Classical-Planet Ephemeris
 
 Star Almanack uses a fixed weekly ephemeris to generate the horoscope wheel for each ISO week.
