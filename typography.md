@@ -182,3 +182,119 @@ Arctic and Antarctic objects are not assigned an observing season and are theref
 
 - **Antarctic**
 
+## Weekly Classical-Planet Ephemeris
+
+Star Almanack uses a fixed weekly ephemeris to generate the horoscope wheel for each ISO week.
+
+The weekly ephemeris is calculated independently from the typesetting process. Typesetting reads the preserved astronomical data and does not perform its own astronomical calculations.
+
+### Sampling Rule
+
+For each ISO week, calculate the positions of the 7 traditional wandering bodies at:
+
+**Monday 00:00 UTC**
+
+The bodies are:
+
+- ☉ Sun
+
+- ☽ Moon
+
+- ☿ Mercury
+
+- ♀ Venus
+
+- ♂ Mars
+
+- ♃ Jupiter
+
+- ♄ Saturn
+
+These are the 7 traditional planets in the historical astronomical and astrological sense, including the Sun and Moon.
+
+### Coordinate
+
+For each body, calculate its:
+
+**geocentric tropical ecliptic longitude**
+
+The longitude should be preserved numerically at sufficient precision for reproducible plotting.
+
+For reader-facing tables and charts, convert the longitude into:
+
+**zodiac symbol + degree + arcminute**
+
+For example:
+
+`♑ 7°42′`
+
+The raw numerical longitude should remain available underneath the presentation layer.
+
+### ISO 2026 Coverage
+
+ISO week-numbering year 2026 contains 53 weeks.
+
+The ephemeris therefore contains:
+
+**53 weekly snapshots × 7 bodies = 371 calculated positions**
+
+The first sample is:
+
+**2026-W01 — Monday, Dec 29, 2025 at 00:00 UTC**
+
+The final sample is:
+
+**2026-W53 — Monday, Dec 28, 2026 at 00:00 UTC**
+
+### Ephemeris Table Format
+
+The working table should use astronomical symbols directly:
+
+| ISO Week | Monday 00:00 UTC | ☉ | ☽ | ☿ | ♀ | ♂ | ♃ | ♄ |
+
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+
+| 2026-W01 | Dec 29, 2025 | … | … | … | … | … | … | … |
+
+| 2026-W02 | Jan 5, 2026 | … | … | … | … | … | … | … |
+
+### Weekly Horoscope Wheel
+
+Each ISO week receives a circular horoscope chart.
+
+The wheel is divided into 12 equal 30° slices corresponding to the tropical zodiac.
+
+The zodiac symbols appear inside the slices:
+
+♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓
+
+The 7 classical planets are plotted at their calculated tropical longitudes:
+
+☉ ☽ ☿ ♀ ♂ ♃ ♄
+
+The weekly chart is therefore a graphical representation of the preserved ephemeris rather than a separately calculated result.
+
+### Orientation
+
+The wheel uses a fixed zodiac orientation for every week.
+
+The First Point of Aries is placed at the standard fixed reference position used by Star Almanack, and zodiac longitude increases counterclockwise around the wheel.
+
+Because the chart is not location-dependent, it contains no houses and no Ascendant.
+
+### Separation of Calculation and Presentation
+
+The calculation layer determines the astronomical positions.
+
+The data layer preserves those positions.
+
+The typesetting layer draws the weekly wheel from the preserved data.
+
+Therefore:
+
+**calculation → preserved ephemeris → typesetting → horoscope wheel**
+
+A change to graphic design must not alter the astronomical values.
+
+A change to the astronomical calculation must be regenerated and validated before the resulting values are used by typesetting.
+
