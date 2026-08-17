@@ -674,3 +674,33 @@ bayer:
 
 components:
 
+  - [α, Cap, 1, Algedi Prima, 20.294139, -12.508222, 4.27]
+
+  - [α, Cap, 2, Algedi Secunda, 20.300889, -12.544861, 3.57]
+
+  - [α, Cen, 1, Rigil Kentaurus A, 14.660139, -60.833972, -0.01]
+
+  - [α, Cen, 2, Rigil Kentaurus B, 14.660139, -60.833972, 1.33]
+
+  - [α, Lib, 1, Zubenelgenubi A, 14.847972, -16.041778, 2.75]
+
+  - [α, Lib, 2, Zubenelgenubi B, 14.844778, -15.997222, 5.15]
+
+  - [β, Mon, 1, null, 6.480278, -7.033056, 4.60]
+
+  - [β, Mon, 2, null, 6.480278, -7.033056, 5.00]
+
+  - [β, Mon, 3, null, 6.480278, -7.033056, 5.30]
+
+  - [β, Sco, 1, Acrab A, 16.090611, -19.805444, 2.62]
+
+  - [β, Sco, 2, Acrab B, 16.090611, -19.805444, 4.92]
+
+  - [β, Sgr, 1, Arkab Prior, 19.377306, -44.458972, 3.96]
+
+  - [β, Sgr, 2, Arkab Posterior, 19.386972, -44.799778, 4.27]
+
+special:
+
+  - [proxima-centauri, Proxima Centauri, V645 Cen, Cen, 14.495264, -62.679486, 11.13, 2026-06-15, W25-1, "Special addition outside the alpha/beta inclusion rule; not a naked-eye star."]
+
