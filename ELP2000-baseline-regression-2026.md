@@ -40,3 +40,37 @@ Result:
 This case establishes the first regression anchor. Future lunar-model
 improvements should be compared against this preserved result rather than
 silently replacing the baseline.
+
+## Case 2 — 2026-W24
+
+Sampling time:
+
+**2026-06-08 00:00 UTC**
+
+Preserved Moon position from `ephem.md`:
+
+**♓ 12°16′**
+
+Equivalent geocentric tropical ecliptic longitude:
+
+**342.266667°**
+
+Recovered compact lunar engine:
+
+**342.247680°**
+
+Residual:
+
+**−0.018986°**
+
+or approximately:
+
+**−1.14 arcminutes**
+
+Result:
+
+**2/2 BASELINE REPRODUCED**
+
+This second case provides a regression anchor roughly halfway through the
+year, exercising the recovered lunar model at a substantially different
+orbital configuration from Case 1.
