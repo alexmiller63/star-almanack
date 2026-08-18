@@ -1,5 +1,5 @@
 # star-almanack
-An Observer's Guide to the Night Sky
+An Natural Philosopher's Guide to the Night Sky
 
 ## ISO Week Calendar
 
