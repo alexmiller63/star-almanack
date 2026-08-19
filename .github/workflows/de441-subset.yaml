@@ -3,6 +3,7 @@ name: Build DE441 Eclipse Subset
 on:
 
   workflow_dispatch:
+  push:
 
 permissions:
 
