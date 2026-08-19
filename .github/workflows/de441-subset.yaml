@@ -1,10 +1,8 @@
-name: Build DE441 Eclipse Subset
+name: Diagnose DE441 Eclipse Subset
 
 on:
 
   workflow_dispatch:
-
-  push:
 
 permissions:
 
@@ -12,7 +10,7 @@ permissions:
 
 jobs:
 
-  build-de441-subset:
+  diagnose-de441:
 
     runs-on: ubuntu-latest
 
@@ -26,9 +24,15 @@ jobs:
 
         run: |
 
-          echo "Star Almanack DE441 subset build" > debug.txt
+          echo "Star Almanack DE441 subset diagnostic" > debug.txt
 
           echo "Started: $(date -u)" >> debug.txt
+
+          echo "" >> debug.txt
+
+          echo "Runner:" >> debug.txt
+
+          uname -a >> debug.txt
 
       - name: Download DE441 source kernels
 
@@ -38,13 +42,7 @@ jobs:
 
           wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
 
-      - name: Download NAIF leap-seconds kernel
-
-        run: |
-
-          wget -q https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
-
-      - name: Download and install NAIF SPICE Toolkit
+      - name: Download NAIF SPICE Toolkit
 
         run: |
 
@@ -52,7 +50,7 @@ jobs:
 
           tar -xzf cspice.tar.Z
 
-          echo "$GITHUB_WORKSPACE/cspice/exe" >> "$GITHUB_PATH"
+          test -x ./cspice/exe/brief
 
       - name: Record source sizes and checksums
 
@@ -60,25 +58,15 @@ jobs:
 
           echo "" >> debug.txt
 
-          echo "DE441 source files:" >> debug.txt
+          echo "===== DE441 SOURCE FILES =====" >> debug.txt
 
           ls -lh de441_part-1.bsp de441_part-2.bsp >> debug.txt
 
           echo "" >> debug.txt
 
-          echo "SHA-256 checksums:" >> debug.txt
+          echo "SHA-256:" >> debug.txt
 
           sha256sum de441_part-1.bsp de441_part-2.bsp >> debug.txt
-
-      - name: Record SPICE Toolkit version
-
-        run: |
-
-          echo "" >> debug.txt
-
-          echo "SPICE Toolkit:" >> debug.txt
-
-          brief -v >> debug.txt 2>&1 || true
 
       - name: Inspect DE441 part 1
 
@@ -86,9 +74,9 @@ jobs:
 
           echo "" >> debug.txt
 
-          echo "===== DE441 PART 1 =====" >> debug.txt
+          echo "===== BRIEF: DE441 PART 1 =====" >> debug.txt
 
-          brief de441_part-1.bsp >> debug.txt 2>&1
+          ./cspice/exe/brief de441_part-1.bsp >> debug.txt 2>&1
 
       - name: Inspect DE441 part 2
 
@@ -96,68 +84,48 @@ jobs:
 
           echo "" >> debug.txt
 
-          echo "===== DE441 PART 2 =====" >> debug.txt
+          echo "===== BRIEF: DE441 PART 2 =====" >> debug.txt
 
-          brief de441_part-2.bsp >> debug.txt 2>&1
+          ./cspice/exe/brief de441_part-2.bsp >> debug.txt 2>&1
 
-      - name: Create SPKMERGE command file
-
-        run: |
-
-          cat > spkmerge.txt <<'EOF'
-
-          LEAPSECONDS_KERNEL = naif0012.tls
-
-          SPK_KERNEL = de441-eclipse.bsp
-
-            SOURCE_SPK_KERNEL = de441_part-1.bsp
-
-              BODIES = 10 399 301
-
-            SOURCE_SPK_KERNEL = de441_part-2.bsp
-
-              BODIES = 10 399 301
-
-          EOF
-
-      - name: Build DE441 eclipse subset
-
-        run: |
-
-          spkmerge spkmerge.txt
-
-      - name: Record subset information
+      - name: Record bodies relevant to eclipse kernel
 
         run: |
 
           echo "" >> debug.txt
 
-          echo "===== DE441 ECLIPSE SUBSET =====" >> debug.txt
+          echo "===== TARGET BODY/CENTER CHAIN TO VERIFY =====" >> debug.txt
 
-          ls -lh de441-eclipse.bsp >> debug.txt
+          echo "10  = Sun" >> debug.txt
 
-          sha256sum de441-eclipse.bsp >> debug.txt
+          echo "3   = Earth-Moon barycenter" >> debug.txt
 
-          brief de441-eclipse.bsp >> debug.txt 2>&1
+          echo "399 = Earth" >> debug.txt
+
+          echo "301 = Moon" >> debug.txt
 
           echo "" >> debug.txt
+
+          echo "Use the BRIEF output above to determine which of these segments and centers are actually required before building the subset." >> debug.txt
 
           echo "Finished: $(date -u)" >> debug.txt
 
-      - name: Upload DE441 eclipse subset
+      - name: Show debug.txt
+
+        if: always()
+
+        run: cat debug.txt
+
+      - name: Upload diagnostic
+
+        if: always()
 
         uses: actions/upload-artifact@v4
 
         with:
 
-          name: de441-eclipse-subset
+          name: de441-diagnostic
 
-          path: |
-
-            de441-eclipse.bsp
-
-            debug.txt
-
-            spkmerge.txt
+          path: debug.txt
 
           if-no-files-found: error
