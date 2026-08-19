@@ -52,3 +52,11 @@ jobs:
 
           python normalize_elp82b.py data/elp82b elp82b-manifest.json
 
+      - name: Validate lunar positions against ELP2000-82B reference
+
+        working-directory: star-almanack-elp82b
+
+        run: |
+
+          python validate_elp82b.py elp82b-manifest.json
+
