@@ -33,6 +33,30 @@ The production converter now normalizes the astronomical instant to whole-
 second resolution before decomposing it into a calendar date and clock time.
 The tests below deliberately straddle midnight so that this invariant remains
 protected against future "cleanup" changes.
+
+Why the eclipse geometry diagnostics exist
+------------------------------------------
+When a positive eclipse case has a published/reference greatest-eclipse time,
+the harness evaluates the Star Almanack geometry at BOTH:
+
+  * the engine's calculated greatest-eclipse instant, and
+  * the published/reference greatest-eclipse instant.
+
+This does not change the calculation, classification, search algorithm, or
+PASS/FAIL rules.  It is instrumentation only.
+
+The comparison helps distinguish two classes of defect:
+
+  * search defect:
+      the reference instant has the better Star Almanack geometry, but the
+      search routine selected another instant;
+
+  * geometry/ephemeris/frame defect:
+      Star Almanack's own geometry is genuinely better at the calculated
+      instant, meaning the displaced result originates upstream of the search.
+
+The diagnostic is intentionally general and runs for every positive eclipse
+case that supplies an expected/reference greatest-eclipse time.
 """
 
 from __future__ import annotations
@@ -192,6 +216,149 @@ def _seconds_difference(calculated: str, expected: str) -> float:
     return abs((a - b).total_seconds())
 
 
+def _iso_z_to_jd(text: str) -> float:
+    """
+    Convert an ISO-8601 UTC timestamp to Julian Date using the eclipse engine's
+    own Gregorian-calendar convention.
+
+    This helper is diagnostic only.  It deliberately reuses
+    eclipse_engine.gregorian_to_jd() so the comparison does not introduce a
+    second, independent calendar-to-JD implementation.
+    """
+    dt = _parse_iso_z(text).astimezone(timezone.utc)
+    hour = (
+        dt.hour
+        + dt.minute / 60.0
+        + dt.second / 3600.0
+        + dt.microsecond / 3_600_000_000.0
+    )
+    return eclipse_engine.gregorian_to_jd(
+        dt.year,
+        dt.month,
+        dt.day,
+        hour,
+    )
+
+
+def _angle_between_deg(a: eclipse_engine.Vec3, b: eclipse_engine.Vec3) -> float:
+    """Return the smaller angle between two non-zero vectors in degrees."""
+    denom = a.norm() * b.norm()
+    if denom == 0.0:
+        return float("nan")
+
+    cosine = a.dot(b) / denom
+
+    # Floating-point roundoff can produce a value infinitesimally outside the
+    # mathematical [-1, +1] domain of acos().
+    cosine = max(-1.0, min(1.0, cosine))
+    return math.degrees(math.acos(cosine))
+
+
+def _print_vec(label: str, v: eclipse_engine.Vec3) -> None:
+    print(
+        f"      {label:<5} "
+        f"x={v.x:+.3f} km  "
+        f"y={v.y:+.3f} km  "
+        f"z={v.z:+.3f} km"
+    )
+
+
+def _print_geometry_snapshot(
+    label: str,
+    iso_utc: str,
+    geometry: eclipse_engine.SolarGeometry,
+) -> None:
+    """
+    Print the quantities most useful for locating a displaced eclipse minimum.
+
+    axis_distance_km is the objective minimized by EclipseEngine's search.
+    Sun-Moon angular separation is included as an intuitive secondary measure;
+    it is NOT substituted for the production shadow-axis objective.
+    """
+    separation_deg = _angle_between_deg(geometry.sun, geometry.moon)
+
+    print(f"\n    {label}")
+    print(f"      UTC:                 {iso_utc}")
+    print(f"      JD UTC:              {geometry.jd_utc:.12f}")
+    print(f"      JD TDB approx:       {geometry.jd_tdb_approx:.12f}")
+    print(f"      Sun-Moon separation: {separation_deg:.9f} deg")
+    print(f"      axis distance:       {geometry.axis_distance_km:.3f} km")
+    print(f"      q(min):              {geometry.q_min_km:.3f} km")
+    print(f"      eclipse margin:      {geometry.eclipse_margin_km:+.3f} km")
+    print(f"      central margin:      {geometry.central_margin_km:+.3f} km")
+    print(f"      eclipse type:        {geometry.eclipse_type}")
+    _print_vec("Sun", geometry.sun)
+    _print_vec("Moon", geometry.moon)
+
+
+def _print_reference_geometry_diagnostic(
+    engine: eclipse_engine.EclipseEngine,
+    event: eclipse_engine.SolarEclipseEvent,
+    expected_time: str,
+) -> None:
+    """
+    Compare Star Almanack geometry at calculated and reference greatest times.
+
+    No reference value is fed into the eclipse calculation or search.  The
+    reference instant is evaluated only after the engine has independently
+    produced its result.
+    """
+    reference_jd = _iso_z_to_jd(expected_time)
+    reference_geometry = engine.geometry_at_utc_jd(reference_jd)
+    calculated_geometry = event.geometry
+
+    _print_geometry_snapshot(
+        "geometry at CALCULATED greatest",
+        event.greatest_utc,
+        calculated_geometry,
+    )
+    _print_geometry_snapshot(
+        "geometry at REFERENCE greatest",
+        expected_time,
+        reference_geometry,
+    )
+
+    axis_delta = (
+        reference_geometry.axis_distance_km
+        - calculated_geometry.axis_distance_km
+    )
+    sep_calc = _angle_between_deg(
+        calculated_geometry.sun,
+        calculated_geometry.moon,
+    )
+    sep_ref = _angle_between_deg(
+        reference_geometry.sun,
+        reference_geometry.moon,
+    )
+    separation_delta = sep_ref - sep_calc
+
+    print("\n    diagnostic comparison")
+    print(
+        f"      reference - calculated axis distance: "
+        f"{axis_delta:+.3f} km"
+    )
+    print(
+        f"      reference - calculated angular sep.:  "
+        f"{separation_delta:+.9f} deg"
+    )
+
+    if axis_delta < 0.0:
+        print(
+            "      search clue: reference time has SMALLER axis distance; "
+            "inspect search/bracketing."
+        )
+    elif axis_delta > 0.0:
+        print(
+            "      geometry clue: calculated time has SMALLER axis distance; "
+            "inspect ephemeris/frame/time inputs."
+        )
+    else:
+        print(
+            "      geometry clue: axis distances are equal at displayed "
+            "precision."
+        )
+
+
 def _run_eclipse_case(
     engine: eclipse_engine.EclipseEngine,
     case: dict,
@@ -245,6 +412,14 @@ def _run_eclipse_case(
         print(f"  expected greatest:    {expected_time}")
         print(f"  time error:           {time_error:.1f} s")
         print(f"  time tolerance:       {time_tolerance_seconds:.1f} s")
+
+        # Diagnostic only.  The reference time is never used to influence the
+        # engine's independently calculated event.
+        _print_reference_geometry_diagnostic(
+            engine,
+            event,
+            expected_time,
+        )
 
     # Magnitude is deliberately not graded yet.  The current eclipse engine
     # computes shadow-axis geometry and classification but does not yet expose
