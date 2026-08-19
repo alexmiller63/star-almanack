@@ -166,6 +166,52 @@ they are 12 hours apart.
 
 Thus calendar dates can first be converted into Julian Dates, calculations can be performed using ordinary arithmetic, and the results can then be converted back into calendar dates and times.
 
+### Rounding Julian Dates at Civil Midnight
+
+When a calculated Julian Date is converted back into a civil UTC time, the *Star Almanack* first rounds and normalizes the **instant itself** to the resolution that will be displayed, and only then decomposes that instant into a Gregorian date and a clock time.
+
+That order is deliberate.
+
+Suppose a computed instant lies less than half a second before midnight. At whole-second resolution, the correct result is not
+
+**23:59:60**
+
+and it is not
+
+**86400 seconds on the previous day**.
+
+It is
+
+**00:00:00 on the following day.**
+
+In symbols, if $JD$ is the computed Julian Date and the displayed resolution is 1 second, the implementation first forms an integer number of whole seconds,
+
+$$
+
+S=\left\lfloor 86400\,JD+\frac{1}{2}\right\rfloor,
+
+$$
+
+and then uses
+
+$$
+
+JD_{\mathrm{norm}}=\frac{S}{86400}.
+
+$$
+
+The normalized Julian Date is then converted into the Gregorian date and UTC clock time.
+
+This makes the day boundary part of the arithmetic rather than a special repair performed afterward. Rounding across midnight naturally advances the civil date before the calendar is decomposed.
+
+This detail is also a software-safety rule. An earlier implementation decomposed the calendar first, rounded the seconds afterward, and then attempted to repair a value of 86400 seconds by recursively calling the same conversion routine. At the exact boundary, the correction could leave the Julian Date unchanged. The routine therefore encountered the same condition again, called itself again, and eventually failed with an infinite-recursion error.
+
+The Almanack now follows the stronger invariant:
+
+> **Normalize the astronomical instant first; decompose it into date and time exactly once.**
+
+The aggregate validation harness contains explicit regression cases on both sides of midnight, including values just below and just above the rounding threshold. These tests are release-blocking because every astronomical result that is eventually presented as a UTC timestamp depends on this conversion behaving correctly.
+
 ### Epochs
 
 A celestial coordinate is meaningful only in relation to time.
@@ -353,11 +399,8 @@ Define the elongation
 $$
 
 D =
-
 \lambda_{\text{Moon}}
-
 -
-
 \lambda_{\odot}.
 
 $$
@@ -367,9 +410,7 @@ Because longitude wraps around after $360^\circ$, we reduce the result modulo $3
 $$
 
 D =
-
 (\lambda_{\text{Moon}}-\lambda_{\odot})
-
 \bmod 360^\circ.
 
 $$
@@ -431,21 +472,13 @@ The sequence can therefore be summarized mathematically as
 $$
 
 0^\circ
-
 \rightarrow
-
 90^\circ
-
 \rightarrow
-
 180^\circ
-
 \rightarrow
-
 270^\circ
-
 \rightarrow
-
 360^\circ.
 
 $$
@@ -499,15 +532,10 @@ D(t)
 =
 
 \left(
-
 \lambda_{\text{Moon}}(t)
-
 -
-
 \lambda_{\odot}(t)
-
 \right)
-
 \bmod 360^\circ.
 
 $$
@@ -635,11 +663,8 @@ A useful preliminary expression for the week number is
 $$
 
 W=
-
 \left\lfloor
-
 \frac{N-d+10}{7}
-
 \right\rfloor.
 
 $$
@@ -685,4 +710,3 @@ Both describe the same day.
 They organize it differently.
 
 The *Star Almanack* uses both because each answers a different question.
-
