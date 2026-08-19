@@ -24,29 +24,21 @@ jobs:
 
         run: |
 
-          wget -q --show-progress \
+          wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
 
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
-
-          wget -q --show-progress \
-
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
+          wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
 
       - name: Download NAIF leap-seconds kernel
 
         run: |
 
-          wget -q \
-
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
+          wget -q https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
 
       - name: Download and install NAIF SPICE Toolkit
 
         run: |
 
-          wget -q \
-
-            https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
+          wget -q https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
 
           tar -xzf cspice.tar.Z
 
@@ -171,4 +163,3 @@ jobs:
             de441-subset-provenance.txt
 
           retention-days: 7
-
