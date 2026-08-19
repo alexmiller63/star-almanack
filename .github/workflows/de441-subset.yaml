@@ -3,6 +3,7 @@ name: Build DE441 Eclipse Subset
 on:
 
   workflow_dispatch:
+
   push:
 
 permissions:
@@ -65,11 +66,11 @@ jobs:
 
           sha256sum naif0012.tls >> debug.txt
 
-      - name: Build Star Almanack DE441 eclipse subset
+      - name: Create SPKMERGE command file
 
         run: |
 
-          ./cspice/exe/spkmerge <<'EOF'
+          cat > spkmerge-command.txt <<'EOF'
 
           LEAPSECONDS_KERNEL = naif0012.tls
 
@@ -80,6 +81,18 @@ jobs:
             SOURCE_SPK_KERNEL = de441_part-2.bsp
 
           EOF
+
+          echo "" >> debug.txt
+
+          echo "SPKMERGE command file:" >> debug.txt
+
+          cat spkmerge-command.txt >> debug.txt
+
+      - name: Build Star Almanack DE441 eclipse subset
+
+        run: |
+
+          ./cspice/exe/spkmerge spkmerge-command.txt
 
       - name: Record subset information
 
@@ -112,3 +125,5 @@ jobs:
             star-almanack-de441-eclipse.bsp
 
             debug.txt
+
+            spkmerge-command.txt
