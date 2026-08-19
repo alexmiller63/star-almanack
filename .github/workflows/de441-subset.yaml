@@ -6,7 +6,7 @@ on:
 
 permissions:
 
-  contents: write
+  contents: read
 
 jobs:
 
@@ -24,142 +24,90 @@ jobs:
 
         run: |
 
-          {
+          echo "Star Almanack DE441 subset build" > debug.txt
 
-            echo "Star Almanack — DE441 Eclipse Subset Build"
-
-            echo "=========================================="
-
-            echo
-
-            echo "Generated: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-
-            echo "Git commit: $GITHUB_SHA"
-
-            echo "GitHub Actions run: $GITHUB_RUN_ID"
-
-            echo
-
-          } > debug.txt
+          echo "Started: $(date -u)" >> debug.txt
 
       - name: Download DE441 source kernels
 
         run: |
 
-          wget -q --show-progress \
+          wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
 
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
-
-          wget -q --show-progress \
-
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
+          wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
 
       - name: Download NAIF leap-seconds kernel
 
         run: |
 
-          wget -q \
-
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
+          wget -q https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
 
       - name: Download and install NAIF SPICE Toolkit
 
         run: |
 
-          wget -q \
-
-            https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
+          wget -q https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
 
           tar -xzf cspice.tar.Z
-
-          echo "$GITHUB_WORKSPACE/cspice/exe" >> "$GITHUB_PATH"
 
       - name: Record source checksums
 
         run: |
 
-          {
+          echo "" >> debug.txt
 
-            echo "DE441 source SHA-256"
+          echo "Source kernel checksums:" >> debug.txt
 
-            echo "--------------------"
+          sha256sum de441_part-1.bsp >> debug.txt
 
-            sha256sum de441_part-1.bsp de441_part-2.bsp
+          sha256sum de441_part-2.bsp >> debug.txt
 
-            echo
-
-            echo "NAIF leap-seconds kernel SHA-256"
-
-            echo "--------------------------------"
-
-            sha256sum naif0012.tls
-
-            echo
-
-          } >> debug.txt
+          sha256sum naif0012.tls >> debug.txt
 
       - name: Build Star Almanack DE441 eclipse subset
 
         run: |
 
-          spkmerge de441-eclipse-subset.mrg
+          ./cspice/exe/spkmerge <<'EOF'
+
+          LEAPSECONDS_KERNEL = naif0012.tls
+
+          SPK_KERNEL = star-almanack-de441-eclipse.bsp
+
+            SOURCE_SPK_KERNEL = de441_part-1.bsp
+
+            SOURCE_SPK_KERNEL = de441_part-2.bsp
+
+          EOF
 
       - name: Record subset information
 
         run: |
 
-          {
+          echo "" >> debug.txt
 
-            echo "Star Almanack subset"
+          echo "Subset:" >> debug.txt
 
-            echo "--------------------"
+          ls -lh star-almanack-de441-eclipse.bsp >> debug.txt
 
-            echo "File: de441-star-almanack-eclipses.bsp"
-
-            echo "Coverage requested: 2000 B.C. through A.D. 3000"
-
-            echo "Bodies requested: 3, 10, 301, 399"
-
-            echo
-
-            echo "Exact size:"
-
-            stat --format="%s bytes" de441-star-almanack-eclipses.bsp
-
-            echo
-
-            echo "SHA-256:"
-
-            sha256sum de441-star-almanack-eclipses.bsp
-
-            echo
-
-            echo "Build completed successfully."
-
-          } >> debug.txt
+          sha256sum star-almanack-de441-eclipse.bsp >> debug.txt
 
       - name: Show debug.txt
 
+        if: always()
+
         run: cat debug.txt
 
-      - name: Publish GitHub Release
+      - name: Upload DE441 eclipse subset
 
-        env:
+        uses: actions/upload-artifact@v4
 
-          GH_TOKEN: ${{ github.token }}
+        with:
 
-        run: |
+          name: star-almanack-de441-eclipse
 
-          TAG="de441-eclipse-subset-${GITHUB_RUN_NUMBER}"
+          path: |
 
-          gh release create "$TAG" \
+            star-almanack-de441-eclipse.bsp
 
-            de441-star-almanack-eclipses.bsp \
-
-            debug.txt \
-
-            --repo "$GITHUB_REPOSITORY" \
-
-            --title "Star Almanack DE441 Eclipse Subset" \
-
-            --notes "Generated from NASA/JPL DE441 by GitHub Actions. See debug.txt for provenance, checksums, and build diagnostics."
+            debug.txt
