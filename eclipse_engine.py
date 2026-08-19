@@ -347,8 +347,42 @@ def gregorian_to_jd(year: int, month: int, day: int, hour: float = 0.0) -> float
 
 
 def jd_to_iso_utc(jd: float) -> str:
-    """Julian Date to proleptic Gregorian UTC string."""
-    zf = jd + 0.5
+    """
+    Convert a Julian Date to a proleptic-Gregorian UTC string.
+
+    The returned value has whole-second resolution.  The instant is normalized
+    to that resolution *before* it is decomposed into calendar date and clock
+    time.  This ordering is deliberate.
+
+    Why this matters
+    ----------------
+    A Julian Date can represent an instant such as 23:59:59.6.  Rounding that
+    instant to the nearest displayed second must produce 00:00:00 on the next
+    civil day.  If the calendar date is computed first and the seconds are
+    rounded afterward, the time-of-day can become 86400 seconds: an invalid
+    clock value that actually belongs to the following date.
+
+    An earlier implementation tried to repair that state by recursively calling
+    this function.  At the exact 86400-second boundary the adjustment could be
+    zero, causing the function to call itself forever until Python raised a
+    RecursionError.  Normalizing the astronomical instant first removes the
+    invalid intermediate state completely.  No recursive boundary repair is
+    needed, and this function always performs one calendar decomposition.
+    """
+
+    # Julian Dates are floating-point day counts.  Convert to an integer count
+    # of displayed seconds relative to the Julian epoch, then convert back to
+    # days.  Integer-second normalization carries naturally across midnight.
+    #
+    # Using floor(x + 0.5) states the intended "nearest second" rule explicitly
+    # instead of relying on Python's bankers-rounding behavior for exact .5
+    # ties.
+    whole_seconds = math.floor(jd * 86400.0 + 0.5)
+    normalized_jd = whole_seconds / 86400.0
+
+    # Julian days begin at noon.  Adding 0.5 shifts the boundary to civil
+    # midnight before the Gregorian decomposition.
+    zf = normalized_jd + 0.5
     Z = math.floor(zf)
     F = zf - Z
 
@@ -365,10 +399,19 @@ def jd_to_iso_utc(jd: float) -> str:
     month = E - 1 if E < 14 else E - 13
     year = C - 4716 if month > 2 else C - 4715
 
+    # Because normalized_jd is already on a whole-second boundary, this value
+    # is guaranteed to describe a valid time within the computed civil day.
+    # A final round protects against the tiny floating-point error introduced
+    # when whole_seconds was divided by 86400 above.
     seconds = round((day_f - day) * 86400.0)
-    if seconds >= 86400:
-        # Rare rounding edge; recurse on next midnight.
-        return jd_to_iso_utc(jd + (86400 - seconds) / 86400.0)
+
+    # The arithmetic normalization above should make this invariant true.
+    # Keep the assertion close to the conversion so a future code change fails
+    # loudly during testing rather than silently recreating a midnight bug.
+    if not 0 <= seconds < 86400:
+        raise ArithmeticError(
+            "Julian-Date normalization failed: seconds outside civil day"
+        )
 
     hh, rem = divmod(seconds, 3600)
     mm, ss = divmod(rem, 60)
