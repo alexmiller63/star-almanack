@@ -1,8 +1,10 @@
-name: Diagnose DE441 Eclipse Subset
+name: Build DE441 Eclipse Subset
 
 on:
 
   workflow_dispatch:
+
+  push:
 
 permissions:
 
@@ -10,7 +12,7 @@ permissions:
 
 jobs:
 
-  diagnose-de441:
+  build-de441-subset:
 
     runs-on: ubuntu-latest
 
@@ -24,47 +26,33 @@ jobs:
 
         run: |
 
-          echo "Star Almanack DE441 subset diagnostic" > debug.txt
+          echo "Star Almanack DE441 subset build" > debug.txt
 
           echo "Started: $(date -u)" >> debug.txt
-
-          echo "" >> debug.txt
-
-          echo "Runner:" >> debug.txt
-
-          uname -a >> debug.txt
-
-          df -h >> debug.txt
 
       - name: Download DE441 source kernels
 
         run: |
 
-          wget -q --show-progress \
+          wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
 
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
-
-          wget -q --show-progress \
-
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
+          wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
 
       - name: Download NAIF leap-seconds kernel
 
         run: |
 
-          wget -q \
-
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
+          wget -q https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
 
       - name: Download and install NAIF SPICE Toolkit
 
         run: |
 
-          wget -q \
-
-            https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
+          wget -q https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
 
           tar -xzf cspice.tar.Z
+
+          echo "$GITHUB_WORKSPACE/cspice/exe" >> "$GITHUB_PATH"
 
       - name: Record source sizes and checksums
 
@@ -72,29 +60,15 @@ jobs:
 
           echo "" >> debug.txt
 
-          echo "==================================================" >> debug.txt
+          echo "DE441 source files:" >> debug.txt
 
-          echo "SOURCE FILE SIZES" >> debug.txt
-
-          echo "==================================================" >> debug.txt
-
-          ls -lh de441_part-1.bsp >> debug.txt
-
-          ls -lh de441_part-2.bsp >> debug.txt
-
-          ls -l de441_part-1.bsp >> debug.txt
-
-          ls -l de441_part-2.bsp >> debug.txt
+          ls -lh de441_part-1.bsp de441_part-2.bsp >> debug.txt
 
           echo "" >> debug.txt
 
-          echo "Source kernel SHA-256 checksums:" >> debug.txt
+          echo "SHA-256 checksums:" >> debug.txt
 
-          sha256sum de441_part-1.bsp >> debug.txt
-
-          sha256sum de441_part-2.bsp >> debug.txt
-
-          sha256sum naif0012.tls >> debug.txt
+          sha256sum de441_part-1.bsp de441_part-2.bsp >> debug.txt
 
       - name: Record SPICE Toolkit version
 
@@ -102,13 +76,9 @@ jobs:
 
           echo "" >> debug.txt
 
-          echo "==================================================" >> debug.txt
+          echo "SPICE Toolkit:" >> debug.txt
 
-          echo "SPICE TOOLKIT" >> debug.txt
-
-          echo "==================================================" >> debug.txt
-
-          ./cspice/exe/brief -v >> debug.txt 2>&1 || true
+          brief -v >> debug.txt 2>&1 || true
 
       - name: Inspect DE441 part 1
 
@@ -116,15 +86,9 @@ jobs:
 
           echo "" >> debug.txt
 
-          echo "==================================================" >> debug.txt
+          echo "===== DE441 PART 1 =====" >> debug.txt
 
-          echo "DE441 PART 1 — BODY / CENTER / COVERAGE" >> debug.txt
-
-          echo "==================================================" >> debug.txt
-
-          ./cspice/exe/brief -c -t -s de441_part-1.bsp \
-
-            >> debug.txt 2>&1
+          brief de441_part-1.bsp >> debug.txt 2>&1
 
       - name: Inspect DE441 part 2
 
@@ -132,132 +96,68 @@ jobs:
 
           echo "" >> debug.txt
 
-          echo "==================================================" >> debug.txt
+          echo "===== DE441 PART 2 =====" >> debug.txt
 
-          echo "DE441 PART 2 — BODY / CENTER / COVERAGE" >> debug.txt
+          brief de441_part-2.bsp >> debug.txt 2>&1
 
-          echo "==================================================" >> debug.txt
+      - name: Create SPKMERGE command file
 
-          ./cspice/exe/brief -c -t -s de441_part-2.bsp \
+        run: |
 
-            >> debug.txt 2>&1
+          cat > spkmerge.txt <<'EOF'
 
-      - name: Inspect DE441 parts together
+          LEAPSECONDS_KERNEL = naif0012.tls
+
+          SPK_KERNEL = de441-eclipse.bsp
+
+            SOURCE_SPK_KERNEL = de441_part-1.bsp
+
+              BODIES = 10 399 301
+
+            SOURCE_SPK_KERNEL = de441_part-2.bsp
+
+              BODIES = 10 399 301
+
+          EOF
+
+      - name: Build DE441 eclipse subset
+
+        run: |
+
+          spkmerge spkmerge.txt
+
+      - name: Record subset information
 
         run: |
 
           echo "" >> debug.txt
 
-          echo "==================================================" >> debug.txt
+          echo "===== DE441 ECLIPSE SUBSET =====" >> debug.txt
 
-          echo "DE441 COMBINED — BODY / CENTER / COVERAGE" >> debug.txt
+          ls -lh de441-eclipse.bsp >> debug.txt
 
-          echo "==================================================" >> debug.txt
+          sha256sum de441-eclipse.bsp >> debug.txt
 
-          ./cspice/exe/brief -a -c -t -s \
-
-            de441_part-1.bsp \
-
-            de441_part-2.bsp \
-
-            >> debug.txt 2>&1
-
-      - name: Inspect eclipse-related NAIF bodies
-
-        run: |
-
-          echo "" >> debug.txt
-
-          echo "==================================================" >> debug.txt
-
-          echo "ECLIPSE-RELATED BODY IDS" >> debug.txt
-
-          echo "==================================================" >> debug.txt
-
-          echo "10  = Sun" >> debug.txt
-
-          echo "301 = Moon" >> debug.txt
-
-          echo "399 = Earth" >> debug.txt
-
-          echo "3   = Earth-Moon barycenter" >> debug.txt
-
-          echo "" >> debug.txt
-
-          echo "Sun segments:" >> debug.txt
-
-          ./cspice/exe/brief -c -t -s -sb10 \
-
-            de441_part-1.bsp de441_part-2.bsp \
-
-            >> debug.txt 2>&1 || true
-
-          echo "" >> debug.txt
-
-          echo "Moon segments:" >> debug.txt
-
-          ./cspice/exe/brief -c -t -s -sb301 \
-
-            de441_part-1.bsp de441_part-2.bsp \
-
-            >> debug.txt 2>&1 || true
-
-          echo "" >> debug.txt
-
-          echo "Earth segments:" >> debug.txt
-
-          ./cspice/exe/brief -c -t -s -sb399 \
-
-            de441_part-1.bsp de441_part-2.bsp \
-
-            >> debug.txt 2>&1 || true
-
-          echo "" >> debug.txt
-
-          echo "Earth-Moon barycenter segments:" >> debug.txt
-
-          ./cspice/exe/brief -c -t -s -sb3 \
-
-            de441_part-1.bsp de441_part-2.bsp \
-
-            >> debug.txt 2>&1 || true
-
-      - name: Record diagnostic conclusion
-
-        run: |
-
-          echo "" >> debug.txt
-
-          echo "==================================================" >> debug.txt
-
-          echo "NEXT QUESTION" >> debug.txt
-
-          echo "==================================================" >> debug.txt
-
-          echo "Use the BRIEF output above to determine the exact" >> debug.txt
-
-          echo "body/center chain required for Sun-Earth-Moon" >> debug.txt
-
-          echo "eclipse calculations before building a subset." >> debug.txt
+          brief de441-eclipse.bsp >> debug.txt 2>&1
 
           echo "" >> debug.txt
 
           echo "Finished: $(date -u)" >> debug.txt
 
-      - name: Show debug.txt
-
-        if: always()
-
-        run: cat debug.txt
-
-      - name: Upload diagnostic
-
-        if: always()
+      - name: Upload DE441 eclipse subset
 
         uses: actions/upload-artifact@v4
 
         with:
 
-          name: de441-diagnostic
+          name: de441-eclipse-subset
 
-          path: debug.txt
+          path: |
+
+            de441-eclipse.bsp
+
+            debug.txt
+
+            spkmerge.txt
+
+          if-no-files-found: error
