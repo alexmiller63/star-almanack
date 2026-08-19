@@ -6,17 +6,21 @@ Star Almanack — aggregate validation harness.
 
 One command, one final PASS/FAIL, with section-level diagnostics.
 
-Required sections:
+Required sections
 
-  1. ELP2000-82B lunar reference regression.
+-----------------
 
-  2. Julian-Date / UTC boundary regression.
+1. ELP2000-82B lunar reference regression.
 
-Diagnostic sections:
+2. Julian-Date / UTC boundary regression.
 
-  3. Sun frame / J2000 diagnostic.
+Diagnostic sections
 
-  4. Solar eclipse geometry tests, including transformed-vs-raw Sun A/B test.
+-------------------
+
+3. Sun frame / J2000 diagnostic, including a stage-by-stage decomposition.
+
+4. Solar eclipse geometry tests, including transformed-vs-raw Sun A/B test.
 
 The eclipse engine is always exercised. While required_now is false in
 
@@ -26,7 +30,9 @@ but do not fail the overall workflow. Once the eclipse layer is satisfactory,
 
 set required_now: true and the same tests become release-blocking.
 
-Important:
+Important
+
+---------
 
 Published eclipse data are used only as validation targets. eclipse_engine.py
 
@@ -64,19 +70,101 @@ coordinates in the mean dynamical ecliptic and inertial equinox of J2000.
 
 The compact Sun model begins with a vector treated by the eclipse engine as
 
-ecliptic-of-date. The production code then rotates that vector to
+ecliptic-of-date. The production code then performs three transformations:
 
-equatorial-of-date, precesses it to J2000, and rotates it back to the J2000
+    stage 0:
 
-ecliptic.
+        raw compact Sun, ecliptic-of-date
 
-The eclipse timing residuals vary strongly with epoch. This diagnostic observes
+    stage 1:
 
-the Sun vector immediately before and after that frame-conversion boundary at
+        ecliptic-of-date -> equatorial-of-date
 
-dates on both sides of J2000.
+    stage 2:
 
-It changes no production calculation and has no PASS/FAIL status.
+        equatorial-of-date -> equatorial J2000
+
+    stage 3:
+
+        equatorial J2000 -> ecliptic J2000
+
+The eclipse timing residuals vary strongly with epoch. A direct A/B test has
+
+also shown that bypassing the complete Sun-frame transformation can materially
+
+reduce the timing residual.
+
+That makes the transformation boundary a leading object of investigation.
+
+The diagnostic therefore does two different things:
+
+1. It observes the numerical vector after every production transformation.
+
+2. It checks the mathematical reversibility of every individual stage.
+
+Those are deliberately different questions.
+
+A rotation can move the numerical components substantially and still be
+
+perfectly correct, because the coordinates before and after a frame change are
+
+expressed in different bases. Therefore a large stage-to-stage angular change
+
+must NOT by itself be interpreted as an astronomical error.
+
+Round-trip closure, however, compares vectors after returning them to the SAME
+
+coordinate frame. It is therefore a useful implementation check.
+
+For example:
+
+    ecliptic-of-date
+
+        -> equatorial-of-date
+
+        -> ecliptic-of-date
+
+should reproduce the original raw vector to floating-point precision.
+
+Likewise:
+
+    equatorial-of-date
+
+        -> equatorial J2000
+
+        -> equatorial-of-date
+
+should close if the precession matrices have the correct order and signs.
+
+And:
+
+    equatorial J2000
+
+        -> ecliptic J2000
+
+        -> equatorial J2000
+
+should also close.
+
+Interpretation
+
+--------------
+
+If a stage fails its round-trip closure test, investigate the rotation matrix,
+
+angle sign, or matrix order for that stage.
+
+If all stages close essentially perfectly, but the full transformation still
+
+moves the eclipse prediction in the wrong direction, the implementation may be
+
+mathematically self-consistent while being conceptually unnecessary or applied
+
+to a vector whose source coefficients already use a different reference frame.
+
+That distinction is exactly what this diagnostic is intended to reveal.
+
+This section is INFORMATIONAL ONLY. It cannot affect PASS/FAIL.
 
 Why the transformed-vs-raw Sun A/B diagnostic exists
 
@@ -96,7 +184,7 @@ Correlation alone does not prove that the frame transformation is wrong.
 
 Therefore every positive eclipse case with a published/reference greatest time
 
-is now subjected to a direct A/B experiment:
+is subjected to a direct A/B experiment:
 
   A — current production calculation:
 
@@ -302,7 +390,17 @@ def validate_utc_boundaries() -> tuple[bool, int, int]:
 
     print("\n=== 2. JULIAN-DATE / UTC BOUNDARY TESTS ===")
 
-    midnight = eclipse_engine.gregorian_to_jd(2026, 8, 19, 0.0)
+    midnight = eclipse_engine.gregorian_to_jd(
+
+        2026,
+
+        8,
+
+        19,
+
+        0.0,
+
+    )
 
     cases = [
 
@@ -404,7 +502,11 @@ def validate_utc_boundaries() -> tuple[bool, int, int]:
 
 def _parse_iso_z(text: str) -> datetime:
 
-    return datetime.fromisoformat(text.replace("Z", "+00:00"))
+    return datetime.fromisoformat(
+
+        text.replace("Z", "+00:00")
+
+    )
 
 def _signed_seconds_difference(
 
@@ -472,13 +574,37 @@ def _format_signed_time_error(seconds: float) -> str:
 
     sign = "+" if seconds >= 0.0 else "-"
 
-    direction = "LATE" if seconds > 0.0 else "EARLY" if seconds < 0.0 else "EXACT"
+    direction = (
+
+        "LATE"
+
+        if seconds > 0.0
+
+        else "EARLY"
+
+        if seconds < 0.0
+
+        else "EXACT"
+
+    )
 
     whole = int(round(abs(seconds)))
 
-    hours, rem = divmod(whole, 3600)
+    hours, rem = divmod(
 
-    minutes, secs = divmod(rem, 60)
+        whole,
+
+        3600,
+
+    )
+
+    minutes, secs = divmod(
+
+        rem,
+
+        60,
+
+    )
 
     return (
 
@@ -504,7 +630,11 @@ def _iso_z_to_jd(text: str) -> float:
 
     """
 
-    dt = _parse_iso_z(text).astimezone(timezone.utc)
+    dt = _parse_iso_z(text).astimezone(
+
+        timezone.utc
+
+    )
 
     hour = (
 
@@ -542,6 +672,14 @@ def _angle_between_deg(
 
     Return the smaller angle between two non-zero vectors in degrees.
 
+    This is meaningful when a and b are represented in the same coordinate
+
+    frame. When used merely to describe a numerical rotation between different
+
+    coordinate bases, the output is diagnostic and must not be interpreted as
+
+    a physical sky-position error.
+
     """
 
     denom = a.norm() * b.norm()
@@ -556,9 +694,41 @@ def _angle_between_deg(
 
     # mathematical [-1, +1] domain of acos().
 
-    cosine = max(-1.0, min(1.0, cosine))
+    cosine = max(
 
-    return math.degrees(math.acos(cosine))
+        -1.0,
+
+        min(
+
+            1.0,
+
+            cosine,
+
+        ),
+
+    )
+
+    return math.degrees(
+
+        math.acos(cosine)
+
+    )
+
+def _vector_difference_km(
+
+    a: eclipse_engine.Vec3,
+
+    b: eclipse_engine.Vec3,
+
+) -> float:
+
+    """
+
+    Euclidean distance between two vectors expressed in the same frame.
+
+    """
+
+    return (a - b).norm()
 
 def _print_vec(
 
@@ -570,7 +740,7 @@ def _print_vec(
 
     print(
 
-        f"      {label:<5} "
+        f"      {label:<13} "
 
         f"x={v.x:+.3f} km  "
 
@@ -592,13 +762,15 @@ def _compact_sun_ecliptic_of_date(
 
     transformation.
 
-    This is diagnostic instrumentation only. It deliberately duplicates the
+    This is diagnostic instrumentation only.
 
-    orbital portion of eclipse_engine.sun_vector_j2000() so validation can
+    It deliberately duplicates the orbital portion of
 
-    observe and test the vector on both sides of the frame-conversion boundary
+    eclipse_engine.sun_vector_j2000() so validation can observe and test the
 
-    without modifying production behavior.
+    vector on both sides of the frame-conversion boundary without modifying
+
+    production behavior.
 
     The returned vector is the compact model's raw geocentric ecliptic vector,
 
@@ -610,15 +782,37 @@ def _compact_sun_ecliptic_of_date(
 
     w = (
 
-        (282.9404 + 0.0000470935 * d) % 360.0
+        (
+
+            282.9404
+
+            + 0.0000470935 * d
+
+        )
+
+        % 360.0
 
     ) * eclipse_engine.DEG
 
-    e = 0.016709 - 0.000000001151 * d
+    e = (
+
+        0.016709
+
+        - 0.000000001151 * d
+
+    )
 
     M = (
 
-        (356.0470 + 0.9856002585 * d) % 360.0
+        (
+
+            356.0470
+
+            + 0.9856002585 * d
+
+        )
+
+        % 360.0
 
     ) * eclipse_engine.DEG
 
@@ -642,55 +836,813 @@ def _compact_sun_ecliptic_of_date(
 
     x = math.cos(E) - e
 
-    y = math.sqrt(1.0 - e * e) * math.sin(E)
+    y = (
 
-    r_au = math.hypot(x, y)
+        math.sqrt(
 
-    true_anom = math.atan2(y, x)
+            1.0 - e * e
+
+        )
+
+        * math.sin(E)
+
+    )
+
+    r_au = math.hypot(
+
+        x,
+
+        y,
+
+    )
+
+    true_anom = math.atan2(
+
+        y,
+
+        x,
+
+    )
 
     lon = true_anom + w
 
     return eclipse_engine.Vec3(
 
-        r_au * math.cos(lon) * eclipse_engine.AU_KM,
+        r_au
 
-        r_au * math.sin(lon) * eclipse_engine.AU_KM,
+        * math.cos(lon)
+
+        * eclipse_engine.AU_KM,
+
+        r_au
+
+        * math.sin(lon)
+
+        * eclipse_engine.AU_KM,
 
         0.0,
 
     )
 
+def _rot_y(
+
+    v: eclipse_engine.Vec3,
+
+    angle: float,
+
+) -> eclipse_engine.Vec3:
+
+    """
+
+    Diagnostic Y-axis rotation using the same convention as eclipse_engine's
+
+    local precession rotation.
+
+    """
+
+    c = math.cos(angle)
+
+    s = math.sin(angle)
+
+    return eclipse_engine.Vec3(
+
+        c * v.x + s * v.z,
+
+        v.y,
+
+        -s * v.x + c * v.z,
+
+    )
+
+def _precession_angles_rad(
+
+    jd: float,
+
+) -> tuple[float, float, float]:
+
+    """
+
+    Return the same classical IAU 1976 precession angles used by production.
+
+    The returned tuple is:
+
+        zeta, z, theta
+
+    in radians.
+
+    Keeping the coefficients here identical to eclipse_engine lets the
+
+    validation harness construct the exact inverse matrix independently of
+
+    the production date->J2000 function.
+
+    """
+
+    t = (
+
+        jd - 2451545.0
+
+    ) / 36525.0
+
+    zeta = (
+
+        2306.2181 * t
+
+        + 0.30188 * t * t
+
+        + 0.017998 * t**3
+
+    ) * eclipse_engine.ARCSEC
+
+    z = (
+
+        2306.2181 * t
+
+        + 1.09468 * t * t
+
+        + 0.018203 * t**3
+
+    ) * eclipse_engine.ARCSEC
+
+    theta = (
+
+        2004.3109 * t
+
+        - 0.42665 * t * t
+
+        - 0.041833 * t**3
+
+    ) * eclipse_engine.ARCSEC
+
+    return (
+
+        zeta,
+
+        z,
+
+        theta,
+
+    )
+
+def _precess_equatorial_j2000_to_date(
+
+    v: eclipse_engine.Vec3,
+
+    jd: float,
+
+) -> eclipse_engine.Vec3:
+
+    """
+
+    Exact matrix inverse of the production date->J2000 precession rotation.
+
+    Production eclipse_engine._precess_equatorial_date_to_j2000() performs:
+
+        Rz(z) -> Ry(-theta) -> Rz(zeta)
+
+    where the operations are applied sequentially to the vector.
+
+    Therefore the exact inverse is applied in reverse order:
+
+        Rz(-zeta) -> Ry(+theta) -> Rz(-z)
+
+    This helper exists ONLY for the validation round-trip experiment.
+
+    """
+
+    zeta, z, theta = _precession_angles_rad(
+
+        jd
+
+    )
+
+    w = eclipse_engine._rot_z(
+
+        v,
+
+        -zeta,
+
+    )
+
+    w = _rot_y(
+
+        w,
+
+        theta,
+
+    )
+
+    w = eclipse_engine._rot_z(
+
+        w,
+
+        -z,
+
+    )
+
+    return w
+
+def _sun_frame_stages(
+
+    jd_tdb: float,
+
+) -> tuple[
+
+    eclipse_engine.Vec3,
+
+    eclipse_engine.Vec3,
+
+    eclipse_engine.Vec3,
+
+    eclipse_engine.Vec3,
+
+]:
+
+    """
+
+    Reproduce the production Sun frame conversion one explicit stage at a time.
+
+    Returns:
+
+        raw_ecliptic_date
+
+        equatorial_date
+
+        equatorial_j2000
+
+        ecliptic_j2000
+
+    No approximation beyond production behavior is introduced here.
+
+    """
+
+    raw_ecliptic_date = (
+
+        _compact_sun_ecliptic_of_date(
+
+            jd_tdb
+
+        )
+
+    )
+
+    equatorial_date = (
+
+        eclipse_engine._rot_x(
+
+            raw_ecliptic_date,
+
+            eclipse_engine._mean_obliquity_rad(
+
+                jd_tdb
+
+            ),
+
+        )
+
+    )
+
+    equatorial_j2000 = (
+
+        eclipse_engine._precess_equatorial_date_to_j2000(
+
+            equatorial_date,
+
+            jd_tdb,
+
+        )
+
+    )
+
+    ecliptic_j2000 = (
+
+        eclipse_engine._rot_x(
+
+            equatorial_j2000,
+
+            -eclipse_engine._mean_obliquity_rad(
+
+                2451545.0
+
+            ),
+
+        )
+
+    )
+
+    return (
+
+        raw_ecliptic_date,
+
+        equatorial_date,
+
+        equatorial_j2000,
+
+        ecliptic_j2000,
+
+    )
+
+def _print_sun_frame_stage_diagnostic(
+
+    jd_tdb: float,
+
+    production_sun: eclipse_engine.Vec3,
+
+) -> None:
+
+    """
+
+    Print the complete Sun frame pipeline and test every stage by inversion.
+
+    The closure tests compare vectors only after returning to the same frame.
+
+    That is the key distinction between:
+
+      "this transformation moved the numerical components"
+
+    and:
+
+      "this transformation cannot mathematically undo itself."
+
+    The former can be completely normal. The latter would indicate an
+
+    implementation defect.
+
+    """
+
+    (
+
+        raw_ecliptic_date,
+
+        equatorial_date,
+
+        equatorial_j2000,
+
+        ecliptic_j2000,
+
+    ) = _sun_frame_stages(
+
+        jd_tdb
+
+    )
+
+    print("\n  STAGE-BY-STAGE TRANSFORMATION")
+
+    _print_vec(
+
+        "0 raw ecl-date",
+
+        raw_ecliptic_date,
+
+    )
+
+    _print_vec(
+
+        "1 eq-date",
+
+        equatorial_date,
+
+    )
+
+    _print_vec(
+
+        "2 eq-J2000",
+
+        equatorial_j2000,
+
+    )
+
+    _print_vec(
+
+        "3 ecl-J2000",
+
+        ecliptic_j2000,
+
+    )
+
+    print("\n  NUMERICAL ROTATION MAGNITUDES")
+
+    print(
+
+        "    NOTE: adjacent stages use different coordinate bases."
+
+    )
+
+    print(
+
+        "    These angles describe the numerical rotation being applied;"
+
+    )
+
+    print(
+
+        "    they are NOT direct physical sky-position errors."
+
+    )
+
+    step_01 = _angle_between_deg(
+
+        raw_ecliptic_date,
+
+        equatorial_date,
+
+    )
+
+    step_12 = _angle_between_deg(
+
+        equatorial_date,
+
+        equatorial_j2000,
+
+    )
+
+    step_23 = _angle_between_deg(
+
+        equatorial_j2000,
+
+        ecliptic_j2000,
+
+    )
+
+    raw_to_final = _angle_between_deg(
+
+        raw_ecliptic_date,
+
+        ecliptic_j2000,
+
+    )
+
+    print(
+
+        f"    stage 0 -> 1 numeric rotation: "
+
+        f"{step_01:.9f} deg"
+
+    )
+
+    print(
+
+        f"    stage 1 -> 2 numeric rotation: "
+
+        f"{step_12:.9f} deg"
+
+    )
+
+    print(
+
+        f"    stage 2 -> 3 numeric rotation: "
+
+        f"{step_23:.9f} deg"
+
+    )
+
+    print(
+
+        f"    raw -> final numeric shift:    "
+
+        f"{raw_to_final:.9f} deg"
+
+    )
+
+    # ------------------------------------------------------------
+
+    # Closure test 1:
+
+    # ecliptic-of-date -> equatorial-of-date -> ecliptic-of-date
+
+    # ------------------------------------------------------------
+
+    back_to_ecliptic_date = (
+
+        eclipse_engine._rot_x(
+
+            equatorial_date,
+
+            -eclipse_engine._mean_obliquity_rad(
+
+                jd_tdb
+
+            ),
+
+        )
+
+    )
+
+    closure_01_km = _vector_difference_km(
+
+        raw_ecliptic_date,
+
+        back_to_ecliptic_date,
+
+    )
+
+    closure_01_deg = _angle_between_deg(
+
+        raw_ecliptic_date,
+
+        back_to_ecliptic_date,
+
+    )
+
+    # ------------------------------------------------------------
+
+    # Closure test 2:
+
+    # equatorial-of-date -> equatorial J2000 -> equatorial-of-date
+
+    # ------------------------------------------------------------
+
+    back_to_equatorial_date = (
+
+        _precess_equatorial_j2000_to_date(
+
+            equatorial_j2000,
+
+            jd_tdb,
+
+        )
+
+    )
+
+    closure_12_km = _vector_difference_km(
+
+        equatorial_date,
+
+        back_to_equatorial_date,
+
+    )
+
+    closure_12_deg = _angle_between_deg(
+
+        equatorial_date,
+
+        back_to_equatorial_date,
+
+    )
+
+    # ------------------------------------------------------------
+
+    # Closure test 3:
+
+    # equatorial J2000 -> ecliptic J2000 -> equatorial J2000
+
+    # ------------------------------------------------------------
+
+    back_to_equatorial_j2000 = (
+
+        eclipse_engine._rot_x(
+
+            ecliptic_j2000,
+
+            eclipse_engine._mean_obliquity_rad(
+
+                2451545.0
+
+            ),
+
+        )
+
+    )
+
+    closure_23_km = _vector_difference_km(
+
+        equatorial_j2000,
+
+        back_to_equatorial_j2000,
+
+    )
+
+    closure_23_deg = _angle_between_deg(
+
+        equatorial_j2000,
+
+        back_to_equatorial_j2000,
+
+    )
+
+    # ------------------------------------------------------------
+
+    # Production agreement:
+
+    #
+
+    # The stage decomposition must reproduce sun_vector_j2000().
+
+    # If it does not, the diagnostic itself is not observing the same
+
+    # transformation as production and must not be trusted.
+
+    # ------------------------------------------------------------
+
+    production_difference_km = (
+
+        _vector_difference_km(
+
+            ecliptic_j2000,
+
+            production_sun,
+
+        )
+
+    )
+
+    production_difference_deg = (
+
+        _angle_between_deg(
+
+            ecliptic_j2000,
+
+            production_sun,
+
+        )
+
+    )
+
+    print("\n  ROUND-TRIP CLOSURE TESTS")
+
+    print(
+
+        "    stage 0 -> 1 -> 0:"
+
+    )
+
+    print(
+
+        f"      vector closure:            "
+
+        f"{closure_01_km:.12f} km"
+
+    )
+
+    print(
+
+        f"      angular closure:           "
+
+        f"{closure_01_deg:.12f} deg"
+
+    )
+
+    print(
+
+        "    stage 1 -> 2 -> 1:"
+
+    )
+
+    print(
+
+        f"      vector closure:            "
+
+        f"{closure_12_km:.12f} km"
+
+    )
+
+    print(
+
+        f"      angular closure:           "
+
+        f"{closure_12_deg:.12f} deg"
+
+    )
+
+    print(
+
+        "    stage 2 -> 3 -> 2:"
+
+    )
+
+    print(
+
+        f"      vector closure:            "
+
+        f"{closure_23_km:.12f} km"
+
+    )
+
+    print(
+
+        f"      angular closure:           "
+
+        f"{closure_23_deg:.12f} deg"
+
+    )
+
+    print("\n  PRODUCTION AGREEMENT CHECK")
+
+    print(
+
+        f"    staged final vs production:  "
+
+        f"{production_difference_km:.12f} km"
+
+    )
+
+    print(
+
+        f"    staged angular difference:   "
+
+        f"{production_difference_deg:.12f} deg"
+
+    )
+
+    closure_tolerance_km = 0.001
+
+    all_closures_good = (
+
+        closure_01_km <= closure_tolerance_km
+
+        and closure_12_km <= closure_tolerance_km
+
+        and closure_23_km <= closure_tolerance_km
+
+        and production_difference_km <= closure_tolerance_km
+
+    )
+
+    print("\n  STAGE DIAGNOSTIC INTERPRETATION")
+
+    if all_closures_good:
+
+        print(
+
+            "    All transformation stages close within "
+
+            f"{closure_tolerance_km:.3f} km."
+
+        )
+
+        print(
+
+            "    The staged calculation also reproduces the production Sun."
+
+        )
+
+        print(
+
+            "    This argues AGAINST a simple non-invertible rotation/sign/"
+
+            "matrix-order defect."
+
+        )
+
+        print(
+
+            "    If eclipse timing still improves when the transformation is "
+
+            "bypassed,"
+
+        )
+
+        print(
+
+            "    investigate the FRAME ASSUMPTION: whether the compact Sun "
+
+            "coefficients"
+
+        )
+
+        print(
+
+            "    actually require this ecliptic-of-date -> J2000 conversion."
+
+        )
+
+    else:
+
+        print(
+
+            "    At least one transformation fails round-trip closure or does "
+
+            "not"
+
+        )
+
+        print(
+
+            "    reproduce the production Sun vector."
+
+        )
+
+        print(
+
+            "    Investigate that mathematical stage before changing the "
+
+            "underlying"
+
+        )
+
+        print(
+
+            "    frame interpretation."
+
+        )
+
 def validate_sun_frame_diagnostic() -> None:
 
     """
 
-    Observe the Sun vector immediately before and after its current J2000
+    Observe the Sun vector immediately before, during, and after its current
 
-    transformation at epochs spanning both sides of J2000.
-
-    Purpose
-
-    -------
-
-    Eclipse timing errors presently increase and change with epoch. The lunar
-
-    evaluator independently validates against the ELP2000-82B Fortran reference
-
-    and already returns J2000 ecliptic coordinates. This diagnostic therefore
-
-    isolates the Sun-side frame conversion without altering it.
-
-    If the angular displacement introduced by the Sun frame transformation is
-
-    essentially zero at J2000 and grows with distance from J2000, that confirms
-
-    the transformation itself is epoch-dependent.
-
-    Correlation between that displacement and the observed eclipse timing
-
-    errors makes interpretation of the compact Sun coefficients' reference
-
-    frame an important object of investigation.
+    J2000 transformation at epochs spanning both sides of J2000.
 
     This section is INFORMATIONAL ONLY. It has no PASS/FAIL result and cannot
 
@@ -698,21 +1650,57 @@ def validate_sun_frame_diagnostic() -> None:
 
     """
 
-    print("\n=== 3. SUN FRAME / J2000 DIAGNOSTIC ===")
+    print(
 
-    print("  enforcement:                  DIAGNOSTIC ONLY")
+        "\n=== 3. SUN FRAME / J2000 DIAGNOSTIC ==="
 
-    print("  Moon frame:                   ELP2000-82B J2000 ecliptic")
-
-    print("  raw Sun:                      compact pre-transform vector")
-
-    print("  transformed Sun:              current production J2000 conversion")
+    )
 
     print(
 
-        "  question:                     how much angular displacement "
+        "  enforcement:                  DIAGNOSTIC ONLY"
 
-        "does that conversion introduce?"
+    )
+
+    print(
+
+        "  Moon frame:                   ELP2000-82B J2000 ecliptic"
+
+    )
+
+    print(
+
+        "  raw Sun:                      compact pre-transform vector"
+
+    )
+
+    print(
+
+        "  transformed Sun:              current production J2000 conversion"
+
+    )
+
+    print(
+
+        "  question 1:                   how much numerical displacement "
+
+        "does the conversion introduce?"
+
+    )
+
+    print(
+
+        "  question 2:                   does every mathematical stage "
+
+        "round-trip correctly?"
+
+    )
+
+    print(
+
+        "  question 3:                   does the staged result exactly "
+
+        "reproduce production?"
 
     )
 
@@ -772,11 +1760,19 @@ def validate_sun_frame_diagnostic() -> None:
 
     ]
 
-    engine = eclipse_engine.EclipseEngine(MODEL)
+    engine = eclipse_engine.EclipseEngine(
+
+        MODEL
+
+    )
 
     for label, iso_utc in epochs:
 
-        jd_utc = _iso_z_to_jd(iso_utc)
+        jd_utc = _iso_z_to_jd(
+
+            iso_utc
+
+        )
 
         # Reuse the production geometry path to obtain exactly the same
 
@@ -784,11 +1780,19 @@ def validate_sun_frame_diagnostic() -> None:
 
         # eclipse calculation uses.
 
-        geometry = engine.geometry_at_utc_jd(jd_utc)
+        geometry = engine.geometry_at_utc_jd(
 
-        raw_sun = _compact_sun_ecliptic_of_date(
+            jd_utc
 
-            geometry.jd_tdb_approx
+        )
+
+        raw_sun = (
+
+            _compact_sun_ecliptic_of_date(
+
+                geometry.jd_tdb_approx
+
+            )
 
         )
 
@@ -796,23 +1800,35 @@ def validate_sun_frame_diagnostic() -> None:
 
         moon = geometry.moon
 
-        frame_shift_deg = _angle_between_deg(
+        frame_shift_deg = (
 
-            raw_sun,
+            _angle_between_deg(
 
-            transformed_sun,
+                raw_sun,
+
+                transformed_sun,
+
+            )
 
         )
 
         epoch_offset_years = (
 
-            geometry.jd_tdb_approx - 2451545.0
+            geometry.jd_tdb_approx
+
+            - 2451545.0
 
         ) / 365.25
 
         print(f"\n{label}")
 
-        print(f"  UTC:                         {iso_utc}")
+        print(
+
+            f"  UTC:                         "
+
+            f"{iso_utc}"
+
+        )
 
         print(
 
@@ -832,17 +1848,43 @@ def validate_sun_frame_diagnostic() -> None:
 
         print(
 
-            f"  Sun frame angular shift:     "
+            f"  full raw-to-final numeric "
 
-            f"{frame_shift_deg:.9f} deg"
+            f"shift: {frame_shift_deg:.9f} deg"
 
         )
 
-        _print_vec("Raw", raw_sun)
+        _print_vec(
 
-        _print_vec("J2000", transformed_sun)
+            "Raw",
 
-        _print_vec("Moon", moon)
+            raw_sun,
+
+        )
+
+        _print_vec(
+
+            "J2000",
+
+            transformed_sun,
+
+        )
+
+        _print_vec(
+
+            "Moon",
+
+            moon,
+
+        )
+
+        _print_sun_frame_stage_diagnostic(
+
+            geometry.jd_tdb_approx,
+
+            transformed_sun,
+
+        )
 
     print(
 
@@ -884,9 +1926,21 @@ def _print_geometry_snapshot(
 
     print(f"\n    {label}")
 
-    print(f"      UTC:                 {iso_utc}")
+    print(
 
-    print(f"      JD UTC:              {geometry.jd_utc:.12f}")
+        f"      UTC:                 "
+
+        f"{iso_utc}"
+
+    )
+
+    print(
+
+        f"      JD UTC:              "
+
+        f"{geometry.jd_utc:.12f}"
+
+    )
 
     print(
 
@@ -944,9 +1998,21 @@ def _print_geometry_snapshot(
 
     )
 
-    _print_vec("Sun", geometry.sun)
+    _print_vec(
 
-    _print_vec("Moon", geometry.moon)
+        "Sun",
+
+        geometry.sun,
+
+    )
+
+    _print_vec(
+
+        "Moon",
+
+        geometry.moon,
+
+    )
 
 def _print_reference_geometry_diagnostic(
 
@@ -970,11 +2036,27 @@ def _print_reference_geometry_diagnostic(
 
     """
 
-    reference_jd = _iso_z_to_jd(expected_time)
+    reference_jd = _iso_z_to_jd(
 
-    reference_geometry = engine.geometry_at_utc_jd(reference_jd)
+        expected_time
 
-    calculated_geometry = event.geometry
+    )
+
+    reference_geometry = (
+
+        engine.geometry_at_utc_jd(
+
+            reference_jd
+
+        )
+
+    )
+
+    calculated_geometry = (
+
+        event.geometry
+
+    )
 
     _print_geometry_snapshot(
 
@@ -1020,9 +2102,17 @@ def _print_reference_geometry_diagnostic(
 
     )
 
-    separation_delta = sep_ref - sep_calc
+    separation_delta = (
 
-    print("\n    diagnostic comparison")
+        sep_ref - sep_calc
+
+    )
+
+    print(
+
+        "\n    diagnostic comparison"
+
+    )
 
     print(
 
@@ -1102,7 +2192,11 @@ def _find_eclipse_with_raw_sun(
 
     """
 
-    production_sun_function = eclipse_engine.sun_vector_j2000
+    production_sun_function = (
+
+        eclipse_engine.sun_vector_j2000
+
+    )
 
     try:
 
@@ -1112,7 +2206,11 @@ def _find_eclipse_with_raw_sun(
 
         )
 
-        return engine.find_solar_eclipse(date_utc)
+        return engine.find_solar_eclipse(
+
+            date_utc
+
+        )
 
     finally:
 
@@ -1146,27 +2244,47 @@ def _print_sun_ab_diagnostic(
 
     """
 
-    print("\n    SUN FRAME A/B DIAGNOSTIC")
+    print(
 
-    print("      signed residual = calculated - reference")
+        "\n    SUN FRAME A/B DIAGNOSTIC"
 
-    print("      negative = EARLY; positive = LATE")
+    )
 
-    production_signed_error = _signed_seconds_difference(
+    print(
 
-        production_event.greatest_utc,
+        "      signed residual = calculated - reference"
 
-        expected_time,
+    )
+
+    print(
+
+        "      negative = EARLY; positive = LATE"
+
+    )
+
+    production_signed_error = (
+
+        _signed_seconds_difference(
+
+            production_event.greatest_utc,
+
+            expected_time,
+
+        )
 
     )
 
     try:
 
-        raw_event = _find_eclipse_with_raw_sun(
+        raw_event = (
 
-            engine,
+            _find_eclipse_with_raw_sun(
 
-            case["date_utc"],
+                engine,
+
+                case["date_utc"],
+
+            )
 
         )
 
@@ -1188,27 +2306,45 @@ def _print_sun_ab_diagnostic(
 
         return
 
-    raw_signed_error = _signed_seconds_difference(
+    raw_signed_error = (
 
-        raw_event.greatest_utc,
+        _signed_seconds_difference(
 
-        expected_time,
+            raw_event.greatest_utc,
+
+            expected_time,
+
+        )
 
     )
 
-    production_abs_error = abs(production_signed_error)
+    production_abs_error = abs(
 
-    raw_abs_error = abs(raw_signed_error)
+        production_signed_error
+
+    )
+
+    raw_abs_error = abs(
+
+        raw_signed_error
+
+    )
 
     improvement_seconds = (
 
-        production_abs_error - raw_abs_error
+        production_abs_error
+
+        - raw_abs_error
 
     )
 
     print("")
 
-    print("      A — PRODUCTION TRANSFORMED SUN")
+    print(
+
+        "      A — PRODUCTION TRANSFORMED SUN"
+
+    )
 
     print(
 
@@ -1252,7 +2388,11 @@ def _print_sun_ab_diagnostic(
 
     print("")
 
-    print("      B — RAW COMPACT SUN")
+    print(
+
+        "      B — RAW COMPACT SUN"
+
+    )
 
     print(
 
@@ -1296,7 +2436,11 @@ def _print_sun_ab_diagnostic(
 
     print("")
 
-    print("      A/B RESULT")
+    print(
+
+        "      A/B RESULT"
+
+    )
 
     if improvement_seconds > 0.5:
 
@@ -1330,7 +2474,13 @@ def _print_sun_ab_diagnostic(
 
     if production_abs_error > 0.0:
 
-        ratio = raw_abs_error / production_abs_error
+        ratio = (
+
+            raw_abs_error
+
+            / production_abs_error
+
+        )
 
         print(
 
@@ -1406,15 +2556,39 @@ def _run_eclipse_case(
 
     """
 
-    event = engine.find_solar_eclipse(case["date_utc"])
+    event = engine.find_solar_eclipse(
 
-    expected_exists = bool(case["expected_exists"])
+        case["date_utc"]
 
-    existence_ok = event.eclipse_exists == expected_exists
+    )
 
-    print(f"\n{case['id']} — {case['label']}")
+    expected_exists = bool(
 
-    print(f"  requested date:       {case['date_utc']}")
+        case["expected_exists"]
+
+    )
+
+    existence_ok = (
+
+        event.eclipse_exists
+
+        == expected_exists
+
+    )
+
+    print(
+
+        f"\n{case['id']} — {case['label']}"
+
+    )
+
+    print(
+
+        f"  requested date:       "
+
+        f"{case['date_utc']}"
+
+    )
 
     print(
 
@@ -1466,9 +2640,19 @@ def _run_eclipse_case(
 
         return existence_ok
 
-    expected_type = str(case["expected_type"])
+    expected_type = str(
 
-    type_ok = event.eclipse_type == expected_type
+        case["expected_type"]
+
+    )
+
+    type_ok = (
+
+        event.eclipse_type
+
+        == expected_type
+
+    )
 
     expected_time = case.get(
 
@@ -1492,15 +2676,23 @@ def _run_eclipse_case(
 
     if expected_time:
 
-        signed_time_error = _signed_seconds_difference(
+        signed_time_error = (
 
-            event.greatest_utc,
+            _signed_seconds_difference(
 
-            expected_time,
+                event.greatest_utc,
+
+                expected_time,
+
+            )
 
         )
 
-        time_error = abs(signed_time_error)
+        time_error = abs(
+
+            signed_time_error
+
+        )
 
         time_ok = (
 
@@ -1576,7 +2768,7 @@ def _run_eclipse_case(
 
         )
 
-        # Existing geometry diagnostic.
+        # Geometry diagnostic.
 
         #
 
@@ -1594,11 +2786,11 @@ def _run_eclipse_case(
 
         )
 
-        # New A/B frame diagnostic.
+        # A/B frame diagnostic.
 
         #
 
-        # Again, this does not influence event, type_ok, time_ok, or passed.
+        # This does not influence event, type_ok, time_ok, or passed.
 
         _print_sun_ab_diagnostic(
 
@@ -1664,9 +2856,23 @@ def _run_eclipse_case(
 
     return passed
 
-def validate_eclipses() -> tuple[bool, int, int, bool]:
+def validate_eclipses() -> tuple[
 
-    spec = load_yaml(ECLIPSE_CASES)
+    bool,
+
+    int,
+
+    int,
+
+    bool,
+
+]:
+
+    spec = load_yaml(
+
+        ECLIPSE_CASES
+
+    )
 
     historical = spec.get(
 
@@ -1800,7 +3006,11 @@ def validate_eclipses() -> tuple[bool, int, int, bool]:
 
     )
 
-    engine = eclipse_engine.EclipseEngine(MODEL)
+    engine = eclipse_engine.EclipseEngine(
+
+        MODEL
+
+    )
 
     passed = 0
 
@@ -1818,9 +3028,17 @@ def validate_eclipses() -> tuple[bool, int, int, bool]:
 
             passed += 1
 
-    total = len(all_cases)
+    total = len(
 
-    ok = passed == total
+        all_cases
+
+    )
+
+    ok = (
+
+        passed == total
+
+    )
 
     print(
 
@@ -1878,17 +3096,25 @@ def main() -> None:
 
     )
 
-    lunar_ok, lunar_passed, lunar_total = (
+    (
 
-        validate_lunar()
+        lunar_ok,
 
-    )
+        lunar_passed,
 
-    utc_ok, utc_passed, utc_total = (
+        lunar_total,
 
-        validate_utc_boundaries()
+    ) = validate_lunar()
 
-    )
+    (
+
+        utc_ok,
+
+        utc_passed,
+
+        utc_total,
+
+    ) = validate_utc_boundaries()
 
     # This section is intentionally diagnostic only. It is not included in
 
@@ -1916,7 +3142,9 @@ def main() -> None:
 
     #
 
-    # The A/B Sun test is instrumentation only regardless of required_now.
+    # Both Sun-frame investigations are instrumentation only regardless of
+
+    # required_now.
 
     required_results = [
 
@@ -1981,6 +3209,14 @@ def main() -> None:
             f"{eclipse_passed}/{eclipse_total} passed"
 
         )
+
+    print(
+
+        "Sun frame staged diagnostic: "
+
+        "DIAGNOSTIC ONLY"
+
+    )
 
     print(
 
