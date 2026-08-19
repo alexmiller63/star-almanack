@@ -14,7 +14,7 @@ on:
 
       - "validate_star_almanack.py"
 
-      - "sun_jpl_diagnostic.py"
+      - "sun-jpl-diagnostic.py"
 
       - ".github/workflows/validate-star-almanack.yaml"
 
@@ -66,9 +66,8 @@ jobs:
 
       - name: Run JPL compact-Sun diagnostic
 
-        run: python sun_jpl_diagnostic.py
+        run: python sun-jpl-diagnostic.py
 
       - name: Run complete Star Almanack validation
 
         run: python validate_star_almanack.py
-
