@@ -16,7 +16,7 @@ Diagnostic sections:
 
   3. Sun frame / J2000 diagnostic.
 
-  4. Solar eclipse geometry tests.
+  4. Solar eclipse geometry tests, including transformed-vs-raw Sun A/B test.
 
 The eclipse engine is always exercised. While required_now is false in
 
@@ -77,6 +77,62 @@ the Sun vector immediately before and after that frame-conversion boundary at
 dates on both sides of J2000.
 
 It changes no production calculation and has no PASS/FAIL status.
+
+Why the transformed-vs-raw Sun A/B diagnostic exists
+
+-----------------------------------------------------
+
+The eclipse residuals show a particularly interesting epoch-dependent pattern:
+
+  * before J2000, calculated greatest-eclipse times tend to be early;
+
+  * after J2000, calculated greatest-eclipse times tend to be late;
+
+  * the production Sun frame transformation is essentially zero at J2000
+
+    and grows with distance from J2000.
+
+Correlation alone does not prove that the frame transformation is wrong.
+
+Therefore every positive eclipse case with a published/reference greatest time
+
+is now subjected to a direct A/B experiment:
+
+  A — current production calculation:
+
+      compact Sun -> current J2000 frame transformation.
+
+  B — diagnostic calculation:
+
+      raw compact Sun vector with the J2000 transformation bypassed.
+
+The B calculation temporarily substitutes the raw compact Sun function only
+
+inside this validation process. The original production Sun function is always
+
+restored immediately afterward with a try/finally block.
+
+Nothing in eclipse_engine.py is modified.
+
+The diagnostic prints SIGNED timing residuals:
+
+    calculated greatest - reference greatest
+
+so:
+
+  negative = Star Almanack is EARLY
+
+  positive = Star Almanack is LATE
+
+It also reports whether bypassing the transformation improves or worsens the
+
+absolute timing residual.
+
+This is deliberately a falsifiable experiment. If B systematically collapses
+
+the residuals toward zero, the current Sun-frame conversion becomes the leading
+
+suspect. If B does not improve them, the investigation moves elsewhere.
 
 Why the eclipse geometry diagnostics exist
 
@@ -350,13 +406,87 @@ def _parse_iso_z(text: str) -> datetime:
 
     return datetime.fromisoformat(text.replace("Z", "+00:00"))
 
-def _seconds_difference(calculated: str, expected: str) -> float:
+def _signed_seconds_difference(
+
+    calculated: str,
+
+    expected: str,
+
+) -> float:
+
+    """
+
+    Return calculated - expected in seconds.
+
+    Negative means the calculated event is EARLY.
+
+    Positive means the calculated event is LATE.
+
+    """
 
     a = _parse_iso_z(calculated)
 
     b = _parse_iso_z(expected)
 
-    return abs((a - b).total_seconds())
+    return (a - b).total_seconds()
+
+def _seconds_difference(
+
+    calculated: str,
+
+    expected: str,
+
+) -> float:
+
+    """
+
+    Absolute timing difference used by the existing PASS/FAIL tolerance.
+
+    """
+
+    return abs(
+
+        _signed_seconds_difference(
+
+            calculated,
+
+            expected,
+
+        )
+
+    )
+
+def _format_signed_time_error(seconds: float) -> str:
+
+    """
+
+    Human-readable signed residual.
+
+    Example:
+
+        -13609 s -> -03:46:49 EARLY
+
+        +4195 s  -> +01:09:55 LATE
+
+    """
+
+    sign = "+" if seconds >= 0.0 else "-"
+
+    direction = "LATE" if seconds > 0.0 else "EARLY" if seconds < 0.0 else "EXACT"
+
+    whole = int(round(abs(seconds)))
+
+    hours, rem = divmod(whole, 3600)
+
+    minutes, secs = divmod(rem, 60)
+
+    return (
+
+        f"{sign}{hours:02d}:{minutes:02d}:{secs:02d} "
+
+        f"({direction})"
+
+    )
 
 def _iso_z_to_jd(text: str) -> float:
 
@@ -408,7 +538,11 @@ def _angle_between_deg(
 
 ) -> float:
 
-    """Return the smaller angle between two non-zero vectors in degrees."""
+    """
+
+    Return the smaller angle between two non-zero vectors in degrees.
+
+    """
 
     denom = a.norm() * b.norm()
 
@@ -426,7 +560,13 @@ def _angle_between_deg(
 
     return math.degrees(math.acos(cosine))
 
-def _print_vec(label: str, v: eclipse_engine.Vec3) -> None:
+def _print_vec(
+
+    label: str,
+
+    v: eclipse_engine.Vec3,
+
+) -> None:
 
     print(
 
@@ -454,15 +594,15 @@ def _compact_sun_ecliptic_of_date(
 
     This is diagnostic instrumentation only. It deliberately duplicates the
 
-    orbital portion of eclipse_engine.sun_vector_j2000() so that validation can
+    orbital portion of eclipse_engine.sun_vector_j2000() so validation can
 
-    observe the vector on both sides of the frame-conversion boundary without
+    observe and test the vector on both sides of the frame-conversion boundary
 
-    changing production behavior.
+    without modifying production behavior.
 
-    The returned vector is the compact model's geocentric ecliptic-of-date
+    The returned vector is the compact model's raw geocentric ecliptic vector,
 
-    vector, in kilometers.
+    in kilometers.
 
     """
 
@@ -544,13 +684,13 @@ def validate_sun_frame_diagnostic() -> None:
 
     essentially zero at J2000 and grows with distance from J2000, that confirms
 
-    the transformation itself is epoch-dependent. Correlation between that
+    the transformation itself is epoch-dependent.
 
-    displacement and the observed eclipse timing errors would make the
+    Correlation between that displacement and the observed eclipse timing
 
-    interpretation of the compact Sun coefficients' reference frame the next
+    errors makes interpretation of the compact Sun coefficients' reference
 
-    object of investigation.
+    frame an important object of investigation.
 
     This section is INFORMATIONAL ONLY. It has no PASS/FAIL result and cannot
 
@@ -564,7 +704,7 @@ def validate_sun_frame_diagnostic() -> None:
 
     print("  Moon frame:                   ELP2000-82B J2000 ecliptic")
 
-    print("  raw Sun:                      compact ecliptic-of-date assumption")
+    print("  raw Sun:                      compact pre-transform vector")
 
     print("  transformed Sun:              current production J2000 conversion")
 
@@ -582,17 +722,53 @@ def validate_sun_frame_diagnostic() -> None:
 
     epochs = [
 
-        ("1919 eclipse epoch", "1919-05-29T13:08:34Z"),
+        (
 
-        ("1991 eclipse epoch", "1991-07-11T19:06:03Z"),
+            "1919 eclipse epoch",
 
-        ("J2000 epoch", "2000-01-01T12:00:00Z"),
+            "1919-05-29T13:08:34Z",
 
-        ("2017 eclipse epoch", "2017-08-21T18:25:30Z"),
+        ),
 
-        ("2024 eclipse epoch", "2024-04-08T18:17:15Z"),
+        (
 
-        ("2028 eclipse epoch", "2028-07-22T02:56:39Z"),
+            "1991 eclipse epoch",
+
+            "1991-07-11T19:06:03Z",
+
+        ),
+
+        (
+
+            "J2000 epoch",
+
+            "2000-01-01T12:00:00Z",
+
+        ),
+
+        (
+
+            "2017 eclipse epoch",
+
+            "2017-08-21T18:25:30Z",
+
+        ),
+
+        (
+
+            "2024 eclipse epoch",
+
+            "2024-04-08T18:17:15Z",
+
+        ),
+
+        (
+
+            "2028 eclipse epoch",
+
+            "2028-07-22T02:56:39Z",
+
+        ),
 
     ]
 
@@ -638,11 +814,29 @@ def validate_sun_frame_diagnostic() -> None:
 
         print(f"  UTC:                         {iso_utc}")
 
-        print(f"  JD TDB approx:               {geometry.jd_tdb_approx:.12f}")
+        print(
 
-        print(f"  years from J2000:            {epoch_offset_years:+.6f}")
+            f"  JD TDB approx:               "
 
-        print(f"  Sun frame angular shift:     {frame_shift_deg:.9f} deg")
+            f"{geometry.jd_tdb_approx:.12f}"
+
+        )
+
+        print(
+
+            f"  years from J2000:            "
+
+            f"{epoch_offset_years:+.6f}"
+
+        )
+
+        print(
+
+            f"  Sun frame angular shift:     "
+
+            f"{frame_shift_deg:.9f} deg"
+
+        )
 
         _print_vec("Raw", raw_sun)
 
@@ -670,7 +864,7 @@ def _print_geometry_snapshot(
 
     """
 
-    Print the quantities most useful for locating a displaced eclipse minimum.
+    Print quantities useful for locating a displaced eclipse minimum.
 
     axis_distance_km is the objective minimized by EclipseEngine's search.
 
@@ -694,19 +888,61 @@ def _print_geometry_snapshot(
 
     print(f"      JD UTC:              {geometry.jd_utc:.12f}")
 
-    print(f"      JD TDB approx:       {geometry.jd_tdb_approx:.12f}")
+    print(
 
-    print(f"      Sun-Moon separation: {separation_deg:.9f} deg")
+        f"      JD TDB approx:       "
 
-    print(f"      axis distance:       {geometry.axis_distance_km:.3f} km")
+        f"{geometry.jd_tdb_approx:.12f}"
 
-    print(f"      q(min):              {geometry.q_min_km:.3f} km")
+    )
 
-    print(f"      eclipse margin:      {geometry.eclipse_margin_km:+.3f} km")
+    print(
 
-    print(f"      central margin:      {geometry.central_margin_km:+.3f} km")
+        f"      Sun-Moon separation: "
 
-    print(f"      eclipse type:        {geometry.eclipse_type}")
+        f"{separation_deg:.9f} deg"
+
+    )
+
+    print(
+
+        f"      axis distance:       "
+
+        f"{geometry.axis_distance_km:.3f} km"
+
+    )
+
+    print(
+
+        f"      q(min):              "
+
+        f"{geometry.q_min_km:.3f} km"
+
+    )
+
+    print(
+
+        f"      eclipse margin:      "
+
+        f"{geometry.eclipse_margin_km:+.3f} km"
+
+    )
+
+    print(
+
+        f"      central margin:      "
+
+        f"{geometry.central_margin_km:+.3f} km"
+
+    )
+
+    print(
+
+        f"      eclipse type:        "
+
+        f"{geometry.eclipse_type}"
+
+    )
 
     _print_vec("Sun", geometry.sun)
 
@@ -834,6 +1070,316 @@ def _print_reference_geometry_diagnostic(
 
         )
 
+def _find_eclipse_with_raw_sun(
+
+    engine: eclipse_engine.EclipseEngine,
+
+    date_utc: str,
+
+) -> eclipse_engine.SolarEclipseEvent:
+
+    """
+
+    Run one eclipse search with the compact raw Sun substituted for the
+
+    production transformed Sun.
+
+    CRITICAL SAFETY PROPERTY
+
+    ------------------------
+
+    This function changes the module-level sun_vector_j2000 reference only
+
+    temporarily.
+
+    The original production function is restored in finally even if the
+
+    diagnostic calculation raises an exception.
+
+    eclipse_engine.py itself is not edited and production behavior after this
+
+    function returns is identical to production behavior before it was called.
+
+    """
+
+    production_sun_function = eclipse_engine.sun_vector_j2000
+
+    try:
+
+        eclipse_engine.sun_vector_j2000 = (
+
+            _compact_sun_ecliptic_of_date
+
+        )
+
+        return engine.find_solar_eclipse(date_utc)
+
+    finally:
+
+        eclipse_engine.sun_vector_j2000 = (
+
+            production_sun_function
+
+        )
+
+def _print_sun_ab_diagnostic(
+
+    engine: eclipse_engine.EclipseEngine,
+
+    production_event: eclipse_engine.SolarEclipseEvent,
+
+    case: dict,
+
+    expected_time: str,
+
+) -> None:
+
+    """
+
+    Compare eclipse timing using transformed and raw compact Sun vectors.
+
+    A = current production transformed Sun.
+
+    B = raw compact Sun with frame transformation bypassed.
+
+    This is diagnostic only and never contributes to PASS/FAIL.
+
+    """
+
+    print("\n    SUN FRAME A/B DIAGNOSTIC")
+
+    print("      signed residual = calculated - reference")
+
+    print("      negative = EARLY; positive = LATE")
+
+    production_signed_error = _signed_seconds_difference(
+
+        production_event.greatest_utc,
+
+        expected_time,
+
+    )
+
+    try:
+
+        raw_event = _find_eclipse_with_raw_sun(
+
+            engine,
+
+            case["date_utc"],
+
+        )
+
+    except Exception as exc:
+
+        print(
+
+            "      B/raw diagnostic failed: "
+
+            f"{type(exc).__name__}: {exc}"
+
+        )
+
+        print(
+
+            "      production Sun function was restored in finally."
+
+        )
+
+        return
+
+    raw_signed_error = _signed_seconds_difference(
+
+        raw_event.greatest_utc,
+
+        expected_time,
+
+    )
+
+    production_abs_error = abs(production_signed_error)
+
+    raw_abs_error = abs(raw_signed_error)
+
+    improvement_seconds = (
+
+        production_abs_error - raw_abs_error
+
+    )
+
+    print("")
+
+    print("      A — PRODUCTION TRANSFORMED SUN")
+
+    print(
+
+        f"        greatest:             "
+
+        f"{production_event.greatest_utc}"
+
+    )
+
+    print(
+
+        f"        signed error:         "
+
+        f"{production_signed_error:+.1f} s"
+
+    )
+
+    print(
+
+        f"        human residual:       "
+
+        f"{_format_signed_time_error(production_signed_error)}"
+
+    )
+
+    print(
+
+        f"        eclipse type:         "
+
+        f"{production_event.eclipse_type}"
+
+    )
+
+    print(
+
+        f"        axis distance:        "
+
+        f"{production_event.geometry.axis_distance_km:.3f} km"
+
+    )
+
+    print("")
+
+    print("      B — RAW COMPACT SUN")
+
+    print(
+
+        f"        greatest:             "
+
+        f"{raw_event.greatest_utc}"
+
+    )
+
+    print(
+
+        f"        signed error:         "
+
+        f"{raw_signed_error:+.1f} s"
+
+    )
+
+    print(
+
+        f"        human residual:       "
+
+        f"{_format_signed_time_error(raw_signed_error)}"
+
+    )
+
+    print(
+
+        f"        eclipse type:         "
+
+        f"{raw_event.eclipse_type}"
+
+    )
+
+    print(
+
+        f"        axis distance:        "
+
+        f"{raw_event.geometry.axis_distance_km:.3f} km"
+
+    )
+
+    print("")
+
+    print("      A/B RESULT")
+
+    if improvement_seconds > 0.5:
+
+        print(
+
+            f"        raw Sun IMPROVES absolute timing error by "
+
+            f"{improvement_seconds:.1f} s"
+
+        )
+
+    elif improvement_seconds < -0.5:
+
+        print(
+
+            f"        raw Sun WORSENS absolute timing error by "
+
+            f"{abs(improvement_seconds):.1f} s"
+
+        )
+
+    else:
+
+        print(
+
+            "        raw Sun makes essentially no change to "
+
+            "absolute timing error"
+
+        )
+
+    if production_abs_error > 0.0:
+
+        ratio = raw_abs_error / production_abs_error
+
+        print(
+
+            f"        |B error| / |A error|: "
+
+            f"{ratio:.6f}"
+
+        )
+
+        if ratio < 0.25:
+
+            print(
+
+                "        diagnostic clue: VERY STRONG support for "
+
+                "investigating the production Sun-frame transformation."
+
+            )
+
+        elif ratio < 0.75:
+
+            print(
+
+                "        diagnostic clue: meaningful support for "
+
+                "investigating the production Sun-frame transformation."
+
+            )
+
+        elif ratio > 1.25:
+
+            print(
+
+                "        diagnostic clue: bypassing the frame transform "
+
+                "does not explain this case."
+
+            )
+
+        else:
+
+            print(
+
+                "        diagnostic clue: A and B are too similar here "
+
+                "for this case alone to identify the cause."
+
+            )
+
 def _run_eclipse_case(
 
     engine: eclipse_engine.EclipseEngine,
@@ -845,6 +1391,20 @@ def _run_eclipse_case(
     time_tolerance_seconds: float,
 
 ) -> bool:
+
+    """
+
+    Run one permanent eclipse validation case.
+
+    The production event is calculated first and is the ONLY event used for
+
+    normal validation PASS/FAIL.
+
+    If the case has a reference greatest-eclipse time, an additional raw-Sun
+
+    B search is then run strictly as instrumentation.
+
+    """
 
     event = engine.find_solar_eclipse(case["date_utc"])
 
@@ -874,9 +1434,21 @@ def _run_eclipse_case(
 
     if not expected_exists:
 
-        print(f"  closest alignment:    {event.greatest_utc}")
+        print(
 
-        print(f"  classification:       {event.eclipse_type}")
+            f"  closest alignment:    "
+
+            f"{event.greatest_utc}"
+
+        )
+
+        print(
+
+            f"  classification:       "
+
+            f"{event.eclipse_type}"
+
+        )
 
         print(
 
@@ -886,7 +1458,11 @@ def _run_eclipse_case(
 
         )
 
-        print(f"  {'PASS' if existence_ok else 'FAIL'}")
+        print(
+
+            f"  {'PASS' if existence_ok else 'FAIL'}"
+
+        )
 
         return existence_ok
 
@@ -894,19 +1470,29 @@ def _run_eclipse_case(
 
     type_ok = event.eclipse_type == expected_type
 
-    expected_time = case.get("expected_greatest_utc")
+    expected_time = case.get(
+
+        "expected_greatest_utc"
+
+    )
 
     if expected_time is None:
 
-        expected_time = case.get("nasa_greatest_utc")
+        expected_time = case.get(
+
+            "nasa_greatest_utc"
+
+        )
 
     time_ok = True
 
     time_error = None
 
+    signed_time_error = None
+
     if expected_time:
 
-        time_error = _seconds_difference(
+        signed_time_error = _signed_seconds_difference(
 
             event.greatest_utc,
 
@@ -914,31 +1500,113 @@ def _run_eclipse_case(
 
         )
 
-        time_ok = time_error <= time_tolerance_seconds
+        time_error = abs(signed_time_error)
 
-    print(f"  calculated type:      {event.eclipse_type}")
+        time_ok = (
 
-    print(f"  expected type:        {expected_type}")
+            time_error
 
-    print(f"  calculated greatest:  {event.greatest_utc}")
+            <= time_tolerance_seconds
+
+        )
+
+    print(
+
+        f"  calculated type:      "
+
+        f"{event.eclipse_type}"
+
+    )
+
+    print(
+
+        f"  expected type:        "
+
+        f"{expected_type}"
+
+    )
+
+    print(
+
+        f"  calculated greatest:  "
+
+        f"{event.greatest_utc}"
+
+    )
 
     if expected_time:
 
-        print(f"  expected greatest:    {expected_time}")
+        print(
 
-        print(f"  time error:           {time_error:.1f} s")
+            f"  expected greatest:    "
 
-        print(f"  time tolerance:       {time_tolerance_seconds:.1f} s")
+            f"{expected_time}"
 
-        # Diagnostic only. The reference time is never used to influence the
+        )
 
-        # engine's independently calculated event.
+        print(
+
+            f"  time error absolute:  "
+
+            f"{time_error:.1f} s"
+
+        )
+
+        print(
+
+            f"  time error signed:    "
+
+            f"{signed_time_error:+.1f} s"
+
+        )
+
+        print(
+
+            f"  signed residual:      "
+
+            f"{_format_signed_time_error(signed_time_error)}"
+
+        )
+
+        print(
+
+            f"  time tolerance:       "
+
+            f"{time_tolerance_seconds:.1f} s"
+
+        )
+
+        # Existing geometry diagnostic.
+
+        #
+
+        # The reference time is never used to influence the engine's
+
+        # independently calculated production event.
 
         _print_reference_geometry_diagnostic(
 
             engine,
 
             event,
+
+            expected_time,
+
+        )
+
+        # New A/B frame diagnostic.
+
+        #
+
+        # Again, this does not influence event, type_ok, time_ok, or passed.
+
+        _print_sun_ab_diagnostic(
+
+            engine,
+
+            event,
+
+            case,
 
             expected_time,
 
@@ -952,25 +1620,47 @@ def _run_eclipse_case(
 
     # silently pretending to validate a quantity we have not calculated.
 
-    magnitude_target = case.get("expected_magnitude")
+    magnitude_target = case.get(
+
+        "expected_magnitude"
+
+    )
 
     if magnitude_target is None:
 
-        magnitude_target = case.get("nasa_magnitude")
+        magnitude_target = case.get(
+
+            "nasa_magnitude"
+
+        )
 
     if magnitude_target is not None:
 
         print(
 
-            f"  magnitude target:     {float(magnitude_target):.4f} "
+            f"  magnitude target:     "
+
+            f"{float(magnitude_target):.4f} "
 
             "(registered; calculation not yet implemented)"
 
         )
 
-    passed = existence_ok and type_ok and time_ok
+    passed = (
 
-    print(f"  {'PASS' if passed else 'FAIL'}")
+        existence_ok
+
+        and type_ok
+
+        and time_ok
+
+    )
+
+    print(
+
+        f"  {'PASS' if passed else 'FAIL'}"
+
+    )
 
     return passed
 
@@ -978,15 +1668,63 @@ def validate_eclipses() -> tuple[bool, int, int, bool]:
 
     spec = load_yaml(ECLIPSE_CASES)
 
-    historical = spec.get("historical", [])
+    historical = spec.get(
 
-    negative = spec.get("negative_controls", [])
+        "historical",
 
-    future = spec.get("future_jello", {}).get("cases", [])
+        [],
 
-    all_cases = historical + negative + future
+    )
 
-    required = bool(spec.get("required_now", False))
+    negative = spec.get(
+
+        "negative_controls",
+
+        [],
+
+    )
+
+    future = (
+
+        spec.get(
+
+            "future_jello",
+
+            {},
+
+        )
+
+        .get(
+
+            "cases",
+
+            [],
+
+        )
+
+    )
+
+    all_cases = (
+
+        historical
+
+        + negative
+
+        + future
+
+    )
+
+    required = bool(
+
+        spec.get(
+
+            "required_now",
+
+            False,
+
+        )
+
+    )
 
     tolerance = float(
 
@@ -1006,19 +1744,59 @@ def validate_eclipses() -> tuple[bool, int, int, bool]:
 
     )
 
-    print("\n=== 4. SOLAR ECLIPSE GEOMETRY TESTS ===")
+    print(
 
-    print(f"  Historical positive controls: {len(historical)}")
+        "\n=== 4. SOLAR ECLIPSE GEOMETRY "
 
-    print(f"  Negative controls:            {len(negative)}")
+        "AND SUN-FRAME A/B TESTS ==="
 
-    print(f"  Future Jell-O comparisons:    {len(future)}")
+    )
+
+    print(
+
+        f"  Historical positive controls: "
+
+        f"{len(historical)}"
+
+    )
+
+    print(
+
+        f"  Negative controls:            "
+
+        f"{len(negative)}"
+
+    )
+
+    print(
+
+        f"  Future Jell-O comparisons:    "
+
+        f"{len(future)}"
+
+    )
 
     print(
 
         f"  enforcement:                  "
 
         f"{'REQUIRED' if required else 'DIAGNOSTIC'}"
+
+    )
+
+    print(
+
+        "  A/B experiment:              "
+
+        "A=production transformed Sun; B=raw compact Sun"
+
+    )
+
+    print(
+
+        "  A/B enforcement:             "
+
+        "DIAGNOSTIC ONLY"
 
     )
 
@@ -1046,7 +1824,9 @@ def validate_eclipses() -> tuple[bool, int, int, bool]:
 
     print(
 
-        f"\nECLIPSE SECTION: {'PASS' if ok else 'FAIL'} "
+        f"\nECLIPSE SECTION: "
+
+        f"{'PASS' if ok else 'FAIL'} "
 
         f"({passed}/{total})"
 
@@ -1062,17 +1842,53 @@ def validate_eclipses() -> tuple[bool, int, int, bool]:
 
         )
 
-    return ok, passed, total, required
+    print(
+
+        "  NOTE: Raw-vs-transformed Sun A/B results are "
+
+        "always informational and never alter PASS/FAIL."
+
+    )
+
+    return (
+
+        ok,
+
+        passed,
+
+        total,
+
+        required,
+
+    )
 
 def main() -> None:
 
-    print("Star Almanack — complete validation")
+    print(
 
-    print(f"UTC run time: {datetime.now(timezone.utc).isoformat()}")
+        "Star Almanack — complete validation"
 
-    lunar_ok, lunar_passed, lunar_total = validate_lunar()
+    )
 
-    utc_ok, utc_passed, utc_total = validate_utc_boundaries()
+    print(
+
+        f"UTC run time: "
+
+        f"{datetime.now(timezone.utc).isoformat()}"
+
+    )
+
+    lunar_ok, lunar_passed, lunar_total = (
+
+        validate_lunar()
+
+    )
+
+    utc_ok, utc_passed, utc_total = (
+
+        validate_utc_boundaries()
+
+    )
 
     # This section is intentionally diagnostic only. It is not included in
 
@@ -1080,17 +1896,27 @@ def main() -> None:
 
     validate_sun_frame_diagnostic()
 
-    eclipse_ok, eclipse_passed, eclipse_total, eclipse_required = (
+    (
 
-        validate_eclipses()
+        eclipse_ok,
 
-    )
+        eclipse_passed,
+
+        eclipse_total,
+
+        eclipse_required,
+
+    ) = validate_eclipses()
 
     # Lunar-reference correctness and time-conversion correctness are always
 
     # required. Eclipse catalog comparisons remain diagnostic until the
 
     # validation YAML explicitly promotes them to release-blocking status.
+
+    #
+
+    # The A/B Sun test is instrumentation only regardless of required_now.
 
     required_results = [
 
@@ -1102,11 +1928,23 @@ def main() -> None:
 
     if eclipse_required:
 
-        required_results.append(eclipse_ok)
+        required_results.append(
 
-    overall = all(required_results)
+            eclipse_ok
 
-    print("\n=== FINAL RESULT ===")
+        )
+
+    overall = all(
+
+        required_results
+
+    )
+
+    print(
+
+        "\n=== FINAL RESULT ==="
+
+    )
 
     print(
 
@@ -1146,15 +1984,26 @@ def main() -> None:
 
     print(
 
+        "Sun frame A/B experiment: "
+
+        "DIAGNOSTIC ONLY"
+
+    )
+
+    print(
+
         f"STAR ALMANACK VALIDATION: "
 
         f"{'PASS' if overall else 'FAIL'}"
 
     )
 
-    raise SystemExit(0 if overall else 1)
+    raise SystemExit(
+
+        0 if overall else 1
+
+    )
 
 if __name__ == "__main__":
 
     main()
-
