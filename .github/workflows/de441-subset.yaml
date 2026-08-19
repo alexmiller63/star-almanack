@@ -1,1 +1,96 @@
-hello
+name: Build DE441 Eclipse Subset
+
+on:
+
+  workflow_dispatch:
+
+permissions:
+
+  contents: read
+
+jobs:
+
+  build-de441-subset:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Check out Star Almanack
+
+        uses: actions/checkout@v6
+
+      - name: Download DE441 source kernels
+
+        run: |
+
+          wget -q --show-progress \
+
+            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
+
+          wget -q --show-progress \
+
+            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
+
+      - name: Download NAIF generic kernels
+
+        run: |
+
+          wget -q \
+
+            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
+
+      - name: Download and install NAIF SPICE Toolkit
+
+        run: |
+
+          wget -q \
+
+            https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
+
+          tar -xzf cspice.tar.Z
+
+          echo "$GITHUB_WORKSPACE/cspice/exe" >> "$GITHUB_PATH"
+
+      - name: Build Star Almanack DE441 eclipse subset
+
+        run: |
+
+          spkmerge de441-eclipse-subset.mrg
+
+      - name: Report sizes
+
+        run: |
+
+          echo "=== ORIGINAL DE441 ==="
+
+          ls -lh de441_part-1.bsp de441_part-2.bsp
+
+          echo
+
+          echo "=== STAR ALMANACK SUBSET ==="
+
+          ls -lh de441-star-almanack-eclipses.bsp
+
+          echo
+
+          echo "=== EXACT BYTE COUNT ==="
+
+          stat --format="%n %s bytes" de441-star-almanack-eclipses.bsp
+
+      - name: Save subset as workflow artifact
+
+        uses: actions/upload-artifact@v4
+
+        with:
+
+          name: de441-star-almanack-eclipses
+
+          path: |
+
+            de441-star-almanack-eclipses.bsp
+
+            de441-star-almanack-eclipses.log
+
+          retention-days: 7
+
