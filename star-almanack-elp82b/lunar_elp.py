@@ -22,13 +22,25 @@ from dataclasses import dataclass
 from pathlib import Path
 from urllib.request import Request, urlopen
 import argparse
+import gzip
 import json
 import math
 from typing import Any, Iterable
 
 
 CDS_BASE = "https://cdsarc.cds.unistra.fr/ftp/VI/79"
+
+# Local filenames expected by the rest of the Star Almanack tools.
 AUX_FILES = ("ReadMe", "elp82b.f", "example.f", "elp82b.ps")
+
+# CDS stores three of the auxiliary files gzip-compressed.  Bootstrap downloads
+# the published .gz objects and expands them to the local filenames above.
+AUX_DOWNLOADS = {
+    "ReadMe": "ReadMe",
+    "elp82b.f": "elp82b.f.gz",
+    "example.f": "example.f.gz",
+    "elp82b.ps": "elp82b.ps.gz",
+}
 
 
 def _download(url: str, dest: Path) -> None:
@@ -37,15 +49,26 @@ def _download(url: str, dest: Path) -> None:
         dest.write_bytes(response.read())
 
 
+def _download_gzip(url: str, dest: Path) -> None:
+    req = Request(url, headers={"User-Agent": "Star-Almanack/1.0"})
+    with urlopen(req, timeout=60) as response:
+        compressed = response.read()
+    dest.write_bytes(gzip.decompress(compressed))
+
+
 def bootstrap(directory: Path) -> None:
-    """Download the official CDS VI/79 ELP2000-82B archive."""
+    """Download and expand the official CDS VI/79 ELP2000-82B archive."""
     directory.mkdir(parents=True, exist_ok=True)
 
-    for name in AUX_FILES:
-        dest = directory / name
+    for local_name, remote_name in AUX_DOWNLOADS.items():
+        dest = directory / local_name
         if not dest.exists():
-            print(f"fetch {name}")
-            _download(f"{CDS_BASE}/{name}", dest)
+            print(f"fetch {remote_name}")
+            url = f"{CDS_BASE}/{remote_name}"
+            if remote_name.endswith(".gz"):
+                _download_gzip(url, dest)
+            else:
+                _download(url, dest)
 
     for i in range(1, 37):
         name = f"ELP{i}"
