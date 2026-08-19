@@ -4,13 +4,14 @@ Star Almanack — aggregate validation harness.
 
 One command, one final PASS/FAIL, with section-level diagnostics.
 
-Required section:
+Required sections:
   1. ELP2000-82B lunar reference regression.
+  2. Julian-Date / UTC boundary regression.
 
 Eclipse section:
-  2. Historical solar eclipses.
-  3. Mark Twain negative control.
-  4. Future "Jell-O" NASA prediction comparisons.
+  3. Historical solar eclipses.
+  4. Mark Twain negative control.
+  5. Future "Jell-O" NASA prediction comparisons.
 
 The eclipse engine is always exercised.  While required_now is false in
 eclipse-validation-cases.yaml, eclipse failures are reported diagnostically
@@ -20,6 +21,18 @@ set required_now: true and the same tests become release-blocking.
 Important:
 Published eclipse data are used only as validation targets.  eclipse_engine.py
 does not read the validation catalog.
+
+Why the UTC boundary tests are release-blocking
+------------------------------------------------
+The eclipse engine converts calculated Julian Dates back to civil UTC strings.
+A rounding edge immediately before midnight once produced 86400 seconds within
+a day.  The old repair recursively called the same conversion routine and, at
+the exact boundary, could call itself with the same value indefinitely.
+
+The production converter now normalizes the astronomical instant to whole-
+second resolution before decomposing it into a calendar date and clock time.
+The tests below deliberately straddle midnight so that this invariant remains
+protected against future "cleanup" changes.
 """
 
 from __future__ import annotations
@@ -89,6 +102,84 @@ def validate_lunar() -> tuple[bool, int, int]:
         f"({count - failures}/{count})"
     )
     return ok, count - failures, count
+
+
+def validate_utc_boundaries() -> tuple[bool, int, int]:
+    """
+    Regression-test Julian-Date -> UTC conversion across a civil midnight.
+
+    These cases are intentionally small and artificial.  They are not
+    astronomical validation targets; they test a software invariant needed by
+    every later astronomical result that is formatted as a UTC timestamp.
+
+    The critical rule is:
+
+        round/normalize the instant first,
+        then decompose it into calendar date + time.
+
+    That rule guarantees that a value rounding across midnight becomes the
+    following date at 00:00:00 rather than the impossible state "86400 seconds
+    on the previous date".
+    """
+    print("\n=== 2. JULIAN-DATE / UTC BOUNDARY TESTS ===")
+
+    midnight = eclipse_engine.gregorian_to_jd(2026, 8, 19, 0.0)
+
+    cases = [
+        (
+            "just before rounding threshold",
+            midnight - 0.6 / 86400.0,
+            "2026-08-18T23:59:59Z",
+        ),
+        (
+            "just after rounding threshold",
+            midnight - 0.4 / 86400.0,
+            "2026-08-19T00:00:00Z",
+        ),
+        (
+            "exact midnight",
+            midnight,
+            "2026-08-19T00:00:00Z",
+        ),
+        (
+            "just after midnight, below next-second threshold",
+            midnight + 0.4 / 86400.0,
+            "2026-08-19T00:00:00Z",
+        ),
+        (
+            "just after midnight, above next-second threshold",
+            midnight + 0.6 / 86400.0,
+            "2026-08-19T00:00:01Z",
+        ),
+    ]
+
+    passed_count = 0
+
+    for label, jd, expected in cases:
+        try:
+            calculated = eclipse_engine.jd_to_iso_utc(jd)
+            passed = calculated == expected
+        except Exception as exc:
+            calculated = f"{type(exc).__name__}: {exc}"
+            passed = False
+
+        print(f"\n{label}")
+        print(f"  JD:          {jd:.12f}")
+        print(f"  calculated:  {calculated}")
+        print(f"  expected:    {expected}")
+        print(f"  {'PASS' if passed else 'FAIL'}")
+
+        if passed:
+            passed_count += 1
+
+    total = len(cases)
+    ok = passed_count == total
+
+    print(
+        f"\nUTC BOUNDARY SECTION: {'PASS' if ok else 'FAIL'} "
+        f"({passed_count}/{total})"
+    )
+    return ok, passed_count, total
 
 
 def _parse_iso_z(text: str) -> datetime:
@@ -185,7 +276,7 @@ def validate_eclipses() -> tuple[bool, int, int, bool]:
         spec.get("tolerances", {}).get("greatest_time_seconds", 120)
     )
 
-    print("\n=== 2. SOLAR ECLIPSE GEOMETRY TESTS ===")
+    print("\n=== 3. SOLAR ECLIPSE GEOMETRY TESTS ===")
     print(f"  Historical positive controls: {len(historical)}")
     print(f"  Negative controls:            {len(negative)}")
     print(f"  Future Jell-O comparisons:    {len(future)}")
@@ -226,11 +317,15 @@ def main() -> None:
     print(f"UTC run time: {datetime.now(timezone.utc).isoformat()}")
 
     lunar_ok, lunar_passed, lunar_total = validate_lunar()
+    utc_ok, utc_passed, utc_total = validate_utc_boundaries()
     eclipse_ok, eclipse_passed, eclipse_total, eclipse_required = (
         validate_eclipses()
     )
 
-    required_results = [lunar_ok]
+    # Lunar-reference correctness and time-conversion correctness are always
+    # required.  Eclipse catalog comparisons remain diagnostic until the
+    # validation YAML explicitly promotes them to release-blocking status.
+    required_results = [lunar_ok, utc_ok]
     if eclipse_required:
         required_results.append(eclipse_ok)
 
@@ -238,6 +333,7 @@ def main() -> None:
 
     print("\n=== FINAL RESULT ===")
     print(f"Required lunar cases: {lunar_passed}/{lunar_total} passed")
+    print(f"Required UTC boundary cases: {utc_passed}/{utc_total} passed")
 
     if eclipse_required:
         print(
