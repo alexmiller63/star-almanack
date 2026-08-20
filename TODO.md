@@ -10,6 +10,14 @@
 
 - [ ] TODO-004 — Calculate the retained percentage and percentage reduction from the full DE441 source.
 
+### DE441 source-kernel boundaries
+
+- `de441_part-1.bsp`: 13201 B.C. May 05 23:59:18.815 → 1969 Jul 29 23:59:18.817
+
+- `de441_part-2.bsp`: 1969 Jul 29 23:59:18.817 → 17191 Mar 14 23:58:50.816
+
+- Bodies selected: `3, 10, 301, 399`
+
 ### Calculation
 
 Full DE441 source:
