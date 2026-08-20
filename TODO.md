@@ -36,7 +36,19 @@ Percentage reduction:
 
 100% − 70% = 30%
 
+## Full-versus-Reduced Validation
+
+- [ ] TODO-005 — Identify the eclipse or eclipses used for the full-versus-reduced validation.
+
+- [ ] TODO-006 — Record the result calculated from the full DE441 data.
+
+- [ ] TODO-007 — Record the result calculated from the reduced Sun–Earth–Moon kernel.
+
+- [ ] TODO-008 — Record the numerical difference between the two results, including the relevant units and precision.
+
+- [ ] TODO-009 — Define the acceptance tolerance before interpreting the comparison as a PASS or FAIL.
+
 ### Final documentation
 
-- [ ] Move the DE441 source size, subset size, retained percentage, percentage reduction, and source-kernel boundaries into `math.md`.
+When the validation figures are settled, move the DE441 source size, subset size, retained percentage, percentage reduction, source-kernel boundaries, validation results, numerical difference, and acceptance tolerance into `math.md`.
 
