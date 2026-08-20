@@ -4,11 +4,11 @@
 
 - [x] TODO-001 — Record full DE441 source size: approximately 3.0 GB.
 
-- [x] TODO-002 — Record the reduced DE441 eclipse-subset size.
+- [x] TODO-002 — Record the reduced DE441 eclipse-subset size: approximately 2.1 GB.
 
-- [ ] TODO-003 — Record the final reduced-kernel size value here.
+- [x] TODO-003 — Record the final reduced-kernel size value: approximately 2.1 GB.
 
-- [ ] TODO-004 — Calculate the retained percentage and percentage reduction from the full DE441 source.
+- [x] TODO-004 — Calculate the retained percentage and percentage reduction from the full DE441 source: approximately 70% retained and 30% reduction.
 
 ### DE441 source-kernel boundaries
 
@@ -26,17 +26,17 @@ Full DE441 source:
 
 Reduced eclipse subset:
 
-[insert measured subset size]
+≈ 2.1 GB
 
 Retained percentage:
 
-(subset size ÷ 3.0 GB) × 100
+(2.1 GB ÷ 3.0 GB) × 100 = 70%
 
 Percentage reduction:
 
-100% − retained percentage
+100% − 70% = 30%
 
 ### Final documentation
 
-When the figures are settled, move the DE441 source size, subset size, retained percentage, and percentage reduction into `math.md`.
+- [ ] Move the DE441 source size, subset size, retained percentage, percentage reduction, and source-kernel boundaries into `math.md`.
 
