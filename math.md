@@ -1,6 +1,6 @@
-# The Mathematics of the Star Almanac
+# The Mathematics of the Star Almanackk
 
-The *Star Almanac* is designed to be used without any knowledge of the mathematics behind it. This section is for readers who want to understand, verify, or reproduce the calculations used elsewhere in the Almanac. It may be skipped entirely without affecting the use of the rest of the book.
+**About this file.** This file is the technical mathematical reference for the *Star Almanackk*. It records the definitions, equations, astronomical models, numerical conventions, algorithms, and validation rules underlying the calculations used throughout the project. It is intended both to explain the mathematics and to make the calculations reproducible. The ordinary reader does not need this material in order to use the *Star Almanackk*; the reader-facing explanation of the project's mathematics is maintained separately in `mathematics.md`.
 
 ## 1. Time and the Celestial Sphere
 
@@ -116,7 +116,7 @@ $$
 
 $$
 
-This simple relationship is fundamental to the calculation of the stars' visible dates used throughout the *Star Almanac*.
+This simple relationship is fundamental to the calculation of the stars' visible dates used throughout the *Star Almanack*.
 
 ## Ephemerides
 
@@ -168,7 +168,7 @@ Thus calendar dates can first be converted into Julian Dates, calculations can b
 
 ### Rounding Julian Dates at Civil Midnight
 
-When a calculated Julian Date is converted back into a civil UTC time, the *Star Almanack* first rounds and normalizes the **instant itself** to the resolution that will be displayed, and only then decomposes that instant into a Gregorian date and a clock time.
+When a calculated Julian Date is converted back into a civil UTC time, the *Star Almanackk* first rounds and normalizes the **instant itself** to the resolution that will be displayed, and only then decomposes that instant into a Gregorian date and a clock time.
 
 That order is deliberate.
 
@@ -362,7 +362,7 @@ The principle, however, remains the same:
 
 **calculate the astronomical position with sufficient precision for the purpose of the Almanack, then present the result in a form useful to the reader.**
 
-The ephemeris is therefore part of the mathematical machinery underneath several other parts of the *Star Almanack*. Lunar phases require the positions of the Sun and Moon. Zodiac positions require ecliptic longitude. Horoscope calculations require the positions of the relevant astronomical bodies.
+The ephemeris is therefore part of the mathematical machinery underneath several other parts of the *Star Almanackk*. Lunar phases require the positions of the Sun and Moon. Zodiac positions require ecliptic longitude. Horoscope calculations require the positions of the relevant astronomical bodies.
 
 The tables may look simple.
 
@@ -560,7 +560,7 @@ $$
 
 The calculation can first locate an interval containing the desired phase and then successively narrow that interval until the required precision is reached.
 
-The final result can then be converted from astronomical time into the civil date and time presented in the *Star Almanack*.
+The final result can then be converted from astronomical time into the civil date and time presented in the *Star Almanackk*.
 
 Once again, the reader does not need to perform any of this mathematics.
 
@@ -687,7 +687,7 @@ It is the feature that allows every ISO week to remain an intact Monday-through-
 
 ### Why the Almanack Uses It
 
-For the *Star Almanack*, the ISO calendar provides something the ordinary month calendar does not:
+For the *Star Almanackk*, the ISO calendar provides something the ordinary month calendar does not:
 
 **a continuous sequence of complete, consistently numbered weeks.**
 
@@ -709,4 +709,92 @@ Both describe the same day.
 
 They organize it differently.
 
-The *Star Almanack* uses both because each answers a different question.
+The *Star Almanackk* uses both because each answers a different question.
+
+## DE441 and the Reduced Eclipse Kernel
+
+The eclipse calculations in the *Star Almanack* use the JPL DE441 planetary and lunar ephemeris as an authoritative source of solar-system positions. DE441 contains considerably more information than an eclipse calculation necessarily requires. This raises a useful computational and scientific question:
+
+> **How much of DE441 is actually necessary to reproduce the eclipse calculations used by the Star Almanack?**
+
+Rather than assume that every body represented in the source ephemeris must be retained, the project constructs a reduced SPICE kernel containing only the bodies required for the calculation under test.
+
+### The Sun–Earth–Moon Kernel
+
+For the initial reduction experiment, the retained system is the Sun, Earth, and Moon, together with the necessary reference data required by SPICE to represent their positions correctly.
+
+Everything else that can be removed without breaking that representation is deliberately excluded.
+
+This is not an assertion that the other bodies exert no gravitational influence. DE441 has already incorporated the dynamical model used to generate its ephemerides. The reduced kernel is a subset of the resulting ephemeris data; it is not a new three-body numerical integration in which the rest of the Solar System has been assumed not to exist.
+
+That distinction is essential.
+
+The experiment asks whether the stored Sun–Earth–Moon trajectories needed by the *Star Almanack* can be extracted from DE441 without carrying the remainder of the large source kernel along with them.
+
+### Size of the Reduction
+
+The reduction should be measured rather than described merely as “large” or “small.”
+
+**TODO — Record the size of the complete DE441 source data used for the build.**
+
+**TODO — Record the size of the particular DE441 source kernel from which the relevant records are extracted.**
+
+**TODO — Record the size of the resulting reduced Sun–Earth–Moon kernel.**
+
+**TODO — Calculate and record the percentage reduction relative to each appropriate source size.**
+
+These measurements serve two purposes. They quantify the practical storage advantage of the reduced kernel, and they make the experiment reproducible.
+
+### What Has Been Removed?
+
+The reduced kernel deliberately omits ephemeris records that are not required to obtain the Sun–Earth–Moon positions used by the eclipse calculation.
+
+That immediately raises a deeper question: which bodies matter physically, which bodies matter computationally, and which bodies appear in astronomical datasets primarily because of historical convention?
+
+The distinction is easy to overlook.
+
+For example, Pluto has traditionally received individual treatment in major planetary ephemerides despite its present classification as a dwarf planet. Ceres, also a dwarf planet and considerably closer to Earth, does not necessarily receive equivalent treatment in simplified lists of “planetary” bodies.
+
+The point is not that Ceres must therefore perturb an eclipse calculation more than Pluto. Gravitational influence depends on mass, distance, geometry, and the dynamical model. Rather, the comparison warns against treating a familiar list of named bodies as though the list itself were a physical law.
+
+Pluto's presence can reflect the history of planetary astronomy as well as numerical necessity. Ceres provides a particularly interesting comparison because it was discovered by the Italian astronomer Giuseppe Piazzi in 1801, was initially regarded as a planet, was later grouped with the asteroids, and is now classified as a dwarf planet.
+
+The *Star Almanack* therefore treats inclusion in a conventional astronomical list as a question to investigate, not as proof that the included body's contribution is important at the precision required for a particular calculation.
+
+### Validation
+
+A smaller file is useful only if it preserves the astronomical information required by the calculation.
+
+The reduced kernel must therefore be tested against the unreduced DE441 data using the same eclipse calculation.
+
+The comparison should use at least one eclipse whose calculation has already been independently validated. The same computational procedure should then be run using the full DE441 data and the reduced kernel.
+
+**TODO — Identify the eclipse or eclipses used for the full-versus-reduced validation.**
+
+**TODO — Record the result calculated from the full DE441 data.**
+
+**TODO — Record the result calculated from the reduced Sun–Earth–Moon kernel.**
+
+**TODO — Record the numerical difference between the two results, including the relevant units and precision.**
+
+**TODO — Define the acceptance tolerance before interpreting the comparison as a PASS or FAIL.**
+
+Only after this comparison has been performed should the project state that the reduced kernel is adequate for the eclipse calculations.
+
+Until then, the reduced kernel is a successful data-reduction experiment awaiting astronomical validation.
+
+### General Principle
+
+The purpose of the experiment is broader than saving disk space.
+
+Scientific software should distinguish between information that is present, information that is necessary, and information that has been retained merely because it was present in the original source.
+
+The *Star Almanack* therefore follows a simple rule:
+
+> **Do not remove astronomical information merely because it appears unnecessary. Test whether it is unnecessary.**
+
+The reduced DE441 kernel turns that rule into an experiment. The source ephemeris supplies the authoritative trajectories. The reduced kernel isolates the information believed to be required. Eclipse calculations then provide the test.
+
+The final authority is not the size of the file or the elegance of the reduction.
+
+It is whether the sky comes out the same.
