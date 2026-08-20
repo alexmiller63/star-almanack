@@ -66,6 +66,30 @@ jobs:
 
           python3 -m pip install --disable-pip-version-check spiceypy pyyaml
 
+      - name: Bootstrap ELP2000-82B archive
+
+        working-directory: star-almanack-elp82b
+
+        run: |
+
+          python lunar_elp.py bootstrap data/elp82b
+
+      - name: Verify ELP2000-82B archive
+
+        working-directory: star-almanack-elp82b
+
+        run: |
+
+          python lunar_elp.py verify data/elp82b
+
+      - name: Normalize ELP2000-82B coefficients
+
+        working-directory: star-almanack-elp82b
+
+        run: |
+
+          python normalize_elp82b.py data/elp82b elp82b-manifest.json
+
       - name: Record source sizes and checksums
 
         run: |
