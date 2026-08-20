@@ -306,7 +306,15 @@ jobs:
 
               )
 
-          with open("eclipse-validation-cases.yaml", "r", encoding="utf-8") as handle:
+          with open(
+
+              "eclipse-validation-cases.yaml",
+
+              "r",
+
+              encoding="utf-8",
+
+          ) as handle:
 
               spec = yaml.safe_load(handle)
 
@@ -510,7 +518,11 @@ jobs:
 
                   else:
 
-                      print("  DE441 leaves absolute timing residual unchanged")
+                      print(
+
+                          "  DE441 leaves absolute timing residual unchanged"
+
+                      )
 
                   print(
 
