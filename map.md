@@ -336,3 +336,367 @@ The tables may look simple.
 
 The simplicity is deliberate.
 
+## Lunar Phases
+
+The phases of the Moon are a consequence of geometry.
+
+The Moon does not generate its own visible light. One half of the Moon is illuminated by the Sun, and as the Moon moves around Earth we see different portions of that illuminated hemisphere.
+
+For calculating the principal lunar phases, the important quantity is the angular separation of the Sun and Moon along the ecliptic.
+
+Let
+
+$$
+
+\lambda_{\text{Moon}}
+
+$$
+
+be the Moon's apparent ecliptic longitude and
+
+$$
+
+\lambda_{\odot}
+
+$$
+
+be the Sun's apparent ecliptic longitude.
+
+Define the elongation
+
+$$
+
+D =
+
+\lambda_{\text{Moon}}
+
+-
+
+\lambda_{\odot}.
+
+$$
+
+Because longitude wraps around after $360^\circ$, we reduce the result modulo $360^\circ$:
+
+$$
+
+D =
+
+(\lambda_{\text{Moon}}-\lambda_{\odot})
+
+\bmod 360^\circ.
+
+$$
+
+The 4 principal lunar phases occur when this angle reaches particular values.
+
+### New Moon
+
+At new moon,
+
+$$
+
+D=0^\circ.
+
+$$
+
+The Sun and Moon have approximately the same ecliptic longitude.
+
+From Earth, the illuminated hemisphere of the Moon faces predominantly away from us.
+
+### First Quarter
+
+At first quarter,
+
+$$
+
+D=90^\circ.
+
+$$
+
+The Moon has moved approximately one quarter of the way around its cycle relative to the Sun.
+
+### Full Moon
+
+At full moon,
+
+$$
+
+D=180^\circ.
+
+$$
+
+The Moon is approximately opposite the Sun in ecliptic longitude, and the hemisphere facing Earth is illuminated.
+
+### Last Quarter
+
+At last quarter,
+
+$$
+
+D=270^\circ.
+
+$$
+
+Equivalently, the Moon may be regarded as $90^\circ$ west of the Sun.
+
+The sequence can therefore be summarized mathematically as
+
+$$
+
+0^\circ
+
+\rightarrow
+
+90^\circ
+
+\rightarrow
+
+180^\circ
+
+\rightarrow
+
+270^\circ
+
+\rightarrow
+
+360^\circ.
+
+$$
+
+At $360^\circ$, the cycle begins again at $0^\circ$.
+
+## The Synodic Month
+
+The interval from one new moon to the next is called the **synodic month**.
+
+Its mean length is approximately
+
+$$
+
+29.53059\text{ days}.
+
+$$
+
+This is longer than the Moon's orbital period relative to the distant stars.
+
+The reason is that Earth and the Moon are traveling around the Sun together. During the time the Moon completes one orbit relative to the stars, the Sun has moved eastward against the stellar background. The Moon must therefore travel farther before it again reaches the same angular relationship with the Sun.
+
+The distinction is between the **sidereal month**, measured relative to the stars, and the **synodic month**, measured relative to the Sun.
+
+Lunar phases depend upon the synodic cycle.
+
+## Finding the Instant of a Phase
+
+An ephemeris can provide the apparent ecliptic longitudes of the Sun and Moon as functions of time:
+
+$$
+
+\lambda_{\odot}(t)
+
+$$
+
+and
+
+$$
+
+\lambda_{\text{Moon}}(t).
+
+$$
+
+Their difference gives
+
+$$
+
+D(t)
+
+=
+
+\left(
+
+\lambda_{\text{Moon}}(t)
+
+-
+
+\lambda_{\odot}(t)
+
+\right)
+
+\bmod 360^\circ.
+
+$$
+
+Finding a lunar phase then becomes a root-finding problem.
+
+For a full moon, for example, we seek the time $t$ for which
+
+$$
+
+D(t)-180^\circ=0.
+
+$$
+
+For a first quarter, we seek
+
+$$
+
+D(t)-90^\circ=0.
+
+$$
+
+The calculation can first locate an interval containing the desired phase and then successively narrow that interval until the required precision is reached.
+
+The final result can then be converted from astronomical time into the civil date and time presented in the *Star Almanack*.
+
+Once again, the reader does not need to perform any of this mathematics.
+
+The Almanack can simply say:
+
+**Full Moon — Aug 28, 2026**
+
+The equations explain where that simple statement comes from.
+
+## The ISO Week Calendar
+
+The familiar Gregorian calendar divides the year into months of unequal length. For an almanac organized around repeating weeks, another calendar is useful: the **ISO week-date calendar**.
+
+An ISO date has 3 components:
+
+$$
+
+(\text{week-year},\text{week number},\text{weekday}).
+
+$$
+
+The weekdays are numbered
+
+$$
+
+1,2,3,4,5,6,7
+
+$$
+
+from Monday through Sunday.
+
+Thus Monday is day 1 and Sunday is day 7.
+
+### The First Week of the Year
+
+The central rule is simple:
+
+> **ISO week 1 is the week containing the first Thursday of the Gregorian year.**
+
+An equivalent definition is that week 1 is the week containing January 4.
+
+Because every ISO week begins on Monday, the beginning of the ISO year may occur in the final days of December of the preceding Gregorian year.
+
+Similarly, the final ISO week may extend into the first days of January of the following Gregorian year.
+
+This means that the ISO week-year of a date is not always the same as its Gregorian year.
+
+For example, January 1 can sometimes belong to the final ISO week of the preceding year.
+
+### Why Thursday?
+
+Thursday provides an elegant way to determine which year owns a week.
+
+Every Monday-through-Sunday week contains exactly 1 Thursday. The Gregorian year containing that Thursday determines the ISO week-year.
+
+Equivalently, a week belongs to the year containing the majority of its days.
+
+At least 4 of the week's 7 days must therefore fall within its ISO week-year.
+
+### 52 or 53 Weeks
+
+An ordinary ISO week-year contains
+
+$$
+
+52\times7=364
+
+$$
+
+days represented by 52 complete weeks.
+
+Because a Gregorian year contains 365 days, or 366 in a leap year, the calendar cannot always fit into exactly 52 ISO weeks.
+
+Some ISO years therefore contain a 53rd week.
+
+An ISO year has 53 weeks when January 1 falls on a Thursday, or when a leap year begins on a Wednesday.
+
+Thus
+
+$$
+
+W_{\max}\in\{52,53\}.
+
+$$
+
+### Calculating the ISO Week Number
+
+Let $N$ be the ordinal day of the Gregorian year, with January 1 equal to 1.
+
+Let $d$ be the ISO weekday number:
+
+$$
+
+1\leq d\leq7.
+
+$$
+
+A useful preliminary expression for the week number is
+
+$$
+
+W=
+
+\left\lfloor
+
+\frac{N-d+10}{7}
+
+\right\rfloor.
+
+$$
+
+The floor function
+
+$$
+
+\lfloor x\rfloor
+
+$$
+
+means the greatest integer less than or equal to $x$.
+
+Values near the beginning and end of the Gregorian year require checking whether the date actually belongs to the preceding or following ISO week-year.
+
+That apparent complication is not an error in the system.
+
+It is the feature that allows every ISO week to remain an intact Monday-through-Sunday unit.
+
+### Why the Almanack Uses It
+
+For the *Star Almanack*, the ISO calendar provides something the ordinary month calendar does not:
+
+**a continuous sequence of complete, consistently numbered weeks.**
+
+Astronomical events do not care whether a civil month contains 28, 29, 30, or 31 days. Observing plans are often naturally expressed in weeks.
+
+The Gregorian calendar can tell us:
+
+**Aug 17, 2026**
+
+The ISO week calendar can tell us:
+
+**2026-W34-1**
+
+The first expression identifies a civil date.
+
+The second tells us immediately that the date is Monday of week 34.
+
+Both describe the same day.
+
+They organize it differently.
+
+The *Star Almanack* uses both because each answers a different question.
+
