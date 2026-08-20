@@ -38,31 +38,23 @@ jobs:
 
         run: |
 
-          wget -q --show-progress \
+          wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
 
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-1.bsp
-
-          wget -q --show-progress \
-
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
+          wget -q --show-progress https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_part-2.bsp
 
       - name: Download leap-seconds kernel
 
         run: |
 
-          wget -q \
-
-            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
+          wget -q https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls
 
       - name: Download NAIF SPICE Toolkit
 
         run: |
 
-          wget -q \
+          wget -q https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
 
-            https://naif.jpl.nasa.gov/pub/naif/toolkit/C/PC_Linux_GCC_64bit/packages/cspice.tar.Z
-
-          tar -xzf cspice.tar.Z
+          tar -xf cspice.tar.Z
 
           test -x ./cspice/exe/brief
 
@@ -76,25 +68,13 @@ jobs:
 
           echo "===== DE441 SOURCE FILES =====" >> debug.txt
 
-          ls -lh \
-
-            de441_part-1.bsp \
-
-            de441_part-2.bsp \
-
-            naif0012.tls >> debug.txt
+          ls -lh de441_part-1.bsp de441_part-2.bsp naif0012.tls >> debug.txt
 
           echo "" >> debug.txt
 
           echo "SHA-256:" >> debug.txt
 
-          sha256sum \
-
-            de441_part-1.bsp \
-
-            de441_part-2.bsp \
-
-            naif0012.tls >> debug.txt
+          sha256sum de441_part-1.bsp de441_part-2.bsp naif0012.tls >> debug.txt
 
       - name: Create SPKMERGE command file
 
@@ -158,9 +138,7 @@ jobs:
 
           echo "===== BRIEF: DE441 ECLIPSE SUBSET =====" >> debug.txt
 
-          ./cspice/exe/brief -c de441-eclipse-subset.bsp \
-
-            >> debug.txt 2>&1
+          ./cspice/exe/brief -c de441-eclipse-subset.bsp >> debug.txt 2>&1
 
       - name: Record required body chain
 
@@ -220,13 +198,7 @@ jobs:
 
         run: |
 
-          tar -czf star-almanack-de441-subset.tar.gz \
-
-            de441-eclipse-subset.bsp \
-
-            naif0012.tls \
-
-            debug.txt
+          tar -czf star-almanack-de441-subset.tar.gz de441-eclipse-subset.bsp naif0012.tls debug.txt
 
       - name: Upload DE441 eclipse subset
 
