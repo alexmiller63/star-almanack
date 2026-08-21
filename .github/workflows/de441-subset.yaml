@@ -931,7 +931,7 @@ jobs:
           else
 
             git commit -m "Update Star Almanack Microkernel"
-
+git pull --rebase
             git push
 
           fi
