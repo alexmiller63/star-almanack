@@ -172,7 +172,11 @@ jobs:
 
           original_sun_function = eclipse_engine.sun_vector_j2000
 
-          def de441_sun_vector_j2000(jd_tdb: float) -> eclipse_engine.Vec3:
+          def de441_sun_vector_j2000(
+
+              jd_tdb: float
+
+          ) -> eclipse_engine.Vec3:
 
               et = (jd_tdb - 2451545.0) * 86400.0
 
@@ -876,17 +880,7 @@ jobs:
 
         run: |
 
-          tar -czf star-almanack-de441-subset.tar.gz \
-
-            de441-eclipse-subset.bsp \
-
-            naif0012.tls \
-
-            debug.txt \
-
-            de441-eclipse-comparison.txt \
-
-            de441-full-vs-subset-2024.txt
+          tar -czf star-almanack-de441-subset.tar.gz de441-eclipse-subset.bsp naif0012.tls debug.txt de441-eclipse-comparison.txt de441-full-vs-subset-2024.txt
 
       - name: Upload DE441 eclipse subset
 
