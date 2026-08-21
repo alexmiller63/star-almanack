@@ -140,6 +140,208 @@ jobs:
 
           test -s de441-eclipse-subset.bsp
 
+      - name: Compare full DE441 with reduced kernel for 2024 eclipse
+
+        shell: bash
+
+        run: |
+
+          set -euo pipefail
+
+          python3 <<'PY' | tee de441-full-vs-subset-2024.txt
+
+          from __future__ import annotations
+
+          from datetime import datetime
+
+          import spiceypy as spice
+
+          import eclipse_engine
+
+          DATE = "2024-04-08"
+
+          FULL_KERNELS = [
+
+              "de441_part-1.bsp",
+
+              "de441_part-2.bsp",
+
+          ]
+
+          SUBSET_KERNEL = "de441-eclipse-subset.bsp"
+
+          original_sun_function = eclipse_engine.sun_vector_j2000
+
+          def de441_sun_vector_j2000(jd_tdb: float) -> eclipse_engine.Vec3:
+
+              et = (jd_tdb - 2451545.0) * 86400.0
+
+              position, _ = spice.spkpos(
+
+                  "SUN",
+
+                  et,
+
+                  "ECLIPJ2000",
+
+                  "NONE",
+
+                  "EARTH",
+
+              )
+
+              return eclipse_engine.Vec3(
+
+                  float(position[0]),
+
+                  float(position[1]),
+
+                  float(position[2]),
+
+              )
+
+          def run_with_kernels(kernels):
+
+              spice.kclear()
+
+              for kernel in kernels:
+
+                  spice.furnsh(kernel)
+
+              eclipse_engine.sun_vector_j2000 = de441_sun_vector_j2000
+
+              engine = eclipse_engine.EclipseEngine()
+
+              return engine.find_solar_eclipse(DATE)
+
+          try:
+
+              full = run_with_kernels(FULL_KERNELS)
+
+              subset = run_with_kernels([SUBSET_KERNEL])
+
+              full_time = datetime.fromisoformat(
+
+                  full.greatest_utc.replace("Z", "+00:00")
+
+              )
+
+              subset_time = datetime.fromisoformat(
+
+                  subset.greatest_utc.replace("Z", "+00:00")
+
+              )
+
+              delta_seconds = (
+
+                  subset_time - full_time
+
+              ).total_seconds()
+
+              axis_delta = (
+
+                  subset.geometry.axis_distance_km
+
+                  - full.geometry.axis_distance_km
+
+              )
+
+              print("=" * 72)
+
+              print("STAR ALMANACK — FULL DE441 vs REDUCED DE441 KERNEL")
+
+              print("=" * 72)
+
+              print()
+
+              print(f"Eclipse date: {DATE}")
+
+              print()
+
+              print("FULL DE441")
+
+              print(f"  greatest: {full.greatest_utc}")
+
+              print(f"  type:     {full.eclipse_type}")
+
+              print(
+
+                  f"  axis:     "
+
+                  f"{full.geometry.axis_distance_km:.6f} km"
+
+              )
+
+              print()
+
+              print("REDUCED DE441 KERNEL")
+
+              print(f"  greatest: {subset.greatest_utc}")
+
+              print(f"  type:     {subset.eclipse_type}")
+
+              print(
+
+                  f"  axis:     "
+
+                  f"{subset.geometry.axis_distance_km:.6f} km"
+
+              )
+
+              print()
+
+              print("DIFFERENCE")
+
+              print(
+
+                  f"  greatest-time difference: "
+
+                  f"{delta_seconds:+.6f} s"
+
+              )
+
+              print(
+
+                  f"  axis-distance difference: "
+
+                  f"{axis_delta:+.9f} km"
+
+              )
+
+              print()
+
+              if (
+
+                  full.greatest_utc == subset.greatest_utc
+
+                  and full.eclipse_type == subset.eclipse_type
+
+                  and abs(axis_delta) < 1e-9
+
+              ):
+
+                  print("RESULT: MATCH")
+
+              else:
+
+                  print("RESULT: DIFFERENCE DETECTED")
+
+              print("=" * 72)
+
+          finally:
+
+              eclipse_engine.sun_vector_j2000 = original_sun_function
+
+              spice.kclear()
+
+          PY
+
+          echo "" >> debug.txt
+
+          echo "===== FULL DE441 vs REDUCED KERNEL — 2024-04-08 =====" >> debug.txt
+
+          cat de441-full-vs-subset-2024.txt >> debug.txt
+
       - name: Record SPKMERGE log
 
         if: always()
@@ -240,7 +442,19 @@ jobs:
 
               minutes, seconds = divmod(remainder, 60)
 
-              direction = "LATE" if value > 0 else "EARLY" if value < 0 else "EXACT"
+              direction = (
+
+                  "LATE"
+
+                  if value > 0
+
+                  else "EARLY"
+
+                  if value < 0
+
+                  else "EXACT"
+
+              )
 
               return (
 
@@ -262,23 +476,11 @@ jobs:
 
           spice.furnsh(KERNEL)
 
-          def de441_sun_vector_j2000(jd_tdb: float) -> eclipse_engine.Vec3:
+          def de441_sun_vector_j2000(
 
-              """
+              jd_tdb: float
 
-              Geometric Sun relative to Earth from DE441.
-
-              eclipse_engine expects geocentric rectangular kilometers in the
-
-              mean ecliptic/equinox J2000 frame. SPICE's built-in ECLIPJ2000
-
-              frame supplies that frame directly.
-
-              No aberration or light-time correction is applied because the
-
-              existing eclipse geometry and ELP82B Moon are geometric vectors.
-
-              """
+          ) -> eclipse_engine.Vec3:
 
               et = (jd_tdb - 2451545.0) * 86400.0
 
@@ -446,15 +648,29 @@ jobs:
 
                   )
 
-                  sun_angle = angle_between_deg(compact_sun, de441_sun)
+                  sun_angle = angle_between_deg(
 
-                  sun_distance = (compact_sun - de441_sun).norm()
+                      compact_sun,
+
+                      de441_sun,
+
+                  )
+
+                  sun_distance = (
+
+                      compact_sun - de441_sun
+
+                  ).norm()
 
                   print("A — compact Sun")
 
                   print(f"  greatest: {compact.greatest_utc}")
 
-                  print(f"  residual: {format_seconds(compact_error)}")
+                  print(
+
+                      f"  residual: {format_seconds(compact_error)}"
+
+                  )
 
                   print(f"  type:     {compact.eclipse_type}")
 
@@ -472,7 +688,11 @@ jobs:
 
                   print(f"  greatest: {de441.greatest_utc}")
 
-                  print(f"  residual: {format_seconds(de441_error)}")
+                  print(
+
+                      f"  residual: {format_seconds(de441_error)}"
+
+                  )
 
                   print(f"  type:     {de441.eclipse_type}")
 
@@ -600,7 +820,9 @@ jobs:
 
             debug.txt \
 
-            de441-eclipse-comparison.txt
+            de441-eclipse-comparison.txt \
+
+            de441-full-vs-subset-2024.txt
 
       - name: Upload DE441 eclipse subset
 
@@ -629,5 +851,7 @@ jobs:
             debug.txt
 
             de441-eclipse-comparison.txt
+
+            de441-full-vs-subset-2024.txt
 
           if-no-files-found: error
