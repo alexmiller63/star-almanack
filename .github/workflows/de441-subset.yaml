@@ -426,9 +426,17 @@ jobs:
 
           def signed_seconds(calculated: str, reference: str) -> float:
 
-              a = datetime.fromisoformat(calculated.replace("Z", "+00:00"))
+              a = datetime.fromisoformat(
 
-              b = datetime.fromisoformat(reference.replace("Z", "+00:00"))
+                  calculated.replace("Z", "+00:00")
+
+              )
+
+              b = datetime.fromisoformat(
+
+                  reference.replace("Z", "+00:00")
+
+              )
 
               return (a - b).total_seconds()
 
@@ -600,11 +608,19 @@ jobs:
 
                   eclipse_engine.sun_vector_j2000 = original_sun_function
 
-                  compact = engine.find_solar_eclipse(case["date"])
+                  compact = engine.find_solar_eclipse(
+
+                      case["date"]
+
+                  )
 
                   eclipse_engine.sun_vector_j2000 = de441_sun_vector_j2000
 
-                  de441 = engine.find_solar_eclipse(case["date"])
+                  de441 = engine.find_solar_eclipse(
+
+                      case["date"]
+
+                  )
 
                   compact_error = signed_seconds(
 
@@ -622,7 +638,11 @@ jobs:
 
                   )
 
-                  improvement = abs(compact_error) - abs(de441_error)
+                  improvement = (
+
+                      abs(compact_error) - abs(de441_error)
+
+                  )
 
                   jd_reference = eclipse_engine.gregorian_to_jd(
 
@@ -638,13 +658,21 @@ jobs:
 
                   compact_sun = original_sun_function(
 
-                      eclipse_engine.utc_to_tdb_approx(jd_reference)
+                      eclipse_engine.utc_to_tdb_approx(
+
+                          jd_reference
+
+                      )
 
                   )
 
                   de441_sun = de441_sun_vector_j2000(
 
-                      eclipse_engine.utc_to_tdb_approx(jd_reference)
+                      eclipse_engine.utc_to_tdb_approx(
+
+                          jd_reference
+
+                      )
 
                   )
 
@@ -664,15 +692,25 @@ jobs:
 
                   print("A — compact Sun")
 
-                  print(f"  greatest: {compact.greatest_utc}")
-
                   print(
 
-                      f"  residual: {format_seconds(compact_error)}"
+                      f"  greatest: {compact.greatest_utc}"
 
                   )
 
-                  print(f"  type:     {compact.eclipse_type}")
+                  print(
+
+                      f"  residual: "
+
+                      f"{format_seconds(compact_error)}"
+
+                  )
+
+                  print(
+
+                      f"  type:     {compact.eclipse_type}"
+
+                  )
 
                   print(
 
@@ -686,15 +724,25 @@ jobs:
 
                   print("B — DE441 Sun")
 
-                  print(f"  greatest: {de441.greatest_utc}")
-
                   print(
 
-                      f"  residual: {format_seconds(de441_error)}"
+                      f"  greatest: {de441.greatest_utc}"
 
                   )
 
-                  print(f"  type:     {de441.eclipse_type}")
+                  print(
+
+                      f"  residual: "
+
+                      f"{format_seconds(de441_error)}"
+
+                  )
+
+                  print(
+
+                      f"  type:     {de441.eclipse_type}"
+
+                  )
 
                   print(
 
@@ -807,6 +855,22 @@ jobs:
         if: always()
 
         run: cat debug.txt
+
+      - name: Free DE441 source-kernel disk space
+
+        run: |
+
+          echo "Disk space before cleanup:"
+
+          df -h .
+
+          rm -f de441_part-1.bsp de441_part-2.bsp
+
+          echo "Disk space after cleanup:"
+
+          df -h .
+
+          test -s de441-eclipse-subset.bsp
 
       - name: Package eclipse subset
 
