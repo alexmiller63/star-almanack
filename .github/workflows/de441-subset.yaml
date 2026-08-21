@@ -1,4 +1,4 @@
-name: Build DE441 Eclipse Subset
+name: Build Star Almanack Microkernel
 
 on:
 
@@ -24,7 +24,7 @@ jobs:
 
         run: |
 
-          echo "Star Almanack DE441 eclipse subset build" > debug.txt
+          echo "Star Almanack Microkernel build (derived from JPL DE441)" > debug.txt
 
           echo "Started: $(date -u)" >> debug.txt
 
@@ -114,7 +114,7 @@ jobs:
 
           LEAPSECONDS_KERNEL = naif0012.tls
 
-          SPK_KERNEL = de441-eclipse-subset.bsp
+          SPK_KERNEL = star-almanack-microkernel.bsp
 
             LOG_FILE = spkmerge.log
 
@@ -132,15 +132,15 @@ jobs:
 
           cat de441-subset.cmd >> debug.txt
 
-      - name: Build eclipse subset
+      - name: Build Star Almanack Microkernel
 
         run: |
 
           ./cspice/exe/spkmerge de441-subset.cmd
 
-          test -s de441-eclipse-subset.bsp
+          test -s star-almanack-microkernel.bsp
 
-      - name: Compare full DE441 with reduced kernel for 2024 eclipse
+      - name: Compare full DE441 with Star Almanack Microkernel for 2024 eclipse
 
         shell: bash
 
@@ -168,7 +168,7 @@ jobs:
 
           ]
 
-          SUBSET_KERNEL = "de441-eclipse-subset.bsp"
+          SUBSET_KERNEL = "star-almanack-microkernel.bsp"
 
           original_sun_function = eclipse_engine.sun_vector_j2000
 
@@ -252,7 +252,7 @@ jobs:
 
               print("=" * 72)
 
-              print("STAR ALMANACK — FULL DE441 vs REDUCED DE441 KERNEL")
+              print("STAR ALMANACK — FULL DE441 vs STAR ALMANACK MICROKERNEL")
 
               print("=" * 72)
 
@@ -278,7 +278,7 @@ jobs:
 
               print()
 
-              print("REDUCED DE441 KERNEL")
+              print("STAR ALMANACK MICROKERNEL")
 
               print(f"  greatest: {subset.greatest_utc}")
 
@@ -342,7 +342,7 @@ jobs:
 
           echo "" >> debug.txt
 
-          echo "===== FULL DE441 vs REDUCED KERNEL — 2024-04-08 =====" >> debug.txt
+          echo "===== FULL DE441 vs STAR ALMANACK MICROKERNEL — 2024-04-08 =====" >> debug.txt
 
           cat de441-full-vs-subset-2024.txt >> debug.txt
 
@@ -366,15 +366,15 @@ jobs:
 
           fi
 
-      - name: Verify subset with BRIEF
+      - name: Verify Star Almanack Microkernel with BRIEF
 
         run: |
 
           echo "" >> debug.txt
 
-          echo "===== BRIEF: DE441 ECLIPSE SUBSET =====" >> debug.txt
+          echo "===== BRIEF: STAR ALMANACK MICROKERNEL =====" >> debug.txt
 
-          ./cspice/exe/brief -c de441-eclipse-subset.bsp >> debug.txt 2>&1
+          ./cspice/exe/brief -c star-almanack-microkernel.bsp >> debug.txt 2>&1
 
       - name: Record required body chain
 
@@ -426,7 +426,7 @@ jobs:
 
           import eclipse_engine
 
-          KERNEL = "de441-eclipse-subset.bsp"
+          KERNEL = "star-almanack-microkernel.bsp"
 
           def signed_seconds(calculated: str, reference: str) -> float:
 
@@ -834,21 +834,21 @@ jobs:
 
           cat de441-eclipse-comparison.txt >> debug.txt
 
-      - name: Record subset size and checksum
+      - name: Record Microkernel size and checksum
 
         run: |
 
           echo "" >> debug.txt
 
-          echo "===== SUBSET FILE =====" >> debug.txt
+          echo "===== STAR ALMANACK MICROKERNEL =====" >> debug.txt
 
-          ls -lh de441-eclipse-subset.bsp >> debug.txt
+          ls -lh star-almanack-microkernel.bsp >> debug.txt
 
           echo "" >> debug.txt
 
           echo "SHA-256:" >> debug.txt
 
-          sha256sum de441-eclipse-subset.bsp >> debug.txt
+          sha256sum star-almanack-microkernel.bsp >> debug.txt
 
           echo "" >> debug.txt
 
@@ -874,23 +874,23 @@ jobs:
 
           df -h .
 
-          test -s de441-eclipse-subset.bsp
+          test -s star-almanack-microkernel.bsp
 
-      - name: Package eclipse subset
+      - name: Package Star Almanack Microkernel
 
         run: |
 
-          tar -czf star-almanack-de441-subset.tar.gz de441-eclipse-subset.bsp naif0012.tls debug.txt de441-eclipse-comparison.txt de441-full-vs-subset-2024.txt
+          tar -czf star-almanack-microkernel.tar.gz star-almanack-microkernel.bsp naif0012.tls debug.txt de441-eclipse-comparison.txt de441-full-vs-subset-2024.txt
 
-      - name: Upload DE441 eclipse subset
+      - name: Upload Star Almanack Microkernel
 
         uses: actions/upload-artifact@v4
 
         with:
 
-          name: star-almanack-de441-subset
+          name: star-almanack-microkernel
 
-          path: star-almanack-de441-subset.tar.gz
+          path: star-almanack-microkernel.tar.gz
 
           if-no-files-found: error
 
