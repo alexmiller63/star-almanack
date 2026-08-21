@@ -913,3 +913,25 @@ jobs:
             de441-full-vs-subset-2024.txt
 
           if-no-files-found: error
+
+      - name: Commit Star Almanack Microkernel
+
+        run: |
+
+          git config user.name "github-actions[bot]"
+
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add star-almanack-microkernel.bsp
+
+          if git diff --cached --quiet; then
+
+            echo "Microkernel is already current."
+
+          else
+
+            git commit -m "Update Star Almanack Microkernel"
+
+            git push
+
+          fi
