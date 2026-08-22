@@ -120,6 +120,10 @@ jobs:
 
             BODIES = 3, 10, 301, 399
 
+            BEGIN_TIME = 1 JAN 1800 00:00:00.000
+
+            END_TIME = 1 JAN 2200 00:00:00.000
+
             SOURCE_SPK_KERNEL = de441_part-1.bsp
 
             SOURCE_SPK_KERNEL = de441_part-2.bsp
@@ -880,7 +884,17 @@ jobs:
 
         run: |
 
-          tar -czf star-almanack-microkernel.tar.gz star-almanack-microkernel.bsp naif0012.tls debug.txt de441-eclipse-comparison.txt de441-full-vs-subset-2024.txt
+          tar -czf star-almanack-microkernel.tar.gz \
+
+            star-almanack-microkernel.bsp \
+
+            naif0012.tls \
+
+            debug.txt \
+
+            de441-eclipse-comparison.txt \
+
+            de441-full-vs-subset-2024.txt
 
       - name: Upload Star Almanack Microkernel
 
@@ -931,7 +945,9 @@ jobs:
           else
 
             git commit -m "Update Star Almanack Microkernel"
+
             git pull --rebase
+
             git push
 
           fi
