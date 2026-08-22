@@ -60,45 +60,33 @@ jobs:
 
         run: |
 
+          rm -f star-almanack-de441-eclipse-subset.bsp
+
+          rm -f de441_subset_setup.txt
+
           cat > de441_subset_setup.txt <<'EOF'
 
-          \begindata
+          LEAPSECONDS_KERNEL = naif0012.tls
 
-          SPK_KERNEL = (
+          SPK_KERNEL = star-almanack-de441-eclipse-subset.bsp
 
-             'de441_part-1.bsp'
+          BODIES = 10, 399, 301, 3
 
-             'de441_part-2.bsp'
+          BEGIN_TIME = 1 JAN 1900 00:00:00.000
 
-          )
+          END_TIME = 1 JAN 2100 00:00:00.000
 
-          BODIES = (
+          SOURCE_SPK_KERNEL = de441_part-1.bsp
 
-             10
-
-             399
-
-             301
-
-             3
-
-          )
-
-          BEGIN_TIME = '1900 JAN 01'
-
-          END_TIME   = '2100 JAN 01'
-
-          OUTPUT_SPK_TYPE = 2
-
-          INPUT_DATA_TYPE = 'SPK'
-
-          OUTPUT_SPK_FILE = 'star-almanack-de441-eclipse-subset.bsp'
-
-          PRODUCER_ID = 'Star Almanack DE441 Eclipse Subset'
-
-          \begintext
+          SOURCE_SPK_KERNEL = de441_part-2.bsp
 
           EOF
+
+          echo "SPKMERGE command file:"
+
+          cat de441_subset_setup.txt
+
+          echo
 
           spkmerge de441_subset_setup.txt
 
