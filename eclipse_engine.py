@@ -10,11 +10,11 @@ Purpose
 
 Calculate whether a solar eclipse occurs from independently computed
 
-Sun–Earth–Moon geometry.  Published eclipse catalogs are NOT used by this
+Sun–Earth–Moon geometry. Published eclipse catalogs are NOT used by this
 
 module.
 
-The Moon is supplied by the Star Almanack ELP2000-82B evaluator.  The Sun is
+The Moon is supplied by the Star Almanack ELP2000-82B evaluator. The Sun is
 
 computed with the compact solar model recorded in astronomical-constants.yaml.
 
@@ -22,7 +22,7 @@ The compact Sun vector is rotated into the J2000 mean ecliptic frame so that
 
 it can be compared with the ELP2000-82B Moon vector.
 
-This is the calculation layer.  Validation against historical observations
+This is the calculation layer. Validation against historical observations
 
 and frozen NASA "Jell-O" targets belongs in validate_star_almanack.py.
 
@@ -36,15 +36,27 @@ Time convention
 
 ---------------
 
-The public search function accepts a UTC civil date.  The numerical ephemeris
+The public search function accepts a UTC civil date.
 
-argument is approximated as TT/TDB by adding Delta-T.  The Delta-T model here
+For dates in the leap-second era, the numerical ephemeris argument is
 
-is an engineering approximation; it is intentionally isolated so it can be
+approximated as TT/TDB by converting UTC -> TAI -> TT using the published
 
-replaced by the Almanack's final time-scale layer without changing the eclipse
+TAI-UTC offset plus the fixed TT-TAI offset of 32.184 seconds.
 
-geometry.
+For historical dates before 1972, the supplied civil time is treated as an
+
+approximation to UT1 and Delta-T = TT - UT1 is used.
+
+TDB-TT periodic terms are below the accuracy targeted by this eclipse-search
+
+layer and are not modeled here.
+
+The Delta-T model is an engineering approximation; it is intentionally
+
+isolated so it can be replaced by the Almanack's final time-scale layer
+
+without changing the eclipse geometry.
 
 This module does not import or read eclipse-validation-cases.yaml.
 
@@ -302,9 +314,9 @@ def sun_vector_j2000(jd_tdb: float) -> Vec3:
 
     # The adopted compact coefficients already describe the Sun's apparent
 
-    # geocentric orbit.  true_anom + w therefore gives the geocentric solar
+    # geocentric orbit. true_anom + w therefore gives the geocentric solar
 
-    # longitude directly.  Adding another 180 degrees here would reverse the
+    # longitude directly. Adding another 180 degrees here would reverse the
 
     # Sun vector and place it on the opposite side of the celestial sphere.
 
@@ -348,7 +360,7 @@ def delta_t_seconds(year: float) -> float:
 
     Based on standard polynomial approximations commonly used for historical
 
-    eclipse work.  It is intentionally encapsulated so a future IERS/Almanack
+    eclipse work. It is intentionally encapsulated so a future IERS/Almanack
 
     time-scale provider can replace it.
 
@@ -582,21 +594,21 @@ def jd_to_iso_utc(jd: float) -> str:
 
     Convert a Julian Date to a proleptic-Gregorian UTC string.
 
-    The returned value has whole-second resolution.  The instant is normalized
+    The returned value has whole-second resolution. The instant is normalized
 
     to that resolution *before* it is decomposed into calendar date and clock
 
-    time.  This ordering is deliberate.
+    time. This ordering is deliberate.
 
     Why this matters
 
     ----------------
 
-    A Julian Date can represent an instant such as 23:59:59.6.  Rounding that
+    A Julian Date can represent an instant such as 23:59:59.6. Rounding that
 
     instant to the nearest displayed second must produce 00:00:00 on the next
 
-    civil day.  If the calendar date is computed first and the seconds are
+    civil day. If the calendar date is computed first and the seconds are
 
     rounded afterward, the time-of-day can become 86400 seconds: an invalid
 
@@ -604,23 +616,23 @@ def jd_to_iso_utc(jd: float) -> str:
 
     An earlier implementation tried to repair that state by recursively calling
 
-    this function.  At the exact 86400-second boundary the adjustment could be
+    this function. At the exact 86400-second boundary the adjustment could be
 
     zero, causing the function to call itself forever until Python raised a
 
-    RecursionError.  Normalizing the astronomical instant first removes the
+    RecursionError. Normalizing the astronomical instant first removes the
 
-    invalid intermediate state completely.  No recursive boundary repair is
+    invalid intermediate state completely. No recursive boundary repair is
 
     needed, and this function always performs one calendar decomposition.
 
     """
 
-    # Julian Dates are floating-point day counts.  Convert to an integer count
+    # Julian Dates are floating-point day counts. Convert to an integer count
 
     # of displayed seconds relative to the Julian epoch, then convert back to
 
-    # days.  Integer-second normalization carries naturally across midnight.
+    # days. Integer-second normalization carries naturally across midnight.
 
     #
 
@@ -634,7 +646,7 @@ def jd_to_iso_utc(jd: float) -> str:
 
     normalized_jd = whole_seconds / 86400.0
 
-    # Julian days begin at noon.  Adding 0.5 shifts the boundary to civil
+    # Julian days begin at noon. Adding 0.5 shifts the boundary to civil
 
     # midnight before the Gregorian decomposition.
 
@@ -708,17 +720,115 @@ def _decimal_year_from_jd(jd: float) -> float:
 
     return year + (month - 0.5) / 12.0 + (day - 15.0) / 365.2425
 
+def tai_minus_utc_seconds(jd_utc: float) -> float | None:
+
+    """
+
+    Return TAI - UTC in seconds for the leap-second era.
+
+    Returns None before 1972-01-01. For earlier eclipse work, this search
+
+    layer treats the supplied historical civil time as an approximation to
+
+    UT1 and uses Delta-T = TT - UT1 instead.
+
+    """
+
+    leap_seconds = (
+
+        (2017, 1, 1, 37),
+
+        (2015, 7, 1, 36),
+
+        (2012, 7, 1, 35),
+
+        (2009, 1, 1, 34),
+
+        (2006, 1, 1, 33),
+
+        (1999, 1, 1, 32),
+
+        (1997, 7, 1, 31),
+
+        (1996, 1, 1, 30),
+
+        (1994, 7, 1, 29),
+
+        (1993, 7, 1, 28),
+
+        (1992, 7, 1, 27),
+
+        (1991, 1, 1, 26),
+
+        (1990, 1, 1, 25),
+
+        (1988, 1, 1, 24),
+
+        (1985, 7, 1, 23),
+
+        (1983, 7, 1, 22),
+
+        (1982, 7, 1, 21),
+
+        (1981, 7, 1, 20),
+
+        (1980, 1, 1, 19),
+
+        (1979, 1, 1, 18),
+
+        (1978, 1, 1, 17),
+
+        (1977, 1, 1, 16),
+
+        (1976, 1, 1, 15),
+
+        (1975, 1, 1, 14),
+
+        (1974, 1, 1, 13),
+
+        (1973, 1, 1, 12),
+
+        (1972, 7, 1, 11),
+
+        (1972, 1, 1, 10),
+
+    )
+
+    for year, month, day, offset in leap_seconds:
+
+        if jd_utc >= gregorian_to_jd(year, month, day):
+
+            return float(offset)
+
+    return None
+
 def utc_to_tdb_approx(jd_utc: float) -> float:
 
     """
 
     Approximate UTC/UT1 -> TT/TDB for orbital geometry.
 
+    In the leap-second era, convert UTC -> TAI -> TT using the published
+
+    TAI-UTC offset plus the fixed TT-TAI offset of 32.184 seconds.
+
+    Before 1972, this search layer treats the historical civil argument as
+
+    an approximation to UT1 and obtains TT from Delta-T = TT - UT1.
+
     TDB-TT periodic terms are below the accuracy targeted by this first
 
     eclipse-search layer and are not modeled here.
 
     """
+
+    tai_minus_utc = tai_minus_utc_seconds(jd_utc)
+
+    if tai_minus_utc is not None:
+
+        tt_minus_utc = tai_minus_utc + 32.184
+
+        return jd_utc + tt_minus_utc / 86400.0
 
     dt = delta_t_seconds(_decimal_year_from_jd(jd_utc))
 
@@ -880,7 +990,7 @@ class EclipseEngine:
 
         Search for the best Sun-Moon shadow alignment around a UTC date.
 
-        The objective is axis_distance_km.  A coarse scan finds the basin,
+        The objective is axis_distance_km. A coarse scan finds the basin,
 
         then golden-section minimization refines the instant.
 
@@ -1083,4 +1193,3 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
-
