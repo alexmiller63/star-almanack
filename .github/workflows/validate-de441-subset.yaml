@@ -246,17 +246,7 @@ jobs:
 
           EOF
 
-          gcc \
-
-            -I"$GITHUB_WORKSPACE/cspice/include" \
-
-            compare_states.c \
-
-            "$GITHUB_WORKSPACE/cspice/lib/cspice.a" \
-
-            -lm \
-
-            -o compare_states
+          gcc -I"$GITHUB_WORKSPACE/cspice/include" compare_states.c "$GITHUB_WORKSPACE/cspice/lib/cspice.a" -lm -o compare_states
 
           ./compare_states
 
@@ -432,16 +422,6 @@ jobs:
 
           EOF
 
-          gcc \
-
-            -I"$GITHUB_WORKSPACE/cspice/include" \
-
-            eclipse_geometry.c \
-
-            "$GITHUB_WORKSPACE/cspice/lib/cspice.a" \
-
-            -lm \
-
-            -o eclipse_geometry
+          gcc -I"$GITHUB_WORKSPACE/cspice/include" eclipse_geometry.c "$GITHUB_WORKSPACE/cspice/lib/cspice.a" -lm -o eclipse_geometry
 
           ./eclipse_geometry
