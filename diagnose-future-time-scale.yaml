@@ -1,0 +1,182 @@
+name: Diagnose Future Eclipse Time Scale
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose-future-time-scale:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Star Almanack
+        uses: actions/checkout@v6
+
+      - name: Install Python dependency
+        run: |
+          python3 -m pip install --disable-pip-version-check pyyaml
+
+      - name: Audit frozen future NASA time scale
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python3 <<'PY' | tee future-eclipse-time-scale-audit.txt
+          from __future__ import annotations
+
+          from datetime import datetime, timedelta, timezone
+          import yaml
+
+          NASA = {
+              "jello_2027_02_06": {
+                  "td": "2027-02-06T16:00:48Z",
+                  "delta_t": 75.7,
+              },
+              "jello_2027_08_02": {
+                  "td": "2027-08-02T10:07:50Z",
+                  "delta_t": 76.0,
+              },
+              "jello_2028_01_26": {
+                  "td": "2028-01-26T15:08:59Z",
+                  "delta_t": 76.3,
+              },
+              "jello_2028_07_22": {
+                  "td": "2028-07-22T02:56:40Z",
+                  "delta_t": 76.6,
+              },
+          }
+
+          def parse_iso(text: str) -> datetime:
+              return datetime.fromisoformat(
+                  text.replace("Z", "+00:00")
+              ).astimezone(timezone.utc)
+
+          def format_iso(dt: datetime) -> str:
+              return dt.strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
+
+          def seconds_between(a: datetime, b: datetime) -> float:
+              return (a - b).total_seconds()
+
+          with open(
+              "eclipse-validation-cases.yaml",
+              "r",
+              encoding="utf-8",
+          ) as handle:
+              spec = yaml.safe_load(handle)
+
+          cases = spec["future_jello"]["cases"]
+
+          print("=" * 96)
+          print("STAR ALMANACK — FUTURE ECLIPSE TIME-SCALE AUDIT")
+          print("=" * 96)
+          print()
+          print("Question:")
+          print(
+              "  Were NASA Terrestrial Dynamical Time (TD/TDT) values "
+              "stored as UTC?"
+          )
+          print()
+          print("Relation tested:")
+          print("  UT = TD - Delta-T")
+          print()
+
+          wrong_scale_count = 0
+
+          for case in cases:
+              case_id = case["id"]
+              label = case["label"]
+              stored_text = case["nasa_greatest_utc"]
+              nasa = NASA[case_id]
+
+              stored = parse_iso(stored_text)
+              td = parse_iso(nasa["td"])
+              delta_t = float(nasa["delta_t"])
+              converted_ut = td - timedelta(seconds=delta_t)
+
+              stored_minus_td = seconds_between(stored, td)
+              stored_minus_ut = seconds_between(stored, converted_ut)
+
+              looks_like_td = abs(stored_minus_td) <= 2.0
+              looks_like_ut = abs(stored_minus_ut) <= 2.0
+
+              if looks_like_td and not looks_like_ut:
+                  verdict = "FROZEN VALUE MATCHES TD/TDT, NOT UT"
+                  wrong_scale_count += 1
+              elif looks_like_ut:
+                  verdict = "FROZEN VALUE MATCHES UT"
+              else:
+                  verdict = "INCONCLUSIVE"
+
+              print("-" * 96)
+              print(label)
+              print(f"ID:                         {case_id}")
+              print()
+              print(f"Frozen nasa_greatest_utc:   {stored_text}")
+              print(f"NASA greatest TD/TDT:       {nasa['td']}")
+              print(f"NASA Delta-T:               {delta_t:.1f} s")
+              print(
+                  f"NASA TD minus Delta-T:       "
+                  f"{format_iso(converted_ut)}"
+              )
+              print()
+              print(
+                  f"Frozen minus NASA TD:        "
+                  f"{stored_minus_td:+.3f} s"
+              )
+              print(
+                  f"Frozen minus converted UT:   "
+                  f"{stored_minus_ut:+.3f} s"
+              )
+              print()
+              print(f"VERDICT: {verdict}")
+              print()
+
+          print("=" * 96)
+          print("SUMMARY")
+          print("=" * 96)
+          print()
+          print(
+              f"Future cases matching TD/TDT instead of UT: "
+              f"{wrong_scale_count}/{len(cases)}"
+          )
+          print()
+
+          if wrong_scale_count == len(cases):
+              print(
+                  "DIAGNOSIS: all frozen future NASA values appear to have "
+                  "been copied"
+              )
+              print("from the TD/TDT column and labeled as UTC.")
+              print()
+              print(
+                  "Next action: correct the frozen comparison targets to "
+                  "actual UT/UTC"
+              )
+              print(
+                  "before performing any further eclipse-geometry debugging."
+              )
+          else:
+              print(
+                  "DIAGNOSIS: the time-scale hypothesis is not sufficient "
+                  "for every case."
+              )
+              print(
+                  "Proceed to the Besselian-versus-axis geometry diagnostic."
+              )
+
+          print()
+          print("=" * 96)
+          print("DIAGNOSTIC COMPLETE")
+          print("=" * 96)
+          PY
+
+      - name: Upload diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: future-eclipse-time-scale-audit
+          path: future-eclipse-time-scale-audit.txt
+          if-no-files-found: warn
+          retention-days: 7
