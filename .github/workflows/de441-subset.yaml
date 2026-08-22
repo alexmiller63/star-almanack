@@ -140,6 +140,10 @@ jobs:
 
         run: |
 
+          rm -f star-almanack-microkernel.bsp
+
+          rm -f spkmerge.log
+
           ./cspice/exe/spkmerge de441-subset.cmd
 
           test -s star-almanack-microkernel.bsp
