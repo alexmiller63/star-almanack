@@ -256,7 +256,13 @@ jobs:
 
               print("=" * 72)
 
-              print("STAR ALMANACK — FULL DE441 vs STAR ALMANACK MICROKERNEL")
+              print(
+
+                  "STAR ALMANACK — FULL DE441 vs "
+
+                  "STAR ALMANACK MICROKERNEL"
+
+              )
 
               print("=" * 72)
 
@@ -622,7 +628,11 @@ jobs:
 
                   )
 
-                  eclipse_engine.sun_vector_j2000 = de441_sun_vector_j2000
+                  eclipse_engine.sun_vector_j2000 = (
+
+                      de441_sun_vector_j2000
+
+                  )
 
                   de441 = engine.find_solar_eclipse(
 
@@ -880,22 +890,6 @@ jobs:
 
           test -s star-almanack-microkernel.bsp
 
-      - name: Package Star Almanack Microkernel
-
-        run: |
-
-          tar -czf star-almanack-microkernel.tar.gz \
-
-            star-almanack-microkernel.bsp \
-
-            naif0012.tls \
-
-            debug.txt \
-
-            de441-eclipse-comparison.txt \
-
-            de441-full-vs-subset-2024.txt
-
       - name: Upload Star Almanack Microkernel
 
         uses: actions/upload-artifact@v4
@@ -904,7 +898,17 @@ jobs:
 
           name: star-almanack-microkernel
 
-          path: star-almanack-microkernel.tar.gz
+          path: |
+
+            star-almanack-microkernel.bsp
+
+            naif0012.tls
+
+            debug.txt
+
+            de441-eclipse-comparison.txt
+
+            de441-full-vs-subset-2024.txt
 
           if-no-files-found: error
 
