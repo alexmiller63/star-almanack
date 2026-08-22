@@ -823,3 +823,45 @@ The measured matrix results are retained as part of the validation record. They 
 
 Stellar aberration is a separate physical effect and is not implicitly included merely by applying a light-travel-time correction. It must therefore be considered and validated separately.
 
+### Measured Light-Time Matrix Results
+
+The four-way diagnostic shows that finite light-travel time is physically present but is not the source of the remaining tens-of-seconds error in the calculated time of greatest eclipse.
+
+For the tested eclipses, applying converged one-way light-time correction to the DE441 Sun produced no measurable change in the calculated greatest-eclipse time at 1-second output resolution. In every case,
+
+**GG = LG.**
+
+Applying retarded-time correction to the Moon shifted the calculated greatest-eclipse time later by approximately 1 second, with a 2-second shift for the 2024 April 8 eclipse. Thus,
+
+**GL = LL,**
+
+and these solutions were normally 1 second later than GG/LG.
+
+The measured residuals were:
+
+| Eclipse | GG | LG | GL | LL |
+
+|---|---:|---:|---:|---:|
+
+| 1919-05-29 | +32 s | +32 s | +33 s | +33 s |
+
+| 1991-07-11 | +32 s | +32 s | +33 s | +33 s |
+
+| 2017-08-21 | +35 s | +35 s | +36 s | +36 s |
+
+| 2024-04-08 | +33 s | +33 s | +35 s | +35 s |
+
+| 2027-02-06 | −32 s | −32 s | −31 s | −31 s |
+
+| 2027-08-02 | −43 s | −43 s | −42 s | −42 s |
+
+| 2028-01-26 | −32 s | −32 s | −31 s | −31 s |
+
+| 2028-07-22 | −43 s | −43 s | −42 s | −42 s |
+
+Positive residuals mean that the calculated greatest eclipse is later than the reference time; negative residuals mean that it is earlier.
+
+The Sun's one-way light-travel time in these tests was approximately 491–507 seconds, while the Moon's was approximately 1.19–1.35 seconds. Despite the much larger solar light-travel time, applying solar retardation did not change the calculated greatest-eclipse time at the reported resolution. Lunar retardation changed it only slightly.
+
+Therefore finite light-travel time is retained as an explicit physical consideration, but the matrix demonstrates that it cannot explain the remaining approximately 30–40-second residuals. The dominant remaining discrepancy must arise elsewhere in the eclipse model.
+
