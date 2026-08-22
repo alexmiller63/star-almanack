@@ -798,3 +798,28 @@ The reduced DE441 kernel turns that rule into an experiment. The source ephemeri
 The final authority is not the size of the file or the elegance of the reduction.
 
 It is whether the sky comes out the same.
+
+## Finite Light-Travel Time in Eclipse Geometry
+
+The *Star Almanack* eclipse calculation explicitly considers the finite speed of light.
+
+Positions used in eclipse geometry are not assumed automatically to represent instantaneous geometric positions. The implementation tests the effect of one-way light-travel time for both the Sun and the Moon. In particular, the DE441 solar vector can be evaluated using a converged one-way light-time correction, while the geocentric lunar position can be evaluated at the corresponding retarded time.
+
+This treatment is included for physical reasons, independently of whether it substantially reduces the residual error against published eclipse times. Agreement with a reference ephemeris is a validation question; finite propagation time is a physical-model question. A correction is therefore not discarded merely because its numerical effect on the final time of greatest eclipse is small.
+
+A four-way diagnostic comparison is used:
+
+- geometric Sun with geometric Moon;
+
+- light-time-corrected Sun with geometric Moon;
+
+- geometric Sun with light-time-corrected Moon;
+
+- light-time-corrected Sun with light-time-corrected Moon.
+
+This matrix isolates the contribution of applying finite light-travel time to each body separately and to both bodies together. Its purpose is not to select whichever combination happens to agree most closely with a reference value, but to determine what each physical treatment actually does to the calculated eclipse geometry.
+
+The measured matrix results are retained as part of the validation record. They provide an empirical check on the magnitude and direction of the light-time effects and allow the adopted convention to remain explicit and reproducible.
+
+Stellar aberration is a separate physical effect and is not implicitly included merely by applying a light-travel-time correction. It must therefore be considered and validated separately.
+
