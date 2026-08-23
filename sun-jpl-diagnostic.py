@@ -90,6 +90,8 @@ The epochs deliberately span both sides of J2000:
 
     1919 eclipse era
 
+    1963 eclipse era
+
     1991 eclipse era
 
     J2000
@@ -175,6 +177,14 @@ TEST_EPOCHS = [
         "1919 eclipse",
 
         "1919-05-29T13:08:34Z",
+
+    ),
+
+    (
+
+        "1963 eclipse",
+
+        "1963-07-20T20:36:13Z",
 
     ),
 
@@ -983,5 +993,3 @@ def main() -> int:
 if __name__ == "__main__":
 
     raise SystemExit(main())
-    
-    
