@@ -16,21 +16,7 @@ Star Almanack eclipse validation:
 
     2. the ecliptic-of-date -> J2000 frame conversion
 
-The existing sun-jpl-diagnostic.py compares only the final production
-
-Sun vector against JPL Horizons.  That is useful, but the final vector
-
-contains both effects:
-
-    compact solar model
-
-        +
-
-    production frame transformation
-
-This diagnostic puts the suspects in separate lineups.
-
-For every test epoch it computes four Sun vectors:
+For every test epoch this diagnostic computes four principal Sun vectors:
 
     RAW COMPACT
 
@@ -62,31 +48,91 @@ The JPL vector is also independently transformed by ERFA into
 
 ecliptic-of-date coordinates.
 
-This permits three especially important measurements:
+Principal measurements
 
-    MODEL-ONLY RESIDUAL
+----------------------
 
-        raw compact Sun
+MODEL-ONLY RESIDUAL
 
-            minus
+    raw compact Sun
 
-        JPL Sun transformed to ecliptic-of-date
+        minus
 
-    FRAME DISAGREEMENT
+    JPL Sun transformed to ecliptic-of-date
 
-        production transformed compact Sun
+FRAME DISAGREEMENT
 
-            minus
+    production transformed compact Sun
 
-        ERFA-transformed compact Sun
+        minus
 
-    PRODUCTION RESIDUAL
+    ERFA-transformed compact Sun
 
-        production transformed compact Sun
+PRODUCTION RESIDUAL
 
-            minus
+    production transformed compact Sun
 
-        JPL Sun in J2000 ecliptic
+        minus
+
+    JPL Sun in J2000 ecliptic
+
+ERFA COMBINED RESIDUAL
+
+    ERFA-transformed compact Sun
+
+        minus
+
+    JPL Sun in J2000 ecliptic
+
+The diagnostic also prints direct rectangular-vector difference magnitudes:
+
+    RAW COMPACT - JPL/DATE
+
+    PRODUCTION - JPL/J2000
+
+    ERFA - JPL/J2000
+
+    PRODUCTION - ERFA
+
+Frame magnitude experiment
+
+--------------------------
+
+The production frame transformation and ERFA transformation are applied
+
+to the exact same raw compact vector.
+
+For each epoch we measure:
+
+    production frame angular shift
+
+    ERFA frame angular shift
+
+    production / ERFA shift-magnitude ratio
+
+A ratio near:
+
+    1.0000
+
+means the two transformations have essentially the same rotation
+
+magnitude.
+
+A ratio systematically different from 1.0000 means the production
+
+transformation has the wrong rotation magnitude even if its direction
+
+is otherwise similar.
+
+The previously registered investigative target:
+
+    1.0560
+
+is printed explicitly for comparison.  This target is diagnostic only.
+
+It is not assumed to be correct and does not affect PASS/FAIL.
+
+Direction is tested independently using signed ecliptic-longitude shifts.
 
 Interpretation
 
@@ -100,7 +146,15 @@ If FRAME DISAGREEMENT is large:
 
     the production date-to-J2000 transformation contributes real error.
 
-If both are large:
+If production / ERFA frame magnitude is far from 1:
+
+    the production transformation has the wrong rotation magnitude.
+
+If the frame shifts have opposite signs:
+
+    the transformation direction/sign is wrong.
+
+If both model-only and frame errors are large:
 
     both members of the crime family are guilty.
 
@@ -188,6 +242,18 @@ AU_KM = eclipse_engine.AU_KM
 
 DEG = math.pi / 180.0
 
+# Previously registered investigative clue.
+
+#
+
+# This is NOT treated as truth and does NOT affect PASS/FAIL.
+
+# We merely calculate the frame-magnitude ratio so the observed
+
+# value can finally be compared with the registered target.
+
+MAGNITUDE_TARGET = 1.0560
+
 # ---------------------------------------------------------------------------
 
 # Representative epochs
@@ -262,7 +328,11 @@ def wrap_signed_deg(angle: float) -> float:
 
     return (angle + 180.0) % 360.0 - 180.0
 
-def vector_longitude_deg(v: eclipse_engine.Vec3) -> float:
+def vector_longitude_deg(
+
+    v: eclipse_engine.Vec3,
+
+) -> float:
 
     """
 
@@ -374,6 +444,94 @@ def numpy_to_vec(
 
     )
 
+def vector_difference(
+
+    a: eclipse_engine.Vec3,
+
+    b: eclipse_engine.Vec3,
+
+) -> eclipse_engine.Vec3:
+
+    """
+
+    Rectangular vector a - b.
+
+    """
+
+    return eclipse_engine.Vec3(
+
+        a.x - b.x,
+
+        a.y - b.y,
+
+        a.z - b.z,
+
+    )
+
+def vector_difference_km(
+
+    a: eclipse_engine.Vec3,
+
+    b: eclipse_engine.Vec3,
+
+) -> float:
+
+    """
+
+    Magnitude of rectangular vector difference a - b, kilometers.
+
+    """
+
+    return vector_difference(
+
+        a,
+
+        b,
+
+    ).norm()
+
+def safe_ratio(
+
+    numerator: float,
+
+    denominator: float,
+
+) -> float:
+
+    """
+
+    Divide while handling the effectively-zero J2000 frame shift.
+
+    """
+
+    if abs(denominator) < 1.0e-15:
+
+        return float("nan")
+
+    return numerator / denominator
+
+def finite_values(
+
+    values: list[float],
+
+) -> list[float]:
+
+    """
+
+    Remove NaN and infinity from a list.
+
+    """
+
+    return [
+
+        value
+
+        for value in values
+
+        if math.isfinite(value)
+
+    ]
+
 def print_vector(
 
     label: str,
@@ -399,6 +557,58 @@ def print_vector(
         f"z={vector.z:+.3f} km"
 
     )
+
+def print_difference(
+
+    label: str,
+
+    a: eclipse_engine.Vec3,
+
+    b: eclipse_engine.Vec3,
+
+) -> float:
+
+    """
+
+    Print a-b rectangular components and magnitude.
+
+    Returns:
+
+        magnitude in kilometers
+
+    """
+
+    difference = vector_difference(
+
+        a,
+
+        b,
+
+    )
+
+    magnitude = difference.norm()
+
+    print(
+
+        f"  {label:<24}"
+
+        f"dx={difference.x:+.3f} km  "
+
+        f"dy={difference.y:+.3f} km  "
+
+        f"dz={difference.z:+.3f} km"
+
+    )
+
+    print(
+
+        f"  {'magnitude':<24}"
+
+        f"{magnitude:.3f} km"
+
+    )
+
+    return magnitude
 
 # ---------------------------------------------------------------------------
 
@@ -882,7 +1092,7 @@ def horizons_request(
 
             "User-Agent":
 
-                "Star-Almanack-Sun-Frame-Lineup-Diagnostic/1.0"
+                "Star-Almanack-Sun-Frame-Lineup-Diagnostic/2.0"
 
         },
 
@@ -1116,7 +1326,7 @@ def run_case(
 
     # ------------------------------------------------------------------
 
-    # Principal evidence
+    # Principal longitude evidence
 
     # ------------------------------------------------------------------
 
@@ -1152,7 +1362,11 @@ def run_case(
 
     )
 
-    # How much longitude shift does each transformation apply?
+    # ------------------------------------------------------------------
+
+    # Signed frame shifts
+
+    # ------------------------------------------------------------------
 
     production_frame_shift = wrap_signed_deg(
 
@@ -1170,7 +1384,39 @@ def run_case(
 
     )
 
-    # Three-dimensional versions of the frame comparison.
+    # Signed longitude shift ratio.
+
+    signed_shift_ratio = safe_ratio(
+
+        production_frame_shift,
+
+        erfa_frame_shift,
+
+    )
+
+    # Magnitude-only longitude shift ratio.
+
+    longitude_shift_magnitude_ratio = safe_ratio(
+
+        abs(production_frame_shift),
+
+        abs(erfa_frame_shift),
+
+    )
+
+    # ------------------------------------------------------------------
+
+    # Three-dimensional angular evidence
+
+    # ------------------------------------------------------------------
+
+    model_angular_error = angle_between_deg(
+
+        raw_compact,
+
+        jpl_date,
+
+    )
 
     frame_angular_disagreement = angle_between_deg(
 
@@ -1196,11 +1442,81 @@ def run_case(
 
     )
 
-    model_angular_error = angle_between_deg(
+    # Actual angular amount by which each transformation moved
+
+    # the same raw vector.
+
+    production_frame_angular_shift = angle_between_deg(
+
+        raw_compact,
+
+        production,
+
+    )
+
+    erfa_frame_angular_shift = angle_between_deg(
+
+        raw_compact,
+
+        erfa_transformed,
+
+    )
+
+    frame_magnitude_ratio = safe_ratio(
+
+        production_frame_angular_shift,
+
+        erfa_frame_angular_shift,
+
+    )
+
+    frame_magnitude_target_delta = (
+
+        frame_magnitude_ratio
+
+        - MAGNITUDE_TARGET
+
+        if math.isfinite(frame_magnitude_ratio)
+
+        else float("nan")
+
+    )
+
+    # ------------------------------------------------------------------
+
+    # Direct rectangular vector differences
+
+    # ------------------------------------------------------------------
+
+    raw_minus_jpl_date_km = vector_difference_km(
 
         raw_compact,
 
         jpl_date,
+
+    )
+
+    production_minus_jpl_km = vector_difference_km(
+
+        production,
+
+        jpl_j2000,
+
+    )
+
+    erfa_minus_jpl_km = vector_difference_km(
+
+        erfa_transformed,
+
+        jpl_j2000,
+
+    )
+
+    production_minus_erfa_km = vector_difference_km(
+
+        production,
+
+        erfa_transformed,
 
     )
 
@@ -1211,6 +1527,12 @@ def run_case(
         - jd_civil
 
     ) * 86400.0
+
+    # ------------------------------------------------------------------
+
+    # Report
+
+    # ------------------------------------------------------------------
 
     print()
 
@@ -1378,11 +1700,63 @@ def run_case(
 
     print()
 
+    print("  DIRECT VECTOR DIFFERENCES")
+
+    print()
+
+    print_difference(
+
+        "RAW - JPL/date:",
+
+        raw_compact,
+
+        jpl_date,
+
+    )
+
+    print()
+
+    print_difference(
+
+        "PRODUCTION - JPL:",
+
+        production,
+
+        jpl_j2000,
+
+    )
+
+    print()
+
+    print_difference(
+
+        "ERFA - JPL:",
+
+        erfa_transformed,
+
+        jpl_j2000,
+
+    )
+
+    print()
+
+    print_difference(
+
+        "PRODUCTION - ERFA:",
+
+        production,
+
+        erfa_transformed,
+
+    )
+
+    print()
+
     print("  FRAME SHIFTS")
 
     print(
 
-        f"  production frame shift:     "
+        f"  production longitude shift: "
 
         f"{production_frame_shift:+.9f} deg"
 
@@ -1390,7 +1764,7 @@ def run_case(
 
     print(
 
-        f"  ERFA frame shift:           "
+        f"  ERFA longitude shift:       "
 
         f"{erfa_frame_shift:+.9f} deg"
 
@@ -1403,6 +1777,46 @@ def run_case(
         f"{frame_disagreement:+.9f} deg"
 
     )
+
+    if math.isfinite(signed_shift_ratio):
+
+        print(
+
+            f"  signed shift ratio P/E:     "
+
+            f"{signed_shift_ratio:+.9f}"
+
+        )
+
+    else:
+
+        print(
+
+            "  signed shift ratio P/E:     "
+
+            "undefined at zero frame shift"
+
+        )
+
+    if math.isfinite(longitude_shift_magnitude_ratio):
+
+        print(
+
+            f"  |longitude shift| P/E:      "
+
+            f"{longitude_shift_magnitude_ratio:.9f}"
+
+        )
+
+    else:
+
+        print(
+
+            "  |longitude shift| P/E:      "
+
+            "undefined at zero frame shift"
+
+        )
 
     print()
 
@@ -1440,6 +1854,78 @@ def run_case(
 
     )
 
+    print()
+
+    print("  FRAME MAGNITUDE TEST")
+
+    print(
+
+        f"  production angular shift:   "
+
+        f"{production_frame_angular_shift:.9f} deg"
+
+    )
+
+    print(
+
+        f"  ERFA angular shift:         "
+
+        f"{erfa_frame_angular_shift:.9f} deg"
+
+    )
+
+    if math.isfinite(frame_magnitude_ratio):
+
+        print(
+
+            f"  production / ERFA magnitude:"
+
+            f" {frame_magnitude_ratio:.9f}"
+
+        )
+
+        print(
+
+            f"  magnitude target:           "
+
+            f"{MAGNITUDE_TARGET:.4f}"
+
+        )
+
+        print(
+
+            f"  ratio - target:             "
+
+            f"{frame_magnitude_target_delta:+.9f}"
+
+        )
+
+        print(
+
+            f"  ratio - unity:              "
+
+            f"{frame_magnitude_ratio - 1.0:+.9f}"
+
+        )
+
+    else:
+
+        print(
+
+            "  production / ERFA magnitude:"
+
+            " undefined at J2000"
+
+        )
+
+        print(
+
+            f"  magnitude target:           "
+
+            f"{MAGNITUDE_TARGET:.4f}"
+
+        )
+
     return {
 
         "model_only_residual_deg":
@@ -1466,6 +1952,14 @@ def run_case(
 
             erfa_frame_shift,
 
+        "signed_shift_ratio":
+
+            signed_shift_ratio,
+
+        "longitude_shift_magnitude_ratio":
+
+            longitude_shift_magnitude_ratio,
+
         "model_angular_error_deg":
 
             model_angular_error,
@@ -1481,6 +1975,38 @@ def run_case(
         "erfa_angular_error_deg":
 
             erfa_angular_error,
+
+        "production_frame_angular_shift_deg":
+
+            production_frame_angular_shift,
+
+        "erfa_frame_angular_shift_deg":
+
+            erfa_frame_angular_shift,
+
+        "frame_magnitude_ratio":
+
+            frame_magnitude_ratio,
+
+        "frame_magnitude_target_delta":
+
+            frame_magnitude_target_delta,
+
+        "raw_minus_jpl_date_km":
+
+            raw_minus_jpl_date_km,
+
+        "production_minus_jpl_km":
+
+            production_minus_jpl_km,
+
+        "erfa_minus_jpl_km":
+
+            erfa_minus_jpl_km,
+
+        "production_minus_erfa_km":
+
+            production_minus_erfa_km,
 
     }
 
@@ -1502,11 +2028,17 @@ def mean(
 
     """
 
-    if not values:
+    usable = finite_values(
+
+        values
+
+    )
+
+    if not usable:
 
         return float("nan")
 
-    return sum(values) / len(values)
+    return sum(usable) / len(usable)
 
 def mean_abs(
 
@@ -1520,7 +2052,13 @@ def mean_abs(
 
     """
 
-    if not values:
+    usable = finite_values(
+
+        values
+
+    )
+
+    if not usable:
 
         return float("nan")
 
@@ -1530,11 +2068,11 @@ def mean_abs(
 
             abs(value)
 
-            for value in values
+            for value in usable
 
         )
 
-        / len(values)
+        / len(usable)
 
     )
 
@@ -1636,6 +2174,66 @@ def print_summary(
 
     ]
 
+    magnitude_ratios = [
+
+        result["frame_magnitude_ratio"]
+
+        for _, result in results
+
+        if math.isfinite(
+
+            result["frame_magnitude_ratio"]
+
+        )
+
+    ]
+
+    signed_ratios = [
+
+        result["signed_shift_ratio"]
+
+        for _, result in results
+
+        if math.isfinite(
+
+            result["signed_shift_ratio"]
+
+        )
+
+    ]
+
+    raw_jpl_km = [
+
+        result["raw_minus_jpl_date_km"]
+
+        for _, result in results
+
+    ]
+
+    production_jpl_km = [
+
+        result["production_minus_jpl_km"]
+
+        for _, result in results
+
+    ]
+
+    erfa_jpl_km = [
+
+        result["erfa_minus_jpl_km"]
+
+        for _, result in results
+
+    ]
+
+    production_erfa_km = [
+
+        result["production_minus_erfa_km"]
+
+        for _, result in results
+
+    ]
+
     print()
 
     print("ALL-EPOCH STATISTICS")
@@ -1687,6 +2285,138 @@ def print_summary(
         f"{mean_abs(production_values):.9f} deg"
 
     )
+
+    print()
+
+    print("DIRECT VECTOR DIFFERENCE STATISTICS")
+
+    print(
+
+        f"  mean RAW - JPL/date:            "
+
+        f"{mean(raw_jpl_km):.3f} km"
+
+    )
+
+    print(
+
+        f"  mean PRODUCTION - JPL:          "
+
+        f"{mean(production_jpl_km):.3f} km"
+
+    )
+
+    print(
+
+        f"  mean ERFA - JPL:                "
+
+        f"{mean(erfa_jpl_km):.3f} km"
+
+    )
+
+    print(
+
+        f"  mean PRODUCTION - ERFA:         "
+
+        f"{mean(production_erfa_km):.3f} km"
+
+    )
+
+    print()
+
+    print("FRAME MAGNITUDE SUMMARY")
+
+    if magnitude_ratios:
+
+        mean_magnitude_ratio = mean(
+
+            magnitude_ratios
+
+        )
+
+        print(
+
+            f"  mean production / ERFA:         "
+
+            f"{mean_magnitude_ratio:.9f}"
+
+        )
+
+        print(
+
+            f"  unity expectation:              "
+
+            f"{1.0:.4f}"
+
+        )
+
+        print(
+
+            f"  registered magnitude target:    "
+
+            f"{MAGNITUDE_TARGET:.4f}"
+
+        )
+
+        print(
+
+            f"  mean ratio - unity:             "
+
+            f"{mean_magnitude_ratio - 1.0:+.9f}"
+
+        )
+
+        print(
+
+            f"  mean ratio - target:            "
+
+            f"{mean_magnitude_ratio - MAGNITUDE_TARGET:+.9f}"
+
+        )
+
+    else:
+
+        print(
+
+            "  no nonzero frame epochs available"
+
+        )
+
+    if signed_ratios:
+
+        mean_signed_ratio = mean(
+
+            signed_ratios
+
+        )
+
+        print(
+
+            f"  mean signed longitude P/E:      "
+
+            f"{mean_signed_ratio:+.9f}"
+
+        )
+
+        if mean_signed_ratio < 0.0:
+
+            print(
+
+                "  direction clue:                 "
+
+                "PRODUCTION AND ERFA HAVE OPPOSITE SIGNS"
+
+            )
+
+        else:
+
+            print(
+
+                "  direction clue:                 "
+
+                "production and ERFA shifts have same sign"
+
+            )
 
     before = [
 
@@ -1752,6 +2482,14 @@ def print_summary(
 
         )
 
+        print(
+
+            f"  frame magnitude before J2000:   "
+
+            f"{mean([r['frame_magnitude_ratio'] for r in before]):.9f}"
+
+        )
+
     if after:
 
         print(
@@ -1778,6 +2516,14 @@ def print_summary(
 
         )
 
+        print(
+
+            f"  frame magnitude after J2000:    "
+
+            f"{mean([r['frame_magnitude_ratio'] for r in after]):.9f}"
+
+        )
+
     print()
 
     print("INTERPRETATION KEY")
@@ -1788,7 +2534,7 @@ def print_summary(
 
         "  MODEL-ONLY residual large"
 
-        "  -> compact solar model contributes error."
+        "       -> compact solar model contributes error."
 
     )
 
@@ -1796,23 +2542,55 @@ def print_summary(
 
         "  FRAME disagreement large"
 
-        "   -> production frame conversion contributes error."
+        "        -> production frame conversion contributes error."
 
     )
 
     print(
 
-        "  Both large"
+        "  magnitude ratio ~= 1"
 
-        "                  -> both suspects are guilty."
+        "             -> production and ERFA rotate by same amount."
 
     )
 
     print(
 
-        "  Residual remains after both"
+        "  magnitude ratio != 1"
 
-        " -> continue searching for another culprit."
+        "             -> production rotation magnitude is suspect."
+
+    )
+
+    print(
+
+        "  signed ratio < 0"
+
+        "                  -> production rotation direction is suspect."
+
+    )
+
+    print(
+
+        "  ERFA much closer to JPL"
+
+        "              -> production transformation is implicated."
+
+    )
+
+    print(
+
+        "  ERFA and production both poor"
+
+        "       -> compact model/frame assumption remains implicated."
+
+    )
+
+    print(
+
+        "  residual remains after both"
+
+        "         -> continue searching for another culprit."
 
     )
 
@@ -1859,6 +2637,20 @@ def main() -> int:
     print(
 
         "  frame conversion: ERFA / IAU 2006"
+
+    )
+
+    print()
+
+    print(
+
+        "Registered frame-magnitude investigative target:"
+
+    )
+
+    print(
+
+        f"  {MAGNITUDE_TARGET:.4f}"
 
     )
 
