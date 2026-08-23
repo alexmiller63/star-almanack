@@ -116,23 +116,57 @@ A ratio near:
 
 means the two transformations have essentially the same rotation
 
-magnitude.
-
-A ratio systematically different from 1.0000 means the production
-
-transformation has the wrong rotation magnitude even if its direction
-
-is otherwise similar.
+magnitude for that Sun vector.
 
 The previously registered investigative target:
 
     1.0560
 
-is printed explicitly for comparison.  This target is diagnostic only.
+is printed explicitly for comparison. This target is diagnostic only.
 
 It is not assumed to be correct and does not affect PASS/FAIL.
 
-Direction is tested independently using signed ecliptic-longitude shifts.
+Full 3-D frame experiment
+
+-------------------------
+
+A single Sun vector cannot completely characterize a three-dimensional
+
+rotation. Therefore this diagnostic also applies both transformations to
+
+the Cartesian X, Y, and Z basis vectors.
+
+From those transformed basis vectors it reconstructs the complete
+
+production and ERFA rotation matrices.
+
+It then measures:
+
+    disagreement of transformed X, Y, and Z basis vectors
+
+    complete production rotation magnitude
+
+    complete ERFA rotation magnitude
+
+    production / ERFA rotation-magnitude ratio
+
+    rotation-axis agreement
+
+    residual rotation from ERFA to production
+
+    matrix Frobenius difference
+
+    determinant
+
+    orthogonality error
+
+The residual rotation:
+
+    production_matrix @ erfa_matrix.T
+
+is the cleanest direct measure of disagreement between the two complete
+
+date-to-J2000 transformations.
 
 Interpretation
 
@@ -146,13 +180,17 @@ If FRAME DISAGREEMENT is large:
 
     the production date-to-J2000 transformation contributes real error.
 
-If production / ERFA frame magnitude is far from 1:
+If the complete matrix magnitude ratio is far from 1:
 
     the production transformation has the wrong rotation magnitude.
 
-If the frame shifts have opposite signs:
+If the rotation axes strongly disagree:
 
-    the transformation direction/sign is wrong.
+    the production transformation has a wrong axis and/or direction.
+
+If the relative production-vs-ERFA rotation is large:
+
+    the production transformation is independently implicated.
 
 If both model-only and frame errors are large:
 
@@ -190,7 +228,7 @@ The same production approximate dynamical JD used by the eclipse engine is
 
 used for the compact Sun and for the JPL Horizons request.
 
-ERFA's frame routines formally accept TT.  For this diagnostic the
+ERFA's frame routines formally accept TT. For this diagnostic the
 
 production approximate TDB/TT argument is used as TT for the frame rotation.
 
@@ -206,11 +244,11 @@ This diagnostic intentionally contacts JPL Horizons.
 
 A Horizons/network failure is diagnostic unavailability, not a Star
 
-Almanack validation failure.  The program reports the failure and exits
+Almanack validation failure. The program reports the failure and exits
 
 successfully.
 
-This file is DIAGNOSTIC ONLY.  It does not modify production eclipse
+This file is DIAGNOSTIC ONLY. It does not modify production eclipse
 
 geometry and does not supply JPL data to eclipse_engine.py.
 
@@ -247,10 +285,6 @@ DEG = math.pi / 180.0
 #
 
 # This is NOT treated as truth and does NOT affect PASS/FAIL.
-
-# We merely calculate the frame-magnitude ratio so the observed
-
-# value can finally be compared with the registered target.
 
 MAGNITUDE_TARGET = 1.0560
 
@@ -320,11 +354,7 @@ TEST_EPOCHS = [
 
 def wrap_signed_deg(angle: float) -> float:
 
-    """
-
-    Normalize degrees to [-180, +180).
-
-    """
+    """Normalize degrees to [-180, +180)."""
 
     return (angle + 180.0) % 360.0 - 180.0
 
@@ -334,11 +364,7 @@ def vector_longitude_deg(
 
 ) -> float:
 
-    """
-
-    Ecliptic longitude of a rectangular vector.
-
-    """
+    """Ecliptic longitude of a rectangular vector."""
 
     return math.degrees(
 
@@ -360,11 +386,7 @@ def angle_between_deg(
 
 ) -> float:
 
-    """
-
-    Three-dimensional angular separation between two vectors.
-
-    """
+    """Three-dimensional angular separation between two vectors."""
 
     denom = a.norm() * b.norm()
 
@@ -400,11 +422,7 @@ def vec_to_numpy(
 
 ) -> np.ndarray:
 
-    """
-
-    Convert Star Almanack Vec3 to a NumPy vector.
-
-    """
+    """Convert Star Almanack Vec3 to a NumPy vector."""
 
     return np.array(
 
@@ -428,11 +446,7 @@ def numpy_to_vec(
 
 ) -> eclipse_engine.Vec3:
 
-    """
-
-    Convert a three-element NumPy vector to Star Almanack Vec3.
-
-    """
+    """Convert a three-element NumPy vector to Star Almanack Vec3."""
 
     return eclipse_engine.Vec3(
 
@@ -452,11 +466,7 @@ def vector_difference(
 
 ) -> eclipse_engine.Vec3:
 
-    """
-
-    Rectangular vector a - b.
-
-    """
+    """Rectangular vector a - b."""
 
     return eclipse_engine.Vec3(
 
@@ -476,11 +486,7 @@ def vector_difference_km(
 
 ) -> float:
 
-    """
-
-    Magnitude of rectangular vector difference a - b, kilometers.
-
-    """
+    """Magnitude of rectangular vector difference a - b, kilometers."""
 
     return vector_difference(
 
@@ -498,11 +504,7 @@ def safe_ratio(
 
 ) -> float:
 
-    """
-
-    Divide while handling the effectively-zero J2000 frame shift.
-
-    """
+    """Divide while handling an effectively-zero denominator."""
 
     if abs(denominator) < 1.0e-15:
 
@@ -516,11 +518,7 @@ def finite_values(
 
 ) -> list[float]:
 
-    """
-
-    Remove NaN and infinity from a list.
-
-    """
+    """Remove NaN and infinity from a list."""
 
     return [
 
@@ -540,11 +538,7 @@ def print_vector(
 
 ) -> None:
 
-    """
-
-    Print a rectangular vector.
-
-    """
+    """Print a rectangular vector."""
 
     print(
 
@@ -572,9 +566,7 @@ def print_difference(
 
     Print a-b rectangular components and magnitude.
 
-    Returns:
-
-        magnitude in kilometers
+    Returns magnitude in kilometers.
 
     """
 
@@ -722,12 +714,6 @@ def compact_sun_ecliptic_of_date(
 
     but STOP before the ecliptic-of-date -> J2000 frame transformation.
 
-    The coefficients intentionally duplicate those currently used by
-
-    eclipse_engine.sun_vector_j2000() so this diagnostic isolates only the
-
-    transformation stage.
-
     Output:
 
         mean ecliptic-of-date rectangular vector, kilometers
@@ -763,8 +749,6 @@ def compact_sun_ecliptic_of_date(
     w_rad = w * DEG
 
     M_rad = M * DEG
-
-    # Solve Kepler's equation using the same Newton iteration as production.
 
     E = M_rad
 
@@ -866,10 +850,6 @@ def erfa_ecliptic_matrix(
 
     IAU 2006 ICRS-equatorial -> mean-ecliptic-of-date rotation matrix.
 
-    ERFA accepts TT as a two-part Julian Date.
-
-    Splitting around J2000 preserves numerical precision.
-
     """
 
     date1 = J2000_JD
@@ -904,20 +884,6 @@ def erfa_ecliptic_date_to_j2000(
 
     Transform mean ecliptic-of-date -> J2000 mean ecliptic independently.
 
-    ERFA ecm06(date) maps:
-
-        ICRS equatorial -> ecliptic of date
-
-    Therefore:
-
-        ecliptic of date -> ICRS
-
-    is the transpose of that rotation.
-
-    We then apply the J2000 ecliptic matrix:
-
-        ICRS -> J2000 ecliptic
-
     """
 
     date_matrix = erfa_ecliptic_matrix(
@@ -938,11 +904,7 @@ def erfa_ecliptic_date_to_j2000(
 
     )
 
-    # Ecliptic of date -> ICRS.
-
     v_icrs = date_matrix.T @ v_date
-
-    # ICRS -> J2000 ecliptic.
 
     v_j2000 = j2000_matrix @ v_icrs
 
@@ -964,10 +926,6 @@ def erfa_ecliptic_j2000_to_date(
 
     Transform J2000 mean ecliptic -> mean ecliptic-of-date independently.
 
-    This is used to put the JPL reference vector in the same frame as the
-
-    RAW compact Sun.
-
     """
 
     date_matrix = erfa_ecliptic_matrix(
@@ -988,17 +946,367 @@ def erfa_ecliptic_j2000_to_date(
 
     )
 
-    # J2000 ecliptic -> ICRS.
-
     v_icrs = j2000_matrix.T @ v_j2000
-
-    # ICRS -> ecliptic of date.
 
     v_date = date_matrix @ v_icrs
 
     return numpy_to_vec(
 
         v_date
+
+    )
+
+# ---------------------------------------------------------------------------
+
+# Full production-vs-ERFA frame rotation test
+
+# ---------------------------------------------------------------------------
+
+def production_ecliptic_date_to_j2000(
+
+    vector_date: eclipse_engine.Vec3,
+
+    jd_tt: float,
+
+) -> eclipse_engine.Vec3:
+
+    """
+
+    Apply exactly the frame transformation currently used by production
+
+    to an arbitrary input vector.
+
+    """
+
+    eq_date = eclipse_engine._rot_x(
+
+        vector_date,
+
+        eclipse_engine._mean_obliquity_rad(jd_tt),
+
+    )
+
+    eq_j2000 = eclipse_engine._precess_equatorial_date_to_j2000(
+
+        eq_date,
+
+        jd_tt,
+
+    )
+
+    return eclipse_engine._rot_x(
+
+        eq_j2000,
+
+        -eclipse_engine._mean_obliquity_rad(J2000_JD),
+
+    )
+
+def frame_matrix(
+
+    transform,
+
+    jd_tt: float,
+
+) -> np.ndarray:
+
+    """
+
+    Reconstruct a complete 3x3 rotation matrix by transforming
+
+    Cartesian basis vectors.
+
+    """
+
+    basis = (
+
+        eclipse_engine.Vec3(
+
+            1.0,
+
+            0.0,
+
+            0.0,
+
+        ),
+
+        eclipse_engine.Vec3(
+
+            0.0,
+
+            1.0,
+
+            0.0,
+
+        ),
+
+        eclipse_engine.Vec3(
+
+            0.0,
+
+            0.0,
+
+            1.0,
+
+        ),
+
+    )
+
+    columns = [
+
+        vec_to_numpy(
+
+            transform(
+
+                vector,
+
+                jd_tt,
+
+            )
+
+        )
+
+        for vector in basis
+
+    ]
+
+    return np.column_stack(
+
+        columns
+
+    )
+
+def rotation_angle_deg(
+
+    matrix: np.ndarray,
+
+) -> float:
+
+    """Principal angular magnitude of a proper 3-D rotation matrix."""
+
+    cosine = (
+
+        float(np.trace(matrix))
+
+        - 1.0
+
+    ) / 2.0
+
+    cosine = max(
+
+        -1.0,
+
+        min(
+
+            1.0,
+
+            cosine,
+
+        ),
+
+    )
+
+    return math.degrees(
+
+        math.acos(cosine)
+
+    )
+
+def rotation_vector_deg(
+
+    matrix: np.ndarray,
+
+) -> np.ndarray:
+
+    """
+
+    Axis-angle rotation represented as a 3-vector in degrees.
+
+    Direction gives the rotation axis.
+
+    Vector magnitude gives the rotation angle.
+
+    """
+
+    angle = rotation_angle_deg(
+
+        matrix
+
+    )
+
+    angle_rad = math.radians(
+
+        angle
+
+    )
+
+    if abs(angle_rad) < 1.0e-12:
+
+        return np.zeros(
+
+            3,
+
+            dtype=float,
+
+        )
+
+    denominator = (
+
+        2.0
+
+        * math.sin(angle_rad)
+
+    )
+
+    if abs(denominator) < 1.0e-15:
+
+        return np.zeros(
+
+            3,
+
+            dtype=float,
+
+        )
+
+    axis = np.array(
+
+        [
+
+            matrix[2, 1] - matrix[1, 2],
+
+            matrix[0, 2] - matrix[2, 0],
+
+            matrix[1, 0] - matrix[0, 1],
+
+        ],
+
+        dtype=float,
+
+    ) / denominator
+
+    axis_norm = float(
+
+        np.linalg.norm(axis)
+
+    )
+
+    if axis_norm == 0.0:
+
+        return np.zeros(
+
+            3,
+
+            dtype=float,
+
+        )
+
+    axis /= axis_norm
+
+    return axis * angle
+
+def rotation_vector_magnitude(
+
+    vector: np.ndarray,
+
+) -> float:
+
+    """Magnitude of an axis-angle rotation vector, degrees."""
+
+    return float(
+
+        np.linalg.norm(vector)
+
+    )
+
+def rotation_axis_cosine(
+
+    a: np.ndarray,
+
+    b: np.ndarray,
+
+) -> float:
+
+    """
+
+    Cosine of the angle between two rotation axes.
+
+      +1 -> same direction
+
+      -1 -> opposite direction
+
+       0 -> perpendicular
+
+    """
+
+    a_norm = float(
+
+        np.linalg.norm(a)
+
+    )
+
+    b_norm = float(
+
+        np.linalg.norm(b)
+
+    )
+
+    if (
+
+        a_norm < 1.0e-15
+
+        or b_norm < 1.0e-15
+
+    ):
+
+        return float("nan")
+
+    return float(
+
+        np.dot(
+
+            a,
+
+            b,
+
+        )
+
+        / (
+
+            a_norm
+
+            * b_norm
+
+        )
+
+    )
+
+def orthogonality_error(
+
+    matrix: np.ndarray,
+
+) -> float:
+
+    """Frobenius norm of R R^T - I."""
+
+    identity = np.identity(
+
+        3,
+
+        dtype=float,
+
+    )
+
+    return float(
+
+        np.linalg.norm(
+
+            matrix @ matrix.T
+
+            - identity,
+
+            ord="fro",
+
+        )
 
     )
 
@@ -1017,30 +1325,6 @@ def horizons_request(
     """
 
     Request a geometric geocentric Sun vector from JPL Horizons.
-
-    Target:
-
-        Sun
-
-    Center:
-
-        Earth center
-
-    Reference system:
-
-        ICRF
-
-    Reference plane:
-
-        ecliptic
-
-    Time scale:
-
-        TDB
-
-    Corrections:
-
-        NONE
 
     """
 
@@ -1092,7 +1376,7 @@ def horizons_request(
 
             "User-Agent":
 
-                "Star-Almanack-Sun-Frame-Lineup-Diagnostic/2.0"
+                "Star-Almanack-Sun-Frame-Lineup-Diagnostic/3.0"
 
         },
 
@@ -1134,11 +1418,7 @@ def parse_horizons_vector(
 
 ) -> eclipse_engine.Vec3:
 
-    """
-
-    Extract X, Y, Z from the Horizons vector ephemeris block.
-
-    """
+    """Extract X, Y, Z from the Horizons vector ephemeris block."""
 
     if "$$SOE" not in text or "$$EOE" not in text:
 
@@ -1224,11 +1504,7 @@ def run_case(
 
 ) -> dict[str, float]:
 
-    """
-
-    Run one complete model / frame / production comparison.
-
-    """
+    """Run one complete model / frame / production comparison."""
 
     (
 
@@ -1242,25 +1518,17 @@ def run_case(
 
     )
 
-    # Suspect 1:
-
-    # compact model before production frame conversion.
-
     raw_compact = compact_sun_ecliptic_of_date(
 
         jd_tdb
 
     )
 
-    # Existing production result.
-
     production = eclipse_engine.sun_vector_j2000(
 
         jd_tdb
 
     )
-
-    # Independently transform the exact same raw vector.
 
     erfa_transformed = erfa_ecliptic_date_to_j2000(
 
@@ -1269,8 +1537,6 @@ def run_case(
         jd_tdb,
 
     )
-
-    # Independent external reference.
 
     horizons_text = horizons_request(
 
@@ -1283,8 +1549,6 @@ def run_case(
         horizons_text
 
     )
-
-    # Put JPL into the raw compact model's frame.
 
     jpl_date = erfa_ecliptic_j2000_to_date(
 
@@ -1384,8 +1648,6 @@ def run_case(
 
     )
 
-    # Signed longitude shift ratio.
-
     signed_shift_ratio = safe_ratio(
 
         production_frame_shift,
@@ -1393,8 +1655,6 @@ def run_case(
         erfa_frame_shift,
 
     )
-
-    # Magnitude-only longitude shift ratio.
 
     longitude_shift_magnitude_ratio = safe_ratio(
 
@@ -1442,10 +1702,6 @@ def run_case(
 
     )
 
-    # Actual angular amount by which each transformation moved
-
-    # the same raw vector.
-
     production_frame_angular_shift = angle_between_deg(
 
         raw_compact,
@@ -1481,6 +1737,208 @@ def run_case(
         else float("nan")
 
     )
+
+    # ------------------------------------------------------------------
+
+    # Full basis-vector / rotation-matrix evidence
+
+    # ------------------------------------------------------------------
+
+    production_matrix = frame_matrix(
+
+        production_ecliptic_date_to_j2000,
+
+        jd_tdb,
+
+    )
+
+    erfa_matrix = frame_matrix(
+
+        erfa_ecliptic_date_to_j2000,
+
+        jd_tdb,
+
+    )
+
+    relative_matrix = (
+
+        production_matrix
+
+        @ erfa_matrix.T
+
+    )
+
+    production_rotation_vector = rotation_vector_deg(
+
+        production_matrix
+
+    )
+
+    erfa_rotation_vector = rotation_vector_deg(
+
+        erfa_matrix
+
+    )
+
+    production_rotation_magnitude = rotation_vector_magnitude(
+
+        production_rotation_vector
+
+    )
+
+    erfa_rotation_magnitude = rotation_vector_magnitude(
+
+        erfa_rotation_vector
+
+    )
+
+    matrix_magnitude_ratio = safe_ratio(
+
+        production_rotation_magnitude,
+
+        erfa_rotation_magnitude,
+
+    )
+
+    axis_cosine = rotation_axis_cosine(
+
+        production_rotation_vector,
+
+        erfa_rotation_vector,
+
+    )
+
+    relative_rotation_angle = rotation_angle_deg(
+
+        relative_matrix
+
+    )
+
+    matrix_frobenius_difference = float(
+
+        np.linalg.norm(
+
+            production_matrix
+
+            - erfa_matrix,
+
+            ord="fro",
+
+        )
+
+    )
+
+    production_determinant = float(
+
+        np.linalg.det(
+
+            production_matrix
+
+        )
+
+    )
+
+    erfa_determinant = float(
+
+        np.linalg.det(
+
+            erfa_matrix
+
+        )
+
+    )
+
+    production_orthogonality_error = orthogonality_error(
+
+        production_matrix
+
+    )
+
+    erfa_orthogonality_error = orthogonality_error(
+
+        erfa_matrix
+
+    )
+
+    basis_vectors = (
+
+        (
+
+            "X",
+
+            eclipse_engine.Vec3(
+
+                1.0,
+
+                0.0,
+
+                0.0,
+
+            ),
+
+        ),
+
+        (
+
+            "Y",
+
+            eclipse_engine.Vec3(
+
+                0.0,
+
+                1.0,
+
+                0.0,
+
+            ),
+
+        ),
+
+        (
+
+            "Z",
+
+            eclipse_engine.Vec3(
+
+                0.0,
+
+                0.0,
+
+                1.0,
+
+            ),
+
+        ),
+
+    )
+
+    basis_disagreements: dict[str, float] = {}
+
+    for basis_name, basis_vector in basis_vectors:
+
+        production_basis = production_ecliptic_date_to_j2000(
+
+            basis_vector,
+
+            jd_tdb,
+
+        )
+
+        erfa_basis = erfa_ecliptic_date_to_j2000(
+
+            basis_vector,
+
+            jd_tdb,
+
+        )
+
+        basis_disagreements[basis_name] = angle_between_deg(
+
+            production_basis,
+
+            erfa_basis,
+
+        )
 
     # ------------------------------------------------------------------
 
@@ -1778,7 +2236,11 @@ def run_case(
 
     )
 
-    if math.isfinite(signed_shift_ratio):
+    if math.isfinite(
+
+        signed_shift_ratio
+
+    ):
 
         print(
 
@@ -1798,7 +2260,11 @@ def run_case(
 
         )
 
-    if math.isfinite(longitude_shift_magnitude_ratio):
+    if math.isfinite(
+
+        longitude_shift_magnitude_ratio
+
+    ):
 
         print(
 
@@ -1874,7 +2340,11 @@ def run_case(
 
     )
 
-    if math.isfinite(frame_magnitude_ratio):
+    if math.isfinite(
+
+        frame_magnitude_ratio
+
+    ):
 
         print(
 
@@ -1914,7 +2384,7 @@ def run_case(
 
             "  production / ERFA magnitude:"
 
-            " undefined at J2000"
+            " undefined at zero frame shift"
 
         )
 
@@ -1925,6 +2395,158 @@ def run_case(
             f"{MAGNITUDE_TARGET:.4f}"
 
         )
+
+    print()
+
+    print("  FULL 3-D FRAME MATRIX TEST")
+
+    print(
+
+        f"  X basis disagreement:       "
+
+        f"{basis_disagreements['X']:.9f} deg"
+
+    )
+
+    print(
+
+        f"  Y basis disagreement:       "
+
+        f"{basis_disagreements['Y']:.9f} deg"
+
+    )
+
+    print(
+
+        f"  Z basis disagreement:       "
+
+        f"{basis_disagreements['Z']:.9f} deg"
+
+    )
+
+    print()
+
+    print(
+
+        f"  production rotation:        "
+
+        f"{production_rotation_magnitude:.9f} deg"
+
+    )
+
+    print(
+
+        f"  ERFA rotation:              "
+
+        f"{erfa_rotation_magnitude:.9f} deg"
+
+    )
+
+    if math.isfinite(
+
+        matrix_magnitude_ratio
+
+    ):
+
+        print(
+
+            f"  matrix magnitude P/E:       "
+
+            f"{matrix_magnitude_ratio:.9f}"
+
+        )
+
+        print(
+
+            f"  matrix ratio - unity:       "
+
+            f"{matrix_magnitude_ratio - 1.0:+.9f}"
+
+        )
+
+    else:
+
+        print(
+
+            "  matrix magnitude P/E:       "
+
+            "undefined at zero rotation"
+
+        )
+
+    if math.isfinite(
+
+        axis_cosine
+
+    ):
+
+        print(
+
+            f"  rotation-axis cosine:       "
+
+            f"{axis_cosine:+.9f}"
+
+        )
+
+    else:
+
+        print(
+
+            "  rotation-axis cosine:       "
+
+            "undefined at zero rotation"
+
+        )
+
+    print(
+
+        f"  P relative to ERFA rotation:"
+
+        f" {relative_rotation_angle:.9f} deg"
+
+    )
+
+    print(
+
+        f"  matrix Frobenius difference:"
+
+        f" {matrix_frobenius_difference:.12e}"
+
+    )
+
+    print()
+
+    print(
+
+        f"  production determinant:     "
+
+        f"{production_determinant:.12f}"
+
+    )
+
+    print(
+
+        f"  ERFA determinant:           "
+
+        f"{erfa_determinant:.12f}"
+
+    )
+
+    print(
+
+        f"  production orthogonality:   "
+
+        f"{production_orthogonality_error:.12e}"
+
+    )
+
+    print(
+
+        f"  ERFA orthogonality:         "
+
+        f"{erfa_orthogonality_error:.12e}"
+
+    )
 
     return {
 
@@ -1992,6 +2614,58 @@ def run_case(
 
             frame_magnitude_target_delta,
 
+        "basis_x_disagreement_deg":
+
+            basis_disagreements["X"],
+
+        "basis_y_disagreement_deg":
+
+            basis_disagreements["Y"],
+
+        "basis_z_disagreement_deg":
+
+            basis_disagreements["Z"],
+
+        "production_matrix_rotation_deg":
+
+            production_rotation_magnitude,
+
+        "erfa_matrix_rotation_deg":
+
+            erfa_rotation_magnitude,
+
+        "matrix_magnitude_ratio":
+
+            matrix_magnitude_ratio,
+
+        "rotation_axis_cosine":
+
+            axis_cosine,
+
+        "relative_matrix_rotation_deg":
+
+            relative_rotation_angle,
+
+        "matrix_frobenius_difference":
+
+            matrix_frobenius_difference,
+
+        "production_matrix_determinant":
+
+            production_determinant,
+
+        "erfa_matrix_determinant":
+
+            erfa_determinant,
+
+        "production_orthogonality_error":
+
+            production_orthogonality_error,
+
+        "erfa_orthogonality_error":
+
+            erfa_orthogonality_error,
+
         "raw_minus_jpl_date_km":
 
             raw_minus_jpl_date_km,
@@ -2022,11 +2696,7 @@ def mean(
 
 ) -> float:
 
-    """
-
-    Arithmetic mean.
-
-    """
+    """Arithmetic mean."""
 
     usable = finite_values(
 
@@ -2046,11 +2716,7 @@ def mean_abs(
 
 ) -> float:
 
-    """
-
-    Mean absolute value.
-
-    """
+    """Mean absolute value."""
 
     usable = finite_values(
 
@@ -2092,11 +2758,7 @@ def print_summary(
 
 ) -> None:
 
-    """
-
-    Print compact cross-epoch prosecution summary.
-
-    """
+    """Print compact cross-epoch prosecution summary."""
 
     print()
 
@@ -2197,6 +2859,42 @@ def print_summary(
         if math.isfinite(
 
             result["signed_shift_ratio"]
+
+        )
+
+    ]
+
+    matrix_ratios = [
+
+        result["matrix_magnitude_ratio"]
+
+        for _, result in results
+
+        if math.isfinite(
+
+            result["matrix_magnitude_ratio"]
+
+        )
+
+    ]
+
+    relative_rotations = [
+
+        result["relative_matrix_rotation_deg"]
+
+        for _, result in results
+
+    ]
+
+    axis_cosines = [
+
+        result["rotation_axis_cosine"]
+
+        for _, result in results
+
+        if math.isfinite(
+
+            result["rotation_axis_cosine"]
 
         )
 
@@ -2324,7 +3022,7 @@ def print_summary(
 
     print()
 
-    print("FRAME MAGNITUDE SUMMARY")
+    print("SUN-VECTOR FRAME MAGNITUDE SUMMARY")
 
     if magnitude_ratios:
 
@@ -2418,6 +3116,108 @@ def print_summary(
 
             )
 
+    print()
+
+    print("FULL 3-D FRAME MATRIX SUMMARY")
+
+    if matrix_ratios:
+
+        mean_matrix_ratio = mean(
+
+            matrix_ratios
+
+        )
+
+        print(
+
+            f"  mean matrix magnitude P/E:      "
+
+            f"{mean_matrix_ratio:.9f}"
+
+        )
+
+        print(
+
+            f"  mean matrix ratio - unity:      "
+
+            f"{mean_matrix_ratio - 1.0:+.9f}"
+
+        )
+
+    else:
+
+        print(
+
+            "  matrix magnitude ratio undefined"
+
+        )
+
+    print(
+
+        f"  mean P-relative-ERFA rotation:  "
+
+        f"{mean(relative_rotations):.9f} deg"
+
+    )
+
+    print(
+
+        f"  max P-relative-ERFA rotation:   "
+
+        f"{max(finite_values(relative_rotations)):.9f} deg"
+
+    )
+
+    if axis_cosines:
+
+        print(
+
+            f"  mean rotation-axis cosine:      "
+
+            f"{mean(axis_cosines):+.9f}"
+
+        )
+
+    print()
+
+    print(
+
+        "  basis disagreement means:"
+
+    )
+
+    print(
+
+        "      0 deg      -> transformations agree on that axis"
+
+    )
+
+    print(
+
+        "      large      -> transformations genuinely disagree"
+
+    )
+
+    print(
+
+        "  rotation-axis cosine means:"
+
+    )
+
+    print(
+
+        "      +1         -> same rotation-axis direction"
+
+    )
+
+    print(
+
+        "      -1         -> opposite rotation-axis direction"
+
+    )
+
+    print()
+
     before = [
 
         result
@@ -2452,8 +3252,6 @@ def print_summary(
 
     ]
 
-    print()
-
     print("BEFORE / AFTER J2000")
 
     if before:
@@ -2484,9 +3282,25 @@ def print_summary(
 
         print(
 
-            f"  frame magnitude before J2000:   "
+            f"  Sun-vector ratio before J2000:  "
 
             f"{mean([r['frame_magnitude_ratio'] for r in before]):.9f}"
+
+        )
+
+        print(
+
+            f"  matrix ratio before J2000:      "
+
+            f"{mean([r['matrix_magnitude_ratio'] for r in before]):.9f}"
+
+        )
+
+        print(
+
+            f"  relative rotation before J2000: "
+
+            f"{mean([r['relative_matrix_rotation_deg'] for r in before]):.9f} deg"
 
         )
 
@@ -2518,9 +3332,25 @@ def print_summary(
 
         print(
 
-            f"  frame magnitude after J2000:    "
+            f"  Sun-vector ratio after J2000:   "
 
             f"{mean([r['frame_magnitude_ratio'] for r in after]):.9f}"
+
+        )
+
+        print(
+
+            f"  matrix ratio after J2000:       "
+
+            f"{mean([r['matrix_magnitude_ratio'] for r in after]):.9f}"
+
+        )
+
+        print(
+
+            f"  relative rotation after J2000:  "
+
+            f"{mean([r['relative_matrix_rotation_deg'] for r in after]):.9f} deg"
 
         )
 
@@ -2548,25 +3378,49 @@ def print_summary(
 
     print(
 
-        "  magnitude ratio ~= 1"
+        "  Sun-vector magnitude ~= 1"
 
-        "             -> production and ERFA rotate by same amount."
-
-    )
-
-    print(
-
-        "  magnitude ratio != 1"
-
-        "             -> production rotation magnitude is suspect."
+        "       -> both move this Sun vector by similar amounts."
 
     )
 
     print(
 
-        "  signed ratio < 0"
+        "  matrix magnitude ratio ~= 1"
 
-        "                  -> production rotation direction is suspect."
+        "      -> complete rotations have similar magnitudes."
+
+    )
+
+    print(
+
+        "  matrix magnitude ratio != 1"
+
+        "      -> production rotation magnitude is suspect."
+
+    )
+
+    print(
+
+        "  rotation-axis cosine ~= +1"
+
+        "      -> production and ERFA rotate about similar axes."
+
+    )
+
+    print(
+
+        "  rotation-axis cosine ~= -1"
+
+        "      -> rotation directions are opposite."
+
+    )
+
+    print(
+
+        "  relative matrix rotation large"
+
+        "    -> complete production transformation is implicated."
 
     )
 
@@ -2602,11 +3456,7 @@ def print_summary(
 
 def main() -> int:
 
-    """
-
-    Run the complete prosecution lineup.
-
-    """
+    """Run the complete prosecution lineup."""
 
     print(
 
