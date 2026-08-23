@@ -72,15 +72,15 @@ jobs:
 
           dates = [
 
-              "1970-01-01T00:00:00",
+              ("1970-01-01T00:00:00", "1970 JAN 01 00:00:00 UTC"),
 
-              "1971-01-01T00:00:00",
+              ("1971-01-01T00:00:00", "1971 JAN 01 00:00:00 UTC"),
 
-              "1972-01-01T00:00:00",
+              ("1972-01-01T00:00:00", "1972 JAN 01 00:00:00 UTC"),
 
-              "1973-01-01T00:00:00",
+              ("1973-01-01T00:00:00", "1973 JAN 01 00:00:00 UTC"),
 
-              "1974-01-01T00:00:00",
+              ("1974-01-01T00:00:00", "1974 JAN 01 00:00:00 UTC"),
 
           ]
 
@@ -90,11 +90,11 @@ jobs:
 
           print("=" * 60)
 
-          for utc in dates:
+          for iso_utc, spice_utc in dates:
 
-              et = spice.str2et(utc + " UTC")
+              et = spice.str2et(spice_utc)
 
-              unix = datetime.fromisoformat(utc).replace(
+              unix = datetime.fromisoformat(iso_utc).replace(
 
                   tzinfo=timezone.utc
 
@@ -106,7 +106,9 @@ jobs:
 
               delta_seconds = (jd_et - jd_utc) * 86400.0
 
-              print(f"UTC: {utc}Z")
+              print(f"UTC: {iso_utc}Z")
+
+              print(f"  SPICE input           : {spice_utc}")
 
               print(f"  ET seconds from J2000 : {et:.6f}")
 
