@@ -46,7 +46,7 @@ jobs:
 
       - name: Install validation dependency
 
-        run: python -m pip install PyYAML
+        run: python -m pip install PyYAML pyerfa
 
       - name: Bootstrap ELP2000-82B archive
 
