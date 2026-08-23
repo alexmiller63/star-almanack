@@ -42,7 +42,7 @@ Eclipse validation has revealed an epoch-dependent timing residual:
 
 A transformed-versus-raw Sun experiment showed that bypassing the Sun
 
-frame transformation reduces the timing residual substantially.  However,
+frame transformation reduces the timing residual substantially. However,
 
 that experiment deliberately mixes coordinate frames and therefore cannot
 
@@ -78,9 +78,15 @@ JPL Horizons is asked for a geometric geocentric Sun vector:
 
         ecliptic
 
+    time scale:
+
+        TDB
+
 The resulting vector can therefore be compared directly with
 
-eclipse_engine.sun_vector_j2000().
+eclipse_engine.sun_vector_j2000() when both are evaluated at the same
+
+dynamical epoch.
 
 Test epochs
 
@@ -99,6 +105,30 @@ The epochs deliberately span both sides of J2000:
     2017 eclipse era
 
     2024 eclipse era
+
+The eclipse epochs use the same published/reference UT instants stored in
+
+the Star Almanack eclipse validation catalog.
+
+For each case:
+
+1. The reference civil instant is converted to JD by the same calendar
+
+   routine used by the eclipse engine.
+
+2. The production eclipse-engine UTC/UT-like -> TDB approximation is
+
+   called directly.
+
+3. That exact JD(TDB) is used for BOTH:
+
+       Star Almanack compact-Sun evaluation
+
+       JPL Horizons vector request
+
+This prevents the diagnostic from comparing vectors at different physical
+
+instants.
 
 The diagnostic prints:
 
@@ -134,11 +164,11 @@ contacts JPL Horizons over the network.
 
 A temporary network or Horizons failure must NOT make the Star Almanack
 
-validation fail.  Such a failure is reported as SKIPPED / UNAVAILABLE and
+validation fail. Such a failure is reported as SKIPPED / UNAVAILABLE and
 
 the diagnostic exits successfully.
 
-Published/reference data remain validation targets only.  The production
+Published/reference data remain validation targets only. The production
 
 eclipse engine never reads JPL Horizons data.
 
@@ -160,9 +190,13 @@ import eclipse_engine
 
 HORIZONS_API = "https://ssd.jpl.nasa.gov/api/horizons.api"
 
-# Representative epochs.  Eclipse dates use the published/reference
+# Representative epochs.
 
-# greatest-eclipse times already used by the Star Almanack validation work.
+#
+
+# Eclipse cases use the same published/reference UT values stored in
+
+# eclipse-validation-cases.yaml.
 
 #
 
@@ -184,7 +218,7 @@ TEST_EPOCHS = [
 
         "1963 eclipse",
 
-        "1963-07-20T20:36:13Z",
+        "1963-07-20T20:35:38Z",
 
     ),
 
@@ -192,7 +226,7 @@ TEST_EPOCHS = [
 
         "1991 eclipse",
 
-        "1991-07-11T19:07:01Z",
+        "1991-07-11T19:06:03Z",
 
     ),
 
@@ -208,7 +242,7 @@ TEST_EPOCHS = [
 
         "2017 eclipse",
 
-        "2017-08-21T18:26:40Z",
+        "2017-08-21T18:25:30Z",
 
     ),
 
@@ -216,7 +250,7 @@ TEST_EPOCHS = [
 
         "2024 eclipse",
 
-        "2024-04-08T18:17:20Z",
+        "2024-04-08T18:17:15Z",
 
     ),
 
@@ -276,19 +310,23 @@ def angle_between_deg(
 
     cosine = max(-1.0, min(1.0, cosine))
 
-    return math.degrees(math.acos(cosine))
+    return math.degrees(
+
+        math.acos(cosine)
+
+    )
 
 def iso_z_to_jd(text: str) -> float:
 
     """
 
-    Convert the UTC timestamps used by this diagnostic to Julian Date.
+    Convert one reference civil timestamp to Julian Date.
 
-    eclipse_engine already owns the calendar-to-JD implementation used by
+    The calendar-to-JD implementation is deliberately shared with the
 
-    the Star Almanack validation layer, so this diagnostic deliberately
+    production eclipse engine so the diagnostic does not introduce another
 
-    reuses it rather than introducing another calendar implementation.
+    independent calendar conversion.
 
     """
 
@@ -302,13 +340,17 @@ def iso_z_to_jd(text: str) -> float:
 
     )
 
-    hour, minute, second = (
+    hour_text, minute_text, second_text = (
 
-        int(part)
-
-        for part in time_part.split(":")
+        time_part.split(":")
 
     )
+
+    hour = int(hour_text)
+
+    minute = int(minute_text)
+
+    second = float(second_text)
 
     decimal_hour = (
 
@@ -332,47 +374,61 @@ def iso_z_to_jd(text: str) -> float:
 
     )
 
-def approximate_tdb_jd(
+def production_tdb_jd(
 
-    utc_text: str,
+    civil_text: str,
 
-) -> float:
-
-    """
-
-    Produce the same approximate TT/TDB argument used by the eclipse engine.
-
-    Horizons receives the requested epoch independently.  The compact Sun
-
-    calculation, however, should be evaluated using the same time convention
-
-    as production eclipse geometry.
-
-    For this diagnostic, TT is used as the practical approximation to TDB,
-
-    matching the existing eclipse-engine design.
+) -> tuple[float, float]:
 
     """
 
-    jd_utc = iso_z_to_jd(utc_text)
+    Convert the diagnostic reference instant to the SAME approximate TDB
 
-    year = int(
+    argument used by production eclipse geometry.
 
-        utc_text[0:4]
+    Returns:
+
+        jd_civil
+
+        jd_tdb_approx
+
+    The first value retains the engine's current civil-time semantics.
+
+    Before 1972, production treats the civil JD approximately as UT1.
+
+    From 1972 onward, production treats it as UTC and applies TAI-UTC.
+
+    This diagnostic deliberately does not "improve" that behavior. Its job is
+
+    to test the production Sun model at exactly the time argument production
+
+    currently uses.
+
+    """
+
+    jd_civil = iso_z_to_jd(
+
+        civil_text
 
     )
 
-    delta_t = eclipse_engine.delta_t_seconds(
+    jd_tdb_approx = eclipse_engine.utc_to_tdb_approx(
 
-        float(year)
+        jd_civil
 
     )
 
-    return jd_utc + delta_t / 86400.0
+    return (
+
+        jd_civil,
+
+        jd_tdb_approx,
+
+    )
 
 def horizons_request(
 
-    jd: float,
+    jd_tdb: float,
 
 ) -> str:
 
@@ -398,11 +454,19 @@ def horizons_request(
 
     REF_PLANE ECLIPTIC:
 
-        ecliptic reference plane
+        J2000 ecliptic reference plane
+
+    TIME_TYPE TDB:
+
+        interpret the requested epoch on the TDB time scale
+
+    TLIST_TYPE JD:
+
+        numeric TLIST value is a Julian Date
 
     TLIST:
 
-        request exactly one epoch
+        request exactly the same JD(TDB) supplied to the Star Almanack Sun
 
     VEC_TABLE 2:
 
@@ -432,7 +496,11 @@ def horizons_request(
 
         "CSV_FORMAT": "'NO'",
 
-        "TLIST": f"'{jd:.12f}'",
+        "TIME_TYPE": "'TDB'",
+
+        "TLIST_TYPE": "'JD'",
+
+        "TLIST": f"'{jd_tdb:.12f}'",
 
     }
 
@@ -454,7 +522,7 @@ def horizons_request(
 
             "User-Agent": (
 
-                "Star-Almanack-JPL-Diagnostic/1.0"
+                "Star-Almanack-JPL-Diagnostic/2.0"
 
             )
 
@@ -476,7 +544,11 @@ def horizons_request(
 
         )
 
-    payload = json.loads(raw)
+    payload = json.loads(
+
+        raw
+
+    )
 
     if "result" not in payload:
 
@@ -546,7 +618,11 @@ def parse_horizons_vector(
 
     )
 
-    match = pattern.search(block)
+    match = pattern.search(
+
+        block
+
+    )
 
     if match is None:
 
@@ -590,7 +666,7 @@ def run_case(
 
     label: str,
 
-    utc_text: str,
+    civil_text: str,
 
 ) -> dict[str, float]:
 
@@ -600,15 +676,15 @@ def run_case(
 
     """
 
-    jd_utc = iso_z_to_jd(
+    (
 
-        utc_text
+        jd_civil,
 
-    )
+        jd_tdb_approx,
 
-    jd_tdb_approx = approximate_tdb_jd(
+    ) = production_tdb_jd(
 
-        utc_text
+        civil_text
 
     )
 
@@ -620,7 +696,7 @@ def run_case(
 
     horizons_text = horizons_request(
 
-        jd_utc
+        jd_tdb_approx
 
     )
 
@@ -664,19 +740,53 @@ def run_case(
 
     )
 
+    adopted_offset_seconds = (
+
+        jd_tdb_approx
+
+        - jd_civil
+
+    ) * 86400.0
+
     print()
 
     print(label)
 
-    print(f"  UTC epoch:          {utc_text}")
+    print(
 
-    print(f"  JD UTC:             {jd_utc:.9f}")
+        f"  reference civil epoch: "
+
+        f"{civil_text}"
+
+    )
 
     print(
 
-        f"  JD TT/TDB approx:   "
+        f"  JD civil input:        "
 
-        f"{jd_tdb_approx:.9f}"
+        f"{jd_civil:.12f}"
+
+    )
+
+    print(
+
+        f"  production JD TDB:     "
+
+        f"{jd_tdb_approx:.12f}"
+
+    )
+
+    print(
+
+        f"  adopted time offset:   "
+
+        f"{adopted_offset_seconds:+.6f} s"
+
+    )
+
+    print(
+
+        "  Horizons time scale:  TDB"
 
     )
 
@@ -698,7 +808,7 @@ def run_case(
 
     print(
 
-        f"  Star longitude:     "
+        f"  Star longitude:        "
 
         f"{star_lon:.9f} deg"
 
@@ -706,7 +816,7 @@ def run_case(
 
     print(
 
-        f"  JPL longitude:      "
+        f"  JPL longitude:         "
 
         f"{jpl_lon:.9f} deg"
 
@@ -722,7 +832,7 @@ def run_case(
 
     print(
 
-        f"  angular separation: "
+        f"  angular separation:    "
 
         f"{angular_error:.9f} deg"
 
@@ -730,7 +840,7 @@ def run_case(
 
     print(
 
-        f"  radial residual:    "
+        f"  radial residual:       "
 
         f"{radial_error:+.3f} km"
 
@@ -749,6 +859,10 @@ def run_case(
         "radial_error_km":
 
             radial_error,
+
+        "adopted_time_offset_seconds":
+
+            adopted_offset_seconds,
 
     }
 
@@ -776,11 +890,23 @@ def main() -> int:
 
     print(
 
+        "Both Star Almanack and JPL Horizons "
+
+        "are evaluated at the same JD(TDB)."
+
+    )
+
+    print()
+
+    print(
+
         "Signed longitude residual = "
 
         "Star Almanack - JPL Horizons."
 
     )
+
+    print()
 
     print(
 
@@ -806,13 +932,13 @@ def main() -> int:
 
     try:
 
-        for label, utc_text in TEST_EPOCHS:
+        for label, civil_text in TEST_EPOCHS:
 
             result = run_case(
 
                 label,
 
-                utc_text,
+                civil_text,
 
             )
 
@@ -822,7 +948,7 @@ def main() -> int:
 
                     label,
 
-                    utc_text,
+                    civil_text,
 
                     result,
 
@@ -868,7 +994,7 @@ def main() -> int:
 
     )
 
-    for label, utc_text, result in results:
+    for label, civil_text, result in results:
 
         residual = result[
 
@@ -880,7 +1006,7 @@ def main() -> int:
 
             f"  {label:<16} "
 
-            f"{utc_text:<21} "
+            f"{civil_text:<21} "
 
             f"{residual:+.9f} deg"
 
@@ -890,9 +1016,9 @@ def main() -> int:
 
         result["longitude_residual_deg"]
 
-        for label, utc_text, result in results
+        for label, civil_text, result in results
 
-        if utc_text < "2000-01-01T12:00:00Z"
+        if civil_text < "2000-01-01T12:00:00Z"
 
     ]
 
@@ -900,23 +1026,27 @@ def main() -> int:
 
         result["longitude_residual_deg"]
 
-        for label, utc_text, result in results
+        for label, civil_text, result in results
 
-        if utc_text > "2000-01-01T12:00:00Z"
+        if civil_text > "2000-01-01T12:00:00Z"
 
     ]
 
     if before and after:
 
-        mean_before = sum(before) / len(
+        mean_before = (
 
-            before
+            sum(before)
+
+            / len(before)
 
         )
 
-        mean_after = sum(after) / len(
+        mean_after = (
 
-            after
+            sum(after)
+
+            / len(after)
 
         )
 
@@ -992,4 +1122,8 @@ def main() -> int:
 
 if __name__ == "__main__":
 
-    raise SystemExit(main())
+    raise SystemExit(
+
+        main()
+
+    )
