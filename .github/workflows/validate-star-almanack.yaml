@@ -16,6 +16,8 @@ on:
 
       - "sun-jpl-diagnostic.py"
 
+      - "sun-frame-lineup-diagnostic.py"
+
       - ".github/workflows/validate-star-almanack.yaml"
 
 permissions:
@@ -67,6 +69,10 @@ jobs:
       - name: Run JPL compact-Sun diagnostic
 
         run: python sun-jpl-diagnostic.py
+
+      - name: Run Sun frame lineup diagnostic
+
+        run: python sun-frame-lineup-diagnostic.py
 
       - name: Run complete Star Almanack validation
 
