@@ -110,21 +110,53 @@ class Vec3:
 
     def __add__(self, other: "Vec3") -> "Vec3":
 
-        return Vec3(self.x + other.x, self.y + other.y, self.z + other.z)
+        return Vec3(
+
+            self.x + other.x,
+
+            self.y + other.y,
+
+            self.z + other.z,
+
+        )
 
     def __sub__(self, other: "Vec3") -> "Vec3":
 
-        return Vec3(self.x - other.x, self.y - other.y, self.z - other.z)
+        return Vec3(
+
+            self.x - other.x,
+
+            self.y - other.y,
+
+            self.z - other.z,
+
+        )
 
     def __mul__(self, scalar: float) -> "Vec3":
 
-        return Vec3(self.x * scalar, self.y * scalar, self.z * scalar)
+        return Vec3(
+
+            self.x * scalar,
+
+            self.y * scalar,
+
+            self.z * scalar,
+
+        )
 
     __rmul__ = __mul__
 
     def dot(self, other: "Vec3") -> float:
 
-        return self.x * other.x + self.y * other.y + self.z * other.z
+        return (
+
+            self.x * other.x
+
+            + self.y * other.y
+
+            + self.z * other.z
+
+        )
 
     def norm(self) -> float:
 
@@ -194,13 +226,29 @@ def _rot_x(v: Vec3, a: float) -> Vec3:
 
     c, s = math.cos(a), math.sin(a)
 
-    return Vec3(v.x, c * v.y - s * v.z, s * v.y + c * v.z)
+    return Vec3(
+
+        v.x,
+
+        c * v.y - s * v.z,
+
+        s * v.y + c * v.z,
+
+    )
 
 def _rot_z(v: Vec3, a: float) -> Vec3:
 
     c, s = math.cos(a), math.sin(a)
 
-    return Vec3(c * v.x - s * v.y, s * v.x + c * v.y, v.z)
+    return Vec3(
+
+        c * v.x - s * v.y,
+
+        s * v.x + c * v.y,
+
+        v.z,
+
+    )
 
 def _mean_obliquity_rad(jd: float) -> float:
 
@@ -230,7 +278,15 @@ def _precess_equatorial_date_to_j2000(v: Vec3, jd: float) -> Vec3:
 
     IAU 1976 precession angles.
 
-    The formula is used as a rotation only; distance is preserved.
+    The angles zeta, z, and theta conventionally describe the
+
+    J2000 -> mean-of-date transformation. Because this function requires
+
+    the inverse transformation, the rotations are applied in inverse order
+
+    with inverse signs.
+
+    Distance is preserved.
 
     """
 
@@ -238,29 +294,77 @@ def _precess_equatorial_date_to_j2000(v: Vec3, jd: float) -> Vec3:
 
     # J2000 -> date precession angles, arcseconds.
 
-    zeta = (2306.2181 * t + 0.30188 * t * t + 0.017998 * t**3) * ARCSEC
+    zeta = (
 
-    z = (2306.2181 * t + 1.09468 * t * t + 0.018203 * t**3) * ARCSEC
+        2306.2181 * t
 
-    theta = (2004.3109 * t - 0.42665 * t * t - 0.041833 * t**3) * ARCSEC
+        + 0.30188 * t * t
 
-    # Inverse of the usual J2000 -> date rotation:
+        + 0.017998 * t**3
 
-    # R3(-z) R2(theta) R3(-zeta).
+    ) * ARCSEC
 
-    # Written explicitly using x/z rotations via a direct y rotation below.
+    z = (
+
+        2306.2181 * t
+
+        + 1.09468 * t * t
+
+        + 0.018203 * t**3
+
+    ) * ARCSEC
+
+    theta = (
+
+        2004.3109 * t
+
+        - 0.42665 * t * t
+
+        - 0.041833 * t**3
+
+    ) * ARCSEC
 
     def rot_y(w: Vec3, a: float) -> Vec3:
 
         c, s = math.cos(a), math.sin(a)
 
-        return Vec3(c * w.x + s * w.z, w.y, -s * w.x + c * w.z)
+        return Vec3(
 
-    w = _rot_z(v, z)
+            c * w.x + s * w.z,
 
-    w = rot_y(w, -theta)
+            w.y,
 
-    w = _rot_z(w, zeta)
+            -s * w.x + c * w.z,
+
+        )
+
+    # With this module's active-vector rotation convention, the forward
+
+    # J2000 -> date transformation is:
+
+    #
+
+    #     Rz(z) Ry(-theta) Rz(zeta)
+
+    #
+
+    # Therefore date -> J2000 is the inverse:
+
+    #
+
+    #     Rz(-zeta) Ry(theta) Rz(-z)
+
+    #
+
+    # The transformations below act sequentially on the vector, so the
+
+    # rightmost matrix is applied first.
+
+    w = _rot_z(v, -z)
+
+    w = rot_y(w, theta)
+
+    w = _rot_z(w, -zeta)
 
     return w
 
@@ -288,11 +392,19 @@ def sun_vector_j2000(jd_tdb: float) -> Vec3:
 
     d = jd_tdb - 2451543.5
 
-    w = _wrap_deg(282.9404 + 0.0000470935 * d) * DEG
+    w = _wrap_deg(
+
+        282.9404 + 0.0000470935 * d
+
+    ) * DEG
 
     e = 0.016709 - 0.000000001151 * d
 
-    M = _wrap_deg(356.0470 + 0.9856002585 * d) * DEG
+    M = _wrap_deg(
+
+        356.0470 + 0.9856002585 * d
+
+    ) * DEG
 
     # Solve Kepler's equation.
 
@@ -342,15 +454,33 @@ def sun_vector_j2000(jd_tdb: float) -> Vec3:
 
     # Ecliptic-of-date -> equatorial-of-date.
 
-    eq_date = _rot_x(ecl_date, _mean_obliquity_rad(jd_tdb))
+    eq_date = _rot_x(
+
+        ecl_date,
+
+        _mean_obliquity_rad(jd_tdb),
+
+    )
 
     # Equatorial-of-date -> equatorial J2000.
 
-    eq_j2000 = _precess_equatorial_date_to_j2000(eq_date, jd_tdb)
+    eq_j2000 = _precess_equatorial_date_to_j2000(
+
+        eq_date,
+
+        jd_tdb,
+
+    )
 
     # Equatorial J2000 -> ecliptic J2000.
 
-    return _rot_x(eq_j2000, -_mean_obliquity_rad(2451545.0))
+    return _rot_x(
+
+        eq_j2000,
+
+        -_mean_obliquity_rad(2451545.0),
+
+    )
 
 def delta_t_seconds(year: float) -> float:
 
@@ -422,7 +552,17 @@ def delta_t_seconds(year: float) -> float:
 
         t = y - 1600.0
 
-        return 120.0 - 0.9808 * t - 0.01532 * t**2 + t**3 / 7129.0
+        return (
+
+            120.0
+
+            - 0.9808 * t
+
+            - 0.01532 * t**2
+
+            + t**3 / 7129.0
+
+        )
 
     if y < 1800:
 
@@ -508,19 +648,49 @@ def delta_t_seconds(year: float) -> float:
 
         t = y - 1920.0
 
-        return 21.20 + 0.84493 * t - 0.076100 * t**2 + 0.0020936 * t**3
+        return (
+
+            21.20
+
+            + 0.84493 * t
+
+            - 0.076100 * t**2
+
+            + 0.0020936 * t**3
+
+        )
 
     if y < 1961:
 
         t = y - 1950.0
 
-        return 29.07 + 0.407 * t - t**2 / 233.0 + t**3 / 2547.0
+        return (
+
+            29.07
+
+            + 0.407 * t
+
+            - t**2 / 233.0
+
+            + t**3 / 2547.0
+
+        )
 
     if y < 1986:
 
         t = y - 1975.0
 
-        return 45.45 + 1.067 * t - t**2 / 260.0 - t**3 / 718.0
+        return (
+
+            45.45
+
+            + 1.067 * t
+
+            - t**2 / 260.0
+
+            - t**3 / 718.0
+
+        )
 
     if y < 2005:
 
@@ -546,17 +716,43 @@ def delta_t_seconds(year: float) -> float:
 
         t = y - 2000.0
 
-        return 62.92 + 0.32217 * t + 0.005589 * t**2
+        return (
+
+            62.92
+
+            + 0.32217 * t
+
+            + 0.005589 * t**2
+
+        )
 
     if y < 2150:
 
-        return -20.0 + 32.0 * ((y - 1820.0) / 100.0) ** 2 - 0.5628 * (2150.0 - y)
+        return (
+
+            -20.0
+
+            + 32.0 * ((y - 1820.0) / 100.0) ** 2
+
+            - 0.5628 * (2150.0 - y)
+
+        )
 
     u = (y - 1820.0) / 100.0
 
     return -20.0 + 32.0 * u * u
 
-def gregorian_to_jd(year: int, month: int, day: int, hour: float = 0.0) -> float:
+def gregorian_to_jd(
+
+    year: int,
+
+    month: int,
+
+    day: int,
+
+    hour: float = 0.0,
+
+) -> float:
 
     """Proleptic Gregorian calendar to Julian Date."""
 
@@ -642,7 +838,11 @@ def jd_to_iso_utc(jd: float) -> str:
 
     # ties.
 
-    whole_seconds = math.floor(jd * 86400.0 + 0.5)
+    whole_seconds = math.floor(
+
+        jd * 86400.0 + 0.5
+
+    )
 
     normalized_jd = whole_seconds / 86400.0
 
@@ -656,7 +856,11 @@ def jd_to_iso_utc(jd: float) -> str:
 
     F = zf - Z
 
-    alpha = math.floor((Z - 1867216.25) / 36524.25)
+    alpha = math.floor(
+
+        (Z - 1867216.25) / 36524.25
+
+    )
 
     A = Z + 1 + alpha - math.floor(alpha / 4)
 
@@ -668,13 +872,39 @@ def jd_to_iso_utc(jd: float) -> str:
 
     E = math.floor((B - D) / 30.6001)
 
-    day_f = B - D - math.floor(30.6001 * E) + F
+    day_f = (
+
+        B
+
+        - D
+
+        - math.floor(30.6001 * E)
+
+        + F
+
+    )
 
     day = math.floor(day_f)
 
-    month = E - 1 if E < 14 else E - 13
+    month = (
 
-    year = C - 4716 if month > 2 else C - 4715
+        E - 1
+
+        if E < 14
+
+        else E - 13
+
+    )
+
+    year = (
+
+        C - 4716
+
+        if month > 2
+
+        else C - 4715
+
+    )
 
     # Because normalized_jd is already on a whole-second boundary, this value
 
@@ -684,7 +914,11 @@ def jd_to_iso_utc(jd: float) -> str:
 
     # when whole_seconds was divided by 86400 above.
 
-    seconds = round((day_f - day) * 86400.0)
+    seconds = round(
+
+        (day_f - day) * 86400.0
+
+    )
 
     # The arithmetic normalization above should make this invariant true.
 
@@ -696,7 +930,9 @@ def jd_to_iso_utc(jd: float) -> str:
 
         raise ArithmeticError(
 
-            "Julian-Date normalization failed: seconds outside civil day"
+            "Julian-Date normalization failed: "
+
+            "seconds outside civil day"
 
         )
 
@@ -704,7 +940,13 @@ def jd_to_iso_utc(jd: float) -> str:
 
     mm, ss = divmod(rem, 60)
 
-    return f"{year:04d}-{month:02d}-{day:02d}T{hh:02d}:{mm:02d}:{ss:02d}Z"
+    return (
+
+        f"{year:04d}-{month:02d}-{day:02d}"
+
+        f"T{hh:02d}:{mm:02d}:{ss:02d}Z"
+
+    )
 
 def _decimal_year_from_jd(jd: float) -> float:
 
@@ -718,9 +960,21 @@ def _decimal_year_from_jd(jd: float) -> float:
 
     day = int(iso[8:10])
 
-    return year + (month - 0.5) / 12.0 + (day - 15.0) / 365.2425
+    return (
 
-def tai_minus_utc_seconds(jd_utc: float) -> float | None:
+        year
+
+        + (month - 0.5) / 12.0
+
+        + (day - 15.0) / 365.2425
+
+    )
+
+def tai_minus_utc_seconds(
+
+    jd_utc: float,
+
+) -> float | None:
 
     """
 
@@ -796,7 +1050,15 @@ def tai_minus_utc_seconds(jd_utc: float) -> float | None:
 
     for year, month, day, offset in leap_seconds:
 
-        if jd_utc >= gregorian_to_jd(year, month, day):
+        if jd_utc >= gregorian_to_jd(
+
+            year,
+
+            month,
+
+            day,
+
+        ):
 
             return float(offset)
 
@@ -822,21 +1084,45 @@ def utc_to_tdb_approx(jd_utc: float) -> float:
 
     """
 
-    tai_minus_utc = tai_minus_utc_seconds(jd_utc)
+    tai_minus_utc = tai_minus_utc_seconds(
+
+        jd_utc
+
+    )
 
     if tai_minus_utc is not None:
 
-        tt_minus_utc = tai_minus_utc + 32.184
+        tt_minus_utc = (
 
-        return jd_utc + tt_minus_utc / 86400.0
+            tai_minus_utc + 32.184
 
-    dt = delta_t_seconds(_decimal_year_from_jd(jd_utc))
+        )
+
+        return (
+
+            jd_utc
+
+            + tt_minus_utc / 86400.0
+
+        )
+
+    dt = delta_t_seconds(
+
+        _decimal_year_from_jd(jd_utc)
+
+    )
 
     return jd_utc + dt / 86400.0
 
 class EclipseEngine:
 
-    def __init__(self, manifest: Path = ELP_MANIFEST):
+    def __init__(
+
+        self,
+
+        manifest: Path = ELP_MANIFEST,
+
+    ):
 
         if not manifest.exists():
 
@@ -848,15 +1134,35 @@ class EclipseEngine:
 
             )
 
-        sys.path.insert(0, str(ELP_DIR))
+        sys.path.insert(
+
+            0,
+
+            str(ELP_DIR),
+
+        )
 
         import lunar_elp  # local project module
 
         self._lunar_elp = lunar_elp
 
-        self._normalized = lunar_elp.load_normalized(manifest)
+        self._normalized = (
 
-    def moon_vector_j2000(self, jd_tdb: float) -> Vec3:
+            lunar_elp.load_normalized(
+
+                manifest
+
+            )
+
+        )
+
+    def moon_vector_j2000(
+
+        self,
+
+        jd_tdb: float,
+
+    ) -> Vec3:
 
         result = self._lunar_elp.evaluate(
 
@@ -870,15 +1176,41 @@ class EclipseEngine:
 
         r = result.rectangular
 
-        return Vec3(float(r.x_km), float(r.y_km), float(r.z_km))
+        return Vec3(
 
-    def geometry_at_utc_jd(self, jd_utc: float) -> SolarGeometry:
+            float(r.x_km),
 
-        jd_tdb = utc_to_tdb_approx(jd_utc)
+            float(r.y_km),
 
-        moon = self.moon_vector_j2000(jd_tdb)
+            float(r.z_km),
 
-        sun = sun_vector_j2000(jd_tdb)
+        )
+
+    def geometry_at_utc_jd(
+
+        self,
+
+        jd_utc: float,
+
+    ) -> SolarGeometry:
+
+        jd_tdb = utc_to_tdb_approx(
+
+            jd_utc
+
+        )
+
+        moon = self.moon_vector_j2000(
+
+            jd_tdb
+
+        )
+
+        sun = sun_vector_j2000(
+
+            jd_tdb
+
+        )
 
         sm = moon - sun
 
@@ -894,7 +1226,9 @@ class EclipseEngine:
 
         if q <= 0.0:
 
-            # Shadow axis points away from Earth: not solar-eclipse geometry.
+            # Shadow axis points away from Earth:
+
+            # not solar-eclipse geometry.
 
             r_core = float("nan")
 
@@ -910,19 +1244,73 @@ class EclipseEngine:
 
         else:
 
-            r_core = MOON_RADIUS_KM - q * (SUN_RADIUS_KM - MOON_RADIUS_KM) / L
+            r_core = (
 
-            r_pen = MOON_RADIUS_KM + q * (SUN_RADIUS_KM + MOON_RADIUS_KM) / L
+                MOON_RADIUS_KM
+
+                - q
+
+                * (
+
+                    SUN_RADIUS_KM
+
+                    - MOON_RADIUS_KM
+
+                )
+
+                / L
+
+            )
+
+            r_pen = (
+
+                MOON_RADIUS_KM
+
+                + q
+
+                * (
+
+                    SUN_RADIUS_KM
+
+                    + MOON_RADIUS_KM
+
+                )
+
+                / L
+
+            )
 
             # Penumbra intersects Earth if the distance between the two axes
 
             # is no greater than the sum of their radii.
 
-            eclipse_margin = rho - (EARTH_RADIUS_KM + r_pen)
+            eclipse_margin = (
 
-            central_margin = rho - EARTH_RADIUS_KM
+                rho
 
-            exists = eclipse_margin <= 0.0
+                - (
+
+                    EARTH_RADIUS_KM
+
+                    + r_pen
+
+                )
+
+            )
+
+            central_margin = (
+
+                rho
+
+                - EARTH_RADIUS_KM
+
+            )
+
+            exists = (
+
+                eclipse_margin <= 0.0
+
+            )
 
             if not exists:
 
@@ -996,9 +1384,25 @@ class EclipseEngine:
 
         """
 
-        year, month, day = (int(x) for x in date_utc.split("-"))
+        year, month, day = (
 
-        jd0 = gregorian_to_jd(year, month, day, 0.0)
+            int(x)
+
+            for x in date_utc.split("-")
+
+        )
+
+        jd0 = gregorian_to_jd(
+
+            year,
+
+            month,
+
+            day,
+
+            0.0,
+
+        )
 
         half = search_hours / 24.0
 
@@ -1018,9 +1422,19 @@ class EclipseEngine:
 
         while t <= end + 1e-12:
 
-            g = self.geometry_at_utc_jd(t)
+            g = self.geometry_at_utc_jd(
 
-            if g.q_min_km > 0.0 and g.axis_distance_km < best_val:
+                t
+
+            )
+
+            if (
+
+                g.q_min_km > 0.0
+
+                and g.axis_distance_km < best_val
+
+            ):
 
                 best_val = g.axis_distance_km
 
@@ -1030,13 +1444,29 @@ class EclipseEngine:
 
         # Refine within +/- 1 hour of the best coarse sample.
 
-        a = max(start, best_jd - 1.0 / 24.0)
+        a = max(
 
-        b = min(end, best_jd + 1.0 / 24.0)
+            start,
+
+            best_jd - 1.0 / 24.0,
+
+        )
+
+        b = min(
+
+            end,
+
+            best_jd + 1.0 / 24.0,
+
+        )
 
         def objective(jd: float) -> float:
 
-            g = self.geometry_at_utc_jd(jd)
+            g = self.geometry_at_utc_jd(
+
+                jd
+
+            )
 
             if g.q_min_km <= 0.0:
 
@@ -1044,9 +1474,23 @@ class EclipseEngine:
 
             return g.axis_distance_km
 
-        best_jd = _golden_minimize(objective, a, b, tolerance_seconds=0.05)
+        best_jd = _golden_minimize(
 
-        geom = self.geometry_at_utc_jd(best_jd)
+            objective,
+
+            a,
+
+            b,
+
+            tolerance_seconds=0.05,
+
+        )
+
+        geom = self.geometry_at_utc_jd(
+
+            best_jd
+
+        )
 
         return SolarEclipseEvent(
 
@@ -1054,7 +1498,11 @@ class EclipseEngine:
 
             greatest_jd_utc=best_jd,
 
-            greatest_utc=jd_to_iso_utc(best_jd),
+            greatest_utc=jd_to_iso_utc(
+
+                best_jd
+
+            ),
 
             eclipse_exists=geom.eclipse_exists,
 
@@ -1080,15 +1528,25 @@ def _golden_minimize(
 
     """Golden-section minimization on a Julian-Date interval."""
 
-    invphi = (math.sqrt(5.0) - 1.0) / 2.0
+    invphi = (
 
-    tol_days = tolerance_seconds / 86400.0
+        math.sqrt(5.0) - 1.0
+
+    ) / 2.0
+
+    tol_days = (
+
+        tolerance_seconds / 86400.0
+
+    )
 
     c = b - invphi * (b - a)
 
     d = a + invphi * (b - a)
 
-    fc, fd = f(c), f(d)
+    fc = f(c)
+
+    fd = f(d)
 
     for _ in range(100):
 
@@ -1114,39 +1572,121 @@ def _golden_minimize(
 
     return (a + b) / 2.0
 
-def _print_event(event: SolarEclipseEvent) -> None:
+def _print_event(
+
+    event: SolarEclipseEvent,
+
+) -> None:
 
     g = event.geometry
 
-    print(f"date requested:      {event.date_utc}")
+    print(
 
-    print(f"greatest alignment:  {event.greatest_utc}")
+        f"date requested:      "
 
-    print(f"eclipse exists:      {'yes' if event.eclipse_exists else 'no'}")
+        f"{event.date_utc}"
 
-    print(f"classification:      {event.eclipse_type}")
+    )
 
-    print(f"axis distance:       {g.axis_distance_km:.3f} km")
+    print(
 
-    print(f"Earth radius:        {EARTH_RADIUS_KM:.3f} km")
+        f"greatest alignment:  "
 
-    print(f"core radius:         {g.core_radius_km:.3f} km")
+        f"{event.greatest_utc}"
 
-    print(f"penumbra radius:     {g.penumbra_radius_km:.3f} km")
+    )
 
-    print(f"eclipse margin:      {g.eclipse_margin_km:+.3f} km")
+    print(
 
-    print(f"central margin:      {g.central_margin_km:+.3f} km")
+        f"eclipse exists:      "
 
-    print(f"q(min):              {g.q_min_km:.3f} km")
+        f"{'yes' if event.eclipse_exists else 'no'}"
 
-    print(f"Sun-Moon distance:   {g.sun_moon_distance_km:.3f} km")
+    )
+
+    print(
+
+        f"classification:      "
+
+        f"{event.eclipse_type}"
+
+    )
+
+    print(
+
+        f"axis distance:       "
+
+        f"{g.axis_distance_km:.3f} km"
+
+    )
+
+    print(
+
+        f"Earth radius:        "
+
+        f"{EARTH_RADIUS_KM:.3f} km"
+
+    )
+
+    print(
+
+        f"core radius:         "
+
+        f"{g.core_radius_km:.3f} km"
+
+    )
+
+    print(
+
+        f"penumbra radius:     "
+
+        f"{g.penumbra_radius_km:.3f} km"
+
+    )
+
+    print(
+
+        f"eclipse margin:      "
+
+        f"{g.eclipse_margin_km:+.3f} km"
+
+    )
+
+    print(
+
+        f"central margin:      "
+
+        f"{g.central_margin_km:+.3f} km"
+
+    )
+
+    print(
+
+        f"q(min):              "
+
+        f"{g.q_min_km:.3f} km"
+
+    )
+
+    print(
+
+        f"Sun-Moon distance:   "
+
+        f"{g.sun_moon_distance_km:.3f} km"
+
+    )
 
 def main() -> None:
 
     parser = argparse.ArgumentParser(
 
-        description="Star Almanack independent solar eclipse geometry engine"
+        description=(
+
+            "Star Almanack independent "
+
+            "solar eclipse geometry engine"
+
+        )
 
     )
 
@@ -1154,7 +1694,15 @@ def main() -> None:
 
         "date",
 
-        help="UTC date to search, YYYY-MM-DD (proleptic Gregorian)",
+        help=(
+
+            "UTC date to search, "
+
+            "YYYY-MM-DD "
+
+            "(proleptic Gregorian)"
+
+        ),
 
     )
 
@@ -1178,15 +1726,33 @@ def main() -> None:
 
         default=36.0,
 
-        help="hours on either side of 00:00 UTC to search (default 36)",
+        help=(
+
+            "hours on either side of "
+
+            "00:00 UTC to search "
+
+            "(default 36)"
+
+        ),
 
     )
 
     args = parser.parse_args()
 
-    engine = EclipseEngine(args.manifest)
+    engine = EclipseEngine(
 
-    event = engine.find_solar_eclipse(args.date, search_hours=args.search_hours)
+        args.manifest
+
+    )
+
+    event = engine.find_solar_eclipse(
+
+        args.date,
+
+        search_hours=args.search_hours,
+
+    )
 
     _print_event(event)
 
