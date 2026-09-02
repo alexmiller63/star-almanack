@@ -1,0 +1,36 @@
+name: Build 2026 Expanded Almanack
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ISO2026.md
+      - expanded-bayer-visibility-2026.csv
+      - build_expanded_almanack.py
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Star Almanack
+        uses: actions/checkout@v4
+      - name: Build expanded Almanack
+        run: python build_expanded_almanack.py
+      - name: Verify 53 weeks
+        run: |
+          test -f almanack-expanded.md
+          test "$(grep -c '^## ISO 2026-W[0-9][0-9]$' ISO2026.md)" -eq 53
+      - name: Commit expanded Almanack
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add almanack-expanded.md
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "Build expanded 2026 Almanack"
+          git push
