@@ -9,11 +9,15 @@ ROOT = Path(__file__).parent
 calendar = (ROOT / "almanack.md").read_text(encoding="utf-8")
 source = (ROOT / "ISO2026.md").read_text(encoding="utf-8")
 bayer_text = (ROOT / "expanded-bayer-visibility-2026.csv").read_text(encoding="utf-8")
+bright_text = (ROOT / "bright-star-visibility-2026.csv").read_text(encoding="utf-8")
 
 with (ROOT / "expanded-bayer-visibility-2026.csv").open(encoding="utf-8", newline="") as f:
     bayer_rows = list(csv.DictReader(f))
 with (ROOT / "messier-visibility-2026.csv").open(encoding="utf-8", newline="") as f:
     messier_rows = list(csv.DictReader(f))
+with (ROOT / "bright-star-visibility-2026.csv").open(encoding="utf-8", newline="") as f:
+    bright_rows = list(csv.DictReader(f))
+bright_new_rows = [r for r in bright_rows if r.get("new_non_alpha_beta") == "yes"]
 
 ephemeris = {}
 with (ROOT / "weekly-ephemeris-2026.csv").open(encoding="utf-8", newline="") as f:
@@ -92,18 +96,22 @@ for idx, row in enumerate(bayer_rows):
     proper = row.get("proper", "").strip()
     label = f"{proper} ({designation})" if proper else designation
     placement_date = row["best_date"]
-    # The visibility solver searches across the year boundary so a late-December
-    # target can occasionally choose the immediately preceding annual occurrence.
-    # For the ISO 2026 edition, place that same annual target in December 2026.
     if placement_date.startswith("2025-"):
         placement_date = "2026-" + placement_date[5:]
     ident = f"Bayer:{idx}:{row['bayer_code']}:{row['con']}"
     fixed.setdefault(placement_date, []).append((ident, f"Best visibility: {label}"))
+for idx, row in enumerate(bright_new_rows):
+    proper = (row.get("proper") or "").strip()
+    bayer = (row.get("bayer") or "").strip()
+    con = (row.get("con") or "").strip()
+    name = proper or (f"{bayer} {con}".strip())
+    mag_class = (row.get("mag_class") or "").strip()
+    label = f"{name} — V{mag_class}" if mag_class else name
+    ident = f"Bright:{idx}:{row.get('hyg_id','')}"
+    fixed.setdefault(row["best_date"], []).append((ident, f"Best visibility: {label}"))
 
 seen = set()
-# ISO 2026-W53 legitimately includes Jan 1-3, 2027, so calendar-row matching
-# must use the civil year printed in each row rather than assuming 2026.
-row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2026|2027) \| [^|]+ \| )([^|]*)( \|)$")
+row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| )([^|]*)( \|)$")
 months = {m: i for i, m in enumerate(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], 1)}
 
 def add_fixed(match):
@@ -123,9 +131,13 @@ def add_fixed(match):
 
 calendar = row_re.sub(add_fixed, calendar)
 
-expected_fixed = len(messier_rows) + len(bayer_rows)
 if len(messier_rows) != 110:
     raise SystemExit(f"Expected 110 Messier rows, found {len(messier_rows)}")
+if len(bright_rows) != 92:
+    raise SystemExit(f"Expected 92 reconciled bright-star systems, found {len(bright_rows)}")
+if len(bright_new_rows) != 41:
+    raise SystemExit(f"Expected 41 new non-alpha/beta bright-star systems, found {len(bright_new_rows)}")
+expected_fixed = len(messier_rows) + len(bayer_rows) + len(bright_new_rows)
 if len(seen) != expected_fixed:
     raise SystemExit(f"Fixed-object placement incomplete: placed {len(seen)} of {expected_fixed}")
 
@@ -134,7 +146,10 @@ objects = (
     "## Expanded α and β Star Catalog\n\n"
     "The complete generated Bayer catalog for 2026 follows. Best-visibility dates are computed by the Star Almanack visibility rule.\n\n"
     + bayer_text
+    + "\n\n## Second-Magnitude Bright-Star Catalog\n\n"
+    "The reconciled naked-eye stellar-system catalog follows. Decimal V values are retained here for provenance; Almanack calendar entries use whole-number V classes.\n\n"
+    + bright_text
 )
 out = header + calendar.rstrip() + "\n\n" + objects
 (ROOT / "almanack-expanded.md").write_text(out, encoding="utf-8")
-print(f"Built almanack-expanded.md: 53 ISO weeks; 110 Messier objects; {len(bayer_rows)} Bayer rows")
+print(f"Built almanack-expanded.md: 53 ISO weeks; 110 Messier objects; {len(bayer_rows)} Bayer rows; {len(bright_new_rows)} new bright-star systems")
