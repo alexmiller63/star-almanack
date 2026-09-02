@@ -2,9 +2,13 @@
 """Build the complete Star Almanack α/β Bayer-star source catalog from HYG v4.1.
 
 The output preserves every HYG catalog row whose Bayer field begins with
-Alp (alpha) or Bet (beta).  Multiple physical/catalog components are kept as
+Alp (alpha) or Bet (beta). Multiple physical/catalog components are kept as
 separate source rows; later Almanack rendering may group them under one Bayer
 system without losing component data.
+
+A very small normalization table repairs catalog rows whose Bayer identity is
+known independently but is not exposed consistently by the HYG CSV fields.
+The HIP identifiers make those repairs explicit and auditable.
 """
 
 from __future__ import annotations
@@ -16,6 +20,15 @@ from pathlib import Path
 
 BAYER_RE = re.compile(r"^(Alp|Bet)(\d*)$")
 GREEK = {"Alp": "α", "Bet": "β"}
+
+# Albireo is Beta Cygni. HYG v4.1 itself documents HIP 95951 as β² Cygni,
+# while HIP 95947 is the named primary Albireo (β¹ Cygni). Normalize both
+# components by stable Hipparcos identifier so catalog-field omissions cannot
+# silently remove Beta Cygni from the Almanack.
+BAYER_OVERRIDES = {
+    "95947": ("Bet", "1", "Cyg", "Albireo"),
+    "95951": ("Bet", "2", "Cyg", "Albireo B"),
+}
 
 
 def as_float(value: str) -> str:
@@ -40,9 +53,20 @@ def main() -> None:
             raise SystemExit(f"HYG input missing columns: {sorted(missing)}")
 
         for star in reader:
+            hip = (star.get("hip") or "").strip()
             bayer = (star.get("bayer") or "").strip()
             con = (star.get("con") or "").strip()
-            match = BAYER_RE.fullmatch(bayer)
+            proper = (star.get("proper") or "").strip()
+
+            override = BAYER_OVERRIDES.get(hip)
+            if override:
+                greek_code, suffix, con, canonical_name = override
+                bayer = f"{greek_code}{suffix}"
+                proper = canonical_name
+                match = BAYER_RE.fullmatch(bayer)
+            else:
+                match = BAYER_RE.fullmatch(bayer)
+
             if not match or not con:
                 continue
 
@@ -54,12 +78,12 @@ def main() -> None:
                     "greek": GREEK[greek_code],
                     "suffix": suffix,
                     "con": con,
-                    "proper": (star.get("proper") or "").strip(),
+                    "proper": proper,
                     "ra_h": as_float(star.get("ra") or ""),
                     "dec_deg": as_float(star.get("dec") or ""),
                     "mag": as_float(star.get("mag") or ""),
                     "hyg_id": (star.get("id") or "").strip(),
-                    "hip": (star.get("hip") or "").strip(),
+                    "hip": hip,
                     "hd": (star.get("hd") or "").strip(),
                     "hr": (star.get("hr") or "").strip(),
                 }
