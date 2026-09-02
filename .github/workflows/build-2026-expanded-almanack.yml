@@ -24,7 +24,15 @@ jobs:
       - name: Verify 53 weeks
         run: |
           test -f almanack-expanded.md
-          test "$(grep -c '^## ISO 2026-W[0-9][0-9]$' almanack-expanded.md)" -eq 53
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          text = Path("almanack-expanded.md").read_text(encoding="utf-8")
+          weeks = re.findall(r"(?m)^## (ISO 2026-W\d{2})\s*$", text)
+          expected = [f"ISO 2026-W{i:02d}" for i in range(1, 54)]
+          assert weeks == expected, f"Expected W01-W53, found {len(weeks)} sections"
+          print("Verified ISO 2026 W01-W53")
+          PY
       - name: Commit expanded Almanack
         run: |
           git config user.name "github-actions[bot]"
