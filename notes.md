@@ -70,3 +70,17 @@ Star notes may include color, multiplicity, navigation or cultural significance,
 The Almanack prose should display stellar magnitudes as whole-number visual magnitude classes rather than decimal magnitudes. Decimal precision is retained in the underlying data for calculations and star-chart rendering, where it is useful for differentiating symbol brightness.
 
 For stable stars, display the whole-number class only, such as **V1** or **V2**. For variable stars, display the bright-to-faint class range, such as **V2–V3**, while preserving the precise decimal bright and faint V magnitudes in machine-readable catalog fields. This keeps the printed Almanack visually simple without discarding quantitative precision from the source data.
+
+## 2026-09-02 — Completed Bayer and second-magnitude integration
+
+The Bayer source audit and supplement are now incorporated into the generated catalog. The current audited Bayer source contains 177 rows representing 175 distinct α/β designations; this supersedes the earlier 159-row state recorded above without rewriting that historical log entry.
+
+The second-magnitude layer is defined by representative maximum apparent Johnson V ≤ +2.50, with the Sun excluded. The pinned HYG v4.1 extraction initially produced 95 raw rows. Reconciliation removed the Sun, suppressed a duplicate Capella component, and represented Alpha Centauri as one naked-eye system with flux-combined V while retaining both component identifiers. The resulting baseline contains 92 naked-eye stellar systems: 51 already represented in the α/β Bayer layer and 41 genuinely new non-α/β systems.
+
+The GCVS boundary audit found 81 catalog rows whose listed maximum reaches +2.50 or brighter. Of these, 43 are in the GCVS visual/photovisual/V-system bucket, 3 are explicitly photographic, and 35 use other or blank systems. Reconciliation of the 43 V-system candidates classified 27 as already represented in the HYG bright baseline, 10 as exceptional eruptive/transient maxima that do not define ordinary membership, and 6 as requiring individual source checks. The six were resolved as follows: Polaris (α UMi), Alioth (ε UMa), and γ² Velorum are included; Mira (ο Ceti), η Carinae, and V862 Scorpii are excluded from the ordinary threshold layer, with exceptional brightness retained as note material where appropriate.
+
+Bright-star best-visibility dates use the same observer-first solar-right-ascension rule as the Bayer catalog. The dated bright-star catalog contains all 92 reconciled systems, of which 41 add new non-α/β calendar entries. A year-boundary normalization was required for Algol so its annual occurrence is placed inside ISO 2026 rather than the adjacent Gregorian-year occurrence.
+
+The integrated expanded Almanack build now reports 53 ISO weeks, 110 Messier objects, 177 Bayer rows, and 41 new bright-star systems. CI verifies all 53 week headings, all 371 civil-date rows, and exactly one calendar entry for every one of the 41 new bright-star systems. The ISO-year boundary remains explicit: β Reticuli has best instant 2026-12-31 20:05 UTC, best civil date 2027-01-01, ISO 2026-W53-5.
+
+This establishes the current reproducible 2026 expanded-Almanack baseline. Independent external validation may be performed later as a cross-check, but the repository catalogs, source audits, reconciliation tables, regression tests, and CI remain the primary record of how membership and dates were derived.
