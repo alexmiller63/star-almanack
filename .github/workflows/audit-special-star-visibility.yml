@@ -1,0 +1,68 @@
+name: Audit Special-Star Visibility 2026
+
+"on":
+  workflow_dispatch:
+  push:
+    paths:
+      - special-stars.md
+      - audit_special_star_visibility_2026.py
+      - compute_bayer_visibility_2026.py
+      - compute_bright_star_visibility_2026.py
+      - .github/workflows/audit-special-star-visibility.yml
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Star Almanack
+        uses: actions/checkout@v4
+
+      - name: Audit Special Star best-visibility dates
+        run: python audit_special_star_visibility_2026.py special-stars.md special-star-visibility-audit-2026.csv
+
+      - name: Validate audit report
+        run: |
+          python - <<'PY'
+          import csv
+          import datetime as dt
+
+          with open('special-star-visibility-audit-2026.csv', newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+
+          if not rows:
+              raise SystemExit('Special Star visibility audit is empty')
+
+          bad_iso = []
+          bad_status = []
+          for row in rows:
+              d = dt.date.fromisoformat(row['computed_date'])
+              if d.isocalendar().year != 2026:
+                  bad_iso.append((row['title'], row['computed_date'], row['iso']))
+              if row['status'] not in {'PASS', 'STALE_DATE'}:
+                  bad_status.append((row['title'], row['status']))
+
+          if bad_iso:
+              raise SystemExit(f'Computed Special Star dates outside ISO 2026: {bad_iso}')
+          if bad_status:
+              raise SystemExit(f'Unexpected Special Star audit statuses: {bad_status}')
+
+          stale = sum(r['status'] == 'STALE_DATE' for r in rows)
+          print(f'Special Stars audited: {len(rows)}')
+          print(f'Stale editorial dates reported, not hidden: {stale}')
+          PY
+
+      - name: Commit generated Special Star audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add special-star-visibility-audit-2026.csv
+          if git diff --cached --quiet; then
+            echo "No Special Star audit changes."
+            exit 0
+          fi
+          git commit -m "Audit 2026 Special Star visibility"
+          git push
