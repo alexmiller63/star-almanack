@@ -36,7 +36,7 @@ jobs:
           python - <<'PY'
           import csv
           import re
-          from datetime import date
+          from datetime import date, datetime
           from pathlib import Path
 
           text = Path('almanack-expanded.md').read_text(encoding='utf-8')
@@ -47,6 +47,22 @@ jobs:
           rows = re.findall(r'(?m)^\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), [A-Z][a-z]{2} \d{2}, (?:2025|2026|2027) \|', text)
           assert len(rows) == 53 * 7, f'Expected 371 day rows, found {len(rows)}'
 
+          # Map civil date to the observer-facing Events cell.  Generated
+          # entries may be suppressed when a legacy label on that same date
+          # already names the same physical object; this mirrors the builder's
+          # documented conservative alias rule.
+          calendar_events = {}
+          row_re = re.compile(
+              r'(?m)^\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| ([^|]*) \|$'
+          )
+          for m in row_re.finditer(text):
+              d = datetime.strptime(f'{m.group(1)} {m.group(2)} {m.group(3)}', '%b %d %Y').date().isoformat()
+              calendar_events[d] = m.group(4).strip()
+
+          def legacy_has_alias(existing, aliases):
+              folded = existing.casefold()
+              return any(alias.strip() and alias.strip().casefold() in folded for alias in aliases)
+
           with open('bright-star-visibility-2026.csv', newline='', encoding='utf-8') as f:
               bright = list(csv.DictReader(f))
           new = [r for r in bright if r['new_non_alpha_beta'] == 'yes']
@@ -55,13 +71,20 @@ jobs:
           for r in new:
               d = date.fromisoformat(r['best_date'])
               assert d.isocalendar().year == 2026, (r.get('proper'), r['best_date'])
-              name = (r.get('proper') or '').strip() or f"{r.get('bayer','').strip()} {r.get('con','').strip()}".strip()
+              proper = (r.get('proper') or '').strip()
+              bayer = (r.get('bayer') or '').strip()
+              con = (r.get('con') or '').strip()
+              name = proper or f'{bayer} {con}'.strip()
               label = f"Best visibility: {name} — V{r['mag_class']}"
-              assert text.count(label) == 1, f'Expected exactly one bright-star calendar entry for {name}'
+              events = calendar_events.get(r['best_date'], '')
+              canonical_count = text.count(label)
+              assert canonical_count <= 1, f'Duplicate bright-star calendar entry for {name}'
+              represented = label in events or legacy_has_alias(events, (proper, bayer))
+              assert represented, f'No calendar representation found for {name} on {r["best_date"]}'
 
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
-          print('Verified 53 weeks, 371 day rows, and 41 unique new bright-star calendar entries')
+          print('Verified 53 weeks, 371 day rows, and 41 represented new bright-star systems with alias-aware deduplication')
           PY
       - name: Commit expanded Almanack
         run: |
