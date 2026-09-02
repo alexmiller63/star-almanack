@@ -119,6 +119,18 @@ for row in messier_rows:
         (f"Messier:{messier}", f"Best visibility: {messier}", (messier,), f"Messier:{messier}")
     )
 
+
+def bayer_placement_date(row):
+    """Require the computed Bayer date to belong to ISO week-year 2026."""
+    placement_date = row["best_date"]
+    d = date.fromisoformat(placement_date)
+    if d.isocalendar().year != 2026:
+        raise SystemExit(
+            f"Bayer visibility date outside ISO 2026: {row.get('bayer', row.get('bayer_code', '?'))} — {placement_date}"
+        )
+    return placement_date
+
+
 # Pick the most informative display label for each Bayer observing target.
 # This makes a duplicated physical/component source such as α Com render once
 # as "Diadem (α Com)" while preserving every underlying catalog row.
@@ -126,9 +138,7 @@ bayer_target_labels = {}
 for row in bayer_rows:
     designation = row["bayer"]
     proper = row.get("proper", "").strip()
-    placement_date = row["best_date"]
-    if placement_date.startswith("2025-"):
-        placement_date = "2026-" + placement_date[5:]
+    placement_date = bayer_placement_date(row)
     key = (placement_date, designation.casefold())
     label = f"{proper} ({designation})" if proper else designation
     current = bayer_target_labels.get(key)
@@ -138,9 +148,7 @@ for row in bayer_rows:
 for idx, row in enumerate(bayer_rows):
     designation = row["bayer"]
     proper = row.get("proper", "").strip()
-    placement_date = row["best_date"]
-    if placement_date.startswith("2025-"):
-        placement_date = "2026-" + placement_date[5:]
+    placement_date = bayer_placement_date(row)
     target_key = f"BayerTarget:{placement_date}:{designation.casefold()}"
     label = bayer_target_labels[(placement_date, designation.casefold())]
     ident = f"Bayer:{idx}:{row['bayer_code']}:{row['con']}"
