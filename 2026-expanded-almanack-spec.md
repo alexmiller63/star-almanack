@@ -42,6 +42,24 @@ The completed source must pass all of the following checks:
 - preserved 15-case best-visibility regression remains 15/15 PASS;
 - existing lunar, zodiac, seasonal, and weekly planetary calculations remain unchanged unless an independently verified correction is required.
 
+## Zodiac-month orientation asterisms
+
+Each zodiac month SHALL contain one primary orienting asterism chosen for its practical usefulness in navigating that month's evening sky.
+
+The zodiac-month orientation section SHALL include:
+
+- a dedicated star chart showing the orienting asterism clearly;
+- identification of the principal stars that define the pattern;
+- an observer-first discussion of how to recognize the asterism in the sky;
+- explicit pointer relationships showing how the pattern leads to other prominent stars, constellations, asterisms, and deep-sky objects;
+- cross-references to relevant Messier and other Almanack objects where the asterism provides a useful observing route.
+
+Orienting asterisms are instructional features, not merely additional fixed-object calendar events. Their chart and discussion belong with the zodiac month in which the pattern is most useful as an evening-sky orientation aid.
+
+The set of twelve primary orienting asterisms SHALL be deliberately selective. Inclusion is based on navigational value: each primary asterism must materially help an observer find or understand other parts of the sky.
+
 ## Presentation
 
 The Almanack remains observer-first. Fixed objects are distributed onto the 53 weekly pages by best-visibility date rather than presented as a detached database dump. Each week therefore becomes a practical observing guide while preserving the precise mathematics underneath.
+
+The twelve zodiac-month orientation lessons form a parallel instructional path through the year: an observer following the Almanack month by month should progressively learn how to navigate the night sky rather than merely identify isolated objects.
