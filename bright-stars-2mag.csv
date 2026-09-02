@@ -1,9 +1,8 @@
 proper,bayer,con,ra_h,dec_deg,catalog_v,representative_vmax,brightness_basis,in_alpha_beta_layer,hyg_id,hip,hd,hr
-Sol,,,0.0,0.0,-26.7,-26.7,HYG v4.1 catalog V (stable baseline),no,0,,,
 Sirius,Alp,CMa,6.752481,-16.716116,-1.44,-1.44,HYG v4.1 catalog V (stable baseline),yes,32263,32349,48915,2491
 Canopus,Alp,Car,6.399195,-52.69566,-0.62,-0.62,HYG v4.1 catalog V (stable baseline),yes,30365,30438,45348,2326
+Alpha Centauri,Alp,Cen,14.660765,-60.833976,-0.01;1.35,-0.28,flux-combined HYG v4.1 V for unresolved naked-eye system,yes,71456;71453,71683;71681,128620;128621,5459;5460
 Arcturus,Alp,Boo,14.26103,19.18241,-0.05,-0.05,HYG v4.1 catalog V (stable baseline),yes,69451,69673,124897,5340
-Rigil Kentaurus,Alp-1,Cen,14.660765,-60.833976,-0.01,-0.01,HYG v4.1 catalog V (stable baseline),no,71456,71683,128620,5459
 Vega,Alp,Lyr,18.61564,38.783692,0.03,0.03,HYG v4.1 catalog V (stable baseline),yes,90979,91262,172167,7001
 Capella,Alp,Aur,5.27815,45.997991,0.08,0.08,HYG v4.1 catalog V (stable baseline),yes,24549,24608,34029,1708
 Rigel,Bet,Ori,5.242298,-8.20164,0.18,0.18,HYG v4.1 catalog V (stable baseline),yes,24378,24436,34085,1713
@@ -12,16 +11,14 @@ Achernar,Alp,Eri,1.628556,-57.236757,0.45,0.45,HYG v4.1 catalog V (stable baseli
 Betelgeuse,Alp,Ori,5.919529,7.407063,0.45,0.45,HYG v4.1 catalog V (stable baseline),yes,27919,27989,39801,2061
 Hadar,Bet,Cen,14.063729,-60.373039,0.61,0.61,HYG v4.1 catalog V (stable baseline),yes,68483,68702,122451,5267
 Altair,Alp,Aql,19.846388,8.868322,0.76,0.76,HYG v4.1 catalog V (stable baseline),yes,97338,97649,187642,7557
-Acrux,Alp-1,Cru,12.443311,-63.099092,0.77,0.77,HYG v4.1 catalog V (stable baseline),no,60530,60718,108248,4730
+Acrux,Alp-1,Cru,12.443311,-63.099092,0.77,0.77,HYG v4.1 catalog V (stable baseline),yes,60530,60718,108248,4730
 Aldebaran,Alp,Tau,4.598677,16.509301,0.87,0.87,HYG v4.1 catalog V (stable baseline),yes,21368,21421,29139,1457
-,,Aur,5.277926,46.000842,0.96,0.96,HYG v4.1 catalog V (stable baseline),no,118360,,,
 Spica,Alp,Vir,13.419883,-11.161322,0.98,0.98,HYG v4.1 catalog V (stable baseline),yes,65269,65474,116658,5056
 Antares,Alp,Sco,16.490128,-26.432002,1.06,1.06,HYG v4.1 catalog V (stable baseline),yes,80519,80763,148478,6134
 Pollux,Bet,Gem,7.755277,28.026199,1.16,1.16,HYG v4.1 catalog V (stable baseline),yes,37718,37826,62509,2990
 Fomalhaut,Alp,PsA,22.960838,-29.622236,1.17,1.17,HYG v4.1 catalog V (stable baseline),yes,113008,113368,216956,8728
 Deneb,Alp,Cyg,20.690532,45.280338,1.25,1.25,HYG v4.1 catalog V (stable baseline),yes,101767,102098,197345,7924
 Mimosa,Bet,Cru,12.795359,-59.688764,1.25,1.25,HYG v4.1 catalog V (stable baseline),yes,62239,62434,111123,4853
-Toliman,Alp-2,Cen,14.660346,-60.8383,1.35,1.35,HYG v4.1 catalog V (stable baseline),no,71453,71681,128621,5460
 Regulus,Alp,Leo,10.139532,11.967207,1.36,1.36,HYG v4.1 catalog V (stable baseline),yes,49528,49669,87901,3982
 Adhara,Eps,CMa,6.977097,-28.972084,1.5,1.5,HYG v4.1 catalog V (stable baseline),no,33492,33579,52089,2618
 Castor,Alp,Gem,7.576634,31.888276,1.58,1.58,HYG v4.1 catalog V (stable baseline),yes,36744,36850,60179,2891
