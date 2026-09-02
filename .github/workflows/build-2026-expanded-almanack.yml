@@ -7,6 +7,7 @@ on:
       - ISO2026.md
       - almanack.md
       - expanded-bayer-visibility-2026.csv
+      - messier-visibility-2026.csv
       - weekly-ephemeris-2026.csv
       - build_expanded_almanack.py
 
