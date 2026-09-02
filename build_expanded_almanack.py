@@ -83,7 +83,7 @@ if len(weeks) < 53:
             ev = "<br>".join(events.get(d, ["—"]))
             rows.append(f"| {d:%a, %b %d, %Y} | {z} | {ev} |")
         additions.append(
-            f"## {key}\n\n"
+            f"## ISO {key}\n\n"
             f"**ISO dates:** {key}-1 through {key}-7  \n\n"
             f"**Civil dates:** {monday:%b %d, %Y} – {sunday:%b %d, %Y}\n\n"
             "### Calendar\n\n"
