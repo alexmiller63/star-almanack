@@ -104,3 +104,13 @@ Content audit exposed a legacy Messier duplication that the first alias rule did
 For every Messier object, `messier-visibility-2026.csv` is authoritative for the calendar placement date. A legacy `Best visibility:` event carrying the same M-number on any other date is suppressed before generated fixed-object injection. If a descriptive legacy Messier label already appears on the catalog best date, that human-readable label is retained and the bare generated alias is suppressed as before.
 
 This remains a presentation-only rule. All 110 source rows remain unchanged and must still be accounted for by the builder. CI now requires each M1 through M110 identity from the source catalog to occur exactly once in the calendar and specifically on its computed best-visibility date.
+
+## 2026-09-02 — Observer-target deduplication
+
+The calendar-level rule is now: **deduplicate observing targets, not stars**. Machine-readable catalog rows continue to describe the underlying stellar records and are not deleted merely because multiple rows are presented as one practical naked-eye target.
+
+For the Bayer layer, rows with the same exact Bayer designation and the same placement date may share one observer-facing calendar target. The most informative available label is preferred. This resolves the α Comae Berenices case: the two retained source/component records remain in the appended Bayer catalog, while the weekly calendar now prints one target, **Diadem (α Com)**, rather than both `Diadem (α Com)` and `α Com`.
+
+Separately numbered Bayer designations remain separate observing targets. Thus α¹/α² and β¹/β² are not collapsed by this rule. Likewise, physically related stars are not merged merely because they belong to the same gravitational system: a future special-mentions layer may list Proxima Centauri separately from the naked-eye Alpha Centauri A/B observing target.
+
+This rule is presentation-only and observer-first. Every underlying Bayer row still participates in completeness accounting even when more than one row maps to the same calendar target. Future notable-object layers, including nearby stars such as Proxima Centauri and naked-eye stars with confirmed exoplanets, should remain separate from the systematic α/β and V ≤ +2.50 inclusion layers.
