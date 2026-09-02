@@ -48,24 +48,12 @@ if len(weeks) < 53:
         ts = datetime.fromisoformat(m.group(2))
         events.setdefault(ts.date(), []).append(f"{m.group(1)} — {ts:%H:%M:%S} UTC")
 
-    # Zodiac day from the published/calculated ingress instants in ISO2026.md.
     def zodiac_for_day(d):
-        current = ingress[0][1]
-        for ts, sign in ingress:
-            if datetime.combine(d, datetime.min.time()) >= ts:
-                current = sign
-            else:
-                break
-        signs = [x[1] for x in ingress]
-        # Find the sign's ordinal in the tropical sequence, including Capricorn
-        # at the start of 2026.
-        sign_index = {s: i for i, s in enumerate(["♒","♓","♈","♉","♊","♋","♌","♍","♎","♏","♐","♑"])}
-        start = datetime(2025, 12, 21)
-        # Determine the most recent ingress among the boundary plus 2026 ingresses.
-        boundaries = [(datetime(2025,12,21,15,3,5), "♑")] + ingress
-        last_ts, sign = max((x for x in boundaries if x[0] <= datetime.combine(d, datetime.min.time())), key=lambda x:x[0])
-        day = (d - last_ts.date()).days + 1
-        return sign, day
+        # Star Almanack assigns the ingress calendar date itself as sign-day 1,
+        # regardless of the UTC clock time at which the ingress occurs.
+        boundaries = [(date(2025, 12, 21), "♑")] + [(ts.date(), sign) for ts, sign in ingress]
+        last_date, sign = max((x for x in boundaries if x[0] <= d), key=lambda x: x[0])
+        return sign, (d - last_date).days + 1
 
     def iso_dates(w):
         return date.fromisocalendar(2026, w, 1)
@@ -78,6 +66,8 @@ if len(weeks) < 53:
                 "|---:|---:|---:|---:|---:|---:|---:|\n\n"
                 "| " + " | ".join(x[1] for x in cols) + " |")
 
+    sign_names = {"♈":"Aries","♉":"Taurus","♊":"Gemini","♋":"Cancer","♌":"Leo","♍":"Virgo",
+                  "♎":"Libra","♏":"Scorpio","♐":"Sagittarius","♑":"Capricorn","♒":"Aquarius","♓":"Pisces"}
     additions = []
     for w in range(len(weeks) + 1, 54):
         key = f"2026-W{w:02d}"
@@ -89,8 +79,7 @@ if len(weeks) < 53:
         for i in range(7):
             d = monday + timedelta(days=i)
             sign, daynum = zodiac_for_day(d)
-            sign_name = {"♈":"Aries","♉":"Taurus","♊":"Gemini","♋":"Cancer","♌":"Leo","♍":"Virgo","♎":"Libra","♏":"Scorpio","♐":"Sagittarius","♑":"Capricorn","♒":"Aquarius","♓":"Pisces"}[sign]
-            z = f"{sign} ({sign_name}) {daynum}" if daynum == 1 else f"{sign} {daynum}"
+            z = f"{sign} ({sign_names[sign]}) {daynum}" if daynum == 1 else f"{sign} {daynum}"
             ev = "<br>".join(events.get(d, ["—"]))
             rows.append(f"| {d:%a, %b %d, %Y} | {z} | {ev} |")
         additions.append(
