@@ -28,8 +28,7 @@ differ slightly in other years.*
 
 ## The hidden neighborhood
 
-### Proxima Centauri --- V645 Centauri · Tropical Summer · June 15
-
+### Proxima Centauri --- V645 Centauri · Tropical Summer · June 14
 **RA 14h 30m · Dec −62.7° · mag 11**
 
 **Observing: Telescope**
@@ -65,8 +64,7 @@ connection is still delightful: our nearest stellar system is both a
 real laboratory of exoplanet astronomy and an imagined destination for
 interstellar travel.
 
-### Barnard's Star · Tropical Summer · June 18
-
+### Barnard's Star · Tropical Summer · August 4
 **RA 17h 58m · Dec +4.7° · mag 10**
 
 **Observing: Telescope**
@@ -94,8 +92,7 @@ Modern observations have added another layer: Barnard's Star has
 confirmed small exoplanets. A star that first became famous because it
 moved is now also part of the nearby planetary census.
 
-### Wolf 359 --- CN Leonis · Tropical Spring · April 22
-
+### Wolf 359 --- CN Leonis · Tropical Spring · April 21
 **RA 10h 56m · Dec +7.0° · mag 14**
 
 **Observing: Telescope**
@@ -123,8 +120,7 @@ The science-fiction history is not the reason Wolf 359 belongs here, but
 it makes a fine companion to the science. A star that is visually almost
 nothing to us has become culturally vivid.
 
-### Lalande 21185 --- Gliese 411 · Northern Spring · May 2
-
+### Lalande 21185 --- Gliese 411 · Northern Spring · April 23
 **RA 11h 03m · Dec +35.9° · mag 7**
 
 **Observing: Binocular**
@@ -144,8 +140,7 @@ Taken together, Proxima Centauri, Barnard's Star, Wolf 359, and Lalande
 stellar neighborhood is populated by quiet, faint red stars that the
 naked eye almost completely misses.
 
-### Epsilon Eridani --- ε Eridani · Southern Winter · December 26
-
+### Epsilon Eridani --- ε Eridani · Southern Winter · December 29
 **RA 3h 33m · Dec −9.5° · mag 4**
 
 **Observing: Naked eye**
@@ -170,8 +165,7 @@ first stars at which humanity deliberately listened.
 
 ## Measuring a universe made of stars
 
-### 61 Cygni · Northern Autumn · October 15
-
+### 61 Cygni · Northern Autumn · September 25
 **RA 21h 07m · Dec +38.7° · mag 5**
 
 **Observing: Naked eye; telescope to resolve the pair**
@@ -196,8 +190,7 @@ of them had been given a measurable depth coordinate.
 therefore brings together 3-dimensional distance, motion across the sky,
 and the fact that a point of light can conceal more than one star.
 
-### Algol --- β Persei · Northern Winter · December 8
-
+### Algol --- β Persei · Northern Winter · December 24
 **RA 3h 08m · Dec +41.0° · mag 2**
 
 **Observing: Naked eye**
@@ -219,8 +212,7 @@ is one of the best examples of an important astronomical habit of mind:
 when an object is only a dot, measure what the dot does. Brightness over
 time can reveal an orbit.
 
-### Mira --- ο Ceti · Tropical Autumn · November 22
-
+### Mira --- ο Ceti · Tropical Autumn · December 13
 **RA 2h 19m · Dec −3.0° · mag variable**
 
 **Observing: Variable --- naked eye near favorable maxima, telescope
@@ -243,8 +235,7 @@ dramatically as the star pulsates. For an observer, however, the
 experience is wonderfully direct: the same named star can be naked-eye
 astronomy in one season and telescopic astronomy in another.
 
-### Delta Cephei --- δ Cephei · Northern Autumn · September 25
-
+### Delta Cephei --- δ Cephei · Northern Autumn · October 17
 **RA 22h 29m · Dec +58.4° · mag variable**
 
 **Observing: Naked eye**
@@ -266,8 +257,7 @@ intrinsic luminosity with how faint the star appears, and distance
 follows. A star changing gently in Cepheus became part of the ladder by
 which astronomers learned how far away galaxies are.
 
-### RR Lyrae · Northern Summer · August 9
-
+### RR Lyrae · Northern Summer · August 28
 **RA 19h 25m · Dec +42.8° · mag variable**
 
 **Observing: Binocular**
@@ -286,8 +276,7 @@ show two versions of the same profound idea: a star's changing
 brightness can tell us how luminous it really is, and that can tell us
 how far away it is.
 
-### Tabby's Star --- Boyajian's Star --- KIC 8462852 · Northern Summer · July 22
-
+### Tabby's Star --- Boyajian's Star --- KIC 8462852 · Northern Summer · September 8
 **RA 20h 06m · Dec +44.5° · mag 12**
 
 **Observing: Telescope**
@@ -318,7 +307,6 @@ discriminate among them.
 ## What kind of object is that dot?
 
 ### Betelgeuse --- α Orionis · Tropical Winter · January 31
-
 **RA 5h 55m · Dec +7.4° · mag 1**
 
 **Observing: Naked eye**
@@ -347,7 +335,6 @@ astronomy feel connected to professional astrophysics. A familiar star
 looked wrong, and observatories around the world wanted to know why.
 
 ### Rigel --- β Orionis · Tropical Winter · January 21
-
 **RA 5h 15m · Dec −8.2° · mag 0**
 
 **Observing: Naked eye**
@@ -363,7 +350,6 @@ spectrum to begin thinking physically about stellar color. The eye
 itself can see that Betelgeuse and Rigel are not the same kind of star.
 
 ### Antares --- α Scorpii · Southern Summer · July 13
-
 **RA 16h 29m · Dec −26.4° · mag 1**
 
 **Observing: Naked eye**
@@ -380,8 +366,7 @@ Almanack that places stars and classical planets in the same observing
 year. Two red lights can look similar and be physically almost
 unrelated.
 
-### Herschel's Garnet Star --- μ Cephei · Northern Autumn · September 17
-
+### Herschel's Garnet Star --- μ Cephei · Northern Autumn · October 5
 **RA 21h 44m · Dec +58.8° · mag variable**
 
 **Observing: Naked eye under suitable conditions**
@@ -397,7 +382,6 @@ classification to memorize. Mu Cephei turns it back into an observation:
 find the star and decide whether "garnet" seems fair.
 
 ### Deneb --- α Cygni · Northern Autumn · September 18
-
 **RA 20h 41m · Dec +45.3° · mag 1**
 
 **Observing: Naked eye**
@@ -419,7 +403,6 @@ of two nearly equal-looking stars is actually brighter. Prose needs the
 scale; charts sometimes need the ranking.
 
 ### Sirius and Sirius B --- α Canis Majoris · Southern Winter · February 13
-
 **RA 6h 45m · Dec −16.7° · mag −1**
 
 **Observing: Sirius, naked eye; Sirius B, telescope**
@@ -445,8 +428,7 @@ associated with the season of the Nile's inundation. The brightest star
 in our night sky has therefore been useful both as a practical seasonal
 marker and as a gateway to the physics of stellar remnants.
 
-### 40 Eridani B --- ο² Eridani B · Tropical Winter · January 10
-
+### 40 Eridani B --- ο² Eridani B · Tropical Winter · January 8
 **RA 4h 15m · Dec −7.7° · mag 9**
 
 **Observing: Telescope**
@@ -476,7 +458,6 @@ Earth's rotational axis, however, slowly changes direction through
 the sky because it comes full circle.
 
 ### Vega --- α Lyrae: the pole of deep prehistory · Northern Summer · August 15
-
 **RA 18h 37m · Dec +38.8° · mag 0**
 
 **Observing: Naked eye**
@@ -511,8 +492,7 @@ signal comes from the direction of Vega. That is a fictional use of a
 real star, but it works precisely because Vega is bright, nearby by
 galactic standards, and already culturally recognizable.
 
-### Thuban --- α Draconis: north for ancient civilization · Northern Spring · May 27
-
+### Thuban --- α Draconis: north for ancient civilization · Northern Spring · June 8
 **RA 14h 04m · Dec +64.4° · mag 4**
 
 **Observing: Naked eye**
@@ -533,8 +513,7 @@ the broad point is secure: the Egyptian north sky was not our north sky.
 Thuban makes precession historical. The phrase "North Star" describes a
 job, not a permanent identity.
 
-### Polaris --- α Ursae Minoris: north now · Arctic Winter · December 17
-
+### Polaris --- α Ursae Minoris: north now · Arctic Winter · December 16
 **RA 2h 32m · Dec +89.3° · mag 2**
 
 **Observing: Naked eye**
@@ -573,7 +552,6 @@ us.
 ## When starlight enters history
 
 ### Arcturus --- α Boötis · Tropical Summer · June 11
-
 **RA 14h 16m · Dec +19.2° · mag 0**
 
 **Observing: Naked eye**
