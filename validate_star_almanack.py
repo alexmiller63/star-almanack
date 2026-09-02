@@ -846,7 +846,7 @@ def _precess_equatorial_j2000_to_date(
 
         v,
 
-        -zeta,
+        zeta,
 
     )
 
@@ -854,7 +854,7 @@ def _precess_equatorial_j2000_to_date(
 
         w,
 
-        theta,
+        -theta,
 
     )
 
@@ -862,7 +862,7 @@ def _precess_equatorial_j2000_to_date(
 
         w,
 
-        -z,
+        z,
 
     )
 

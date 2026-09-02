@@ -296,7 +296,7 @@ def production_precession_steps(
 
         eq_date,
 
-        z,
+        -z,
 
     )
 
@@ -304,7 +304,7 @@ def production_precession_steps(
 
         after_z,
 
-        -theta,
+        theta,
 
     )
 
@@ -312,7 +312,7 @@ def production_precession_steps(
 
         after_y,
 
-        zeta,
+        -zeta,
 
     )
 
@@ -778,7 +778,7 @@ def diagnose_date(
 
     print_vector(
 
-        "after Rz(z)",
+        "after Rz(-z)",
 
         prod_after_z,
 
@@ -786,7 +786,7 @@ def diagnose_date(
 
     print_vector(
 
-        "after Ry(-theta)",
+        "after Ry(theta)",
 
         prod_after_y,
 
@@ -794,7 +794,7 @@ def diagnose_date(
 
     print_vector(
 
-        "after Rz(zeta)",
+        "after Rz(-zeta)",
 
         prod_eq_j2000,
 
