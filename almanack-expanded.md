@@ -112,7 +112,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 |---|---|---|
 
-| Mon, Jan 12, 2026 | ♑ 23 | Best visibility: Aldebaran (α Tauri) — Tropical Winter<br>Best visibility: α Dor<br>Best visibility: Aldebaran (α Tau) |
+| Mon, Jan 12, 2026 | ♑ 23 | Best visibility: Aldebaran (α Tauri) — Tropical Winter<br>Best visibility: α Dor |
 
 | Tue, Jan 13, 2026 | ♑ 24 | Best visibility: α Cae |
 
@@ -160,13 +160,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Tue, Jan 20, 2026 | ♒ (Aquarius) 1 | ♒ Aquarius ingress (300°) — 01:44:56 UTC<br>Best visibility: Cursa (β Eri) |
 
-| Wed, Jan 21, 2026 | ♒ 2 | Best visibility: Rigel (β Orionis) — Tropical Winter<br>Best visibility: Rigel (β Ori) |
+| Wed, Jan 21, 2026 | ♒ 2 | Best visibility: Rigel (β Orionis) — Tropical Winter |
 
-| Thu, Jan 22, 2026 | ♒ 3 | Best visibility: Capella (α Aurigae) — Northern Winter<br>Best visibility: Capella (α Aur) |
+| Thu, Jan 22, 2026 | ♒ 3 | Best visibility: Capella (α Aurigae) — Northern Winter |
 
 | Fri, Jan 23, 2026 | ♒ 4 | — |
 
-| Sat, Jan 24, 2026 | ♒ 5 | Best visibility: Bellatrix (γ Orionis) — Tropical Winter<br>Best visibility: Elnath (β Tauri) — Northern Winter<br>Best visibility: M79<br>Best visibility: Elnath (β Tau)<br>Best visibility: Bellatrix — V2 |
+| Sat, Jan 24, 2026 | ♒ 5 | Best visibility: Bellatrix (γ Orionis) — Tropical Winter<br>Best visibility: Elnath (β Tauri) — Northern Winter<br>Best visibility: M79 |
 
 | Sun, Jan 25, 2026 | ♒ 6 | Best visibility: M38 — Open Cluster — Northern Winter<br>Best visibility: Nihal (β Lep) |
 
@@ -200,17 +200,17 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 |---|---|---|
 
-| Mon, Jan 26, 2026 | ♒ 7 | 🌓 First Quarter — 04:47:32 UTC<br>Best visibility: Mintaka (δ Orionis) — Tropical Winter<br>Best visibility: M42 — Orion Nebula — Tropical Winter<br>Best visibility: M1 — Crab Nebula — Tropical Winter<br>Best visibility: M43<br>Best visibility: β Dor<br>Best visibility: Arneb (α Lep)<br>Best visibility: Mintaka — V2 |
+| Mon, Jan 26, 2026 | ♒ 7 | 🌓 First Quarter — 04:47:32 UTC<br>Best visibility: Mintaka (δ Orionis) — Tropical Winter<br>Best visibility: M42 — Orion Nebula — Tropical Winter<br>Best visibility: M1 — Crab Nebula — Tropical Winter<br>Best visibility: M43<br>Best visibility: β Dor<br>Best visibility: Arneb (α Lep) |
 
-| Tue, Jan 27, 2026 | ♒ 8 | Best visibility: Alnilam (ε Orionis) — Tropical Winter<br>Best visibility: M36 — Open Cluster — Northern Winter<br>Best visibility: Phact (α Col)<br>Best visibility: Alnilam — V2 |
+| Tue, Jan 27, 2026 | ♒ 8 | Best visibility: Alnilam (ε Orionis) — Tropical Winter<br>Best visibility: M36 — Open Cluster — Northern Winter<br>Best visibility: Phact (α Col) |
 
-| Wed, Jan 28, 2026 | ♒ 9 | Best visibility: Alnitak (ζ Orionis) — Tropical Winter<br>Best visibility: Alnitak — V2 |
+| Wed, Jan 28, 2026 | ♒ 9 | Best visibility: Alnitak (ζ Orionis) — Tropical Winter |
 
-| Thu, Jan 29, 2026 | ♒ 10 | Best visibility: Saiph (κ Orionis) — Tropical Winter<br>Best visibility: M78<br>Best visibility: β Pic<br>Best visibility: Saiph — V2 |
+| Thu, Jan 29, 2026 | ♒ 10 | Best visibility: Saiph (κ Orionis) — Tropical Winter<br>Best visibility: M78<br>Best visibility: β Pic |
 
 | Fri, Jan 30, 2026 | ♒ 11 | Best visibility: M37<br>Best visibility: Wazn (β Col) |
 
-| Sat, Jan 31, 2026 | ♒ 12 | Best visibility: Betelgeuse (α Orionis) — Tropical Winter<br>Best visibility: M37 — Open Cluster — Northern Winter<br>Best visibility: Betelgeuse (α Ori) |
+| Sat, Jan 31, 2026 | ♒ 12 | Best visibility: Betelgeuse (α Orionis) — Tropical Winter<br>Best visibility: M37 — Open Cluster — Northern Winter |
 
 | Sun, Feb 01, 2026 | ♒ 13 | 🌕 Full Moon — 22:09:16 UTC — Wolf Moon<br>Best visibility: Menkalinan (β Aur) |
 
@@ -254,7 +254,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Fri, Feb 06, 2026 | ♒ 18 | — |
 
-| Sat, Feb 07, 2026 | ♒ 19 | Best visibility: Canopus (α Carinae) — Southern Winter<br>Best visibility: Mirzam (β CMa)<br>Best visibility: Canopus (α Car) |
+| Sat, Feb 07, 2026 | ♒ 19 | Best visibility: Canopus (α Carinae) — Southern Winter<br>Best visibility: Mirzam (β CMa) |
 
 | Sun, Feb 08, 2026 | ♒ 20 | — |
 
@@ -296,7 +296,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Thu, Feb 12, 2026 | ♒ 24 | Best visibility: M41 |
 
-| Fri, Feb 13, 2026 | ♒ 25 | Best visibility: Sirius (α Canis Majoris) — Tropical Winter<br>Best visibility: M41 — Open Cluster — Tropical Winter<br>Best visibility: Sirius (α CMa)<br>Best visibility: α Pic |
+| Fri, Feb 13, 2026 | ♒ 25 | Best visibility: Sirius (α Canis Majoris) — Tropical Winter<br>Best visibility: M41 — Open Cluster — Tropical Winter<br>Best visibility: α Pic |
 
 | Sat, Feb 14, 2026 | ♒ 26 | — |
 
@@ -382,11 +382,11 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Wed, Feb 25, 2026 | ♓ 8 | Best visibility: M47 |
 
-| Thu, Feb 26, 2026 | ♓ 9 | Best visibility: Castor (α Geminorum) — Northern Winter<br>Best visibility: M47 — Open Cluster — Tropical Winter<br>Best visibility: M46<br>Best visibility: Castor (α Gem)<br>Best visibility: Castor B (α Gem) |
+| Thu, Feb 26, 2026 | ♓ 9 | Best visibility: Castor (α Geminorum) — Northern Winter<br>Best visibility: M47 — Open Cluster — Tropical Winter<br>Best visibility: M46 |
 
-| Fri, Feb 27, 2026 | ♓ 10 | Best visibility: Procyon (α Canis Minoris) — Tropical Winter<br>Best visibility: M46 — Open Cluster — Tropical Winter<br>Best visibility: M93<br>Best visibility: Procyon (α CMi)<br>Best visibility: α Mon |
+| Fri, Feb 27, 2026 | ♓ 10 | Best visibility: Procyon (α Canis Minoris) — Tropical Winter<br>Best visibility: M46 — Open Cluster — Tropical Winter<br>Best visibility: M93<br>Best visibility: α Mon |
 
-| Sat, Feb 28, 2026 | ♓ 11 | Best visibility: Pollux (β Geminorum) — Northern Winter<br>Best visibility: Pollux (β Gem) |
+| Sat, Feb 28, 2026 | ♓ 11 | Best visibility: Pollux (β Geminorum) — Northern Winter |
 
 | Sun, Mar 01, 2026 | ♓ 12 | — |
 
@@ -644,7 +644,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Tue, Apr 07, 2026 | ♈ 19 | — |
 
-| Wed, Apr 08, 2026 | ♈ 20 | Best visibility: Regulus (α Leonis) — Tropical Spring<br>Best visibility: Regulus (α Leo)<br>Best visibility: α Sex |
+| Wed, Apr 08, 2026 | ♈ 20 | Best visibility: Regulus (α Leonis) — Tropical Spring<br>Best visibility: α Sex |
 
 | Thu, Apr 09, 2026 | ♈ 21 | — |
 
@@ -734,7 +734,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Wed, Apr 22, 2026 | ♉ 3 | Best visibility: Alkes (α Crt) |
 
-| Thu, Apr 23, 2026 | ♉ 4 | Best visibility: Dubhe (α Ursae Majoris) — Northern Spring<br>Best visibility: Merak (β Ursae Majoris) — Northern Spring<br>Best visibility: Dubhe (α UMa)<br>Best visibility: Merak (β UMa) |
+| Thu, Apr 23, 2026 | ♉ 4 | Best visibility: Dubhe (α Ursae Majoris) — Northern Spring<br>Best visibility: Merak (β Ursae Majoris) — Northern Spring |
 
 | Fri, Apr 24, 2026 | ♉ 5 | 🌓 First Quarter — 02:31:44 UTC |
 
@@ -818,9 +818,9 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Mon, May 04, 2026 | ♉ 15 | — |
 
-| Tue, May 05, 2026 | ♉ 16 | Cross-quarter point — Beltane — 11:49 UTC<br>Best visibility: Denebola (β Leonis) — Tropical Spring<br>Best visibility: Denebola (β Leo) |
+| Tue, May 05, 2026 | ♉ 16 | Cross-quarter point — Beltane — 11:49 UTC<br>Best visibility: Denebola (β Leonis) — Tropical Spring |
 
-| Wed, May 06, 2026 | ♉ 17 | Best visibility: Phecda (γ Ursae Majoris) — Northern Spring<br>Best visibility: β Hya<br>Best visibility: Zavijava (β Vir)<br>Best visibility: Phecda — V2 |
+| Wed, May 06, 2026 | ♉ 17 | Best visibility: Phecda (γ Ursae Majoris) — Northern Spring<br>Best visibility: β Hya<br>Best visibility: Zavijava (β Vir) |
 
 | Thu, May 07, 2026 | ♉ 18 | Best visibility: M109 |
 
@@ -868,9 +868,9 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Thu, May 14, 2026 | ♉ 25 | Best visibility: M40<br>Best visibility: M61<br>Best visibility: M84<br>Best visibility: M100 |
 
-| Fri, May 15, 2026 | ♉ 26 | Best visibility: Acrux (α Crucis) — Southern Spring<br>Best visibility: M85<br>Best visibility: M86<br>Best visibility: Acrux (α1 Cru)<br>Best visibility: α2 Cru |
+| Fri, May 15, 2026 | ♉ 26 | Best visibility: Acrux (α Crucis) — Southern Spring<br>Best visibility: M85<br>Best visibility: M86<br>Best visibility: α2 Cru |
 
-| Sat, May 16, 2026 | ♉ 27 | 🌑 New Moon — 20:01:01 UTC<br>Best visibility: Gacrux (γ Crucis) — Southern Spring<br>Best visibility: M49<br>Best visibility: M87<br>Best visibility: M88<br>Best visibility: Gacrux — V2 |
+| Sat, May 16, 2026 | ♉ 27 | 🌑 New Moon — 20:01:01 UTC<br>Best visibility: Gacrux (γ Crucis) — Southern Spring<br>Best visibility: M49<br>Best visibility: M87<br>Best visibility: M88 |
 
 | Sun, May 17, 2026 | ♉ 28 | Best visibility: M89<br>Best visibility: M90<br>Best visibility: M91<br>Best visibility: Chara (β CVn)<br>Best visibility: Kraz (β Crv)<br>Best visibility: α Mus |
 
@@ -908,11 +908,11 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Tue, May 19, 2026 | ♉ 30 | Best visibility: M59<br>Best visibility: M60<br>Best visibility: Gam Cen — V2 |
 
-| Wed, May 20, 2026 | ♉ 31 | Best visibility: Mimosa (β Crucis) — Southern Spring<br>Best visibility: Mimosa (β Cru)<br>Best visibility: β Mus |
+| Wed, May 20, 2026 | ♉ 31 | Best visibility: Mimosa (β Crucis) — Southern Spring<br>Best visibility: β Mus |
 
 | Thu, May 21, 2026 | ♊ (Gemini) 1 | ♊ Gemini ingress (60°) — 00:36:44 UTC<br>Best visibility: M94 |
 
-| Fri, May 22, 2026 | ♊ 2 | Best visibility: Alioth (ε Ursae Majoris) — Northern Spring<br>Best visibility: M64 — Black Eye Galaxy — Tropical Spring<br>Best visibility: α1 CVn<br>Best visibility: Cor Caroli (α2 CVn)<br>Best visibility: Alioth — V2 |
+| Fri, May 22, 2026 | ♊ 2 | Best visibility: Alioth (ε Ursae Majoris) — Northern Spring<br>Best visibility: M64 — Black Eye Galaxy — Tropical Spring<br>Best visibility: α1 CVn<br>Best visibility: Cor Caroli (α2 CVn) |
 
 | Sat, May 23, 2026 | ♊ 3 | 🌓 First Quarter — 11:10:57 UTC<br>Best visibility: M64 |
 
@@ -956,7 +956,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Thu, May 28, 2026 | ♊ 8 | — |
 
-| Fri, May 29, 2026 | ♊ 9 | Best visibility: Spica (α Virginis) — Tropical Spring<br>Best visibility: Mizar (ζ Ursae Majoris) — Northern Spring<br>Best visibility: Spica (α Vir)<br>Best visibility: Mizar — V2 |
+| Fri, May 29, 2026 | ♊ 9 | Best visibility: Spica (α Virginis) — Tropical Spring<br>Best visibility: Mizar (ζ Ursae Majoris) — Northern Spring |
 
 | Sat, May 30, 2026 | ♊ 10 | — |
 
@@ -998,7 +998,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Wed, Jun 03, 2026 | ♊ 14 | Best visibility: M3 — Globular Cluster — Northern Spring |
 
-| Thu, Jun 04, 2026 | ♊ 15 | Best visibility: Alkaid (η Ursae Majoris) — Northern Spring<br>Best visibility: Alkaid — V2 |
+| Thu, Jun 04, 2026 | ♊ 15 | Best visibility: Alkaid (η Ursae Majoris) — Northern Spring |
 
 | Fri, Jun 05, 2026 | ♊ 16 | — |
 
@@ -1036,13 +1036,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 |---|---|---|
 
-| Mon, Jun 08, 2026 | ♊ 19 | 🌗 Last Quarter — 10:00:32 UTC<br>Best visibility: Hadar (β Centauri) — Southern Spring<br>Best visibility: M101 — Pinwheel Galaxy — Northern Spring<br>Best visibility: Hadar (β Cen)<br>Best visibility: Thuban (α Dra) |
+| Mon, Jun 08, 2026 | ♊ 19 | 🌗 Last Quarter — 10:00:32 UTC<br>Best visibility: Hadar (β Centauri) — Southern Spring<br>Best visibility: M101 — Pinwheel Galaxy — Northern Spring<br>Best visibility: Thuban (α Dra) |
 
 | Tue, Jun 09, 2026 | ♊ 20 | Best visibility: Menkent — V2 |
 
 | Wed, Jun 10, 2026 | ♊ 21 | — |
 
-| Thu, Jun 11, 2026 | ♊ 22 | Best visibility: Arcturus (α Boötis) — Tropical Spring<br>Best visibility: Arcturus (α Boo) |
+| Thu, Jun 11, 2026 | ♊ 22 | Best visibility: Arcturus (α Boötis) — Tropical Spring |
 
 | Fri, Jun 12, 2026 | ♊ 23 | — |
 
@@ -1082,13 +1082,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Mon, Jun 15, 2026 | ♊ 26 | 🌑 New Moon — 02:54:07 UTC<br>Best visibility: Eta Cen — V2 |
 
-| Tue, Jun 16, 2026 | ♊ 27 | Best visibility: Alpha Centauri (α Centauri) — Southern Spring<br>Best visibility: Rigil Kentaurus (α Cen) |
+| Tue, Jun 16, 2026 | ♊ 27 | Best visibility: Alpha Centauri (α Centauri) — Southern Spring |
 
 | Wed, Jun 17, 2026 | ♊ 28 | Best visibility: α Cir<br>Best visibility: α Lup |
 
 | Thu, Jun 18, 2026 | ♊ 29 | Best visibility: α Aps<br>Best visibility: Izar — V2 |
 
-| Fri, Jun 19, 2026 | ♊ 30 | Best visibility: Kochab (β Ursae Minoris) — Arctic<br>Best visibility: α1 Lib<br>Best visibility: Zubenelgenubi (α2 Lib)<br>Best visibility: Kochab (β UMi) |
+| Fri, Jun 19, 2026 | ♊ 30 | Best visibility: Kochab (β Ursae Minoris) — Arctic<br>Best visibility: α1 Lib<br>Best visibility: Zubenelgenubi (α2 Lib) |
 
 | Sat, Jun 20, 2026 | ♊ 31 | — |
 
