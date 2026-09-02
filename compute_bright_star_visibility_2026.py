@@ -11,10 +11,18 @@ from __future__ import annotations
 
 import argparse
 import csv
+import datetime as dt
 import math
 from pathlib import Path
 
-from compute_bayer_visibility_2026 import REGRESSION, REGRESSION_BAYER, best_visibility, iso_date
+from compute_bayer_visibility_2026 import (
+    REGRESSION,
+    REGRESSION_BAYER,
+    apparent_sun_ra_hours,
+    best_visibility,
+    iso_date,
+    wrapped_hour_distance,
+)
 
 
 def magnitude_class(value: str) -> str:
@@ -23,6 +31,46 @@ def magnitude_class(value: str) -> str:
         return ""
     mag = float(value)
     return str(max(1, min(6, int(math.floor(mag + 0.5)))))
+
+
+def normalize_to_iso_2026(ra_object_h: float, instant: dt.datetime, date: dt.date) -> tuple[dt.datetime, dt.date]:
+    """Move an adjacent-year annual occurrence to the occurrence inside ISO 2026.
+
+    The base solver intentionally searches across the Gregorian boundary. For
+    objects whose first equally valid annual solution lands in late December
+    2025, refine the next annual occurrence rather than rejecting the object.
+    This is the same ISO-week-year principle used for W53 dates in January 2027.
+    """
+    if date.isocalendar().year == 2026:
+        return instant, date
+
+    direction = 1 if date.isocalendar().year < 2026 else -1
+    target = (ra_object_h - 9.0) % 24.0
+    center = instant + dt.timedelta(days=direction * 365)
+
+    best_time = center
+    best_distance = wrapped_hour_distance(apparent_sun_ra_hours(center), target)
+    x = center - dt.timedelta(days=3)
+    end = center + dt.timedelta(days=3)
+    while x <= end:
+        distance = wrapped_hour_distance(apparent_sun_ra_hours(x), target)
+        if distance < best_distance:
+            best_distance = distance
+            best_time = x
+        x += dt.timedelta(minutes=5)
+
+    # Final one-minute refinement around the best five-minute sample.
+    x = best_time - dt.timedelta(minutes=10)
+    end = best_time + dt.timedelta(minutes=10)
+    while x <= end:
+        distance = wrapped_hour_distance(apparent_sun_ra_hours(x), target)
+        if distance < best_distance:
+            best_distance = distance
+            best_time = x
+        x += dt.timedelta(minutes=1)
+
+    rounded_date = (best_time + dt.timedelta(hours=12)).date()
+    return best_time, rounded_date
 
 
 def main() -> None:
@@ -41,7 +89,9 @@ def main() -> None:
     bayer_to_date: dict[tuple[str, str], str] = {}
 
     for row in rows:
-        instant, date = best_visibility(float(row["ra_h"]))
+        ra = float(row["ra_h"])
+        instant, date = best_visibility(ra)
+        instant, date = normalize_to_iso_2026(ra, instant, date)
         enriched = dict(row)
         enriched["best_instant_utc"] = instant.strftime("%Y-%m-%d %H:%M")
         enriched["best_date"] = date.isoformat()
