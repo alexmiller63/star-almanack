@@ -40,6 +40,7 @@ jobs:
           from pathlib import Path
 
           text = Path('almanack-expanded.md').read_text(encoding='utf-8')
+          calendar_text = text.split('\n## Expanded α and β Star Catalog\n', 1)[0]
           weeks = re.findall(r'(?m)^## (ISO 2026-W\d{2})\s*$', text)
           expected = [f'ISO 2026-W{i:02d}' for i in range(1, 54)]
           assert weeks == expected, f'Expected W01-W53, found {len(weeks)} sections'
@@ -55,13 +56,25 @@ jobs:
           row_re = re.compile(
               r'(?m)^\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| ([^|]*) \|$'
           )
-          for m in row_re.finditer(text):
+          for m in row_re.finditer(calendar_text):
               d = datetime.strptime(f'{m.group(1)} {m.group(2)} {m.group(3)}', '%b %d %Y').date().isoformat()
               calendar_events[d] = m.group(4).strip()
 
           def legacy_has_alias(existing, aliases):
               folded = existing.casefold()
               return any(alias.strip() and alias.strip().casefold() in folded for alias in aliases)
+
+          with open('messier-visibility-2026.csv', newline='', encoding='utf-8') as f:
+              messier = list(csv.DictReader(f))
+          assert len(messier) == 110, f'Expected 110 Messier objects, found {len(messier)}'
+          for r in messier:
+              name = r['messier']
+              d = r['best_date']
+              events = calendar_events.get(d, '')
+              token = re.compile(rf'(?<![A-Za-z0-9]){re.escape(name)}(?!\d)', re.IGNORECASE)
+              assert token.search(events), f'No Messier calendar representation found for {name} on {d}'
+              occurrences = sum(len(token.findall(cell)) for cell in calendar_events.values())
+              assert occurrences == 1, f'Expected exactly one Messier calendar occurrence for {name}, found {occurrences}'
 
           with open('bright-star-visibility-2026.csv', newline='', encoding='utf-8') as f:
               bright = list(csv.DictReader(f))
@@ -84,7 +97,7 @@ jobs:
 
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
-          print('Verified 53 weeks, 371 day rows, and 41 represented new bright-star systems with alias-aware deduplication')
+          print('Verified 53 weeks, 371 day rows, 110 unique Messier calendar occurrences, and 41 represented new bright-star systems')
           PY
       - name: Commit expanded Almanack
         run: |
