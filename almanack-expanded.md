@@ -210,7 +210,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Fri, Jan 30, 2026 | ♒ 11 | Best visibility: M37<br>Best visibility: Wazn (β Col) |
 
-| Sat, Jan 31, 2026 | ♒ 12 | Best visibility: Betelgeuse (α Orionis) — Tropical Winter<br>Best visibility: M37 — Open Cluster — Northern Winter |
+| Sat, Jan 31, 2026 | ♒ 12 | Best visibility: Betelgeuse (α Orionis) — Tropical Winter |
 
 | Sun, Feb 01, 2026 | ♒ 13 | 🌕 Full Moon — 22:09:16 UTC — Wolf Moon<br>Best visibility: Menkalinan (β Aur) |
 
@@ -296,7 +296,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Thu, Feb 12, 2026 | ♒ 24 | Best visibility: M41 |
 
-| Fri, Feb 13, 2026 | ♒ 25 | Best visibility: Sirius (α Canis Majoris) — Tropical Winter<br>Best visibility: M41 — Open Cluster — Tropical Winter<br>Best visibility: α Pic |
+| Fri, Feb 13, 2026 | ♒ 25 | Best visibility: Sirius (α Canis Majoris) — Tropical Winter<br>Best visibility: α Pic |
 
 | Sat, Feb 14, 2026 | ♒ 26 | — |
 
@@ -334,7 +334,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Mon, Feb 16, 2026 | ♒ 28 | Best visibility: Adhara — V2 |
 
-| Tue, Feb 17, 2026 | ♒ 29 | 🌑 New Moon — 12:01:13 UTC<br>Best visibility: M50 — Open Cluster — Tropical Winter |
+| Tue, Feb 17, 2026 | ♒ 29 | 🌑 New Moon — 12:01:13 UTC |
 
 | Wed, Feb 18, 2026 | ♓ (Pisces) 1 | ♓ Pisces ingress (330°) — 15:51:56 UTC<br>Best visibility: M50 |
 
@@ -382,9 +382,9 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Wed, Feb 25, 2026 | ♓ 8 | Best visibility: M47 |
 
-| Thu, Feb 26, 2026 | ♓ 9 | Best visibility: Castor (α Geminorum) — Northern Winter<br>Best visibility: M47 — Open Cluster — Tropical Winter<br>Best visibility: M46 |
+| Thu, Feb 26, 2026 | ♓ 9 | Best visibility: Castor (α Geminorum) — Northern Winter<br>Best visibility: M46 |
 
-| Fri, Feb 27, 2026 | ♓ 10 | Best visibility: Procyon (α Canis Minoris) — Tropical Winter<br>Best visibility: M46 — Open Cluster — Tropical Winter<br>Best visibility: M93<br>Best visibility: α Mon |
+| Fri, Feb 27, 2026 | ♓ 10 | Best visibility: Procyon (α Canis Minoris) — Tropical Winter<br>Best visibility: M93<br>Best visibility: α Mon |
 
 | Sat, Feb 28, 2026 | ♓ 11 | Best visibility: Pollux (β Geminorum) — Northern Winter |
 
@@ -512,7 +512,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Tue, Mar 17, 2026 | ♓ 28 | Best visibility: M67 |
 
-| Wed, Mar 18, 2026 | ♓ 29 | Best visibility: M67 — Open Cluster — Tropical Winter |
+| Wed, Mar 18, 2026 | ♓ 29 | — |
 
 | Thu, Mar 19, 2026 | ♓ 30 | 🌑 New Moon — 01:23:28 UTC |
 
@@ -608,7 +608,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sat, Apr 04, 2026 | ♈ 16 | Best visibility: M81<br>Best visibility: M82 |
 
-| Sun, Apr 05, 2026 | ♈ 17 | Best visibility: M81 — Bode's Galaxy — Arctic<br>Best visibility: M82 — Cigar Galaxy — Arctic |
+| Sun, Apr 05, 2026 | ♈ 17 | — |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -740,7 +740,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sat, Apr 25, 2026 | ♉ 6 | Best visibility: M97<br>Best visibility: M108<br>Best visibility: β Crt |
 
-| Sun, Apr 26, 2026 | ♉ 7 | Best visibility: M97 — Owl Nebula — Northern Spring |
+| Sun, Apr 26, 2026 | ♉ 7 | — |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -912,7 +912,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Thu, May 21, 2026 | ♊ (Gemini) 1 | ♊ Gemini ingress (60°) — 00:36:44 UTC<br>Best visibility: M94 |
 
-| Fri, May 22, 2026 | ♊ 2 | Best visibility: Alioth (ε Ursae Majoris) — Northern Spring<br>Best visibility: M64 — Black Eye Galaxy — Tropical Spring<br>Best visibility: α1 CVn<br>Best visibility: Cor Caroli (α2 CVn) |
+| Fri, May 22, 2026 | ♊ 2 | Best visibility: Alioth (ε Ursae Majoris) — Northern Spring<br>Best visibility: α1 CVn<br>Best visibility: Cor Caroli (α2 CVn) |
 
 | Sat, May 23, 2026 | ♊ 3 | 🌓 First Quarter — 11:10:57 UTC<br>Best visibility: M64 |
 
@@ -1144,7 +1144,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♋ 0°37′ | ♎ 1°39′ | ♋ 24°00′ | ♌ 9°54′ | ♉ 25°07′ | ♋ 28°15′ | ♈ 13°44′ |
 
@@ -1188,7 +1188,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♋ 7°18′ | ♐ 26°23′ | ♋ 26°14′ | ♌ 17°55′ | ♊ 0°08′ | ♋ 29°44′ | ♈ 14°06′ |
 
@@ -1232,7 +1232,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♋ 13°58′ | ♓ 21°50′ | ♋ 24°49′ | ♌ 25°50′ | ♊ 5°06′ | ♌ 1°14′ | ♈ 14°23′ |
 
@@ -1276,7 +1276,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♋ 20°39′ | ♋ 0°46′ | ♋ 20°44′ | ♍ 3°38′ | ♊ 10°01′ | ♌ 2°46′ | ♈ 14°35′ |
 
@@ -1320,7 +1320,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♋ 27°20′ | ♎ 10°19′ | ♋ 17°01′ | ♍ 11°18′ | ♊ 14°52′ | ♌ 4°18′ | ♈ 14°43′ |
 
@@ -1364,7 +1364,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♌ 4°01′ | ♑ 5°05′ | ♋ 16°46′ | ♍ 18°49′ | ♊ 19°41′ | ♌ 5°51′ | ♈ 14°45′ |
 
@@ -1408,7 +1408,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♌ 10°42′ | ♈ 1°51′ | ♋ 21°19′ | ♍ 26°08′ | ♊ 24°25′ | ♌ 7°24′ | ♈ 14°42′ |
 
@@ -1452,7 +1452,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♌ 17°25′ | ♋ 9°58′ | ♌ 0°30′ | ♎ 3°12′ | ♊ 29°06′ | ♌ 8°57′ | ♈ 14°35′ |
 
@@ -1496,7 +1496,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♌ 24°08′ | ♎ 18°27′ | ♌ 13°05′ | ♎ 10°00′ | ♋ 3°43′ | ♌ 10°29′ | ♈ 14°22′ |
 
@@ -1540,7 +1540,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♍ 0°52′ | ♑ 13°25′ | ♌ 27°05′ | ♎ 16°25′ | ♋ 8°16′ | ♌ 12°00′ | ♈ 14°05′ |
 
@@ -1584,7 +1584,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♍ 7°38′ | ♈ 11°53′ | ♍ 10°48′ | ♎ 22°22′ | ♋ 12°46′ | ♌ 13°29′ | ♈ 13°44′ |
 
@@ -1628,7 +1628,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♍ 14°24′ | ♋ 19°58′ | ♍ 23°39′ | ♎ 27°43′ | ♋ 17°10′ | ♌ 14°57′ | ♈ 13°19′ |
 
@@ -1672,7 +1672,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♍ 21°13′ | ♎ 26°25′ | ♎ 5°31′ | ♏ 2°16′ | ♋ 21°31′ | ♌ 16°22′ | ♈ 12°51′ |
 
@@ -1716,7 +1716,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♍ 28°02′ | ♑ 21°21′ | ♎ 16°29′ | ♏ 5°48′ | ♋ 25°46′ | ♌ 17°44′ | ♈ 12°21′ |
 
@@ -1760,7 +1760,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♎ 4°54′ | ♈ 21°28′ | ♎ 26°37′ | ♏ 7°58′ | ♋ 29°56′ | ♌ 19°03′ | ♈ 11°49′ |
 
@@ -1804,7 +1804,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♎ 11°46′ | ♌ 0°38′ | ♏ 5°48′ | ♏ 8°26′ | ♌ 4°00′ | ♌ 20°18′ | ♈ 11°16′ |
 
@@ -1848,7 +1848,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♎ 18°41′ | ♏ 4°35′ | ♏ 13°41′ | ♏ 7°00′ | ♌ 7°58′ | ♌ 21°28′ | ♈ 10°43′ |
 
@@ -1892,7 +1892,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♎ 25°37′ | ♑ 29°10′ | ♏ 19°21′ | ♏ 3°48′ | ♌ 11°49′ | ♌ 22°34′ | ♈ 10°11′ |
 
@@ -1936,7 +1936,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♏ 2°35′ | ♉ 0°15′ | ♏ 20°47′ | ♎ 29°37′ | ♌ 15°33′ | ♌ 23°33′ | ♈ 9°41′ |
 
@@ -1980,7 +1980,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♏ 9°35′ | ♌ 11°28′ | ♏ 15°30′ | ♎ 25°46′ | ♌ 19°07′ | ♌ 24°27′ | ♈ 9°13′ |
 
@@ -2024,7 +2024,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♏ 16°36′ | ♏ 13°15′ | ♏ 7°07′ | ♎ 23°23′ | ♌ 22°32′ | ♌ 25°13′ | ♈ 8°49′ |
 
@@ -2068,7 +2068,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♏ 23°38′ | ♒ 7°13′ | ♏ 5°31′ | ♎ 22°57′ | ♌ 25°46′ | ♌ 25°52′ | ♈ 8°29′ |
 
@@ -2112,7 +2112,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♐ 0°42′ | ♉ 8°19′ | ♏ 11°22′ | ♎ 24°24′ | ♌ 28°47′ | ♌ 26°23′ | ♈ 8°13′ |
 
@@ -2156,7 +2156,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♐ 7°47′ | ♌ 21°47′ | ♏ 20°36′ | ♎ 27°27′ | ♍ 1°34′ | ♌ 26°45′ | ♈ 8°02′ |
 
@@ -2200,7 +2200,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♐ 14°53′ | ♏ 22°20′ | ♐ 0°58′ | ♏ 1°46′ | ♍ 4°03′ | ♌ 26°58′ | ♈ 7°57′ |
 
@@ -2244,7 +2244,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♐ 22°00′ | ♒ 15°44′ | ♐ 11°41′ | ♏ 7°02′ | ♍ 6°13′ | ♌ 27°01′ | ♈ 7°56′ |
 
@@ -2288,7 +2288,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♐ 29°07′ | ♉ 16°16′ | ♐ 22°32′ | ♏ 13°01′ | ♍ 7°59′ | ♌ 26°55′ | ♈ 8°01′ |
 
@@ -2332,7 +2332,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 
-|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|
 
 | ♑ 6°15′ | ♍ 1°04′ | ♑ 3°32′ | ♏ 19°33′ | ♍ 9°20′ | ♌ 26°40′ | ♈ 8°12′ |
 
