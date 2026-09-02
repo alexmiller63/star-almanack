@@ -53,7 +53,7 @@ if len(weeks) < 53:
                 ("♀ Venus", row["venus"]), ("♂ Mars", row["mars"]), ("♃ Jupiter", row["jupiter"]),
                 ("♄ Saturn", row["saturn"])]
         return ("| " + " | ".join(x[0] for x in cols) + " |\n\n"
-                "|---:|---:|---:|---:|---:|---:|---:|\n\n"
+                "|---:|---:|---:|---:|---:|---:|\n\n"
                 "| " + " | ".join(x[1] for x in cols) + " |")
 
     sign_names = {"♈":"Aries","♉":"Taurus","♊":"Gemini","♋":"Cancer","♌":"Leo","♍":"Virgo",
@@ -121,6 +121,7 @@ for idx, row in enumerate(bright_new_rows):
 seen = set()
 row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| )([^|]*)( \|)$")
 months = {m: i for i, m in enumerate(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], 1)}
+messier_best_dates = {row["messier"].upper(): row["best_date"] for row in messier_rows}
 
 
 def legacy_has_alias(existing, aliases):
@@ -136,6 +137,31 @@ def legacy_has_alias(existing, aliases):
         elif alias.casefold() in folded:
             return True
     return False
+
+
+def reconcile_legacy_messier(match):
+    """Keep each legacy Messier label only on the catalog's computed best date."""
+    d = date(int(match.group(4)), months[match.group(2)], int(match.group(3))).isoformat()
+    existing = match.group(5).strip()
+    if existing in {"", "—"}:
+        return match.group(0)
+    parts = existing.split("<br>")
+    kept = []
+    for part in parts:
+        m = re.search(r"(?<![A-Za-z0-9])(M\d{1,3})(?!\d)", part, flags=re.IGNORECASE)
+        if part.startswith("Best visibility:") and m:
+            canonical_date = messier_best_dates.get(m.group(1).upper())
+            if canonical_date and canonical_date != d:
+                continue
+        kept.append(part)
+    rendered = "<br>".join(kept) if kept else "—"
+    return match.group(1) + rendered + match.group(6)
+
+
+# Legacy source prose sometimes carried a Messier object's descriptive label
+# on a neighboring date.  Reconcile those by M-number to the generated catalog
+# date before injecting fixed-object rows, so the calendar has one occurrence.
+calendar = row_re.sub(reconcile_legacy_messier, calendar)
 
 
 def add_fixed(match):
