@@ -89,24 +89,43 @@ if len(weeks) < 53:
 
 # Build the complete fixed-object event set by civil date.  Each generated
 # row carries conservative aliases used only to suppress a duplicate legacy
-# calendar label.  Generated catalog rows are never deduplicated against one
-# another, so separately designated components remain intact.
+# calendar label.  Source rows always remain intact.  Bayer rows that share
+# the same unnumbered designation on the same date may share one observer-facing
+# target, while separately numbered designations such as α1/α2 remain distinct.
 fixed = {}
 for row in messier_rows:
     messier = row["messier"]
     fixed.setdefault(row["best_date"], []).append(
-        (f"Messier:{messier}", f"Best visibility: {messier}", (messier,))
+        (f"Messier:{messier}", f"Best visibility: {messier}", (messier,), f"Messier:{messier}")
     )
-for idx, row in enumerate(bayer_rows):
+
+# Pick the most informative display label for each Bayer observing target.
+# This makes a duplicated physical/component source such as α Com render once
+# as "Diadem (α Com)" while preserving every underlying catalog row.
+bayer_target_labels = {}
+for row in bayer_rows:
     designation = row["bayer"]
     proper = row.get("proper", "").strip()
-    label = f"{proper} ({designation})" if proper else designation
     placement_date = row["best_date"]
     if placement_date.startswith("2025-"):
         placement_date = "2026-" + placement_date[5:]
+    key = (placement_date, designation.casefold())
+    label = f"{proper} ({designation})" if proper else designation
+    current = bayer_target_labels.get(key)
+    if current is None or (proper and current == designation):
+        bayer_target_labels[key] = label
+
+for idx, row in enumerate(bayer_rows):
+    designation = row["bayer"]
+    proper = row.get("proper", "").strip()
+    placement_date = row["best_date"]
+    if placement_date.startswith("2025-"):
+        placement_date = "2026-" + placement_date[5:]
+    target_key = f"BayerTarget:{placement_date}:{designation.casefold()}"
+    label = bayer_target_labels[(placement_date, designation.casefold())]
     ident = f"Bayer:{idx}:{row['bayer_code']}:{row['con']}"
     aliases = tuple(x for x in (proper, designation) if x)
-    fixed.setdefault(placement_date, []).append((ident, f"Best visibility: {label}", aliases))
+    fixed.setdefault(placement_date, []).append((ident, f"Best visibility: {label}", aliases, target_key))
 for idx, row in enumerate(bright_new_rows):
     proper = (row.get("proper") or "").strip()
     bayer = (row.get("bayer") or "").strip()
@@ -116,7 +135,7 @@ for idx, row in enumerate(bright_new_rows):
     label = f"{name} — V{mag_class}" if mag_class else name
     ident = f"Bright:{idx}:{row.get('hyg_id','')}"
     aliases = tuple(x for x in (proper, bayer) if x)
-    fixed.setdefault(row["best_date"], []).append((ident, f"Best visibility: {label}", aliases))
+    fixed.setdefault(row["best_date"], []).append((ident, f"Best visibility: {label}", aliases, ident))
 
 seen = set()
 row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| )([^|]*)( \|)$")
@@ -168,15 +187,20 @@ def add_fixed(match):
     d = date(int(match.group(4)), months[match.group(2)], int(match.group(3))).isoformat()
     existing = match.group(5).strip()
     additions = []
-    for ident, text, aliases in fixed.get(d, []):
+    displayed_targets = set()
+    for ident, text, aliases, target_key in fixed.get(d, []):
         if ident in seen:
             continue
-        # Completeness accounting records the catalog row as placed even when
-        # the observer-facing alias is already represented in legacy text.
+        # Completeness accounting records every catalog row as placed even when
+        # multiple source rows intentionally share one observer-facing target.
         seen.add(ident)
+        if target_key in displayed_targets:
+            continue
         if text in existing or legacy_has_alias(existing, aliases):
+            displayed_targets.add(target_key)
             continue
         additions.append(text)
+        displayed_targets.add(target_key)
     parts = [] if existing in {"", "—"} else existing.split("<br>")
     parts.extend(additions)
     rendered = "<br>".join(parts) if parts else "—"
