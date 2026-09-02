@@ -87,10 +87,16 @@ if len(weeks) < 53:
         )
     calendar = calendar.rstrip() + "\n\n" + "\n\n".join(additions)
 
-# Build the complete fixed-object event set by civil date.
+# Build the complete fixed-object event set by civil date.  Each generated
+# row carries conservative aliases used only to suppress a duplicate legacy
+# calendar label.  Generated catalog rows are never deduplicated against one
+# another, so separately designated components remain intact.
 fixed = {}
 for row in messier_rows:
-    fixed.setdefault(row["best_date"], []).append((f"Messier:{row['messier']}", f"Best visibility: {row['messier']}"))
+    messier = row["messier"]
+    fixed.setdefault(row["best_date"], []).append(
+        (f"Messier:{messier}", f"Best visibility: {messier}", (messier,))
+    )
 for idx, row in enumerate(bayer_rows):
     designation = row["bayer"]
     proper = row.get("proper", "").strip()
@@ -99,7 +105,8 @@ for idx, row in enumerate(bayer_rows):
     if placement_date.startswith("2025-"):
         placement_date = "2026-" + placement_date[5:]
     ident = f"Bayer:{idx}:{row['bayer_code']}:{row['con']}"
-    fixed.setdefault(placement_date, []).append((ident, f"Best visibility: {label}"))
+    aliases = tuple(x for x in (proper, designation) if x)
+    fixed.setdefault(placement_date, []).append((ident, f"Best visibility: {label}", aliases))
 for idx, row in enumerate(bright_new_rows):
     proper = (row.get("proper") or "").strip()
     bayer = (row.get("bayer") or "").strip()
@@ -108,22 +115,42 @@ for idx, row in enumerate(bright_new_rows):
     mag_class = (row.get("mag_class") or "").strip()
     label = f"{name} — V{mag_class}" if mag_class else name
     ident = f"Bright:{idx}:{row.get('hyg_id','')}"
-    fixed.setdefault(row["best_date"], []).append((ident, f"Best visibility: {label}"))
+    aliases = tuple(x for x in (proper, bayer) if x)
+    fixed.setdefault(row["best_date"], []).append((ident, f"Best visibility: {label}", aliases))
 
 seen = set()
 row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| )([^|]*)( \|)$")
 months = {m: i for i, m in enumerate(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], 1)}
 
+
+def legacy_has_alias(existing, aliases):
+    """Return True only for conservative identity matches in legacy text."""
+    folded = existing.casefold()
+    for alias in aliases:
+        alias = alias.strip()
+        if not alias:
+            continue
+        if re.fullmatch(r"M\d{1,3}", alias, flags=re.IGNORECASE):
+            if re.search(rf"(?<![A-Za-z0-9]){re.escape(alias)}(?!\d)", existing, flags=re.IGNORECASE):
+                return True
+        elif alias.casefold() in folded:
+            return True
+    return False
+
+
 def add_fixed(match):
     d = date(int(match.group(4)), months[match.group(2)], int(match.group(3))).isoformat()
     existing = match.group(5).strip()
     additions = []
-    for ident, text in fixed.get(d, []):
+    for ident, text, aliases in fixed.get(d, []):
         if ident in seen:
             continue
+        # Completeness accounting records the catalog row as placed even when
+        # the observer-facing alias is already represented in legacy text.
         seen.add(ident)
-        if text not in existing:
-            additions.append(text)
+        if text in existing or legacy_has_alias(existing, aliases):
+            continue
+        additions.append(text)
     parts = [] if existing in {"", "—"} else existing.split("<br>")
     parts.extend(additions)
     rendered = "<br>".join(parts) if parts else "—"
