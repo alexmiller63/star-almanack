@@ -84,3 +84,15 @@ Bright-star best-visibility dates use the same observer-first solar-right-ascens
 The integrated expanded Almanack build now reports 53 ISO weeks, 110 Messier objects, 177 Bayer rows, and 41 new bright-star systems. CI verifies all 53 week headings, all 371 civil-date rows, and exactly one calendar entry for every one of the 41 new bright-star systems. The ISO-year boundary remains explicit: β Reticuli has best instant 2026-12-31 20:05 UTC, best civil date 2027-01-01, ISO 2026-W53-5.
 
 This establishes the current reproducible 2026 expanded-Almanack baseline. Independent external validation may be performed later as a cross-check, but the repository catalogs, source audits, reconciliation tables, regression tests, and CI remain the primary record of how membership and dates were derived.
+
+## 2026-09-02 — Calendar alias deduplication policy
+
+Deduplication is a presentation rule for the generated weekly calendar, not a catalog-membership rule. The machine-readable Messier, Bayer, and second-magnitude catalogs remain complete and unchanged, and every catalog row must still pass the fixed-object placement completeness check even when a redundant display alias is suppressed.
+
+The scope is deliberately narrow: compare generated fixed-object calendar entries with legacy best-visibility text already present in `almanack.md`. When the legacy text and a generated entry clearly identify the same physical object, retain the existing legacy entry and suppress the additional generated alias. Examples include a proper-name legacy entry such as Aldebaran or Rigel followed by the same star from the complete Bayer catalog, and a descriptive legacy Messier entry followed by the generated bare Messier designation.
+
+Identity is established conservatively. Messier objects are matched by their M-number. Stellar aliases are matched by an explicit proper name when one is available, or by an exact Bayer designation when no proper name is available. The deduplicator does not infer identity from proximity, brightness, constellation membership, or similar-looking names.
+
+Generated catalog rows are never deduplicated against one another. In particular, genuine separately designated components such as α¹/α² or β¹/β² remain separate, and no source row is deleted or collapsed. The deduplicator changes only what is printed in a calendar cell; provenance and catalog completeness remain in the appended catalog sections and source CSV files.
+
+If a generated entry is suppressed because the same object is already represented by legacy calendar text, that catalog row is still recorded as successfully placed for the builder's completeness accounting. This keeps the invariant that all 110 Messier rows, all audited Bayer rows, and all new bright-star rows are accounted for while avoiding duplicate-looking observer-facing entries.
