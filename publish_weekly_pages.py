@@ -107,9 +107,6 @@ def format_ephemeris_cell(text: str) -> str:
 def parse_table(lines: list[str], start: int) -> tuple[str, int]:
     rows: list[list[str]] = []
     i = start
-    # Generated Almanack tables deliberately contain blank lines between Markdown
-    # rows. Treat blank lines as part of the same table when the next nonblank
-    # line is another pipe row.
     while i < len(lines):
         line = lines[i]
         if not line.strip():
@@ -242,7 +239,7 @@ def build() -> None:
         "<h1>Star Almanack — 2026</h1>"
         "<p>Browse all 53 ISO weeks of the 2026 Star Almanack. "
         "ISO 2026 begins Monday, December 29, 2025 and ends Sunday, January 3, 2027.</p>"
-        f'<ul class="weekgrid'>{"".join(links)}</ul>'
+        f'<ul class="weekgrid">{"".join(links)}</ul>'
     )
     index = shell("2026 weekly index", index_body).replace('href="../index.html"', 'href="index.html"')
     (OUT / "index.html").write_text(index, encoding="utf-8")
