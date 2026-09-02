@@ -1,0 +1,64 @@
+name: Publish 2026 Weekly Pages
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - almanack-expanded.md
+      - publish_weekly_pages.py
+      - .github/workflows/publish-2026-weekly-pages.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Star Almanack
+        uses: actions/checkout@v4
+
+      - name: Generate 53 weekly HTML pages
+        run: python publish_weekly_pages.py
+
+      - name: Validate publishing output
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path('site/2026')
+          pages = sorted(root.glob('W??/index.html'))
+          assert len(pages) == 53, f'Expected 53 weekly pages, found {len(pages)}'
+          expected = [f'W{i:02d}' for i in range(1, 54)]
+          actual = [p.parent.name for p in pages]
+          assert actual == expected, (actual[:3], actual[-3:])
+          assert (root / 'index.html').exists(), 'Missing 2026 index page'
+
+          for i, page in enumerate(pages, 1):
+              text = page.read_text(encoding='utf-8')
+              assert f'ISO 2026-W{i:02d}' in text, page
+              assert '<table>' in text, f'Weekly calendar table missing in {page}'
+              assert '2026 index' in text, f'Index navigation missing in {page}'
+              if i > 1:
+                  assert f'W{i-1:02d}' in text, f'Previous-week navigation missing in {page}'
+              if i < 53:
+                  assert f'W{i+1:02d}' in text, f'Next-week navigation missing in {page}'
+
+          index = (root / 'index.html').read_text(encoding='utf-8')
+          links = re.findall(r'href="W\d{2}/index\.html"', index)
+          assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
+          print('Verified 53 weekly pages, index, tables, and previous/next navigation')
+          PY
+
+      - name: Commit published pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/2026
+          if git diff --cached --quiet; then
+            echo "No publishing changes."
+            exit 0
+          fi
+          git commit -m "Publish 53 weekly Star Almanack pages"
+          git push
