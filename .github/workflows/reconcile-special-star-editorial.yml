@@ -24,7 +24,7 @@ jobs:
 
       - name: Verify editorial dates now match precise catalog
         run: |
-          python audit_special_star_visibility_2026.py special-stars.md special-star-visibility-audit-2026.csv special-star-visibility-2026.csv
+          python audit_special_star_visibility_2026.py special-stars.md special-star-visibility-2026.csv special-star-visibility-audit-2026.csv
           python - <<'PY'
           import csv
           with open('special-star-visibility-audit-2026.csv', newline='', encoding='utf-8') as f:
