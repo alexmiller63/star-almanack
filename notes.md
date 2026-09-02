@@ -48,3 +48,11 @@ These entries should be added as numbered Bayer entries where numbering is part 
 Legitimate gaps remain legitimate and should stay absent unless contrary catalog evidence is found. The audit therefore distinguishes “no α/β exists in the modern Bayer scheme” from “our source extraction missed an existing Bayer designation.”
 
 Next implementation step: add a small auditable supplemental Bayer source for the confirmed omissions, carrying source provenance and coordinates, then feed that supplement through the same 2026 best-visibility computation and completeness checks instead of editing generated output by hand.
+
+## 2026-09-02 — Bright-star variability and star-note policy
+
+For a future Bright 50 catalog, rank stars by a reproducible representative maximum apparent visual brightness rather than by a one-off exceptional historical observation. This keeps the ranking stable enough to reproduce while still respecting ordinary variability.
+
+Variable and eruptive behavior belongs in the individual star notes. Add a standard field, **Outbursts and exceptional brightness**, whenever applicable. Use it for unusual maxima or minima, eclipses, eruptions, major dimming events, and historically noteworthy departures from the star's representative range. Examples include Betelgeuse's 2019–2020 Great Dimming, Algol's regular eclipses, Mira's unusually bright maxima, and similar exceptional behavior in other variable stars.
+
+The ranking and the notes therefore serve different purposes: the Bright 50 ranking uses a representative maximum, while the star note preserves exceptional observations and outbursts without allowing a rare event to destabilize the catalog order.
