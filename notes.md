@@ -56,3 +56,11 @@ For a future Bright 50 catalog, rank stars by a reproducible representative maxi
 Variable and eruptive behavior belongs in the individual star notes. Add a standard field, **Outbursts and exceptional brightness**, whenever applicable. Use it for unusual maxima or minima, eclipses, eruptions, major dimming events, and historically noteworthy departures from the star's representative range. Examples include Betelgeuse's 2019–2020 Great Dimming, Algol's regular eclipses, Mira's unusually bright maxima, and similar exceptional behavior in other variable stars.
 
 The ranking and the notes therefore serve different purposes: the Bright 50 ranking uses a representative maximum, while the star note preserves exceptional observations and outbursts without allowing a rare event to destabilize the catalog order.
+
+## 2026-09-02 — Adopt second-magnitude bright-star layer
+
+Replace the arbitrary Bright 50 cutoff with a physical inclusion rule: include every star whose representative maximum apparent visual magnitude reaches V ≤ +2.50. This should capture essentially all first- and second-magnitude stars while preserving a reproducible threshold.
+
+This bright-star layer is observer-first rather than a replacement for the complete α/β Bayer catalog. Its purpose is to enrich the weekly Almanack with more naked-eye landmarks and more calendar dates carrying useful observing content. Each included bright star should receive its best-visibility date under the same 9 PM local apparent solar time rule used elsewhere in the project, then be available for a concise star note on that date or week.
+
+Star notes may include color, multiplicity, navigation or cultural significance, variability, and the standard **Outbursts and exceptional brightness** field where relevant.
