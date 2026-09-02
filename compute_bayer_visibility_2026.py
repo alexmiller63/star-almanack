@@ -8,7 +8,7 @@ resulting instant is rounded to the nearest calendar date.
 
 The compact solar model is the standard apparent-Sun low-precision model used
 for calendrical work (Meeus-style mean longitude/anomaly, equation of center,
-nutation correction, and corrected obliquity).  The output is guarded by the
+nutation correction, and corrected obliquity). The output is guarded by the
 15 preserved Star Almanack regression dates.
 """
 
@@ -36,6 +36,13 @@ REGRESSION = {
     "Albireo": "2026-08-29",
     "Altair": "2026-09-04",
     "Deneb": "2026-09-18",
+}
+
+# Proper names are convenient for the historical regression set, but Bayer
+# identity is authoritative when a named multiple-star system can be encoded
+# inconsistently by a source catalog.
+REGRESSION_BAYER = {
+    "Albireo": ("Bet1", "Cyg"),
 }
 
 
@@ -134,6 +141,7 @@ def main() -> None:
 
     output = []
     proper_to_date: dict[str, str] = {}
+    bayer_to_date: dict[tuple[str, str], str] = {}
     for row in rows:
         ra = float(row["ra_h"])
         instant, date = best_visibility(ra)
@@ -145,10 +153,14 @@ def main() -> None:
         output.append(enriched)
         if row.get("proper"):
             proper_to_date.setdefault(row["proper"], date.isoformat())
+        bayer_to_date.setdefault((row["bayer_code"], row["con"]), date.isoformat())
 
     failures = []
     for name, expected in REGRESSION.items():
-        actual = proper_to_date.get(name)
+        if name in REGRESSION_BAYER:
+            actual = bayer_to_date.get(REGRESSION_BAYER[name])
+        else:
+            actual = proper_to_date.get(name)
         if actual != expected:
             failures.append((name, expected, actual))
     if failures:
