@@ -101,12 +101,14 @@ for idx, row in enumerate(bayer_rows):
     fixed.setdefault(placement_date, []).append((ident, f"Best visibility: {label}"))
 
 seen = set()
-row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), 2026 \| [^|]+ \| )([^|]*)( \|)$")
+# ISO 2026-W53 legitimately includes Jan 1-3, 2027, so calendar-row matching
+# must use the civil year printed in each row rather than assuming 2026.
+row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2026|2027) \| [^|]+ \| )([^|]*)( \|)$")
 months = {m: i for i, m in enumerate(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], 1)}
 
 def add_fixed(match):
-    d = date(2026, months[match.group(2)], int(match.group(3))).isoformat()
-    existing = match.group(4).strip()
+    d = date(int(match.group(4)), months[match.group(2)], int(match.group(3))).isoformat()
+    existing = match.group(5).strip()
     additions = []
     for ident, text in fixed.get(d, []):
         if ident in seen:
@@ -117,7 +119,7 @@ def add_fixed(match):
     parts = [] if existing in {"", "—"} else existing.split("<br>")
     parts.extend(additions)
     rendered = "<br>".join(parts) if parts else "—"
-    return match.group(1) + rendered + match.group(5)
+    return match.group(1) + rendered + match.group(6)
 
 calendar = row_re.sub(add_fixed, calendar)
 
