@@ -6,6 +6,7 @@ name: Build Expanded Bayer Catalog
     paths:
       - build_bayer_catalog.py
       - compute_bayer_visibility_2026.py
+      - bayer-supplement.csv
       - .github/workflows/build-expanded-bayer-catalog.yml
 
 permissions:
@@ -26,7 +27,7 @@ jobs:
             -o /tmp/hygdata_v41.csv
 
       - name: Build alpha beta catalog
-        run: python build_bayer_catalog.py /tmp/hygdata_v41.csv expanded-bayer-stars.csv
+        run: python build_bayer_catalog.py /tmp/hygdata_v41.csv expanded-bayer-stars.csv --supplement bayer-supplement.csv
 
       - name: Validate catalog coverage
         run: |
@@ -46,6 +47,10 @@ jobs:
 
           systems = {(r['greek'], r['con']) for r in rows}
           designations = {(r['bayer_code'], r['con']) for r in rows}
+          if len(rows) != 177:
+              raise SystemExit(f'Expected 177 audited Bayer rows, found {len(rows)}')
+          if len(designations) != 176:
+              raise SystemExit(f'Expected 176 distinct Bayer designations, found {len(designations)}')
           print(f"Rows: {len(rows)}")
           print(f"Alpha rows: {counts['α']}")
           print(f"Beta rows: {counts['β']}")
