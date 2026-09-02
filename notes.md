@@ -64,3 +64,9 @@ Replace the arbitrary Bright 50 cutoff with a physical inclusion rule: include e
 This bright-star layer is observer-first rather than a replacement for the complete α/β Bayer catalog. Its purpose is to enrich the weekly Almanack with more naked-eye landmarks and more calendar dates carrying useful observing content. Each included bright star should receive its best-visibility date under the same 9 PM local apparent solar time rule used elsewhere in the project, then be available for a concise star note on that date or week.
 
 Star notes may include color, multiplicity, navigation or cultural significance, variability, and the standard **Outbursts and exceptional brightness** field where relevant.
+
+## 2026-09-02 — Magnitude display convention
+
+The Almanack prose should display stellar magnitudes as whole-number visual magnitude classes rather than decimal magnitudes. Decimal precision is retained in the underlying data for calculations and star-chart rendering, where it is useful for differentiating symbol brightness.
+
+For stable stars, display the whole-number class only, such as **V1** or **V2**. For variable stars, display the bright-to-faint class range, such as **V2–V3**, while preserving the precise decimal bright and faint V magnitudes in machine-readable catalog fields. This keeps the printed Almanack visually simple without discarding quantitative precision from the source data.
