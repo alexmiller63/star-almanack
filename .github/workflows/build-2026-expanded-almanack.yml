@@ -7,9 +7,14 @@ on:
       - ISO2026.md
       - almanack.md
       - expanded-bayer-visibility-2026.csv
+      - expanded-bayer-stars.csv
+      - bayer-supplement.csv
       - messier-visibility-2026.csv
       - weekly-ephemeris-2026.csv
+      - build_bayer_catalog.py
+      - compute_bayer_visibility_2026.py
       - build_expanded_almanack.py
+      - .github/workflows/build-2026-expanded-almanack.yml
 
 permissions:
   contents: write
