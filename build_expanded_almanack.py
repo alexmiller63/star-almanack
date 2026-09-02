@@ -25,8 +25,6 @@ weeks = re.findall(r"(?m)^## (ISO 2026-W\d{2})\s*$", calendar)
 if weeks != expected[:len(weeks)] or len(weeks) > 53:
     raise SystemExit(f"Unexpected weekly structure in almanack.md: {weeks[-5:]}")
 
-# The integrated Almanack currently contains W01-W25. Complete W26-W53
-# from the canonical zodiac/lunar source and generated weekly ephemeris.
 if len(weeks) < 53:
     ingress = []
     for m in re.finditer(r"\| (♒|♓|♈|♉|♊|♋|♌|♍|♎|♏|♐|♑) \([^|]+\) \| \d+° \| (2026-\d\d-\d\d) (\d\d:\d\d:\d\d) \|", source):
@@ -89,14 +87,19 @@ if len(weeks) < 53:
 fixed = {}
 for row in messier_rows:
     fixed.setdefault(row["best_date"], []).append((f"Messier:{row['messier']}", f"Best visibility: {row['messier']}"))
-for row in bayer_rows:
+for idx, row in enumerate(bayer_rows):
     designation = row["bayer"]
     proper = row.get("proper", "").strip()
     label = f"{proper} ({designation})" if proper else designation
-    ident = f"Bayer:{row['bayer_code']}:{row['con']}:{row.get('hyg_id','')}"
-    fixed.setdefault(row["best_date"], []).append((ident, f"Best visibility: {label}"))
+    placement_date = row["best_date"]
+    # The visibility solver searches across the year boundary so a late-December
+    # target can occasionally choose the immediately preceding annual occurrence.
+    # For the ISO 2026 edition, place that same annual target in December 2026.
+    if placement_date.startswith("2025-"):
+        placement_date = "2026-" + placement_date[5:]
+    ident = f"Bayer:{idx}:{row['bayer_code']}:{row['con']}"
+    fixed.setdefault(placement_date, []).append((ident, f"Best visibility: {label}"))
 
-# Inject full fixed-object coverage into every calendar row, preserving all existing events.
 seen = set()
 row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), 2026 \| [^|]+ \| )([^|]*)( \|)$")
 months = {m: i for i, m in enumerate(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], 1)}
@@ -109,7 +112,6 @@ def add_fixed(match):
         if ident in seen:
             continue
         seen.add(ident)
-        # Avoid duplicating selected objects that may already be present in preserved weeks.
         if text not in existing:
             additions.append(text)
     parts = [] if existing in {"", "—"} else existing.split("<br>")
