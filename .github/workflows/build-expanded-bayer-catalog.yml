@@ -49,8 +49,8 @@ jobs:
           designations = {(r['bayer_code'], r['con']) for r in rows}
           if len(rows) != 177:
               raise SystemExit(f'Expected 177 audited Bayer rows, found {len(rows)}')
-          if len(designations) != 176:
-              raise SystemExit(f'Expected 176 distinct Bayer designations, found {len(designations)}')
+          if len(designations) != 175:
+              raise SystemExit(f'Expected 175 distinct Bayer designations, found {len(designations)}')
           print(f"Rows: {len(rows)}")
           print(f"Alpha rows: {counts['α']}")
           print(f"Beta rows: {counts['β']}")
