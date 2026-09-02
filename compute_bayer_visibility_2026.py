@@ -3,8 +3,8 @@
 
 Definition preserved by the project:
     alpha_sun = alpha_object - 9h
-where the Sun's apparent right ascension is evaluated for 2026 and the
-resulting instant is rounded to the nearest calendar date.
+where the Sun's apparent right ascension is evaluated for the 2026 observing
+cycle and the resulting instant is rounded to the nearest calendar date.
 
 The compact solar model is the standard apparent-Sun low-precision model used
 for calendrical work (Meeus-style mean longitude/anomaly, equation of center,
@@ -44,6 +44,15 @@ REGRESSION = {
 REGRESSION_BAYER = {
     "Albireo": ("Bet1", "Cyg"),
 }
+
+# Search one civil-date cycle only. Starting at noon on 2025-12-31 permits an
+# instant that rounds into 2026-01-01, while ending late on 2026-12-31 permits
+# an instant that rounds into 2027-01-01. It deliberately excludes the prior
+# December annual solution that previously allowed α Ceti to select 2025-12-22.
+SEARCH_START = dt.datetime(2025, 12, 31, 12, 0)
+SEARCH_END = dt.datetime(2026, 12, 31, 23, 59)
+ROUNDED_DATE_MIN = dt.date(2026, 1, 1)
+ROUNDED_DATE_MAX = dt.date(2027, 1, 1)
 
 
 def julian_date(x: dt.datetime) -> float:
@@ -89,8 +98,8 @@ def wrapped_hour_distance(a: float, b: float) -> float:
 
 def best_visibility(ra_object_h: float) -> tuple[dt.datetime, dt.date]:
     target = (ra_object_h - 9.0) % 24.0
-    start = dt.datetime(2025, 12, 20)
-    end = dt.datetime(2026, 12, 31, 23, 59)
+    start = SEARCH_START
+    end = SEARCH_END
 
     best_distance = float("inf")
     best_time = start
@@ -102,8 +111,8 @@ def best_visibility(ra_object_h: float) -> tuple[dt.datetime, dt.date]:
             best_time = x
         x += dt.timedelta(hours=6)
 
-    start_refine = best_time - dt.timedelta(hours=8)
-    end_refine = best_time + dt.timedelta(hours=8)
+    start_refine = max(start, best_time - dt.timedelta(hours=8))
+    end_refine = min(end, best_time + dt.timedelta(hours=8))
     x = start_refine
     while x <= end_refine:
         distance = wrapped_hour_distance(apparent_sun_ra_hours(x), target)
@@ -113,6 +122,8 @@ def best_visibility(ra_object_h: float) -> tuple[dt.datetime, dt.date]:
         x += dt.timedelta(minutes=1)
 
     rounded_date = (best_time + dt.timedelta(hours=12)).date()
+    if not ROUNDED_DATE_MIN <= rounded_date <= ROUNDED_DATE_MAX:
+        raise RuntimeError(f"Best-visibility date escaped the 2026 observing cycle: {rounded_date}")
     return best_time, rounded_date
 
 
