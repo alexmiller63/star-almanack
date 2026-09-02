@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Build the expanded 2026 Almanack from the integrated calendar and catalogs."""
-# Verified generator: W01-W25 are preserved; W26-W53 are generated here.
+"""Build the expanded 2026 Almanack from the integrated calendar and full fixed-object catalogs."""
 from datetime import date, datetime, timedelta
 from pathlib import Path
 import csv
@@ -9,7 +8,13 @@ import re
 ROOT = Path(__file__).parent
 calendar = (ROOT / "almanack.md").read_text(encoding="utf-8")
 source = (ROOT / "ISO2026.md").read_text(encoding="utf-8")
-bayer = (ROOT / "expanded-bayer-visibility-2026.csv").read_text(encoding="utf-8")
+bayer_text = (ROOT / "expanded-bayer-visibility-2026.csv").read_text(encoding="utf-8")
+
+with (ROOT / "expanded-bayer-visibility-2026.csv").open(encoding="utf-8", newline="") as f:
+    bayer_rows = list(csv.DictReader(f))
+with (ROOT / "messier-visibility-2026.csv").open(encoding="utf-8", newline="") as f:
+    messier_rows = list(csv.DictReader(f))
+
 ephemeris = {}
 with (ROOT / "weekly-ephemeris-2026.csv").open(encoding="utf-8", newline="") as f:
     for row in csv.DictReader(f):
@@ -20,8 +25,8 @@ weeks = re.findall(r"(?m)^## (ISO 2026-W\d{2})\s*$", calendar)
 if weeks != expected[:len(weeks)] or len(weeks) > 53:
     raise SystemExit(f"Unexpected weekly structure in almanack.md: {weeks[-5:]}")
 
-# The integrated Almanack currently contains W01-W25. Complete W26-W53 here
-# from the canonical zodiac/lunar source and the generated weekly ephemeris.
+# The integrated Almanack currently contains W01-W25. Complete W26-W53
+# from the canonical zodiac/lunar source and generated weekly ephemeris.
 if len(weeks) < 53:
     ingress = []
     for m in re.finditer(r"\| (♒|♓|♈|♉|♊|♋|♌|♍|♎|♏|♐|♑) \([^|]+\) \| \d+° \| (2026-\d\d-\d\d) (\d\d:\d\d:\d\d) \|", source):
@@ -31,32 +36,15 @@ if len(weeks) < 53:
         raise SystemExit(f"Expected 12 zodiac ingresses, found {len(ingress)}")
 
     events = {}
-    object_re = re.compile(r"\| ([^|]+) \| ([^|]+) \| ([A-Z][a-z]{2} \d{1,2}) \| ([^|]+) \|")
-    for m in object_re.finditer(source):
-        name, bayer_code, md, classification = [x.strip() for x in m.groups()]
-        if name in {"Star", "Object"} or name.startswith("---"):
-            continue
-        try:
-            d = datetime.strptime(f"{md} 2026", "%b %d %Y").date()
-        except ValueError:
-            continue
-        label = f"{name} ({bayer_code})" if bayer_code else name
-        events.setdefault(d, []).append(f"Best visibility: {label} — {classification}")
-
     phase_re = re.compile(r"\| ([🌕🌗🌑🌓] [^|]+) \| (2026-\d\d-\d\d \d\d:\d\d:\d\d) \|")
     for m in phase_re.finditer(source):
         ts = datetime.fromisoformat(m.group(2))
         events.setdefault(ts.date(), []).append(f"{m.group(1)} — {ts:%H:%M:%S} UTC")
 
     def zodiac_for_day(d):
-        # Star Almanack assigns the ingress calendar date itself as sign-day 1,
-        # regardless of the UTC clock time at which the ingress occurs.
         boundaries = [(date(2025, 12, 21), "♑")] + [(ts.date(), sign) for ts, sign in ingress]
         last_date, sign = max((x for x in boundaries if x[0] <= d), key=lambda x: x[0])
         return sign, (d - last_date).days + 1
-
-    def iso_dates(w):
-        return date.fromisocalendar(2026, w, 1)
 
     def ephem_table(row):
         cols = [("☉ Sun", row["sun"]), ("☽ Moon", row["moon"]), ("☿ Mercury", row["mercury"]),
@@ -73,7 +61,7 @@ if len(weeks) < 53:
         key = f"2026-W{w:02d}"
         if key not in ephemeris:
             raise SystemExit(f"Missing weekly ephemeris for {key}")
-        monday = iso_dates(w)
+        monday = date.fromisocalendar(2026, w, 1)
         sunday = monday + timedelta(days=6)
         rows = []
         for i in range(7):
@@ -86,26 +74,63 @@ if len(weeks) < 53:
             f"## ISO {key}\n\n"
             f"**ISO dates:** {key}-1 through {key}-7  \n\n"
             f"**Civil dates:** {monday:%b %d, %Y} – {sunday:%b %d, %Y}\n\n"
-            "### Calendar\n\n"
-            "| Date | Zodiac day | Events |\n\n"
-            "|---|---|---|\n\n" + "\n\n".join(rows) + "\n\n"
+            "### Calendar\n\n| Date | Zodiac day | Events |\n\n|---|---|---|\n\n"
+            + "\n\n".join(rows) + "\n\n"
             "### Weekly Classical-Planet Ephemeris\n\n"
             f"**Snapshot:** {monday:%B %-d, %Y} · 00:00 UTC\n\n"
             + ephem_table(ephemeris[key]) + "\n\n"
-            "### Sky Note\n\n"
-            "Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.\n\n"
+            "### Sky Note\n\nWeekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.\n\n"
             "### Chart\n\n"
             f"`ISO2026-W{w}-chart.png` — chart slot."
         )
     calendar = calendar.rstrip() + "\n\n" + "\n\n".join(additions)
 
+# Build the complete fixed-object event set by civil date.
+fixed = {}
+for row in messier_rows:
+    fixed.setdefault(row["best_date"], []).append((f"Messier:{row['messier']}", f"Best visibility: {row['messier']}"))
+for row in bayer_rows:
+    designation = row["bayer"]
+    proper = row.get("proper", "").strip()
+    label = f"{proper} ({designation})" if proper else designation
+    ident = f"Bayer:{row['bayer_code']}:{row['con']}:{row.get('hyg_id','')}"
+    fixed.setdefault(row["best_date"], []).append((ident, f"Best visibility: {label}"))
+
+# Inject full fixed-object coverage into every calendar row, preserving all existing events.
+seen = set()
+row_re = re.compile(r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), 2026 \| [^|]+ \| )([^|]*)( \|)$")
+months = {m: i for i, m in enumerate(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], 1)}
+
+def add_fixed(match):
+    d = date(2026, months[match.group(2)], int(match.group(3))).isoformat()
+    existing = match.group(4).strip()
+    additions = []
+    for ident, text in fixed.get(d, []):
+        if ident in seen:
+            continue
+        seen.add(ident)
+        # Avoid duplicating selected objects that may already be present in preserved weeks.
+        if text not in existing:
+            additions.append(text)
+    parts = [] if existing in {"", "—"} else existing.split("<br>")
+    parts.extend(additions)
+    rendered = "<br>".join(parts) if parts else "—"
+    return match.group(1) + rendered + match.group(5)
+
+calendar = row_re.sub(add_fixed, calendar)
+
+expected_fixed = len(messier_rows) + len(bayer_rows)
+if len(messier_rows) != 110:
+    raise SystemExit(f"Expected 110 Messier rows, found {len(messier_rows)}")
+if len(seen) != expected_fixed:
+    raise SystemExit(f"Fixed-object placement incomplete: placed {len(seen)} of {expected_fixed}")
+
 header = "# Star Almanack — 2026\n\n*A Natural Philosopher's Guide to the Night Sky*\n\n"
 objects = (
     "## Expanded α and β Star Catalog\n\n"
-    "The complete generated Bayer catalog for 2026 follows. "
-    "Best-visibility dates are computed by the Star Almanack visibility rule.\n\n"
-    + bayer
+    "The complete generated Bayer catalog for 2026 follows. Best-visibility dates are computed by the Star Almanack visibility rule.\n\n"
+    + bayer_text
 )
 out = header + calendar.rstrip() + "\n\n" + objects
 (ROOT / "almanack-expanded.md").write_text(out, encoding="utf-8")
-print(f"Built almanack-expanded.md: 53 ISO weeks; {len(bayer.splitlines())-1} Bayer rows")
+print(f"Built almanack-expanded.md: 53 ISO weeks; 110 Messier objects; {len(bayer_rows)} Bayer rows")
