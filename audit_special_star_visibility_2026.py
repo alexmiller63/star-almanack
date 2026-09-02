@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Audit Special Star dates against the Star Almanack 2026 visibility rule.
+"""Audit Special Star editorial dates against precise catalog coordinates.
 
-The long-form editorial source remains special-stars.md. This script extracts each
-Special Star heading and its printed RA, recomputes the natural 2026 placement
-using the same solar-RA solver as the Bayer and bright-star layers, and writes a
-machine-readable audit without changing the editorial source.
+The long-form editorial source remains special-stars.md. Coordinates are taken
+from special-star-catalog.csv rather than the rounded RA/Dec printed in prose.
+The current Star Almanack observer-first visibility engine then computes the
+natural ISO-2026 placement and reports, but does not silently rewrite, stale
+editorial dates.
 """
 
 from __future__ import annotations
@@ -40,15 +41,27 @@ COORD_RE = re.compile(
 OBS_RE = re.compile(r"\*\*Observing:\s*(?P<obs>.*?)\*\*", re.S)
 
 
-def normalize_minus(value: str) -> str:
-    return value.replace("−", "-")
-
-
 def compact(text: str) -> str:
     return " ".join(text.split())
 
 
-def parse_special_stars(text: str) -> list[dict[str, str]]:
+def heading_name(title: str) -> str:
+    """Return the observer-facing object name before designation/story qualifiers."""
+    return title.split(" ---", 1)[0].strip()
+
+
+def load_catalog(path: Path) -> dict[str, dict[str, str]]:
+    with path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    if len(rows) != 22:
+        raise SystemExit(f"Expected 22 precise Special Star coordinate rows, got {len(rows)}")
+    by_name = {row["name"]: row for row in rows}
+    if len(by_name) != len(rows):
+        raise SystemExit("Duplicate Special Star names in coordinate catalog")
+    return by_name
+
+
+def parse_special_stars(text: str, catalog: dict[str, dict[str, str]]) -> list[dict[str, str]]:
     matches = list(HEADING_RE.finditer(text))
     rows: list[dict[str, str]] = []
 
@@ -57,29 +70,33 @@ def parse_special_stars(text: str) -> list[dict[str, str]]:
         block = text[match.end():end]
         coord = COORD_RE.search(block)
         if coord is None:
-            raise SystemExit(f"Missing RA/Dec line for Special Star heading: {match.group('title')}")
+            raise SystemExit(f"Missing printed RA/Dec line for Special Star heading: {match.group('title')}")
         obs = OBS_RE.search(block)
         if obs is None:
             raise SystemExit(f"Missing observing line for Special Star heading: {match.group('title')}")
 
-        stated_date = dt.date(
-            2026,
-            MONTHS[match.group("month")],
-            int(match.group("day")),
-        )
-        ra_h = int(coord.group("h")) + int(coord.group("m")) / 60.0
+        name = heading_name(match.group("title"))
+        source = catalog.get(name)
+        if source is None:
+            raise SystemExit(f"No precise coordinate row for Special Star: {name}")
+
+        stated_date = dt.date(2026, MONTHS[match.group("month")], int(match.group("day")))
+        ra_h = float(source["ra_h"])
         instant, computed_date = best_visibility(ra_h)
         instant, computed_date = normalize_to_iso_2026(ra_h, instant, computed_date)
 
         rows.append(
             {
+                "name": name,
                 "title": match.group("title").strip(),
                 "season": match.group("season").strip(),
                 "stated_date": stated_date.isoformat(),
-                "ra_h": f"{ra_h:.6f}",
-                "dec_deg": normalize_minus(coord.group("dec")),
-                "magnitude_text": compact(coord.group("mag")),
-                "observing_text": compact(obs.group("obs")),
+                "ra_h": source["ra_h"],
+                "dec_deg": source["dec_deg"],
+                "coordinate_source": source["coordinate_source"],
+                "observing_aid": source["observing_aid"],
+                "printed_magnitude": compact(coord.group("mag")),
+                "printed_observing_text": compact(obs.group("obs")),
                 "best_instant_utc": instant.strftime("%Y-%m-%d %H:%M"),
                 "computed_date": computed_date.isoformat(),
                 "iso": iso_date(computed_date),
@@ -87,26 +104,24 @@ def parse_special_stars(text: str) -> list[dict[str, str]]:
             }
         )
 
-    if not rows:
-        raise SystemExit("No Special Star headings found in editorial source")
+    if len(rows) != 22:
+        raise SystemExit(f"Expected 22 Special Star headings, got {len(rows)}")
     return rows
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("input", type=Path, nargs="?", default=Path("special-stars.md"))
-    parser.add_argument(
-        "output",
-        type=Path,
-        nargs="?",
-        default=Path("special-star-visibility-audit-2026.csv"),
-    )
+    parser.add_argument("editorial", type=Path, nargs="?", default=Path("special-stars.md"))
+    parser.add_argument("catalog", type=Path, nargs="?", default=Path("special-star-catalog.csv"))
+    parser.add_argument("output", type=Path, nargs="?", default=Path("special-star-visibility-audit-2026.csv"))
     args = parser.parse_args()
 
-    rows = parse_special_stars(args.input.read_text(encoding="utf-8"))
+    catalog = load_catalog(args.catalog)
+    rows = parse_special_stars(args.editorial.read_text(encoding="utf-8"), catalog)
     fieldnames = [
-        "title", "season", "stated_date", "ra_h", "dec_deg", "magnitude_text",
-        "observing_text", "best_instant_utc", "computed_date", "iso", "status",
+        "name", "title", "season", "stated_date", "ra_h", "dec_deg",
+        "coordinate_source", "observing_aid", "printed_magnitude",
+        "printed_observing_text", "best_instant_utc", "computed_date", "iso", "status",
     ]
     with args.output.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
@@ -114,11 +129,11 @@ def main() -> None:
         writer.writerows(rows)
 
     stale = [r for r in rows if r["status"] != "PASS"]
-    print(f"Special Stars audited: {len(rows)}")
+    print(f"Special Stars audited from precise coordinates: {len(rows)}")
     print(f"Dates matching current visibility rule: {len(rows) - len(stale)}")
     print(f"Dates requiring reconciliation: {len(stale)}")
     for row in stale:
-        print(f"STALE {row['title']}: stated {row['stated_date']} -> computed {row['computed_date']}")
+        print(f"STALE {row['name']}: stated {row['stated_date']} -> computed {row['computed_date']}")
     print(f"Wrote {args.output}")
 
 
