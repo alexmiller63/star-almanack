@@ -43,7 +43,7 @@ jobs:
 
       - name: Commit generated observance table
         run: |
-          if git diff --quiet -- constellation-observance-2026.csv; then
+          if [ -z "$(git status --porcelain -- constellation-observance-2026.csv)" ]; then
             echo 'No generated changes.'
             exit 0
           fi
