@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build the expanded 2026 Almanack from the integrated calendar and catalogs."""
+# Generate W26-W53; keep W01-W25 from the integrated working Almanack.
 from datetime import date, datetime, timedelta
 from pathlib import Path
 import csv
@@ -29,7 +30,6 @@ if len(weeks) < 53:
     if len(ingress) != 12:
         raise SystemExit(f"Expected 12 zodiac ingresses, found {len(ingress)}")
 
-    # Selected-object and lunar events already validated in ISO2026.md.
     events = {}
     object_re = re.compile(r"\| ([^|]+) \| ([^|]+) \| ([A-Z][a-z]{2} \d{1,2}) \| ([^|]+) \|")
     for m in object_re.finditer(source):
@@ -49,8 +49,6 @@ if len(weeks) < 53:
         events.setdefault(ts.date(), []).append(f"{m.group(1)} — {ts:%H:%M:%S} UTC")
 
     def zodiac_for_day(d):
-        # Star Almanack assigns the ingress calendar date itself as sign-day 1,
-        # regardless of the UTC clock time at which the ingress occurs.
         boundaries = [(date(2025, 12, 21), "♑")] + [(ts.date(), sign) for ts, sign in ingress]
         last_date, sign = max((x for x in boundaries if x[0] <= d), key=lambda x: x[0])
         return sign, (d - last_date).days + 1
