@@ -950,7 +950,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Mon, May 25, 2026 | ♊ 5 | — |
 
-| Tue, May 26, 2026 | ♊ 6 | Best visibility: Diadem (α Com)<br>Best visibility: α Com<br>Best visibility: β Com |
+| Tue, May 26, 2026 | ♊ 6 | Best visibility: Diadem (α Com)<br>Best visibility: β Com |
 
 | Wed, May 27, 2026 | ♊ 7 | Best visibility: M63 — Sunflower Galaxy — Northern Spring<br>Best visibility: M53 |
 
