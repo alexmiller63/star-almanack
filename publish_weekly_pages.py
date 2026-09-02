@@ -22,6 +22,21 @@ SOURCE = ROOT / "almanack-expanded.md"
 OUT = ROOT / "site" / "2026"
 WEEK_RE = re.compile(r"(?m)^## (ISO 2026-W(\d{2}))\s*$")
 
+ZODIAC_NAMES = {
+    "♈": "Aries",
+    "♉": "Taurus",
+    "♊": "Gemini",
+    "♋": "Cancer",
+    "♌": "Leo",
+    "♍": "Virgo",
+    "♎": "Libra",
+    "♏": "Scorpio",
+    "♐": "Sagittarius",
+    "♑": "Capricorn",
+    "♒": "Aquarius",
+    "♓": "Pisces",
+}
+
 CSS = """
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
@@ -39,9 +54,16 @@ h1, h2, h3 { line-height: 1.2; color: #15324e; }
 table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.6rem; font-size: .94rem; }
 th, td { border: 1px solid #cfd6dd; padding: .55rem .65rem; vertical-align: top; }
 th { background: #edf2f6; text-align: left; }
+table.ephemeris th, table.ephemeris td { text-align: center; }
+table.ephemeris td { white-space: nowrap; }
+.zodiac-name { display: block; font-size: .78rem; opacity: .72; margin-top: .08rem; }
 code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 .weekgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: .65rem; padding: 0; list-style: none; }
 .weekgrid a { display: block; padding: .75rem; border: 1px solid #cbd3da; border-radius: .4rem; text-decoration: none; background: #fafcfd; }
+@media (max-width: 760px) {
+  table { display: block; overflow-x: auto; }
+  table.ephemeris { font-size: .88rem; }
+}
 @media (prefers-color-scheme: dark) {
  body { background: #111821; color: #dbe5ee; }
  main.wrap { background: #17202b; }
@@ -56,8 +78,6 @@ code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 
 
 def inline_markup(text: str) -> str:
-    # Preserve deliberate <br> separators from the generated Almanack while
-    # escaping all other source text first.
     sentinel = "@@BR@@"
     text = text.replace("<br>", sentinel)
     text = html.escape(text)
@@ -72,23 +92,53 @@ def is_separator_row(line: str) -> bool:
     return bool(cells) and all(re.fullmatch(r":?-{3,}:?", c or "") for c in cells)
 
 
+def format_ephemeris_cell(text: str) -> str:
+    rendered = inline_markup(text)
+    stripped = text.strip()
+    if stripped and stripped[0] in ZODIAC_NAMES:
+        glyph = stripped[0]
+        remainder = stripped[1:].strip()
+        return f"{html.escape(glyph)} {inline_markup(remainder)}<span class=\"zodiac-name\">{ZODIAC_NAMES[glyph]}</span>"
+    return rendered
+
+
 def parse_table(lines: list[str], start: int) -> tuple[str, int]:
     rows: list[list[str]] = []
     i = start
-    while i < len(lines) and lines[i].lstrip().startswith("|"):
-        if not is_separator_row(lines[i]):
-            rows.append([c.strip() for c in lines[i].strip().strip("|").split("|")])
+    # Generated Almanack tables deliberately contain blank lines between Markdown
+    # rows. Treat blank lines as part of the same table when the next nonblank
+    # line is another pipe row.
+    while i < len(lines):
+        line = lines[i]
+        if not line.strip():
+            j = i + 1
+            while j < len(lines) and not lines[j].strip():
+                j += 1
+            if j < len(lines) and lines[j].lstrip().startswith("|"):
+                i = j
+                continue
+            break
+        if not line.lstrip().startswith("|"):
+            break
+        if not is_separator_row(line):
+            rows.append([c.strip() for c in line.strip().strip("|").split("|")])
         i += 1
+
     if not rows:
         return "", i
+
     head = rows[0]
     body = rows[1:]
-    out = ["<table><thead><tr>"]
+    is_ephemeris = len(head) == 7 and head[0].startswith("☉ Sun") and head[-1].startswith("♄ Saturn")
+    table_class = ' class="ephemeris"' if is_ephemeris else ""
+    out = [f"<table{table_class}><thead><tr>"]
     out.extend(f"<th>{inline_markup(c)}</th>" for c in head)
     out.append("</tr></thead><tbody>")
     for row in body:
         out.append("<tr>")
-        out.extend(f"<td>{inline_markup(c)}</td>" for c in row)
+        for c in row:
+            cell = format_ephemeris_cell(c) if is_ephemeris else inline_markup(c)
+            out.append(f"<td>{cell}</td>")
         out.append("</tr>")
     out.append("</tbody></table>")
     return "".join(out), i
@@ -123,7 +173,6 @@ def markdown_fragment(md: str) -> str:
         if m:
             flush_para()
             level = len(m.group(1))
-            # Weekly source begins at ##; render it as the page H1.
             rendered_level = max(1, level - 1)
             out.append(f"<h{rendered_level}>{inline_markup(m.group(2))}</h{rendered_level}>")
             i += 1
@@ -193,7 +242,6 @@ def build() -> None:
         "ISO 2026 begins Monday, December 29, 2025 and ends Sunday, January 3, 2027.</p>"
         f'<ul class="weekgrid">{"".join(links)}</ul>'
     )
-    # Index is one directory shallower than weekly pages, so give it its own shell links.
     index = shell("2026 weekly index", index_body).replace('href="../index.html"', 'href="index.html"')
     (OUT / "index.html").write_text(index, encoding="utf-8")
 
