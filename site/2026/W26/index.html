@@ -20,9 +20,16 @@ h1, h2, h3 { line-height: 1.2; color: #15324e; }
 table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.6rem; font-size: .94rem; }
 th, td { border: 1px solid #cfd6dd; padding: .55rem .65rem; vertical-align: top; }
 th { background: #edf2f6; text-align: left; }
+table.ephemeris th, table.ephemeris td { text-align: center; }
+table.ephemeris td { white-space: nowrap; }
+.zodiac-name { display: block; font-size: .78rem; opacity: .72; margin-top: .08rem; }
 code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 .weekgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: .65rem; padding: 0; list-style: none; }
 .weekgrid a { display: block; padding: .75rem; border: 1px solid #cbd3da; border-radius: .4rem; text-decoration: none; background: #fafcfd; }
+@media (max-width: 760px) {
+  table { display: block; overflow-x: auto; }
+  table.ephemeris { font-size: .88rem; }
+}
 @media (prefers-color-scheme: dark) {
  body { background: #111821; color: #dbe5ee; }
  main.wrap { background: #17202b; }
@@ -40,20 +47,10 @@ code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 <p><strong>ISO dates:</strong> 2026-W26-1 through 2026-W26-7</p>
 <p><strong>Civil dates:</strong> Jun 22, 2026 – Jun 28, 2026</p>
 <h2>Calendar</h2>
-<table><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody></tbody></table>
-
-<table><thead><tr><th>Mon, Jun 22, 2026</th><th>♋ 2</th><th>Best visibility: Nekkar (β Boo)</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Tue, Jun 23, 2026</th><th>♋ 3</th><th>Best visibility: M102</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Wed, Jun 24, 2026</th><th>♋ 4</th><th>—</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Thu, Jun 25, 2026</th><th>♋ 5</th><th>Best visibility: Zubeneschamali (β Lib)</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Fri, Jun 26, 2026</th><th>♋ 6</th><th>Best visibility: M5<br>Best visibility: β Cir</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Sat, Jun 27, 2026</th><th>♋ 7</th><th>—</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Sun, Jun 28, 2026</th><th>♋ 8</th><th>Best visibility: Nusakan (β CrB)</th></tr></thead><tbody></tbody></table>
+<table><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody><tr><td>Mon, Jun 22, 2026</td><td>♋ 2</td><td>Best visibility: Nekkar (β Boo)</td></tr><tr><td>Tue, Jun 23, 2026</td><td>♋ 3</td><td>Best visibility: M102</td></tr><tr><td>Wed, Jun 24, 2026</td><td>♋ 4</td><td>—</td></tr><tr><td>Thu, Jun 25, 2026</td><td>♋ 5</td><td>Best visibility: Zubeneschamali (β Lib)</td></tr><tr><td>Fri, Jun 26, 2026</td><td>♋ 6</td><td>Best visibility: M5<br>Best visibility: β Cir</td></tr><tr><td>Sat, Jun 27, 2026</td><td>♋ 7</td><td>—</td></tr><tr><td>Sun, Jun 28, 2026</td><td>♋ 8</td><td>Best visibility: Nusakan (β CrB)</td></tr></tbody></table>
 <h2>Weekly Classical-Planet Ephemeris</h2>
 <p><strong>Snapshot:</strong> June 22, 2026 · 00:00 UTC</p>
-<table><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody></tbody></table>
-
-<table><thead><tr><th>♋ 0°37′</th><th>♎ 1°39′</th><th>♋ 24°00′</th><th>♌ 9°54′</th><th>♉ 25°07′</th><th>♋ 28°15′</th><th>♈ 13°44′</th></tr></thead><tbody></tbody></table>
+<table class="ephemeris"><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody><tr><td>♋ 0°37′<span class="zodiac-name">Cancer</span></td><td>♎ 1°39′<span class="zodiac-name">Libra</span></td><td>♋ 24°00′<span class="zodiac-name">Cancer</span></td><td>♌ 9°54′<span class="zodiac-name">Leo</span></td><td>♉ 25°07′<span class="zodiac-name">Taurus</span></td><td>♋ 28°15′<span class="zodiac-name">Cancer</span></td><td>♈ 13°44′<span class="zodiac-name">Aries</span></td></tr></tbody></table>
 <h2>Sky Note</h2>
 <p>Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.</p>
 <h2>Chart</h2>

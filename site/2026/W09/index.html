@@ -20,9 +20,16 @@ h1, h2, h3 { line-height: 1.2; color: #15324e; }
 table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.6rem; font-size: .94rem; }
 th, td { border: 1px solid #cfd6dd; padding: .55rem .65rem; vertical-align: top; }
 th { background: #edf2f6; text-align: left; }
+table.ephemeris th, table.ephemeris td { text-align: center; }
+table.ephemeris td { white-space: nowrap; }
+.zodiac-name { display: block; font-size: .78rem; opacity: .72; margin-top: .08rem; }
 code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 .weekgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: .65rem; padding: 0; list-style: none; }
 .weekgrid a { display: block; padding: .75rem; border: 1px solid #cbd3da; border-radius: .4rem; text-decoration: none; background: #fafcfd; }
+@media (max-width: 760px) {
+  table { display: block; overflow-x: auto; }
+  table.ephemeris { font-size: .88rem; }
+}
 @media (prefers-color-scheme: dark) {
  body { background: #111821; color: #dbe5ee; }
  main.wrap { background: #17202b; }
@@ -40,20 +47,10 @@ code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 <p><strong>ISO dates:</strong> 2026-W09-1 through 2026-W09-7</p>
 <p><strong>Civil dates:</strong> Feb 23, 2026 – Mar 01, 2026</p>
 <h2>Calendar</h2>
-<table><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody></tbody></table>
-
-<table><thead><tr><th>Mon, Feb 23, 2026</th><th>♓ 6</th><th>Best visibility: Aludra — V2</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Tue, Feb 24, 2026</th><th>♓ 7</th><th>🌓 First Quarter — 12:27:42 UTC<br>Best visibility: Gomeisa (β CMi)</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Wed, Feb 25, 2026</th><th>♓ 8</th><th>Best visibility: M47</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Thu, Feb 26, 2026</th><th>♓ 9</th><th>Best visibility: Castor (α Geminorum) — Northern Winter<br>Best visibility: M47 — Open Cluster — Tropical Winter<br>Best visibility: M46<br>Best visibility: Castor (α Gem)<br>Best visibility: Castor B (α Gem)</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Fri, Feb 27, 2026</th><th>♓ 10</th><th>Best visibility: Procyon (α Canis Minoris) — Tropical Winter<br>Best visibility: M46 — Open Cluster — Tropical Winter<br>Best visibility: M93<br>Best visibility: Procyon (α CMi)<br>Best visibility: α Mon</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Sat, Feb 28, 2026</th><th>♓ 11</th><th>Best visibility: Pollux (β Geminorum) — Northern Winter<br>Best visibility: Pollux (β Gem)</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Sun, Mar 01, 2026</th><th>♓ 12</th><th>—</th></tr></thead><tbody></tbody></table>
+<table><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody><tr><td>Mon, Feb 23, 2026</td><td>♓ 6</td><td>Best visibility: Aludra — V2</td></tr><tr><td>Tue, Feb 24, 2026</td><td>♓ 7</td><td>🌓 First Quarter — 12:27:42 UTC<br>Best visibility: Gomeisa (β CMi)</td></tr><tr><td>Wed, Feb 25, 2026</td><td>♓ 8</td><td>Best visibility: M47</td></tr><tr><td>Thu, Feb 26, 2026</td><td>♓ 9</td><td>Best visibility: Castor (α Geminorum) — Northern Winter<br>Best visibility: M47 — Open Cluster — Tropical Winter<br>Best visibility: M46<br>Best visibility: Castor (α Gem)<br>Best visibility: Castor B (α Gem)</td></tr><tr><td>Fri, Feb 27, 2026</td><td>♓ 10</td><td>Best visibility: Procyon (α Canis Minoris) — Tropical Winter<br>Best visibility: M46 — Open Cluster — Tropical Winter<br>Best visibility: M93<br>Best visibility: Procyon (α CMi)<br>Best visibility: α Mon</td></tr><tr><td>Sat, Feb 28, 2026</td><td>♓ 11</td><td>Best visibility: Pollux (β Geminorum) — Northern Winter<br>Best visibility: Pollux (β Gem)</td></tr><tr><td>Sun, Mar 01, 2026</td><td>♓ 12</td><td>—</td></tr></tbody></table>
 <h2>Weekly Classical-Planet Ephemeris</h2>
 <p><strong>Snapshot:</strong> Monday, Feb 23, 2026 · 00:00 UTC</p>
-<table><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody></tbody></table>
-
-<table><thead><tr><th>♓ 4°22′</th><th>♉ 14°22′</th><th>♓ 21°41′</th><th>♓ 15°44′</th><th>♒ 24°01′</th><th>♋ 15°31′</th><th>♈ 1°01′</th></tr></thead><tbody></tbody></table>
+<table class="ephemeris"><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody><tr><td>♓ 4°22′<span class="zodiac-name">Pisces</span></td><td>♉ 14°22′<span class="zodiac-name">Taurus</span></td><td>♓ 21°41′<span class="zodiac-name">Pisces</span></td><td>♓ 15°44′<span class="zodiac-name">Pisces</span></td><td>♒ 24°01′<span class="zodiac-name">Aquarius</span></td><td>♋ 15°31′<span class="zodiac-name">Cancer</span></td><td>♈ 1°01′<span class="zodiac-name">Aries</span></td></tr></tbody></table>
 <h2>Sky Note</h2>
 <p>☿ and ♀ are separated by about 6° in the Monday snapshot and form a close pairing east of the Sun. Saturn is also only about 3° from the Sun, making it particularly difficult to observe in solar glare.</p>
 <h2>Chart</h2>

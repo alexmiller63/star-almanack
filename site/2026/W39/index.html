@@ -20,9 +20,16 @@ h1, h2, h3 { line-height: 1.2; color: #15324e; }
 table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.6rem; font-size: .94rem; }
 th, td { border: 1px solid #cfd6dd; padding: .55rem .65rem; vertical-align: top; }
 th { background: #edf2f6; text-align: left; }
+table.ephemeris th, table.ephemeris td { text-align: center; }
+table.ephemeris td { white-space: nowrap; }
+.zodiac-name { display: block; font-size: .78rem; opacity: .72; margin-top: .08rem; }
 code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 .weekgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: .65rem; padding: 0; list-style: none; }
 .weekgrid a { display: block; padding: .75rem; border: 1px solid #cbd3da; border-radius: .4rem; text-decoration: none; background: #fafcfd; }
+@media (max-width: 760px) {
+  table { display: block; overflow-x: auto; }
+  table.ephemeris { font-size: .88rem; }
+}
 @media (prefers-color-scheme: dark) {
  body { background: #111821; color: #dbe5ee; }
  main.wrap { background: #17202b; }
@@ -40,20 +47,10 @@ code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 <p><strong>ISO dates:</strong> 2026-W39-1 through 2026-W39-7</p>
 <p><strong>Civil dates:</strong> Sep 21, 2026 – Sep 27, 2026</p>
 <h2>Calendar</h2>
-<table><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody></tbody></table>
-
-<table><thead><tr><th>Mon, Sep 21, 2026</th><th>♍ 30</th><th>Best visibility: β Mic</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Tue, Sep 22, 2026</th><th>♍ 31</th><th>Best visibility: β Ind</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Wed, Sep 23, 2026</th><th>♎ (Libra) 1</th><th>—</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Thu, Sep 24, 2026</th><th>♎ 2</th><th>Best visibility: α Oct</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Fri, Sep 25, 2026</th><th>♎ 3</th><th>—</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Sat, Sep 26, 2026</th><th>♎ 4</th><th>🌕 Full Moon — 16:49:02 UTC</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Sun, Sep 27, 2026</th><th>♎ 5</th><th>Best visibility: Kitalpha (α Equ)</th></tr></thead><tbody></tbody></table>
+<table><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody><tr><td>Mon, Sep 21, 2026</td><td>♍ 30</td><td>Best visibility: β Mic</td></tr><tr><td>Tue, Sep 22, 2026</td><td>♍ 31</td><td>Best visibility: β Ind</td></tr><tr><td>Wed, Sep 23, 2026</td><td>♎ (Libra) 1</td><td>—</td></tr><tr><td>Thu, Sep 24, 2026</td><td>♎ 2</td><td>Best visibility: α Oct</td></tr><tr><td>Fri, Sep 25, 2026</td><td>♎ 3</td><td>—</td></tr><tr><td>Sat, Sep 26, 2026</td><td>♎ 4</td><td>🌕 Full Moon — 16:49:02 UTC</td></tr><tr><td>Sun, Sep 27, 2026</td><td>♎ 5</td><td>Best visibility: Kitalpha (α Equ)</td></tr></tbody></table>
 <h2>Weekly Classical-Planet Ephemeris</h2>
 <p><strong>Snapshot:</strong> September 21, 2026 · 00:00 UTC</p>
-<table><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody></tbody></table>
-
-<table><thead><tr><th>♍ 28°02′</th><th>♑ 21°21′</th><th>♎ 16°29′</th><th>♏ 5°48′</th><th>♋ 25°46′</th><th>♌ 17°44′</th><th>♈ 12°21′</th></tr></thead><tbody></tbody></table>
+<table class="ephemeris"><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody><tr><td>♍ 28°02′<span class="zodiac-name">Virgo</span></td><td>♑ 21°21′<span class="zodiac-name">Capricorn</span></td><td>♎ 16°29′<span class="zodiac-name">Libra</span></td><td>♏ 5°48′<span class="zodiac-name">Scorpio</span></td><td>♋ 25°46′<span class="zodiac-name">Cancer</span></td><td>♌ 17°44′<span class="zodiac-name">Leo</span></td><td>♈ 12°21′<span class="zodiac-name">Aries</span></td></tr></tbody></table>
 <h2>Sky Note</h2>
 <p>Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.</p>
 <h2>Chart</h2>

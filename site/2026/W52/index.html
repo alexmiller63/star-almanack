@@ -20,9 +20,16 @@ h1, h2, h3 { line-height: 1.2; color: #15324e; }
 table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.6rem; font-size: .94rem; }
 th, td { border: 1px solid #cfd6dd; padding: .55rem .65rem; vertical-align: top; }
 th { background: #edf2f6; text-align: left; }
+table.ephemeris th, table.ephemeris td { text-align: center; }
+table.ephemeris td { white-space: nowrap; }
+.zodiac-name { display: block; font-size: .78rem; opacity: .72; margin-top: .08rem; }
 code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 .weekgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: .65rem; padding: 0; list-style: none; }
 .weekgrid a { display: block; padding: .75rem; border: 1px solid #cbd3da; border-radius: .4rem; text-decoration: none; background: #fafcfd; }
+@media (max-width: 760px) {
+  table { display: block; overflow-x: auto; }
+  table.ephemeris { font-size: .88rem; }
+}
 @media (prefers-color-scheme: dark) {
  body { background: #111821; color: #dbe5ee; }
  main.wrap { background: #17202b; }
@@ -40,20 +47,10 @@ code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 <p><strong>ISO dates:</strong> 2026-W52-1 through 2026-W52-7</p>
 <p><strong>Civil dates:</strong> Dec 21, 2026 – Dec 27, 2026</p>
 <h2>Calendar</h2>
-<table><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody></tbody></table>
-
-<table><thead><tr><th>Mon, Dec 21, 2026</th><th>♑ (Capricorn) 1</th><th>—</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Tue, Dec 22, 2026</th><th>♑ 2</th><th>Best visibility: Menkar (α Cet)<br>Best visibility: β Hor</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Wed, Dec 23, 2026</th><th>♑ 3</th><th>Best visibility: Algol (β Per)</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Thu, Dec 24, 2026</th><th>♑ 4</th><th>🌕 Full Moon — 01:28:13 UTC</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Fri, Dec 25, 2026</th><th>♑ 5</th><th>Best visibility: Dalim (α For)</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Sat, Dec 26, 2026</th><th>♑ 6</th><th>—</th></tr></thead><tbody></tbody></table>
-<table><thead><tr><th>Sun, Dec 27, 2026</th><th>♑ 7</th><th>Best visibility: Mirfak (α Per)</th></tr></thead><tbody></tbody></table>
+<table><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody><tr><td>Mon, Dec 21, 2026</td><td>♑ (Capricorn) 1</td><td>—</td></tr><tr><td>Tue, Dec 22, 2026</td><td>♑ 2</td><td>Best visibility: Menkar (α Cet)<br>Best visibility: β Hor</td></tr><tr><td>Wed, Dec 23, 2026</td><td>♑ 3</td><td>Best visibility: Algol (β Per)</td></tr><tr><td>Thu, Dec 24, 2026</td><td>♑ 4</td><td>🌕 Full Moon — 01:28:13 UTC</td></tr><tr><td>Fri, Dec 25, 2026</td><td>♑ 5</td><td>Best visibility: Dalim (α For)</td></tr><tr><td>Sat, Dec 26, 2026</td><td>♑ 6</td><td>—</td></tr><tr><td>Sun, Dec 27, 2026</td><td>♑ 7</td><td>Best visibility: Mirfak (α Per)</td></tr></tbody></table>
 <h2>Weekly Classical-Planet Ephemeris</h2>
 <p><strong>Snapshot:</strong> December 21, 2026 · 00:00 UTC</p>
-<table><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody></tbody></table>
-
-<table><thead><tr><th>♐ 29°07′</th><th>♉ 16°16′</th><th>♐ 22°32′</th><th>♏ 13°01′</th><th>♍ 7°59′</th><th>♌ 26°55′</th><th>♈ 8°01′</th></tr></thead><tbody></tbody></table>
+<table class="ephemeris"><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody><tr><td>♐ 29°07′<span class="zodiac-name">Sagittarius</span></td><td>♉ 16°16′<span class="zodiac-name">Taurus</span></td><td>♐ 22°32′<span class="zodiac-name">Sagittarius</span></td><td>♏ 13°01′<span class="zodiac-name">Scorpio</span></td><td>♍ 7°59′<span class="zodiac-name">Virgo</span></td><td>♌ 26°55′<span class="zodiac-name">Leo</span></td><td>♈ 8°01′<span class="zodiac-name">Aries</span></td></tr></tbody></table>
 <h2>Sky Note</h2>
 <p>Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.</p>
 <h2>Chart</h2>
