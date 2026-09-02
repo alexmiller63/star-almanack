@@ -1,0 +1,2510 @@
+# Star Almanack — 2026
+
+*A Natural Philosopher's Guide to the Night Sky*
+
+# Star Almanack — ISO 2026
+
+## Working Integrated Almanack
+
+This working edition integrates the supplied 2026 zodiac calendar, best-visibility dates for 100 selected stars and Messier objects, lunar phases, Wheel-of-the-Year points, named full moons, and the 53 weekly classical-planet snapshots.
+
+Planetary positions are geocentric tropical ecliptic longitudes sampled Monday at 00:00 UTC. Weekly chart filenames are reserved for later insertion using the approved chart model.
+
+> **Validation status:** The source material reports 100/100 best-visibility calculations passing their recalculation check and all 50 lunar phases matching the USNO comparison. The 371 weekly planetary positions remain representatively checked rather than fully independently audited.
+
+## ISO 2026-W01
+
+**ISO dates:** 2026-W01-1 through 2026-W01-7  
+
+**Civil dates:** Dec 29, 2025 – Jan 04, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Dec 29, 2025 | ♑ 9 | — |
+
+| Tue, Dec 30, 2025 | ♑ 10 | — |
+
+| Wed, Dec 31, 2025 | ♑ 11 | — |
+
+| Thu, Jan 01, 2026 | ♑ (Capricorn) 12 | Best visibility: M45 — Pleiades — Tropical Winter |
+
+| Fri, Jan 02, 2026 | ♑ 13 | — |
+
+| Sat, Jan 03, 2026 | ♑ 14 | 🌕 Full Moon — 10:02:55 UTC — Moon After Yule |
+
+| Sun, Jan 04, 2026 | ♑ 15 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Dec 29, 2025 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♑ 7°31′ | ♈ 22°56′ | ♐ 24°06′ | ♑ 5°26′ | ♑ 10°24′ | ♋ 21°45′ | ♓ 26°00′ |
+
+### Sky Note
+
+♀ and ♂ are separated by about 5° in the Monday snapshot, forming a close pairing in the sky. ♀ is also about 2° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W1-chart.png` — chart slot.
+
+## ISO 2026-W02
+
+**ISO dates:** 2026-W02-1 through 2026-W02-7  
+
+**Civil dates:** Jan 05, 2026 – Jan 11, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jan 05, 2026 | ♑ 16 | — |
+
+| Tue, Jan 06, 2026 | ♑ 17 | — |
+
+| Wed, Jan 07, 2026 | ♑ 18 | — |
+
+| Thu, Jan 08, 2026 | ♑ 19 | — |
+
+| Fri, Jan 09, 2026 | ♑ 20 | — |
+
+| Sat, Jan 10, 2026 | ♑ 21 | 🌗 Last Quarter — 15:48:28 UTC |
+
+| Sun, Jan 11, 2026 | ♑ 22 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jan 5, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♑ 14°39′ | ♌ 6°11′ | ♑ 4°48′ | ♑ 14°14′ | ♑ 15°46′ | ♋ 20°50′ | ♓ 26°25′ |
+
+### Sky Note
+
+♀ and ♂ are separated by about 2° in the Monday snapshot, forming a close pairing in the sky. ♀ is also about 0° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W2-chart.png` — chart slot.
+
+## ISO 2026-W03
+
+**ISO dates:** 2026-W03-1 through 2026-W03-7  
+
+**Civil dates:** Jan 12, 2026 – Jan 18, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jan 12, 2026 | ♑ 23 | Best visibility: Aldebaran (α Tauri) — Tropical Winter |
+
+| Tue, Jan 13, 2026 | ♑ 24 | — |
+
+| Wed, Jan 14, 2026 | ♑ 25 | — |
+
+| Thu, Jan 15, 2026 | ♑ 26 | — |
+
+| Fri, Jan 16, 2026 | ♑ 27 | — |
+
+| Sat, Jan 17, 2026 | ♑ 28 | — |
+
+| Sun, Jan 18, 2026 | ♑ 29 | 🌑 New Moon — 19:52:06 UTC |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jan 12, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♑ 21°47′ | ♏ 6°30′ | ♑ 15°48′ | ♑ 23°03′ | ♑ 21°09′ | ♋ 19°53′ | ♓ 26°54′ |
+
+### Sky Note
+
+♀ and ♂ are separated by about 2° in the Monday snapshot, forming a close pairing in the sky. ♂ is also about 1° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W3-chart.png` — chart slot.
+
+## ISO 2026-W04
+
+**ISO dates:** 2026-W04-1 through 2026-W04-7  
+
+**Civil dates:** Jan 19, 2026 – Jan 25, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jan 19, 2026 | ♑ 30 | — |
+
+| Tue, Jan 20, 2026 | ♒ (Aquarius) 1 | ♒ Aquarius ingress (300°) — 01:44:56 UTC |
+
+| Wed, Jan 21, 2026 | ♒ 2 | Best visibility: Rigel (β Orionis) — Tropical Winter |
+
+| Thu, Jan 22, 2026 | ♒ 3 | Best visibility: Capella (α Aurigae) — Northern Winter |
+
+| Fri, Jan 23, 2026 | ♒ 4 | — |
+
+| Sat, Jan 24, 2026 | ♒ 5 | Best visibility: Bellatrix (γ Orionis) — Tropical Winter<br>Best visibility: Elnath (β Tauri) — Northern Winter |
+
+| Sun, Jan 25, 2026 | ♒ 6 | Best visibility: M38 — Open Cluster — Northern Winter |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jan 19, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♑ 28°54′ | ♒ 0°53′ | ♑ 27°11′ | ♒ 1°51′ | ♑ 26°35′ | ♋ 18°57′ | ♓ 27°27′ |
+
+### Sky Note
+
+☿ and ♂ are separated by about 1° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ☿ is also about 2° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W4-chart.png` — chart slot.
+
+## ISO 2026-W05
+
+**ISO dates:** 2026-W05-1 through 2026-W05-7  
+
+**Civil dates:** Jan 26, 2026 – Feb 01, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jan 26, 2026 | ♒ 7 | 🌓 First Quarter — 04:47:32 UTC<br>Best visibility: Mintaka (δ Orionis) — Tropical Winter<br>Best visibility: M42 — Orion Nebula — Tropical Winter<br>Best visibility: M1 — Crab Nebula — Tropical Winter |
+
+| Tue, Jan 27, 2026 | ♒ 8 | Best visibility: Alnilam (ε Orionis) — Tropical Winter<br>Best visibility: M36 — Open Cluster — Northern Winter |
+
+| Wed, Jan 28, 2026 | ♒ 9 | Best visibility: Alnitak (ζ Orionis) — Tropical Winter |
+
+| Thu, Jan 29, 2026 | ♒ 10 | Best visibility: Saiph (κ Orionis) — Tropical Winter |
+
+| Fri, Jan 30, 2026 | ♒ 11 | — |
+
+| Sat, Jan 31, 2026 | ♒ 12 | Best visibility: Betelgeuse (α Orionis) — Tropical Winter<br>Best visibility: M37 — Open Cluster — Northern Winter |
+
+| Sun, Feb 01, 2026 | ♒ 13 | 🌕 Full Moon — 22:09:16 UTC — Wolf Moon |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jan 26, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♒ 6°02′ | ♉ 3°26′ | ♒ 9°00′ | ♒ 10°39′ | ♒ 2°02′ | ♋ 18°04′ | ♓ 28°04′ |
+
+### Sky Note
+
+☿ and ♀ are separated by about 2° in the Monday snapshot, forming a close pairing in the evening sky after sunset. ☿ is also about 3° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W5-chart.png` — chart slot.
+
+## ISO 2026-W06
+
+**ISO dates:** 2026-W06-1 through 2026-W06-7  
+
+**Civil dates:** Feb 02, 2026 – Feb 08, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Feb 02, 2026 | ♒ 14 | — |
+
+| Tue, Feb 03, 2026 | ♒ 15 | Cross-quarter point — Imbolc — 20:02:00 UTC |
+
+| Wed, Feb 04, 2026 | ♒ 16 | Best visibility: M35 — Open Cluster — Northern Winter |
+
+| Thu, Feb 05, 2026 | ♒ 17 | — |
+
+| Fri, Feb 06, 2026 | ♒ 18 | — |
+
+| Sat, Feb 07, 2026 | ♒ 19 | Best visibility: Canopus (α Carinae) — Southern Winter |
+
+| Sun, Feb 08, 2026 | ♒ 20 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Feb 2, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♒ 13°08′ | ♌ 14°09′ | ♒ 21°15′ | ♒ 19°26′ | ♒ 7°31′ | ♋ 17°15′ | ♓ 28°44′ |
+
+### Sky Note
+
+☿ and ♀ are separated by about 2° in the Monday snapshot, forming a close pairing in the evening sky after sunset. ♂ is also about 6° from the Sun, so solar glare affects the Aquarius grouping.
+
+### Chart
+
+`ISO2026-W6-chart.png` — chart slot.
+
+## ISO 2026-W07
+
+**ISO dates:** 2026-W07-1 through 2026-W07-7  
+
+**Civil dates:** Feb 09, 2026 – Feb 15, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Feb 09, 2026 | ♒ 21 | 🌗 Last Quarter — 12:43:14 UTC |
+
+| Tue, Feb 10, 2026 | ♒ 22 | — |
+
+| Wed, Feb 11, 2026 | ♒ 23 | — |
+
+| Thu, Feb 12, 2026 | ♒ 24 | — |
+
+| Fri, Feb 13, 2026 | ♒ 25 | Best visibility: Sirius (α Canis Majoris) — Tropical Winter<br>Best visibility: M41 — Open Cluster — Tropical Winter |
+
+| Sat, Feb 14, 2026 | ♒ 26 | — |
+
+| Sun, Feb 15, 2026 | ♒ 27 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Feb 9, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♒ 20°14′ | ♏ 14°27′ | ♓ 3°34′ | ♒ 28°13′ | ♒ 13°00′ | ♋ 16°32′ | ♓ 29°28′ |
+
+### Sky Note
+
+☿ and ♄ are separated by about 4° in the Monday snapshot. Venus lies about 8° east of the Sun, while Mars lies about 7° west of it, placing much of the week's compact planetary geometry close to the Sun and therefore in difficult twilight conditions.
+
+### Chart
+
+`ISO2026-W7-chart.png` — chart slot.
+
+## ISO 2026-W08
+
+**ISO dates:** 2026-W08-1 through 2026-W08-7  
+
+**Civil dates:** Feb 16, 2026 – Feb 22, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Feb 16, 2026 | ♒ 28 | — |
+
+| Tue, Feb 17, 2026 | ♒ 29 | 🌑 New Moon — 12:01:13 UTC<br>Best visibility: M50 — Open Cluster — Tropical Winter |
+
+| Wed, Feb 18, 2026 | ♓ (Pisces) 1 | ♓ Pisces ingress (330°) — 15:51:56 UTC |
+
+| Thu, Feb 19, 2026 | ♓ 2 | — |
+
+| Fri, Feb 20, 2026 | ♓ 3 | — |
+
+| Sat, Feb 21, 2026 | ♓ 4 | — |
+
+| Sun, Feb 22, 2026 | ♓ 5 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Feb 16, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♒ 27°19′ | ♒ 9°22′ | ♓ 14°41′ | ♓ 6°59′ | ♒ 18°30′ | ♋ 15°57′ | ♈ 0°13′ |
+
+### Sky Note
+
+☿ and ♀ are separated by about 8° in the Monday snapshot. Venus is about 10° east of the Sun and Mars about 9° west of it, so the principal grouping straddles the Sun and is largely a twilight rather than dark-sky configuration.
+
+### Chart
+
+`ISO2026-W8-chart.png` — chart slot.
+
+## ISO 2026-W09
+
+**ISO dates:** 2026-W09-1 through 2026-W09-7  
+
+**Civil dates:** Feb 23, 2026 – Mar 01, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Feb 23, 2026 | ♓ 6 | — |
+
+| Tue, Feb 24, 2026 | ♓ 7 | 🌓 First Quarter — 12:27:42 UTC |
+
+| Wed, Feb 25, 2026 | ♓ 8 | — |
+
+| Thu, Feb 26, 2026 | ♓ 9 | Best visibility: Castor (α Geminorum) — Northern Winter<br>Best visibility: M47 — Open Cluster — Tropical Winter |
+
+| Fri, Feb 27, 2026 | ♓ 10 | Best visibility: Procyon (α Canis Minoris) — Tropical Winter<br>Best visibility: M46 — Open Cluster — Tropical Winter |
+
+| Sat, Feb 28, 2026 | ♓ 11 | Best visibility: Pollux (β Geminorum) — Northern Winter |
+
+| Sun, Mar 01, 2026 | ♓ 12 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Feb 23, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♓ 4°22′ | ♉ 14°22′ | ♓ 21°41′ | ♓ 15°44′ | ♒ 24°01′ | ♋ 15°31′ | ♈ 1°01′ |
+
+### Sky Note
+
+☿ and ♀ are separated by about 6° in the Monday snapshot and form a close pairing east of the Sun. Saturn is also only about 3° from the Sun, making it particularly difficult to observe in solar glare.
+
+### Chart
+
+`ISO2026-W9-chart.png` — chart slot.
+
+## ISO 2026-W10
+
+**ISO dates:** 2026-W10-1 through 2026-W10-7  
+
+**Civil dates:** Mar 02, 2026 – Mar 08, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Mar 02, 2026 | ♓ 13 | — |
+
+| Tue, Mar 03, 2026 | ♓ 14 | 🌕 Full Moon — 11:37:56 UTC — Sap Moon |
+
+| Wed, Mar 04, 2026 | ♓ 15 | — |
+
+| Thu, Mar 05, 2026 | ♓ 16 | — |
+
+| Fri, Mar 06, 2026 | ♓ 17 | — |
+
+| Sat, Mar 07, 2026 | ♓ 18 | — |
+
+| Sun, Mar 08, 2026 | ♓ 19 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Mar 2, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♓ 11°25′ | ♌ 22°53′ | ♓ 21°28′ | ♓ 24°28′ | ♒ 29°32′ | ♋ 15°13′ | ♈ 1°51′ |
+
+### Sky Note
+
+☿ and ♀ are separated by about 3° in the Monday snapshot. Mars lies about 12° west of the Sun, while Mercury and Venus lie east of it; the compact inner-planet configuration is therefore concentrated around the Sun and best understood as a twilight feature.
+
+### Chart
+
+`ISO2026-W10-chart.png` — chart slot.
+
+## ISO 2026-W11
+
+**ISO dates:** 2026-W11-1 through 2026-W11-7  
+
+**Civil dates:** Mar 09, 2026 – Mar 15, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Mar 09, 2026 | ♓ 20 | — |
+
+| Tue, Mar 10, 2026 | ♓ 21 | — |
+
+| Wed, Mar 11, 2026 | ♓ 22 | 🌗 Last Quarter — 09:38:37 UTC |
+
+| Thu, Mar 12, 2026 | ♓ 23 | — |
+
+| Fri, Mar 13, 2026 | ♓ 24 | — |
+
+| Sat, Mar 14, 2026 | ♓ 25 | — |
+
+| Sun, Mar 15, 2026 | ♓ 26 | Best visibility: M44 — Beehive Cluster — Tropical Winter |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Mar 9, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♓ 18°25′ | ♏ 22°14′ | ♓ 15°19′ | ♈ 3°10′ | ♓ 5°03′ | ♋ 15°06′ | ♈ 2°41′ |
+
+### Sky Note
+
+♀ and ♄ are separated by about 0° in the Monday snapshot, forming a close pairing in the evening sky after sunset. ☿ is also about 3° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W11-chart.png` — chart slot.
+
+## ISO 2026-W12
+
+**ISO dates:** 2026-W12-1 through 2026-W12-7  
+
+**Civil dates:** Mar 16, 2026 – Mar 22, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Mar 16, 2026 | ♓ 27 | — |
+
+| Tue, Mar 17, 2026 | ♓ 28 | — |
+
+| Wed, Mar 18, 2026 | ♓ 29 | Best visibility: M67 — Open Cluster — Tropical Winter |
+
+| Thu, Mar 19, 2026 | ♓ 30 | 🌑 New Moon — 01:23:28 UTC |
+
+| Fri, Mar 20, 2026 | ♈ (Aries) 1 | March Equinox — First Point of Aries — Ostara — 14:45:58 UTC<br>♈ Aries ingress (0°) — 14:45:58 UTC |
+
+| Sat, Mar 21, 2026 | ♈ 2 | — |
+
+| Sun, Mar 22, 2026 | ♈ 3 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Mar 16, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♓ 25°24′ | ♒ 17°19′ | ♓ 9°41′ | ♈ 11°52′ | ♓ 10°34′ | ♋ 15°08′ | ♈ 3°33′ |
+
+### Sky Note
+
+☿ and ♂ are separated by about 1° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ♄ is also about 8° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W12-chart.png` — chart slot.
+
+## ISO 2026-W13
+
+**ISO dates:** 2026-W13-1 through 2026-W13-7  
+
+**Civil dates:** Mar 23, 2026 – Mar 29, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Mar 23, 2026 | ♈ 4 | — |
+
+| Tue, Mar 24, 2026 | ♈ 5 | — |
+
+| Wed, Mar 25, 2026 | ♈ 6 | 🌓 First Quarter — 19:17:40 UTC |
+
+| Thu, Mar 26, 2026 | ♈ 7 | — |
+
+| Fri, Mar 27, 2026 | ♈ 8 | — |
+
+| Sat, Mar 28, 2026 | ♈ 9 | — |
+
+| Sun, Mar 29, 2026 | ♈ 10 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Mar 23, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♈ 2°22′ | ♉ 24°59′ | ♓ 8°43′ | ♈ 20°32′ | ♓ 16°04′ | ♋ 15°19′ | ♈ 4°25′ |
+
+### Sky Note
+
+☿ and ♂ are separated by about 7° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ♄ is also about 2° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W13-chart.png` — chart slot.
+
+## ISO 2026-W14
+
+**ISO dates:** 2026-W14-1 through 2026-W14-7  
+
+**Civil dates:** Mar 30, 2026 – Apr 05, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Mar 30, 2026 | ♈ 11 | — |
+
+| Tue, Mar 31, 2026 | ♈ 12 | — |
+
+| Wed, Apr 01, 2026 | ♈ 13 | — |
+
+| Thu, Apr 02, 2026 | ♈ 14 | 🌕 Full Moon — 02:12:00 UTC — Seed Moon |
+
+| Fri, Apr 03, 2026 | ♈ 15 | — |
+
+| Sat, Apr 04, 2026 | ♈ 16 | — |
+
+| Sun, Apr 05, 2026 | ♈ 17 | Best visibility: M81 — Bode's Galaxy — Arctic<br>Best visibility: M82 — Cigar Galaxy — Arctic |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Mar 30, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♈ 9°18′ | ♍ 2°27′ | ♓ 12°07′ | ♈ 29°11′ | ♓ 21°33′ | ♋ 15°39′ | ♈ 5°18′ |
+
+### Sky Note
+
+☿ and ♂ are separated by about 9° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ♄ is also about 4° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W14-chart.png` — chart slot.
+
+## ISO 2026-W15
+
+**ISO dates:** 2026-W15-1 through 2026-W15-7  
+
+**Civil dates:** Apr 06, 2026 – Apr 12, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Apr 06, 2026 | ♈ 18 | — |
+
+| Tue, Apr 07, 2026 | ♈ 19 | — |
+
+| Wed, Apr 08, 2026 | ♈ 20 | Best visibility: Regulus (α Leonis) — Tropical Spring |
+
+| Thu, Apr 09, 2026 | ♈ 21 | — |
+
+| Fri, Apr 10, 2026 | ♈ 22 | 🌗 Last Quarter — 04:51:45 UTC |
+
+| Sat, Apr 11, 2026 | ♈ 23 | — |
+
+| Sun, Apr 12, 2026 | ♈ 24 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Apr 6, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♈ 16°12′ | ♐ 0°14′ | ♓ 18°33′ | ♉ 7°47′ | ♓ 27°01′ | ♋ 16°09′ | ♈ 6°10′ |
+
+### Sky Note
+
+☿ and ♂ are separated by about 8° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ♄ is also about 10° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W15-chart.png` — chart slot.
+
+## ISO 2026-W16
+
+**ISO dates:** 2026-W16-1 through 2026-W16-7  
+
+**Civil dates:** Apr 13, 2026 – Apr 19, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Apr 13, 2026 | ♈ 25 | — |
+
+| Tue, Apr 14, 2026 | ♈ 26 | — |
+
+| Wed, Apr 15, 2026 | ♈ 27 | — |
+
+| Thu, Apr 16, 2026 | ♈ 28 | — |
+
+| Fri, Apr 17, 2026 | ♈ 29 | 🌑 New Moon — 11:51:46 UTC |
+
+| Sat, Apr 18, 2026 | ♈ 30 | — |
+
+| Sun, Apr 19, 2026 | ♈ 31 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Apr 13, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♈ 23°05′ | ♒ 25°10′ | ♓ 27°04′ | ♉ 16°22′ | ♈ 2°29′ | ♋ 16°46′ | ♈ 7°02′ |
+
+### Sky Note
+
+♂ and ♄ are separated by about 5° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+
+### Chart
+
+`ISO2026-W16-chart.png` — chart slot.
+
+## ISO 2026-W17
+
+**ISO dates:** 2026-W17-1 through 2026-W17-7  
+
+**Civil dates:** Apr 20, 2026 – Apr 26, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Apr 20, 2026 | ♉ (Taurus) 1 | ♉ Taurus ingress (30°) — 01:39:07 UTC |
+
+| Tue, Apr 21, 2026 | ♉ 2 | — |
+
+| Wed, Apr 22, 2026 | ♉ 3 | — |
+
+| Thu, Apr 23, 2026 | ♉ 4 | Best visibility: Dubhe (α Ursae Majoris) — Northern Spring<br>Best visibility: Merak (β Ursae Majoris) — Northern Spring |
+
+| Fri, Apr 24, 2026 | ♉ 5 | 🌓 First Quarter — 02:31:44 UTC |
+
+| Sat, Apr 25, 2026 | ♉ 6 | — |
+
+| Sun, Apr 26, 2026 | ♉ 7 | Best visibility: M97 — Owl Nebula — Northern Spring |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Apr 20, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♈ 29°56′ | ♊ 4°47′ | ♈ 7°11′ | ♉ 24°55′ | ♈ 7°54′ | ♋ 17°31′ | ♈ 7°52′ |
+
+### Sky Note
+
+♂ and ♄ are separated by about 0° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+
+### Chart
+
+`ISO2026-W17-chart.png` — chart slot.
+
+## ISO 2026-W18
+
+**ISO dates:** 2026-W18-1 through 2026-W18-7  
+
+**Civil dates:** Apr 27, 2026 – May 03, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Apr 27, 2026 | ♉ 8 | Best visibility: M65 — Galaxy — Tropical Spring |
+
+| Tue, Apr 28, 2026 | ♉ 9 | Best visibility: M66 — Galaxy — Tropical Spring |
+
+| Wed, Apr 29, 2026 | ♉ 10 | — |
+
+| Thu, Apr 30, 2026 | ♉ 11 | — |
+
+| Fri, May 01, 2026 | ♉ 12 | 🌕 Full Moon — 17:23:15 UTC — Milk Moon |
+
+| Sat, May 02, 2026 | ♉ 13 | — |
+
+| Sun, May 03, 2026 | ♉ 14 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Apr 27, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♉ 6°45′ | ♍ 12°26′ | ♈ 18°44′ | ♊ 3°26′ | ♈ 13°18′ | ♋ 18°22′ | ♈ 8°41′ |
+
+### Sky Note
+
+♂ and ♄ are separated by about 5° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+
+### Chart
+
+`ISO2026-W18-chart.png` — chart slot.
+
+## ISO 2026-W19
+
+**ISO dates:** 2026-W19-1 through 2026-W19-7  
+
+**Civil dates:** May 04, 2026 – May 10, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, May 04, 2026 | ♉ 15 | — |
+
+| Tue, May 05, 2026 | ♉ 16 | Cross-quarter point — Beltane — 11:49 UTC<br>Best visibility: Denebola (β Leonis) — Tropical Spring |
+
+| Wed, May 06, 2026 | ♉ 17 | Best visibility: Phecda (γ Ursae Majoris) — Northern Spring |
+
+| Thu, May 07, 2026 | ♉ 18 | — |
+
+| Fri, May 08, 2026 | ♉ 19 | — |
+
+| Sat, May 09, 2026 | ♉ 20 | 🌗 Last Quarter — 21:10:33 UTC |
+
+| Sun, May 10, 2026 | ♉ 21 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, May 4, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♉ 13°33′ | ♐ 8°41′ | ♉ 1°42′ | ♊ 11°55′ | ♈ 18°40′ | ♋ 19°20′ | ♈ 9°29′ |
+
+### Sky Note
+
+♂ and ♄ are separated by about 9° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ☿ is also about 12° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W19-chart.png` — chart slot.
+
+## ISO 2026-W20
+
+**ISO dates:** 2026-W20-1 through 2026-W20-7  
+
+**Civil dates:** May 11, 2026 – May 17, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, May 11, 2026 | ♉ 22 | — |
+
+| Tue, May 12, 2026 | ♉ 23 | Best visibility: Megrez (δ Ursae Majoris) — Northern Spring |
+
+| Wed, May 13, 2026 | ♉ 24 | Best visibility: M106 — Galaxy — Northern Spring |
+
+| Thu, May 14, 2026 | ♉ 25 | — |
+
+| Fri, May 15, 2026 | ♉ 26 | Best visibility: Acrux (α Crucis) — Southern Spring |
+
+| Sat, May 16, 2026 | ♉ 27 | 🌑 New Moon — 20:01:01 UTC<br>Best visibility: Gacrux (γ Crucis) — Southern Spring |
+
+| Sun, May 17, 2026 | ♉ 28 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, May 11, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♉ 20°20′ | ♓ 3°23′ | ♉ 16°02′ | ♊ 20°21′ | ♈ 24°00′ | ♋ 20°24′ | ♈ 10°14′ |
+
+### Sky Note
+
+☿ lies about 4° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+
+### Chart
+
+`ISO2026-W20-chart.png` — chart slot.
+
+## ISO 2026-W21
+
+**ISO dates:** 2026-W21-1 through 2026-W21-7  
+
+**Civil dates:** May 18, 2026 – May 24, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, May 18, 2026 | ♉ 29 | Best visibility: M104 — Sombrero Galaxy — Tropical Spring |
+
+| Tue, May 19, 2026 | ♉ 30 | — |
+
+| Wed, May 20, 2026 | ♉ 31 | Best visibility: Mimosa (β Crucis) — Southern Spring |
+
+| Thu, May 21, 2026 | ♊ (Gemini) 1 | ♊ Gemini ingress (60°) — 00:36:44 UTC |
+
+| Fri, May 22, 2026 | ♊ 2 | Best visibility: Alioth (ε Ursae Majoris) — Northern Spring<br>Best visibility: M64 — Black Eye Galaxy — Tropical Spring |
+
+| Sat, May 23, 2026 | ♊ 3 | 🌓 First Quarter — 11:10:57 UTC |
+
+| Sun, May 24, 2026 | ♊ 4 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, May 18, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♉ 27°05′ | ♊ 13°44′ | ♊ 1°14′ | ♊ 28°45′ | ♈ 29°18′ | ♋ 21°33′ | ♈ 10°57′ |
+
+### Sky Note
+
+☿ lies about 4° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+
+### Chart
+
+`ISO2026-W21-chart.png` — chart slot.
+
+## ISO 2026-W22
+
+**ISO dates:** 2026-W22-1 through 2026-W22-7  
+
+**Civil dates:** May 25, 2026 – May 31, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, May 25, 2026 | ♊ 5 | — |
+
+| Tue, May 26, 2026 | ♊ 6 | — |
+
+| Wed, May 27, 2026 | ♊ 7 | Best visibility: M63 — Sunflower Galaxy — Northern Spring |
+
+| Thu, May 28, 2026 | ♊ 8 | — |
+
+| Fri, May 29, 2026 | ♊ 9 | Best visibility: Spica (α Virginis) — Tropical Spring<br>Best visibility: Mizar (ζ Ursae Majoris) — Northern Spring |
+
+| Sat, May 30, 2026 | ♊ 10 | — |
+
+| Sun, May 31, 2026 | ♊ 11 | 🌕 Full Moon — 08:45:16 UTC — Flower Moon<br>Best visibility: M51 — Whirlpool Galaxy — Northern Spring |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, May 25, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♊ 3°49′ | ♍ 22°18′ | ♊ 16°02′ | ♋ 7°06′ | ♉ 4°33′ | ♋ 22°47′ | ♈ 11°38′ |
+
+### Sky Note
+
+☿ lies about 12° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+
+### Chart
+
+`ISO2026-W22-chart.png` — chart slot.
+
+## ISO 2026-W23
+
+**ISO dates:** 2026-W23-1 through 2026-W23-7  
+
+**Civil dates:** Jun 01, 2026 – Jun 07, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jun 01, 2026 | ♊ 12 | — |
+
+| Tue, Jun 02, 2026 | ♊ 13 | — |
+
+| Wed, Jun 03, 2026 | ♊ 14 | Best visibility: M3 — Globular Cluster — Northern Spring |
+
+| Thu, Jun 04, 2026 | ♊ 15 | Best visibility: Alkaid (η Ursae Majoris) — Northern Spring |
+
+| Fri, Jun 05, 2026 | ♊ 16 | — |
+
+| Sat, Jun 06, 2026 | ♊ 17 | — |
+
+| Sun, Jun 07, 2026 | ♊ 18 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jun 1, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♊ 10°32′ | ♐ 17°29′ | ♊ 29°09′ | ♋ 15°24′ | ♉ 9°46′ | ♋ 24°04′ | ♈ 12°15′ |
+
+### Sky Note
+
+♀ and ♃ are separated by about 9° in the Monday snapshot, forming a close pairing in the evening sky after sunset.
+
+### Chart
+
+`ISO2026-W23-chart.png` — chart slot.
+
+## ISO 2026-W24
+
+**ISO dates:** 2026-W24-1 through 2026-W24-7  
+
+**Civil dates:** Jun 08, 2026 – Jun 14, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jun 08, 2026 | ♊ 19 | 🌗 Last Quarter — 10:00:32 UTC<br>Best visibility: Hadar (β Centauri) — Southern Spring<br>Best visibility: M101 — Pinwheel Galaxy — Northern Spring |
+
+| Tue, Jun 09, 2026 | ♊ 20 | — |
+
+| Wed, Jun 10, 2026 | ♊ 21 | — |
+
+| Thu, Jun 11, 2026 | ♊ 22 | Best visibility: Arcturus (α Boötis) — Tropical Spring |
+
+| Fri, Jun 12, 2026 | ♊ 23 | — |
+
+| Sat, Jun 13, 2026 | ♊ 24 | — |
+
+| Sun, Jun 14, 2026 | ♊ 25 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jun 8, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♊ 17°14′ | ♓ 12°16′ | ♋ 10°01′ | ♋ 23°38′ | ♉ 14°56′ | ♋ 25°25′ | ♈ 12°48′ |
+
+### Sky Note
+
+♀ and ♃ are separated by about 2° in the Monday snapshot, forming a close pairing in the evening sky after sunset.
+
+### Chart
+
+`ISO2026-W24-chart.png` — chart slot.
+
+## ISO 2026-W25
+
+**ISO dates:** 2026-W25-1 through 2026-W25-7  
+
+**Civil dates:** Jun 15, 2026 – Jun 21, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jun 15, 2026 | ♊ 26 | 🌑 New Moon — 02:54:07 UTC |
+
+| Tue, Jun 16, 2026 | ♊ 27 | Best visibility: Alpha Centauri (α Centauri) — Southern Spring |
+
+| Wed, Jun 17, 2026 | ♊ 28 | — |
+
+| Thu, Jun 18, 2026 | ♊ 29 | — |
+
+| Fri, Jun 19, 2026 | ♊ 30 | Best visibility: Kochab (β Ursae Minoris) — Arctic |
+
+| Sat, Jun 20, 2026 | ♊ 31 | — |
+
+| Sun, Jun 21, 2026 | ♋ (Cancer) 1 | 🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** Monday, Jun 15, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♊ 23°56′ | ♊ 22°12′ | ♋ 18°24′ | ♌ 1°48′ | ♉ 20°03′ | ♋ 26°49′ | ♈ 13°18′ |
+
+### Sky Note
+
+♀ and ♃ are separated by about 5° in the Monday snapshot, forming a close pairing in the evening sky after sunset. ☽ is also about 2° from the Sun, so that part of the configuration is affected by solar glare.
+
+### Chart
+
+`ISO2026-W25-chart.png` — chart slot.
+
+## ISO 2026-W26
+
+**ISO dates:** 2026-W26-1 through 2026-W26-7  
+
+**Civil dates:** Jun 22, 2026 – Jun 28, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jun 22, 2026 | ♋ 2 | — |
+
+| Tue, Jun 23, 2026 | ♋ 3 | — |
+
+| Wed, Jun 24, 2026 | ♋ 4 | — |
+
+| Thu, Jun 25, 2026 | ♋ 5 | — |
+
+| Fri, Jun 26, 2026 | ♋ 6 | Best visibility: M5 (Globular Cluster) — Tropical Summer |
+
+| Sat, Jun 27, 2026 | ♋ 7 | — |
+
+| Sun, Jun 28, 2026 | ♋ 8 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** June 22, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♋ 0°37′ | ♎ 1°39′ | ♋ 24°00′ | ♌ 9°54′ | ♉ 25°07′ | ♋ 28°15′ | ♈ 13°44′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W26-chart.png` — chart slot.
+
+## ISO 2026-W27
+
+**ISO dates:** 2026-W27-1 through 2026-W27-7  
+
+**Civil dates:** Jun 29, 2026 – Jul 05, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jun 29, 2026 | ♋ 9 | 🌕 Full Moon — 23:56:43 UTC |
+
+| Tue, Jun 30, 2026 | ♋ 10 | Best visibility: Alphecca (α Coronae Borealis) — Northern Summer |
+
+| Wed, Jul 01, 2026 | ♋ 11 | — |
+
+| Thu, Jul 02, 2026 | ♋ 12 | — |
+
+| Fri, Jul 03, 2026 | ♋ 13 | — |
+
+| Sat, Jul 04, 2026 | ♋ 14 | — |
+
+| Sun, Jul 05, 2026 | ♋ 15 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** June 29, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♋ 7°18′ | ♐ 26°23′ | ♋ 26°14′ | ♌ 17°55′ | ♊ 0°08′ | ♋ 29°44′ | ♈ 14°06′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W27-chart.png` — chart slot.
+
+## ISO 2026-W28
+
+**ISO dates:** 2026-W28-1 through 2026-W28-7  
+
+**Civil dates:** Jul 06, 2026 – Jul 12, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jul 06, 2026 | ♋ 16 | — |
+
+| Tue, Jul 07, 2026 | ♋ 17 | 🌗 Last Quarter — 19:28:59 UTC |
+
+| Wed, Jul 08, 2026 | ♋ 18 | — |
+
+| Thu, Jul 09, 2026 | ♋ 19 | — |
+
+| Fri, Jul 10, 2026 | ♋ 20 | — |
+
+| Sat, Jul 11, 2026 | ♋ 21 | — |
+
+| Sun, Jul 12, 2026 | ♋ 22 | Best visibility: M4 (Globular Cluster) — Southern Summer |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** July 6, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♋ 13°58′ | ♓ 21°50′ | ♋ 24°49′ | ♌ 25°50′ | ♊ 5°06′ | ♌ 1°14′ | ♈ 14°23′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W28-chart.png` — chart slot.
+
+## ISO 2026-W29
+
+**ISO dates:** 2026-W29-1 through 2026-W29-7  
+
+**Civil dates:** Jul 13, 2026 – Jul 19, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jul 13, 2026 | ♋ 23 | Best visibility: Antares (α Scorpii) — Southern Summer |
+
+| Tue, Jul 14, 2026 | ♋ 24 | 🌑 New Moon — 09:43:34 UTC |
+
+| Wed, Jul 15, 2026 | ♋ 25 | — |
+
+| Thu, Jul 16, 2026 | ♋ 26 | Best visibility: M13 (Hercules Cluster) — Northern Summer |
+
+| Fri, Jul 17, 2026 | ♋ 27 | Best visibility: M12 (Globular Cluster) — Tropical Summer |
+
+| Sat, Jul 18, 2026 | ♋ 28 | — |
+
+| Sun, Jul 19, 2026 | ♋ 29 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** July 13, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♋ 20°39′ | ♋ 0°46′ | ♋ 20°44′ | ♍ 3°38′ | ♊ 10°01′ | ♌ 2°46′ | ♈ 14°35′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W29-chart.png` — chart slot.
+
+## ISO 2026-W30
+
+**ISO dates:** 2026-W30-1 through 2026-W30-7  
+
+**Civil dates:** Jul 20, 2026 – Jul 26, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jul 20, 2026 | ♋ 30 | Best visibility: M10 (Globular Cluster) — Tropical Summer |
+
+| Tue, Jul 21, 2026 | ♋ 31 | 🌓 First Quarter — 11:05:35 UTC |
+
+| Wed, Jul 22, 2026 | ♌ (Leo) 1 | — |
+
+| Thu, Jul 23, 2026 | ♌ 2 | — |
+
+| Fri, Jul 24, 2026 | ♌ 3 | — |
+
+| Sat, Jul 25, 2026 | ♌ 4 | Best visibility: M92 (Globular Cluster) — Northern Summer |
+
+| Sun, Jul 26, 2026 | ♌ 5 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** July 20, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♋ 27°20′ | ♎ 10°19′ | ♋ 17°01′ | ♍ 11°18′ | ♊ 14°52′ | ♌ 4°18′ | ♈ 14°43′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W30-chart.png` — chart slot.
+
+## ISO 2026-W31
+
+**ISO dates:** 2026-W31-1 through 2026-W31-7  
+
+**Civil dates:** Jul 27, 2026 – Aug 02, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Jul 27, 2026 | ♌ 6 | — |
+
+| Tue, Jul 28, 2026 | ♌ 7 | — |
+
+| Wed, Jul 29, 2026 | ♌ 8 | Best visibility: Rasalhague (α Ophiuchi) — Tropical Summer<br>Best visibility: Shaula (λ Scorpii) — Southern Summer<br>🌕 Full Moon — 14:35:42 UTC |
+
+| Thu, Jul 30, 2026 | ♌ 9 | — |
+
+| Fri, Jul 31, 2026 | ♌ 10 | Best visibility: M6 (Butterfly Cluster) — Southern Summer |
+
+| Sat, Aug 01, 2026 | ♌ 11 | — |
+
+| Sun, Aug 02, 2026 | ♌ 12 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** July 27, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♌ 4°01′ | ♑ 5°05′ | ♋ 16°46′ | ♍ 18°49′ | ♊ 19°41′ | ♌ 5°51′ | ♈ 14°45′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W31-chart.png` — chart slot.
+
+## ISO 2026-W32
+
+**ISO dates:** 2026-W32-1 through 2026-W32-7  
+
+**Civil dates:** Aug 03, 2026 – Aug 09, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Aug 03, 2026 | ♌ 13 | Best visibility: M7 (Ptolemy's Cluster) — Southern Summer |
+
+| Tue, Aug 04, 2026 | ♌ 14 | — |
+
+| Wed, Aug 05, 2026 | ♌ 15 | — |
+
+| Thu, Aug 06, 2026 | ♌ 16 | Best visibility: M8 (Lagoon Nebula) — Southern Summer<br>Best visibility: M20 (Trifid Nebula) — Southern Summer<br>🌗 Last Quarter — 02:21:32 UTC |
+
+| Fri, Aug 07, 2026 | ♌ 17 | — |
+
+| Sat, Aug 08, 2026 | ♌ 18 | — |
+
+| Sun, Aug 09, 2026 | ♌ 19 | Best visibility: M24 (Sagittarius Star Cloud) — Tropical Summer |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** August 3, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♌ 10°42′ | ♈ 1°51′ | ♋ 21°19′ | ♍ 26°08′ | ♊ 24°25′ | ♌ 7°24′ | ♈ 14°42′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W32-chart.png` — chart slot.
+
+## ISO 2026-W33
+
+**ISO dates:** 2026-W33-1 through 2026-W33-7  
+
+**Civil dates:** Aug 10, 2026 – Aug 16, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Aug 10, 2026 | ♌ 20 | Best visibility: M16 (Eagle Nebula) — Tropical Summer<br>Best visibility: M17 (Omega Nebula) — Tropical Summer |
+
+| Tue, Aug 11, 2026 | ♌ 21 | Best visibility: Kaus Australis (ε Sagittarii) — Southern Summer |
+
+| Wed, Aug 12, 2026 | ♌ 22 | 🌑 New Moon — 17:36:40 UTC |
+
+| Thu, Aug 13, 2026 | ♌ 23 | — |
+
+| Fri, Aug 14, 2026 | ♌ 24 | Best visibility: M22 (Globular Cluster) — Southern Summer |
+
+| Sat, Aug 15, 2026 | ♌ 25 | Best visibility: Vega (α Lyrae) — Northern Summer |
+
+| Sun, Aug 16, 2026 | ♌ 26 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** August 10, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♌ 17°25′ | ♋ 9°58′ | ♌ 0°30′ | ♎ 3°12′ | ♊ 29°06′ | ♌ 8°57′ | ♈ 14°35′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W33-chart.png` — chart slot.
+
+## ISO 2026-W34
+
+**ISO dates:** 2026-W34-1 through 2026-W34-7  
+
+**Civil dates:** Aug 17, 2026 – Aug 23, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Aug 17, 2026 | ♌ 27 | — |
+
+| Tue, Aug 18, 2026 | ♌ 28 | Best visibility: M11 (Wild Duck Cluster) — Tropical Summer |
+
+| Wed, Aug 19, 2026 | ♌ 29 | Best visibility: M57 (Ring Nebula) — Northern Summer |
+
+| Thu, Aug 20, 2026 | ♌ 30 | Best visibility: Nunki (σ Sagittarii) — Southern Summer<br>🌓 First Quarter — 02:46:20 UTC |
+
+| Fri, Aug 21, 2026 | ♌ 31 | — |
+
+| Sat, Aug 22, 2026 | ♌ 32 | — |
+
+| Sun, Aug 23, 2026 | ♍ (Virgo) 1 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** August 17, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♌ 24°08′ | ♎ 18°27′ | ♌ 13°05′ | ♎ 10°00′ | ♋ 3°43′ | ♌ 10°29′ | ♈ 14°22′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W34-chart.png` — chart slot.
+
+## ISO 2026-W35
+
+**ISO dates:** 2026-W35-1 through 2026-W35-7  
+
+**Civil dates:** Aug 24, 2026 – Aug 30, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Aug 24, 2026 | ♍ 2 | — |
+
+| Tue, Aug 25, 2026 | ♍ 3 | — |
+
+| Wed, Aug 26, 2026 | ♍ 4 | — |
+
+| Thu, Aug 27, 2026 | ♍ 5 | — |
+
+| Fri, Aug 28, 2026 | ♍ 6 | 🌕 Full Moon — 04:18:30 UTC |
+
+| Sat, Aug 29, 2026 | ♍ 7 | Best visibility: Albireo (β Cygni) — Northern Summer |
+
+| Sun, Aug 30, 2026 | ♍ 8 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** August 24, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♍ 0°52′ | ♑ 13°25′ | ♌ 27°05′ | ♎ 16°25′ | ♋ 8°16′ | ♌ 12°00′ | ♈ 14°05′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W35-chart.png` — chart slot.
+
+## ISO 2026-W36
+
+**ISO dates:** 2026-W36-1 through 2026-W36-7  
+
+**Civil dates:** Aug 31, 2026 – Sep 06, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Aug 31, 2026 | ♍ 9 | — |
+
+| Tue, Sep 01, 2026 | ♍ 10 | — |
+
+| Wed, Sep 02, 2026 | ♍ 11 | — |
+
+| Thu, Sep 03, 2026 | ♍ 12 | — |
+
+| Fri, Sep 04, 2026 | ♍ 13 | Best visibility: Altair (α Aquilae) — Tropical Summer<br>🌗 Last Quarter — 07:51:15 UTC |
+
+| Sat, Sep 05, 2026 | ♍ 14 | — |
+
+| Sun, Sep 06, 2026 | ♍ 15 | Best visibility: M27 (Dumbbell Nebula) — Northern Summer |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** August 31, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♍ 7°38′ | ♈ 11°53′ | ♍ 10°48′ | ♎ 22°22′ | ♋ 12°46′ | ♌ 13°29′ | ♈ 13°44′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W36-chart.png` — chart slot.
+
+## ISO 2026-W37
+
+**ISO dates:** 2026-W37-1 through 2026-W37-7  
+
+**Civil dates:** Sep 07, 2026 – Sep 13, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Sep 07, 2026 | ♍ 16 | — |
+
+| Tue, Sep 08, 2026 | ♍ 17 | — |
+
+| Wed, Sep 09, 2026 | ♍ 18 | — |
+
+| Thu, Sep 10, 2026 | ♍ 19 | — |
+
+| Fri, Sep 11, 2026 | ♍ 20 | 🌑 New Moon — 03:26:55 UTC |
+
+| Sat, Sep 12, 2026 | ♍ 21 | — |
+
+| Sun, Sep 13, 2026 | ♍ 22 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** September 7, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♍ 14°24′ | ♋ 19°58′ | ♍ 23°39′ | ♎ 27°43′ | ♋ 17°10′ | ♌ 14°57′ | ♈ 13°19′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W37-chart.png` — chart slot.
+
+## ISO 2026-W38
+
+**ISO dates:** 2026-W38-1 through 2026-W38-7  
+
+**Civil dates:** Sep 14, 2026 – Sep 20, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Sep 14, 2026 | ♍ 23 | — |
+
+| Tue, Sep 15, 2026 | ♍ 24 | — |
+
+| Wed, Sep 16, 2026 | ♍ 25 | — |
+
+| Thu, Sep 17, 2026 | ♍ 26 | — |
+
+| Fri, Sep 18, 2026 | ♍ 27 | Best visibility: Deneb (α Cygni) — Northern Summer<br>🌓 First Quarter — 20:43:39 UTC |
+
+| Sat, Sep 19, 2026 | ♍ 28 | — |
+
+| Sun, Sep 20, 2026 | ♍ 29 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** September 14, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♍ 21°13′ | ♎ 26°25′ | ♎ 5°31′ | ♏ 2°16′ | ♋ 21°31′ | ♌ 16°22′ | ♈ 12°51′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W38-chart.png` — chart slot.
+
+## ISO 2026-W39
+
+**ISO dates:** 2026-W39-1 through 2026-W39-7  
+
+**Civil dates:** Sep 21, 2026 – Sep 27, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Sep 21, 2026 | ♍ 30 | — |
+
+| Tue, Sep 22, 2026 | ♍ 31 | — |
+
+| Wed, Sep 23, 2026 | ♎ (Libra) 1 | — |
+
+| Thu, Sep 24, 2026 | ♎ 2 | — |
+
+| Fri, Sep 25, 2026 | ♎ 3 | — |
+
+| Sat, Sep 26, 2026 | ♎ 4 | 🌕 Full Moon — 16:49:02 UTC |
+
+| Sun, Sep 27, 2026 | ♎ 5 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** September 21, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♍ 28°02′ | ♑ 21°21′ | ♎ 16°29′ | ♏ 5°48′ | ♋ 25°46′ | ♌ 17°44′ | ♈ 12°21′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W39-chart.png` — chart slot.
+
+## ISO 2026-W40
+
+**ISO dates:** 2026-W40-1 through 2026-W40-7  
+
+**Civil dates:** Sep 28, 2026 – Oct 04, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Sep 28, 2026 | ♎ 6 | — |
+
+| Tue, Sep 29, 2026 | ♎ 7 | — |
+
+| Wed, Sep 30, 2026 | ♎ 8 | — |
+
+| Thu, Oct 01, 2026 | ♎ 9 | Best visibility: M15 (Globular Cluster) — Tropical Autumn |
+
+| Fri, Oct 02, 2026 | ♎ 10 | Best visibility: M2 (Globular Cluster) — Tropical Autumn<br>Best visibility: M39 (Open Cluster) — Northern Autumn |
+
+| Sat, Oct 03, 2026 | ♎ 11 | 🌗 Last Quarter — 13:25:02 UTC |
+
+| Sun, Oct 04, 2026 | ♎ 12 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** September 28, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♎ 4°54′ | ♈ 21°28′ | ♎ 26°37′ | ♏ 7°58′ | ♋ 29°56′ | ♌ 19°03′ | ♈ 11°49′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W40-chart.png` — chart slot.
+
+## ISO 2026-W41
+
+**ISO dates:** 2026-W41-1 through 2026-W41-7  
+
+**Civil dates:** Oct 05, 2026 – Oct 11, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Oct 05, 2026 | ♎ 13 | Best visibility: Enif (ε Pegasi) — Tropical Autumn |
+
+| Tue, Oct 06, 2026 | ♎ 14 | — |
+
+| Wed, Oct 07, 2026 | ♎ 15 | — |
+
+| Thu, Oct 08, 2026 | ♎ 16 | — |
+
+| Fri, Oct 09, 2026 | ♎ 17 | — |
+
+| Sat, Oct 10, 2026 | ♎ 18 | 🌑 New Moon — 15:50:01 UTC |
+
+| Sun, Oct 11, 2026 | ♎ 19 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** October 5, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♎ 11°46′ | ♌ 0°38′ | ♏ 5°48′ | ♏ 8°26′ | ♌ 4°00′ | ♌ 20°18′ | ♈ 11°16′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W41-chart.png` — chart slot.
+
+## ISO 2026-W42
+
+**ISO dates:** 2026-W42-1 through 2026-W42-7  
+
+**Civil dates:** Oct 12, 2026 – Oct 18, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Oct 12, 2026 | ♎ 20 | — |
+
+| Tue, Oct 13, 2026 | ♎ 21 | — |
+
+| Wed, Oct 14, 2026 | ♎ 22 | — |
+
+| Thu, Oct 15, 2026 | ♎ 23 | — |
+
+| Fri, Oct 16, 2026 | ♎ 24 | — |
+
+| Sat, Oct 17, 2026 | ♎ 25 | — |
+
+| Sun, Oct 18, 2026 | ♎ 26 | 🌓 First Quarter — 16:12:35 UTC |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** October 12, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♎ 18°41′ | ♏ 4°35′ | ♏ 13°41′ | ♏ 7°00′ | ♌ 7°58′ | ♌ 21°28′ | ♈ 10°43′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W42-chart.png` — chart slot.
+
+## ISO 2026-W43
+
+**ISO dates:** 2026-W43-1 through 2026-W43-7  
+
+**Civil dates:** Oct 19, 2026 – Oct 25, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Oct 19, 2026 | ♎ 27 | — |
+
+| Tue, Oct 20, 2026 | ♎ 28 | — |
+
+| Wed, Oct 21, 2026 | ♎ 29 | — |
+
+| Thu, Oct 22, 2026 | ♎ 30 | — |
+
+| Fri, Oct 23, 2026 | ♏ (Scorpio) 1 | — |
+
+| Sat, Oct 24, 2026 | ♏ 2 | — |
+
+| Sun, Oct 25, 2026 | ♏ 3 | Best visibility: Fomalhaut (α Piscis Austrini) — Southern Autumn |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** October 19, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♎ 25°37′ | ♑ 29°10′ | ♏ 19°21′ | ♏ 3°48′ | ♌ 11°49′ | ♌ 22°34′ | ♈ 10°11′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W43-chart.png` — chart slot.
+
+## ISO 2026-W44
+
+**ISO dates:** 2026-W44-1 through 2026-W44-7  
+
+**Civil dates:** Oct 26, 2026 – Nov 01, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Oct 26, 2026 | ♏ 4 | 🌕 Full Moon — 04:11:48 UTC |
+
+| Tue, Oct 27, 2026 | ♏ 5 | Best visibility: Markab (α Pegasi) — Tropical Autumn |
+
+| Wed, Oct 28, 2026 | ♏ 6 | — |
+
+| Thu, Oct 29, 2026 | ♏ 7 | — |
+
+| Fri, Oct 30, 2026 | ♏ 8 | — |
+
+| Sat, Oct 31, 2026 | ♏ 9 | — |
+
+| Sun, Nov 01, 2026 | ♏ 10 | Best visibility: M52 (Open Cluster) — Northern Autumn<br>🌗 Last Quarter — 20:28:27 UTC |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** October 26, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♏ 2°35′ | ♉ 0°15′ | ♏ 20°47′ | ♎ 29°37′ | ♌ 15°33′ | ♌ 23°33′ | ♈ 9°41′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W44-chart.png` — chart slot.
+
+## ISO 2026-W45
+
+**ISO dates:** 2026-W45-1 through 2026-W45-7  
+
+**Civil dates:** Nov 02, 2026 – Nov 08, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Nov 02, 2026 | ♏ 11 | — |
+
+| Tue, Nov 03, 2026 | ♏ 12 | — |
+
+| Wed, Nov 04, 2026 | ♏ 13 | — |
+
+| Thu, Nov 05, 2026 | ♏ 14 | — |
+
+| Fri, Nov 06, 2026 | ♏ 15 | — |
+
+| Sat, Nov 07, 2026 | ♏ 16 | — |
+
+| Sun, Nov 08, 2026 | ♏ 17 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** November 2, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♏ 9°35′ | ♌ 11°28′ | ♏ 15°30′ | ♎ 25°46′ | ♌ 19°07′ | ♌ 24°27′ | ♈ 9°13′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W45-chart.png` — chart slot.
+
+## ISO 2026-W46
+
+**ISO dates:** 2026-W46-1 through 2026-W46-7  
+
+**Civil dates:** Nov 09, 2026 – Nov 15, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Nov 09, 2026 | ♏ 18 | 🌑 New Moon — 07:02:01 UTC |
+
+| Tue, Nov 10, 2026 | ♏ 19 | — |
+
+| Wed, Nov 11, 2026 | ♏ 20 | — |
+
+| Thu, Nov 12, 2026 | ♏ 21 | Best visibility: Alpheratz (α Andromedae) — Northern Autumn |
+
+| Fri, Nov 13, 2026 | ♏ 22 | — |
+
+| Sat, Nov 14, 2026 | ♏ 23 | — |
+
+| Sun, Nov 15, 2026 | ♏ 24 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** November 9, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♏ 16°36′ | ♏ 13°15′ | ♏ 7°07′ | ♎ 23°23′ | ♌ 22°32′ | ♌ 25°13′ | ♈ 8°49′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W46-chart.png` — chart slot.
+
+## ISO 2026-W47
+
+**ISO dates:** 2026-W47-1 through 2026-W47-7  
+
+**Civil dates:** Nov 16, 2026 – Nov 22, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Nov 16, 2026 | ♏ 25 | — |
+
+| Tue, Nov 17, 2026 | ♏ 26 | 🌓 First Quarter — 11:47:49 UTC |
+
+| Wed, Nov 18, 2026 | ♏ 27 | — |
+
+| Thu, Nov 19, 2026 | ♏ 28 | — |
+
+| Fri, Nov 20, 2026 | ♏ 29 | Best visibility: M31 (Andromeda Galaxy) — Northern Autumn<br>Best visibility: M110 (Satellite Galaxy of M31) — Northern Autumn |
+
+| Sat, Nov 21, 2026 | ♏ 30 | — |
+
+| Sun, Nov 22, 2026 | ♐ (Sagittarius) 1 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** November 16, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♏ 23°38′ | ♒ 7°13′ | ♏ 5°31′ | ♎ 22°57′ | ♌ 25°46′ | ♌ 25°52′ | ♈ 8°29′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W47-chart.png` — chart slot.
+
+## ISO 2026-W48
+
+**ISO dates:** 2026-W48-1 through 2026-W48-7  
+
+**Civil dates:** Nov 23, 2026 – Nov 29, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Nov 23, 2026 | ♐ 2 | — |
+
+| Tue, Nov 24, 2026 | ♐ 3 | 🌕 Full Moon — 14:53:31 UTC |
+
+| Wed, Nov 25, 2026 | ♐ 4 | — |
+
+| Thu, Nov 26, 2026 | ♐ 5 | — |
+
+| Fri, Nov 27, 2026 | ♐ 6 | — |
+
+| Sat, Nov 28, 2026 | ♐ 7 | — |
+
+| Sun, Nov 29, 2026 | ♐ 8 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** November 23, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♐ 0°42′ | ♉ 8°19′ | ♏ 11°22′ | ♎ 24°24′ | ♌ 28°47′ | ♌ 26°23′ | ♈ 8°13′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W48-chart.png` — chart slot.
+
+## ISO 2026-W49
+
+**ISO dates:** 2026-W49-1 through 2026-W49-7  
+
+**Civil dates:** Nov 30, 2026 – Dec 06, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Nov 30, 2026 | ♐ 9 | — |
+
+| Tue, Dec 01, 2026 | ♐ 10 | 🌗 Last Quarter — 06:08:41 UTC |
+
+| Wed, Dec 02, 2026 | ♐ 11 | Best visibility: M33 (Triangulum Galaxy) — Northern Autumn |
+
+| Thu, Dec 03, 2026 | ♐ 12 | Best visibility: Achernar (α Eridani) — Southern Autumn |
+
+| Fri, Dec 04, 2026 | ♐ 13 | — |
+
+| Sat, Dec 05, 2026 | ♐ 14 | — |
+
+| Sun, Dec 06, 2026 | ♐ 15 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** November 30, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♐ 7°47′ | ♌ 21°47′ | ♏ 20°36′ | ♎ 27°27′ | ♍ 1°34′ | ♌ 26°45′ | ♈ 8°02′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W49-chart.png` — chart slot.
+
+## ISO 2026-W50
+
+**ISO dates:** 2026-W50-1 through 2026-W50-7  
+
+**Civil dates:** Dec 07, 2026 – Dec 13, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Dec 07, 2026 | ♐ 16 | — |
+
+| Tue, Dec 08, 2026 | ♐ 17 | — |
+
+| Wed, Dec 09, 2026 | ♐ 18 | 🌑 New Moon — 00:51:51 UTC |
+
+| Thu, Dec 10, 2026 | ♐ 19 | — |
+
+| Fri, Dec 11, 2026 | ♐ 20 | — |
+
+| Sat, Dec 12, 2026 | ♐ 21 | — |
+
+| Sun, Dec 13, 2026 | ♐ 22 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** December 7, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♐ 14°53′ | ♏ 22°20′ | ♐ 0°58′ | ♏ 1°46′ | ♍ 4°03′ | ♌ 26°58′ | ♈ 7°57′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W50-chart.png` — chart slot.
+
+## ISO 2026-W51
+
+**ISO dates:** 2026-W51-1 through 2026-W51-7  
+
+**Civil dates:** Dec 14, 2026 – Dec 20, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Dec 14, 2026 | ♐ 23 | — |
+
+| Tue, Dec 15, 2026 | ♐ 24 | — |
+
+| Wed, Dec 16, 2026 | ♐ 25 | Best visibility: Polaris (α Ursae Minoris) — Arctic |
+
+| Thu, Dec 17, 2026 | ♐ 26 | 🌓 First Quarter — 05:42:40 UTC |
+
+| Fri, Dec 18, 2026 | ♐ 27 | Best visibility: M34 (Open Cluster) — Northern Autumn |
+
+| Sat, Dec 19, 2026 | ♐ 28 | — |
+
+| Sun, Dec 20, 2026 | ♐ 29 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** December 14, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♐ 22°00′ | ♒ 15°44′ | ♐ 11°41′ | ♏ 7°02′ | ♍ 6°13′ | ♌ 27°01′ | ♈ 7°56′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W51-chart.png` — chart slot.
+
+## ISO 2026-W52
+
+**ISO dates:** 2026-W52-1 through 2026-W52-7  
+
+**Civil dates:** Dec 21, 2026 – Dec 27, 2026
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Dec 21, 2026 | ♑ (Capricorn) 1 | — |
+
+| Tue, Dec 22, 2026 | ♑ 2 | — |
+
+| Wed, Dec 23, 2026 | ♑ 3 | — |
+
+| Thu, Dec 24, 2026 | ♑ 4 | Best visibility: Algol (β Persei) — Northern Winter<br>🌕 Full Moon — 01:28:13 UTC |
+
+| Fri, Dec 25, 2026 | ♑ 5 | — |
+
+| Sat, Dec 26, 2026 | ♑ 6 | — |
+
+| Sun, Dec 27, 2026 | ♑ 7 | Best visibility: Mirfak (α Persei) — Northern Winter |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** December 21, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♐ 29°07′ | ♉ 16°16′ | ♐ 22°32′ | ♏ 13°01′ | ♍ 7°59′ | ♌ 26°55′ | ♈ 8°01′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W52-chart.png` — chart slot.
+
+## ISO 2026-W53
+
+**ISO dates:** 2026-W53-1 through 2026-W53-7  
+
+**Civil dates:** Dec 28, 2026 – Jan 03, 2027
+
+### Calendar
+
+| Date | Zodiac day | Events |
+
+|---|---|---|
+
+| Mon, Dec 28, 2026 | ♑ 8 | — |
+
+| Tue, Dec 29, 2026 | ♑ 9 | — |
+
+| Wed, Dec 30, 2026 | ♑ 10 | 🌗 Last Quarter — 18:59:34 UTC |
+
+| Thu, Dec 31, 2026 | ♑ 11 | — |
+
+| Fri, Jan 01, 2027 | ♑ 12 | — |
+
+| Sat, Jan 02, 2027 | ♑ 13 | — |
+
+| Sun, Jan 03, 2027 | ♑ 14 | — |
+
+### Weekly Classical-Planet Ephemeris
+
+**Snapshot:** December 28, 2026 · 00:00 UTC
+
+| ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
+
+|---:|---:|---:|---:|---:|---:|---:|
+
+| ♑ 6°15′ | ♍ 1°04′ | ♑ 3°32′ | ♏ 19°33′ | ♍ 9°20′ | ♌ 26°40′ | ♈ 8°12′ |
+
+### Sky Note
+
+Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+
+### Chart
+
+`ISO2026-W53-chart.png` — chart slot.
+
+## Expanded α and β Star Catalog
+
+The complete generated Bayer catalog for 2026 follows. Best-visibility dates are computed by the Star Almanack visibility rule.
+
+bayer_code,bayer,greek,suffix,con,proper,ra_h,dec_deg,mag,hyg_id,hip,hd,hr,best_instant_utc,best_date,iso,mag_class
+Alp,α And,α,,And,Alpheratz,0.139791,29.090432,2.07,676,677,358,15,2026-11-11 22:29,2026-11-12,2026-W46-4,2
+Bet,β And,β,,And,Mirach,1.162194,35.620558,2.07,5436,5447,6860,337,2026-11-26 16:00,2026-11-27,2026-W48-5,2
+Alp,α Ant,α,,Ant,,10.45253,-31.067779,4.28,51027,51172,90610,4104,2026-04-13 11:05,2026-04-13,2026-W16-1,4
+Alp,α Aps,α,,Aps,,14.797701,-79.044751,3.83,72144,72370,129078,5470,2026-06-18 10:20,2026-06-18,2026-W25-4,4
+Bet,β Aps,β,,Aps,,16.718126,-77.517435,4.23,81602,81852,149324,6163,2026-07-16 09:37,2026-07-16,2026-W29-4,4
+Alp,α Aql,α,,Aql,Altair,19.846388,8.868322,0.76,97338,97649,187642,7557,2026-09-03 17:44,2026-09-04,2026-W36-5,1
+Bet,β Aql,β,,Aql,Alshain,19.921887,6.406763,3.71,97725,98036,188512,7602,2026-09-04 23:50,2026-09-05,2026-W36-6,4
+Alp,α Aqr,α,,Aqr,Sadalmelik,22.096399,-0.319851,2.95,108728,109074,209750,8414,2026-10-11 03:23,2026-10-11,2026-W41-7,3
+Bet,β Aqr,β,,Aqr,Sadalsuud,21.525982,-5.571172,2.9,105936,106278,204867,8232,2026-10-01 18:19,2026-10-02,2026-W40-5,3
+Alp,α Ara,α,,Ara,,17.530695,-49.876145,2.84,85530,85792,158427,6510,2026-07-28 15:48,2026-07-29,2026-W31-3,3
+Bet,β Ara,β,,Ara,,17.421665,-55.529884,2.84,84999,85258,157244,6461,2026-07-26 23:48,2026-07-27,2026-W31-1,3
+Alp,α Ari,α,,Ari,Hamal,2.119555,23.462423,2.01,9861,9884,12929,617,2026-12-09 22:10,2026-12-10,2026-W50-4,2
+Bet,β Ari,β,,Ari,Sheratan,1.910668,20.808035,2.64,8884,8903,11636,553,2026-12-07 01:31,2026-12-07,2026-W50-1,3
+Alp,α Aur,α,,Aur,Capella,5.27815,45.997991,0.08,24549,24608,34029,1708,2026-01-21 22:55,2026-01-22,2026-W04-4,1
+Bet,β Aur,β,,Aur,Menkalinan,5.992149,44.947433,1.9,28288,28360,40183,2088,2026-02-01 06:53,2026-02-01,2026-W05-7,2
+Alp,α Boo,α,,Boo,Arcturus,14.26103,19.18241,-0.05,69451,69673,124897,5340,2026-06-10 16:18,2026-06-11,2026-W24-4,1
+Bet,β Boo,β,,Boo,Nekkar,15.032436,40.390566,3.49,73327,73555,133208,5602,2026-06-21 19:34,2026-06-22,2026-W26-1,3
+Alp,α CMa,α,,CMa,Sirius,6.752481,-16.716116,-1.44,32263,32349,48915,2491,2026-02-12 16:34,2026-02-13,2026-W07-5,1
+Bet,β CMa,β,,CMa,Mirzam,6.378329,-17.955918,1.98,30251,30324,44743,2294,2026-02-07 00:36,2026-02-07,2026-W06-6,2
+Alp,α CMi,α,,CMi,Procyon,7.655033,5.224993,0.4,37173,37279,61421,2943,2026-02-26 18:37,2026-02-27,2026-W09-5,1
+Bet,β CMi,β,,CMi,Gomeisa,7.452512,8.289315,2.89,36087,36188,58715,2845,2026-02-23 13:36,2026-02-24,2026-W09-2,3
+Bet,β CVn,β,,CVn,Chara,12.562411,41.35748,4.24,61124,61317,109358,4785,2026-05-16 14:57,2026-05-17,2026-W20-7,4
+Alp,α Cae,α,,Cae,,4.676039,-41.863752,4.44,21717,21770,29875,1502,2026-01-13 11:41,2026-01-13,2026-W03-2,4
+Bet,β Cae,β,,Cae,,4.700965,-37.144297,5.04,21808,21861,29992,1503,2026-01-13 20:00,2026-01-14,2026-W03-3,5
+Alp,α Cam,α,,Cam,,4.900836,66.342678,4.26,22730,22783,30614,1542,2026-01-16 15:01,2026-01-17,2026-W03-6,4
+Bet,β Cam,β,,Cam,,5.05697,60.442245,4.03,23467,23522,31910,1603,2026-01-18 19:42,2026-01-19,2026-W04-1,4
+Bet,β Cap,β,,Cap,Dabih,20.350187,-14.781367,3.05,100020,100345,193495,7776,2026-09-12 03:16,2026-09-12,2026-W37-6,3
+Alp,α Car,α,,Car,Canopus,6.399195,-52.69566,-0.62,30365,30438,45348,2326,2026-02-07 08:07,2026-02-07,2026-W06-6,1
+Bet,β Car,β,,Car,Miaplacidus,9.220041,-69.717208,1.67,45106,45238,80007,3685,2026-03-24 05:35,2026-03-24,2026-W13-2,2
+Alp,α Cas,α,,Cas,Schedar,0.675116,56.537331,2.24,3172,3179,3712,168,2026-11-19 17:42,2026-11-20,2026-W47-5,2
+Bet,β Cas,β,,Cas,Caph,0.152887,59.14978,2.28,744,746,432,21,2026-11-12 03:07,2026-11-12,2026-W46-4,2
+Bet,β Cen,β,,Cen,Hadar,14.063729,-60.373039,0.61,68483,68702,122451,5267,2026-06-07 19:38,2026-06-08,2026-W24-1,1
+Alp,α Cep,α,,Cep,Alderamin,21.30963,62.585573,2.45,104861,105199,203280,8162,2026-09-28 04:06,2026-09-28,2026-W40-1,2
+Bet,β Cep,β,,Cep,Alfirk,21.477662,70.560716,3.23,105691,106032,205021,8238,2026-09-30 23:06,2026-10-01,2026-W40-4,3
+Alp,α Cet,α,,Cet,Menkar,3.037992,4.089734,2.54,14100,14135,18884,911,2025-12-22 03:21,2025-12-22,2025-W52-1,3
+Bet,β Cet,β,,Cet,Diphda,0.72649,-17.986605,2.04,3413,3419,4128,188,2026-11-20 11:24,2026-11-20,2026-W47-5,2
+Alp,α Cha,α,,Cha,,8.308703,-76.919722,4.05,40587,40702,71243,3318,2026-03-09 07:04,2026-03-09,2026-W11-1,4
+Bet,β Cha,β,,Cha,,12.305812,-79.31224,4.24,59816,60000,106911,4674,2026-05-12 17:23,2026-05-13,2026-W20-3,4
+Alp,α Cir,α,,Cir,,14.708492,-64.975138,3.18,71682,71908,128898,5463,2026-06-17 03:27,2026-06-17,2026-W25-3,3
+Bet,β Cir,β,,Cir,,15.291917,-58.801208,4.07,74595,74824,135379,5670,2026-06-25 13:26,2026-06-26,2026-W26-5,4
+Alp,α Cnc,α,,Cnc,Acubens,8.974784,11.857701,4.26,43939,44066,76756,3572,2026-03-20 04:40,2026-03-20,2026-W12-5,4
+Bet,β Cnc,β,,Cnc,Tarf,8.275256,9.185545,3.53,40411,40526,69267,3249,2026-03-08 18:01,2026-03-09,2026-W11-1,4
+Alp,α Col,α,,Col,Phact,5.660817,-34.074108,2.65,26569,26634,37795,1956,2026-01-27 10:47,2026-01-27,2026-W05-2,3
+Bet,β Col,β,,Col,Wazn,5.849329,-35.768309,3.12,27559,27628,39425,2040,2026-01-30 04:36,2026-01-30,2026-W05-5,3
+Alp,α Com,α,,Com,Diadem,13.166469,17.529431,4.32,64037,64241,114378,4968,2026-05-25 16:00,2026-05-26,2026-W22-2,4
+Alp,α Com,α,,Com,,13.166389,17.528977,5.17,118869,,114379,4969,2026-05-25 15:59,2026-05-26,2026-W22-2,5
+Bet,β Com,β,,Com,,13.197904,27.878183,4.23,64189,64394,114710,4983,2026-05-26 03:11,2026-05-26,2026-W22-2,4
+Alp,α CrA,α,,CrA,Meridiana,19.157869,-37.904474,4.11,93819,94114,178253,7254,2026-08-23 09:39,2026-08-23,2026-W34-7,4
+Bet,β CrA,β,,CrA,,19.167154,-39.340796,4.1,93865,94160,178345,7259,2026-08-23 13:17,2026-08-24,2026-W35-1,4
+Alp,α CrB,α,,CrB,Alphecca,15.578128,26.714693,2.22,76035,76267,139006,5793,2026-06-29 16:46,2026-06-30,2026-W27-2,2
+Bet,β CrB,β,,CrB,Nusakan,15.463818,29.105703,3.66,75466,75695,137909,5747,2026-06-28 01:04,2026-06-28,2026-W26-7,4
+Alp,α Crt,α,,Crt,Alkes,10.996244,-18.298783,4.08,53584,53740,95272,4287,2026-04-22 05:41,2026-04-22,2026-W17-3,4
+Bet,β Crt,β,,Crt,,11.194302,-22.825847,4.46,54522,54682,97277,4343,2026-04-25 09:32,2026-04-25,2026-W17-6,4
+Bet,β Cru,β,,Cru,Mimosa,12.795359,-59.688764,1.25,62239,62434,111123,4853,2026-05-20 03:11,2026-05-20,2026-W21-3,1
+Alp,α Crv,α,,Crv,Alchiba,12.140225,-24.728875,4.02,59020,59199,105452,4623,2026-05-10 04:31,2026-05-10,2026-W19-7,4
+Bet,β Crv,β,,Crv,Kraz,12.573121,-23.396759,2.65,61166,61359,109379,4786,2026-05-16 18:51,2026-05-17,2026-W20-7,3
+Alp,α Cyg,α,,Cyg,Deneb,20.690532,45.280338,1.25,101767,102098,197345,7924,2026-09-17 19:56,2026-09-18,2026-W38-5,1
+Bet1,β1 Cyg,β,1,Cyg,Albireo,19.512023,27.959681,3.05,95648,95947,183912,7417,2026-08-29 04:59,2026-08-29,2026-W35-6,3
+Bet2,β2 Cyg,β,2,Cyg,Albireo B,19.51261,27.965276,5.12,95652,95951,183914,7418,2026-08-29 05:13,2026-08-29,2026-W35-6,5
+Alp,α Del,α,,Del,Sualocin,20.660635,15.912072,3.77,101629,101958,196867,7906,2026-09-17 07:55,2026-09-17,2026-W38-4,4
+Bet,β Del,β,,Del,Rotanev,20.625816,14.595087,3.64,101442,101769,196524,7882,2026-09-16 17:56,2026-09-17,2026-W38-4,4
+Alp,α Dor,α,,Dor,,4.566598,-55.044975,3.3,21228,21281,29305,1465,2026-01-11 23:14,2026-01-12,2026-W03-1,3
+Bet,β Dor,β,,Dor,,5.560421,-62.489825,3.76,26004,26069,37350,1922,2026-01-25 23:58,2026-01-26,2026-W05-1,4
+Alp,α Dra,α,,Dra,Thuban,14.073165,64.37585,3.67,68537,68756,123299,5291,2026-06-07 22:56,2026-06-08,2026-W24-1,4
+Bet,β Dra,β,,Dra,Rastaban,17.507213,52.301387,2.79,85410,85670,159181,6536,2026-07-28 07:10,2026-07-28,2026-W31-2,3
+Alp,α Equ,α,,Equ,Kitalpha,21.263731,5.247845,3.92,104649,104987,202447,8131,2026-09-27 09:46,2026-09-27,2026-W39-7,4
+Bet,β Equ,β,,Equ,,21.381559,6.81114,5.16,105229,105570,203562,8178,2026-09-29 08:48,2026-09-29,2026-W40-2,5
+Alp,α Eri,α,,Eri,Achernar,1.628556,-57.236757,0.45,7574,7588,10144,472,2026-12-03 04:12,2026-12-03,2026-W49-4,1
+Bet,β Eri,β,,Eri,Cursa,5.130829,-5.086446,2.78,23820,23875,33111,1666,2026-01-19 20:44,2026-01-20,2026-W04-2,3
+Alp,α For,α,,For,Dalim,3.201249,-28.987618,3.8,14843,14879,20010,963,2026-12-24 14:06,2026-12-25,2026-W52-5,4
+Bet,β For,β,,For,,2.818169,-32.405898,4.45,13114,13147,17652,841,2026-12-19 09:50,2026-12-19,2026-W51-6,4
+Alp,α Gem,α,,Gem,Castor,7.576634,31.888276,1.58,36744,36850,60179,2891,2026-02-25 12:44,2026-02-26,2026-W09-4,2
+Alp,α Gem,α,,Gem,Castor B,7.576827,31.89052,2.85,118485,,60178,2890,2026-02-25 12:48,2026-02-26,2026-W09-4,3
+Bet,β Gem,β,,Gem,Pollux,7.755277,28.026199,1.16,37718,37826,62509,2990,2026-02-28 08:58,2026-02-28,2026-W09-6,1
+Alp,α Gru,α,,Gru,Alnair,22.137209,-46.960975,1.73,108922,109268,209952,8425,2026-10-11 19:19,2026-10-12,2026-W42-1,2
+Bet,β Gru,β,,Gru,Tiaki,22.711115,-46.884577,2.07,111768,112122,214952,8636,2026-10-21 00:51,2026-10-21,2026-W43-3,2
+Bet,β Her,β,,Her,Kornephoros,16.503668,21.489613,2.78,80571,80816,148856,6148,2026-07-13 05:20,2026-07-13,2026-W29-1,3
+Alp,α Hor,α,,Hor,,4.233363,-42.294368,3.85,19697,19747,26967,1326,2026-01-07 08:58,2026-01-07,2026-W02-3,4
+Bet,β Hor,β,,Hor,,2.979939,-64.071284,4.98,13850,13884,18866,909,2026-12-21 14:19,2026-12-22,2026-W52-2,5
+Alp,α Hya,α,,Hya,Alphard,9.45979,-8.658603,1.99,46259,46390,81797,3748,2026-03-28 04:24,2026-03-28,2026-W13-6,2
+Bet,β Hya,β,,Hya,,11.881813,-33.908124,4.29,57763,57936,103192,4552,2026-05-06 04:46,2026-05-06,2026-W19-3,4
+Alp,α Hyi,α,,Hyi,,1.979451,-61.569859,2.86,9217,9236,12311,591,2026-12-08 00:09,2026-12-08,2026-W50-2,3
+Bet,β Hyi,β,,Hyi,,0.427916,-77.254247,2.82,2016,2021,2151,98,2026-11-16 03:52,2026-11-16,2026-W47-1,3
+Alp,α Ind,α,,Ind,,20.626116,-47.291502,3.11,101445,101772,196171,7869,2026-09-16 18:04,2026-09-17,2026-W38-4,3
+Bet,β Ind,β,,Ind,,20.913498,-58.454155,3.67,102895,103227,198700,7986,2026-09-21 13:28,2026-09-22,2026-W39-2,4
+Bet,β LMi,β,,LMi,,10.464727,36.707212,4.2,51089,51233,90537,4100,2026-04-13 15:51,2026-04-14,2026-W16-2,4
+Alp,α Lac,α,,Lac,,22.521515,50.282491,3.76,110822,111169,213558,8585,2026-10-18 00:15,2026-10-18,2026-W42-7,4
+Bet,β Lac,β,,Lac,,22.392675,52.229046,4.42,110192,110538,212496,8538,2026-10-15 22:35,2026-10-16,2026-W42-5,4
+Alp,α Leo,α,,Leo,Regulus,10.139532,11.967207,1.36,49528,49669,87901,3982,2026-04-08 08:32,2026-04-08,2026-W15-3,1
+Bet,β Leo,β,,Leo,Denebola,11.817663,14.57206,2.14,57459,57632,102647,4534,2026-05-05 04:52,2026-05-05,2026-W19-2,2
+Alp,α Lep,α,,Lep,Arneb,5.545504,-17.822289,2.58,25920,25985,36673,1865,2026-01-25 18:48,2026-01-26,2026-W05-1,3
+Bet,β Lep,β,,Lep,Nihal,5.470756,-20.759441,2.81,25542,25606,36079,1829,2026-01-24 17:00,2026-01-25,2026-W04-7,3
+Bet,β Lib,β,,Lib,Zubeneschamali,15.283449,-9.382917,2.61,74556,74785,135742,5685,2026-06-25 10:30,2026-06-25,2026-W26-4,3
+Alp,α Lup,α,,Lup,,14.698823,-47.3882,2.3,71634,71860,129056,5469,2026-06-17 00:06,2026-06-17,2026-W25-3,2
+Bet,β Lup,β,,Lup,,14.975537,-43.13396,2.68,73046,73273,132058,5571,2026-06-20 23:53,2026-06-21,2026-W25-7,3
+Alp,α Lyn,α,,Lyn,,9.350925,34.392562,3.14,45728,45860,80493,3705,2026-03-26 09:21,2026-03-26,2026-W13-4,3
+Alp,α Lyr,α,,Lyr,Vega,18.61564,38.783692,0.03,90979,91262,172167,7001,2026-08-14 15:25,2026-08-15,2026-W33-6,1
+Bet,β Lyr,β,,Lyr,Sheliak,18.834665,33.362667,3.52,92133,92420,174638,7106,2026-08-18 03:51,2026-08-18,2026-W34-2,4
+Alp,α Men,α,,Men,,6.170632,-74.753045,5.08,29198,29271,43834,2261,2026-02-03 22:12,2026-02-04,2026-W06-3,5
+Bet,β Men,β,,Men,,5.045279,-71.3143,5.3,23412,23467,33285,1677,2026-01-18 15:45,2026-01-19,2026-W04-1,5
+Alp,α Mic,α,,Mic,,20.8328,-33.779722,4.89,102500,102831,198232,7965,2026-09-20 05:04,2026-09-20,2026-W38-7,5
+Bet,β Mic,β,,Mic,,20.866322,-33.177974,6.06,102659,102989,198529,7979,2026-09-20 18:32,2026-09-21,2026-W39-1,6
+Alp,α Mon,α,,Mon,,7.687454,-9.551131,3.94,37340,37447,61935,2970,2026-02-27 07:00,2026-02-27,2026-W09-5,4
+Bet,β Mon,β,,Mon,,6.480297,-7.033062,3.76,30794,30867,45725,2356,2026-02-08 13:24,2026-02-09,2026-W07-1,4
+Alp,α Mus,α,,Mus,,12.619739,-69.135564,2.69,61392,61585,109668,4798,2026-05-17 11:45,2026-05-17,2026-W20-7,3
+Bet,β Mus,β,,Mus,,12.771346,-68.108119,3.04,62127,62322,110879,4844,2026-05-19 18:32,2026-05-20,2026-W21-3,3
+Alp,α Oct,α,,Oct,,21.078621,-77.023767,5.13,103708,104043,199532,8021,2026-09-24 07:41,2026-09-24,2026-W39-4,5
+Bet,β Oct,β,,Oct,,22.767692,-81.381615,4.13,112050,112405,214846,8630,2026-10-21 22:23,2026-10-22,2026-W43-4,4
+Alp,α Oph,α,,Oph,Rasalhague,17.582241,12.560035,2.08,85769,86032,159561,6556,2026-07-29 10:46,2026-07-29,2026-W31-3,2
+Bet,β Oph,β,,Oph,Cebalrai,17.724543,4.567303,2.76,86475,86742,161096,6603,2026-07-31 15:20,2026-08-01,2026-W31-6,3
+Alp,α Ori,α,,Ori,Betelgeuse,5.919529,7.407063,0.45,27919,27989,39801,2061,2026-01-31 05:16,2026-01-31,2026-W05-6,1
+Bet,β Ori,β,,Ori,Rigel,5.242298,-8.20164,0.18,24378,24436,34085,1713,2026-01-21 10:41,2026-01-21,2026-W04-3,1
+Alp,α Pav,α,,Pav,Peacock,20.427459,-56.73509,1.94,100425,100751,193924,7790,2026-09-13 10:17,2026-09-13,2026-W37-7,2
+Bet,β Pav,β,,Pav,,20.749314,-66.203212,3.42,102064,102395,197051,7913,2026-09-18 19:33,2026-09-19,2026-W38-6,3
+Alp,α Peg,α,,Peg,Markab,23.079348,15.205264,2.49,113603,113963,218045,8781,2026-10-26 20:00,2026-10-27,2026-W44-2,2
+Bet,β Peg,β,,Peg,Scheat,23.062901,28.082789,2.44,113521,113881,217906,8775,2026-10-26 13:50,2026-10-27,2026-W44-2,2
+Alp,α Per,α,,Per,Mirfak,3.405378,49.86118,1.79,15824,15863,20902,1017,2026-12-27 08:20,2026-12-27,2026-W52-7,2
+Bet,β Per,β,,Per,Algol,3.136148,40.955648,2.09,14540,14576,19356,936,2025-12-23 11:11,2025-12-23,2025-W52-2,2
+Alp,α Phe,α,,Phe,Ankaa,0.438056,-42.305981,2.4,2076,2081,2261,99,2026-11-16 07:24,2026-11-16,2026-W47-1,2
+Bet,β Phe,β,,Phe,,1.101407,-46.718414,3.32,5154,5165,6595,322,2026-11-25 19:26,2026-11-26,2026-W48-4,3
+Alp,α Pic,α,,Pic,,6.803194,-61.941391,3.24,32521,32607,50241,2550,2026-02-13 11:12,2026-02-13,2026-W07-5,3
+Bet,β Pic,β,,Pic,,5.788079,-51.066514,3.85,27253,27321,39060,2020,2026-01-29 07:09,2026-01-29,2026-W05-4,4
+Alp,α PsA,α,,PsA,Fomalhaut,22.960838,-29.622236,1.17,113008,113368,216956,8728,2026-10-24 23:29,2026-10-25,2026-W43-7,1
+Bet,β PsA,β,,PsA,,22.52509,-32.346073,4.29,110841,111188,213398,8576,2026-10-18 01:38,2026-10-18,2026-W42-7,4
+Alp,α Psc,α,,Psc,Alrescha,2.034117,2.763759,3.82,9467,9487,12446,595,2026-12-08 18:07,2026-12-09,2026-W50-3,4
+Bet,β Psc,β,,Psc,Fumalsamakah,23.064615,3.820045,4.48,113529,113889,217891,8773,2026-10-26 14:29,2026-10-27,2026-W44-2,4
+Alp,α Pyx,α,,Pyx,,8.726539,-33.186385,3.68,42709,42828,74575,3468,2026-03-16 02:49,2026-03-16,2026-W12-1,4
+Bet,β Pyx,β,,Pyx,,8.668373,-35.308352,3.97,42396,42515,74006,3438,2026-03-15 03:57,2026-03-15,2026-W11-7,4
+Alp,α Ret,α,,Ret,,4.240404,-62.473858,3.33,19730,19780,27256,1336,2026-01-07 11:17,2026-01-07,2026-W02-3,3
+Bet,β Ret,β,,Ret,,3.736593,-64.806903,3.84,17398,17440,23817,1175,2026-12-31 20:05,2027-01-01,2026-W53-5,4
+Alp,α Scl,α,,Scl,,0.976766,-29.357449,4.3,4567,4577,5737,280,2026-11-24 01:06,2026-11-24,2026-W48-2,4
+Bet,β Scl,β,,Scl,,23.549512,-37.818268,4.38,115865,116231,221507,8937,2026-11-03 02:00,2026-11-03,2026-W45-2,4
+Alp,α Sco,α,,Sco,Antares,16.490128,-26.432002,1.06,80519,80763,148478,6134,2026-07-13 00:32,2026-07-13,2026-W29-1,1
+Alp,α Sct,α,,Sct,,18.586785,-8.244073,3.85,90835,91117,171443,6973,2026-08-14 04:21,2026-08-14,2026-W33-5,4
+Bet,β Sct,β,,Sct,,18.786242,-4.747867,4.22,91888,92175,173764,7063,2026-08-17 09:08,2026-08-17,2026-W34-1,4
+Alp,α Ser,α,,Ser,Unukalhai,15.737798,6.425627,2.63,76835,77070,140573,5854,2026-07-02 00:21,2026-07-02,2026-W27-4,3
+Bet,β Ser,β,,Ser,,15.769793,15.421826,3.65,76997,77233,141003,5867,2026-07-02 11:30,2026-07-02,2026-W27-4,4
+Alp,α Sex,α,,Sex,,10.1323,-0.371637,4.48,49500,49641,87887,3981,2026-04-08 05:42,2026-04-08,2026-W15-3,4
+Bet,β Sex,β,,Sex,,10.504855,-0.637026,5.08,51290,51437,90994,4119,2026-04-14 07:29,2026-04-14,2026-W16-2,5
+Alp,α Sge,α,,Sge,Sham,19.668275,18.01389,4.39,96450,96757,185758,7479,2026-08-31 18:54,2026-09-01,2026-W36-2,4
+Bet,β Sge,β,,Sge,,19.68415,17.476041,4.39,96530,96837,185958,7488,2026-09-01 01:12,2026-09-01,2026-W36-2,4
+Alp,α Sgr,α,,Sgr,Rukbat,19.398103,-40.61594,3.96,95052,95347,181869,7348,2026-08-27 08:01,2026-08-27,2026-W35-4,4
+Alp,α Tau,α,,Tau,Aldebaran,4.598677,16.509301,0.87,21368,21421,29139,1457,2026-01-12 09:54,2026-01-12,2026-W03-1,1
+Bet,β Tau,β,,Tau,Elnath,5.438198,28.60745,1.65,25364,25428,35497,1791,2026-01-24 05:47,2026-01-24,2026-W04-6,2
+Alp,α Tel,α,,Tel,,18.449561,-45.968459,3.49,90143,90422,169467,6897,2026-08-11 23:52,2026-08-12,2026-W33-3,3
+Alp,α TrA,α,,TrA,Atria,16.811077,-69.027715,1.91,82022,82273,150798,6217,2026-07-17 18:51,2026-07-18,2026-W29-6,2
+Bet,β TrA,β,,TrA,,15.919083,-63.430727,2.83,77716,77952,141891,5897,2026-07-04 15:37,2026-07-05,2026-W27-7,3
+Alp,α Tri,α,,Tri,Mothallah,1.884696,29.578829,3.42,8777,8796,11443,544,2026-12-06 16:57,2026-12-07,2026-W50-1,3
+Bet,β Tri,β,,Tri,,2.159058,34.987297,3,10041,10064,13161,622,2026-12-10 11:06,2026-12-10,2026-W50-4,3
+Alp,α Tuc,α,,Tuc,,22.308371,-60.259587,2.87,109784,110130,211416,8502,2026-10-14 13:56,2026-10-15,2026-W42-4,3
+Alp,α UMa,α,,UMa,Dubhe,11.062155,61.751033,1.81,53905,54061,95689,4301,2026-04-23 06:59,2026-04-23,2026-W17-4,2
+Bet,β UMa,β,,UMa,Merak,11.030677,56.382427,2.34,53754,53910,95418,4295,2026-04-22 18:54,2026-04-23,2026-W17-4,2
+Alp,α UMi,α,,UMi,Polaris,2.52975,89.264109,1.97,11734,11767,8890,424,2026-12-15 12:06,2026-12-16,2026-W51-3,2
+Bet,β UMi,β,,UMi,Kochab,14.845105,74.155505,2.07,72380,72607,131873,5563,2026-06-19 02:44,2026-06-19,2026-W25-5,2
+Alp,α Vir,α,,Vir,Spica,13.419883,-11.161322,0.98,65269,65474,116658,5056,2026-05-29 09:51,2026-05-29,2026-W22-5,1
+Bet,β Vir,β,,Vir,Zavijava,11.844922,1.764718,3.59,57584,57757,102870,4540,2026-05-05 15:02,2026-05-06,2026-W19-3,4
+Alp,α Vol,α,,Vol,,9.040777,-66.396076,4,44254,44382,78045,3615,2026-03-21 06:44,2026-03-21,2026-W12-6,4
+Bet,β Vol,β,,Vol,,8.428951,-66.13689,3.77,41195,41312,71878,3347,2026-03-11 06:02,2026-03-11,2026-W11-3,4
+Alp,α Vul,α,,Vul,Anser,19.478427,24.664905,4.44,95473,95771,183439,7405,2026-08-28 15:42,2026-08-29,2026-W35-6,4
