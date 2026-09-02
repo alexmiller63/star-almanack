@@ -96,3 +96,11 @@ Identity is established conservatively. Messier objects are matched by their M-n
 Generated catalog rows are never deduplicated against one another. In particular, genuine separately designated components such as α¹/α² or β¹/β² remain separate, and no source row is deleted or collapsed. The deduplicator changes only what is printed in a calendar cell; provenance and catalog completeness remain in the appended catalog sections and source CSV files.
 
 If a generated entry is suppressed because the same object is already represented by legacy calendar text, that catalog row is still recorded as successfully placed for the builder's completeness accounting. This keeps the invariant that all 110 Messier rows, all audited Bayer rows, and all new bright-star rows are accounted for while avoiding duplicate-looking observer-facing entries.
+
+## 2026-09-02 — Cross-date Messier reconciliation
+
+Content audit exposed a legacy Messier duplication that the first alias rule did not catch: M37 appeared once on the generated catalog best date and again as a descriptive legacy entry on the neighboring civil date. Messier identity is therefore reconciled globally across the weekly calendar by M-number, not merely within a single date cell.
+
+For every Messier object, `messier-visibility-2026.csv` is authoritative for the calendar placement date. A legacy `Best visibility:` event carrying the same M-number on any other date is suppressed before generated fixed-object injection. If a descriptive legacy Messier label already appears on the catalog best date, that human-readable label is retained and the bare generated alias is suppressed as before.
+
+This remains a presentation-only rule. All 110 source rows remain unchanged and must still be accounted for by the builder. CI now requires each M1 through M110 identity from the source catalog to occur exactly once in the calendar and specifically on its computed best-visibility date.
