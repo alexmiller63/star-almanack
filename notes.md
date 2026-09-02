@@ -114,3 +114,23 @@ For the Bayer layer, rows with the same exact Bayer designation and the same pla
 Separately numbered Bayer designations remain separate observing targets. Thus α¹/α² and β¹/β² are not collapsed by this rule. Likewise, physically related stars are not merged merely because they belong to the same gravitational system: a future special-mentions layer may list Proxima Centauri separately from the naked-eye Alpha Centauri A/B observing target.
 
 This rule is presentation-only and observer-first. Every underlying Bayer row still participates in completeness accounting even when more than one row maps to the same calendar target. Future notable-object layers, including nearby stars such as Proxima Centauri and naked-eye stars with confirmed exoplanets, should remain separate from the systematic α/β and V ≤ +2.50 inclusion layers.
+
+## 2026-09-02 — Special Mentions and observing-aid notation
+
+Special Mentions are an editorial layer separate from the systematic Messier, α/β Bayer, and V ≤ +2.50 bright-star layers. A Special Mention earns inclusion because its historical, cultural, observational, or scientific story is worth telling. Significance selects the object; the sky selects its placement.
+
+Special Mentions are not allocated by zodiac quota. Candidate objects receive their natural 2026 placement from the same observer-first visibility logic used by the Almanack. A zodiac month may therefore contain several Special Mentions, one, or none at all. Do not add or move objects merely to balance otherwise quiet zodiac months.
+
+The recovered candidate nucleus includes Proxima Centauri, Barnard's Star, Wolf 359, 61 Cygni, Epsilon Eridani, Lalande 21185, Rigel, Arcturus, Deneb, R Coronae Borealis, Eta Carinae, Sirius B, 40 Eridani B, Vega, and Thuban. Antares is an additional natural candidate because its name and appearance preserve the historical “rival of Ares” story. The candidate pool may grow; there is no predetermined final count.
+
+Each Special Mention should answer three observer-facing questions: **Why should I care? When should I look? What do I need to see it?** Scientific history and science-fiction history may both be relevant when they materially explain why an object matters to human culture.
+
+Observing-aid notation is Almanack-wide, not restricted to Special Mentions. Stars, Messier objects, and Special Mentions should identify the minimum practical observing aid for the actual target under ordinary observing conditions:
+
+- **👁** — Naked eye
+- **B** — Binoculars
+- **🔭** — Telescope
+
+The classification is practical rather than a statement of an absolute physiological detection limit. For a multiple system, classify the actual observing task: Sirius itself is a naked-eye target, while observing Sirius B is a telescope task. Variable objects may require context when their practical visibility changes substantially with brightness.
+
+For urban Natural Philosophers, the Almanack should explicitly recommend astronomical binoculars as a particularly useful first instrument. Binoculars recover many stars hidden by city light pollution, enrich open clusters, make a number of Messier objects approachable, provide a wide field with both eyes, and require very little setup. The **B** class is therefore a first-class observing mode, not shorthand for an inferior telescope target.
