@@ -41,15 +41,15 @@ CSS = """
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
 body { margin: 0; font-family: Georgia, 'Times New Roman', serif; line-height: 1.55; background: #f7f4ec; color: #1f2833; }
-a { color: #244d74; }
+a, a:visited { color: #244d74; }
 header, footer { background: #0f2740; color: #fff; }
-header a, footer a { color: #dcecff; }
+header a, header a:visited, footer a, footer a:visited { color: #dcecff; }
 .wrap { max-width: 980px; margin: 0 auto; padding: 1.1rem 1.25rem; }
 main.wrap { background: #fff; min-height: 75vh; padding-top: 2rem; padding-bottom: 3rem; }
 .brand { font-size: 1.2rem; font-weight: 700; }
 .subtitle { opacity: .85; }
 nav.weeknav { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin: 1.4rem 0; }
-nav.weeknav a, nav.weeknav span { display: inline-block; padding: .5rem .7rem; border: 1px solid #c5ced7; border-radius: .35rem; text-decoration: none; }
+nav.weeknav a, nav.weeknav a:visited, nav.weeknav span { display: inline-block; padding: .5rem .7rem; border: 1px solid #c5ced7; border-radius: .35rem; text-decoration: none; color: #244d74; }
 h1, h2, h3 { line-height: 1.2; color: #15324e; }
 table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.6rem; font-size: .94rem; }
 th, td { border: 1px solid #cfd6dd; padding: .55rem .65rem; vertical-align: top; }
@@ -59,7 +59,7 @@ table.ephemeris td { white-space: nowrap; }
 .zodiac-name { display: block; font-size: .78rem; opacity: .72; margin-top: .08rem; }
 code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 .weekgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: .65rem; padding: 0; list-style: none; }
-.weekgrid a { display: block; padding: .75rem; border: 1px solid #cbd3da; border-radius: .4rem; text-decoration: none; background: #fafcfd; }
+.weekgrid a, .weekgrid a:visited { display: block; padding: .75rem; border: 1px solid #cbd3da; border-radius: .4rem; text-decoration: none; background: #fafcfd; color: #244d74; }
 @media (max-width: 760px) {
   table { display: block; overflow-x: auto; }
   table.ephemeris { font-size: .88rem; }
@@ -67,12 +67,14 @@ code { background: #eef1f3; padding: .08rem .25rem; border-radius: .2rem; }
 @media (prefers-color-scheme: dark) {
  body { background: #111821; color: #dbe5ee; }
  main.wrap { background: #17202b; }
+ a, a:visited { color: #9fd0ff; }
+ header a, header a:visited, footer a, footer a:visited { color: #dcecff; }
  h1,h2,h3 { color: #eef7ff; }
  th { background: #233142; }
  th,td { border-color: #425166; }
  code { background: #233142; }
- .weekgrid a { background: #1d2937; border-color: #435268; }
- nav.weeknav a, nav.weeknav span { border-color: #435268; }
+ .weekgrid a, .weekgrid a:visited { background: #1d2937; border-color: #435268; color: #b9ddff; }
+ nav.weeknav a, nav.weeknav a:visited, nav.weeknav span { border-color: #435268; color: #b9ddff; }
 }
 """.strip()
 
@@ -240,7 +242,7 @@ def build() -> None:
         "<h1>Star Almanack — 2026</h1>"
         "<p>Browse all 53 ISO weeks of the 2026 Star Almanack. "
         "ISO 2026 begins Monday, December 29, 2025 and ends Sunday, January 3, 2027.</p>"
-        f'<ul class="weekgrid">{"".join(links)}</ul>'
+        f'<ul class="weekgrid'>{"".join(links)}</ul>'
     )
     index = shell("2026 weekly index", index_body).replace('href="../index.html"', 'href="index.html"')
     (OUT / "index.html").write_text(index, encoding="utf-8")
