@@ -1,0 +1,61 @@
+name: Build Second-Magnitude Bright-Star Catalog
+
+"on":
+  workflow_dispatch:
+  push:
+    paths:
+      - build_bright_star_catalog.py
+      - bright-stars-2mag-spec.md
+      - expanded-bayer-stars.csv
+      - .github/workflows/build-bright-star-catalog.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Star Almanack
+        uses: actions/checkout@v4
+
+      - name: Fetch pinned HYG v4.1 catalog
+        run: |
+          curl -fL \
+            https://raw.githubusercontent.com/astronexus/HYG-Database/3bf37f4b2d5460e1278286320d1d62fab9b493c1/hyg/CURRENT/hygdata_v41.csv \
+            -o /tmp/hygdata_v41.csv
+
+      - name: Build second-magnitude baseline catalog
+        run: python build_bright_star_catalog.py /tmp/hygdata_v41.csv bright-stars-2mag.csv --bayer expanded-bayer-stars.csv
+
+      - name: Validate threshold and alpha-beta split
+        run: |
+          python - <<'PY'
+          import csv
+
+          with open('bright-stars-2mag.csv', newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          if not rows:
+              raise SystemExit('Bright-star catalog is empty')
+          bad = [r for r in rows if float(r['representative_vmax']) > 2.50]
+          if bad:
+              raise SystemExit(f'{len(bad)} rows exceed +2.50 threshold')
+          ab = sum(r['in_alpha_beta_layer'] == 'yes' for r in rows)
+          non_ab = len(rows) - ab
+          print(f'Baseline rows: {len(rows)}')
+          print(f'Already alpha/beta: {ab}')
+          print(f'New non-alpha/beta: {non_ab}')
+          PY
+
+      - name: Commit generated bright-star catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bright-stars-2mag.csv
+          if git diff --cached --quiet; then
+            echo "No bright-star catalog changes."
+            exit 0
+          fi
+          git commit -m "Build second-magnitude bright-star catalog"
+          git push
