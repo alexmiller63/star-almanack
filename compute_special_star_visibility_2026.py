@@ -15,6 +15,8 @@ from pathlib import Path
 from compute_bayer_visibility_2026 import best_visibility, iso_date
 from compute_bright_star_visibility_2026 import normalize_to_iso_2026
 
+EXPECTED_SPECIAL_STARS = 24
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -44,13 +46,13 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(output)
 
-    if len(output) != 22:
-        raise SystemExit(f"Expected 22 Special Stars, got {len(output)}")
+    if len(output) != EXPECTED_SPECIAL_STARS:
+        raise SystemExit(f"Expected {EXPECTED_SPECIAL_STARS} Special Stars, got {len(output)}")
     bad = [r for r in output if __import__('datetime').date.fromisoformat(r['best_date']).isocalendar().year != 2026]
     if bad:
         raise SystemExit(f"Special Star dates outside ISO 2026: {[r['name'] for r in bad]}")
 
-    print("Special Star coordinate rows: 22")
+    print(f"Special Star coordinate rows: {EXPECTED_SPECIAL_STARS}")
     print("All best dates fall inside ISO 2026")
     print(f"Wrote {args.output}")
 
