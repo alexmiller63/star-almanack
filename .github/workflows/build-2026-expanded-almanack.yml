@@ -7,6 +7,7 @@ on:
       - ISO2026.md
       - almanack.md
       - expanded-bayer-visibility-2026.csv
+      - weekly-ephemeris-2026.csv
       - build_expanded_almanack.py
 
 permissions:
@@ -23,7 +24,7 @@ jobs:
       - name: Verify 53 weeks
         run: |
           test -f almanack-expanded.md
-          test "$(grep -c '^## ISO 2026-W[0-9][0-9]$' almanack.md)" -eq 53
+          test "$(grep -c '^## ISO 2026-W[0-9][0-9]$' almanack-expanded.md)" -eq 53
           test "$(grep -c '^## ISO 2026-W[0-9][0-9]$' almanack-expanded.md)" -eq 53
       - name: Commit expanded Almanack
         run: |
