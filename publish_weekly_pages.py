@@ -65,9 +65,9 @@ tbody tr:last-child td { border-bottom:0; }
 th { background:#e8f0f5; text-align:left; color:#17344d; font-weight:700; }
 tbody tr:nth-child(even) td { background:#fbfaf7; }
 table.calendar { display:table; table-layout:fixed; }
-table.calendar th:first-child,table.calendar td:first-child { width:30%; }
-table.calendar th:nth-child(2),table.calendar td:nth-child(2) { width:15%; }
-table.calendar th:nth-child(3),table.calendar td:nth-child(3) { width:55%; }
+table.calendar th:first-child,table.calendar td:first-child { width:16%; }
+table.calendar th:nth-child(2),table.calendar td:nth-child(2) { width:8%; }
+table.calendar th:nth-child(3),table.calendar td:nth-child(3) { width:76%; }
 table.calendar td:first-child { white-space:nowrap; font-weight:600; }
 table.calendar td:nth-child(2) { white-space:nowrap; text-align:center; }
 table.calendar td:nth-child(3) { line-height:1.6; }
@@ -80,7 +80,7 @@ code { background:#eef1f3; padding:.1rem .3rem; border-radius:.25rem; font-size:
 .weekgrid a,.weekgrid a:visited { display:block; padding:.85rem .9rem; border:1px solid #cbd3da; border-radius:.5rem; text-decoration:none; text-align:center; background:#fff; color:var(--link); font-weight:650; }
 footer { font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:.88rem; }
 footer .wrap { padding-top:1.3rem; padding-bottom:1.3rem; opacity:.9; }
-@media (max-width:760px) { html{font-size:16px}.wrap{padding-left:1rem;padding-right:1rem}main.wrap{padding:1.35rem 1rem 2.5rem;box-shadow:none}nav.weeknav{gap:.4rem;margin-bottom:1.5rem}nav.weeknav a,nav.weeknav a:visited,nav.weeknav span{min-width:0;padding:.6rem .45rem}table{font-size:.9rem}table.calendar{display:table;width:100%;table-layout:fixed;overflow:hidden}table.calendar th,table.calendar td{padding:.6rem .55rem}table.calendar th:first-child,table.calendar td:first-child{width:30%;min-width:0}table.calendar th:nth-child(2),table.calendar td:nth-child(2){width:15%;min-width:0}table.calendar th:nth-child(3),table.calendar td:nth-child(3){width:55%;min-width:0}table.calendar td:first-child{white-space:normal}table.calendar td:nth-child(2){white-space:nowrap}table.calendar td:nth-child(3){overflow-wrap:anywhere}table.ephemeris{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:.86rem}.weekgrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:760px) { html{font-size:16px}.wrap{padding-left:1rem;padding-right:1rem}main.wrap{padding:1.35rem 1rem 2.5rem;box-shadow:none}nav.weeknav{gap:.4rem;margin-bottom:1.5rem}nav.weeknav a,nav.weeknav a:visited,nav.weeknav span{min-width:0;padding:.6rem .45rem}table{font-size:.9rem}table.calendar{display:table;width:100%;table-layout:fixed;overflow:hidden}table.calendar th,table.calendar td{padding:.6rem .55rem}table.calendar th:first-child,table.calendar td:first-child{width:20%;min-width:0}table.calendar th:nth-child(2),table.calendar td:nth-child(2){width:11%;min-width:0}table.calendar th:nth-child(3),table.calendar td:nth-child(3){width:69%;min-width:0}table.calendar td:first-child{white-space:normal}table.calendar td:nth-child(2){white-space:nowrap}table.calendar td:nth-child(3){overflow-wrap:anywhere}table.ephemeris{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:.86rem}.weekgrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (prefers-color-scheme:dark) { :root{--ink:#dce6ef;--muted:#a7b4c0;--link:#9fd0ff;--paper:#17212b;--page:#10171f;--rule:#394957;--soft-blue:#203549}body{background:var(--page);color:var(--ink)}main.wrap{background:var(--paper);box-shadow:none}h1,h2,h3,strong{color:#f1f7fb}th{background:#223444;color:#eef7ff}th,td{border-color:#40505e}table{border-color:#40505e}tbody tr:nth-child(even) td{background:#1b2732}code{background:#263643}.weekgrid a,.weekgrid a:visited,nav.weeknav a,nav.weeknav a:visited{background:#1c2a36;border-color:#405567;color:#b6dcff}nav.weeknav span{background:#1a242d;border-color:#384956;color:#7f909f} }
 """.strip()
 
