@@ -21,21 +21,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Dec 29, 2025 | ♑ 9 | — |
-
 | Tue, Dec 30, 2025 | ♑ 10 | — |
-
 | Wed, Dec 31, 2025 | ♑ 11 | — |
-
 | Thu, Jan 01, 2026 | ♑ (Capricorn) 12 | Best visibility: M45 — Pleiades — Tropical Winter |
-
 | Fri, Jan 02, 2026 | ♑ 13 | — |
-
 | Sat, Jan 03, 2026 | ♑ 14 | 🌕 Full Moon — 10:02:55 UTC — Moon After Yule |
-
 | Sun, Jan 04, 2026 | ♑ 15 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -43,9 +35,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Dec 29, 2025 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♑ 7°31′ | ♈ 22°56′ | ♐ 24°06′ | ♑ 5°26′ | ♑ 10°24′ | ♋ 21°45′ | ♓ 26°00′ |
 
 ### Sky Note
@@ -65,21 +55,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jan 05, 2026 | ♑ 16 | — |
-
 | Tue, Jan 06, 2026 | ♑ 17 | — |
-
 | Wed, Jan 07, 2026 | ♑ 18 | Best visibility: α Hor<br>Best visibility: α Ret |
-
 | Thu, Jan 08, 2026 | ♑ 19 | — |
-
 | Fri, Jan 09, 2026 | ♑ 20 | — |
-
 | Sat, Jan 10, 2026 | ♑ 21 | 🌗 Last Quarter — 15:48:28 UTC |
-
 | Sun, Jan 11, 2026 | ♑ 22 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -87,9 +69,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Jan 5, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♑ 14°39′ | ♌ 6°11′ | ♑ 4°48′ | ♑ 14°14′ | ♑ 15°46′ | ♋ 20°50′ | ♓ 26°25′ |
 
 ### Sky Note
@@ -109,21 +89,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jan 12, 2026 | ♑ 23 | Best visibility: Aldebaran (α Tauri) — Tropical Winter<br>Best visibility: α Dor |
-
 | Tue, Jan 13, 2026 | ♑ 24 | Best visibility: α Cae |
-
 | Wed, Jan 14, 2026 | ♑ 25 | Best visibility: β Cae |
-
 | Thu, Jan 15, 2026 | ♑ 26 | — |
-
 | Fri, Jan 16, 2026 | ♑ 27 | — |
-
 | Sat, Jan 17, 2026 | ♑ 28 | Best visibility: α Cam |
-
 | Sun, Jan 18, 2026 | ♑ 29 | 🌑 New Moon — 19:52:06 UTC |
 
 ### Weekly Classical-Planet Ephemeris
@@ -131,9 +103,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Jan 12, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♑ 21°47′ | ♏ 6°30′ | ♑ 15°48′ | ♑ 23°03′ | ♑ 21°09′ | ♋ 19°53′ | ♓ 26°54′ |
 
 ### Sky Note
@@ -153,21 +123,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jan 19, 2026 | ♑ 30 | Best visibility: β Cam<br>Best visibility: β Men |
-
 | Tue, Jan 20, 2026 | ♒ (Aquarius) 1 | ♒ Aquarius ingress (300°) — 01:44:56 UTC<br>Best visibility: Cursa (β Eri) |
-
 | Wed, Jan 21, 2026 | ♒ 2 | Best visibility: Rigel (β Orionis) — Tropical Winter |
-
 | Thu, Jan 22, 2026 | ♒ 3 | Best visibility: Capella (α Aurigae) — Northern Winter |
-
 | Fri, Jan 23, 2026 | ♒ 4 | — |
-
 | Sat, Jan 24, 2026 | ♒ 5 | Best visibility: Bellatrix (γ Orionis) — Tropical Winter<br>Best visibility: Elnath (β Tauri) — Northern Winter<br>Best visibility: M79 |
-
 | Sun, Jan 25, 2026 | ♒ 6 | Best visibility: M38 — Open Cluster — Northern Winter<br>Best visibility: Nihal (β Lep) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -175,9 +137,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Jan 19, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♑ 28°54′ | ♒ 0°53′ | ♑ 27°11′ | ♒ 1°51′ | ♑ 26°35′ | ♋ 18°57′ | ♓ 27°27′ |
 
 ### Sky Note
@@ -197,21 +157,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jan 26, 2026 | ♒ 7 | 🌓 First Quarter — 04:47:32 UTC<br>Best visibility: Mintaka (δ Orionis) — Tropical Winter<br>Best visibility: M42 — Orion Nebula — Tropical Winter<br>Best visibility: M1 — Crab Nebula — Tropical Winter<br>Best visibility: M43<br>Best visibility: β Dor<br>Best visibility: Arneb (α Lep) |
-
 | Tue, Jan 27, 2026 | ♒ 8 | Best visibility: Alnilam (ε Orionis) — Tropical Winter<br>Best visibility: M36 — Open Cluster — Northern Winter<br>Best visibility: Phact (α Col) |
-
 | Wed, Jan 28, 2026 | ♒ 9 | Best visibility: Alnitak (ζ Orionis) — Tropical Winter |
-
 | Thu, Jan 29, 2026 | ♒ 10 | Best visibility: Saiph (κ Orionis) — Tropical Winter<br>Best visibility: M78<br>Best visibility: β Pic |
-
 | Fri, Jan 30, 2026 | ♒ 11 | Best visibility: M37<br>Best visibility: Wazn (β Col) |
-
 | Sat, Jan 31, 2026 | ♒ 12 | Best visibility: Betelgeuse (α Orionis) — Tropical Winter |
-
 | Sun, Feb 01, 2026 | ♒ 13 | 🌕 Full Moon — 22:09:16 UTC — Wolf Moon<br>Best visibility: Menkalinan (β Aur) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -219,9 +171,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Jan 26, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♒ 6°02′ | ♉ 3°26′ | ♒ 9°00′ | ♒ 10°39′ | ♒ 2°02′ | ♋ 18°04′ | ♓ 28°04′ |
 
 ### Sky Note
@@ -241,21 +191,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Feb 02, 2026 | ♒ 14 | — |
-
 | Tue, Feb 03, 2026 | ♒ 15 | Cross-quarter point — Imbolc — 20:02:00 UTC |
-
 | Wed, Feb 04, 2026 | ♒ 16 | Best visibility: M35 — Open Cluster — Northern Winter<br>Best visibility: α Men |
-
 | Thu, Feb 05, 2026 | ♒ 17 | — |
-
 | Fri, Feb 06, 2026 | ♒ 18 | — |
-
 | Sat, Feb 07, 2026 | ♒ 19 | Best visibility: Canopus (α Carinae) — Southern Winter<br>Best visibility: Mirzam (β CMa) |
-
 | Sun, Feb 08, 2026 | ♒ 20 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -263,9 +205,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Feb 2, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♒ 13°08′ | ♌ 14°09′ | ♒ 21°15′ | ♒ 19°26′ | ♒ 7°31′ | ♋ 17°15′ | ♓ 28°44′ |
 
 ### Sky Note
@@ -285,21 +225,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Feb 09, 2026 | ♒ 21 | 🌗 Last Quarter — 12:43:14 UTC<br>Best visibility: β Mon |
-
 | Tue, Feb 10, 2026 | ♒ 22 | — |
-
 | Wed, Feb 11, 2026 | ♒ 23 | Best visibility: Alhena — V2 |
-
 | Thu, Feb 12, 2026 | ♒ 24 | Best visibility: M41 |
-
 | Fri, Feb 13, 2026 | ♒ 25 | Best visibility: Sirius (α Canis Majoris) — Tropical Winter<br>Best visibility: α Pic |
-
 | Sat, Feb 14, 2026 | ♒ 26 | — |
-
 | Sun, Feb 15, 2026 | ♒ 27 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -307,9 +239,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Feb 9, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♒ 20°14′ | ♏ 14°27′ | ♓ 3°34′ | ♒ 28°13′ | ♒ 13°00′ | ♋ 16°32′ | ♓ 29°28′ |
 
 ### Sky Note
@@ -329,21 +259,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Feb 16, 2026 | ♒ 28 | Best visibility: Adhara — V2 |
-
 | Tue, Feb 17, 2026 | ♒ 29 | 🌑 New Moon — 12:01:13 UTC |
-
 | Wed, Feb 18, 2026 | ♓ (Pisces) 1 | ♓ Pisces ingress (330°) — 15:51:56 UTC<br>Best visibility: M50 |
-
 | Thu, Feb 19, 2026 | ♓ 2 | Best visibility: Wezen — V2 |
-
 | Fri, Feb 20, 2026 | ♓ 3 | — |
-
 | Sat, Feb 21, 2026 | ♓ 4 | — |
-
 | Sun, Feb 22, 2026 | ♓ 5 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -351,9 +273,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Feb 16, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♒ 27°19′ | ♒ 9°22′ | ♓ 14°41′ | ♓ 6°59′ | ♒ 18°30′ | ♋ 15°57′ | ♈ 0°13′ |
 
 ### Sky Note
@@ -373,21 +293,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Feb 23, 2026 | ♓ 6 | Best visibility: Aludra — V2 |
-
 | Tue, Feb 24, 2026 | ♓ 7 | 🌓 First Quarter — 12:27:42 UTC<br>Best visibility: Gomeisa (β CMi) |
-
 | Wed, Feb 25, 2026 | ♓ 8 | Best visibility: M47 |
-
 | Thu, Feb 26, 2026 | ♓ 9 | Best visibility: Castor (α Geminorum) — Northern Winter<br>Best visibility: M46 |
-
 | Fri, Feb 27, 2026 | ♓ 10 | Best visibility: Procyon (α Canis Minoris) — Tropical Winter<br>Best visibility: M93<br>Best visibility: α Mon |
-
 | Sat, Feb 28, 2026 | ♓ 11 | Best visibility: Pollux (β Geminorum) — Northern Winter |
-
 | Sun, Mar 01, 2026 | ♓ 12 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -395,9 +307,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Feb 23, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♓ 4°22′ | ♉ 14°22′ | ♓ 21°41′ | ♓ 15°44′ | ♒ 24°01′ | ♋ 15°31′ | ♈ 1°01′ |
 
 ### Sky Note
@@ -417,21 +327,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Mar 02, 2026 | ♓ 13 | — |
-
 | Tue, Mar 03, 2026 | ♓ 14 | 🌕 Full Moon — 11:37:56 UTC — Sap Moon |
-
 | Wed, Mar 04, 2026 | ♓ 15 | — |
-
 | Thu, Mar 05, 2026 | ♓ 16 | Best visibility: Naos — V2 |
-
 | Fri, Mar 06, 2026 | ♓ 17 | Best visibility: M48 |
-
 | Sat, Mar 07, 2026 | ♓ 18 | Best visibility: Gam-2 Vel — V2 |
-
 | Sun, Mar 08, 2026 | ♓ 19 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -439,9 +341,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Mar 2, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♓ 11°25′ | ♌ 22°53′ | ♓ 21°28′ | ♓ 24°28′ | ♒ 29°32′ | ♋ 15°13′ | ♈ 1°51′ |
 
 ### Sky Note
@@ -461,21 +361,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Mar 09, 2026 | ♓ 20 | Best visibility: α Cha<br>Best visibility: Tarf (β Cnc) |
-
 | Tue, Mar 10, 2026 | ♓ 21 | Best visibility: Avior — V2 |
-
 | Wed, Mar 11, 2026 | ♓ 22 | 🌗 Last Quarter — 09:38:37 UTC<br>Best visibility: β Vol |
-
 | Thu, Mar 12, 2026 | ♓ 23 | — |
-
 | Fri, Mar 13, 2026 | ♓ 24 | — |
-
 | Sat, Mar 14, 2026 | ♓ 25 | — |
-
 | Sun, Mar 15, 2026 | ♓ 26 | Best visibility: M44 — Beehive Cluster — Tropical Winter<br>Best visibility: β Pyx |
 
 ### Weekly Classical-Planet Ephemeris
@@ -483,9 +375,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Mar 9, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♓ 18°25′ | ♏ 22°14′ | ♓ 15°19′ | ♈ 3°10′ | ♓ 5°03′ | ♋ 15°06′ | ♈ 2°41′ |
 
 ### Sky Note
@@ -505,21 +395,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Mar 16, 2026 | ♓ 27 | Best visibility: α Pyx<br>Best visibility: Alsephina — V2 |
-
 | Tue, Mar 17, 2026 | ♓ 28 | Best visibility: M67 |
-
 | Wed, Mar 18, 2026 | ♓ 29 | — |
-
 | Thu, Mar 19, 2026 | ♓ 30 | 🌑 New Moon — 01:23:28 UTC |
-
 | Fri, Mar 20, 2026 | ♈ (Aries) 1 | March Equinox — First Point of Aries — Ostara — 14:45:58 UTC<br>♈ Aries ingress (0°) — 14:45:58 UTC<br>Best visibility: Acubens (α Cnc) |
-
 | Sat, Mar 21, 2026 | ♈ 2 | Best visibility: α Vol |
-
 | Sun, Mar 22, 2026 | ♈ 3 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -527,9 +409,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Mar 16, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♓ 25°24′ | ♒ 17°19′ | ♓ 9°41′ | ♈ 11°52′ | ♓ 10°34′ | ♋ 15°08′ | ♈ 3°33′ |
 
 ### Sky Note
@@ -549,21 +429,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Mar 23, 2026 | ♈ 4 | Best visibility: Suhail — V2 |
-
 | Tue, Mar 24, 2026 | ♈ 5 | Best visibility: Miaplacidus (β Car) |
-
 | Wed, Mar 25, 2026 | ♈ 6 | 🌓 First Quarter — 19:17:40 UTC<br>Best visibility: Aspidiske — V2 |
-
 | Thu, Mar 26, 2026 | ♈ 7 | Best visibility: α Lyn |
-
 | Fri, Mar 27, 2026 | ♈ 8 | Best visibility: Markeb — V2 |
-
 | Sat, Mar 28, 2026 | ♈ 9 | Best visibility: Alphard (α Hya) |
-
 | Sun, Mar 29, 2026 | ♈ 10 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -571,9 +443,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Mar 23, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♈ 2°22′ | ♉ 24°59′ | ♓ 8°43′ | ♈ 20°32′ | ♓ 16°04′ | ♋ 15°19′ | ♈ 4°25′ |
 
 ### Sky Note
@@ -593,21 +463,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Mar 30, 2026 | ♈ 11 | — |
-
 | Tue, Mar 31, 2026 | ♈ 12 | — |
-
 | Wed, Apr 01, 2026 | ♈ 13 | — |
-
 | Thu, Apr 02, 2026 | ♈ 14 | 🌕 Full Moon — 02:12:00 UTC — Seed Moon |
-
 | Fri, Apr 03, 2026 | ♈ 15 | — |
-
 | Sat, Apr 04, 2026 | ♈ 16 | Best visibility: M81<br>Best visibility: M82 |
-
 | Sun, Apr 05, 2026 | ♈ 17 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -615,9 +477,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Mar 30, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♈ 9°18′ | ♍ 2°27′ | ♓ 12°07′ | ♈ 29°11′ | ♓ 21°33′ | ♋ 15°39′ | ♈ 5°18′ |
 
 ### Sky Note
@@ -637,21 +497,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Apr 06, 2026 | ♈ 18 | — |
-
 | Tue, Apr 07, 2026 | ♈ 19 | — |
-
 | Wed, Apr 08, 2026 | ♈ 20 | Best visibility: Regulus (α Leonis) — Tropical Spring<br>Best visibility: α Sex |
-
 | Thu, Apr 09, 2026 | ♈ 21 | — |
-
 | Fri, Apr 10, 2026 | ♈ 22 | 🌗 Last Quarter — 04:51:45 UTC |
-
 | Sat, Apr 11, 2026 | ♈ 23 | — |
-
 | Sun, Apr 12, 2026 | ♈ 24 | Best visibility: Algieba — V2 |
 
 ### Weekly Classical-Planet Ephemeris
@@ -659,9 +511,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Apr 6, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♈ 16°12′ | ♐ 0°14′ | ♓ 18°33′ | ♉ 7°47′ | ♓ 27°01′ | ♋ 16°09′ | ♈ 6°10′ |
 
 ### Sky Note
@@ -681,21 +531,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Apr 13, 2026 | ♈ 25 | Best visibility: α Ant |
-
 | Tue, Apr 14, 2026 | ♈ 26 | Best visibility: β LMi<br>Best visibility: β Sex |
-
 | Wed, Apr 15, 2026 | ♈ 27 | — |
-
 | Thu, Apr 16, 2026 | ♈ 28 | — |
-
 | Fri, Apr 17, 2026 | ♈ 29 | 🌑 New Moon — 11:51:46 UTC |
-
 | Sat, Apr 18, 2026 | ♈ 30 | Best visibility: M95 |
-
 | Sun, Apr 19, 2026 | ♈ 31 | Best visibility: M96<br>Best visibility: M105 |
 
 ### Weekly Classical-Planet Ephemeris
@@ -703,9 +545,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Apr 13, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♈ 23°05′ | ♒ 25°10′ | ♓ 27°04′ | ♉ 16°22′ | ♈ 2°29′ | ♋ 16°46′ | ♈ 7°02′ |
 
 ### Sky Note
@@ -725,21 +565,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Apr 20, 2026 | ♉ (Taurus) 1 | ♉ Taurus ingress (30°) — 01:39:07 UTC |
-
 | Tue, Apr 21, 2026 | ♉ 2 | — |
-
 | Wed, Apr 22, 2026 | ♉ 3 | Best visibility: Alkes (α Crt) |
-
 | Thu, Apr 23, 2026 | ♉ 4 | Best visibility: Dubhe (α Ursae Majoris) — Northern Spring<br>Best visibility: Merak (β Ursae Majoris) — Northern Spring |
-
 | Fri, Apr 24, 2026 | ♉ 5 | 🌓 First Quarter — 02:31:44 UTC |
-
 | Sat, Apr 25, 2026 | ♉ 6 | Best visibility: M97<br>Best visibility: M108<br>Best visibility: β Crt |
-
 | Sun, Apr 26, 2026 | ♉ 7 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -747,9 +579,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Apr 20, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♈ 29°56′ | ♊ 4°47′ | ♈ 7°11′ | ♉ 24°55′ | ♈ 7°54′ | ♋ 17°31′ | ♈ 7°52′ |
 
 ### Sky Note
@@ -769,21 +599,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Apr 27, 2026 | ♉ 8 | Best visibility: M65 — Galaxy — Tropical Spring |
-
 | Tue, Apr 28, 2026 | ♉ 9 | Best visibility: M66 — Galaxy — Tropical Spring |
-
 | Wed, Apr 29, 2026 | ♉ 10 | — |
-
 | Thu, Apr 30, 2026 | ♉ 11 | — |
-
 | Fri, May 01, 2026 | ♉ 12 | 🌕 Full Moon — 17:23:15 UTC — Milk Moon |
-
 | Sat, May 02, 2026 | ♉ 13 | — |
-
 | Sun, May 03, 2026 | ♉ 14 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -791,9 +613,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Apr 27, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♉ 6°45′ | ♍ 12°26′ | ♈ 18°44′ | ♊ 3°26′ | ♈ 13°18′ | ♋ 18°22′ | ♈ 8°41′ |
 
 ### Sky Note
@@ -813,21 +633,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, May 04, 2026 | ♉ 15 | — |
-
 | Tue, May 05, 2026 | ♉ 16 | Cross-quarter point — Beltane — 11:49 UTC<br>Best visibility: Denebola (β Leonis) — Tropical Spring |
-
 | Wed, May 06, 2026 | ♉ 17 | Best visibility: Phecda (γ Ursae Majoris) — Northern Spring<br>Best visibility: β Hya<br>Best visibility: Zavijava (β Vir) |
-
 | Thu, May 07, 2026 | ♉ 18 | Best visibility: M109 |
-
 | Fri, May 08, 2026 | ♉ 19 | — |
-
 | Sat, May 09, 2026 | ♉ 20 | 🌗 Last Quarter — 21:10:33 UTC |
-
 | Sun, May 10, 2026 | ♉ 21 | Best visibility: Alchiba (α Crv) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -835,9 +647,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, May 4, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♉ 13°33′ | ♐ 8°41′ | ♉ 1°42′ | ♊ 11°55′ | ♈ 18°40′ | ♋ 19°20′ | ♈ 9°29′ |
 
 ### Sky Note
@@ -857,21 +667,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, May 11, 2026 | ♉ 22 | — |
-
 | Tue, May 12, 2026 | ♉ 23 | Best visibility: Megrez (δ Ursae Majoris) — Northern Spring<br>Best visibility: M98 |
-
 | Wed, May 13, 2026 | ♉ 24 | Best visibility: M106 — Galaxy — Northern Spring<br>Best visibility: M99<br>Best visibility: β Cha |
-
 | Thu, May 14, 2026 | ♉ 25 | Best visibility: M40<br>Best visibility: M61<br>Best visibility: M84<br>Best visibility: M100 |
-
 | Fri, May 15, 2026 | ♉ 26 | Best visibility: Acrux (α Crucis) — Southern Spring<br>Best visibility: M85<br>Best visibility: M86<br>Best visibility: α2 Cru |
-
 | Sat, May 16, 2026 | ♉ 27 | 🌑 New Moon — 20:01:01 UTC<br>Best visibility: Gacrux (γ Crucis) — Southern Spring<br>Best visibility: M49<br>Best visibility: M87<br>Best visibility: M88 |
-
 | Sun, May 17, 2026 | ♉ 28 | Best visibility: M89<br>Best visibility: M90<br>Best visibility: M91<br>Best visibility: Chara (β CVn)<br>Best visibility: Kraz (β Crv)<br>Best visibility: α Mus |
 
 ### Weekly Classical-Planet Ephemeris
@@ -879,9 +681,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, May 11, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♉ 20°20′ | ♓ 3°23′ | ♉ 16°02′ | ♊ 20°21′ | ♈ 24°00′ | ♋ 20°24′ | ♈ 10°14′ |
 
 ### Sky Note
@@ -901,21 +701,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, May 18, 2026 | ♉ 29 | Best visibility: M104 — Sombrero Galaxy — Tropical Spring<br>Best visibility: M58<br>Best visibility: M68 |
-
 | Tue, May 19, 2026 | ♉ 30 | Best visibility: M59<br>Best visibility: M60<br>Best visibility: Gam Cen — V2 |
-
 | Wed, May 20, 2026 | ♉ 31 | Best visibility: Mimosa (β Crucis) — Southern Spring<br>Best visibility: β Mus |
-
 | Thu, May 21, 2026 | ♊ (Gemini) 1 | ♊ Gemini ingress (60°) — 00:36:44 UTC<br>Best visibility: M94 |
-
 | Fri, May 22, 2026 | ♊ 2 | Best visibility: Alioth (ε Ursae Majoris) — Northern Spring<br>Best visibility: α1 CVn<br>Best visibility: Cor Caroli (α2 CVn) |
-
 | Sat, May 23, 2026 | ♊ 3 | 🌓 First Quarter — 11:10:57 UTC<br>Best visibility: M64 |
-
 | Sun, May 24, 2026 | ♊ 4 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -923,9 +715,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, May 18, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♉ 27°05′ | ♊ 13°44′ | ♊ 1°14′ | ♊ 28°45′ | ♈ 29°18′ | ♋ 21°33′ | ♈ 10°57′ |
 
 ### Sky Note
@@ -945,21 +735,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, May 25, 2026 | ♊ 5 | — |
-
 | Tue, May 26, 2026 | ♊ 6 | Best visibility: Diadem (α Com)<br>Best visibility: β Com |
-
 | Wed, May 27, 2026 | ♊ 7 | Best visibility: M63 — Sunflower Galaxy — Northern Spring<br>Best visibility: M53 |
-
 | Thu, May 28, 2026 | ♊ 8 | — |
-
 | Fri, May 29, 2026 | ♊ 9 | Best visibility: Spica (α Virginis) — Tropical Spring<br>Best visibility: Mizar (ζ Ursae Majoris) — Northern Spring |
-
 | Sat, May 30, 2026 | ♊ 10 | — |
-
 | Sun, May 31, 2026 | ♊ 11 | 🌕 Full Moon — 08:45:16 UTC — Flower Moon<br>Best visibility: M51 — Whirlpool Galaxy — Northern Spring |
 
 ### Weekly Classical-Planet Ephemeris
@@ -967,9 +749,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, May 25, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♊ 3°49′ | ♍ 22°18′ | ♊ 16°02′ | ♋ 7°06′ | ♉ 4°33′ | ♋ 22°47′ | ♈ 11°38′ |
 
 ### Sky Note
@@ -989,21 +769,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jun 01, 2026 | ♊ 12 | Best visibility: M83 |
-
 | Tue, Jun 02, 2026 | ♊ 13 | Best visibility: Eps Cen — V2 |
-
 | Wed, Jun 03, 2026 | ♊ 14 | Best visibility: M3 — Globular Cluster — Northern Spring |
-
 | Thu, Jun 04, 2026 | ♊ 15 | Best visibility: Alkaid (η Ursae Majoris) — Northern Spring |
-
 | Fri, Jun 05, 2026 | ♊ 16 | — |
-
 | Sat, Jun 06, 2026 | ♊ 17 | — |
-
 | Sun, Jun 07, 2026 | ♊ 18 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1011,9 +783,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Jun 1, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♊ 10°32′ | ♐ 17°29′ | ♊ 29°09′ | ♋ 15°24′ | ♉ 9°46′ | ♋ 24°04′ | ♈ 12°15′ |
 
 ### Sky Note
@@ -1033,21 +803,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jun 08, 2026 | ♊ 19 | 🌗 Last Quarter — 10:00:32 UTC<br>Best visibility: Hadar (β Centauri) — Southern Spring<br>Best visibility: M101 — Pinwheel Galaxy — Northern Spring<br>Best visibility: Thuban (α Dra) |
-
 | Tue, Jun 09, 2026 | ♊ 20 | Best visibility: Menkent — V2 |
-
 | Wed, Jun 10, 2026 | ♊ 21 | — |
-
 | Thu, Jun 11, 2026 | ♊ 22 | Best visibility: Arcturus (α Boötis) — Tropical Spring |
-
 | Fri, Jun 12, 2026 | ♊ 23 | — |
-
 | Sat, Jun 13, 2026 | ♊ 24 | — |
-
 | Sun, Jun 14, 2026 | ♊ 25 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1055,9 +817,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Jun 8, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♊ 17°14′ | ♓ 12°16′ | ♋ 10°01′ | ♋ 23°38′ | ♉ 14°56′ | ♋ 25°25′ | ♈ 12°48′ |
 
 ### Sky Note
@@ -1077,21 +837,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jun 15, 2026 | ♊ 26 | 🌑 New Moon — 02:54:07 UTC<br>Best visibility: Eta Cen — V2 |
-
 | Tue, Jun 16, 2026 | ♊ 27 | Best visibility: Alpha Centauri (α Centauri) — Southern Spring |
-
 | Wed, Jun 17, 2026 | ♊ 28 | Best visibility: α Cir<br>Best visibility: α Lup |
-
 | Thu, Jun 18, 2026 | ♊ 29 | Best visibility: α Aps<br>Best visibility: Izar — V2 |
-
 | Fri, Jun 19, 2026 | ♊ 30 | Best visibility: Kochab (β Ursae Minoris) — Arctic<br>Best visibility: α1 Lib<br>Best visibility: Zubenelgenubi (α2 Lib) |
-
 | Sat, Jun 20, 2026 | ♊ 31 | — |
-
 | Sun, Jun 21, 2026 | ♋ (Cancer) 1 | 🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC<br>Best visibility: β Lup |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1099,9 +851,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** Monday, Jun 15, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|---:|
-
 | ♊ 23°56′ | ♊ 22°12′ | ♋ 18°24′ | ♌ 1°48′ | ♉ 20°03′ | ♋ 26°49′ | ♈ 13°18′ |
 
 ### Sky Note
@@ -1121,21 +871,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jun 22, 2026 | ♋ 2 | Best visibility: Nekkar (β Boo) |
-
 | Tue, Jun 23, 2026 | ♋ 3 | Best visibility: M102 |
-
 | Wed, Jun 24, 2026 | ♋ 4 | — |
-
 | Thu, Jun 25, 2026 | ♋ 5 | Best visibility: Zubeneschamali (β Lib) |
-
 | Fri, Jun 26, 2026 | ♋ 6 | Best visibility: M5<br>Best visibility: β Cir |
-
 | Sat, Jun 27, 2026 | ♋ 7 | — |
-
 | Sun, Jun 28, 2026 | ♋ 8 | Best visibility: Nusakan (β CrB) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1143,9 +885,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 **Snapshot:** June 22, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♋ 0°37′ | ♎ 1°39′ | ♋ 24°00′ | ♌ 9°54′ | ♉ 25°07′ | ♋ 28°15′ | ♈ 13°44′ |
 
 ### Sky Note
@@ -1165,21 +905,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jun 29, 2026 | ♋ 9 | 🌕 Full Moon — 23:56:43 UTC |
-
 | Tue, Jun 30, 2026 | ♋ 10 | Best visibility: Alphecca (α CrB) |
-
 | Wed, Jul 01, 2026 | ♋ 11 | — |
-
 | Thu, Jul 02, 2026 | ♋ 12 | Best visibility: Unukalhai (α Ser)<br>Best visibility: β Ser |
-
 | Fri, Jul 03, 2026 | ♋ 13 | — |
-
 | Sat, Jul 04, 2026 | ♋ 14 | — |
-
 | Sun, Jul 05, 2026 | ♋ 15 | Best visibility: β TrA |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1187,9 +919,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** June 29, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♋ 7°18′ | ♐ 26°23′ | ♋ 26°14′ | ♌ 17°55′ | ♊ 0°08′ | ♋ 29°44′ | ♈ 14°06′ |
 
 ### Sky Note
@@ -1209,21 +939,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jul 06, 2026 | ♋ 16 | Best visibility: Dschubba — V2 |
-
 | Tue, Jul 07, 2026 | ♋ 17 | 🌗 Last Quarter — 19:28:59 UTC<br>Best visibility: Acrab (β1 Sco)<br>Best visibility: β2 Sco |
-
 | Wed, Jul 08, 2026 | ♋ 18 | — |
-
 | Thu, Jul 09, 2026 | ♋ 19 | — |
-
 | Fri, Jul 10, 2026 | ♋ 20 | Best visibility: M80 |
-
 | Sat, Jul 11, 2026 | ♋ 21 | — |
-
 | Sun, Jul 12, 2026 | ♋ 22 | Best visibility: M4 |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1231,9 +953,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** July 6, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♋ 13°58′ | ♓ 21°50′ | ♋ 24°49′ | ♌ 25°50′ | ♊ 5°06′ | ♌ 1°14′ | ♈ 14°23′ |
 
 ### Sky Note
@@ -1253,21 +973,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jul 13, 2026 | ♋ 23 | Best visibility: Kornephoros (β Her)<br>Best visibility: Antares (α Sco) |
-
 | Tue, Jul 14, 2026 | ♋ 24 | 🌑 New Moon — 09:43:34 UTC<br>Best visibility: M107 |
-
 | Wed, Jul 15, 2026 | ♋ 25 | — |
-
 | Thu, Jul 16, 2026 | ♋ 26 | Best visibility: M13<br>Best visibility: β Aps |
-
 | Fri, Jul 17, 2026 | ♋ 27 | — |
-
 | Sat, Jul 18, 2026 | ♋ 28 | Best visibility: M12<br>Best visibility: Atria (α TrA)<br>Best visibility: Larawag — V2 |
-
 | Sun, Jul 19, 2026 | ♋ 29 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1275,9 +987,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** July 13, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♋ 20°39′ | ♋ 0°46′ | ♋ 20°44′ | ♍ 3°38′ | ♊ 10°01′ | ♌ 2°46′ | ♈ 14°35′ |
 
 ### Sky Note
@@ -1297,21 +1007,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jul 20, 2026 | ♋ 30 | Best visibility: M10 |
-
 | Tue, Jul 21, 2026 | ♋ 31 | 🌓 First Quarter — 11:05:35 UTC<br>Best visibility: M19<br>Best visibility: M62 |
-
 | Wed, Jul 22, 2026 | ♌ (Leo) 1 | — |
-
 | Thu, Jul 23, 2026 | ♌ 2 | Best visibility: Sabik — V2 |
-
 | Fri, Jul 24, 2026 | ♌ 3 | Best visibility: Rasalgethi (α1 Her)<br>Best visibility: α2 Her |
-
 | Sat, Jul 25, 2026 | ♌ 4 | Best visibility: M9<br>Best visibility: M92 |
-
 | Sun, Jul 26, 2026 | ♌ 5 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1319,9 +1021,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** July 20, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♋ 27°20′ | ♎ 10°19′ | ♋ 17°01′ | ♍ 11°18′ | ♊ 14°52′ | ♌ 4°18′ | ♈ 14°43′ |
 
 ### Sky Note
@@ -1341,21 +1041,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Jul 27, 2026 | ♌ 6 | Best visibility: β Ara |
-
 | Tue, Jul 28, 2026 | ♌ 7 | Best visibility: Rastaban (β Dra) |
-
 | Wed, Jul 29, 2026 | ♌ 8 | 🌕 Full Moon — 14:35:42 UTC<br>Best visibility: α Ara<br>Best visibility: Rasalhague (α Oph)<br>Best visibility: Shaula — V2 |
-
 | Thu, Jul 30, 2026 | ♌ 9 | Best visibility: M6<br>Best visibility: M14<br>Best visibility: Sargas — V2 |
-
 | Fri, Jul 31, 2026 | ♌ 10 | Best visibility: Kap Sco — V2 |
-
 | Sat, Aug 01, 2026 | ♌ 11 | Best visibility: Cebalrai (β Oph) |
-
 | Sun, Aug 02, 2026 | ♌ 12 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1363,9 +1055,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** July 27, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♌ 4°01′ | ♑ 5°05′ | ♋ 16°46′ | ♍ 18°49′ | ♊ 19°41′ | ♌ 5°51′ | ♈ 14°45′ |
 
 ### Sky Note
@@ -1385,21 +1075,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Aug 03, 2026 | ♌ 13 | Best visibility: M7 |
-
 | Tue, Aug 04, 2026 | ♌ 14 | Best visibility: M23<br>Best visibility: Eltanin — V2 |
-
 | Wed, Aug 05, 2026 | ♌ 15 | Best visibility: M8<br>Best visibility: M20<br>Best visibility: M21 |
-
 | Thu, Aug 06, 2026 | ♌ 16 | 🌗 Last Quarter — 02:21:32 UTC |
-
 | Fri, Aug 07, 2026 | ♌ 17 | — |
-
 | Sat, Aug 08, 2026 | ♌ 18 | — |
-
 | Sun, Aug 09, 2026 | ♌ 19 | Best visibility: M16<br>Best visibility: M17<br>Best visibility: M18<br>Best visibility: M24 |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1407,9 +1089,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** August 3, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♌ 10°42′ | ♈ 1°51′ | ♋ 21°19′ | ♍ 26°08′ | ♊ 24°25′ | ♌ 7°24′ | ♈ 14°42′ |
 
 ### Sky Note
@@ -1429,21 +1109,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Aug 10, 2026 | ♌ 20 | Best visibility: M28 |
-
 | Tue, Aug 11, 2026 | ♌ 21 | Best visibility: Kaus Australis — V2 |
-
 | Wed, Aug 12, 2026 | ♌ 22 | 🌑 New Moon — 17:36:40 UTC<br>Best visibility: M25<br>Best visibility: M69<br>Best visibility: α Tel |
-
 | Thu, Aug 13, 2026 | ♌ 23 | Best visibility: M22 |
-
 | Fri, Aug 14, 2026 | ♌ 24 | Best visibility: α Sct |
-
 | Sat, Aug 15, 2026 | ♌ 25 | Best visibility: M70<br>Best visibility: Vega (α Lyr) |
-
 | Sun, Aug 16, 2026 | ♌ 26 | Best visibility: M26 |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1451,9 +1123,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** August 10, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♌ 17°25′ | ♋ 9°58′ | ♌ 0°30′ | ♎ 3°12′ | ♊ 29°06′ | ♌ 8°57′ | ♈ 14°35′ |
 
 ### Sky Note
@@ -1473,21 +1143,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Aug 17, 2026 | ♌ 27 | Best visibility: M11<br>Best visibility: β Sct |
-
 | Tue, Aug 18, 2026 | ♌ 28 | Best visibility: M54<br>Best visibility: M57<br>Best visibility: Sheliak (β Lyr) |
-
 | Wed, Aug 19, 2026 | ♌ 29 | — |
-
 | Thu, Aug 20, 2026 | ♌ 30 | 🌓 First Quarter — 02:46:20 UTC<br>Best visibility: Nunki — V2 |
-
 | Fri, Aug 21, 2026 | ♌ 31 | — |
-
 | Sat, Aug 22, 2026 | ♌ 32 | — |
-
 | Sun, Aug 23, 2026 | ♍ (Virgo) 1 | Best visibility: M56<br>Best visibility: Meridiana (α CrA) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1495,9 +1157,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** August 17, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♌ 24°08′ | ♎ 18°27′ | ♌ 13°05′ | ♎ 10°00′ | ♋ 3°43′ | ♌ 10°29′ | ♈ 14°22′ |
 
 ### Sky Note
@@ -1517,21 +1177,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Aug 24, 2026 | ♍ 2 | Best visibility: β CrA |
-
 | Tue, Aug 25, 2026 | ♍ 3 | — |
-
 | Wed, Aug 26, 2026 | ♍ 4 | — |
-
 | Thu, Aug 27, 2026 | ♍ 5 | Best visibility: Rukbat (α Sgr)<br>Best visibility: Arkab Prior (β1 Sgr)<br>Best visibility: Arkab Posterior (β2 Sgr) |
-
 | Fri, Aug 28, 2026 | ♍ 6 | 🌕 Full Moon — 04:18:30 UTC |
-
 | Sat, Aug 29, 2026 | ♍ 7 | Best visibility: M55<br>Best visibility: Albireo (β1 Cyg)<br>Best visibility: Albireo B (β2 Cyg)<br>Best visibility: Anser (α Vul) |
-
 | Sun, Aug 30, 2026 | ♍ 8 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1539,9 +1191,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** August 24, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♍ 0°52′ | ♑ 13°25′ | ♌ 27°05′ | ♎ 16°25′ | ♋ 8°16′ | ♌ 12°00′ | ♈ 14°05′ |
 
 ### Sky Note
@@ -1561,21 +1211,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Aug 31, 2026 | ♍ 9 | — |
-
 | Tue, Sep 01, 2026 | ♍ 10 | Best visibility: Sham (α Sge)<br>Best visibility: β Sge |
-
 | Wed, Sep 02, 2026 | ♍ 11 | Best visibility: M71 |
-
 | Thu, Sep 03, 2026 | ♍ 12 | — |
-
 | Fri, Sep 04, 2026 | ♍ 13 | 🌗 Last Quarter — 07:51:15 UTC<br>Best visibility: M27<br>Best visibility: Altair (α Aql) |
-
 | Sat, Sep 05, 2026 | ♍ 14 | Best visibility: M75<br>Best visibility: Alshain (β Aql) |
-
 | Sun, Sep 06, 2026 | ♍ 15 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1583,9 +1225,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** August 31, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♍ 7°38′ | ♈ 11°53′ | ♍ 10°48′ | ♎ 22°22′ | ♋ 12°46′ | ♌ 13°29′ | ♈ 13°44′ |
 
 ### Sky Note
@@ -1605,21 +1245,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Sep 07, 2026 | ♍ 16 | — |
-
 | Tue, Sep 08, 2026 | ♍ 17 | — |
-
 | Wed, Sep 09, 2026 | ♍ 18 | — |
-
 | Thu, Sep 10, 2026 | ♍ 19 | Best visibility: M29 |
-
 | Fri, Sep 11, 2026 | ♍ 20 | 🌑 New Moon — 03:26:55 UTC<br>Best visibility: α1 Cap<br>Best visibility: Algedi (α2 Cap) |
-
 | Sat, Sep 12, 2026 | ♍ 21 | Best visibility: Dabih (β Cap)<br>Best visibility: Sadr — V2 |
-
 | Sun, Sep 13, 2026 | ♍ 22 | Best visibility: Peacock (α Pav) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1627,9 +1259,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** September 7, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♍ 14°24′ | ♋ 19°58′ | ♍ 23°39′ | ♎ 27°43′ | ♋ 17°10′ | ♌ 14°57′ | ♈ 13°19′ |
 
 ### Sky Note
@@ -1649,21 +1279,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Sep 14, 2026 | ♍ 23 | — |
-
 | Tue, Sep 15, 2026 | ♍ 24 | — |
-
 | Wed, Sep 16, 2026 | ♍ 25 | — |
-
 | Thu, Sep 17, 2026 | ♍ 26 | Best visibility: Sualocin (α Del)<br>Best visibility: Rotanev (β Del)<br>Best visibility: α Ind |
-
 | Fri, Sep 18, 2026 | ♍ 27 | 🌓 First Quarter — 20:43:39 UTC<br>Best visibility: M72<br>Best visibility: Deneb (α Cyg) |
-
 | Sat, Sep 19, 2026 | ♍ 28 | Best visibility: M73<br>Best visibility: β Pav<br>Best visibility: Aljanah — V2 |
-
 | Sun, Sep 20, 2026 | ♍ 29 | Best visibility: α Mic |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1671,9 +1293,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** September 14, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♍ 21°13′ | ♎ 26°25′ | ♎ 5°31′ | ♏ 2°16′ | ♋ 21°31′ | ♌ 16°22′ | ♈ 12°51′ |
 
 ### Sky Note
@@ -1693,21 +1313,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Sep 21, 2026 | ♍ 30 | Best visibility: β Mic |
-
 | Tue, Sep 22, 2026 | ♍ 31 | Best visibility: β Ind |
-
 | Wed, Sep 23, 2026 | ♎ (Libra) 1 | — |
-
 | Thu, Sep 24, 2026 | ♎ 2 | Best visibility: α Oct |
-
 | Fri, Sep 25, 2026 | ♎ 3 | — |
-
 | Sat, Sep 26, 2026 | ♎ 4 | 🌕 Full Moon — 16:49:02 UTC |
-
 | Sun, Sep 27, 2026 | ♎ 5 | Best visibility: Kitalpha (α Equ) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1715,9 +1327,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** September 21, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♍ 28°02′ | ♑ 21°21′ | ♎ 16°29′ | ♏ 5°48′ | ♋ 25°46′ | ♌ 17°44′ | ♈ 12°21′ |
 
 ### Sky Note
@@ -1737,21 +1347,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Sep 28, 2026 | ♎ 6 | Best visibility: Alderamin (α Cep) |
-
 | Tue, Sep 29, 2026 | ♎ 7 | Best visibility: β Equ |
-
 | Wed, Sep 30, 2026 | ♎ 8 | — |
-
 | Thu, Oct 01, 2026 | ♎ 9 | Best visibility: M15<br>Best visibility: Alfirk (β Cep) |
-
 | Fri, Oct 02, 2026 | ♎ 10 | Best visibility: M2<br>Best visibility: M39<br>Best visibility: Sadalsuud (β Aqr) |
-
 | Sat, Oct 03, 2026 | ♎ 11 | 🌗 Last Quarter — 13:25:02 UTC |
-
 | Sun, Oct 04, 2026 | ♎ 12 | Best visibility: M30 |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1759,9 +1361,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** September 28, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♎ 4°54′ | ♈ 21°28′ | ♎ 26°37′ | ♏ 7°58′ | ♋ 29°56′ | ♌ 19°03′ | ♈ 11°49′ |
 
 ### Sky Note
@@ -1781,21 +1381,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Oct 05, 2026 | ♎ 13 | Best visibility: Enif — V2 |
-
 | Tue, Oct 06, 2026 | ♎ 14 | — |
-
 | Wed, Oct 07, 2026 | ♎ 15 | — |
-
 | Thu, Oct 08, 2026 | ♎ 16 | — |
-
 | Fri, Oct 09, 2026 | ♎ 17 | — |
-
 | Sat, Oct 10, 2026 | ♎ 18 | 🌑 New Moon — 15:50:01 UTC |
-
 | Sun, Oct 11, 2026 | ♎ 19 | Best visibility: Sadalmelik (α Aqr) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1803,9 +1395,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** October 5, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♎ 11°46′ | ♌ 0°38′ | ♏ 5°48′ | ♏ 8°26′ | ♌ 4°00′ | ♌ 20°18′ | ♈ 11°16′ |
 
 ### Sky Note
@@ -1825,21 +1415,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Oct 12, 2026 | ♎ 20 | Best visibility: Alnair (α Gru) |
-
 | Tue, Oct 13, 2026 | ♎ 21 | — |
-
 | Wed, Oct 14, 2026 | ♎ 22 | — |
-
 | Thu, Oct 15, 2026 | ♎ 23 | Best visibility: α Tuc |
-
 | Fri, Oct 16, 2026 | ♎ 24 | Best visibility: β Lac |
-
 | Sat, Oct 17, 2026 | ♎ 25 | — |
-
 | Sun, Oct 18, 2026 | ♎ 26 | 🌓 First Quarter — 16:12:35 UTC<br>Best visibility: α Lac<br>Best visibility: β PsA |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1847,9 +1429,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** October 12, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♎ 18°41′ | ♏ 4°35′ | ♏ 13°41′ | ♏ 7°00′ | ♌ 7°58′ | ♌ 21°28′ | ♈ 10°43′ |
 
 ### Sky Note
@@ -1869,21 +1449,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Oct 19, 2026 | ♎ 27 | — |
-
 | Tue, Oct 20, 2026 | ♎ 28 | — |
-
 | Wed, Oct 21, 2026 | ♎ 29 | Best visibility: Tiaki (β Gru) |
-
 | Thu, Oct 22, 2026 | ♎ 30 | Best visibility: β Oct |
-
 | Fri, Oct 23, 2026 | ♏ (Scorpio) 1 | — |
-
 | Sat, Oct 24, 2026 | ♏ 2 | — |
-
 | Sun, Oct 25, 2026 | ♏ 3 | Best visibility: Fomalhaut (α PsA) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1891,9 +1463,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** October 19, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♎ 25°37′ | ♑ 29°10′ | ♏ 19°21′ | ♏ 3°48′ | ♌ 11°49′ | ♌ 22°34′ | ♈ 10°11′ |
 
 ### Sky Note
@@ -1913,21 +1483,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Oct 26, 2026 | ♏ 4 | 🌕 Full Moon — 04:11:48 UTC |
-
 | Tue, Oct 27, 2026 | ♏ 5 | Best visibility: Markab (α Peg)<br>Best visibility: Scheat (β Peg)<br>Best visibility: Fumalsamakah (β Psc) |
-
 | Wed, Oct 28, 2026 | ♏ 6 | — |
-
 | Thu, Oct 29, 2026 | ♏ 7 | — |
-
 | Fri, Oct 30, 2026 | ♏ 8 | — |
-
 | Sat, Oct 31, 2026 | ♏ 9 | — |
-
 | Sun, Nov 01, 2026 | ♏ 10 | 🌗 Last Quarter — 20:28:27 UTC<br>Best visibility: M52 |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1935,9 +1497,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** October 26, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♏ 2°35′ | ♉ 0°15′ | ♏ 20°47′ | ♎ 29°37′ | ♌ 15°33′ | ♌ 23°33′ | ♈ 9°41′ |
 
 ### Sky Note
@@ -1957,21 +1517,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Nov 02, 2026 | ♏ 11 | — |
-
 | Tue, Nov 03, 2026 | ♏ 12 | Best visibility: β Scl |
-
 | Wed, Nov 04, 2026 | ♏ 13 | — |
-
 | Thu, Nov 05, 2026 | ♏ 14 | — |
-
 | Fri, Nov 06, 2026 | ♏ 15 | — |
-
 | Sat, Nov 07, 2026 | ♏ 16 | — |
-
 | Sun, Nov 08, 2026 | ♏ 17 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1979,9 +1531,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** November 2, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♏ 9°35′ | ♌ 11°28′ | ♏ 15°30′ | ♎ 25°46′ | ♌ 19°07′ | ♌ 24°27′ | ♈ 9°13′ |
 
 ### Sky Note
@@ -2001,21 +1551,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Nov 09, 2026 | ♏ 18 | 🌑 New Moon — 07:02:01 UTC |
-
 | Tue, Nov 10, 2026 | ♏ 19 | — |
-
 | Wed, Nov 11, 2026 | ♏ 20 | — |
-
 | Thu, Nov 12, 2026 | ♏ 21 | Best visibility: Alpheratz (α And)<br>Best visibility: Caph (β Cas) |
-
 | Fri, Nov 13, 2026 | ♏ 22 | — |
-
 | Sat, Nov 14, 2026 | ♏ 23 | — |
-
 | Sun, Nov 15, 2026 | ♏ 24 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -2023,9 +1565,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** November 9, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♏ 16°36′ | ♏ 13°15′ | ♏ 7°07′ | ♎ 23°23′ | ♌ 22°32′ | ♌ 25°13′ | ♈ 8°49′ |
 
 ### Sky Note
@@ -2045,21 +1585,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Nov 16, 2026 | ♏ 25 | Best visibility: β Hyi<br>Best visibility: Ankaa (α Phe) |
-
 | Tue, Nov 17, 2026 | ♏ 26 | 🌓 First Quarter — 11:47:49 UTC |
-
 | Wed, Nov 18, 2026 | ♏ 27 | Best visibility: β1 Tuc<br>Best visibility: β2 Tuc<br>Best visibility: β3 Tuc |
-
 | Thu, Nov 19, 2026 | ♏ 28 | — |
-
 | Fri, Nov 20, 2026 | ♏ 29 | Best visibility: M31<br>Best visibility: M32<br>Best visibility: M110<br>Best visibility: Schedar (α Cas)<br>Best visibility: Diphda (β Cet) |
-
 | Sat, Nov 21, 2026 | ♏ 30 | — |
-
 | Sun, Nov 22, 2026 | ♐ (Sagittarius) 1 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -2067,9 +1599,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** November 16, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♏ 23°38′ | ♒ 7°13′ | ♏ 5°31′ | ♎ 22°57′ | ♌ 25°46′ | ♌ 25°52′ | ♈ 8°29′ |
 
 ### Sky Note
@@ -2089,21 +1619,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Nov 23, 2026 | ♐ 2 | — |
-
 | Tue, Nov 24, 2026 | ♐ 3 | 🌕 Full Moon — 14:53:31 UTC<br>Best visibility: α Scl<br>Best visibility: Cih — V2 |
-
 | Wed, Nov 25, 2026 | ♐ 4 | — |
-
 | Thu, Nov 26, 2026 | ♐ 5 | Best visibility: β Phe |
-
 | Fri, Nov 27, 2026 | ♐ 6 | Best visibility: Mirach (β And) |
-
 | Sat, Nov 28, 2026 | ♐ 7 | — |
-
 | Sun, Nov 29, 2026 | ♐ 8 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -2111,9 +1633,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** November 23, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♐ 0°42′ | ♉ 8°19′ | ♏ 11°22′ | ♎ 24°24′ | ♌ 28°47′ | ♌ 26°23′ | ♈ 8°13′ |
 
 ### Sky Note
@@ -2133,21 +1653,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Nov 30, 2026 | ♐ 9 | — |
-
 | Tue, Dec 01, 2026 | ♐ 10 | 🌗 Last Quarter — 06:08:41 UTC |
-
 | Wed, Dec 02, 2026 | ♐ 11 | Best visibility: M33<br>Best visibility: M74<br>Best visibility: M103 |
-
 | Thu, Dec 03, 2026 | ♐ 12 | Best visibility: Achernar (α Eri) |
-
 | Fri, Dec 04, 2026 | ♐ 13 | Best visibility: M76 |
-
 | Sat, Dec 05, 2026 | ♐ 14 | — |
-
 | Sun, Dec 06, 2026 | ♐ 15 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -2155,9 +1667,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** November 30, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♐ 7°47′ | ♌ 21°47′ | ♏ 20°36′ | ♎ 27°27′ | ♍ 1°34′ | ♌ 26°45′ | ♈ 8°02′ |
 
 ### Sky Note
@@ -2177,21 +1687,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Dec 07, 2026 | ♐ 16 | Best visibility: Sheratan (β Ari)<br>Best visibility: Mothallah (α Tri) |
-
 | Tue, Dec 08, 2026 | ♐ 17 | Best visibility: α Hyi |
-
 | Wed, Dec 09, 2026 | ♐ 18 | 🌑 New Moon — 00:51:51 UTC<br>Best visibility: Alrescha (α Psc)<br>Best visibility: Almach — V2 |
-
 | Thu, Dec 10, 2026 | ♐ 19 | Best visibility: Hamal (α Ari)<br>Best visibility: β Tri |
-
 | Fri, Dec 11, 2026 | ♐ 20 | — |
-
 | Sat, Dec 12, 2026 | ♐ 21 | — |
-
 | Sun, Dec 13, 2026 | ♐ 22 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -2199,9 +1701,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** December 7, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♐ 14°53′ | ♏ 22°20′ | ♐ 0°58′ | ♏ 1°46′ | ♍ 4°03′ | ♌ 26°58′ | ♈ 7°57′ |
 
 ### Sky Note
@@ -2221,21 +1721,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Dec 14, 2026 | ♐ 23 | — |
-
 | Tue, Dec 15, 2026 | ♐ 24 | — |
-
 | Wed, Dec 16, 2026 | ♐ 25 | Best visibility: Polaris (α UMi) |
-
 | Thu, Dec 17, 2026 | ♐ 26 | 🌓 First Quarter — 05:42:40 UTC<br>Best visibility: M34<br>Best visibility: M77 |
-
 | Fri, Dec 18, 2026 | ♐ 27 | — |
-
 | Sat, Dec 19, 2026 | ♐ 28 | Best visibility: β For |
-
 | Sun, Dec 20, 2026 | ♐ 29 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -2243,9 +1735,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** December 14, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♐ 22°00′ | ♒ 15°44′ | ♐ 11°41′ | ♏ 7°02′ | ♍ 6°13′ | ♌ 27°01′ | ♈ 7°56′ |
 
 ### Sky Note
@@ -2265,21 +1755,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Dec 21, 2026 | ♑ (Capricorn) 1 | — |
-
 | Tue, Dec 22, 2026 | ♑ 2 | Best visibility: Menkar (α Cet)<br>Best visibility: β Hor |
-
 | Wed, Dec 23, 2026 | ♑ 3 | — |
-
 | Thu, Dec 24, 2026 | ♑ 4 | 🌕 Full Moon — 01:28:13 UTC<br>Best visibility: Algol (β Per) |
-
 | Fri, Dec 25, 2026 | ♑ 5 | Best visibility: Dalim (α For) |
-
 | Sat, Dec 26, 2026 | ♑ 6 | — |
-
 | Sun, Dec 27, 2026 | ♑ 7 | Best visibility: Mirfak (α Per) |
 
 ### Weekly Classical-Planet Ephemeris
@@ -2287,9 +1769,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** December 21, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♐ 29°07′ | ♉ 16°16′ | ♐ 22°32′ | ♏ 13°01′ | ♍ 7°59′ | ♌ 26°55′ | ♈ 8°01′ |
 
 ### Sky Note
@@ -2309,21 +1789,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 ### Calendar
 
 | Date | Zodiac day | Events |
-
 |---|---|---|
-
 | Mon, Dec 28, 2026 | ♑ 8 | — |
-
 | Tue, Dec 29, 2026 | ♑ 9 | — |
-
 | Wed, Dec 30, 2026 | ♑ 10 | 🌗 Last Quarter — 18:59:34 UTC |
-
 | Thu, Dec 31, 2026 | ♑ 11 | — |
-
 | Fri, Jan 01, 2027 | ♑ 12 | Best visibility: β Ret |
-
 | Sat, Jan 02, 2027 | ♑ 13 | — |
-
 | Sun, Jan 03, 2027 | ♑ 14 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -2331,9 +1803,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 **Snapshot:** December 28, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-
 |---:|---:|---:|---:|---:|---:|
-
 | ♑ 6°15′ | ♍ 1°04′ | ♑ 3°32′ | ♏ 19°33′ | ♍ 9°20′ | ♌ 26°40′ | ♈ 8°12′ |
 
 ### Sky Note

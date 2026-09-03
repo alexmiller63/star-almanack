@@ -47,6 +47,11 @@ jobs:
 
           rows = re.findall(r'(?m)^\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), [A-Z][a-z]{2} \d{2}, (?:2025|2026|2027) \|', text)
           assert len(rows) == 53 * 7, f'Expected 371 day rows, found {len(rows)}'
+          split_table_rows = re.findall(r'(?m)^\|[^\n]*\|\n\n(?=\|)', calendar_text)
+          assert not split_table_rows, (
+              f'Found {len(split_table_rows)} blank lines splitting Markdown table rows; '
+              'Jekyll would render them as separate tables'
+          )
 
           # Map civil date to the observer-facing Events cell.  Generated
           # entries may be suppressed when a legacy label on that same date

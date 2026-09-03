@@ -72,8 +72,8 @@ if len(weeks) < 53:
         cols = [("☉ Sun", row["sun"]), ("☽ Moon", row["moon"]), ("☿ Mercury", row["mercury"]),
                 ("♀ Venus", row["venus"]), ("♂ Mars", row["mars"]), ("♃ Jupiter", row["jupiter"]),
                 ("♄ Saturn", row["saturn"])]
-        return ("| " + " | ".join(x[0] for x in cols) + " |\n\n"
-                "|---:|---:|---:|---:|---:|---:|\n\n"
+        return ("| " + " | ".join(x[0] for x in cols) + " |\n"
+                "|---:|---:|---:|---:|---:|---:|\n"
                 "| " + " | ".join(x[1] for x in cols) + " |")
 
     sign_names = {"♈":"Aries","♉":"Taurus","♊":"Gemini","♋":"Cancer","♌":"Leo","♍":"Virgo",
@@ -96,8 +96,8 @@ if len(weeks) < 53:
             f"## ISO {key}\n\n"
             f"**ISO dates:** {key}-1 through {key}-7  \n\n"
             f"**Civil dates:** {monday:%b %d, %Y} – {sunday:%b %d, %Y}\n\n"
-            "### Calendar\n\n| Date | Zodiac day | Events |\n\n|---|---|---|\n\n"
-            + "\n\n".join(rows) + "\n\n"
+            "### Calendar\n\n| Date | Zodiac day | Events |\n|---|---|---|\n"
+            + "\n".join(rows) + "\n\n"
             "### Weekly Classical-Planet Ephemeris\n\n"
             f"**Snapshot:** {monday:%B %-d, %Y} · 00:00 UTC\n\n"
             + ephem_table(ephemeris[key]) + "\n\n"
@@ -106,6 +106,11 @@ if len(weeks) < 53:
             f"`ISO2026-W{w}-chart.png` — chart slot."
         )
     calendar = calendar.rstrip() + "\n\n" + "\n\n".join(additions)
+
+# Markdown/Jekyll requires every row of a pipe table to be contiguous.  The
+# legacy Almanack source contains blank lines between rows; remove only those
+# blank lines so each weekly calendar and ephemeris renders as one table.
+calendar = re.sub(r"(?m)^(\|[^\n]*\|)\n\n(?=\|)", r"\1\n", calendar)
 
 # Build the complete fixed-object event set by civil date.  Each generated
 # row carries conservative aliases used only to suppress a duplicate legacy
