@@ -39,16 +39,22 @@ jobs:
               text = page.read_text(encoding='utf-8')
               assert f'ISO 2026-W{i:02d}' in text, page
               assert '<table class="calendar">' in text, f'Weekly calendar table missing in {page}'
-              assert '2026 index' in text, f'Index navigation missing in {page}'
+              assert 'All weeks' in text, f'Index navigation missing in {page}'
               if i > 1:
-                  assert f'W{i-1:02d}' in text, f'Previous-week navigation missing in {page}'
+                  assert f'../W{i-1:02d}/' in text, f'Previous-week navigation missing in {page}'
               if i < 53:
-                  assert f'W{i+1:02d}' in text, f'Next-week navigation missing in {page}'
+                  assert f'../W{i+1:02d}/' in text, f'Next-week navigation missing in {page}'
+
+              assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
+              assert 'width:16%' in text, f'Narrow desktop date width missing in {page}'
+              assert 'width:8%' in text, f'Narrow desktop zodiac width missing in {page}'
+              assert 'width:20%' in text, f'Narrow mobile date width missing in {page}'
+              assert 'width:11%' in text, f'Narrow mobile zodiac width missing in {page}'
 
           index = (root / 'index.html').read_text(encoding='utf-8')
-          links = re.findall(r'href="W\d{2}/index\.html"', index)
+          links = re.findall(r'href="W\d{2}/"', index)
           assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages, index, tables, and previous/next navigation')
+          print('Verified 53 weekly pages, index, tables, narrow columns, and navigation')
           PY
 
       - name: Commit published pages
