@@ -1,0 +1,88 @@
+name: Restore narrow Almanack calendar columns
+
+on:
+  push:
+    paths:
+      - .github/workflows/one-off-restore-narrow-almanack-columns.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Star Almanack
+        uses: actions/checkout@v4
+
+      - name: Restore narrow calendar columns in publisher and generated site
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          paths = [Path('publish_weekly_pages.py'), *sorted(Path('site/2026').glob('W??/index.html')), Path('site/2026/index.html')]
+
+          replacements = [
+              ("table.calendar th:first-child, table.calendar td:first-child { width: 30%; }", "table.calendar th:first-child, table.calendar td:first-child { width: 16%; }"),
+              ("table.calendar th:nth-child(2), table.calendar td:nth-child(2) { width: 15%; }", "table.calendar th:nth-child(2), table.calendar td:nth-child(2) { width: 8%; }"),
+              ("table.calendar th:nth-child(3), table.calendar td:nth-child(3) { width: 55%; }", "table.calendar th:nth-child(3), table.calendar td:nth-child(3) { width: 76%; }"),
+              ("table.calendar th:first-child,table.calendar td:first-child { width:30%; }", "table.calendar th:first-child,table.calendar td:first-child { width:16%; }"),
+              ("table.calendar th:nth-child(2),table.calendar td:nth-child(2) { width:15%; }", "table.calendar th:nth-child(2),table.calendar td:nth-child(2) { width:8%; }"),
+              ("table.calendar th:nth-child(3),table.calendar td:nth-child(3) { width:55%; }", "table.calendar th:nth-child(3),table.calendar td:nth-child(3) { width:76%; }"),
+              ("table.calendar th:first-child, table.calendar td:first-child { width: 30%; min-width: 0; }", "table.calendar th:first-child, table.calendar td:first-child { width: 20%; min-width: 0; }"),
+              ("table.calendar th:nth-child(2), table.calendar td:nth-child(2) { width: 15%; min-width: 0; }", "table.calendar th:nth-child(2), table.calendar td:nth-child(2) { width: 11%; min-width: 0; }"),
+              ("table.calendar th:nth-child(3), table.calendar td:nth-child(3) { width: 55%; min-width: 0; }", "table.calendar th:nth-child(3), table.calendar td:nth-child(3) { width: 69%; min-width: 0; }"),
+              ("table.calendar th:first-child,table.calendar td:first-child{width:30%;min-width:0}", "table.calendar th:first-child,table.calendar td:first-child{width:20%;min-width:0}"),
+              ("table.calendar th:nth-child(2),table.calendar td:nth-child(2){width:15%;min-width:0}", "table.calendar th:nth-child(2),table.calendar td:nth-child(2){width:11%;min-width:0}"),
+              ("table.calendar th:nth-child(3),table.calendar td:nth-child(3){width:55%;min-width:0}", "table.calendar th:nth-child(3),table.calendar td:nth-child(3){width:69%;min-width:0}"),
+          ]
+
+          changed = []
+          for path in paths:
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              original = text
+              for old, new in replacements:
+                  text = text.replace(old, new)
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(str(path))
+
+          assert changed, 'No 30/15/55 calendar widths were found to correct'
+          print(f'Corrected {len(changed)} files')
+          PY
+
+      - name: Validate narrow column layout
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          pages = sorted(Path('site/2026').glob('W??/index.html'))
+          assert len(pages) == 53, f'Expected 53 weekly pages, found {len(pages)}'
+          for page in pages:
+              text = page.read_text(encoding='utf-8')
+              assert 'width: 30%' not in text, f'Wide 30% date column remains in {page}'
+              assert 'width: 15%' not in text, f'Wide 15% zodiac column remains in {page}'
+              assert 'width: 16%' in text, f'Desktop date width missing in {page}'
+              assert 'width: 8%' in text, f'Desktop zodiac width missing in {page}'
+              assert 'width: 20%' in text, f'Mobile date width missing in {page}'
+              assert 'width: 11%' in text, f'Mobile zodiac width missing in {page}'
+          publisher = Path('publish_weekly_pages.py').read_text(encoding='utf-8')
+          assert 'width:30%' not in publisher and 'width: 30%' not in publisher
+          assert 'width:15%' not in publisher and 'width: 15%' not in publisher
+          print('Validated narrow calendar columns in publisher and all 53 weekly pages')
+          PY
+
+      - name: Commit corrected publisher and pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publish_weekly_pages.py site/2026
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Restore narrow Almanack calendar columns"
+          git push
