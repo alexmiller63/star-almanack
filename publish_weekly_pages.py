@@ -230,6 +230,12 @@ def format_zodiac_cell(text: str, include_name: bool = False) -> str:
     if stripped and stripped[0] in ZODIAC_NAMES:
         glyph = stripped[0]
         remainder = stripped[1:].strip()
+        if not include_name:
+            remainder = re.sub(
+                rf"^\\({re.escape(ZODIAC_NAMES[glyph])}\\)\\s*",
+                "",
+                remainder,
+            )
         name = f'<span class="zodiac-name">{ZODIAC_NAMES[glyph]}</span>' if include_name else ""
         spacer = " " if remainder else ""
         return f"{zodiac_glyph(glyph)}{spacer}{inline_markup(remainder)}{name}"
