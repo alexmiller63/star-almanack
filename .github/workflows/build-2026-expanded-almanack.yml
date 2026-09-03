@@ -19,6 +19,7 @@ on:
       - compute_bright_star_visibility_2026.py
       - build_expanded_almanack.py
       - enrich_stellar_entries.py
+      - publish_weekly_pages.py
       - .github/workflows/build-2026-expanded-almanack.yml
 
 permissions:
@@ -91,9 +92,8 @@ jobs:
               if proper:
                   events = calendar_events.get(r['best_date'], '')
                   assert proper in events, f'No calendar representation found for {proper} on {r["best_date"]}'
-                  assert f"V{float(r['representative_vmax']):.2f}".rstrip('0').rstrip('.') in events, (
-                      f'Decimal magnitude missing for {proper} on {r["best_date"]}'
-                  )
+                  decimal_mag = f"{float(r['representative_vmax']):.2f}".rstrip('0').rstrip('.')
+                  assert f"V{decimal_mag}" in events, f'Decimal magnitude missing for {proper} on {r["best_date"]}'
 
           enif = calendar_events.get('2026-10-05', '')
           assert 'Enif (ε Peg) — V2.38 — variable — Tropical Autumn' in enif, enif
@@ -104,14 +104,44 @@ jobs:
           print('Verified 53 weeks, 371 day rows, 110 Messier objects, bright-star metadata, and Enif enrichment')
           PY
 
-      - name: Commit expanded Almanack
+      - name: Generate 53 weekly HTML pages
+        run: python publish_weekly_pages.py
+
+      - name: Verify published weekly pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path('site/2026')
+          pages = sorted(root.glob('W??/index.html'))
+          assert len(pages) == 53, f'Expected 53 weekly pages, found {len(pages)}'
+          expected = [f'W{i:02d}' for i in range(1, 54)]
+          actual = [p.parent.name for p in pages]
+          assert actual == expected, (actual[:3], actual[-3:])
+          assert (root / 'index.html').exists(), 'Missing 2026 index page'
+
+          for i, page in enumerate(pages, 1):
+              text = page.read_text(encoding='utf-8')
+              assert f'ISO 2026-W{i:02d}' in text, page
+              assert '<table class="calendar">' in text, f'Weekly calendar table missing in {page}'
+              assert 'All weeks' in text, f'Index navigation missing in {page}'
+              assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
+
+          w41 = (root / 'W41' / 'index.html').read_text(encoding='utf-8')
+          assert 'Enif (ε Peg) — V2.38 — variable — Tropical Autumn' in w41, 'Enif metadata missing from published W41'
+          assert 'Enif — V2' not in w41, 'Old Enif display survived publication'
+          print('Verified 53 weekly pages and enriched Enif publication')
+          PY
+
+      - name: Commit expanded Almanack and weekly pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add almanack-expanded.md
+          git add almanack-expanded.md site/2026
           if git diff --cached --quiet; then
             echo "No changes."
             exit 0
           fi
-          git commit -m "Build expanded 2026 Almanack"
+          git commit -m "Build and publish expanded 2026 Almanack"
           git push
