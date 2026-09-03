@@ -122,12 +122,18 @@ th:last-child, td:last-child { border-right: 0; }
 tbody tr:last-child td { border-bottom: 0; }
 th { background: #e8f0f5; text-align: left; color: #17344d; font-weight: 700; }
 tbody tr:nth-child(even) td { background: #fbfaf7; }
+table.calendar { display: table; table-layout: fixed; }
 table.calendar td:first-child { width: 25%; white-space: nowrap; font-weight: 600; }
 table.calendar td:nth-child(2) { width: 13%; white-space: nowrap; text-align: center; }
 table.calendar td:nth-child(3) { line-height: 1.6; }
 table.ephemeris { font-size: .9rem; }
 table.ephemeris th, table.ephemeris td { text-align: center; }
 table.ephemeris td { white-space: nowrap; padding-top: .8rem; padding-bottom: .8rem; }
+.zodiac-glyph {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-variant-emoji: text;
+  color: currentColor;
+}
 .zodiac-name { display: block; font-family: Georgia, 'Times New Roman', serif; font-size: .78rem; color: var(--muted); margin-top: .12rem; }
 code { background: #eef1f3; padding: .1rem .3rem; border-radius: .25rem; font-size: .9em; }
 .weekgrid {
@@ -159,11 +165,13 @@ footer .wrap { padding-top: 1.3rem; padding-bottom: 1.3rem; opacity: .9; }
   main.wrap { padding: 1.35rem 1rem 2.5rem; box-shadow: none; }
   nav.weeknav { gap: .4rem; margin-bottom: 1.5rem; }
   nav.weeknav a, nav.weeknav a:visited, nav.weeknav span { min-width: 0; padding: .6rem .45rem; }
-  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: .9rem; }
-  table.calendar td:first-child { min-width: 155px; }
-  table.calendar td:nth-child(2) { min-width: 92px; }
-  table.calendar td:nth-child(3) { min-width: 245px; }
-  table.ephemeris { font-size: .86rem; }
+  table { font-size: .9rem; }
+  table.calendar { display: table; width: 100%; table-layout: fixed; overflow: hidden; }
+  table.calendar th, table.calendar td { padding: .6rem .55rem; }
+  table.calendar td:first-child { width: 30%; min-width: 0; white-space: normal; }
+  table.calendar td:nth-child(2) { width: 18%; min-width: 0; white-space: nowrap; }
+  table.calendar td:nth-child(3) { width: 52%; min-width: 0; overflow-wrap: anywhere; }
+  table.ephemeris { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: .86rem; }
   .weekgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (prefers-color-scheme: dark) {
@@ -207,14 +215,24 @@ def is_separator_row(line: str) -> bool:
     return bool(cells) and all(re.fullmatch(r":?-{3,}:?", c or "") for c in cells)
 
 
-def format_ephemeris_cell(text: str) -> str:
-    rendered = inline_markup(text)
+def zodiac_glyph(glyph: str) -> str:
+    """Render a zodiac sign as monochrome text, never as a color emoji."""
+    return f'<span class="zodiac-glyph">{html.escape(glyph)}&#xfe0e;</span>'
+
+
+def format_zodiac_cell(text: str, include_name: bool = False) -> str:
     stripped = text.strip()
     if stripped and stripped[0] in ZODIAC_NAMES:
         glyph = stripped[0]
         remainder = stripped[1:].strip()
-        return f"{html.escape(glyph)} {inline_markup(remainder)}<span class=\"zodiac-name\">{ZODIAC_NAMES[glyph]}</span>"
-    return rendered
+        name = f'<span class="zodiac-name">{ZODIAC_NAMES[glyph]}</span>' if include_name else ""
+        spacer = " " if remainder else ""
+        return f"{zodiac_glyph(glyph)}{spacer}{inline_markup(remainder)}{name}"
+    return inline_markup(text)
+
+
+def format_ephemeris_cell(text: str) -> str:
+    return format_zodiac_cell(text, include_name=True)
 
 
 def parse_table(lines: list[str], start: int) -> tuple[str, int]:
@@ -249,8 +267,13 @@ def parse_table(lines: list[str], start: int) -> tuple[str, int]:
     out.append("</tr></thead><tbody>")
     for row in body:
         out.append("<tr>")
-        for c in row:
-            cell = format_ephemeris_cell(c) if is_ephemeris else inline_markup(c)
+        for index, c in enumerate(row):
+            if is_ephemeris:
+                cell = format_ephemeris_cell(c)
+            elif is_calendar and index == 1:
+                cell = format_zodiac_cell(c)
+            else:
+                cell = inline_markup(c)
             out.append(f"<td>{cell}</td>")
         out.append("</tr>")
     out.append("</tbody></table>")
