@@ -39,6 +39,23 @@ with (ROOT / "bright-star-visibility-2026.csv").open(encoding="utf-8", newline="
     bright_rows = list(csv.DictReader(f))
 bright_new_rows = [r for r in bright_rows if r.get("new_non_alpha_beta") == "yes"]
 
+GREEK_BAYER_CODES = {
+    "Alp": "α", "Bet": "β", "Gam": "γ", "Del": "δ", "Eps": "ε",
+    "Zet": "ζ", "Eta": "η", "The": "θ", "Iot": "ι", "Kap": "κ",
+    "Lam": "λ", "Mu": "μ", "Nu": "ν", "Xi": "ξ", "Omi": "ο",
+    "Pi": "π", "Rho": "ρ", "Sig": "σ", "Tau": "τ", "Ups": "υ",
+    "Phi": "φ", "Chi": "χ", "Psi": "ψ", "Ome": "ω",
+}
+
+
+def display_bayer_code(code):
+    """Render HYG's Latin Bayer code with its Greek letter symbol."""
+    code = code.strip()
+    match = re.fullmatch(r"([A-Z][a-z]{2})(?:-?(\d+))?", code)
+    if not match or match.group(1) not in GREEK_BAYER_CODES:
+        return code
+    return GREEK_BAYER_CODES[match.group(1)] + (match.group(2) or "")
+
 ephemeris = {}
 with (ROOT / "weekly-ephemeris-2026.csv").open(encoding="utf-8", newline="") as f:
     for row in csv.DictReader(f):
@@ -161,7 +178,7 @@ for idx, row in enumerate(bayer_rows):
     fixed.setdefault(placement_date, []).append((ident, f"Best visibility: {label}", aliases, target_key))
 for idx, row in enumerate(bright_new_rows):
     proper = (row.get("proper") or "").strip()
-    bayer = (row.get("bayer") or "").strip()
+    bayer = display_bayer_code(row.get("bayer") or "")
     con = (row.get("con") or "").strip()
     name = proper or (f"{bayer} {con}".strip())
     mag_class = (row.get("mag_class") or "").strip()
@@ -240,6 +257,10 @@ def add_fixed(match):
     return match.group(1) + rendered + match.group(6)
 
 calendar = row_re.sub(add_fixed, calendar)
+
+# The Events column already supplies the context: keep object labels compact.
+calendar = re.sub(r"(?<=\| )Best visibility: ", "", calendar)
+calendar = calendar.replace("<br>Best visibility: ", "<br>")
 
 if len(messier_rows) != 110:
     raise SystemExit(f"Expected 110 Messier rows, found {len(messier_rows)}")
