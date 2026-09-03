@@ -119,7 +119,9 @@ def aliases(row: dict[str, str]) -> list[str]:
     code = (row.get("bayer_code") or row.get("bayer") or "").strip()
     con = (row.get("con") or "").strip()
     short = bayer_display(code, con)
-    vals = [proper, designation, short]
+    # Prefer observer-facing names/designations. Bare HYG Latin codes such as
+    # "Bet" are too short and can accidentally match an unrelated proper name.
+    vals = [proper, designation if designation.startswith(tuple(GREEK.values())) else "", short]
     return [v for v in vals if v]
 
 
