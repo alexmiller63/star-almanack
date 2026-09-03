@@ -88,12 +88,18 @@ th:last-child, td:last-child { border-right: 0; }
 tbody tr:last-child td { border-bottom: 0; }
 th { background: #e8f0f5; text-align: left; color: #17344d; font-weight: 700; }
 tbody tr:nth-child(even) td { background: #fbfaf7; }
+table.calendar { display: table; table-layout: fixed; }
 table.calendar td:first-child { width: 25%; white-space: nowrap; font-weight: 600; }
 table.calendar td:nth-child(2) { width: 13%; white-space: nowrap; text-align: center; }
 table.calendar td:nth-child(3) { line-height: 1.6; }
 table.ephemeris { font-size: .9rem; }
 table.ephemeris th, table.ephemeris td { text-align: center; }
 table.ephemeris td { white-space: nowrap; padding-top: .8rem; padding-bottom: .8rem; }
+.zodiac-glyph {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-variant-emoji: text;
+  color: currentColor;
+}
 .zodiac-name { display: block; font-family: Georgia, 'Times New Roman', serif; font-size: .78rem; color: var(--muted); margin-top: .12rem; }
 code { background: #eef1f3; padding: .1rem .3rem; border-radius: .25rem; font-size: .9em; }
 .weekgrid {
@@ -125,11 +131,13 @@ footer .wrap { padding-top: 1.3rem; padding-bottom: 1.3rem; opacity: .9; }
   main.wrap { padding: 1.35rem 1rem 2.5rem; box-shadow: none; }
   nav.weeknav { gap: .4rem; margin-bottom: 1.5rem; }
   nav.weeknav a, nav.weeknav a:visited, nav.weeknav span { min-width: 0; padding: .6rem .45rem; }
-  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: .9rem; }
-  table.calendar td:first-child { min-width: 155px; }
-  table.calendar td:nth-child(2) { min-width: 92px; }
-  table.calendar td:nth-child(3) { min-width: 245px; }
-  table.ephemeris { font-size: .86rem; }
+  table { font-size: .9rem; }
+  table.calendar { display: table; width: 100%; table-layout: fixed; overflow: hidden; }
+  table.calendar th, table.calendar td { padding: .6rem .55rem; }
+  table.calendar td:first-child { width: 30%; min-width: 0; white-space: normal; }
+  table.calendar td:nth-child(2) { width: 18%; min-width: 0; white-space: nowrap; }
+  table.calendar td:nth-child(3) { width: 52%; min-width: 0; overflow-wrap: anywhere; }
+  table.ephemeris { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: .86rem; }
   .weekgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (prefers-color-scheme: dark) {
@@ -162,10 +170,10 @@ footer .wrap { padding-top: 1.3rem; padding-bottom: 1.3rem; opacity: .9; }
 <p><strong>ISO dates:</strong> 2026-W25-1 through 2026-W25-7</p>
 <p><strong>Civil dates:</strong> Jun 15, 2026 – Jun 21, 2026</p>
 <h2>Calendar</h2>
-<table class="calendar"><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody><tr><td>Mon, Jun 15, 2026</td><td>♊ 26</td><td>🌑 New Moon — 02:54:07 UTC<br>Best visibility: Eta Cen — V2</td></tr><tr><td>Tue, Jun 16, 2026</td><td>♊ 27</td><td>Best visibility: Alpha Centauri (α Centauri) — Southern Spring</td></tr><tr><td>Wed, Jun 17, 2026</td><td>♊ 28</td><td>Best visibility: α Cir<br>Best visibility: α Lup</td></tr><tr><td>Thu, Jun 18, 2026</td><td>♊ 29</td><td>Best visibility: α Aps<br>Best visibility: Izar — V2</td></tr><tr><td>Fri, Jun 19, 2026</td><td>♊ 30</td><td>Best visibility: Kochab (β Ursae Minoris) — Arctic<br>Best visibility: α1 Lib<br>Best visibility: Zubenelgenubi (α2 Lib)</td></tr><tr><td>Sat, Jun 20, 2026</td><td>♊ 31</td><td>—</td></tr><tr><td>Sun, Jun 21, 2026</td><td>♋ (Cancer) 1</td><td>🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC<br>Best visibility: β Lup</td></tr></tbody></table>
+<table class="calendar"><thead><tr><th>Date</th><th>Zodiac day</th><th>Events</th></tr></thead><tbody><tr><td>Mon, Jun 15, 2026</td><td><span class="zodiac-glyph">♊&#xfe0e;</span> 26</td><td>🌑 New Moon — 02:54:07 UTC<br>Best visibility: Eta Cen — V2</td></tr><tr><td>Tue, Jun 16, 2026</td><td><span class="zodiac-glyph">♊&#xfe0e;</span> 27</td><td>Best visibility: Alpha Centauri (α Centauri) — Southern Spring</td></tr><tr><td>Wed, Jun 17, 2026</td><td><span class="zodiac-glyph">♊&#xfe0e;</span> 28</td><td>Best visibility: α Cir<br>Best visibility: α Lup</td></tr><tr><td>Thu, Jun 18, 2026</td><td><span class="zodiac-glyph">♊&#xfe0e;</span> 29</td><td>Best visibility: α Aps<br>Best visibility: Izar — V2</td></tr><tr><td>Fri, Jun 19, 2026</td><td><span class="zodiac-glyph">♊&#xfe0e;</span> 30</td><td>Best visibility: Kochab (β Ursae Minoris) — Arctic<br>Best visibility: α1 Lib<br>Best visibility: Zubenelgenubi (α2 Lib)</td></tr><tr><td>Sat, Jun 20, 2026</td><td><span class="zodiac-glyph">♊&#xfe0e;</span> 31</td><td>—</td></tr><tr><td>Sun, Jun 21, 2026</td><td><span class="zodiac-glyph">♋&#xfe0e;</span> (Cancer) 1</td><td>🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC<br>Best visibility: β Lup</td></tr></tbody></table>
 <h2>Weekly Classical-Planet Ephemeris</h2>
 <p><strong>Snapshot:</strong> Monday, Jun 15, 2026 · 00:00 UTC</p>
-<table class="ephemeris"><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody><tr><td>♊ 23°56′<span class="zodiac-name">Gemini</span></td><td>♊ 22°12′<span class="zodiac-name">Gemini</span></td><td>♋ 18°24′<span class="zodiac-name">Cancer</span></td><td>♌ 1°48′<span class="zodiac-name">Leo</span></td><td>♉ 20°03′<span class="zodiac-name">Taurus</span></td><td>♋ 26°49′<span class="zodiac-name">Cancer</span></td><td>♈ 13°18′<span class="zodiac-name">Aries</span></td></tr></tbody></table>
+<table class="ephemeris"><thead><tr><th>☉ Sun</th><th>☽ Moon</th><th>☿ Mercury</th><th>♀ Venus</th><th>♂ Mars</th><th>♃ Jupiter</th><th>♄ Saturn</th></tr></thead><tbody><tr><td><span class="zodiac-glyph">♊&#xfe0e;</span> 23°56′<span class="zodiac-name">Gemini</span></td><td><span class="zodiac-glyph">♊&#xfe0e;</span> 22°12′<span class="zodiac-name">Gemini</span></td><td><span class="zodiac-glyph">♋&#xfe0e;</span> 18°24′<span class="zodiac-name">Cancer</span></td><td><span class="zodiac-glyph">♌&#xfe0e;</span> 1°48′<span class="zodiac-name">Leo</span></td><td><span class="zodiac-glyph">♉&#xfe0e;</span> 20°03′<span class="zodiac-name">Taurus</span></td><td><span class="zodiac-glyph">♋&#xfe0e;</span> 26°49′<span class="zodiac-name">Cancer</span></td><td><span class="zodiac-glyph">♈&#xfe0e;</span> 13°18′<span class="zodiac-name">Aries</span></td></tr></tbody></table>
 <h2>Sky Note</h2>
 <p>♀ and ♃ are separated by about 5° in the Monday snapshot, forming a close pairing in the evening sky after sunset. ☽ is also about 2° from the Sun, so that part of the configuration is affected by solar glare.</p>
 <h2>Chart</h2>
