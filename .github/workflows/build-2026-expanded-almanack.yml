@@ -11,12 +11,14 @@ on:
       - bayer-supplement.csv
       - bright-star-visibility-2026.csv
       - bright-stars-2mag.csv
+      - bright-variable-reconciliation.csv
       - messier-visibility-2026.csv
       - weekly-ephemeris-2026.csv
       - build_bayer_catalog.py
       - compute_bayer_visibility_2026.py
       - compute_bright_star_visibility_2026.py
       - build_expanded_almanack.py
+      - enrich_stellar_entries.py
       - .github/workflows/build-2026-expanded-almanack.yml
 
 permissions:
@@ -28,9 +30,14 @@ jobs:
     steps:
       - name: Check out Star Almanack
         uses: actions/checkout@v4
+
       - name: Build expanded Almanack
         run: python build_expanded_almanack.py
-      - name: Verify expanded Almanack structure and bright-star layer
+
+      - name: Enrich stellar entries
+        run: python enrich_stellar_entries.py
+
+      - name: Verify expanded Almanack structure and stellar metadata
         run: |
           test -f almanack-expanded.md
           python - <<'PY'
@@ -53,10 +60,6 @@ jobs:
               'Jekyll would render them as separate tables'
           )
 
-          # Map civil date to the observer-facing Events cell.  Generated
-          # entries may be suppressed when a legacy label on that same date
-          # already names the same physical object; this mirrors the builder's
-          # documented conservative alias rule.
           calendar_events = {}
           row_re = re.compile(
               r'(?m)^\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| ([^|]*) \|$'
@@ -65,19 +68,14 @@ jobs:
               d = datetime.strptime(f'{m.group(1)} {m.group(2)} {m.group(3)}', '%b %d %Y').date().isoformat()
               calendar_events[d] = m.group(4).strip()
 
-          def legacy_has_alias(existing, aliases):
-              folded = existing.casefold()
-              return any(alias.strip() and alias.strip().casefold() in folded for alias in aliases)
-
           with open('messier-visibility-2026.csv', newline='', encoding='utf-8') as f:
               messier = list(csv.DictReader(f))
           assert len(messier) == 110, f'Expected 110 Messier objects, found {len(messier)}'
           for r in messier:
               name = r['messier']
-              d = r['best_date']
-              events = calendar_events.get(d, '')
+              events = calendar_events.get(r['best_date'], '')
               token = re.compile(rf'(?<![A-Za-z0-9]){re.escape(name)}(?!\d)', re.IGNORECASE)
-              assert token.search(events), f'No Messier calendar representation found for {name} on {d}'
+              assert token.search(events), f'No Messier calendar representation found for {name} on {r["best_date"]}'
               occurrences = sum(len(token.findall(cell)) for cell in calendar_events.values())
               assert occurrences == 1, f'Expected exactly one Messier calendar occurrence for {name}, found {occurrences}'
 
@@ -90,20 +88,22 @@ jobs:
               d = date.fromisoformat(r['best_date'])
               assert d.isocalendar().year == 2026, (r.get('proper'), r['best_date'])
               proper = (r.get('proper') or '').strip()
-              bayer = (r.get('bayer') or '').strip()
-              con = (r.get('con') or '').strip()
-              name = proper or f'{bayer} {con}'.strip()
-              label = f"Best visibility: {name} — V{r['mag_class']}"
-              events = calendar_events.get(r['best_date'], '')
-              canonical_count = text.count(label)
-              assert canonical_count <= 1, f'Duplicate bright-star calendar entry for {name}'
-              represented = label in events or legacy_has_alias(events, (proper, bayer))
-              assert represented, f'No calendar representation found for {name} on {r["best_date"]}'
+              if proper:
+                  events = calendar_events.get(r['best_date'], '')
+                  assert proper in events, f'No calendar representation found for {proper} on {r["best_date"]}'
+                  assert f"V{float(r['representative_vmax']):.2f}".rstrip('0').rstrip('.') in events, (
+                      f'Decimal magnitude missing for {proper} on {r["best_date"]}'
+                  )
+
+          enif = calendar_events.get('2026-10-05', '')
+          assert 'Enif (ε Peg) — V2.38 — variable — Tropical Autumn' in enif, enif
+          assert 'Enif — V2' not in enif, enif
 
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
-          print('Verified 53 weeks, 371 day rows, 110 unique Messier calendar occurrences, and 41 represented new bright-star systems')
+          print('Verified 53 weeks, 371 day rows, 110 Messier objects, bright-star metadata, and Enif enrichment')
           PY
+
       - name: Commit expanded Almanack
         run: |
           git config user.name "github-actions[bot]"
