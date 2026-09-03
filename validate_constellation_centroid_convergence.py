@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Test numerical convergence of constellation area centroids.
 
-Recompute all 88 IAU constellation centroids at three sampling resolutions and
+Recompute all 88 IAU constellation centroids at four sampling resolutions and
 compare both the spherical centroid displacement and the resulting Star
 Almanack Night of Observance date.  This is an implementation-validation test,
 not an input to the astronomical model.
@@ -17,7 +17,7 @@ from pathlib import Path
 from compute_bayer_visibility_2026 import best_visibility
 from compute_constellation_observance_2026 import CONSTELLATIONS, centroid_for
 
-STEPS = (0.20, 0.10, 0.05)
+STEPS = (0.20, 0.10, 0.05, 0.025)
 CACHE_DIR = Path('.cache/iau-constellation-boundaries')
 OUTPUT = Path('constellation-centroid-convergence-2026.csv')
 
@@ -44,10 +44,10 @@ def main() -> None:
         raise SystemExit('Constellation table must contain exactly 88 unique IAU abbreviations')
 
     rows = []
-    exact_010_005 = 0
-    within_one_day_010_005 = 0
-    max_sep_010_005 = 0.0
-    max_shift_010_005 = 0
+    exact_005_0025 = 0
+    within_one_day_005_0025 = 0
+    max_sep_005_0025 = 0.0
+    max_shift_005_0025 = 0
 
     for name, abbr in CONSTELLATIONS:
         solutions = {}
@@ -59,16 +59,19 @@ def main() -> None:
         r020, d020, a020, _, date020 = solutions[0.20]
         r010, d010, a010, _, date010 = solutions[0.10]
         r005, d005, a005, _, date005 = solutions[0.05]
+        r0025, d0025, a0025, _, date0025 = solutions[0.025]
 
         sep_020_010 = angular_separation_deg(r020, d020, r010, d010)
         sep_010_005 = angular_separation_deg(r010, d010, r005, d005)
+        sep_005_0025 = angular_separation_deg(r005, d005, r0025, d0025)
         shift_020_010 = day_shift(date020, date010)
         shift_010_005 = day_shift(date010, date005)
+        shift_005_0025 = day_shift(date005, date0025)
 
-        exact_010_005 += date010 == date005
-        within_one_day_010_005 += shift_010_005 <= 1
-        max_sep_010_005 = max(max_sep_010_005, sep_010_005)
-        max_shift_010_005 = max(max_shift_010_005, shift_010_005)
+        exact_005_0025 += date005 == date0025
+        within_one_day_005_0025 += shift_005_0025 <= 1
+        max_sep_005_0025 = max(max_sep_005_0025, sep_005_0025)
+        max_shift_005_0025 = max(max_shift_005_0025, shift_005_0025)
 
         rows.append({
             'name': name,
@@ -85,15 +88,21 @@ def main() -> None:
             'dec_deg_0.05': f'{d005:.8f}',
             'area_sq_deg_0.05': f'{a005:.4f}',
             'date_0.05': date005.isoformat(),
+            'ra_h_0.025': f'{r0025:.8f}',
+            'dec_deg_0.025': f'{d0025:.8f}',
+            'area_sq_deg_0.025': f'{a0025:.4f}',
+            'date_0.025': date0025.isoformat(),
             'centroid_shift_deg_0.20_to_0.10': f'{sep_020_010:.6f}',
             'centroid_shift_deg_0.10_to_0.05': f'{sep_010_005:.6f}',
+            'centroid_shift_deg_0.05_to_0.025': f'{sep_005_0025:.6f}',
             'date_shift_days_0.20_to_0.10': str(shift_020_010),
             'date_shift_days_0.10_to_0.05': str(shift_010_005),
+            'date_shift_days_0.05_to_0.025': str(shift_005_0025),
         })
         print(
             f'{abbr:3s} {name:20s} '
-            f'{date020} -> {date010} -> {date005}; '
-            f'fine shift {sep_010_005:.4f} deg / {shift_010_005} d'
+            f'{date020} -> {date010} -> {date005} -> {date0025}; '
+            f'finest shift {sep_005_0025:.4f} deg / {shift_005_0025} d'
         )
 
     with OUTPUT.open('w', newline='', encoding='utf-8') as handle:
@@ -102,10 +111,10 @@ def main() -> None:
         writer.writerows(rows)
 
     print()
-    print(f'0.10° vs 0.05° exact-date agreement: {exact_010_005}/88')
-    print(f'0.10° vs 0.05° within 1 day: {within_one_day_010_005}/88')
-    print(f'Max 0.10° -> 0.05° centroid displacement: {max_sep_010_005:.6f}°')
-    print(f'Max 0.10° -> 0.05° Night-of-Observance shift: {max_shift_010_005} day(s)')
+    print(f'0.05° vs 0.025° exact-date agreement: {exact_005_0025}/88')
+    print(f'0.05° vs 0.025° within 1 day: {within_one_day_005_0025}/88')
+    print(f'Max 0.05° -> 0.025° centroid displacement: {max_sep_005_0025:.6f}°')
+    print(f'Max 0.05° -> 0.025° Night-of-Observance shift: {max_shift_005_0025} day(s)')
     print(f'Wrote {len(rows)} rows to {OUTPUT}')
 
 
