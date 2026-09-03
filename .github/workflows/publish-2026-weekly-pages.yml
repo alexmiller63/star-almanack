@@ -38,7 +38,7 @@ jobs:
           for i, page in enumerate(pages, 1):
               text = page.read_text(encoding='utf-8')
               assert f'ISO 2026-W{i:02d}' in text, page
-              assert '<table>' in text, f'Weekly calendar table missing in {page}'
+              assert '<table class="calendar">' in text, f'Weekly calendar table missing in {page}'
               assert '2026 index' in text, f'Index navigation missing in {page}'
               if i > 1:
                   assert f'W{i-1:02d}' in text, f'Previous-week navigation missing in {page}'
