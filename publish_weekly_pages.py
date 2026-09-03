@@ -232,7 +232,7 @@ def format_zodiac_cell(text: str, include_name: bool = False) -> str:
         remainder = stripped[1:].strip()
         if not include_name:
             remainder = re.sub(
-                rf"^\\({re.escape(ZODIAC_NAMES[glyph])}\\)\\s*",
+                rf"^\({re.escape(ZODIAC_NAMES[glyph])}\)\s*",
                 "",
                 remainder,
             )
