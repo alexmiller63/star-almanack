@@ -204,6 +204,11 @@ def inline_markup(text: str) -> str:
     sentinel = "@@BR@@"
     text = text.replace("<br>", sentinel)
     text = html.escape(text)
+    # Force every zodiac sign, including ingress signs in event prose, to
+    # monochrome text presentation instead of a platform-colored emoji.
+    for glyph in ZODIAC_NAMES:
+        text = text.replace(glyph + "\ufe0f", glyph).replace(glyph + "\ufe0e", glyph)
+        text = text.replace(glyph, zodiac_glyph(glyph))
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", text)
