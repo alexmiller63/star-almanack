@@ -10,10 +10,10 @@ Output:
 - rewrites stellar entries in almanack-expanded.md after build_expanded_almanack.py
 
 Display convention:
-  Proper name (Bayer) — [V ]N — Declination-band Season
+  Proper name (Bayer) — [V ]N.NN — Declination-band Season
 
-A whole-number magnitude is used. V precedes the magnitude only for variable
-stars; non-variable stars show the magnitude alone.
+The source decimal magnitude is preserved. V precedes the magnitude only for
+variable stars; non-variable stars show the magnitude without the V prefix.
 
 Declination Band is derived from declination using the tropics (±23.44°):
 Northern / Tropical / Southern. Season is the northern-calendar observing season
@@ -72,10 +72,15 @@ def season_for(d: date) -> str:
 
 
 def clean_mag(value: str) -> str:
+    """Preserve the catalog decimal magnitude rather than rounding it."""
+    value = (value or "").strip()
+    if not value:
+        return ""
     try:
-        return str(round(float(value)))
-    except (TypeError, ValueError):
-        return value.strip()
+        float(value)
+    except ValueError:
+        return value
+    return value
 
 
 def variable_keys() -> set[str]:
@@ -187,12 +192,12 @@ def main() -> None:
     updated = ROW_RE.sub(repl, text)
     TARGET.write_text(updated, encoding="utf-8")
 
-    expected = "Enif (ε Peg) — V 2 — Tropical Autumn"
+    expected = "Enif (ε Peg) — V 2.38 — Tropical Autumn"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
-    if "Enif (ε Peg) — V2.38 — variable — Tropical Autumn" in updated:
-        raise SystemExit("Old Enif magnitude format still present")
-    print("Enriched stellar calendar entries; Enif display regression PASS")
+    if "Enif (ε Peg) — V 2 — Tropical Autumn" in updated:
+        raise SystemExit("Rounded Enif magnitude still present")
+    print("Enriched stellar calendar entries; decimal-magnitude Enif regression PASS")
 
 
 if __name__ == "__main__":
