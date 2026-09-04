@@ -10,7 +10,10 @@ Output:
 - rewrites stellar entries in almanack-expanded.md after build_expanded_almanack.py
 
 Display convention:
-  Proper name (Bayer) — Vmag — variable [when catalogued] — Declination-band Season
+  Proper name (Bayer) — V N — Declination-band Season
+
+A whole-number magnitude is used. V precedes the magnitude for stellar
+entries; non-variable status is not written as a word.
 
 Declination Band is derived from declination using the tropics (±23.44°):
 Northern / Tropical / Southern. Season is the northern-calendar observing season
@@ -70,7 +73,7 @@ def season_for(d: date) -> str:
 
 def clean_mag(value: str) -> str:
     try:
-        return f"{float(value):.2f}".rstrip("0").rstrip(".")
+        return str(round(float(value)))
     except (TypeError, ValueError):
         return value.strip()
 
@@ -106,9 +109,7 @@ def canonical(row: dict[str, str], variables: set[str]) -> str:
     d = date.fromisoformat(row["best_date"])
     parts = [name]
     if mag:
-        parts.append(f"V{mag}")
-    if latin_key(code, con) in variables:
-        parts.append("variable")
+        parts.append(f"V {mag}")
     parts.append(f"{declination_band(row['dec_deg'])} {season_for(d)}")
     return " — ".join(parts)
 
@@ -191,11 +192,13 @@ def main() -> None:
     updated = ROW_RE.sub(repl, text)
     TARGET.write_text(updated, encoding="utf-8")
 
-    # Hard regression for the defect that motivated this enrichment pass.
-    expected = "Enif (ε Peg) — V2.38 — variable — Tropical Autumn"
+    # Hard regression for the current display convention.
+    expected = "Enif (ε Peg) — V 2 — Tropical Autumn"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
-    print("Enriched stellar calendar entries; Enif regression PASS")
+    if "Enif (ε Peg) — V2.38 — variable — Tropical Autumn" in updated:
+        raise SystemExit("Old Enif magnitude format still present")
+    print("Enriched stellar calendar entries; Enif display regression PASS")
 
 
 if __name__ == "__main__":
