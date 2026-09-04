@@ -50,7 +50,7 @@ Authoritative/generated fixed-object data are carried in the repository Messier 
 
 `build_expanded_almanack.py` combines the calendar and fixed-object catalogs into `almanack-expanded.md`.
 
-`enrich_stellar_entries.py` is the mandatory stellar presentation pass. It reads the Bayer visibility catalog, bright-star visibility catalog, and reconciled bright-variable data and normalizes catalog-backed stellar entries so the published Almanack does not discard Bayer designation, decimal magnitude, known-variable status, latitude zone, or observing season.
+`enrich_stellar_entries.py` is the mandatory stellar presentation pass. It reads the Bayer visibility catalog, bright-star visibility catalog, and reconciled bright-variable data and normalizes catalog-backed stellar entries so the published Almanack does not discard Bayer designation, decimal magnitude, known-variable status, declination band, or observing season.
 
 `publish_weekly_pages.py` converts the integrated and enriched Almanack into the weekly pages under `site/2026/W01/` through `site/2026/W53/`.
 
@@ -69,21 +69,23 @@ Every observer-facing stellar entry SHALL preserve and display, when applicable:
 - constellation via the Bayer constellation abbreviation;
 - decimal visual magnitude, not merely a whole-number magnitude class;
 - variable-star status when the reconciled variable-star source identifies the star as variable;
+- declination band derived consistently from declination;
 - observing season;
-- latitude/orientation zone derived consistently from declination;
 - best-visibility civil date and ISO week placement.
 
 The compact canonical calendar form is:
 
-`Proper name (Bayer) — Vmag — variable [when catalogued] — Latitude-zone Season`
+`Proper name (Bayer) — Vmag — variable [when catalogued] — Declination-band Season`
 
-Latitude zone is derived from declination using the tropical boundaries:
+Declination Band is derived from declination using the tropical boundaries:
 
 - declination > +23.44°: Northern;
 - −23.44° through +23.44°: Tropical;
 - declination < −23.44°: Southern.
 
 Season is derived from the best-visibility civil date using Winter, Spring, Summer, and Autumn.
+
+Declination Band SHALL precede Season in observer-facing stellar entries.
 
 A presentation layer MUST NOT discard authoritative catalog fields merely to shorten an entry. Compact presentation may abbreviate wording, but it must preserve the required information above.
 
@@ -100,6 +102,8 @@ The authoritative bright-star visibility row for Enif identifies:
 The variable-star reconciliation identifies `eps Peg` as variable. The canonical observer-facing entry is therefore:
 
 `Enif (ε Peg) — V2.38 — variable — Tropical Autumn`
+
+Here `Tropical` is the Declination Band and `Autumn` is the Season.
 
 ## Maintenance rule
 
