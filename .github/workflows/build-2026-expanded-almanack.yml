@@ -95,9 +95,15 @@ jobs:
                   events = calendar_events.get(r['best_date'], '')
                   assert proper in events, f'No calendar representation found for {proper} on {r["best_date"]}'
                   whole_mag = str(round(float(r['representative_vmax'])))
-                  assert whole_mag in events, f'Whole-number magnitude missing for {proper} on {r["best_date"]}'
-                  if proper.casefold() in variable_names:
+                  variable = proper.casefold() in variable_names
+                  expected_mag = f"V {whole_mag}" if variable else whole_mag
+                  assert re.search(rf'(?<![A-Za-z0-9]){re.escape(expected_mag)}(?![0-9.])', events), (
+                      f'Expected {expected_mag} for {proper} on {r["best_date"]}; events={events}'
+                  )
+                  if variable:
                       assert f"V {whole_mag}" in events, f'Variable marker/magnitude missing for {proper} on {r["best_date"]}'
+                  else:
+                      assert f"V {whole_mag}" not in events, f'Non-variable star incorrectly marked V for {proper} on {r["best_date"]}'
 
           enif = calendar_events.get('2026-10-05', '')
           assert 'Enif (ε Peg) — V 2 — Tropical Autumn' in enif, enif
