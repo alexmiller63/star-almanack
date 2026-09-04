@@ -10,10 +10,10 @@ Output:
 - rewrites stellar entries in almanack-expanded.md after build_expanded_almanack.py
 
 Display convention:
-  Proper name (Bayer) — V N — Declination-band Season
+  Proper name (Bayer) — [V ]N — Declination-band Season
 
-A whole-number magnitude is used. V precedes the magnitude for stellar
-entries; non-variable status is not written as a word.
+A whole-number magnitude is used. V precedes the magnitude only for variable
+stars; non-variable stars show the magnitude alone.
 
 Declination Band is derived from declination using the tropics (±23.44°):
 Northern / Tropical / Southern. Season is the northern-calendar observing season
@@ -109,7 +109,8 @@ def canonical(row: dict[str, str], variables: set[str]) -> str:
     d = date.fromisoformat(row["best_date"])
     parts = [name]
     if mag:
-        parts.append(f"V {mag}")
+        is_variable = latin_key(code, con) in variables
+        parts.append(f"V {mag}" if is_variable else mag)
     parts.append(f"{declination_band(row['dec_deg'])} {season_for(d)}")
     return " — ".join(parts)
 
@@ -120,8 +121,6 @@ def aliases(row: dict[str, str]) -> list[str]:
     code = (row.get("bayer_code") or row.get("bayer") or "").strip()
     con = (row.get("con") or "").strip()
     short = bayer_display(code, con)
-    # Prefer observer-facing names/designations. Bare HYG Latin codes such as
-    # "Bet" are too short and can accidentally match an unrelated proper name.
     vals = [proper, designation if designation.startswith(tuple(GREEK.values())) else "", short]
     return [v for v in vals if v]
 
@@ -131,8 +130,6 @@ def load_stars() -> dict[str, list[tuple[list[str], str]]]:
     by_date: dict[str, list[tuple[list[str], str]]] = defaultdict(list)
     seen = set()
 
-    # Bright layer first: it supplies the preferred representative magnitude
-    # for every V<=2.50 system, including α/β stars that also appear below.
     with BRIGHT.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             row = dict(row)
@@ -170,8 +167,6 @@ def enrich_cell(date_iso: str, cell: str, stars: dict[str, list[tuple[list[str],
                 replacement = label
                 break
         out.append(replacement or part)
-    # Preserve order while removing duplicate canonical labels created when a
-    # bright row and Bayer row refer to the same observer-facing target.
     deduped = []
     seen = set()
     for part in out:
@@ -192,7 +187,6 @@ def main() -> None:
     updated = ROW_RE.sub(repl, text)
     TARGET.write_text(updated, encoding="utf-8")
 
-    # Hard regression for the current display convention.
     expected = "Enif (ε Peg) — V 2 — Tropical Autumn"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
