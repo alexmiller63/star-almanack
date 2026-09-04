@@ -10,9 +10,9 @@ Output:
 - rewrites stellar entries in almanack-expanded.md after build_expanded_almanack.py
 
 Display convention:
-  Proper name (Bayer) — Vmag — variable [when catalogued] — Latitude-zone Season
+  Proper name (Bayer) — Vmag — variable [when catalogued] — Declination-band Season
 
-Latitude zone is derived from declination using the tropics (±23.44°):
+Declination Band is derived from declination using the tropics (±23.44°):
 Northern / Tropical / Southern. Season is the northern-calendar observing season
 of the best-visibility civil date: Winter / Spring / Summer / Autumn.
 """
@@ -48,7 +48,7 @@ def bayer_display(code: str, con: str) -> str:
     return f"{symbol}{suffix} {con}".strip()
 
 
-def latitude_zone(dec_deg: str) -> str:
+def declination_band(dec_deg: str) -> str:
     dec = float(dec_deg)
     if dec > 23.44:
         return "Northern"
@@ -109,7 +109,7 @@ def canonical(row: dict[str, str], variables: set[str]) -> str:
         parts.append(f"V{mag}")
     if latin_key(code, con) in variables:
         parts.append("variable")
-    parts.append(f"{latitude_zone(row['dec_deg'])} {season_for(d)}")
+    parts.append(f"{declination_band(row['dec_deg'])} {season_for(d)}")
     return " — ".join(parts)
 
 
