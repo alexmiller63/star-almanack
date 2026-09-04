@@ -92,12 +92,13 @@ jobs:
               if proper:
                   events = calendar_events.get(r['best_date'], '')
                   assert proper in events, f'No calendar representation found for {proper} on {r["best_date"]}'
-                  decimal_mag = f"{float(r['representative_vmax']):.2f}".rstrip('0').rstrip('.')
-                  assert f"V{decimal_mag}" in events, f'Decimal magnitude missing for {proper} on {r["best_date"]}'
+                  whole_mag = str(round(float(r['representative_vmax'])))
+                  assert f"V {whole_mag}" in events, f'Whole-number variable magnitude missing for {proper} on {r["best_date"]}'
 
           enif = calendar_events.get('2026-10-05', '')
-          assert 'Enif (ε Peg) — V2.38 — variable — Tropical Autumn' in enif, enif
-          assert 'Enif — V2' not in enif, enif
+          assert 'Enif (ε Peg) — V 2 — Tropical Autumn' in enif, enif
+          assert 'V2.38' not in enif, enif
+          assert ' — variable — ' not in enif, enif
 
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
@@ -111,7 +112,6 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import re
 
           root = Path('site/2026')
           pages = sorted(root.glob('W??/index.html'))
@@ -129,8 +129,9 @@ jobs:
               assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
 
           w41 = (root / 'W41' / 'index.html').read_text(encoding='utf-8')
-          assert 'Enif (ε Peg) — V2.38 — variable — Tropical Autumn' in w41, 'Enif metadata missing from published W41'
-          assert 'Enif — V2' not in w41, 'Old Enif display survived publication'
+          assert 'Enif (ε Peg) — V 2 — Tropical Autumn' in w41, 'Enif metadata missing from published W41'
+          assert 'V2.38' not in w41, 'Old Enif magnitude survived publication'
+          assert ' — variable — ' not in w41, 'Old variable word survived publication'
           print('Verified 53 weekly pages and enriched Enif publication')
           PY
 
