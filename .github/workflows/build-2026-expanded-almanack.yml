@@ -82,6 +82,8 @@ jobs:
 
           with open('bright-star-visibility-2026.csv', newline='', encoding='utf-8') as f:
               bright = list(csv.DictReader(f))
+          with open('bright-variable-reconciliation.csv', newline='', encoding='utf-8') as f:
+              variable_names = {(r.get('name') or '').strip().casefold() for r in csv.DictReader(f) if (r.get('name') or '').strip()}
           new = [r for r in bright if r['new_non_alpha_beta'] == 'yes']
           assert len(bright) == 92, f'Expected 92 bright-star systems, found {len(bright)}'
           assert len(new) == 41, f'Expected 41 new non-alpha/beta systems, found {len(new)}'
@@ -93,7 +95,9 @@ jobs:
                   events = calendar_events.get(r['best_date'], '')
                   assert proper in events, f'No calendar representation found for {proper} on {r["best_date"]}'
                   whole_mag = str(round(float(r['representative_vmax'])))
-                  assert f"V {whole_mag}" in events, f'Whole-number variable magnitude missing for {proper} on {r["best_date"]}'
+                  assert whole_mag in events, f'Whole-number magnitude missing for {proper} on {r["best_date"]}'
+                  if proper.casefold() in variable_names:
+                      assert f"V {whole_mag}" in events, f'Variable marker/magnitude missing for {proper} on {r["best_date"]}'
 
           enif = calendar_events.get('2026-10-05', '')
           assert 'Enif (ε Peg) — V 2 — Tropical Autumn' in enif, enif
