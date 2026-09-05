@@ -117,6 +117,35 @@ def render_asterism_inset(spec,a,stars,idx,out_dir):
     slug=a.get("inset_slug",a["name"].lower().replace(" ","-"));out=out_dir/f"{slug}-inset.svg"
     fig.tight_layout();fig.savefig(out,bbox_inches="tight",facecolor=fig.get_facecolor());plt.close(fig);return out
 
+def draw_embedded_asterism_inset(ax,a,stars,idx):
+    refs=sorted(asterism_refs(a));ss=[idx[r] for r in refs];center=spherical_center(ss)
+    pts=[project(s.ra_deg,s.dec_deg,*center) for s in ss]
+    xs=[p[0] for p in pts if p];ys=[p[1] for p in pts if p]
+    xspan=max(max(xs)-min(xs),2.5);yspan=max(max(ys)-min(ys),2.5)
+    padx=max(2.2,xspan*.65);pady=max(2.0,yspan*.75)
+    xmin,xmax=min(xs)-padx,max(xs)+padx;ymin,ymax=min(ys)-pady,max(ys)+pady
+    vis=[s for s in stars if s.mag<=7 and (p:=project(s.ra_deg,s.dec_deg,*center)) and xmin<=p[0]<=xmax and ymin<=p[1]<=ymax]
+    proj=[(*project(s.ra_deg,s.dec_deg,*center),s) for s in vis]
+    iax=ax.inset_axes([.655,.105,.31,.33],transform=ax.transAxes,zorder=20)
+    iax.set_facecolor(NIGHT);iax.set_xlim(xmax,xmin);iax.set_ylim(ymin,ymax);iax.set_aspect("equal")
+    if proj:iax.scatter([p[0] for p in proj],[p[1] for p in proj],s=[marker_area(p[2].mag,7)*.65 for p in proj],color=STAR,zorder=3)
+    for p in a.get("paths",[]):draw_path(iax,p,idx,center,2.4,ASTERISM_GREEN)
+    label_offsets=a.get("inset_label_offsets",{})
+    for r in refs:
+        s=idx[r];xy=project(s.ra_deg,s.dec_deg,*center)
+        if not xy:continue
+        if r in label_offsets:
+            off=tuple(v*.58 for v in label_offsets[r])
+            ha="right" if off[0]<0 else "left";va="top" if off[1]<0 else "bottom"
+        else:
+            off=(-6,5) if xy[0]<0 else (6,5);ha="right" if off[0]<0 else "left";va="bottom"
+        iax.annotate(s.inset_label(),xy,xytext=off,textcoords="offset points",ha=ha,va=va,fontsize=5.8,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=.5),zorder=6)
+    iax.set_title(a["name"],color=TEXT,fontsize=8.5,pad=4)
+    iax.text(.5,.015,"Binocular identification · Greek letter + proper name",transform=iax.transAxes,ha="center",va="bottom",fontsize=4.4,color=TEXT)
+    iax.set_xticks([]);iax.set_yticks([]);iax.grid(False)
+    for sp in iax.spines.values():
+        sp.set_visible(True);sp.set_color(BOUNDARY);sp.set_linewidth(.7);sp.set_alpha(.8)
+
 def render_figure(name,spec,stars,out_dir):
     idx=star_index(stars);missing=sorted(r for r in all_refs(spec) if r not in idx)
     if missing:raise ValueError("Configured stars not found: "+", ".join(missing))
@@ -158,6 +187,9 @@ def render_figure(name,spec,stars,out_dir):
         tx,ty=txy;span=ymax-ymin
         ax.annotate("",xy=(tx,ty+span*.02),xytext=(tx,ty+span*.085),arrowprops=dict(arrowstyle="-|>",mutation_scale=32,linewidth=4.0,color=STAR,shrinkA=0,shrinkB=0),zorder=8)
         ax.annotate(t.target_label(),txy,xytext=(18,0),textcoords="offset points",ha="left",va="center",fontsize=10,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1),zorder=8)
+    if tight_aqr:
+        for a in spec.get("asterisms",[]):
+            if a.get("inset",False):draw_embedded_asterism_inset(ax,a,stars,idx)
     ax.set_title(f"{t.target_label()} Finder",color=TEXT,fontsize=14,pad=12)
     ax.text(.5,.015,spec["caption"],transform=ax.transAxes,ha="center",va="bottom",fontsize=8,color=TEXT)
     ax.text(.5,-.035,"East ←                                      → West",transform=ax.transAxes,ha="center",va="top",fontsize=8,color=TEXT)
