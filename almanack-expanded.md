@@ -58,7 +58,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---|---|---|
 | Mon, Jan 05, 2026 | ♑ 16 | — |
 | Tue, Jan 06, 2026 | ♑ 17 | — |
-| Wed, Jan 07, 2026 | ♑ 18 | α Hor — 4 — Southern Winter<br>α Ret — 3 — Southern Winter |
+| Wed, Jan 07, 2026 | ♑ 18 | α Hor — Southern Winter<br>α Ret — Southern Winter |
 | Thu, Jan 08, 2026 | ♑ 19 | — |
 | Fri, Jan 09, 2026 | ♑ 20 | — |
 | Sat, Jan 10, 2026 | ♑ 21 | 🌗 Last Quarter — 15:48:28 UTC |
@@ -90,12 +90,12 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jan 12, 2026 | ♑ 23 | Aldebaran (α Tau) — 1 — Tropical Winter<br>α Dor — 3 — Southern Winter |
-| Tue, Jan 13, 2026 | ♑ 24 | α Cae — 4 — Southern Winter |
-| Wed, Jan 14, 2026 | ♑ 25 | β Cae — 5 — Southern Winter |
+| Mon, Jan 12, 2026 | ♑ 23 | Aldebaran (α Tau) — Tropical Winter<br>α Dor — Southern Winter |
+| Tue, Jan 13, 2026 | ♑ 24 | α Cae — Southern Winter |
+| Wed, Jan 14, 2026 | ♑ 25 | β Cae — Southern Winter |
 | Thu, Jan 15, 2026 | ♑ 26 | — |
 | Fri, Jan 16, 2026 | ♑ 27 | — |
-| Sat, Jan 17, 2026 | ♑ 28 | α Cam — 4 — Northern Winter |
+| Sat, Jan 17, 2026 | ♑ 28 | α Cam — Northern Winter |
 | Sun, Jan 18, 2026 | ♑ 29 | 🌑 New Moon — 19:52:06 UTC |
 
 ### Weekly Classical-Planet Ephemeris
@@ -124,13 +124,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jan 19, 2026 | ♑ 30 | β Cam — 4 — Northern Winter<br>β Men — 5 — Southern Winter |
-| Tue, Jan 20, 2026 | ♒ (Aquarius) 1 | ♒ Aquarius ingress (300°) — 01:44:56 UTC<br>Cursa (β Eri) — 3 — Tropical Winter |
-| Wed, Jan 21, 2026 | ♒ 2 | Rigel (β Ori) — 0 — Tropical Winter |
-| Thu, Jan 22, 2026 | ♒ 3 | Capella (α Aur) — 0 — Northern Winter |
+| Mon, Jan 19, 2026 | ♑ 30 | β Cam — Northern Winter<br>β Men — Southern Winter |
+| Tue, Jan 20, 2026 | ♒ (Aquarius) 1 | ♒ Aquarius ingress (300°) — 01:44:56 UTC<br>Cursa (β Eri) — Tropical Winter |
+| Wed, Jan 21, 2026 | ♒ 2 | Rigel (β Ori) — Tropical Winter |
+| Thu, Jan 22, 2026 | ♒ 3 | Capella (α Aur) — Northern Winter |
 | Fri, Jan 23, 2026 | ♒ 4 | — |
-| Sat, Jan 24, 2026 | ♒ 5 | Bellatrix (γ Ori) — 2 — Tropical Winter<br>Elnath (β Tau) — 2 — Northern Winter<br>M79 |
-| Sun, Jan 25, 2026 | ♒ 6 | M38 — Open Cluster — Northern Winter<br>Nihal (β Lep) — 3 — Tropical Winter |
+| Sat, Jan 24, 2026 | ♒ 5 | Bellatrix (γ Ori) — Tropical Winter<br>Elnath (β Tau) — Northern Winter<br>M79 |
+| Sun, Jan 25, 2026 | ♒ 6 | M38 — Open Cluster — Northern Winter<br>Nihal (β Lep) — Tropical Winter |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -158,13 +158,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jan 26, 2026 | ♒ 7 | 🌓 First Quarter — 04:47:32 UTC<br>Mintaka (δ Ori) — V 2 — Tropical Winter<br>M42 — Orion Nebula — Tropical Winter<br>M1 — Crab Nebula — Tropical Winter<br>M43<br>β Dor — 4 — Southern Winter<br>Arneb (α Lep) — 3 — Tropical Winter |
-| Tue, Jan 27, 2026 | ♒ 8 | Alnilam (ε Ori) — V 2 — Tropical Winter<br>M36 — Open Cluster — Northern Winter<br>Phact (α Col) — 3 — Southern Winter |
-| Wed, Jan 28, 2026 | ♒ 9 | Alnitak (ζ Ori) — 2 — Tropical Winter |
-| Thu, Jan 29, 2026 | ♒ 10 | Saiph (κ Ori) — 2 — Tropical Winter<br>M78<br>β Pic — 4 — Southern Winter |
-| Fri, Jan 30, 2026 | ♒ 11 | M37<br>Wazn (β Col) — 3 — Southern Winter |
-| Sat, Jan 31, 2026 | ♒ 12 | Betelgeuse (α Ori) — 0 — Tropical Winter |
-| Sun, Feb 01, 2026 | ♒ 13 | 🌕 Full Moon — 22:09:16 UTC — Wolf Moon<br>Menkalinan (β Aur) — V 2 — Northern Winter |
+| Mon, Jan 26, 2026 | ♒ 7 | 🌓 First Quarter — 04:47:32 UTC<br>Mintaka (δ Ori) — V 2.25 — Tropical Winter<br>M42 — Orion Nebula — Tropical Winter<br>M1 — Crab Nebula — Tropical Winter<br>M43<br>β Dor — Southern Winter<br>Arneb (α Lep) — Tropical Winter |
+| Tue, Jan 27, 2026 | ♒ 8 | Alnilam (ε Ori) — V 1.69 — Tropical Winter<br>M36 — Open Cluster — Northern Winter<br>Phact (α Col) — Southern Winter |
+| Wed, Jan 28, 2026 | ♒ 9 | Alnitak (ζ Ori) — Tropical Winter |
+| Thu, Jan 29, 2026 | ♒ 10 | Saiph (κ Ori) — Tropical Winter<br>M78<br>β Pic — Southern Winter |
+| Fri, Jan 30, 2026 | ♒ 11 | M37<br>Wazn (β Col) — Southern Winter |
+| Sat, Jan 31, 2026 | ♒ 12 | Betelgeuse (α Ori) — Tropical Winter |
+| Sun, Feb 01, 2026 | ♒ 13 | 🌕 Full Moon — 22:09:16 UTC — Wolf Moon<br>Menkalinan (β Aur) — V 1.9 — Northern Winter |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -194,10 +194,10 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---|---|---|
 | Mon, Feb 02, 2026 | ♒ 14 | — |
 | Tue, Feb 03, 2026 | ♒ 15 | Cross-quarter point — Imbolc — 20:02:00 UTC |
-| Wed, Feb 04, 2026 | ♒ 16 | M35 — Open Cluster — Northern Winter<br>α Men — 5 — Southern Winter |
+| Wed, Feb 04, 2026 | ♒ 16 | M35 — Open Cluster — Northern Winter<br>α Men — Southern Winter |
 | Thu, Feb 05, 2026 | ♒ 17 | — |
 | Fri, Feb 06, 2026 | ♒ 18 | — |
-| Sat, Feb 07, 2026 | ♒ 19 | Canopus (α Car) — -1 — Southern Winter<br>Mirzam (β CMa) — 2 — Tropical Winter |
+| Sat, Feb 07, 2026 | ♒ 19 | Canopus (α Car) — Southern Winter<br>Mirzam (β CMa) — Tropical Winter |
 | Sun, Feb 08, 2026 | ♒ 20 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -226,11 +226,11 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Feb 09, 2026 | ♒ 21 | 🌗 Last Quarter — 12:43:14 UTC<br>β Mon — 4 — Tropical Winter |
+| Mon, Feb 09, 2026 | ♒ 21 | 🌗 Last Quarter — 12:43:14 UTC<br>β Mon — Tropical Winter |
 | Tue, Feb 10, 2026 | ♒ 22 | — |
-| Wed, Feb 11, 2026 | ♒ 23 | Alhena (γ Gem) — 2 — Tropical Winter |
+| Wed, Feb 11, 2026 | ♒ 23 | Alhena (γ Gem) — Tropical Winter |
 | Thu, Feb 12, 2026 | ♒ 24 | M41 |
-| Fri, Feb 13, 2026 | ♒ 25 | Sirius (α CMa) — -1 — Tropical Winter<br>α Pic — 3 — Southern Winter |
+| Fri, Feb 13, 2026 | ♒ 25 | Sirius (α CMa) — Tropical Winter<br>α Pic — Southern Winter |
 | Sat, Feb 14, 2026 | ♒ 26 | — |
 | Sun, Feb 15, 2026 | ♒ 27 | — |
 
@@ -260,10 +260,10 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Feb 16, 2026 | ♒ 28 | Adhara (ε CMa) — 2 — Southern Winter |
+| Mon, Feb 16, 2026 | ♒ 28 | Adhara (ε CMa) — Southern Winter |
 | Tue, Feb 17, 2026 | ♒ 29 | 🌑 New Moon — 12:01:13 UTC |
 | Wed, Feb 18, 2026 | ♓ (Pisces) 1 | ♓ Pisces ingress (330°) — 15:51:56 UTC<br>M50 |
-| Thu, Feb 19, 2026 | ♓ 2 | Wezen (δ CMa) — 2 — Southern Winter |
+| Thu, Feb 19, 2026 | ♓ 2 | Wezen (δ CMa) — Southern Winter |
 | Fri, Feb 20, 2026 | ♓ 3 | — |
 | Sat, Feb 21, 2026 | ♓ 4 | — |
 | Sun, Feb 22, 2026 | ♓ 5 | — |
@@ -294,12 +294,12 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Feb 23, 2026 | ♓ 6 | Aludra (η CMa) — 2 — Southern Winter |
-| Tue, Feb 24, 2026 | ♓ 7 | 🌓 First Quarter — 12:27:42 UTC<br>Gomeisa (β CMi) — 3 — Tropical Winter |
+| Mon, Feb 23, 2026 | ♓ 6 | Aludra (η CMa) — Southern Winter |
+| Tue, Feb 24, 2026 | ♓ 7 | 🌓 First Quarter — 12:27:42 UTC<br>Gomeisa (β CMi) — Tropical Winter |
 | Wed, Feb 25, 2026 | ♓ 8 | M47 |
-| Thu, Feb 26, 2026 | ♓ 9 | Castor (α Gem) — 2 — Northern Winter<br>M46 |
-| Fri, Feb 27, 2026 | ♓ 10 | Procyon (α CMi) — 0 — Tropical Winter<br>M93<br>α Mon — 4 — Tropical Winter |
-| Sat, Feb 28, 2026 | ♓ 11 | Pollux (β Gem) — 1 — Northern Winter |
+| Thu, Feb 26, 2026 | ♓ 9 | Castor (α Gem) — Northern Winter<br>M46 |
+| Fri, Feb 27, 2026 | ♓ 10 | Procyon (α CMi) — Tropical Winter<br>M93<br>α Mon — Tropical Winter |
+| Sat, Feb 28, 2026 | ♓ 11 | Pollux (β Gem) — Northern Winter |
 | Sun, Mar 01, 2026 | ♓ 12 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -331,9 +331,9 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 | Mon, Mar 02, 2026 | ♓ 13 | — |
 | Tue, Mar 03, 2026 | ♓ 14 | 🌕 Full Moon — 11:37:56 UTC — Sap Moon |
 | Wed, Mar 04, 2026 | ♓ 15 | — |
-| Thu, Mar 05, 2026 | ♓ 16 | Naos (ζ Pup) — 2 — Southern Winter |
+| Thu, Mar 05, 2026 | ♓ 16 | Naos (ζ Pup) — Southern Winter |
 | Fri, Mar 06, 2026 | ♓ 17 | M48 |
-| Sat, Mar 07, 2026 | ♓ 18 | γ2 Vel — 2 — Southern Winter |
+| Sat, Mar 07, 2026 | ♓ 18 | γ2 Vel — Southern Winter |
 | Sun, Mar 08, 2026 | ♓ 19 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -362,13 +362,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Mar 09, 2026 | ♓ 20 | α Cha — 4 — Southern Winter<br>Tarf (β Cnc) — 4 — Tropical Winter |
-| Tue, Mar 10, 2026 | ♓ 21 | Avior (ε Car) — 2 — Southern Winter |
-| Wed, Mar 11, 2026 | ♓ 22 | 🌗 Last Quarter — 09:38:37 UTC<br>β Vol — 4 — Southern Winter |
+| Mon, Mar 09, 2026 | ♓ 20 | α Cha — Southern Winter<br>Tarf (β Cnc) — Tropical Winter |
+| Tue, Mar 10, 2026 | ♓ 21 | Avior (ε Car) — Southern Winter |
+| Wed, Mar 11, 2026 | ♓ 22 | 🌗 Last Quarter — 09:38:37 UTC<br>β Vol — Southern Winter |
 | Thu, Mar 12, 2026 | ♓ 23 | — |
 | Fri, Mar 13, 2026 | ♓ 24 | — |
 | Sat, Mar 14, 2026 | ♓ 25 | — |
-| Sun, Mar 15, 2026 | ♓ 26 | M44 — Beehive Cluster — Tropical Winter<br>β Pyx — 4 — Southern Winter |
+| Sun, Mar 15, 2026 | ♓ 26 | M44 — Beehive Cluster — Tropical Winter<br>β Pyx — Southern Winter |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -396,12 +396,12 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Mar 16, 2026 | ♓ 27 | α Pyx — 4 — Southern Winter<br>Alsephina (δ Vel) — V 2 — Southern Winter |
+| Mon, Mar 16, 2026 | ♓ 27 | α Pyx — Southern Winter<br>Alsephina (δ Vel) — V 1.93 — Southern Winter |
 | Tue, Mar 17, 2026 | ♓ 28 | M67 |
 | Wed, Mar 18, 2026 | ♓ 29 | — |
 | Thu, Mar 19, 2026 | ♓ 30 | 🌑 New Moon — 01:23:28 UTC |
-| Fri, Mar 20, 2026 | ♈ (Aries) 1 | March Equinox — First Point of Aries — Ostara — 14:45:58 UTC<br>♈ Aries ingress (0°) — 14:45:58 UTC<br>Acubens (α Cnc) — 4 — Tropical Spring |
-| Sat, Mar 21, 2026 | ♈ 2 | α Vol — 4 — Southern Spring |
+| Fri, Mar 20, 2026 | ♈ (Aries) 1 | March Equinox — First Point of Aries — Ostara — 14:45:58 UTC<br>♈ Aries ingress (0°) — 14:45:58 UTC<br>Acubens (α Cnc) — Tropical Spring |
+| Sat, Mar 21, 2026 | ♈ 2 | α Vol — Southern Spring |
 | Sun, Mar 22, 2026 | ♈ 3 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -430,12 +430,12 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Mar 23, 2026 | ♈ 4 | Suhail (λ Vel) — V 2 — Southern Spring |
-| Tue, Mar 24, 2026 | ♈ 5 | Miaplacidus (β Car) — 2 — Southern Spring |
-| Wed, Mar 25, 2026 | ♈ 6 | 🌓 First Quarter — 19:17:40 UTC<br>Aspidiske (ι Car) — 2 — Southern Spring |
-| Thu, Mar 26, 2026 | ♈ 7 | α Lyn — 3 — Northern Spring |
-| Fri, Mar 27, 2026 | ♈ 8 | Markeb (κ Vel) — 2 — Southern Spring |
-| Sat, Mar 28, 2026 | ♈ 9 | Alphard (α Hya) — 2 — Tropical Spring |
+| Mon, Mar 23, 2026 | ♈ 4 | Suhail (λ Vel) — V 2.23 — Southern Spring |
+| Tue, Mar 24, 2026 | ♈ 5 | Miaplacidus (β Car) — Southern Spring |
+| Wed, Mar 25, 2026 | ♈ 6 | 🌓 First Quarter — 19:17:40 UTC<br>Aspidiske (ι Car) — Southern Spring |
+| Thu, Mar 26, 2026 | ♈ 7 | α Lyn — Northern Spring |
+| Fri, Mar 27, 2026 | ♈ 8 | Markeb (κ Vel) — Southern Spring |
+| Sat, Mar 28, 2026 | ♈ 9 | Alphard (α Hya) — Tropical Spring |
 | Sun, Mar 29, 2026 | ♈ 10 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -500,11 +500,11 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---|---|---|
 | Mon, Apr 06, 2026 | ♈ 18 | — |
 | Tue, Apr 07, 2026 | ♈ 19 | — |
-| Wed, Apr 08, 2026 | ♈ 20 | Regulus (α Leo) — 1 — Tropical Spring<br>α Sex — 4 — Tropical Spring |
+| Wed, Apr 08, 2026 | ♈ 20 | Regulus (α Leo) — Tropical Spring<br>α Sex — Tropical Spring |
 | Thu, Apr 09, 2026 | ♈ 21 | — |
 | Fri, Apr 10, 2026 | ♈ 22 | 🌗 Last Quarter — 04:51:45 UTC |
 | Sat, Apr 11, 2026 | ♈ 23 | — |
-| Sun, Apr 12, 2026 | ♈ 24 | Algieba (γ1 Leo) — 2 — Tropical Spring |
+| Sun, Apr 12, 2026 | ♈ 24 | Algieba (γ1 Leo) — Tropical Spring |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -532,8 +532,8 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Apr 13, 2026 | ♈ 25 | α Ant — 4 — Southern Spring |
-| Tue, Apr 14, 2026 | ♈ 26 | β LMi — 4 — Northern Spring<br>β Sex — 5 — Tropical Spring |
+| Mon, Apr 13, 2026 | ♈ 25 | α Ant — Southern Spring |
+| Tue, Apr 14, 2026 | ♈ 26 | β LMi — Northern Spring<br>β Sex — Tropical Spring |
 | Wed, Apr 15, 2026 | ♈ 27 | — |
 | Thu, Apr 16, 2026 | ♈ 28 | — |
 | Fri, Apr 17, 2026 | ♈ 29 | 🌑 New Moon — 11:51:46 UTC |
@@ -568,10 +568,10 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---|---|---|
 | Mon, Apr 20, 2026 | ♉ (Taurus) 1 | ♉ Taurus ingress (30°) — 01:39:07 UTC |
 | Tue, Apr 21, 2026 | ♉ 2 | — |
-| Wed, Apr 22, 2026 | ♉ 3 | Alkes (α Crt) — 4 — Tropical Spring |
-| Thu, Apr 23, 2026 | ♉ 4 | Dubhe (α UMa) — 2 — Northern Spring<br>Merak (β UMa) — 2 — Northern Spring |
+| Wed, Apr 22, 2026 | ♉ 3 | Alkes (α Crt) — Tropical Spring |
+| Thu, Apr 23, 2026 | ♉ 4 | Dubhe (α UMa) — Northern Spring<br>Merak (β UMa) — Northern Spring |
 | Fri, Apr 24, 2026 | ♉ 5 | 🌓 First Quarter — 02:31:44 UTC |
-| Sat, Apr 25, 2026 | ♉ 6 | M97<br>M108<br>β Crt — 4 — Tropical Spring |
+| Sat, Apr 25, 2026 | ♉ 6 | M97<br>M108<br>β Crt — Tropical Spring |
 | Sun, Apr 26, 2026 | ♉ 7 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -635,12 +635,12 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, May 04, 2026 | ♉ 15 | — |
-| Tue, May 05, 2026 | ♉ 16 | Cross-quarter point — Beltane — 11:49 UTC<br>Denebola (β Leo) — V 2 — Tropical Spring |
-| Wed, May 06, 2026 | ♉ 17 | Phecda (γ UMa) — 2 — Northern Spring<br>β Hya — 4 — Southern Spring<br>Zavijava (β Vir) — 4 — Tropical Spring |
+| Tue, May 05, 2026 | ♉ 16 | Cross-quarter point — Beltane — 11:49 UTC<br>Denebola (β Leo) — V 2.14 — Tropical Spring |
+| Wed, May 06, 2026 | ♉ 17 | Phecda (γ UMa) — Northern Spring<br>β Hya — Southern Spring<br>Zavijava (β Vir) — Tropical Spring |
 | Thu, May 07, 2026 | ♉ 18 | M109 |
 | Fri, May 08, 2026 | ♉ 19 | — |
 | Sat, May 09, 2026 | ♉ 20 | 🌗 Last Quarter — 21:10:33 UTC |
-| Sun, May 10, 2026 | ♉ 21 | Alchiba (α Crv) — 4 — Southern Spring |
+| Sun, May 10, 2026 | ♉ 21 | Alchiba (α Crv) — Southern Spring |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -670,11 +670,11 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---|---|---|
 | Mon, May 11, 2026 | ♉ 22 | — |
 | Tue, May 12, 2026 | ♉ 23 | Megrez (δ Ursae Majoris) — Northern Spring<br>M98 |
-| Wed, May 13, 2026 | ♉ 24 | M106 — Galaxy — Northern Spring<br>M99<br>β Cha — 4 — Southern Spring |
+| Wed, May 13, 2026 | ♉ 24 | M106 — Galaxy — Northern Spring<br>M99<br>β Cha — Southern Spring |
 | Thu, May 14, 2026 | ♉ 25 | M40<br>M61<br>M84<br>M100 |
-| Fri, May 15, 2026 | ♉ 26 | Acrux (α1 Cru) — 1 — Southern Spring<br>M85<br>M86<br>α2 Cru — 2 — Southern Spring |
-| Sat, May 16, 2026 | ♉ 27 | 🌑 New Moon — 20:01:01 UTC<br>Gacrux (γ Cru) — 2 — Southern Spring<br>M49<br>M87<br>M88 |
-| Sun, May 17, 2026 | ♉ 28 | M89<br>M90<br>M91<br>Chara (β CVn) — 4 — Northern Spring<br>Kraz (β Crv) — 3 — Tropical Spring<br>α Mus — 3 — Southern Spring |
+| Fri, May 15, 2026 | ♉ 26 | Acrux (α1 Cru) — Southern Spring<br>M85<br>M86<br>α2 Cru — Southern Spring |
+| Sat, May 16, 2026 | ♉ 27 | 🌑 New Moon — 20:01:01 UTC<br>Gacrux (γ Cru) — Southern Spring<br>M49<br>M87<br>M88 |
+| Sun, May 17, 2026 | ♉ 28 | M89<br>M90<br>M91<br>Chara (β CVn) — Northern Spring<br>Kraz (β Crv) — Tropical Spring<br>α Mus — Southern Spring |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -703,10 +703,10 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, May 18, 2026 | ♉ 29 | M104 — Sombrero Galaxy — Tropical Spring<br>M58<br>M68 |
-| Tue, May 19, 2026 | ♉ 30 | M59<br>M60<br>γ Cen — 2 — Southern Spring |
-| Wed, May 20, 2026 | ♉ 31 | Mimosa (β Cru) — V 1 — Southern Spring<br>β Mus — 3 — Southern Spring |
+| Tue, May 19, 2026 | ♉ 30 | M59<br>M60<br>γ Cen — Southern Spring |
+| Wed, May 20, 2026 | ♉ 31 | Mimosa (β Cru) — V 1.25 — Southern Spring<br>β Mus — Southern Spring |
 | Thu, May 21, 2026 | ♊ (Gemini) 1 | ♊ Gemini ingress (60°) — 00:36:44 UTC<br>M94 |
-| Fri, May 22, 2026 | ♊ 2 | Alioth (ε UMa) — V 2 — Northern Spring<br>α1 CVn — 6 — Northern Spring<br>Cor Caroli (α2 CVn) — 3 — Northern Spring |
+| Fri, May 22, 2026 | ♊ 2 | Alioth (ε UMa) — V 1.76 — Northern Spring<br>α1 CVn — Northern Spring<br>Cor Caroli (α2 CVn) — Northern Spring |
 | Sat, May 23, 2026 | ♊ 3 | 🌓 First Quarter — 11:10:57 UTC<br>M64 |
 | Sun, May 24, 2026 | ♊ 4 | — |
 
@@ -737,10 +737,10 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, May 25, 2026 | ♊ 5 | — |
-| Tue, May 26, 2026 | ♊ 6 | Diadem (α Com) — 4 — Tropical Spring<br>β Com — 4 — Northern Spring |
+| Tue, May 26, 2026 | ♊ 6 | Diadem (α Com) — Tropical Spring<br>β Com — Northern Spring |
 | Wed, May 27, 2026 | ♊ 7 | M63 — Sunflower Galaxy — Northern Spring<br>M53 |
 | Thu, May 28, 2026 | ♊ 8 | — |
-| Fri, May 29, 2026 | ♊ 9 | Spica (α Vir) — 1 — Tropical Spring<br>Mizar (ζ UMa) — 2 — Northern Spring |
+| Fri, May 29, 2026 | ♊ 9 | Spica (α Vir) — Tropical Spring<br>Mizar (ζ UMa) — Northern Spring |
 | Sat, May 30, 2026 | ♊ 10 | — |
 | Sun, May 31, 2026 | ♊ 11 | 🌕 Full Moon — 08:45:16 UTC — Flower Moon<br>M51 — Whirlpool Galaxy — Northern Spring |
 
@@ -771,9 +771,9 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Jun 01, 2026 | ♊ 12 | M83 |
-| Tue, Jun 02, 2026 | ♊ 13 | ε Cen — V 2 — Southern Spring |
+| Tue, Jun 02, 2026 | ♊ 13 | ε Cen — V 2.29 — Southern Spring |
 | Wed, Jun 03, 2026 | ♊ 14 | M3 — Globular Cluster — Northern Spring |
-| Thu, Jun 04, 2026 | ♊ 15 | Alkaid (η UMa) — 2 — Northern Spring |
+| Thu, Jun 04, 2026 | ♊ 15 | Alkaid (η UMa) — Northern Spring |
 | Fri, Jun 05, 2026 | ♊ 16 | — |
 | Sat, Jun 06, 2026 | ♊ 17 | — |
 | Sun, Jun 07, 2026 | ♊ 18 | — |
@@ -804,10 +804,10 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jun 08, 2026 | ♊ 19 | 🌗 Last Quarter — 10:00:32 UTC<br>Hadar (β Cen) — V 1 — Southern Spring<br>M101 — Pinwheel Galaxy — Northern Spring<br>Thuban (α Dra) — 4 — Northern Spring |
-| Tue, Jun 09, 2026 | ♊ 20 | Menkent (θ Cen) — 2 — Southern Spring |
+| Mon, Jun 08, 2026 | ♊ 19 | 🌗 Last Quarter — 10:00:32 UTC<br>Hadar (β Cen) — V 0.61 — Southern Spring<br>M101 — Pinwheel Galaxy — Northern Spring<br>Thuban (α Dra) — Northern Spring |
+| Tue, Jun 09, 2026 | ♊ 20 | Menkent (θ Cen) — Southern Spring |
 | Wed, Jun 10, 2026 | ♊ 21 | — |
-| Thu, Jun 11, 2026 | ♊ 22 | Arcturus (α Boo) — 0 — Tropical Spring |
+| Thu, Jun 11, 2026 | ♊ 22 | Arcturus (α Boo) — Tropical Spring |
 | Fri, Jun 12, 2026 | ♊ 23 | — |
 | Sat, Jun 13, 2026 | ♊ 24 | — |
 | Sun, Jun 14, 2026 | ♊ 25 | — |
@@ -838,13 +838,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jun 15, 2026 | ♊ 26 | 🌑 New Moon — 02:54:07 UTC<br>η Cen — V 2 — Southern Spring |
-| Tue, Jun 16, 2026 | ♊ 27 | Alpha Centauri (α Cen) — 0 — Southern Spring |
-| Wed, Jun 17, 2026 | ♊ 28 | α Cir — 3 — Southern Spring<br>α Lup — 2 — Southern Spring |
-| Thu, Jun 18, 2026 | ♊ 29 | α Aps — 4 — Southern Spring<br>Izar (ε Boo) — 2 — Northern Spring |
-| Fri, Jun 19, 2026 | ♊ 30 | Kochab (β UMi) — 2 — Northern Spring<br>α1 Lib — 5 — Tropical Spring<br>Zubenelgenubi (α2 Lib) — 3 — Tropical Spring |
+| Mon, Jun 15, 2026 | ♊ 26 | 🌑 New Moon — 02:54:07 UTC<br>η Cen — V 2.33 — Southern Spring |
+| Tue, Jun 16, 2026 | ♊ 27 | Alpha Centauri (α Cen) — Southern Spring |
+| Wed, Jun 17, 2026 | ♊ 28 | α Cir — Southern Spring<br>α Lup — Southern Spring |
+| Thu, Jun 18, 2026 | ♊ 29 | α Aps — Southern Spring<br>Izar (ε Boo) — Northern Spring |
+| Fri, Jun 19, 2026 | ♊ 30 | Kochab (β UMi) — Northern Spring<br>α1 Lib — Tropical Spring<br>Zubenelgenubi (α2 Lib) — Tropical Spring |
 | Sat, Jun 20, 2026 | ♊ 31 | — |
-| Sun, Jun 21, 2026 | ♋ (Cancer) 1 | 🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC<br>β Lup — 3 — Southern Summer |
+| Sun, Jun 21, 2026 | ♋ (Cancer) 1 | 🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC<br>β Lup — Southern Summer |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -872,13 +872,13 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jun 22, 2026 | ♋ 2 | Nekkar (β Boo) — 3 — Northern Summer |
+| Mon, Jun 22, 2026 | ♋ 2 | Nekkar (β Boo) — Northern Summer |
 | Tue, Jun 23, 2026 | ♋ 3 | M102 |
 | Wed, Jun 24, 2026 | ♋ 4 | — |
-| Thu, Jun 25, 2026 | ♋ 5 | Zubeneschamali (β Lib) — 3 — Tropical Summer |
-| Fri, Jun 26, 2026 | ♋ 6 | M5<br>β Cir — 4 — Southern Summer |
+| Thu, Jun 25, 2026 | ♋ 5 | Zubeneschamali (β Lib) — Tropical Summer |
+| Fri, Jun 26, 2026 | ♋ 6 | M5<br>β Cir — Southern Summer |
 | Sat, Jun 27, 2026 | ♋ 7 | — |
-| Sun, Jun 28, 2026 | ♋ 8 | Nusakan (β CrB) — 4 — Northern Summer |
+| Sun, Jun 28, 2026 | ♋ 8 | Nusakan (β CrB) — Northern Summer |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -907,12 +907,12 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Jun 29, 2026 | ♋ 9 | 🌕 Full Moon — 23:56:43 UTC |
-| Tue, Jun 30, 2026 | ♋ 10 | Alphecca (α CrB) — 2 — Northern Summer |
+| Tue, Jun 30, 2026 | ♋ 10 | Alphecca (α CrB) — Northern Summer |
 | Wed, Jul 01, 2026 | ♋ 11 | — |
-| Thu, Jul 02, 2026 | ♋ 12 | Unukalhai (α Ser) — 3 — Tropical Summer<br>β Ser — 4 — Tropical Summer |
+| Thu, Jul 02, 2026 | ♋ 12 | Unukalhai (α Ser) — Tropical Summer<br>β Ser — Tropical Summer |
 | Fri, Jul 03, 2026 | ♋ 13 | — |
 | Sat, Jul 04, 2026 | ♋ 14 | — |
-| Sun, Jul 05, 2026 | ♋ 15 | β TrA — 3 — Southern Summer |
+| Sun, Jul 05, 2026 | ♋ 15 | β TrA — Southern Summer |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -940,8 +940,8 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jul 06, 2026 | ♋ 16 | Dschubba (δ Sco) — V 2 — Tropical Summer |
-| Tue, Jul 07, 2026 | ♋ 17 | 🌗 Last Quarter — 19:28:59 UTC<br>Acrab (β1 Sco) — 3 — Tropical Summer<br>β2 Sco — 5 — Tropical Summer |
+| Mon, Jul 06, 2026 | ♋ 16 | Dschubba (δ Sco) — V 2.29 — Tropical Summer |
+| Tue, Jul 07, 2026 | ♋ 17 | 🌗 Last Quarter — 19:28:59 UTC<br>Acrab (β1 Sco) — Tropical Summer<br>β2 Sco — Tropical Summer |
 | Wed, Jul 08, 2026 | ♋ 18 | — |
 | Thu, Jul 09, 2026 | ♋ 19 | — |
 | Fri, Jul 10, 2026 | ♋ 20 | M80 |
@@ -974,12 +974,12 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jul 13, 2026 | ♋ 23 | Kornephoros (β Her) — 3 — Tropical Summer<br>Antares (α Sco) — 1 — Southern Summer |
+| Mon, Jul 13, 2026 | ♋ 23 | Kornephoros (β Her) — Tropical Summer<br>Antares (α Sco) — Southern Summer |
 | Tue, Jul 14, 2026 | ♋ 24 | 🌑 New Moon — 09:43:34 UTC<br>M107 |
 | Wed, Jul 15, 2026 | ♋ 25 | — |
-| Thu, Jul 16, 2026 | ♋ 26 | M13<br>β Aps — 4 — Southern Summer |
+| Thu, Jul 16, 2026 | ♋ 26 | M13<br>β Aps — Southern Summer |
 | Fri, Jul 17, 2026 | ♋ 27 | — |
-| Sat, Jul 18, 2026 | ♋ 28 | M12<br>Atria (α TrA) — 2 — Southern Summer<br>Larawag (ε Sco) — 2 — Southern Summer |
+| Sat, Jul 18, 2026 | ♋ 28 | M12<br>Atria (α TrA) — Southern Summer<br>Larawag (ε Sco) — Southern Summer |
 | Sun, Jul 19, 2026 | ♋ 29 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1011,8 +1011,8 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Mon, Jul 20, 2026 | ♋ 30 | M10 |
 | Tue, Jul 21, 2026 | ♋ 31 | 🌓 First Quarter — 11:05:35 UTC<br>M19<br>M62 |
 | Wed, Jul 22, 2026 | ♌ (Leo) 1 | — |
-| Thu, Jul 23, 2026 | ♌ 2 | Sabik (η Oph) — 2 — Tropical Summer |
-| Fri, Jul 24, 2026 | ♌ 3 | Rasalgethi (α1 Her) — 3 — Tropical Summer<br>α2 Her — 5 — Tropical Summer |
+| Thu, Jul 23, 2026 | ♌ 2 | Sabik (η Oph) — Tropical Summer |
+| Fri, Jul 24, 2026 | ♌ 3 | Rasalgethi (α1 Her) — Tropical Summer<br>α2 Her — Tropical Summer |
 | Sat, Jul 25, 2026 | ♌ 4 | M9<br>M92 |
 | Sun, Jul 26, 2026 | ♌ 5 | — |
 
@@ -1042,12 +1042,12 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Jul 27, 2026 | ♌ 6 | β Ara — 3 — Southern Summer |
-| Tue, Jul 28, 2026 | ♌ 7 | Rastaban (β Dra) — 3 — Northern Summer |
-| Wed, Jul 29, 2026 | ♌ 8 | 🌕 Full Moon — 14:35:42 UTC<br>α Ara — 3 — Southern Summer<br>Rasalhague (α Oph) — 2 — Tropical Summer<br>Shaula (λ Sco) — V 2 — Southern Summer |
-| Thu, Jul 30, 2026 | ♌ 9 | M6<br>M14<br>Sargas (θ Sco) — 2 — Southern Summer |
-| Fri, Jul 31, 2026 | ♌ 10 | κ Sco — V 2 — Southern Summer |
-| Sat, Aug 01, 2026 | ♌ 11 | Cebalrai (β Oph) — 3 — Tropical Summer |
+| Mon, Jul 27, 2026 | ♌ 6 | β Ara — Southern Summer |
+| Tue, Jul 28, 2026 | ♌ 7 | Rastaban (β Dra) — Northern Summer |
+| Wed, Jul 29, 2026 | ♌ 8 | 🌕 Full Moon — 14:35:42 UTC<br>α Ara — Southern Summer<br>Rasalhague (α Oph) — Tropical Summer<br>Shaula (λ Sco) — V 1.62 — Southern Summer |
+| Thu, Jul 30, 2026 | ♌ 9 | M6<br>M14<br>Sargas (θ Sco) — Southern Summer |
+| Fri, Jul 31, 2026 | ♌ 10 | κ Sco — V 2.39 — Southern Summer |
+| Sat, Aug 01, 2026 | ♌ 11 | Cebalrai (β Oph) — Tropical Summer |
 | Sun, Aug 02, 2026 | ♌ 12 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1077,7 +1077,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Aug 03, 2026 | ♌ 13 | M7 |
-| Tue, Aug 04, 2026 | ♌ 14 | M23<br>Eltanin (γ Dra) — 2 — Northern Summer |
+| Tue, Aug 04, 2026 | ♌ 14 | M23<br>Eltanin (γ Dra) — Northern Summer |
 | Wed, Aug 05, 2026 | ♌ 15 | M8<br>M20<br>M21 |
 | Thu, Aug 06, 2026 | ♌ 16 | 🌗 Last Quarter — 02:21:32 UTC |
 | Fri, Aug 07, 2026 | ♌ 17 | — |
@@ -1111,11 +1111,11 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Aug 10, 2026 | ♌ 20 | M28 |
-| Tue, Aug 11, 2026 | ♌ 21 | Kaus Australis (ε Sgr) — 2 — Southern Summer |
-| Wed, Aug 12, 2026 | ♌ 22 | 🌑 New Moon — 17:36:40 UTC<br>M25<br>M69<br>α Tel — 3 — Southern Summer |
+| Tue, Aug 11, 2026 | ♌ 21 | Kaus Australis (ε Sgr) — Southern Summer |
+| Wed, Aug 12, 2026 | ♌ 22 | 🌑 New Moon — 17:36:40 UTC<br>M25<br>M69<br>α Tel — Southern Summer |
 | Thu, Aug 13, 2026 | ♌ 23 | M22 |
-| Fri, Aug 14, 2026 | ♌ 24 | α Sct — 4 — Tropical Summer |
-| Sat, Aug 15, 2026 | ♌ 25 | M70<br>Vega (α Lyr) — 0 — Northern Summer |
+| Fri, Aug 14, 2026 | ♌ 24 | α Sct — Tropical Summer |
+| Sat, Aug 15, 2026 | ♌ 25 | M70<br>Vega (α Lyr) — Northern Summer |
 | Sun, Aug 16, 2026 | ♌ 26 | M26 |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1144,13 +1144,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Aug 17, 2026 | ♌ 27 | M11<br>β Sct — 4 — Tropical Summer |
-| Tue, Aug 18, 2026 | ♌ 28 | M54<br>M57<br>Sheliak (β Lyr) — 4 — Northern Summer |
+| Mon, Aug 17, 2026 | ♌ 27 | M11<br>β Sct — Tropical Summer |
+| Tue, Aug 18, 2026 | ♌ 28 | M54<br>M57<br>Sheliak (β Lyr) — Northern Summer |
 | Wed, Aug 19, 2026 | ♌ 29 | — |
-| Thu, Aug 20, 2026 | ♌ 30 | 🌓 First Quarter — 02:46:20 UTC<br>Nunki (σ Sgr) — 2 — Southern Summer |
+| Thu, Aug 20, 2026 | ♌ 30 | 🌓 First Quarter — 02:46:20 UTC<br>Nunki (σ Sgr) — Southern Summer |
 | Fri, Aug 21, 2026 | ♌ 31 | — |
 | Sat, Aug 22, 2026 | ♌ 32 | — |
-| Sun, Aug 23, 2026 | ♍ (Virgo) 1 | M56<br>Meridiana (α CrA) — 4 — Southern Summer |
+| Sun, Aug 23, 2026 | ♍ (Virgo) 1 | M56<br>Meridiana (α CrA) — Southern Summer |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -1178,12 +1178,12 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Aug 24, 2026 | ♍ 2 | β CrA — 4 — Southern Summer |
+| Mon, Aug 24, 2026 | ♍ 2 | β CrA — Southern Summer |
 | Tue, Aug 25, 2026 | ♍ 3 | — |
 | Wed, Aug 26, 2026 | ♍ 4 | — |
-| Thu, Aug 27, 2026 | ♍ 5 | Rukbat (α Sgr) — 4 — Southern Summer<br>Arkab Prior (β1 Sgr) — 4 — Southern Summer<br>Arkab Posterior (β2 Sgr) — 4 — Southern Summer |
+| Thu, Aug 27, 2026 | ♍ 5 | Rukbat (α Sgr) — Southern Summer<br>Arkab Prior (β1 Sgr) — Southern Summer<br>Arkab Posterior (β2 Sgr) — Southern Summer |
 | Fri, Aug 28, 2026 | ♍ 6 | 🌕 Full Moon — 04:18:30 UTC |
-| Sat, Aug 29, 2026 | ♍ 7 | M55<br>Albireo (β1 Cyg) — 3 — Northern Summer<br>Anser (α Vul) — 4 — Northern Summer |
+| Sat, Aug 29, 2026 | ♍ 7 | M55<br>Albireo (β1 Cyg) — Northern Summer<br>Anser (α Vul) — Northern Summer |
 | Sun, Aug 30, 2026 | ♍ 8 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1213,11 +1213,11 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Aug 31, 2026 | ♍ 9 | — |
-| Tue, Sep 01, 2026 | ♍ 10 | Sham (α Sge) — 4 — Tropical Summer<br>β Sge — 4 — Tropical Summer |
+| Tue, Sep 01, 2026 | ♍ 10 | Sham (α Sge) — Tropical Summer<br>β Sge — Tropical Summer |
 | Wed, Sep 02, 2026 | ♍ 11 | M71 |
 | Thu, Sep 03, 2026 | ♍ 12 | — |
-| Fri, Sep 04, 2026 | ♍ 13 | 🌗 Last Quarter — 07:51:15 UTC<br>M27<br>Altair (α Aql) — 1 — Tropical Summer |
-| Sat, Sep 05, 2026 | ♍ 14 | M75<br>Alshain (β Aql) — 4 — Tropical Summer |
+| Fri, Sep 04, 2026 | ♍ 13 | 🌗 Last Quarter — 07:51:15 UTC<br>M27<br>Altair (α Aql) — Tropical Summer |
+| Sat, Sep 05, 2026 | ♍ 14 | M75<br>Alshain (β Aql) — Tropical Summer |
 | Sun, Sep 06, 2026 | ♍ 15 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1250,9 +1250,9 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Tue, Sep 08, 2026 | ♍ 17 | — |
 | Wed, Sep 09, 2026 | ♍ 18 | — |
 | Thu, Sep 10, 2026 | ♍ 19 | M29 |
-| Fri, Sep 11, 2026 | ♍ 20 | 🌑 New Moon — 03:26:55 UTC<br>α1 Cap — 4 — Tropical Summer<br>Algedi (α2 Cap) — 4 — Tropical Summer |
-| Sat, Sep 12, 2026 | ♍ 21 | Dabih (β Cap) — 3 — Tropical Summer<br>Sadr (γ Cyg) — 2 — Northern Summer |
-| Sun, Sep 13, 2026 | ♍ 22 | Peacock (α Pav) — 2 — Southern Summer |
+| Fri, Sep 11, 2026 | ♍ 20 | 🌑 New Moon — 03:26:55 UTC<br>α1 Cap — Tropical Summer<br>Algedi (α2 Cap) — Tropical Summer |
+| Sat, Sep 12, 2026 | ♍ 21 | Dabih (β Cap) — Tropical Summer<br>Sadr (γ Cyg) — Northern Summer |
+| Sun, Sep 13, 2026 | ♍ 22 | Peacock (α Pav) — Southern Summer |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -1283,10 +1283,10 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Mon, Sep 14, 2026 | ♍ 23 | — |
 | Tue, Sep 15, 2026 | ♍ 24 | — |
 | Wed, Sep 16, 2026 | ♍ 25 | — |
-| Thu, Sep 17, 2026 | ♍ 26 | Sualocin (α Del) — 4 — Tropical Summer<br>Rotanev (β Del) — 4 — Tropical Summer<br>α Ind — 3 — Southern Summer |
-| Fri, Sep 18, 2026 | ♍ 27 | 🌓 First Quarter — 20:43:39 UTC<br>M72<br>Deneb (α Cyg) — 1 — Northern Summer |
-| Sat, Sep 19, 2026 | ♍ 28 | M73<br>β Pav — 3 — Southern Summer<br>Aljanah (ε Cyg) — 2 — Northern Summer |
-| Sun, Sep 20, 2026 | ♍ 29 | α Mic — 5 — Southern Summer |
+| Thu, Sep 17, 2026 | ♍ 26 | Sualocin (α Del) — Tropical Summer<br>Rotanev (β Del) — Tropical Summer<br>α Ind — Southern Summer |
+| Fri, Sep 18, 2026 | ♍ 27 | 🌓 First Quarter — 20:43:39 UTC<br>M72<br>Deneb (α Cyg) — Northern Summer |
+| Sat, Sep 19, 2026 | ♍ 28 | M73<br>β Pav — Southern Summer<br>Aljanah (ε Cyg) — Northern Summer |
+| Sun, Sep 20, 2026 | ♍ 29 | α Mic — Southern Summer |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -1314,13 +1314,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Sep 21, 2026 | ♍ 30 | β Mic — 6 — Southern Summer |
-| Tue, Sep 22, 2026 | ♍ 31 | β Ind — 4 — Southern Autumn |
+| Mon, Sep 21, 2026 | ♍ 30 | β Mic — Southern Summer |
+| Tue, Sep 22, 2026 | ♍ 31 | β Ind — Southern Autumn |
 | Wed, Sep 23, 2026 | ♎ (Libra) 1 | — |
-| Thu, Sep 24, 2026 | ♎ 2 | α Oct — 5 — Southern Autumn |
+| Thu, Sep 24, 2026 | ♎ 2 | α Oct — Southern Autumn |
 | Fri, Sep 25, 2026 | ♎ 3 | — |
 | Sat, Sep 26, 2026 | ♎ 4 | 🌕 Full Moon — 16:49:02 UTC |
-| Sun, Sep 27, 2026 | ♎ 5 | Kitalpha (α Equ) — 4 — Tropical Autumn |
+| Sun, Sep 27, 2026 | ♎ 5 | Kitalpha (α Equ) — Tropical Autumn |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -1348,11 +1348,11 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Sep 28, 2026 | ♎ 6 | Alderamin (α Cep) — 2 — Northern Autumn |
-| Tue, Sep 29, 2026 | ♎ 7 | β Equ — 5 — Tropical Autumn |
+| Mon, Sep 28, 2026 | ♎ 6 | Alderamin (α Cep) — Northern Autumn |
+| Tue, Sep 29, 2026 | ♎ 7 | β Equ — Tropical Autumn |
 | Wed, Sep 30, 2026 | ♎ 8 | — |
-| Thu, Oct 01, 2026 | ♎ 9 | M15<br>Alfirk (β Cep) — 3 — Northern Autumn |
-| Fri, Oct 02, 2026 | ♎ 10 | M2<br>M39<br>Sadalsuud (β Aqr) — 3 — Tropical Autumn |
+| Thu, Oct 01, 2026 | ♎ 9 | M15<br>Alfirk (β Cep) — Northern Autumn |
+| Fri, Oct 02, 2026 | ♎ 10 | M2<br>M39<br>Sadalsuud (β Aqr) — Tropical Autumn |
 | Sat, Oct 03, 2026 | ♎ 11 | 🌗 Last Quarter — 13:25:02 UTC |
 | Sun, Oct 04, 2026 | ♎ 12 | M30 |
 
@@ -1382,13 +1382,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Oct 05, 2026 | ♎ 13 | Enif (ε Peg) — V 2 — Tropical Autumn |
+| Mon, Oct 05, 2026 | ♎ 13 | Enif (ε Peg) — V 2.38 — Tropical Autumn |
 | Tue, Oct 06, 2026 | ♎ 14 | — |
 | Wed, Oct 07, 2026 | ♎ 15 | — |
 | Thu, Oct 08, 2026 | ♎ 16 | — |
 | Fri, Oct 09, 2026 | ♎ 17 | — |
 | Sat, Oct 10, 2026 | ♎ 18 | 🌑 New Moon — 15:50:01 UTC |
-| Sun, Oct 11, 2026 | ♎ 19 | Sadalmelik (α Aqr) — 3 — Tropical Autumn |
+| Sun, Oct 11, 2026 | ♎ 19 | Sadalmelik (α Aqr) — Tropical Autumn |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -1416,13 +1416,13 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Oct 12, 2026 | ♎ 20 | Alnair (α Gru) — 2 — Southern Autumn |
+| Mon, Oct 12, 2026 | ♎ 20 | Alnair (α Gru) — Southern Autumn |
 | Tue, Oct 13, 2026 | ♎ 21 | — |
 | Wed, Oct 14, 2026 | ♎ 22 | — |
-| Thu, Oct 15, 2026 | ♎ 23 | α Tuc — 3 — Southern Autumn |
-| Fri, Oct 16, 2026 | ♎ 24 | β Lac — 4 — Northern Autumn |
+| Thu, Oct 15, 2026 | ♎ 23 | α Tuc — Southern Autumn |
+| Fri, Oct 16, 2026 | ♎ 24 | β Lac — Northern Autumn |
 | Sat, Oct 17, 2026 | ♎ 25 | — |
-| Sun, Oct 18, 2026 | ♎ 26 | 🌓 First Quarter — 16:12:35 UTC<br>α Lac — 4 — Northern Autumn<br>β PsA — 4 — Southern Autumn |
+| Sun, Oct 18, 2026 | ♎ 26 | 🌓 First Quarter — 16:12:35 UTC<br>α Lac — Northern Autumn<br>β PsA — Southern Autumn |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -1452,11 +1452,11 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 |---|---|---|
 | Mon, Oct 19, 2026 | ♎ 27 | — |
 | Tue, Oct 20, 2026 | ♎ 28 | — |
-| Wed, Oct 21, 2026 | ♎ 29 | Tiaki (β Gru) — V 2 — Southern Autumn |
-| Thu, Oct 22, 2026 | ♎ 30 | β Oct — 4 — Southern Autumn |
+| Wed, Oct 21, 2026 | ♎ 29 | Tiaki (β Gru) — V 2.07 — Southern Autumn |
+| Thu, Oct 22, 2026 | ♎ 30 | β Oct — Southern Autumn |
 | Fri, Oct 23, 2026 | ♏ (Scorpio) 1 | — |
 | Sat, Oct 24, 2026 | ♏ 2 | — |
-| Sun, Oct 25, 2026 | ♏ 3 | Fomalhaut (α PsA) — 1 — Southern Autumn |
+| Sun, Oct 25, 2026 | ♏ 3 | Fomalhaut (α PsA) — Southern Autumn |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -1485,7 +1485,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Oct 26, 2026 | ♏ 4 | 🌕 Full Moon — 04:11:48 UTC |
-| Tue, Oct 27, 2026 | ♏ 5 | Markab (α Peg) — 2 — Tropical Autumn<br>Scheat (β Peg) — V 2 — Northern Autumn<br>Fumalsamakah (β Psc) — 4 — Tropical Autumn |
+| Tue, Oct 27, 2026 | ♏ 5 | Markab (α Peg) — Tropical Autumn<br>Scheat (β Peg) — V 2.44 — Northern Autumn<br>Fumalsamakah (β Psc) — Tropical Autumn |
 | Wed, Oct 28, 2026 | ♏ 6 | — |
 | Thu, Oct 29, 2026 | ♏ 7 | — |
 | Fri, Oct 30, 2026 | ♏ 8 | — |
@@ -1519,7 +1519,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Nov 02, 2026 | ♏ 11 | — |
-| Tue, Nov 03, 2026 | ♏ 12 | β Scl — 4 — Southern Autumn |
+| Tue, Nov 03, 2026 | ♏ 12 | β Scl — Southern Autumn |
 | Wed, Nov 04, 2026 | ♏ 13 | — |
 | Thu, Nov 05, 2026 | ♏ 14 | — |
 | Fri, Nov 06, 2026 | ♏ 15 | — |
@@ -1555,7 +1555,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Mon, Nov 09, 2026 | ♏ 18 | 🌑 New Moon — 07:02:01 UTC |
 | Tue, Nov 10, 2026 | ♏ 19 | — |
 | Wed, Nov 11, 2026 | ♏ 20 | — |
-| Thu, Nov 12, 2026 | ♏ 21 | Alpheratz (α And) — 2 — Northern Autumn<br>Caph (β Cas) — 2 — Northern Autumn |
+| Thu, Nov 12, 2026 | ♏ 21 | Alpheratz (α And) — Northern Autumn<br>Caph (β Cas) — Northern Autumn |
 | Fri, Nov 13, 2026 | ♏ 22 | — |
 | Sat, Nov 14, 2026 | ♏ 23 | — |
 | Sun, Nov 15, 2026 | ♏ 24 | — |
@@ -1586,11 +1586,11 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Nov 16, 2026 | ♏ 25 | β Hyi — 3 — Southern Autumn<br>Ankaa (α Phe) — 2 — Southern Autumn |
+| Mon, Nov 16, 2026 | ♏ 25 | β Hyi — Southern Autumn<br>Ankaa (α Phe) — Southern Autumn |
 | Tue, Nov 17, 2026 | ♏ 26 | 🌓 First Quarter — 11:47:49 UTC |
-| Wed, Nov 18, 2026 | ♏ 27 | β1 Tuc — 4 — Southern Autumn<br>β2 Tuc — 5 — Southern Autumn<br>β3 Tuc — 5 — Southern Autumn |
+| Wed, Nov 18, 2026 | ♏ 27 | β1 Tuc — Southern Autumn<br>β2 Tuc — Southern Autumn<br>β3 Tuc — Southern Autumn |
 | Thu, Nov 19, 2026 | ♏ 28 | — |
-| Fri, Nov 20, 2026 | ♏ 29 | M31<br>M32<br>M110<br>Schedar (α Cas) — 2 — Northern Autumn<br>Diphda (β Cet) — 2 — Tropical Autumn |
+| Fri, Nov 20, 2026 | ♏ 29 | M31<br>M32<br>M110<br>Schedar (α Cas) — Northern Autumn<br>Diphda (β Cet) — Tropical Autumn |
 | Sat, Nov 21, 2026 | ♏ 30 | — |
 | Sun, Nov 22, 2026 | ♐ (Sagittarius) 1 | — |
 
@@ -1621,10 +1621,10 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Nov 23, 2026 | ♐ 2 | — |
-| Tue, Nov 24, 2026 | ♐ 3 | 🌕 Full Moon — 14:53:31 UTC<br>α Scl — 4 — Southern Autumn<br>Cih (γ Cas) — V 2 — Northern Autumn |
+| Tue, Nov 24, 2026 | ♐ 3 | 🌕 Full Moon — 14:53:31 UTC<br>α Scl — Southern Autumn<br>Cih (γ Cas) — V 2.15 — Northern Autumn |
 | Wed, Nov 25, 2026 | ♐ 4 | — |
-| Thu, Nov 26, 2026 | ♐ 5 | β Phe — 3 — Southern Autumn |
-| Fri, Nov 27, 2026 | ♐ 6 | Mirach (β And) — 2 — Northern Autumn |
+| Thu, Nov 26, 2026 | ♐ 5 | β Phe — Southern Autumn |
+| Fri, Nov 27, 2026 | ♐ 6 | Mirach (β And) — Northern Autumn |
 | Sat, Nov 28, 2026 | ♐ 7 | — |
 | Sun, Nov 29, 2026 | ♐ 8 | — |
 
@@ -1657,7 +1657,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Mon, Nov 30, 2026 | ♐ 9 | — |
 | Tue, Dec 01, 2026 | ♐ 10 | 🌗 Last Quarter — 06:08:41 UTC |
 | Wed, Dec 02, 2026 | ♐ 11 | M33<br>M74<br>M103 |
-| Thu, Dec 03, 2026 | ♐ 12 | Achernar (α Eri) — 0 — Southern Autumn |
+| Thu, Dec 03, 2026 | ♐ 12 | Achernar (α Eri) — Southern Autumn |
 | Fri, Dec 04, 2026 | ♐ 13 | M76 |
 | Sat, Dec 05, 2026 | ♐ 14 | — |
 | Sun, Dec 06, 2026 | ♐ 15 | — |
@@ -1688,10 +1688,10 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 | Date | Zodiac day | Events |
 |---|---|---|
-| Mon, Dec 07, 2026 | ♐ 16 | Sheratan (β Ari) — 3 — Tropical Autumn<br>Mothallah (α Tri) — 3 — Northern Autumn |
-| Tue, Dec 08, 2026 | ♐ 17 | α Hyi — 3 — Southern Autumn |
-| Wed, Dec 09, 2026 | ♐ 18 | 🌑 New Moon — 00:51:51 UTC<br>Alrescha (α Psc) — 4 — Tropical Autumn<br>Almach (γ1 And) — 2 — Northern Autumn |
-| Thu, Dec 10, 2026 | ♐ 19 | Hamal (α Ari) — 2 — Northern Autumn<br>β Tri — 3 — Northern Autumn |
+| Mon, Dec 07, 2026 | ♐ 16 | Sheratan (β Ari) — Tropical Autumn<br>Mothallah (α Tri) — Northern Autumn |
+| Tue, Dec 08, 2026 | ♐ 17 | α Hyi — Southern Autumn |
+| Wed, Dec 09, 2026 | ♐ 18 | 🌑 New Moon — 00:51:51 UTC<br>Alrescha (α Psc) — Tropical Autumn<br>Almach (γ1 And) — Northern Autumn |
+| Thu, Dec 10, 2026 | ♐ 19 | Hamal (α Ari) — Northern Autumn<br>β Tri — Northern Autumn |
 | Fri, Dec 11, 2026 | ♐ 20 | — |
 | Sat, Dec 12, 2026 | ♐ 21 | — |
 | Sun, Dec 13, 2026 | ♐ 22 | — |
@@ -1724,10 +1724,10 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 |---|---|---|
 | Mon, Dec 14, 2026 | ♐ 23 | — |
 | Tue, Dec 15, 2026 | ♐ 24 | — |
-| Wed, Dec 16, 2026 | ♐ 25 | Polaris (α UMi) — 2 — Northern Autumn |
+| Wed, Dec 16, 2026 | ♐ 25 | Polaris (α UMi) — Northern Autumn |
 | Thu, Dec 17, 2026 | ♐ 26 | 🌓 First Quarter — 05:42:40 UTC<br>M34<br>M77 |
 | Fri, Dec 18, 2026 | ♐ 27 | — |
-| Sat, Dec 19, 2026 | ♐ 28 | β For — 4 — Southern Autumn |
+| Sat, Dec 19, 2026 | ♐ 28 | β For — Southern Autumn |
 | Sun, Dec 20, 2026 | ♐ 29 | — |
 
 ### Weekly Classical-Planet Ephemeris
@@ -1757,12 +1757,12 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Date | Zodiac day | Events |
 |---|---|---|
 | Mon, Dec 21, 2026 | ♑ (Capricorn) 1 | — |
-| Tue, Dec 22, 2026 | ♑ 2 | Menkar (α Cet) — 3 — Tropical Winter<br>β Hor — 5 — Southern Winter |
+| Tue, Dec 22, 2026 | ♑ 2 | Menkar (α Cet) — Tropical Winter<br>β Hor — Southern Winter |
 | Wed, Dec 23, 2026 | ♑ 3 | — |
-| Thu, Dec 24, 2026 | ♑ 4 | 🌕 Full Moon — 01:28:13 UTC<br>Algol (β Per) — V 2 — Northern Winter |
-| Fri, Dec 25, 2026 | ♑ 5 | Dalim (α For) — 4 — Southern Winter |
+| Thu, Dec 24, 2026 | ♑ 4 | 🌕 Full Moon — 01:28:13 UTC<br>Algol (β Per) — V 2.09 — Northern Winter |
+| Fri, Dec 25, 2026 | ♑ 5 | Dalim (α For) — Southern Winter |
 | Sat, Dec 26, 2026 | ♑ 6 | — |
-| Sun, Dec 27, 2026 | ♑ 7 | Mirfak (α Per) — 2 — Northern Winter |
+| Sun, Dec 27, 2026 | ♑ 7 | Mirfak (α Per) — Northern Winter |
 
 ### Weekly Classical-Planet Ephemeris
 
@@ -1794,7 +1794,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Tue, Dec 29, 2026 | ♑ 9 | — |
 | Wed, Dec 30, 2026 | ♑ 10 | 🌗 Last Quarter — 18:59:34 UTC |
 | Thu, Dec 31, 2026 | ♑ 11 | — |
-| Fri, Jan 01, 2027 | ♑ 12 | β Ret — 4 — Southern Winter |
+| Fri, Jan 01, 2027 | ♑ 12 | β Ret — Southern Winter |
 | Sat, Jan 02, 2027 | ♑ 13 | — |
 | Sun, Jan 03, 2027 | ♑ 14 | — |
 
