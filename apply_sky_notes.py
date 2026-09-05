@@ -8,6 +8,8 @@ ROOT = Path(__file__).parent
 ALMANACK = ROOT / "almanack-expanded.md"
 NOTES = ROOT / "sky-notes-2026.json"
 NOTES_DIR = ROOT / "sky-notes-2026"
+EXPECTED_WEEKS = {f"W{i:02d}" for i in range(1, 54)}
+PLACEHOLDER_NOTE = "Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC."
 
 
 def replace_week_note(text: str, week: str, note: str) -> str:
@@ -27,7 +29,7 @@ def replace_week_note(text: str, week: str, note: str) -> str:
 
 
 def load_notes() -> dict:
-    """Load the legacy catalog, then overlay modular week files when present."""
+    """Load the legacy catalog, then merge modular week files."""
     data = json.loads(NOTES.read_text(encoding="utf-8"))
     weeks = dict(data.get("weeks", {}))
     if NOTES_DIR.exists():
@@ -40,6 +42,14 @@ def load_notes() -> dict:
             if week in weeks:
                 raise SystemExit(f"Duplicate curated Sky Note for {week}: legacy catalog and {path}")
             weeks[week] = payload
+
+    actual = set(weeks)
+    missing = sorted(EXPECTED_WEEKS - actual)
+    extra = sorted(actual - EXPECTED_WEEKS)
+    if missing or extra:
+        raise SystemExit(f"Curated Sky Note coverage invalid: missing={missing}, extra={extra}")
+    if len(weeks) != 53:
+        raise SystemExit(f"Expected exactly 53 curated Sky Notes, found {len(weeks)}")
     return weeks
 
 
@@ -52,9 +62,11 @@ def main():
             raise SystemExit(f"Invalid week key: {week}")
         if not note:
             raise SystemExit(f"Empty note for {week}")
+        if note == PLACEHOLDER_NOTE:
+            raise SystemExit(f"Placeholder Sky Note survived for {week}")
         text = replace_week_note(text, week, note)
     ALMANACK.write_text(text, encoding="utf-8")
-    print(f"Applied curated Sky Notes to {len(weeks)} week(s)")
+    print("Applied and verified curated Sky Notes for all 53 weeks")
 
 
 if __name__ == "__main__":
