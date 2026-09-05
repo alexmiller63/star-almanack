@@ -98,23 +98,25 @@ def render_figure(name,spec,stars,out_dir):
     if proj:ax.scatter([p[0] for p in proj],[p[1] for p in proj],s=[marker_area(p[2].mag,7) for p in proj],color=STAR,zorder=3)
     for p in spec.get("figure_paths",[]):draw_path(ax,p,idx,center,2.7,FIGURE_BLUE)
     for a in spec.get("asterisms",[]):
-        # On the tight Aquarius chart, omit cross-constellation overlays; retain the embedded Water Jar.
         if tight_aqr and a["name"]!="Water Jar":continue
         color=ASTERISM_GREEN if a["name"]=="Water Jar" else FIGURE_BLUE;lw=3.5 if a["name"]=="Water Jar" else 2.8
         for p in a.get("paths",[]):draw_path(ax,p,idx,center,lw,color)
         ss=[idx[r] for p in a.get("paths",[]) for r in p];xy=project(*spherical_center(ss),*center)
         if xy:ax.annotate(a["name"],xy,xytext=tuple(a.get("label_offset",[0,16])),textcoords="offset points",ha="center",fontsize=8,color=color,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1.2),zorder=6)
-    # Every Martz/MacRobert figure vertex gets a visible label, with HIP/HYG fallback.
     labels={r for p in spec.get("figure_paths",[]) for r in p}
     target_ref=spec["target"]
+    label_offsets=spec.get("label_offsets",{})
     for r in sorted(labels):
         if r==target_ref:continue
         s=idx[r];xy=project(s.ra_deg,s.dec_deg,*center);lab=s.display_label(spec["constellation"])
-        if xy:ax.annotate(lab,xy,xytext=(5,5),textcoords="offset points",fontsize=7.5,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=.6),zorder=6)
+        if xy:
+            off=tuple(label_offsets.get(r,[5,5]))
+            ha="right" if off[0]<0 else "left"
+            va="top" if off[1]<0 else "bottom"
+            ax.annotate(lab,xy,xytext=off,textcoords="offset points",ha=ha,va=va,fontsize=7.5,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=.6),zorder=6)
     t=idx[target_ref];txy=project(t.ra_deg,t.dec_deg,*center)
     if txy:
         tx,ty=txy;span=ymax-ymin
-        # Deliberately large target arrow, separated from the star by a clear gap.
         ax.annotate("",xy=(tx,ty+span*.025),xytext=(tx,ty+span*.16),arrowprops=dict(arrowstyle="-|>",mutation_scale=34,linewidth=4.0,color=STAR,shrinkA=0,shrinkB=0),zorder=8)
         ax.annotate(t.target_label(),txy,xytext=(16,0),textcoords="offset points",ha="left",va="center",fontsize=10,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1),zorder=8)
     ax.set_title(f"{t.target_label()} Finder",color=TEXT,fontsize=14,pad=12)
