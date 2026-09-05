@@ -1,0 +1,51 @@
+{
+  "Pegasus": {
+    "constellation": "Peg",
+    "target": "Eps Peg",
+    "target_name": "Enif",
+    "field_deg": 55.0,
+    "figure_cutoff": 4.0,
+    "exception_cutoff": 4.5,
+    "exceptions": [],
+    "figure_paths": [
+      ["Alp Peg", "Zet Peg", "Eps Peg"],
+      ["Bet Peg", "Eta Peg", "The Peg", "Eps Peg"],
+      ["Alp Peg", "Iot Peg", "Kap Peg"],
+      ["Bet Peg", "Mu Peg", "Lam Peg"]
+    ],
+    "asterisms": [
+      {
+        "name": "Great Square of Pegasus",
+        "paths": [
+          ["Alp And", "Bet Peg", "Alp Peg", "Gam Peg", "Alp And"]
+        ]
+      }
+    ],
+    "caption": "Pegasus · winged horse · Great Square outlined"
+  },
+  "Aquarius": {
+    "constellation": "Aqr",
+    "target": "Alp Aqr",
+    "target_name": "Sadalmelik",
+    "field_deg": 50.0,
+    "figure_cutoff": 4.0,
+    "exception_cutoff": 4.5,
+    "exceptions": [],
+    "figure_paths": [
+      ["Alp Aqr", "Bet Aqr"],
+      ["Alp Aqr", "Gam Aqr", "Zet Aqr", "Eta Aqr", "Pi Aqr", "Gam Aqr"],
+      ["Zet Aqr", "The Aqr", "Lam Aqr"],
+      ["Alp Aqr", "The Aqr", "Del Aqr"],
+      ["Bet Aqr", "Eps Aqr"]
+    ],
+    "asterisms": [
+      {
+        "name": "Water Jar",
+        "paths": [
+          ["Gam Aqr", "Zet Aqr", "Eta Aqr", "Pi Aqr", "Gam Aqr"]
+        ]
+      }
+    ],
+    "caption": "Aquarius · water-bearer · Water Jar outlined"
+  }
+}
