@@ -1,0 +1,57 @@
+name: Refine M35 Observer Views
+
+"on":
+  push:
+    paths:
+      - .github/workflows/refine-m35-observer-views.yml
+
+permissions:
+  contents: write
+
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refine finder framing and target marking
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('render_observer_views.py')
+          s = p.read_text()
+          s = s.replace('field_deg=10.0,\n        limiting_mag=7.0,', 'field_deg=30.0,\n        limiting_mag=7.0,')
+          s = s.replace('def visible_stars(stars: Iterable[Star], target: Target, preset: ViewPreset) -> list[Star]:\n    radius = preset.field_deg / 2.0\n', '''def view_center(target: Target, stars: Iterable[Star], preset: ViewPreset) -> tuple[float, float]:
+    """Return the plotting center; M35 finder includes Gemini's bright anchors."""
+    if preset.key == "finder" and target.designation == "M35":
+        anchors = [s for s in stars if s.label in {"Castor", "Pollux"}]
+        if len(anchors) == 2:
+            ras = [target.ra_deg] + [s.ra_deg for s in anchors]
+            decs = [target.dec_deg] + [s.dec_deg for s in anchors]
+            return sum(ras) / len(ras), sum(decs) / len(decs)
+    return target.ra_deg, target.dec_deg
+
+
+def visible_stars(stars: Iterable[Star], center: tuple[float, float], preset: ViewPreset) -> list[Star]:
+    radius = preset.field_deg / 2.0
+    center_ra, center_dec = center
+''')
+          s = s.replace('star.ra_deg, star.dec_deg, target.ra_deg, target.dec_deg\n        )', 'star.ra_deg, star.dec_deg, center_ra, center_dec\n        )')
+          s = s.replace('    selected = visible_stars(stars, target, preset)\n', '    center = view_center(target, stars, preset)\n    center_ra, center_dec = center\n    selected = visible_stars(stars, center, preset)\n')
+          s = s.replace('xy = tangent_plane(star.ra_deg, star.dec_deg, target.ra_deg, target.dec_deg)', 'xy = tangent_plane(star.ra_deg, star.dec_deg, center_ra, center_dec)')
+          s = s.replace('    ax.scatter([0.0], [0.0], marker="+", s=100)\n', '''    target_xy = tangent_plane(target.ra_deg, target.dec_deg, center_ra, center_dec)
+    if preset.key == "finder" and target_xy is not None:
+        tx, ty = target_xy
+        target_circle = plt.Circle((tx, ty), 0.45, fill=False, linewidth=1.0)
+        ax.add_patch(target_circle)
+        ax.annotate(target.designation, (tx, ty), xytext=(6, 6), textcoords="offset points", fontsize=8)
+''')
+          p.write_text(s)
+          PY
+      - name: Commit refinement and remove one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/refine-m35-observer-views.yml
+          git add render_observer_views.py
+          git commit -m "Improve M35 finder framing and target marking"
+          git push
