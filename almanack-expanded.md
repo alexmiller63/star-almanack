@@ -1668,6 +1668,8 @@ Delphinus and Deneb give this week a strong naked-eye framework, while M72 (NGC 
 
 The September 26 Full Moon dominates this week, while the Sun crosses into Libra and the Almanack begins shifting decisively into the autumn sky. With few deep-sky showpieces on the calendar, this is a good week to emphasize orientation, lunar observing, and the seasonal change in the evening constellations.
 
+**The First Point of Libra:** The September equinox is traditionally called the First Point of Libra, opposite the First Point of Aries. The two names are symmetrical, but their astronomical use is not. The First Point of Aries serves as the fundamental zero point from which right ascension and ecliptic longitude are measured; the First Point of Libra lies 180° opposite and does not serve as a coordinate origin. Because of precession, neither point now lies in its namesake IAU constellation.
+
 **Naked eye:** Watch how the evening sky has changed from midsummer: the Summer Triangle is still prominent, but the autumn constellations are taking over the eastern and southeastern sky. The Full Moon is the obvious target near the end of the week and washes out many fainter stars.
 
 **Binoculars:** Use binoculars on the Moon along the terminator before and after Full phase rather than at exact Full Moon, when relief is flatter. Sweeping the surrounding autumn star fields is still worthwhile even under bright moonlight because the larger-scale constellation patterns remain visible.
