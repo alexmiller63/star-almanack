@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 """Enrich catalog-backed calendar entries with observer-facing metadata.
 
-Stars display whole-number V magnitude plus Declination-band Season.
-Messier objects display Declination-band Season. Authoritative source values
-retain their full precision; only Almanack presentation is rounded/formatted.
+Stars display whole-number V magnitude, Declination-band Season, and observing equipment.
+Messier objects display Declination-band Season and observing equipment. Authoritative
+source values retain full precision; Almanack presentation is rounded/formatted.
+
+Equipment rule (simple limiting-magnitude guide):
+  V <= 6.0  -> Naked eye
+  6.0 < V <= 10.0 -> Binocular
+  V > 10.0 -> Telescope
+This is a practical baseline under a dark sky; object surface brightness and observing
+conditions can make extended objects harder than their integrated magnitude suggests.
 """
 from __future__ import annotations
 
@@ -57,6 +64,19 @@ def season_for(d: date) -> str:
     return "Winter"
 
 
+def equipment_for(magnitude: str) -> str:
+    """Return a consistent practical equipment class from apparent V magnitude."""
+    try:
+        mag = float((magnitude or "").strip())
+    except ValueError:
+        return ""
+    if mag <= 6.0:
+        return "Naked eye"
+    if mag <= 10.0:
+        return "Binocular"
+    return "Telescope"
+
+
 def whole_mag(value: str) -> str:
     value = (value or "").strip()
     if not value:
@@ -98,6 +118,9 @@ def canonical_star(row: dict[str, str]) -> str:
     if mag:
         parts.append(f"V {mag}")
     parts.append(f"{declination_band(row['dec_deg'])} {season_for(d)}")
+    equipment = equipment_for(source_mag)
+    if equipment:
+        parts.append(equipment)
     return " — ".join(parts)
 
 
@@ -128,26 +151,22 @@ def load_stars() -> dict[str, list[tuple[list[str], str]]]:
     return by_date
 
 
-def load_messier_declinations() -> dict[str, str]:
-    """Read Messier declinations from the repository source-of-truth inventory.
-
-    fixed-objects.yaml stores each Messier record as one CSV-like YAML flow row;
-    csv.reader safely handles quoted names while we use only id and declination.
-    """
-    out: dict[str, str] = {}
+def load_messier_source() -> dict[str, dict[str, str]]:
+    """Read Messier declinations and magnitudes from the source-of-truth inventory."""
+    out: dict[str, dict[str, str]] = {}
     for raw in FIXED_OBJECTS.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
         if not re.match(r"^- \[M\d{1,3},", line):
             continue
         payload = line[3:-1] if line.endswith("]") else line[3:]
         fields = next(csv.reader([payload], skipinitialspace=True))
-        if len(fields) >= 7:
-            out[fields[0].strip().upper()] = fields[6].strip()
+        if len(fields) >= 8:
+            out[fields[0].strip().upper()] = {"dec": fields[6].strip(), "mag": fields[7].strip()}
     return out
 
 
 def load_messier() -> dict[str, dict[str, str]]:
-    decs = load_messier_declinations()
+    source = load_messier_source()
     out: dict[str, dict[str, str]] = {}
     with MESSIER.open(encoding="utf-8", newline="") as f:
         rows = list(csv.DictReader(f))
@@ -155,14 +174,15 @@ def load_messier() -> dict[str, dict[str, str]]:
         raise SystemExit(f"Expected 110 Messier visibility rows, found {len(rows)}")
     for row in rows:
         name = row["messier"].upper()
-        dec = decs.get(name)
-        if dec is None:
-            raise SystemExit(f"Missing source declination for {name}")
+        src = source.get(name)
+        if src is None:
+            raise SystemExit(f"Missing source metadata for {name}")
         d = date.fromisoformat(row["best_date"])
-        out[name] = {
-            "best_date": row["best_date"],
-            "label": f"{name} — {declination_band(dec)} {season_for(d)}",
-        }
+        equipment = equipment_for(src["mag"])
+        label = f"{name} — {declination_band(src['dec'])} {season_for(d)}"
+        if equipment:
+            label += f" — {equipment}"
+        out[name] = {"best_date": row["best_date"], "label": label}
     return out
 
 
@@ -212,25 +232,26 @@ def main() -> None:
 
     updated = ROW_RE.sub(repl, text)
 
-    # Systemic Messier regression: every one of the 110 catalog entries must now
-    # carry its declination band and observing season on its computed date.
     for name, info in messier.items():
         if info["label"] not in updated:
             raise SystemExit(f"Expected enriched Messier entry not found: {info['label']}")
 
-    expected = "Enif (ε Peg) — V 2 — Tropical Autumn"
+    expected = "Enif (ε Peg) — V 2 — Tropical Autumn — Naked eye"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
-    diadem = "Diadem (α Com) — V 4 — Tropical Spring"
+    diadem = "Diadem (α Com) — V 4 — Tropical Spring — Naked eye"
     if diadem not in updated:
         raise SystemExit(f"Expected enriched Diadem entry not found: {diadem}")
+    m53 = "M53 — Tropical Spring — Binocular"
+    if m53 not in updated:
+        raise SystemExit(f"Expected enriched M53 entry not found: {m53}")
     if re.search(r"\bV\s+[+-]?\d+\.\d+", updated):
         raise SystemExit("Decimal stellar magnitude survived Almanack rendering")
     if " — variable — " in updated:
         raise SystemExit("Obsolete variable word survived")
 
     TARGET.write_text(updated, encoding="utf-8")
-    print("Enriched stellar and all 110 Messier calendar entries; catalog metadata PASS")
+    print("Enriched stars and all 110 Messier entries with observing equipment; PASS")
 
 
 if __name__ == "__main__":
