@@ -103,10 +103,20 @@ def load_hyg(path: Path) -> list[Star]:
 
 
 def star_index(stars: Iterable[Star]) -> dict[str, Star]:
+    """Index exact HYG Bayer refs and base-Greek aliases.
+
+    HYG distinguishes some Bayer components as Zet1/Zet2, etc. Editorial
+    figure definitions may refer to the traditional unnumbered Greek letter;
+    in that case the brightest component supplies the plotted anchor.
+    """
     index: dict[str, Star] = {}
-    for star in stars:
-        if star.bayer and star.con:
-            index.setdefault(star.ref, star)
+    for star in sorted(stars, key=lambda item: item.mag):
+        if not star.bayer or not star.con:
+            continue
+        index.setdefault(star.ref, star)
+        prefix = star.bayer[:3].title()
+        if prefix in GREEK_BAYER:
+            index.setdefault(f"{prefix} {star.con}", star)
     return index
 
 
