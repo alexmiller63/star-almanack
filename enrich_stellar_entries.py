@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """Enrich catalog-backed calendar entries with observer-facing metadata.
 
-Stars display whole-number V magnitude, Declination-band Season, and observing equipment.
-Messier objects display Declination-band Season and observing equipment. Authoritative
+Stars display whole-number V magnitude, Declination-band Season, and observing aid.
+Messier objects display Declination-band Season and observing aid. Authoritative
 source values retain full precision; Almanack presentation is rounded/formatted.
 
-Equipment rule (simple limiting-magnitude guide):
-  V <= 6.0  -> Naked eye
-  6.0 < V <= 10.0 -> Binocular
-  V > 10.0 -> Telescope
-This is a practical baseline under a dark sky; object surface brightness and observing
-conditions can make extended objects harder than their integrated magnitude suggests.
+Current urban-observer baseline:
+  V <= 3.5       -> 👁
+  3.5 < V <= 7.5 -> B
+  V > 7.5        -> 🔭
+
+The aid is a practical recommendation for a city observer: what should the observer
+take outside to enjoy the target? It is not an absolute physiological detection limit.
+Extended-object surface brightness and observing conditions can make some targets
+harder than their integrated magnitude suggests, so this baseline may be refined by
+object-specific observing guidance later.
 """
 from __future__ import annotations
 
@@ -65,16 +69,16 @@ def season_for(d: date) -> str:
 
 
 def equipment_for(magnitude: str) -> str:
-    """Return a consistent practical equipment class from apparent V magnitude."""
+    """Return the current practical urban observing-aid class from apparent V magnitude."""
     try:
         mag = float((magnitude or "").strip())
     except ValueError:
         return ""
-    if mag <= 6.0:
-        return "Naked eye"
-    if mag <= 10.0:
-        return "Binocular"
-    return "Telescope"
+    if mag <= 3.5:
+        return "👁"
+    if mag <= 7.5:
+        return "B"
+    return "🔭"
 
 
 def whole_mag(value: str) -> str:
@@ -236,13 +240,13 @@ def main() -> None:
         if info["label"] not in updated:
             raise SystemExit(f"Expected enriched Messier entry not found: {info['label']}")
 
-    expected = "Enif (ε Peg) — V 2 — Tropical Autumn — Naked eye"
+    expected = "Enif (ε Peg) — V 2 — Tropical Autumn — 👁"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
-    diadem = "Diadem (α Com) — V 4 — Tropical Spring — Naked eye"
+    diadem = "Diadem (α Com) — V 4 — Tropical Spring — B"
     if diadem not in updated:
         raise SystemExit(f"Expected enriched Diadem entry not found: {diadem}")
-    m53 = "M53 — Tropical Spring — Binocular"
+    m53 = "M53 — Tropical Spring — 🔭"
     if m53 not in updated:
         raise SystemExit(f"Expected enriched M53 entry not found: {m53}")
     if re.search(r"\bV\s+[+-]?\d+\.\d+", updated):
@@ -251,7 +255,7 @@ def main() -> None:
         raise SystemExit("Obsolete variable word survived")
 
     TARGET.write_text(updated, encoding="utf-8")
-    print("Enriched stars and all 110 Messier entries with observing equipment; PASS")
+    print("Enriched stars and all 110 Messier entries with urban observing-aid recommendations; PASS")
 
 
 if __name__ == "__main__":
