@@ -174,3 +174,21 @@ The same presentation rule applies to the March equinox and any other coincident
 External authorities such as USNO, NASA, JPL Horizons, or independent published ingress tables are verification sources only. They may confirm the definition, precision, and plausibility of a Star Almanack result, but they do not overwrite or become the source of the published value. If a discrepancy appears, investigate the Almanack computation and its frame/time-scale conventions rather than silently substituting an external number.
 
 Architectural custody remains explicit: Python owns astronomical computation and source normalization; Jekyll owns page assembly and presentation; generated HTML is output, never source of truth; provenance verification is an independent audit layer after publication.
+
+## 2026-09-05 — Finder-chart constellation and asterism standard
+
+The finder-chart visual system is now settled. Use the Martz 88-constellation stick-figure system as the baseline geometry for constellation figures, with appropriate credit to the Martz-Kohl Observatory and the underlying constellation-stick-figure tradition/data. Do not improvise a new constellation skeleton when a Martz baseline figure exists.
+
+Star Almanack will define and maintain its own asterism figures as a distinct observer-facing layer. Familiar orienting patterns such as the Water Jar, Great Square, Orion's Belt, Teapot, Northern Cross, Sickle, and similar useful naked-eye figures may therefore be standardized independently of constellation figures.
+
+Finder charts use a night-sky presentation. The visual convention is:
+
+- **Blue** — constellation stick figure.
+- **Green** — Star Almanack asterism figure.
+- **Light gray, dashed** — IAU constellation boundaries.
+- **White/light** — stars, labels, target arrows, and other navigation information.
+- **Dark navy/black** — night-sky background.
+
+When an asterism overlaps a constellation figure, retain the conceptual distinction by drawing the green asterism over the blue constellation figure rather than treating them as the same object. Constellation boundaries remain subordinate orientation aids and should not compete visually with the recognizable figure or highlighted asterism.
+
+Finder-chart titles should be simple target titles such as **Sadalmelik Finder**. Target arrows should have a clearly visible shaft long enough to function as navigation rather than appearing as a stubby marker. The charts should remain reproducible, source-driven diagrams rather than generated artwork.
