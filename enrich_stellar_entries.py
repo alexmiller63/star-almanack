@@ -10,10 +10,12 @@ Output:
 - rewrites stellar entries in almanack-expanded.md after build_expanded_almanack.py
 
 Display convention:
-  Proper name (Bayer) — [V ]N.NN — Declination-band Season
+  Proper name (Bayer) — V N.NN — Declination-band Season
+  or, for non-variable stars:
+  Proper name (Bayer) — Declination-band Season
 
-The source decimal magnitude is preserved. V precedes the magnitude only for
-variable stars; non-variable stars show the magnitude without the V prefix.
+The source decimal magnitude is preserved for variable stars only. V precedes the
+magnitude only for variable stars; non-variable stars do not display a magnitude.
 
 Declination Band is derived from declination using the tropics (±23.44°):
 Northern / Tropical / Southern. Season is the northern-calendar observing season
@@ -113,9 +115,9 @@ def canonical(row: dict[str, str], variables: set[str]) -> str:
     mag = clean_mag(row.get("mag") or row.get("representative_vmax") or row.get("catalog_v") or "")
     d = date.fromisoformat(row["best_date"])
     parts = [name]
-    if mag:
-        is_variable = latin_key(code, con) in variables
-        parts.append(f"V {mag}" if is_variable else mag)
+    is_variable = latin_key(code, con) in variables
+    if is_variable and mag:
+        parts.append(f"V {mag}")
     parts.append(f"{declination_band(row['dec_deg'])} {season_for(d)}")
     return " — ".join(parts)
 
@@ -192,12 +194,16 @@ def main() -> None:
     updated = ROW_RE.sub(repl, text)
     TARGET.write_text(updated, encoding="utf-8")
 
-    expected = "Enif (ε Peg) — V 2.38 — Tropical Autumn"
+    expected = "Enif (ε Peg) — V 0.70 — Tropical Autumn"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
+    if "Enif (ε Peg) — V 2.38 — Tropical Autumn" in updated:
+        raise SystemExit("Unexpected Enif catalog magnitude survived")
     if "Enif (ε Peg) — V 2 — Tropical Autumn" in updated:
-        raise SystemExit("Rounded Enif magnitude still present")
-    print("Enriched stellar calendar entries; decimal-magnitude Enif regression PASS")
+        raise SystemExit("Rounded Enif magnitude survived")
+    if " — variable — " in updated:
+        raise SystemExit("Obsolete variable word survived")
+    print("Enriched stellar calendar entries; variable-only magnitude regression PASS")
 
 
 if __name__ == "__main__":
