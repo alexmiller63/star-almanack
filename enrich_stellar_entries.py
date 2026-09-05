@@ -4,20 +4,17 @@
 Source files:
 - expanded-bayer-visibility-2026.csv: authoritative α/β Bayer identity, coordinates, magnitude, date
 - bright-star-visibility-2026.csv: authoritative V<=2.50 bright-star layer and dates
-- bright-variable-reconciliation.csv: repository GCVS reconciliation for known bright variables
 
 Output:
 - rewrites stellar entries in almanack-expanded.md after build_expanded_almanack.py
 
 Display convention:
   Proper name (Bayer) — V N — Declination-band Season
-  or, for non-variable stars:
-  Proper name (Bayer) — Declination-band Season
 
 The authoritative source magnitude remains decimal. Almanack calendar text rounds
-variable-star magnitudes to the nearest whole number; chart presentation uses one
-decimal place. V precedes the magnitude only for variable stars; non-variable stars
-do not display a magnitude.
+stellar magnitudes to the nearest whole number; chart presentation uses one decimal
+place. Every catalog-backed stellar entry with an authoritative source magnitude
+displays that magnitude.
 
 Declination Band is derived from declination using the tropics (±23.44°):
 Northern / Tropical / Southern. Season is the northern-calendar observing season
@@ -36,7 +33,6 @@ ROOT = Path(__file__).parent
 TARGET = ROOT / "almanack-expanded.md"
 BAYER = ROOT / "expanded-bayer-visibility-2026.csv"
 BRIGHT = ROOT / "bright-star-visibility-2026.csv"
-VARIABLES = ROOT / "bright-variable-reconciliation.csv"
 
 GREEK = {
     "Alp": "α", "Bet": "β", "Gam": "γ", "Del": "δ", "Eps": "ε",
@@ -88,18 +84,6 @@ def whole_mag(value: str) -> str:
     return str(int(rounded))
 
 
-def variable_keys() -> set[str]:
-    out = set()
-    if not VARIABLES.exists():
-        return out
-    with VARIABLES.open(encoding="utf-8", newline="") as f:
-        for row in csv.DictReader(f):
-            name = (row.get("name") or "").strip().casefold()
-            if name:
-                out.add(name)
-    return out
-
-
 def latin_key(code: str, con: str) -> str:
     m = re.fullmatch(r"([A-Z][a-z]{2})(?:-?(\d+))?", (code or "").strip())
     if not m:
@@ -110,7 +94,7 @@ def latin_key(code: str, con: str) -> str:
     return f"{m.group(1).casefold()} {con}".strip().casefold()
 
 
-def canonical(row: dict[str, str], variables: set[str]) -> str:
+def canonical(row: dict[str, str]) -> str:
     proper = (row.get("proper") or "").strip()
     code = (row.get("bayer_code") or row.get("bayer") or "").strip()
     con = (row.get("con") or "").strip()
@@ -122,8 +106,7 @@ def canonical(row: dict[str, str], variables: set[str]) -> str:
     mag = whole_mag(source_mag)
     d = date.fromisoformat(row["best_date"])
     parts = [name]
-    is_variable = latin_key(code, con) in variables
-    if is_variable and mag:
+    if mag:
         parts.append(f"V {mag}")
     parts.append(f"{declination_band(row['dec_deg'])} {season_for(d)}")
     return " — ".join(parts)
@@ -140,7 +123,6 @@ def aliases(row: dict[str, str]) -> list[str]:
 
 
 def load_stars() -> dict[str, list[tuple[list[str], str]]]:
-    variables = variable_keys()
     by_date: dict[str, list[tuple[list[str], str]]] = defaultdict(list)
     seen = set()
 
@@ -150,14 +132,14 @@ def load_stars() -> dict[str, list[tuple[list[str], str]]]:
             row["bayer_code"] = row.get("bayer", "")
             key = (row["best_date"], (row.get("proper") or "").casefold(), latin_key(row.get("bayer", ""), row.get("con", "")))
             seen.add(key)
-            by_date[row["best_date"]].append((aliases(row), canonical(row, variables)))
+            by_date[row["best_date"]].append((aliases(row), canonical(row)))
 
     with BAYER.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             key = (row["best_date"], (row.get("proper") or "").casefold(), latin_key(row.get("bayer_code", ""), row.get("con", "")))
             if key in seen:
                 continue
-            by_date[row["best_date"]].append((aliases(row), canonical(row, variables)))
+            by_date[row["best_date"]].append((aliases(row), canonical(row)))
     return by_date
 
 
@@ -168,12 +150,7 @@ MONTHS = {m: i for i, m in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
 
 
 def alias_matches(part: str, alias: str) -> bool:
-    """Match one raw stellar token without swallowing a longer proper name.
-
-    Example: the alias ``Albireo`` must not match the separate raw token
-    ``Albireo B``. Exact raw names and already-formatted canonical entries are
-    accepted.
-    """
+    """Match one raw stellar token without swallowing a longer proper name."""
     p = part.strip().casefold()
     a = alias.strip().casefold()
     return p == a or p.startswith(a + " (") or p.startswith(a + " —")
@@ -215,11 +192,14 @@ def main() -> None:
     expected = "Enif (ε Peg) — V 2 — Tropical Autumn"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
-    if "Enif (ε Peg) — V 2.38 — Tropical Autumn" in updated:
-        raise SystemExit("Decimal Enif magnitude survived Almanack rendering")
+    diadem = "Diadem (α Com) — V 4 — Tropical Spring"
+    if diadem not in updated:
+        raise SystemExit(f"Expected enriched Diadem entry not found: {diadem}")
+    if re.search(r"\bV\s+[+-]?\d+\.\d+", updated):
+        raise SystemExit("Decimal stellar magnitude survived Almanack rendering")
     if " — variable — " in updated:
         raise SystemExit("Obsolete variable word survived")
-    print("Enriched stellar calendar entries; whole-number Almanack magnitudes PASS")
+    print("Enriched stellar calendar entries; whole-number catalog magnitudes PASS")
 
 
 if __name__ == "__main__":
