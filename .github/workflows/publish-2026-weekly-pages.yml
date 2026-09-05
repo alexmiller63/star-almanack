@@ -56,10 +56,10 @@ jobs:
               assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
               assert 'width:16%' in text, f'Narrow desktop date width missing in {page}'
               assert 'width:8%' in text, f'Narrow desktop zodiac width missing in {page}'
-              assert 'width:21%' in text, f'Refined portrait date width missing in {page}'
-              assert 'width:13%' in text, f'Refined portrait zodiac width missing in {page}'
-              assert 'width:66%' in text, f'Refined portrait events width missing in {page}'
-              assert 'flex-direction:row' in text, f'Inline portrait zodiac layout missing in {page}'
+              assert 'width:22%' in text, f'Refined portrait date/zodiac width missing in {page}'
+              assert 'width:56%' in text, f'Refined portrait events width missing in {page}'
+              assert 'flex-direction:column' in text, f'Stacked portrait zodiac layout missing in {page}'
+              assert 'white-space:normal;text-align:center;font-size:.86rem' in text, f'Portrait zodiac wrapping rule missing in {page}'
               assert 'data-bayer-mode="greek"' in text, f'Greek notation toggle missing in {page}'
               assert 'data-bayer-mode="latin"' in text, f'Latin notation toggle missing in {page}'
               assert 'data-bayer-mode="mixed"' in text, f'Mixed learner notation toggle missing in {page}'
@@ -81,7 +81,7 @@ jobs:
           index = (root / 'index.html').read_text(encoding='utf-8')
           links = re.findall(r'href="W\d{2}/"', index)
           assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages, Greek/Symbols/Latin/Mixed Learner notation, asterisms, meteor showers, mobile calendar widths, copyright, W53 boundary, and navigation')
+          print('Verified 53 weekly pages, Greek/Symbols/Latin/Mixed Learner notation, asterisms, meteor showers, refined portrait calendar layout, copyright, W53 boundary, and navigation')
           PY
 
       - name: Commit published pages
