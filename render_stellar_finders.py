@@ -13,9 +13,11 @@ NIGHT="#071423"; STAR="#f7f7f2"; FIGURE_BLUE="#5c8fe8"; ASTERISM_GREEN="#59c86d"
 
 @dataclass(frozen=True)
 class Star:
-    ra_deg:float; dec_deg:float; mag:float; proper:str; bayer:str; con:str; hyg_id:str
+    ra_deg:float; dec_deg:float; mag:float; proper:str; bayer:str; con:str; hyg_id:str; hip:str
     @property
     def ref(self): return f"{self.bayer} {self.con}".strip()
+    @property
+    def hip_ref(self): return f"HIP {self.hip}" if self.hip else ""
     def display_label(self,figure_constellation):
         g=greek_bayer_symbol(self.bayer); b=f"{g} {self.con}" if self.con!=figure_constellation else g
         return " ".join(x for x in (b,self.proper) if x)
@@ -31,12 +33,13 @@ def load_hyg(path):
     with path.open("r",encoding="utf-8-sig",newline="") as h:
         for r in csv.DictReader(h):
             if not all((r.get(k) or "").strip() for k in ("ra","dec","mag")): continue
-            out.append(Star(float(r["ra"])*15,float(r["dec"]),float(r["mag"]),(r.get("proper") or "").strip(),(r.get("bayer") or "").strip(),(r.get("con") or "").strip(),(r.get("id") or "").strip()))
+            out.append(Star(float(r["ra"])*15,float(r["dec"]),float(r["mag"]),(r.get("proper") or "").strip(),(r.get("bayer") or "").strip(),(r.get("con") or "").strip(),(r.get("id") or "").strip(),(r.get("hip") or "").strip()))
     return out
 
 def star_index(stars):
     d={}
     for s in sorted(stars,key=lambda x:x.mag):
+        if s.hip_ref:d.setdefault(s.hip_ref,s)
         if not s.bayer or not s.con: continue
         d.setdefault(s.ref,s); p=s.bayer[:3].title()
         if p in GREEK_BAYER:d.setdefault(f"{p} {s.con}",s)
@@ -63,7 +66,6 @@ def all_refs(spec):
         for p in a.get("paths",[]):r.update(p)
     return r
 def center_refs(spec):
-    # Keep the whole Aquarius water-bearer centered; do not let Pegasus pull the field away.
     if spec["constellation"]=="Aqr":
         r={spec["target"]}
         for p in spec.get("figure_paths",[]):r.update(p)
@@ -83,7 +85,10 @@ def draw_boundary(ax,con,center):
     if len(pts)>=2:ax.plot([p[0] for p in pts],[p[1] for p in pts],lw=1.15,ls=(0,(4,3)),color=BOUNDARY,alpha=.9,zorder=1)
 
 def render_figure(name,spec,stars,out_dir):
-    idx=star_index(stars); center=spherical_center([idx[r] for r in center_refs(spec)])
+    idx=star_index(stars)
+    missing=sorted(r for r in all_refs(spec) if r not in idx)
+    if missing: raise ValueError("Configured stars not found: "+", ".join(missing))
+    center=spherical_center([idx[r] for r in center_refs(spec)])
     field=float(spec["field_deg"]); radius=field/2; lim=7
     vis=[s for s in stars if s.mag<=lim and sep(s,*center)<=radius*1.05]
     proj=[(*p,s) for s in vis if (p:=project(s.ra_deg,s.dec_deg,*center))]
@@ -107,7 +112,6 @@ def render_figure(name,spec,stars,out_dir):
     t=idx[target_ref]; txy=project(t.ra_deg,t.dec_deg,*center)
     if txy:
         tx,ty=txy
-        # Large white arrow with a visible gap above Sadalmelik.
         ax.annotate("",xy=(tx,ty+0.65),xytext=(tx,ty+3.25),arrowprops=dict(arrowstyle="-|>",mutation_scale=19,linewidth=2.4,color=STAR,shrinkA=0,shrinkB=0),zorder=8)
         ax.annotate(t.target_label(),txy,xytext=(12,0),textcoords="offset points",ha="left",va="center",fontsize=9,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=.8),zorder=8)
     ax.set_title(f"{t.target_label()} Finder",color=TEXT,fontsize=14,pad=12)
