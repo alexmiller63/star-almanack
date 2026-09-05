@@ -1400,7 +1400,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+The New Moon on Saturday, October 10 makes this one of the best dark-sky weeks of the month. In the evening, begin with the Great Square of Pegasus and follow the constellation westward to Enif (ε Pegasi), the bright star marking the horse's muzzle. From Enif, M15 is only about 4° away and makes an excellent comparison of instruments.
+
+**Naked eye:** Under a reasonably dark sky, trace the Great Square of Pegasus first; it is the easiest framework for the week. Enif is readily visible to the southwest of the Square. The Moon becomes progressively less intrusive through the week and is absent from the evening sky around New Moon.
+
+**Binoculars:** M15 appears as a small, round, misty glow near Enif. Binoculars are also especially useful for sweeping the large autumn star fields because their wide field preserves the relationships among Pegasus, Andromeda, and the surrounding constellations.
+
+**Small telescope:** M15 becomes a brighter, more concentrated ball with a conspicuous core. Increasing aperture and magnification may begin to give the outer halo a grainy or partially resolved appearance, but the dense center remains unresolved in a modest instrument. This is not the richly resolved view seen in long-exposure observatory photographs.
+
+**What to expect:** Deep-sky objects are visually subtle. A globular cluster such as M15 is normally gray-white at the eyepiece, not a saturated-color photograph. Give your eyes time to dark-adapt, use averted vision, and compare the binocular and telescope views rather than treating one as simply 'better.' The wide-field binocular view gives context; the telescope gives concentration and structure.
 
 ### Chart
 
