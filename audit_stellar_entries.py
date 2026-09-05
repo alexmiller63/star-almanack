@@ -121,12 +121,18 @@ def source_rows() -> list[dict[str, str]]:
     return rows
 
 
+def canonical_name_match(part: str, name: str) -> bool:
+    p = part.strip().casefold()
+    n = name.strip().casefold()
+    return p == n or p.startswith(n + " (") or p.startswith(n + " —")
+
+
 def isolate_entry(parts: list[str], proper: str, designation: str) -> list[str]:
     if proper:
-        matches = [part for part in parts if proper.casefold() in part.casefold()]
+        matches = [part for part in parts if canonical_name_match(part, proper)]
         if matches:
             return matches
-    return [part for part in parts if designation.casefold() in part.casefold()]
+    return [part for part in parts if canonical_name_match(part, designation)]
 
 
 def main() -> None:
