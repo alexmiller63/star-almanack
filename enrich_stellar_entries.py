@@ -2,9 +2,9 @@
 """Enrich catalog-backed calendar entries with observer-facing metadata.
 
 Stars display observing aid immediately before whole-number V magnitude, followed by
-Declination-band Season. Messier objects display Declination-band Season and observing
-aid. Authoritative source values retain full precision; Almanack presentation is
-rounded/formatted.
+Declination-band Season. Messier objects display designation + common name when
+available, object type, Declination-band Season, and observing aid. Authoritative
+source values retain full precision; Almanack presentation is rounded/formatted.
 
 Current urban-observer baseline:
   V <= 3.5       -> 👁
@@ -41,6 +41,14 @@ GREEK = {
     "Phi": "φ", "Chi": "χ", "Psi": "ψ", "Ome": "ω",
 }
 
+MESSIER_TYPES = {
+    "SN": "Supernova Remnant", "GC": "Globular Cluster", "OC": "Open Cluster",
+    "DN": "Diffuse Nebula", "PN": "Planetary Nebula", "AS": "Asterism",
+    "DS": "Double Star", "MW": "Milky Way", "SG": "Spiral Galaxy",
+    "BG": "Barred Galaxy", "LG": "Lenticular Galaxy", "EG": "Elliptical Galaxy",
+    "IG": "Irregular Galaxy",
+}
+
 ROW_RE = re.compile(
     r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| )([^|]*)( \|)$"
 )
@@ -70,7 +78,6 @@ def season_for(d: date) -> str:
 
 
 def equipment_for(magnitude: str) -> str:
-    """Return the current practical urban observing-aid class from apparent V magnitude."""
     try:
         mag = float((magnitude or "").strip())
     except ValueError:
@@ -156,7 +163,7 @@ def load_stars() -> dict[str, list[tuple[list[str], str]]]:
 
 
 def load_messier_source() -> dict[str, dict[str, str]]:
-    """Read Messier declinations and magnitudes from the source-of-truth inventory."""
+    """Read Messier name, type, declination, and magnitude from source-of-truth inventory."""
     out: dict[str, dict[str, str]] = {}
     for raw in FIXED_OBJECTS.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
@@ -165,7 +172,15 @@ def load_messier_source() -> dict[str, dict[str, str]]:
         payload = line[3:-1] if line.endswith("]") else line[3:]
         fields = next(csv.reader([payload], skipinitialspace=True))
         if len(fields) >= 8:
-            out[fields[0].strip().upper()] = {"dec": fields[6].strip(), "mag": fields[7].strip()}
+            name = fields[2].strip()
+            if name.casefold() == "null":
+                name = ""
+            out[fields[0].strip().upper()] = {
+                "name": name,
+                "type": fields[3].strip(),
+                "dec": fields[6].strip(),
+                "mag": fields[7].strip(),
+            }
     return out
 
 
@@ -177,16 +192,20 @@ def load_messier() -> dict[str, dict[str, str]]:
     if len(rows) != 110:
         raise SystemExit(f"Expected 110 Messier visibility rows, found {len(rows)}")
     for row in rows:
-        name = row["messier"].upper()
-        src = source.get(name)
+        designation = row["messier"].upper()
+        src = source.get(designation)
         if src is None:
-            raise SystemExit(f"Missing source metadata for {name}")
+            raise SystemExit(f"Missing source metadata for {designation}")
+        object_type = MESSIER_TYPES.get(src["type"], src["type"])
+        if not object_type:
+            raise SystemExit(f"Missing object type for {designation}")
+        heading = f"{designation} {src['name']}" if src["name"] else designation
         d = date.fromisoformat(row["best_date"])
         equipment = equipment_for(src["mag"])
-        label = f"{name} — {declination_band(src['dec'])} {season_for(d)}"
+        parts = [heading, object_type, f"{declination_band(src['dec'])} {season_for(d)}"]
         if equipment:
-            label += f" — {equipment}"
-        out[name] = {"best_date": row["best_date"], "label": label}
+            parts.append(equipment)
+        out[designation] = {"best_date": row["best_date"], "label": " — ".join(parts)}
     return out
 
 
@@ -211,8 +230,8 @@ def enrich_cell(date_iso: str, cell: str, stars, messier) -> str:
         if replacement is None:
             m = re.fullmatch(r"\s*(M\d{1,3})(?:\s+—.*)?\s*", part, flags=re.IGNORECASE)
             if m:
-                name = m.group(1).upper()
-                info = messier.get(name)
+                designation = m.group(1).upper()
+                info = messier.get(designation)
                 if info and info["best_date"] == date_iso:
                     replacement = info["label"]
         out.append(replacement or part)
@@ -246,7 +265,7 @@ def main() -> None:
     diadem = "Diadem (α Com) — B V 4 — Tropical Spring"
     if diadem not in updated:
         raise SystemExit(f"Expected enriched Diadem entry not found: {diadem}")
-    m53 = "M53 — Tropical Spring — 🔭"
+    m53 = "M53 — Globular Cluster — Tropical Spring — 🔭"
     if m53 not in updated:
         raise SystemExit(f"Expected enriched M53 entry not found: {m53}")
     if re.search(r"\bV\s+[+-]?\d+\.\d+", updated):
@@ -255,7 +274,7 @@ def main() -> None:
         raise SystemExit("Obsolete variable word survived")
 
     TARGET.write_text(updated, encoding="utf-8")
-    print("Enriched stars and all 110 Messier entries with urban observing-aid recommendations; PASS")
+    print("Enriched stars and all 110 Messier entries with names, object types, and urban observing-aid recommendations; PASS")
 
 
 if __name__ == "__main__":
