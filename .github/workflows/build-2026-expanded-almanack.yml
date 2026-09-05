@@ -32,6 +32,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: star-almanack-2026-publish
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -79,6 +83,8 @@ jobs:
           assert len(sky_notes) == 53, f'Expected 53 Sky Notes, found {len(sky_notes)}'
           placeholder = 'Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.'
           assert all(note.strip() and note.strip() != placeholder for note in sky_notes), 'Missing or placeholder Sky Note survived'
+          assert '**Asterism:**' in calendar_text, 'Asterism emphasis missing from Sky Notes'
+          assert '**Meteor shower:**' in calendar_text or '**Meteor showers:**' in calendar_text, 'Meteor-shower highlights missing from Sky Notes'
 
           calendar_events = {}
           row_re = re.compile(r'(?m)^\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| ([^|]*) \|$')
@@ -138,7 +144,7 @@ jobs:
           assert '**Binoculars:**' in text and 'M15' in text and 'misty glow near Enif' in text, 'W41 binocular guidance missing'
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
-          print('Verified 53 weeks, 371 day rows, 110 Messier objects, 53 curated Sky Notes, observing aid beside whole-number stellar magnitudes, Enif, Shaula, and Diadem')
+          print('Verified 53 weeks, 371 day rows, 110 Messier objects, 53 curated Sky Notes, asterisms, meteor showers, observing aid beside whole-number stellar magnitudes, Enif, Shaula, and Diadem')
           PY
 
       - name: Generate 53 weekly HTML pages
@@ -168,7 +174,7 @@ jobs:
               assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
               assert 'Notation:' in text, f'Notation control missing in {page}'
               assert 'star-almanack-bayer-mode' in text, f'Notation persistence missing in {page}'
-              assert 'Greek' in text and 'Latin' in text and 'Mixed · Learner' in text, f'Greek/Latin/Mixed controls missing in {page}'
+              assert 'Greek/Symbols' in text and 'Latin' in text and 'Mixed Learner' in text, f'Greek/Symbols, Latin, or Mixed Learner controls missing in {page}'
               assert 'Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.' not in text, f'Placeholder Sky Note survived in {page}'
 
           w41 = (root / 'W41' / 'index.html').read_text(encoding='utf-8')
@@ -186,7 +192,11 @@ jobs:
           w22 = (root / 'W22' / 'index.html').read_text(encoding='utf-8')
           assert 'Diadem (α Com) — B V 4 — Tropical Spring' in w22, 'Diadem observing aid/magnitude presentation missing from published W22'
           assert 'V 4.32' not in w22, 'Decimal Diadem magnitude survived publication'
-          print('Verified 53 weekly pages with curated Sky Notes, notation controls, and observing aid beside whole-number stellar magnitudes')
+
+          w33 = (root / 'W33' / 'index.html').read_text(encoding='utf-8')
+          assert 'Summer Triangle' in w33, 'Summer Triangle asterism note missing from W33'
+          assert 'Perseids' in w33 and 'August 13' in w33, 'Perseid meteor-shower note missing from W33'
+          print('Verified 53 weekly pages with curated Sky Notes, asterisms, meteor showers, notation controls, and observing aid beside whole-number stellar magnitudes')
           PY
 
       - name: Commit expanded Almanack and weekly pages
@@ -199,4 +209,5 @@ jobs:
             exit 0
           fi
           git commit -m "Build and publish expanded 2026 Almanack"
+          git pull --rebase origin main
           git push
