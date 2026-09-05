@@ -20,6 +20,7 @@ on:
       - build_expanded_almanack.py
       - enrich_stellar_entries.py
       - audit_stellar_entries.py
+      - audit_bayer_duplicate_designations.py
       - publish_weekly_pages.py
       - .github/workflows/build-2026-expanded-almanack.yml
 
@@ -38,6 +39,9 @@ jobs:
 
       - name: Enrich stellar entries
         run: python enrich_stellar_entries.py
+
+      - name: Audit duplicate Bayer designations
+        run: python audit_bayer_duplicate_designations.py
 
       - name: Audit every catalog-backed stellar entry
         run: python audit_stellar_entries.py
