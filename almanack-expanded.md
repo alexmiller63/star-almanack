@@ -40,7 +40,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 ### Sky Note
 
-The Pleiades (M45) are the week's natural showpiece, reaching their Almanack visibility date on January 1, while Full Moon follows on January 3. The cluster is an ideal demonstration that a wide field can be more useful than high magnification.
+The Pleiades (M45, the Pleiades, an open cluster) are the week's natural showpiece, reaching their Almanack visibility date on January 1, while Full Moon follows on January 3. The cluster is an ideal demonstration that a wide field can be more useful than high magnification.
 
 **Naked eye:** Find the compact little dipper-shaped knot of the Pleiades in Taurus. Most observers see six or seven stars readily under a clear sky, with more possible under excellent conditions.
 
@@ -166,13 +166,13 @@ Aldebaran anchors Taurus on Monday and New Moon arrives Sunday, making the latte
 
 ### Sky Note
 
-Rigel and Capella dominate the bright-star calendar this week, while M79 and M38 add two very different deep-sky targets. The result is an excellent week for moving from naked-eye orientation to binocular and telescopic observing.
+Rigel and Capella dominate the bright-star calendar this week, while M79 (NGC 1904), a globular cluster and M38 (NGC 1912), an open cluster add two very different deep-sky targets. The result is an excellent week for moving from naked-eye orientation to binocular and telescopic observing.
 
 **Naked eye:** Orion is unmistakable in the winter evening sky; identify Rigel at one corner and then look northward for brilliant Capella in Auriga.
 
-**Binoculars:** M38 in Auriga is the friendlier binocular target, appearing as a granular or misty concentration in a rich star field. Wide-field sweeping around Auriga is rewarding even before the cluster is identified.
+**Binoculars:** M38 (NGC 1912), an open cluster in Auriga is the friendlier binocular target, appearing as a granular or misty concentration in a rich star field. Wide-field sweeping around Auriga is rewarding even before the cluster is identified.
 
-**Small telescope:** M38 resolves increasingly into stars. M79 in Lepus is a globular cluster and appears much more compact: a small concentrated glow whose outer parts may begin to look grainy with sufficient aperture.
+**Small telescope:** M38 (NGC 1912), an open cluster resolves increasingly into stars. M79 (NGC 1904), a globular cluster in Lepus is a globular cluster and appears much more compact: a small concentrated glow whose outer parts may begin to look grainy with sufficient aperture.
 
 **What to expect:** Open and globular clusters can have similar catalog magnitudes yet look completely different. Structure and angular size matter as much as the magnitude number.
 
@@ -208,15 +208,15 @@ Rigel and Capella dominate the bright-star calendar this week, while M79 and M38
 
 ### Sky Note
 
-This is one of the year's strongest winter observing weeks: M42 and M43 in Orion, the Crab Nebula M1, M36 and M37 in Auriga, M78, and a procession of Orion's bright stars all appear in the calendar. Full Moon on February 1 means the earlier part of the week offers better contrast for faint nebulosity.
+This is one of the year's strongest winter observing weeks: M42, the Great Nebula in Orion, a diffuse nebula and M43, the De Mairan's Nebula, a diffuse nebula in Orion, the Crab Nebula M1, M36 (NGC 1960), an open cluster and M37 (NGC 2099), an open cluster in Auriga, M78, and a procession of Orion's bright stars all appear in the calendar. Full Moon on February 1 means the earlier part of the week offers better contrast for faint nebulosity.
 
-**Naked eye:** Learn Orion first—Betelgeuse, Rigel, the three Belt stars, and the Sword below the Belt. Under a reasonably dark sky the middle of the Sword already looks slightly fuzzy because of M42.
+**Naked eye:** Learn Orion first—Betelgeuse, Rigel, the three Belt stars, and the Sword below the Belt. Under a reasonably dark sky the middle of the Sword already looks slightly fuzzy because of M42, the Great Nebula in Orion, a diffuse nebula.
 
-**Binoculars:** M42 becomes an obvious luminous patch around the Trapezium region, embedded in a rich stellar field. M36 and M37 are excellent binocular clusters in Auriga.
+**Binoculars:** M42, the Great Nebula in Orion, a diffuse nebula becomes an obvious luminous patch around the Trapezium region, embedded in a rich stellar field. M36 (NGC 1960), an open cluster and M37 (NGC 2099), an open cluster are excellent binocular clusters in Auriga.
 
-**Small telescope:** M42 is transformed: the bright central nebula shows shape and texture, and the Trapezium resolves into a tiny stellar grouping. M1 is much subtler, usually a dim gray oval rather than the colorful filamentary Crab seen in photographs.
+**Small telescope:** M42, the Great Nebula in Orion, a diffuse nebula is transformed: the bright central nebula shows shape and texture, and the Trapezium resolves into a tiny stellar grouping. M1, the Crab Nebula, a supernova remnant is much subtler, usually a dim gray oval rather than the colorful filamentary Crab seen in photographs.
 
-**What to expect:** M42 is unusually impressive visually, but even it will not resemble a long-exposure image. Color is generally muted or absent to the eye; structure, contrast, and the embedded stars are the visual rewards.
+**What to expect:** M42, the Great Nebula in Orion, a diffuse nebula is unusually impressive visually, but even it will not resemble a long-exposure image. Color is generally muted or absent to the eye; structure, contrast, and the embedded stars are the visual rewards.
 
 ### Chart
 
@@ -250,13 +250,13 @@ This is one of the year's strongest winter observing weeks: M42 and M43 in Orion
 
 ### Sky Note
 
-M35 in Gemini is the principal deep-sky target, while Canopus and Mirzam mark the southern and tropical winter sky. The week is well suited to wide-field observing after the Full Moon begins to wane.
+M35 (NGC 2168), an open cluster in Gemini is the principal deep-sky target, while Canopus and Mirzam mark the southern and tropical winter sky. The week is well suited to wide-field observing after the Full Moon begins to wane.
 
 **Naked eye:** Use Gemini and bright Sirius as orientation landmarks. From sufficiently southerly latitudes, Canopus is extraordinarily bright but sits low in the south; farther north it may never rise.
 
-**Binoculars:** M35 is excellent in binoculars, showing as a rich compact swarm near the foot of Gemini. Its setting among winter Milky Way stars is part of the view.
+**Binoculars:** M35 (NGC 2168), an open cluster is excellent in binoculars, showing as a rich compact swarm near the foot of Gemini. Its setting among winter Milky Way stars is part of the view.
 
-**Small telescope:** M35 resolves into a large population of stars and tolerates moderate magnification while still retaining its cluster character.
+**Small telescope:** M35 (NGC 2168), an open cluster resolves into a large population of stars and tolerates moderate magnification while still retaining its cluster character.
 
 **What to expect:** Low altitude can make a brilliant star such as Canopus shimmer and change color dramatically. That is atmospheric refraction and turbulence, not intrinsic variability on a seconds-long timescale.
 
@@ -292,15 +292,15 @@ M35 in Gemini is the principal deep-sky target, while Canopus and Mirzam mark th
 
 ### Sky Note
 
-Last Quarter Moon opens darker evening opportunities, and M41 provides an easy deep-sky companion to Sirius. This is a particularly good beginner's star-hop because the brightest star in the night sky points to a binocular-friendly cluster nearby.
+Last Quarter Moon opens darker evening opportunities, and M41 (NGC 2287), an open cluster provides an easy deep-sky companion to Sirius. This is a particularly good beginner's star-hop because the brightest star in the night sky points to a binocular-friendly cluster nearby.
 
 **Naked eye:** Identify Sirius first. Its brilliance and position below Orion make it difficult to mistake. From a dark site, the region below Sirius is rich with Milky Way background.
 
-**Binoculars:** Move a few degrees south of Sirius to M41. It appears as a loose, attractive gathering of stars and is far easier than most galaxies or nebulae.
+**Binoculars:** Move a few degrees south of Sirius to M41 (NGC 2287), an open cluster. It appears as a loose, attractive gathering of stars and is far easier than most galaxies or nebulae.
 
-**Small telescope:** Low to moderate power resolves M41 beautifully. Higher power is usually unnecessary because the cluster is broad and benefits from some surrounding sky.
+**Small telescope:** Low to moderate power resolves M41 (NGC 2287), an open cluster beautifully. Higher power is usually unnecessary because the cluster is broad and benefits from some surrounding sky.
 
-**What to expect:** Open clusters are among the most forgiving urban and suburban deep-sky objects. Unlike a faint galaxy, M41 is made of pointlike stars, so moderate light pollution does not erase it as quickly.
+**What to expect:** Open clusters are among the most forgiving urban and suburban deep-sky objects. Unlike a faint galaxy, M41 (NGC 2287), an open cluster is made of pointlike stars, so moderate light pollution does not erase it as quickly.
 
 ### Chart
 
@@ -334,13 +334,13 @@ Last Quarter Moon opens darker evening opportunities, and M41 provides an easy d
 
 ### Sky Note
 
-New Moon on February 17 gives this week a dark-sky advantage, and M50 provides a practical binocular target amid the rich winter Milky Way between Sirius and Procyon.
+New Moon on February 17 gives this week a dark-sky advantage, and M50 (NGC 2323), an open cluster provides a practical binocular target amid the rich winter Milky Way between Sirius and Procyon.
 
 **Naked eye:** Use Sirius and Procyon as bright anchors. Monoceros itself is inconspicuous, so the surrounding bright stars are more useful than trying to trace its faint outline first.
 
-**Binoculars:** M50 appears as a compact concentration of stars in a rich field. Sweep slowly between the bright landmarks; the cluster is much easier to recognize once the binocular field begins to fill with Milky Way stars.
+**Binoculars:** M50 (NGC 2323), an open cluster appears as a compact concentration of stars in a rich field. Sweep slowly between the bright landmarks; the cluster is much easier to recognize once the binocular field begins to fill with Milky Way stars.
 
-**Small telescope:** Low and moderate power resolve M50 into a loose, attractive cluster. Keep enough field around it to distinguish the cluster from the dense background.
+**Small telescope:** Low and moderate power resolve M50 (NGC 2323), an open cluster into a loose, attractive cluster. Keep enough field around it to distinguish the cluster from the dense background.
 
 **What to expect:** Some constellations are poor naked-eye signposts even when they contain good telescopic objects. Star-hopping from bright neighboring stars is often more effective than forcing yourself to see every constellation boundary.
 
@@ -376,13 +376,13 @@ New Moon on February 17 gives this week a dark-sky advantage, and M50 provides a
 
 ### Sky Note
 
-M47, M46, and M93 make this a strong open-cluster week, with Castor, Pollux, and Procyon providing bright orientation stars. M46 and M47 are especially instructive because neighboring clusters can look strikingly different.
+M47, M46, and M93 (NGC 2447), an open cluster make this a strong open-cluster week, with Castor, Pollux, and Procyon providing bright orientation stars. M46 (NGC 2437), an open cluster and M47 (NGC 2422), an open cluster are especially instructive because neighboring clusters can look strikingly different.
 
 **Naked eye:** Identify Procyon and the Gemini pair Castor and Pollux. These bright stars establish the winter framework before you move south into Puppis.
 
-**Binoculars:** M47 is relatively bright and coarse, with individual stars showing readily. M46 is richer and finer, often beginning as a softer granular glow. M93 is another rewarding compact cluster farther south.
+**Binoculars:** M47 (NGC 2422), an open cluster is relatively bright and coarse, with individual stars showing readily. M46 (NGC 2437), an open cluster is richer and finer, often beginning as a softer granular glow. M93 (NGC 2447), an open cluster is another rewarding compact cluster farther south.
 
-**Small telescope:** M46 blossoms into many faint stars, while M47 remains a looser pattern of brighter ones. Comparing them at the same magnification is more informative than simply checking both off a list.
+**Small telescope:** M46 (NGC 2437), an open cluster blossoms into many faint stars, while M47 (NGC 2422), an open cluster remains a looser pattern of brighter ones. Comparing them at the same magnification is more informative than simply checking both off a list.
 
 **What to expect:** Catalog objects of the same type are not visually interchangeable. Stellar brightness, richness, concentration, and distance combine to give each open cluster a distinct appearance.
 
@@ -418,11 +418,11 @@ M47, M46, and M93 make this a strong open-cluster week, with Castor, Pollux, and
 
 ### Sky Note
 
-Full Moon on March 3 makes faint extended objects difficult, but M48 remains a sensible target later in the week because open clusters withstand moonlight better than galaxies and nebulae.
+Full Moon on March 3 makes faint extended objects difficult, but M48 (NGC 2548), an open cluster remains a sensible target later in the week because open clusters withstand moonlight better than galaxies and nebulae.
 
 **Naked eye:** Use the bright winter stars to maintain orientation while moonlight washes out the fainter background. The simplified sky can actually help a beginner learn the principal patterns.
 
-**Binoculars:** M48 is broad and well suited to binoculars. Expect a scattered gathering of stars rather than a nebulous patch; move away from direct moonlight and shield your eyes from local glare.
+**Binoculars:** M48 (NGC 2548), an open cluster is broad and well suited to binoculars. Expect a scattered gathering of stars rather than a nebulous patch; move away from direct moonlight and shield your eyes from local glare.
 
 **Small telescope:** Use low power so the cluster does not overflow the field. Higher magnification may show more faint members but can make the overall shape less obvious.
 
@@ -462,7 +462,7 @@ Full Moon on March 3 makes faint extended objects difficult, but M48 remains a s
 
 Last Quarter Moon on March 11 improves evening conditions, and M44, the Beehive Cluster, reaches its Almanack date on March 15. The Beehive is one of the clearest examples of a target for which binoculars can be preferable to a telescope.
 
-**Naked eye:** From a dark site M44 can appear as a misty patch in otherwise faint Cancer. Use brighter Gemini and Leo as neighboring landmarks if Cancer itself is difficult to trace.
+**Naked eye:** From a dark site M44, the Beehive Cluster, an open cluster can appear as a misty patch in otherwise faint Cancer. Use brighter Gemini and Leo as neighboring landmarks if Cancer itself is difficult to trace.
 
 **Binoculars:** The mist resolves into a broad swarm of stars filling a generous field. This is the classic Beehive view: bright enough to be easy, wide enough to reward low magnification.
 
@@ -502,15 +502,15 @@ Last Quarter Moon on March 11 improves evening conditions, and M44, the Beehive 
 
 ### Sky Note
 
-M67 appears on March 17, New Moon follows on March 19, and the March equinox arrives March 20. This week therefore joins a fine old open cluster with the seasonal turning point into northern spring.
+M67 (NGC 2682), an open cluster appears on March 17, New Moon follows on March 19, and the March equinox arrives March 20. This week therefore joins a fine old open cluster with the seasonal turning point into northern spring.
 
 **Naked eye:** Watch the winter constellations shift westward while Leo and the spring sky become more prominent. The equinox is a geometric event—the Sun crosses the celestial equator—not a sudden overnight change in the stars.
 
-**Binoculars:** M67 in Cancer is much subtler than the Beehive. In binoculars it appears as a small granular or hazy patch under good conditions rather than a broad spectacular swarm.
+**Binoculars:** M67 (NGC 2682), an open cluster in Cancer is much subtler than the Beehive. In binoculars it appears as a small granular or hazy patch under good conditions rather than a broad spectacular swarm.
 
-**Small telescope:** M67 rewards aperture and moderate magnification, resolving into a dense population of relatively faint stars. It is a better telescopic target than M44 precisely because it is more compact.
+**Small telescope:** M67 (NGC 2682), an open cluster rewards aperture and moderate magnification, resolving into a dense population of relatively faint stars. It is a better telescopic target than M44, the Beehive Cluster, an open cluster precisely because it is more compact.
 
-**What to expect:** Two open clusters in the same constellation can demand different instruments. M44 favors breadth; M67 favors resolution. Instrument choice should follow the angular scale of the object.
+**What to expect:** Two open clusters in the same constellation can demand different instruments. M44, the Beehive Cluster, an open cluster favors breadth; M67 (NGC 2682), an open cluster favors resolution. Instrument choice should follow the angular scale of the object.
 
 ### Chart
 
@@ -586,13 +586,13 @@ The calendar is dominated by bright spring stars rather than a Messier showpiece
 
 ### Sky Note
 
-M81 and M82 reach their Almanack date on April 4, but Full Moon occurs April 2. The galaxies are therefore a useful lesson in how moonlight changes an otherwise excellent target pair.
+M81, the Bode's Galaxy, a spiral galaxy and M82, the Cigar Galaxy, an irregular galaxy reach their Almanack date on April 4, but Full Moon occurs April 2. The galaxies are therefore a useful lesson in how moonlight changes an otherwise excellent target pair.
 
 **Naked eye:** Use the Big Dipper as the northern signpost. Its bowl and handle are much easier to recognize than the galaxies themselves and provide the framework for the star-hop.
 
-**Binoculars:** Under a dark sky M81 can be found in binoculars and M82 may be detectable nearby, but bright moonlight greatly reduces their contrast. Treat a binocular detection this week as conditions-dependent rather than guaranteed.
+**Binoculars:** Under a dark sky M81, the Bode's Galaxy, a spiral galaxy can be found in binoculars and M82, the Cigar Galaxy, an irregular galaxy may be detectable nearby, but bright moonlight greatly reduces their contrast. Treat a binocular detection this week as conditions-dependent rather than guaranteed.
 
-**Small telescope:** M81 appears as a bright oval glow with a concentrated center; M82 is narrower and more elongated. The contrasting shapes are the principal visual reward, not photographic spiral arms or dust detail.
+**Small telescope:** M81, the Bode's Galaxy, a spiral galaxy appears as a bright oval glow with a concentrated center; M82, the Cigar Galaxy, an irregular galaxy is narrower and more elongated. The contrasting shapes are the principal visual reward, not photographic spiral arms or dust detail.
 
 **What to expect:** Return to this pair on a moonless night if the Full Moon makes them disappointing. A difficult view under poor conditions says little about what the same telescope can show against a darker sky.
 
@@ -670,13 +670,13 @@ Regulus and Algieba make Leo the week's natural observing framework while Last Q
 
 ### Sky Note
 
-New Moon on April 17 is followed immediately by M95, M96, and M105 on April 18–19, making this one of the better spring weeks for attempting galaxies in Leo.
+New Moon on April 17 is followed immediately by M95, M96, and M105 (NGC 3379), an elliptical galaxy on April 18–19, making this one of the better spring weeks for attempting galaxies in Leo.
 
 **Naked eye:** Establish Leo first with Regulus and the Sickle, then identify the rear of the constellation. The galaxies themselves are not naked-eye targets; the constellation is your map.
 
 **Binoculars:** These galaxies are challenging binocular objects and require genuinely dark skies. Use binoculars primarily for the star-hop and for fixing the correct field before changing instruments.
 
-**Small telescope:** M95 and M96 appear as small gray glows, while M105 has a more concentrated elliptical appearance. Moderate aperture and dark adaptation matter more than high magnification.
+**Small telescope:** M95 (NGC 3351), a barred galaxy and M96 (NGC 3368), a spiral galaxy appear as small gray glows, while M105 (NGC 3379), an elliptical galaxy has a more concentrated elliptical appearance. Moderate aperture and dark adaptation matter more than high magnification.
 
 **What to expect:** Photographs emphasize spiral structure and color that a small telescope usually will not show. Success begins with detecting shape, concentration, and orientation—not reproducing an image from an observatory.
 
@@ -712,13 +712,13 @@ New Moon on April 17 is followed immediately by M95, M96, and M105 on April 18�
 
 ### Sky Note
 
-Dubhe and Merak mark the Big Dipper's bowl on April 23, followed by the Owl Nebula M97 and galaxy M108 on April 25. First Quarter Moon means contrast will not be ideal, but the star-hop is unusually convenient.
+Dubhe and Merak mark the Big Dipper's bowl on April 23, followed by the Owl Nebula M97, the Owl Nebula, a planetary nebula and galaxy M108 (NGC 3556), a spiral galaxy on April 25. First Quarter Moon means contrast will not be ideal, but the star-hop is unusually convenient.
 
 **Naked eye:** Find Dubhe and Merak, the two pointer stars normally used to locate Polaris. This week use the same familiar part of the Dipper as the starting region for deep-sky work.
 
-**Binoculars:** Binoculars are best used to establish the field around the bowl stars. M97 and M108 are substantially more difficult than an open cluster and should not be expected casually in ordinary suburban binocular observing.
+**Binoculars:** Binoculars are best used to establish the field around the bowl stars. M97, the Owl Nebula, a planetary nebula and M108 (NGC 3556), a spiral galaxy are substantially more difficult than an open cluster and should not be expected casually in ordinary suburban binocular observing.
 
-**Small telescope:** M97 is a round, diffuse planetary nebula; the famous dark 'eyes' are subtle and may require larger aperture, excellent conditions, or a nebula filter. M108 is an elongated, low-surface-brightness galaxy nearby.
+**Small telescope:** M97, the Owl Nebula, a planetary nebula is a round, diffuse planetary nebula; the famous dark 'eyes' are subtle and may require larger aperture, excellent conditions, or a nebula filter. M108 (NGC 3556), a spiral galaxy is an elongated, low-surface-brightness galaxy nearby.
 
 **What to expect:** Catalog photographs can make the Owl's face seem obvious. At a modest eyepiece the first achievement is simply seeing the pale round disk. Fine internal contrast is a second-stage observation.
 
@@ -754,11 +754,11 @@ Dubhe and Merak mark the Big Dipper's bowl on April 23, followed by the Owl Nebu
 
 ### Sky Note
 
-M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows May 1. These galaxies are worth knowing, yet this particular week demonstrates why timing within the week matters.
+M65 (NGC 3623), a spiral galaxy and M66 (NGC 3627), a spiral galaxy reach their Almanack dates on April 27–28, but Full Moon follows May 1. These galaxies are worth knowing, yet this particular week demonstrates why timing within the week matters.
 
 **Naked eye:** Use Leo's bright outline to establish the galaxy field. Observe earlier in the week and place the Moon behind a building or other obstruction when possible to reduce stray light.
 
-**Binoculars:** M65 and M66 are difficult binocular targets except under dark transparent skies. Binoculars remain valuable for locating the correct region even when the galaxies themselves do not emerge.
+**Binoculars:** M65 (NGC 3623), a spiral galaxy and M66 (NGC 3627), a spiral galaxy are difficult binocular targets except under dark transparent skies. Binoculars remain valuable for locating the correct region even when the galaxies themselves do not emerge.
 
 **Small telescope:** Both galaxies appear as elongated gray glows, with brighter central regions becoming apparent as conditions improve. Low-to-moderate power is usually more productive than pushing magnification.
 
@@ -796,13 +796,13 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-The Beltane cross-quarter point falls on May 5, while Denebola and Phecda help establish the spring sky and M109 provides the week's deep-sky challenge near the Big Dipper. Last Quarter Moon on May 9 improves the prospects for darker evening observing as the week progresses.
+The Beltane cross-quarter point falls on May 5, while Denebola and Phecda help establish the spring sky and M109 (NGC 3992), a barred galaxy provides the week's deep-sky challenge near the Big Dipper. Last Quarter Moon on May 9 improves the prospects for darker evening observing as the week progresses.
 
 **Naked eye:** Begin with the Big Dipper and identify Phecda in the bowl. Then look southward toward Leo and Denebola to connect two of the most useful spring navigation regions.
 
-**Binoculars:** Use binoculars primarily to learn the star field around the Dipper and to make the hop toward M109. The galaxy is a difficult binocular target and should not be promised under suburban skies.
+**Binoculars:** Use binoculars primarily to learn the star field around the Dipper and to make the hop toward M109 (NGC 3992), a barred galaxy. The galaxy is a difficult binocular target and should not be promised under suburban skies.
 
-**Small telescope:** M109 appears as a faint, elongated or oval gray glow close to the Dipper. Its photographic barred-spiral structure is much subtler visually; dark sky and careful averted vision matter more than excessive magnification.
+**Small telescope:** M109 (NGC 3992), a barred galaxy appears as a faint, elongated or oval gray glow close to the Dipper. Its photographic barred-spiral structure is much subtler visually; dark sky and careful averted vision matter more than excessive magnification.
 
 **What to expect:** The calendar combines a seasonal solar marker with a low-contrast galaxy. That contrast is useful: some Almanack events are obvious to the unaided eye, while others are invitations to slow, patient telescopic detection.
 
@@ -838,13 +838,13 @@ The Beltane cross-quarter point falls on May 5, while Denebola and Phecda help e
 
 ### Sky Note
 
-This is one of the densest galaxy weeks in the Almanack. M98, M106, M99, M61, M84, M100, M85, M86, M49, M87, M88, M89, M90, and M91 appear through the week, with New Moon on May 16 providing exceptionally favorable lunar geometry for the weekend.
+This is one of the densest galaxy weeks in the Almanack. M98, M106, M99, M61, M84, M100, M85, M86, M49, M87, M88, M89, M90, and M91 (NGC 4548), a barred galaxy appear through the week, with New Moon on May 16 providing exceptionally favorable lunar geometry for the weekend.
 
 **Naked eye:** Learn the framework before hunting galaxies: the Big Dipper, Coma Berenices, and Virgo. From a dark site the loose Coma star cluster itself is a beautiful naked-eye and binocular landmark.
 
 **Binoculars:** Use binoculars to establish the large-scale route through Coma and Virgo. Most of the week's galaxies are telescopic rather than casual binocular targets, but the wide field prevents you from becoming lost in a region where many faint galaxies occupy neighboring fields.
 
-**Small telescope:** This is the week to explore the Virgo Cluster deliberately. M84, M86, and M87 are strong starting points; several other Messier galaxies become detectable as small gray glows under a dark sky. Move slowly and identify the field stars so that one galaxy is not mistaken for another.
+**Small telescope:** This is the week to explore the Virgo Cluster deliberately. M84, M86, and M87 (NGC 4486), an elliptical galaxy are strong starting points; several other Messier galaxies become detectable as small gray glows under a dark sky. Move slowly and identify the field stars so that one galaxy is not mistaken for another.
 
 **What to expect:** A photograph of the Virgo Cluster can be crowded with obvious galaxies. At the eyepiece many are understated patches with differences in concentration, elongation, and brightness. The accomplishment is learning the geography of the cluster and distinguishing those subtle forms—not seeing photographic spiral detail.
 
@@ -882,11 +882,11 @@ This is one of the densest galaxy weeks in the Almanack. M98, M106, M99, M61, M8
 
 The spring galaxy sequence continues with M104, M58, M59, M60, M94, and M64, while First Quarter Moon arrives May 23. The Sombrero Galaxy is the week's most distinctive telescopic target, and Cor Caroli supplies an excellent bright-star anchor.
 
-**Naked eye:** Identify Cor Caroli beneath the Big Dipper's handle and use the bright spring constellations to keep your bearings. Farther south, the M104 field is lower for northern observers and benefits from a clear southern horizon.
+**Naked eye:** Identify Cor Caroli beneath the Big Dipper's handle and use the bright spring constellations to keep your bearings. Farther south, the M104, the Sombrero Galaxy, a spiral galaxy field is lower for northern observers and benefits from a clear southern horizon.
 
-**Binoculars:** Binoculars are most useful for navigation and for enjoying the broad Coma Berenices and Canes Venatici fields. M94 is among the more concentrated galaxies in this region but should still be treated as a dark-sky binocular challenge.
+**Binoculars:** Binoculars are most useful for navigation and for enjoying the broad Coma Berenices and Canes Venatici fields. M94 (NGC 4736), a spiral galaxy is among the more concentrated galaxies in this region but should still be treated as a dark-sky binocular challenge.
 
-**Small telescope:** M104 appears as a bright, flattened spindle with a strong central concentration; under favorable conditions its dark dust lane can begin to register. M94 has a compact bright center, while M64 is an oval glow whose famous dark feature requires good conditions and careful viewing.
+**Small telescope:** M104, the Sombrero Galaxy, a spiral galaxy appears as a bright, flattened spindle with a strong central concentration; under favorable conditions its dark dust lane can begin to register. M94 (NGC 4736), a spiral galaxy has a compact bright center, while M64, the Black Eye Galaxy, a spiral galaxy is an oval glow whose famous dark feature requires good conditions and careful viewing.
 
 **What to expect:** The names Sombrero and Black Eye come from structures made conspicuous in photographs. A small telescope usually reveals the galaxies first as gray forms; dust features are subtler second-stage observations rather than guaranteed first impressions.
 
@@ -922,13 +922,13 @@ The spring galaxy sequence continues with M104, M58, M59, M60, M94, and M64, whi
 
 ### Sky Note
 
-M63 and M53 arrive early in the week, Spica and Mizar provide brilliant navigation landmarks on May 29, and M51, the Whirlpool Galaxy, reaches its Almanack date on May 31—the same day as Full Moon. The target list is excellent, but lunar glare makes the timing challenging.
+M63, the Sunflower Galaxy, a spiral galaxy and M53 (NGC 5024), a globular cluster arrive early in the week, Spica and Mizar provide brilliant navigation landmarks on May 29, and M51, the Whirlpool Galaxy, reaches its Almanack date on May 31—the same day as Full Moon. The target list is excellent, but lunar glare makes the timing challenging.
 
 **Naked eye:** Find Spica in Virgo and Mizar in the Big Dipper's handle. These bright stars remain easy even as the Moon brightens the sky and help maintain the spring framework.
 
-**Binoculars:** M53 is the more practical deep-sky binocular target, appearing as a small concentrated fuzzy point under decent conditions. M51 is possible in binoculars from dark skies but Full Moon makes that substantially harder this week.
+**Binoculars:** M53 (NGC 5024), a globular cluster is the more practical deep-sky binocular target, appearing as a small concentrated fuzzy point under decent conditions. M51, the Whirlpool Galaxy, a spiral galaxy is possible in binoculars from dark skies but Full Moon makes that substantially harder this week.
 
-**Small telescope:** M53 becomes a concentrated globular glow whose outskirts can begin to look grainy. M51 normally shows a brighter galaxy beside its companion NGC 5195; obvious spiral arms require darker conditions and generally more aperture than the bright-Moon sky this week favors.
+**Small telescope:** M53 (NGC 5024), a globular cluster becomes a concentrated globular glow whose outskirts can begin to look grainy. M51, the Whirlpool Galaxy, a spiral galaxy normally shows a brighter galaxy beside its companion NGC 5195; obvious spiral arms require darker conditions and generally more aperture than the bright-Moon sky this week favors.
 
 **What to expect:** Do not judge the Whirlpool by a Full-Moon attempt. The galaxy's famous spiral structure is a low-contrast feature. Use this week to locate the field, then revisit it under a dark Moon for a fair comparison.
 
@@ -964,13 +964,13 @@ M63 and M53 arrive early in the week, Spica and Mizar provide brilliant navigati
 
 ### Sky Note
 
-M83, the Southern Pinwheel Galaxy, opens the week and M3 follows on June 3. These two objects make a useful north–south comparison: a low southern face-on galaxy whose accessibility depends strongly on latitude and horizon, and a bright northern globular cluster that is much more forgiving.
+M83, the Southern Pinwheel Galaxy, opens the week and M3 (NGC 5272), a globular cluster follows on June 3. These two objects make a useful north–south comparison: a low southern face-on galaxy whose accessibility depends strongly on latitude and horizon, and a bright northern globular cluster that is much more forgiving.
 
 **Naked eye:** Use Alkaid at the end of the Big Dipper's handle as a northern landmark. For M83, seek an unobstructed southern horizon; from northern latitudes the galaxy remains low, while southern observers see it much more favorably.
 
-**Binoculars:** M3 is an excellent binocular globular, appearing as a compact round glow. M83 is a much more demanding binocular target because its light is spread over a broad face-on disk and atmospheric extinction can compound the difficulty when it is low.
+**Binoculars:** M3 (NGC 5272), a globular cluster is an excellent binocular globular, appearing as a compact round glow. M83, the Southern Pinwheel, a spiral galaxy is a much more demanding binocular target because its light is spread over a broad face-on disk and atmospheric extinction can compound the difficulty when it is low.
 
-**Small telescope:** M3 becomes a bright concentrated ball with a grainy outer halo and increasing stellar resolution as aperture grows. M83 can show a compact core and uneven disk under dark transparent conditions, but its photographic spiral pattern should not be expected automatically in a small telescope.
+**Small telescope:** M3 (NGC 5272), a globular cluster becomes a bright concentrated ball with a grainy outer halo and increasing stellar resolution as aperture grows. M83, the Southern Pinwheel, a spiral galaxy can show a compact core and uneven disk under dark transparent conditions, but its photographic spiral pattern should not be expected automatically in a small telescope.
 
 **What to expect:** Declination matters. Two catalog objects with favorable magnitudes can have very different practical visibility because one culminates high while the other is viewed through much more atmosphere. The Almanack's north/tropical/south context is observationally meaningful, not merely classificatory.
 
@@ -1006,15 +1006,15 @@ M83, the Southern Pinwheel Galaxy, opens the week and M3 follows on June 3. Thes
 
 ### Sky Note
 
-Last Quarter Moon on June 8 helps darken the evening later in the week, while Arcturus and M101 provide a useful contrast between an easy bright-star anchor and a difficult face-on galaxy.
+Last Quarter Moon on June 8 helps darken the evening later in the week, while Arcturus and M101, the Pinwheel Galaxy, a spiral galaxy provide a useful contrast between an easy bright-star anchor and a difficult face-on galaxy.
 
 **Naked eye:** Find orange Arcturus first. It is one of the brightest stars in the northern spring sky and a dependable orientation point for the transition toward the summer constellations.
 
-**Binoculars:** M101 is a demanding binocular target because its light is spread across a large area. Under a genuinely dark, transparent sky it may appear as a broad, weak brightening rather than a sharply bounded object.
+**Binoculars:** M101, the Pinwheel Galaxy, a spiral galaxy is a demanding binocular target because its light is spread across a large area. Under a genuinely dark, transparent sky it may appear as a broad, weak brightening rather than a sharply bounded object.
 
-**Small telescope:** Use low power on M101. Expect a pale, diffuse glow with a somewhat brighter central region; obvious photographic spiral structure is not a realistic expectation in a modest instrument.
+**Small telescope:** Use low power on M101, the Pinwheel Galaxy, a spiral galaxy. Expect a pale, diffuse glow with a somewhat brighter central region; obvious photographic spiral structure is not a realistic expectation in a modest instrument.
 
-**What to expect:** M101 is a classic surface-brightness lesson. A galaxy can have a respectable total magnitude and still be hard to see because its light is spread thinly over the sky.
+**What to expect:** M101, the Pinwheel Galaxy, a spiral galaxy is a classic surface-brightness lesson. A galaxy can have a respectable total magnitude and still be hard to see because its light is spread thinly over the sky.
 
 ### Chart
 
@@ -1090,13 +1090,13 @@ New Moon opens the week, Alpha Centauri reaches its Almanack date on June 16, an
 
 ### Sky Note
 
-M5 reaches its Almanack date on June 26 and is one of the finest globular clusters available to northern and tropical observers. The week also includes M102, giving a useful comparison between a concentrated star cluster and a much subtler galaxy.
+M5 (NGC 5904), a globular cluster reaches its Almanack date on June 26 and is one of the finest globular clusters available to northern and tropical observers. The week also includes M102, giving a useful comparison between a concentrated star cluster and a much subtler galaxy.
 
 **Naked eye:** Use bright stars in Boötes, Libra, and Corona Borealis to orient yourself before moving toward Serpens. The summer sky is beginning to favor globular clusters as the evening view shifts toward the inner Milky Way.
 
-**Binoculars:** M5 can appear as a small, round, misty patch under good conditions. Its concentration makes it much easier to recognize than many galaxies of similar catalog magnitude.
+**Binoculars:** M5 (NGC 5904), a globular cluster can appear as a small, round, misty patch under good conditions. Its concentration makes it much easier to recognize than many galaxies of similar catalog magnitude.
 
-**Small telescope:** M5 becomes a bright, strongly concentrated ball. With sufficient aperture and steady conditions, the outer parts begin to break into individual stars while the core remains densely packed. M102 is far less conspicuous and appears as a slender gray spindle.
+**Small telescope:** M5 (NGC 5904), a globular cluster becomes a bright, strongly concentrated ball. With sufficient aperture and steady conditions, the outer parts begin to break into individual stars while the core remains densely packed. M102, the Spindle Galaxy, a lenticular galaxy is far less conspicuous and appears as a slender gray spindle.
 
 **What to expect:** Globular clusters reward aperture in a different way from galaxies. Instead of revealing color or spiral structure, increased resolution gradually turns a smooth glow into a swarm of stars.
 
@@ -1174,15 +1174,15 @@ Full Moon falls on June 29, so this is better suited to bright-star observing th
 
 ### Sky Note
 
-Last Quarter Moon on July 7 improves evening conditions, and M80 and M4 arrive on July 10 and 12 in the rich Scorpius region. They are both globular clusters, but they look very different and make an excellent side-by-side observing lesson.
+Last Quarter Moon on July 7 improves evening conditions, and M80 (NGC 6093), a globular cluster and M4 (NGC 6121), a globular cluster arrive on July 10 and 12 in the rich Scorpius region. They are both globular clusters, but they look very different and make an excellent side-by-side observing lesson.
 
 **Naked eye:** Find Scorpius and its bright reddish star Antares, then trace the curved body of the constellation through Dschubba and Acrab. From northern mid-latitudes the constellation stays low, so choose a clear southern horizon.
 
-**Binoculars:** M4 is the easier and broader target, appearing as a diffuse patch near Antares under a dark sky. M80 is smaller and more concentrated, looking more nearly stellar at first glance.
+**Binoculars:** M4 (NGC 6121), a globular cluster is the easier and broader target, appearing as a diffuse patch near Antares under a dark sky. M80 (NGC 6093), a globular cluster is smaller and more concentrated, looking more nearly stellar at first glance.
 
-**Small telescope:** M4 begins to resolve into stars relatively readily and shows a loose structure for a globular cluster. M80 remains a compact, concentrated ball and generally needs more aperture or magnification before its outer stars become grainy.
+**Small telescope:** M4 (NGC 6121), a globular cluster begins to resolve into stars relatively readily and shows a loose structure for a globular cluster. M80 (NGC 6093), a globular cluster remains a compact, concentrated ball and generally needs more aperture or magnification before its outer stars become grainy.
 
-**What to expect:** Two objects with the same catalog type can present opposite visual personalities. M4 is broad and loose; M80 is compact and dense. Comparing them teaches more than observing either one in isolation.
+**What to expect:** Two objects with the same catalog type can present opposite visual personalities. M4 (NGC 6121), a globular cluster is broad and loose; M80 (NGC 6093), a globular cluster is compact and dense. Comparing them teaches more than observing either one in isolation.
 
 ### Chart
 
@@ -1216,13 +1216,13 @@ Last Quarter Moon on July 7 improves evening conditions, and M80 and M4 arrive o
 
 ### Sky Note
 
-New Moon on July 14 opens a dark-sky week rich in globular clusters. M107 appears the same night, followed by the Great Hercules Cluster M13 on July 16 and M12 on July 18; Antares also marks the southern summer sky on July 13.
+New Moon on July 14 opens a dark-sky week rich in globular clusters. M107 (NGC 6171), a globular cluster appears the same night, followed by the Great Hercules Cluster M13, the Great Hercules Globular, a globular cluster on July 16 and M12 (NGC 6218), a globular cluster on July 18; Antares also marks the southern summer sky on July 13.
 
-**Naked eye:** Use Antares to recognize Scorpius and the Keystone of Hercules to orient yourself farther north. Under a genuinely dark sky M13 can approach naked-eye visibility, but binoculars make identification much easier.
+**Naked eye:** Use Antares to recognize Scorpius and the Keystone of Hercules to orient yourself farther north. Under a genuinely dark sky M13, the Great Hercules Globular, a globular cluster can approach naked-eye visibility, but binoculars make identification much easier.
 
-**Binoculars:** M13 is the showpiece, appearing as a compact fuzzy ball in the Keystone. M12 is also a good binocular target from a dark site, while M107 is smaller and more difficult.
+**Binoculars:** M13, the Great Hercules Globular, a globular cluster is the showpiece, appearing as a compact fuzzy ball in the Keystone. M12 (NGC 6218), a globular cluster is also a good binocular target from a dark site, while M107 (NGC 6171), a globular cluster is smaller and more difficult.
 
-**Small telescope:** M13 begins to break into individual stars around its halo and becomes increasingly spectacular with aperture. M12 looks looser and less centrally concentrated; M107 remains subtler. Compare them rather than expecting every globular cluster to look alike.
+**Small telescope:** M13, the Great Hercules Globular, a globular cluster begins to break into individual stars around its halo and becomes increasingly spectacular with aperture. M12 (NGC 6218), a globular cluster looks looser and less centrally concentrated; M107 (NGC 6171), a globular cluster remains subtler. Compare them rather than expecting every globular cluster to look alike.
 
 **What to expect:** Globular clusters are visually rewarding because increasing aperture can actually resolve their stellar structure. They still will not resemble densely saturated photographs, but the transition from unresolved glow to a swarm of faint stars is something the eye can see directly.
 
@@ -1258,13 +1258,13 @@ New Moon on July 14 opens a dark-sky week rich in globular clusters. M107 appear
 
 ### Sky Note
 
-This is a globular-cluster comparison week. M10 leads on July 20; M19 and M62 follow with First Quarter on July 21; then M9 and M92 arrive July 25. The targets range from relatively easy northern globulars to low southern objects that reward a clear horizon.
+This is a globular-cluster comparison week. M10 (NGC 6254), a globular cluster leads on July 20; M19 (NGC 6273), a globular cluster and M62 (NGC 6266), a globular cluster follow with First Quarter on July 21; then M9 (NGC 6333), a globular cluster and M92 (NGC 6341), a globular cluster arrive July 25. The targets range from relatively easy northern globulars to low southern objects that reward a clear horizon.
 
 **Naked eye:** Find Hercules and Ophiuchus between the bright summer landmarks Vega, Arcturus, and Antares. Rasalgethi and Sabik help define the region even before you begin hunting the clusters.
 
-**Binoculars:** M10 and M92 are the friendlier binocular targets, showing as compact fuzzy stars or small round glows. M19 and M62 sit much farther south and become increasingly sensitive to haze and your observing latitude.
+**Binoculars:** M10 (NGC 6254), a globular cluster and M92 (NGC 6341), a globular cluster are the friendlier binocular targets, showing as compact fuzzy stars or small round glows. M19 (NGC 6273), a globular cluster and M62 (NGC 6266), a globular cluster sit much farther south and become increasingly sensitive to haze and your observing latitude.
 
-**Small telescope:** Compare M10's bright core and halo with the denser M92. M9 is smaller and fainter. M19 and M62 benefit from observing when they are highest above the southern horizon; aperture helps, but atmospheric transparency can matter just as much.
+**Small telescope:** Compare M10 (NGC 6254), a globular cluster's bright core and halo with the denser M92 (NGC 6341), a globular cluster. M9 (NGC 6333), a globular cluster is smaller and fainter. M19 (NGC 6273), a globular cluster and M62 (NGC 6266), a globular cluster benefit from observing when they are highest above the southern horizon; aperture helps, but atmospheric transparency can matter just as much.
 
 **What to expect:** Integrated magnitude does not tell the whole story. A low-altitude globular can look harder than a nominally fainter object higher in the sky. This week is an excellent practical lesson in altitude, concentration, and aperture.
 
@@ -1300,13 +1300,13 @@ This is a globular-cluster comparison week. M10 leads on July 20; M19 and M62 fo
 
 ### Sky Note
 
-Full Moon on July 29 brightens a week centered on Scorpius. Shaula and Sargas mark the southern constellation, while the Butterfly Cluster M6 and globular cluster M14 appear on July 30. The Moon favors bright stars and the open cluster over faint diffuse detail.
+Full Moon on July 29 brightens a week centered on Scorpius. Shaula and Sargas mark the southern constellation, while the Butterfly Cluster M6, the Butterfly Cluster, an open cluster and globular cluster M14 (NGC 6402), a globular cluster appear on July 30. The Moon favors bright stars and the open cluster over faint diffuse detail.
 
-**Naked eye:** Follow Scorpius southward from Antares toward the curved tail and Shaula. From dark southern skies M6 can be detected as a small misty patch, although moonlight makes that harder this week.
+**Naked eye:** Follow Scorpius southward from Antares toward the curved tail and Shaula. From dark southern skies M6, the Butterfly Cluster, an open cluster can be detected as a small misty patch, although moonlight makes that harder this week.
 
-**Binoculars:** M6 is the week's best deep-sky target. Its broad collection of bright stars is well suited to a wide binocular field, and its butterfly-like pattern becomes easier to recognize.
+**Binoculars:** M6, the Butterfly Cluster, an open cluster is the week's best deep-sky target. Its broad collection of bright stars is well suited to a wide binocular field, and its butterfly-like pattern becomes easier to recognize.
 
-**Small telescope:** Use low power on M6 so the whole cluster remains in context. M14 is a much more concentrated globular cluster and will appear primarily as a round glow in a small instrument, especially with the bright Moon nearby.
+**Small telescope:** Use low power on M6, the Butterfly Cluster, an open cluster so the whole cluster remains in context. M14 (NGC 6402), a globular cluster is a much more concentrated globular cluster and will appear primarily as a round glow in a small instrument, especially with the bright Moon nearby.
 
 **What to expect:** Open clusters tolerate moonlight better than faint galaxies and nebulae because their light is concentrated into stars. This is a good week to choose the target that suits the conditions instead of fighting the Full Moon.
 
@@ -1342,13 +1342,13 @@ Full Moon on July 29 brightens a week centered on Scorpius. Shaula and Sargas ma
 
 ### Sky Note
 
-The southern Milky Way supplies an extraordinary sequence this week: M7 on August 3; M23 on August 4; the Lagoon Nebula M8, Trifid Nebula M20, and M21 on August 5; then M16, M17, M18, and the Sagittarius Star Cloud M24 on August 9. Last Quarter on August 6 leaves progressively darker evening conditions later in the week.
+The southern Milky Way supplies an extraordinary sequence this week: M7, the Ptolemy's Cluster, an open cluster on August 3; M23 (NGC 6494), an open cluster on August 4; the Lagoon Nebula M8, Trifid Nebula M20, and M21 (NGC 6531), an open cluster on August 5; then M16, M17, M18, and the Sagittarius Star Cloud M24, the Sagittarius Star Cloud, a Milky Way star cloud on August 9. Last Quarter on August 6 leaves progressively darker evening conditions later in the week.
 
-**Naked eye:** Under a dark sky the Sagittarius and Scorpius Milky Way should look mottled and structured rather than uniformly bright. M7 is large enough to stand out as a naked-eye cluster from favorable latitudes.
+**Naked eye:** Under a dark sky the Sagittarius and Scorpius Milky Way should look mottled and structured rather than uniformly bright. M7, the Ptolemy's Cluster, an open cluster is large enough to stand out as a naked-eye cluster from favorable latitudes.
 
-**Binoculars:** This is binocular territory at its best. Sweep M7, M23, M21, M24, and the star fields around M8 and M17 at low power. M24 is not a compact cluster but a brilliant window into the Milky Way packed with stars.
+**Binoculars:** This is binocular territory at its best. Sweep M7, M23, M21, M24, and the star fields around M8, the Lagoon Nebula, a diffuse nebula and M17, the Omega Nebula, a diffuse nebula at low power. M24, the Sagittarius Star Cloud, a Milky Way star cloud is not a compact cluster but a brilliant window into the Milky Way packed with stars.
 
-**Small telescope:** M8 shows bright nebulosity around its embedded cluster; M20 is subtler and its dark lanes require better conditions. M17 can show its characteristic bright bar or swan-like form, while the clusters break into increasingly numerous stars.
+**Small telescope:** M8, the Lagoon Nebula, a diffuse nebula shows bright nebulosity around its embedded cluster; M20, the Trifid Nebula, a diffuse nebula is subtler and its dark lanes require better conditions. M17, the Omega Nebula, a diffuse nebula can show its characteristic bright bar or swan-like form, while the clusters break into increasingly numerous stars.
 
 **What to expect:** Photographs exaggerate the color and extent of emission nebulae compared with visual observing. Expect pale gray nebulosity, dark lanes, and rich star fields. The wide-field visual experience of the Milky Way is itself the showpiece.
 
@@ -1384,13 +1384,13 @@ The southern Milky Way supplies an extraordinary sequence this week: M7 on Augus
 
 ### Sky Note
 
-New Moon on August 12 lands in the middle of a superb Sagittarius observing week. M28 appears August 10; M25 and M69 on August 12; the bright Sagittarius globular M22 on August 13; M70 and Vega on August 15; and M26 on August 16. Dark skies make this a particularly strong week for comparing clusters against the Milky Way.
+New Moon on August 12 lands in the middle of a superb Sagittarius observing week. M28 (NGC 6626), a globular cluster appears August 10; M25 (IC4725), an open cluster and M69 (NGC 6637), a globular cluster on August 12; the bright Sagittarius globular M22, the Sagittarius Cluster, a globular cluster on August 13; M70 (NGC 6681), a globular cluster and Vega on August 15; and M26 (NGC 6694), an open cluster on August 16. Dark skies make this a particularly strong week for comparing clusters against the Milky Way.
 
 **Naked eye:** Locate the Sagittarius Teapot low in the southern sky and brilliant Vega much higher to the north. The contrast between the dense southern Milky Way and the Summer Triangle region gives the sky a large-scale structure worth learning before using optics.
 
-**Binoculars:** M22 is the standout globular, appearing as a conspicuous round glow under a dark sky. M25 is an attractive open cluster and makes an excellent contrast with the unresolved globulars.
+**Binoculars:** M22, the Sagittarius Cluster, a globular cluster is the standout globular, appearing as a conspicuous round glow under a dark sky. M25 (IC4725), an open cluster is an attractive open cluster and makes an excellent contrast with the unresolved globulars.
 
-**Small telescope:** M22 begins resolving into stars readily and is one of the finest globulars of the summer sky. M28 is smaller and more concentrated; M69 and M70 are subtler, lower-surface-brightness challenges near the Teapot. M26 resolves as a compact open cluster.
+**Small telescope:** M22, the Sagittarius Cluster, a globular cluster begins resolving into stars readily and is one of the finest globulars of the summer sky. M28 (NGC 6626), a globular cluster is smaller and more concentrated; M69 (NGC 6637), a globular cluster and M70 (NGC 6681), a globular cluster are subtler, lower-surface-brightness challenges near the Teapot. M26 (NGC 6694), an open cluster resolves as a compact open cluster.
 
 **What to expect:** New Moon does not make every object equally easy. Low southern altitude and extinction still matter. But with moonlight removed, this week gives an unusually fair comparison between open clusters and globular clusters of very different concentration.
 
@@ -1428,13 +1428,13 @@ New Moon on August 12 lands in the middle of a superb Sagittarius observing week
 
 M11, the Wild Duck Cluster, opens the week on August 17, followed by M57, the Ring Nebula, on August 18. First Quarter on August 20 brightens the evening sky, but both objects remain worthwhile targets.
 
-**Naked eye:** Use the Summer Triangle to orient yourself, then trace southward through Aquila toward the rich Milky Way fields of Scutum. M11 lies in a dense stellar region; the Milky Way itself is part of the experience from a dark site.
+**Naked eye:** Use the Summer Triangle to orient yourself, then trace southward through Aquila toward the rich Milky Way fields of Scutum. M11, the Wild Duck Cluster, an open cluster lies in a dense stellar region; the Milky Way itself is part of the experience from a dark site.
 
-**Binoculars:** M11 is an excellent binocular target, appearing as a compact hazy concentration that can look almost globular at low power. Binoculars also provide the wide field needed to appreciate how deeply the cluster is embedded in the Milky Way.
+**Binoculars:** M11, the Wild Duck Cluster, an open cluster is an excellent binocular target, appearing as a compact hazy concentration that can look almost globular at low power. Binoculars also provide the wide field needed to appreciate how deeply the cluster is embedded in the Milky Way.
 
-**Small telescope:** M11 begins to resolve into a remarkably dense swarm of stars. M57 is a different kind of object: at moderate magnification it appears as a tiny gray disk or smoke ring between Beta and Gamma Lyrae. Increase magnification after locating it.
+**Small telescope:** M11, the Wild Duck Cluster, an open cluster begins to resolve into a remarkably dense swarm of stars. M57, the Ring Nebula, a planetary nebula is a different kind of object: at moderate magnification it appears as a tiny gray disk or smoke ring between Beta and Gamma Lyrae. Increase magnification after locating it.
 
-**What to expect:** M57 will not show the saturated colors of processed photographs. Its visual reward is the delicate annular shape. M11, by contrast, is fundamentally a stellar spectacle and becomes richer as aperture resolves more of its crowded stars.
+**What to expect:** M57, the Ring Nebula, a planetary nebula will not show the saturated colors of processed photographs. Its visual reward is the delicate annular shape. M11, by contrast, is fundamentally a stellar spectacle and becomes richer as aperture resolves more of its crowded stars.
 
 ### Chart
 
@@ -1468,15 +1468,15 @@ M11, the Wild Duck Cluster, opens the week on August 17, followed by M57, the Ri
 
 ### Sky Note
 
-Full Moon arrives August 28, followed by M55 and Albireo on August 29. This is a useful week for contrasting a bright double-star target with a diffuse deep-sky object that suffers much more from moonlight.
+Full Moon arrives August 28, followed by M55 (NGC 6809), a globular cluster and Albireo on August 29. This is a useful week for contrasting a bright double-star target with a diffuse deep-sky object that suffers much more from moonlight.
 
-**Naked eye:** Find the Summer Triangle and Cygnus. Albireo marks the head of the Swan and is easy to locate even with the bright Moon present. Sagittarius remains low toward the south, where M55 lies.
+**Naked eye:** Find the Summer Triangle and Cygnus. Albireo marks the head of the Swan and is easy to locate even with the bright Moon present. Sagittarius remains low toward the south, where M55 (NGC 6809), a globular cluster lies.
 
-**Binoculars:** M55 can appear as a round fuzzy patch under a dark sky, but the Full Moon will greatly reduce its contrast this week. Binoculars are still useful for locating the Sagittarius field and for enjoying the surrounding Milky Way when conditions permit.
+**Binoculars:** M55 (NGC 6809), a globular cluster can appear as a round fuzzy patch under a dark sky, but the Full Moon will greatly reduce its contrast this week. Binoculars are still useful for locating the Sagittarius field and for enjoying the surrounding Milky Way when conditions permit.
 
-**Small telescope:** Albireo is the week's dependable showpiece. Modest magnification separates its famous pair cleanly and lets observers compare their contrasting apparent colors. M55 appears as a broad globular glow; resolving many member stars generally requires more aperture and darker conditions.
+**Small telescope:** Albireo is the week's dependable showpiece. Modest magnification separates its famous pair cleanly and lets observers compare their contrasting apparent colors. M55 (NGC 6809), a globular cluster appears as a broad globular glow; resolving many member stars generally requires more aperture and darker conditions.
 
-**What to expect:** Moonlight does not affect all targets equally. Albireo remains attractive in a bright sky, while M55 can become frustratingly washed out. The Almanack date identifies the geometry of the target, not a guarantee of ideal sky darkness.
+**What to expect:** Moonlight does not affect all targets equally. Albireo remains attractive in a bright sky, while M55 (NGC 6809), a globular cluster can become frustratingly washed out. The Almanack date identifies the geometry of the target, not a guarantee of ideal sky darkness.
 
 ### Chart
 
@@ -1514,11 +1514,11 @@ Last Quarter on September 4 shares the calendar with M27, the Dumbbell Nebula, a
 
 **Naked eye:** Altair is the southern point of the Summer Triangle and an excellent anchor for the region. From a dark site, follow the Milky Way northward through the faint constellation Vulpecula toward Cygnus.
 
-**Binoculars:** M27 is unusually rewarding for a planetary nebula in binoculars. It appears as a small nonstellar glow, and 10×50-class binoculars can begin to suggest that it is not simply round. Wide-field binoculars also make the surrounding Milky Way rich and easy to explore.
+**Binoculars:** M27, the Dumbbell Nebula, a planetary nebula is unusually rewarding for a planetary nebula in binoculars. It appears as a small nonstellar glow, and 10×50-class binoculars can begin to suggest that it is not simply round. Wide-field binoculars also make the surrounding Milky Way rich and easy to explore.
 
-**Small telescope:** M27 becomes an obvious pale patch with a brighter dumbbell or apple-core region. Moderate magnification increases the contrast of its shape, and larger apertures reveal a more extended envelope. M71 and M75 elsewhere in the week are subtler compact cluster targets.
+**Small telescope:** M27, the Dumbbell Nebula, a planetary nebula becomes an obvious pale patch with a brighter dumbbell or apple-core region. Moderate magnification increases the contrast of its shape, and larger apertures reveal a more extended envelope. M71 (NGC 6838), a globular cluster and M75 (NGC 6864), a globular cluster elsewhere in the week are subtler compact cluster targets.
 
-**What to expect:** Photographs give M27 vivid colors and extensive faint structure. Visually, expect a gray luminous form whose shape is much more conspicuous than its color. It is an excellent example of an object that is genuinely satisfying without resembling its photographs.
+**What to expect:** Photographs give M27, the Dumbbell Nebula, a planetary nebula vivid colors and extensive faint structure. Visually, expect a gray luminous form whose shape is much more conspicuous than its color. It is an excellent example of an object that is genuinely satisfying without resembling its photographs.
 
 ### Chart
 
@@ -1552,15 +1552,15 @@ Last Quarter on September 4 shares the calendar with M27, the Dumbbell Nebula, a
 
 ### Sky Note
 
-M29 appears on September 10 and New Moon follows September 11, giving the latter part of the week excellent dark-sky potential. Sadr in Cygnus on September 12 provides a bright naked-eye landmark in one of the Milky Way's richest northern fields.
+M29 (NGC 6913), an open cluster appears on September 10 and New Moon follows September 11, giving the latter part of the week excellent dark-sky potential. Sadr in Cygnus on September 12 provides a bright naked-eye landmark in one of the Milky Way's richest northern fields.
 
 **Naked eye:** Use the Summer Triangle and then identify the cross-shaped body of Cygnus. Sadr lies near the center of the cross. Under a dark sky, the Milky Way through Cygnus is itself one of the week's finest sights.
 
-**Binoculars:** M29 is a small open cluster that stands out as a compact concentration against a very crowded stellar background. Sweep slowly around Sadr and along Cygnus; the binocular field contains far more than the named catalog target.
+**Binoculars:** M29 (NGC 6913), an open cluster is a small open cluster that stands out as a compact concentration against a very crowded stellar background. Sweep slowly around Sadr and along Cygnus; the binocular field contains far more than the named catalog target.
 
-**Small telescope:** Low to moderate power resolves M29 into its brighter members and makes its compact geometry easier to recognize. Avoid excessive magnification at first, because the surrounding star field is useful for orientation and context.
+**Small telescope:** Low to moderate power resolves M29 (NGC 6913), an open cluster into its brighter members and makes its compact geometry easier to recognize. Avoid excessive magnification at first, because the surrounding star field is useful for orientation and context.
 
-**What to expect:** M29 is not a dramatic photographic showpiece. Its appeal comes from finding a small organized cluster inside an extraordinarily rich Milky Way field. New Moon makes this an especially good week to appreciate the background sky rather than only the catalog object.
+**What to expect:** M29 (NGC 6913), an open cluster is not a dramatic photographic showpiece. Its appeal comes from finding a small organized cluster inside an extraordinarily rich Milky Way field. New Moon makes this an especially good week to appreciate the background sky rather than only the catalog object.
 
 ### Chart
 
@@ -1594,15 +1594,15 @@ M29 appears on September 10 and New Moon follows September 11, giving the latter
 
 ### Sky Note
 
-Delphinus and Deneb give this week a strong naked-eye framework, while M72 and M73 provide a useful contrast between easy star patterns and much subtler telescopic targets. First Quarter on September 18 means the Moon will increasingly brighten the evening sky as the week progresses.
+Delphinus and Deneb give this week a strong naked-eye framework, while M72 (NGC 6981), a globular cluster and M73 (NGC 6994), an ast provide a useful contrast between easy star patterns and much subtler telescopic targets. First Quarter on September 18 means the Moon will increasingly brighten the evening sky as the week progresses.
 
 **Naked eye:** Find Deneb, the brilliant northern vertex of the Summer Triangle, then look south and a little east for the small diamond-shaped constellation Delphinus. Sualocin and Rotanev mark its compact pattern and are excellent examples of stars that are easier to identify from a constellation shape than from brightness alone.
 
 **Binoculars:** Delphinus is especially attractive in binoculars because the whole little constellation fits comfortably in one field with surrounding Milky Way stars. Deneb and the Cygnus star fields also reward slow sweeping, particularly before moonlight becomes dominant.
 
-**Small telescope:** M72 is a faint globular cluster in Aquarius and is a much more demanding object than the bright summer globulars. Expect a small, dim glow rather than obvious individual stars in a modest aperture. M73 is not a physical star cluster but a compact asterism: a tiny grouping of stars that becomes apparent with magnification.
+**Small telescope:** M72 (NGC 6981), a globular cluster is a faint globular cluster in Aquarius and is a much more demanding object than the bright summer globulars. Expect a small, dim glow rather than obvious individual stars in a modest aperture. M73 (NGC 6994), an ast is not a physical star cluster but a compact asterism: a tiny grouping of stars that becomes apparent with magnification.
 
-**What to expect:** This is a good week for learning that a Messier number does not guarantee a spectacular visual object. M72 is intrinsically subtle in a small telescope, while M73 is essentially a tiny star pattern. The pleasure comes from finding and recognizing them, not from expecting photographic drama.
+**What to expect:** This is a good week for learning that a Messier number does not guarantee a spectacular visual object. M72 (NGC 6981), a globular cluster is intrinsically subtle in a small telescope, while M73 (NGC 6994), an ast is essentially a tiny star pattern. The pleasure comes from finding and recognizing them, not from expecting photographic drama.
 
 ### Chart
 
@@ -1678,15 +1678,15 @@ The September 26 Full Moon dominates this week, while the Sun crosses into Libra
 
 ### Sky Note
 
-This is a compact but excellent autumn deep-sky week: M15 arrives October 1, followed by M2 and M39 on October 2 and M30 on October 4. Last Quarter Moon on October 3 means the evening sky is becoming progressively friendlier for these targets.
+This is a compact but excellent autumn deep-sky week: M15, the Great Pegasus Globular, a globular cluster arrives October 1, followed by M2 (NGC 7089), a globular cluster and M39 (NGC 7092), an open cluster on October 2 and M30 (NGC 7099), a globular cluster on October 4. Last Quarter Moon on October 3 means the evening sky is becoming progressively friendlier for these targets.
 
 **Naked eye:** Use Pegasus, Aquarius, and Cygnus as the broad framework. Alderamin in Cepheus and Sadalsuud in Aquarius help anchor the northern and southern parts of the autumn sky while the Summer Triangle still lingers to the west.
 
-**Binoculars:** M15 and M2 appear as small round glows under a dark sky. M39 is very different: a loose open cluster whose broad star pattern is especially well suited to binoculars and low-power sweeping. M30 is more difficult in binoculars and benefits from darker conditions and a steady hand.
+**Binoculars:** M15, the Great Pegasus Globular, a globular cluster and M2 (NGC 7089), a globular cluster appear as small round glows under a dark sky. M39 (NGC 7092), an open cluster is very different: a loose open cluster whose broad star pattern is especially well suited to binoculars and low-power sweeping. M30 (NGC 7099), a globular cluster is more difficult in binoculars and benefits from darker conditions and a steady hand.
 
-**Small telescope:** M15 and M2 show bright concentrated cores with grainier outer halos as aperture and magnification increase. M30 is smaller and denser, while M39 remains better appreciated at low power because its stars are spread over a wide field.
+**Small telescope:** M15, the Great Pegasus Globular, a globular cluster and M2 (NGC 7089), a globular cluster show bright concentrated cores with grainier outer halos as aperture and magnification increase. M30 (NGC 7099), a globular cluster is smaller and denser, while M39 (NGC 7092), an open cluster remains better appreciated at low power because its stars are spread over a wide field.
 
-**What to expect:** The three globular clusters will not look alike despite belonging to the same class. Compare core concentration, apparent size, and how quickly each fades into the background. M39 provides an instructive contrast because its stars are individually obvious rather than blended into a globular glow.
+**What to expect:** The three globular clusters will not look alike despite belonging to the same class. Compare core concentration, apparent size, and how quickly each fades into the background. M39 (NGC 7092), an open cluster provides an instructive contrast because its stars are individually obvious rather than blended into a globular glow.
 
 ### Chart
 
@@ -1720,15 +1720,15 @@ This is a compact but excellent autumn deep-sky week: M15 arrives October 1, fol
 
 ### Sky Note
 
-The New Moon on Saturday, October 10 makes this one of the best dark-sky weeks of the month. In the evening, begin with the Great Square of Pegasus and follow the constellation westward to Enif (ε Pegasi), the bright star marking the horse's muzzle. From Enif, M15 is only about 4° away and makes an excellent comparison of instruments.
+The New Moon on Saturday, October 10 makes this one of the best dark-sky weeks of the month. In the evening, begin with the Great Square of Pegasus and follow the constellation westward to Enif (ε Pegasi), the bright star marking the horse's muzzle. From Enif, M15, the Great Pegasus Globular, a globular cluster is only about 4° away and makes an excellent comparison of instruments.
 
 **Naked eye:** Under a reasonably dark sky, trace the Great Square of Pegasus first; it is the easiest framework for the week. Enif is readily visible to the southwest of the Square. The Moon becomes progressively less intrusive through the week and is absent from the evening sky around New Moon.
 
-**Binoculars:** M15 appears as a small, round, misty glow near Enif. Binoculars are also especially useful for sweeping the large autumn star fields because their wide field preserves the relationships among Pegasus, Andromeda, and the surrounding constellations.
+**Binoculars:** M15, the Great Pegasus Globular, a globular cluster appears as a small, round, misty glow near Enif. Binoculars are also especially useful for sweeping the large autumn star fields because their wide field preserves the relationships among Pegasus, Andromeda, and the surrounding constellations.
 
-**Small telescope:** M15 becomes a brighter, more concentrated ball with a conspicuous core. Increasing aperture and magnification may begin to give the outer halo a grainy or partially resolved appearance, but the dense center remains unresolved in a modest instrument. This is not the richly resolved view seen in long-exposure observatory photographs.
+**Small telescope:** M15, the Great Pegasus Globular, a globular cluster becomes a brighter, more concentrated ball with a conspicuous core. Increasing aperture and magnification may begin to give the outer halo a grainy or partially resolved appearance, but the dense center remains unresolved in a modest instrument. This is not the richly resolved view seen in long-exposure observatory photographs.
 
-**What to expect:** Deep-sky objects are visually subtle. A globular cluster such as M15 is normally gray-white at the eyepiece, not a saturated-color photograph. Give your eyes time to dark-adapt, use averted vision, and compare the binocular and telescope views rather than treating one as simply 'better.' The wide-field binocular view gives context; the telescope gives concentration and structure.
+**What to expect:** Deep-sky objects are visually subtle. A globular cluster such as M15, the Great Pegasus Globular, a globular cluster is normally gray-white at the eyepiece, not a saturated-color photograph. Give your eyes time to dark-adapt, use averted vision, and compare the binocular and telescope views rather than treating one as simply 'better.' The wide-field binocular view gives context; the telescope gives concentration and structure.
 
 ### Chart
 
@@ -1846,13 +1846,13 @@ Fomalhaut (α Piscis Austrini) is the standout object of W43, appearing on Octob
 
 ### Sky Note
 
-This week ends with Last Quarter Moon on Sunday, November 1, leaving the first part of the evening increasingly useful for deep-sky observing. M52 is the featured binocular-and-telescope target in the northern autumn sky. Use Cassiopeia's familiar W-shaped pattern as the naked-eye starting point before moving into the richer Milky Way star fields around it.
+This week ends with Last Quarter Moon on Sunday, November 1, leaving the first part of the evening increasingly useful for deep-sky observing. M52 (NGC 7654), an open cluster is the featured binocular-and-telescope target in the northern autumn sky. Use Cassiopeia's familiar W-shaped pattern as the naked-eye starting point before moving into the richer Milky Way star fields around it.
 
 **Naked eye:** Cassiopeia is the key signpost. Its five bright stars form one of the easiest autumn patterns to recognize, and the surrounding Milky Way region becomes much more obvious from a dark site.
 
-**Binoculars:** Sweep outward from Cassiopeia into the neighboring star fields. M52 is compact enough to look like a small misty patch sprinkled against a dense stellar background; binoculars are particularly good at showing the cluster in context.
+**Binoculars:** Sweep outward from Cassiopeia into the neighboring star fields. M52 (NGC 7654), an open cluster is compact enough to look like a small misty patch sprinkled against a dense stellar background; binoculars are particularly good at showing the cluster in context.
 
-**Small telescope:** M52 resolves into many faint stars, with the degree of resolution depending strongly on aperture, sky darkness, and magnification. Moderate power begins to separate the cluster from the surrounding field while retaining enough context to make its concentration obvious.
+**Small telescope:** M52 (NGC 7654), an open cluster resolves into many faint stars, with the degree of resolution depending strongly on aperture, sky darkness, and magnification. Moderate power begins to separate the cluster from the surrounding field while retaining enough context to make its concentration obvious.
 
 **What to expect:** An open cluster does not resemble a processed photograph in the eyepiece. The reward is the gradual emergence of individual stars from a haze-like patch as aperture and magnification increase.
 
@@ -1972,15 +1972,15 @@ New Moon falls on Monday, November 9, giving the week an excellent dark-sky begi
 
 ### Sky Note
 
-The week culminates on Friday, November 20 with M31, the Andromeda Galaxy, together with its companions M32 and M110. This is an ideal week for showing why binoculars and telescopes reveal different aspects of the same target. First Quarter Moon occurs Tuesday, so the darkest contrast will generally be found by observing away from the Moon or before moonlight becomes dominant.
+The week culminates on Friday, November 20 with M31, the Andromeda Galaxy, together with its companions M32 (NGC 221), an elliptical galaxy and M110 (NGC 205), an elliptical galaxy. This is an ideal week for showing why binoculars and telescopes reveal different aspects of the same target. First Quarter Moon occurs Tuesday, so the darkest contrast will generally be found by observing away from the Moon or before moonlight becomes dominant.
 
-**Naked eye:** Under a genuinely dark sky, M31 can be detected as an elongated, diffuse patch rather than a point of light. Begin with Alpheratz and the Andromeda star chain, then use the brighter stars as stepping stones toward the galaxy.
+**Naked eye:** Under a genuinely dark sky, M31, the Andromeda Galaxy, a spiral galaxy can be detected as an elongated, diffuse patch rather than a point of light. Begin with Alpheratz and the Andromeda star chain, then use the brighter stars as stepping stones toward the galaxy.
 
-**Binoculars:** Binoculars are often the most satisfying first view of M31 because the galaxy is very large on the sky. Expect a bright central glow fading gradually outward, with the broad shape easier to appreciate than in a narrow telescopic field. M32 may be difficult in small binoculars and M110 is substantially more challenging.
+**Binoculars:** Binoculars are often the most satisfying first view of M31, the Andromeda Galaxy, a spiral galaxy because the galaxy is very large on the sky. Expect a bright central glow fading gradually outward, with the broad shape easier to appreciate than in a narrow telescopic field. M32 (NGC 221), an elliptical galaxy may be difficult in small binoculars and M110 (NGC 205), an elliptical galaxy is substantially more challenging.
 
-**Small telescope:** The nucleus of M31 becomes more concentrated, M32 is much easier to separate from the background, and M110 may appear as a dim elongated glow under good conditions. A small telescope usually does not reveal the colorful spiral detail familiar from photographs.
+**Small telescope:** The nucleus of M31, the Andromeda Galaxy, a spiral galaxy becomes more concentrated, M32 (NGC 221), an elliptical galaxy is much easier to separate from the background, and M110 (NGC 205), an elliptical galaxy may appear as a dim elongated glow under good conditions. A small telescope usually does not reveal the colorful spiral detail familiar from photographs.
 
-**What to expect:** Most of M31's visible light at the eyepiece is gray-white. The outer disk extends far beyond the bright core but is low in surface brightness, so dark adaptation and averted vision are more important than simply adding magnification.
+**What to expect:** Most of M31, the Andromeda Galaxy, a spiral galaxy's visible light at the eyepiece is gray-white. The outer disk extends far beyond the bright core but is low in surface brightness, so dark adaptation and averted vision are more important than simply adding magnification.
 
 ### Chart
 
@@ -2056,13 +2056,13 @@ Full Moon occurs Tuesday, November 24, so this is not the strongest week for fai
 
 ### Sky Note
 
-Last Quarter Moon occurs Tuesday, December 1, and the week brings several contrasting deep-sky targets: M33 in Triangulum, M74 in Pisces, M103 in Cassiopeia, and the Little Dumbbell Nebula M76 in Perseus. Together they make an excellent lesson in surface brightness and instrument choice.
+Last Quarter Moon occurs Tuesday, December 1, and the week brings several contrasting deep-sky targets: M33, the Triangulum Galaxy, a spiral galaxy in Triangulum, M74 (NGC 628), a spiral galaxy in Pisces, M103 (NGC 581), an open cluster in Cassiopeia, and the Little Dumbbell Nebula M76, the Little Dumbbell Nebula, a planetary nebula in Perseus. Together they make an excellent lesson in surface brightness and instrument choice.
 
-**Naked eye:** Use the small constellation Triangulum and the larger shapes of Cassiopeia and Perseus as the orientation framework. M33 is sometimes reported with the unaided eye from exceptionally dark sites, but it is a difficult low-contrast test and should not be expected under ordinary suburban skies.
+**Naked eye:** Use the small constellation Triangulum and the larger shapes of Cassiopeia and Perseus as the orientation framework. M33, the Triangulum Galaxy, a spiral galaxy is sometimes reported with the unaided eye from exceptionally dark sites, but it is a difficult low-contrast test and should not be expected under ordinary suburban skies.
 
-**Binoculars:** M33 is the standout binocular challenge. Rather than looking for a crisp boundary, look for a very broad, faint brightening of the background. M103 is easier as a compact star cluster and benefits from the wide field around Cassiopeia.
+**Binoculars:** M33, the Triangulum Galaxy, a spiral galaxy is the standout binocular challenge. Rather than looking for a crisp boundary, look for a very broad, faint brightening of the background. M103 (NGC 581), an open cluster is easier as a compact star cluster and benefits from the wide field around Cassiopeia.
 
-**Small telescope:** M74 is a difficult face-on galaxy whose low surface brightness makes dark sky more valuable than excessive magnification. M76 is much smaller and responds better to telescopic magnification, appearing as a compact gray nebular patch; M103 begins to resolve cleanly into individual stars.
+**Small telescope:** M74 (NGC 628), a spiral galaxy is a difficult face-on galaxy whose low surface brightness makes dark sky more valuable than excessive magnification. M76, the Little Dumbbell Nebula, a planetary nebula is much smaller and responds better to telescopic magnification, appearing as a compact gray nebular patch; M103 (NGC 581), an open cluster begins to resolve cleanly into individual stars.
 
 **What to expect:** Integrated magnitude can be misleading. A large galaxy can have plenty of total light yet still be hard to see because that light is spread over a large area. This week is a practical demonstration of why surface brightness matters.
 
@@ -2098,13 +2098,13 @@ Last Quarter Moon occurs Tuesday, December 1, and the week brings several contra
 
 ### Sky Note
 
-The Moon is waning after Last Quarter, so evening skies become progressively friendlier to faint autumn targets. Sheratan in Aries and Mothallah in Triangulum give a simple naked-eye framework for returning to the M33 region while the winter constellations begin to claim more of the eastern evening sky.
+The Moon is waning after Last Quarter, so evening skies become progressively friendlier to faint autumn targets. Sheratan in Aries and Mothallah in Triangulum give a simple naked-eye framework for returning to the M33, the Triangulum Galaxy, a spiral galaxy region while the winter constellations begin to claim more of the eastern evening sky.
 
 **Naked eye:** Find the compact pattern of Aries, then the small triangle of Triangulum nearby. The value this week is orientation: learn these modest constellations before trying to extract faint galaxies from the background.
 
-**Binoculars:** Sweep Triangulum slowly. Under a dark sky, M33 is a broad, low-contrast brightening rather than a sharply bounded object. Wide-field binoculars are often more effective than high magnification because they preserve contrast and surrounding reference stars.
+**Binoculars:** Sweep Triangulum slowly. Under a dark sky, M33, the Triangulum Galaxy, a spiral galaxy is a broad, low-contrast brightening rather than a sharply bounded object. Wide-field binoculars are often more effective than high magnification because they preserve contrast and surrounding reference stars.
 
-**Small telescope:** Use low power first on M33; increasing magnification too quickly can make the galaxy harder to recognize. Under good conditions a small telescope strengthens the central region and hints at uneven texture, but photographic spiral structure should not be expected.
+**Small telescope:** Use low power first on M33, the Triangulum Galaxy, a spiral galaxy; increasing magnification too quickly can make the galaxy harder to recognize. Under good conditions a small telescope strengthens the central region and hints at uneven texture, but photographic spiral structure should not be expected.
 
 **What to expect:** This is a week for learning how slowly the eye detects faint extended light. Do not expect a galaxy to announce itself like a star. Scan, stop, use averted vision, and allow several seconds for the faint glow to become convincing.
 
