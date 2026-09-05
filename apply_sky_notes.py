@@ -14,6 +14,38 @@ FIXED_OBJECTS = ROOT / "fixed-objects.yaml"
 EXPECTED_WEEKS = {f"W{i:02d}" for i in range(1, 54)}
 PLACEHOLDER_NOTE = "Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC."
 
+# Observer-first anchors. These are intentionally selective rather than repetitive:
+# asterisms are highlighted when they are especially useful for orientation or star-hopping.
+ASTERISM_NOTES = {
+    "W02": "**Asterism:** Orion's Belt is an easy three-star anchor for winter orientation; follow the Belt southeast toward Sirius and northwest toward Aldebaran.",
+    "W05": "**Asterism:** The Winter Triangle—Sirius, Procyon, and Betelgeuse—gives a large naked-eye frame for the season's bright-star field.",
+    "W09": "**Asterism:** The Winter Hexagon links Capella, Aldebaran, Rigel, Sirius, Procyon, and Pollux into a broad guide around the winter sky.",
+    "W16": "**Asterism:** The Sickle of Leo, beginning at Regulus, is the easiest pattern for tracing the head and mane of Leo.",
+    "W20": "**Asterism:** The Big Dipper is an observing tool as much as a familiar pattern: its pointer stars lead to Polaris, while the handle arcs toward Arcturus.",
+    "W23": "**Asterism:** The Spring Triangle—Arcturus, Spica, and Regulus—provides a wide seasonal framework for finding the brighter spring constellations.",
+    "W28": "**Asterism:** The Keystone of Hercules is a compact four-star doorway into Hercules and a practical starting point for locating the Great Hercules Globular.",
+    "W31": "**Asterism:** The Teapot of Sagittarius is one of the best summer Milky Way anchors; its spout points into the richest star-cloud region toward the Galactic center.",
+    "W33": "**Asterism:** The Summer Triangle—Vega, Deneb, and Altair—dominates the evening sky and provides a large-scale map for Lyra, Cygnus, and Aquila.",
+    "W36": "**Asterism:** The Northern Cross, formed by the brightest stars of Cygnus, lies along the Milky Way and is a useful bridge between Deneb and the rich star fields to the south.",
+    "W40": "**Asterism:** The Great Square of Pegasus is the principal autumn signpost; its four corners open paths toward Andromeda, Pisces, and the fainter autumn constellations.",
+    "W46": "**Asterism:** The Circlet of Pisces is a subtle but useful small-ring pattern southwest of the Great Square, especially under darker skies.",
+    "W50": "**Asterism:** Cassiopeia's familiar W shape is a strong northern anchor and a practical guide into the dense Milky Way fields of Cassiopeia and Perseus.",
+}
+
+# 2026 maxima and observing circumstances are based on the International Meteor
+# Organization Meteor Shower Calendar 2026. Keep these concise and observational.
+METEOR_NOTES = {
+    "W01": "**Meteor shower:** The Quadrantids peak on January 3. Their maximum is usually sharp, but bright moonlight is an important limitation in 2026.",
+    "W17": "**Meteor shower:** The April Lyrids peak on April 22, with the nominal 2026 maximum near 19:40 UT. The expected ZHR is about 18, and moonlight should not be a major obstacle.",
+    "W19": "**Meteor shower:** The η-Aquariids peak on May 6. The shower can be strong, especially from lower latitudes and the Southern Hemisphere, but the waning gibbous Moon interferes in 2026.",
+    "W31": "**Meteor showers:** The Southern δ-Aquariids and α-Capricornids both reach maximum around July 31. The δ-Aquariids provide the higher rate, while the α-Capricornids are noted for slower meteors and occasional bright events.",
+    "W33": "**Meteor shower:** The Perseids peak around August 13 with a nominal ZHR near 100. New Moon falls on August 12, making 2026 especially favorable for dark-sky observing.",
+    "W43": "**Meteor shower:** The Orionids peak on October 21 with a typical ZHR of 20 or more. The 2026 maximum is favorably placed with little moonlight interference.",
+    "W47": "**Meteor shower:** The Leonids peak on November 17, with the regular nodal maximum near 23:45 UT and an expected ZHR around 15. Moonlight should not seriously hinder the peak.",
+    "W51": "**Meteor shower:** The Geminids peak on December 14 and are the year's strongest dependable shower, with a nominal ZHR near 150. Only a waxing crescent Moon is present near maximum.",
+    "W52": "**Meteor shower:** The Ursids peak on December 22 near 22:00 UT. A nearly full Moon makes the 2026 return difficult for visual observing.",
+}
+
 TYPE_NAMES = {
     "SN": "supernova remnant",
     "GC": "globular cluster",
@@ -109,6 +141,18 @@ def expand_messier_mentions(note: str, catalog: dict[str, tuple[str | None, str 
     return pattern.sub(repl, note)
 
 
+def enrich_observer_note(week: str, note: str) -> str:
+    """Append high-value observer anchors without displacing the curated prose."""
+    additions = []
+    if week in ASTERISM_NOTES:
+        additions.append(ASTERISM_NOTES[week])
+    if week in METEOR_NOTES:
+        additions.append(METEOR_NOTES[week])
+    if not additions:
+        return note
+    return note.rstrip() + "\n\n" + "\n\n".join(additions)
+
+
 def load_notes() -> dict:
     """Load the legacy catalog, then merge modular week files."""
     data = json.loads(NOTES.read_text(encoding="utf-8"))
@@ -146,10 +190,11 @@ def main():
             raise SystemExit(f"Empty note for {week}")
         if note == PLACEHOLDER_NOTE:
             raise SystemExit(f"Placeholder Sky Note survived for {week}")
+        note = enrich_observer_note(week, note)
         note = expand_messier_mentions(note, messier_catalog)
         text = replace_week_note(text, week, note)
     ALMANACK.write_text(text, encoding="utf-8")
-    print("Applied and verified curated Sky Notes for all 53 weeks with expanded Messier prose")
+    print("Applied curated Sky Notes for all 53 weeks with expanded Messier prose, asterism anchors, and 2026 meteor-shower highlights")
 
 
 if __name__ == "__main__":
