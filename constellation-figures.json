@@ -42,8 +42,13 @@
         "name": "Water Jar",
         "label_offset": [0, 24],
         "paths": [["Gam Aqr", "Zet Aqr", "Eta Aqr", "Pi Aqr", "Gam Aqr"]]
+      },
+      {
+        "name": "Great Square of Pegasus",
+        "label_offset": [0, 18],
+        "paths": [["Alp And", "Bet Peg", "Alp Peg", "Gam Peg", "Alp And"]]
       }
     ],
-    "caption": "Aquarius · water-bearer · Water Jar outlined"
+    "caption": "Aquarius · water-bearer · Water Jar and Great Square orientation"
   }
 }
