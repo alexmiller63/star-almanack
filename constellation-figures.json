@@ -29,19 +29,22 @@
     "field_deg": 58.0,
     "figure_cutoff": 4.0,
     "exception_cutoff": 4.5,
-    "exceptions": ["The Aqr"],
+    "exceptions": [],
     "figure_paths": [
-      ["Alp Aqr", "Bet Aqr"],
-      ["Alp Aqr", "Gam Aqr", "Zet Aqr", "Eta Aqr", "Pi Aqr", "Gam Aqr"],
-      ["Zet Aqr", "The Aqr", "Lam Aqr"],
-      ["Alp Aqr", "The Aqr", "Del Aqr"],
-      ["Bet Aqr", "Eps Aqr"]
+      ["HIP 109074", "HIP 110395", "HIP 110960", "HIP 110672", "HIP 109074", "HIP 106278", "HIP 102618"],
+      ["HIP 111497", "HIP 110960"],
+      ["HIP 106278", "HIP 109139"],
+      ["HIP 109074", "HIP 110003", "HIP 112961", "HIP 114724", "HIP 114855", "HIP 115438"],
+      ["HIP 112961", "HIP 112716", "HIP 113136", "HIP 114855", "HIP 114341"]
     ],
     "asterisms": [
       {
         "name": "Water Jar",
         "label_offset": [0, 24],
-        "paths": [["Gam Aqr", "Zet Aqr", "Eta Aqr", "Pi Aqr", "Gam Aqr"]]
+        "paths": [
+          ["HIP 110395", "HIP 110960", "HIP 110672"],
+          ["HIP 111497", "HIP 110960"]
+        ]
       },
       {
         "name": "Great Square of Pegasus",
@@ -49,6 +52,6 @@
         "paths": [["Alp And", "Bet Peg", "Alp Peg", "Gam Peg", "Alp And"]]
       }
     ],
-    "caption": "Aquarius · water-bearer · Water Jar and Great Square orientation"
+    "caption": "Aquarius · Martz/MacRobert stick figure · Water Jar highlighted"
   }
 }
