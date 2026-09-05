@@ -54,9 +54,12 @@ jobs:
               assert 'width:8%' in text, f'Narrow desktop zodiac width missing in {page}'
               assert 'width:20%' in text, f'Narrow mobile date width missing in {page}'
               assert 'width:11%' in text, f'Narrow mobile zodiac width missing in {page}'
-              assert 'data-bayer-mode="greek"' in text, f'Greek Bayer toggle missing in {page}'
-              assert 'data-bayer-mode="latin"' in text, f'Latin Bayer toggle missing in {page}'
-              assert "'γ':'Gam'" in text, f'Greek/Latin mapping missing in {page}'
+              assert 'data-bayer-mode="greek"' in text, f'Greek notation toggle missing in {page}'
+              assert 'data-bayer-mode="latin"' in text, f'Latin notation toggle missing in {page}'
+              assert "'β':'Beta'" in text, f'Full Greek-letter-name mapping missing in {page}'
+              assert "Cen:'Centauri'" in text, f'Full constellation genitive mapping missing in {page}'
+              assert "'♒':'Aquarius'" in text, f'Full zodiac-name mapping missing in {page}'
+              assert "'☉':'Sun'" in text and "'♄':'Saturn'" in text, f'Full ephemeris-body mapping missing in {page}'
               assert '© 2026 Alexander Ferrari Miller. All rights reserved.' in text, f'Copyright footer missing in {page}'
 
           w53 = (root / 'W53' / 'index.html').read_text(encoding='utf-8')
@@ -65,7 +68,7 @@ jobs:
           index = (root / 'index.html').read_text(encoding='utf-8')
           links = re.findall(r'href="W\d{2}/"', index)
           assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages, Greek/Latin toggle, copyright, W53 boundary, tables, narrow columns, and navigation')
+          print('Verified 53 weekly pages, expanded Greek/Latin notation, copyright, W53 boundary, tables, narrow columns, and navigation')
           PY
 
       - name: Commit published pages
