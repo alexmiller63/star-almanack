@@ -7,6 +7,7 @@ import re
 ROOT = Path(__file__).parent
 ALMANACK = ROOT / "almanack-expanded.md"
 NOTES = ROOT / "sky-notes-2026.json"
+NOTES_DIR = ROOT / "sky-notes-2026"
 
 
 def replace_week_note(text: str, week: str, note: str) -> str:
@@ -25,11 +26,27 @@ def replace_week_note(text: str, week: str, note: str) -> str:
     return text[:start] + updated + text[end:]
 
 
-def main():
+def load_notes() -> dict:
+    """Load the legacy catalog, then overlay modular week files when present."""
     data = json.loads(NOTES.read_text(encoding="utf-8"))
+    weeks = dict(data.get("weeks", {}))
+    if NOTES_DIR.exists():
+        for path in sorted(NOTES_DIR.glob("W[0-5][0-9].json")):
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            week = path.stem
+            declared = payload.get("week", week)
+            if declared != week:
+                raise SystemExit(f"Week mismatch in {path}: {declared} != {week}")
+            if week in weeks:
+                raise SystemExit(f"Duplicate curated Sky Note for {week}: legacy catalog and {path}")
+            weeks[week] = payload
+    return weeks
+
+
+def main():
     text = ALMANACK.read_text(encoding="utf-8")
-    weeks = data.get("weeks", {})
-    for week, payload in weeks.items():
+    weeks = load_notes()
+    for week, payload in sorted(weeks.items()):
         note = payload.get("note", "").strip()
         if not re.fullmatch(r"W(?:0[1-9]|[1-4]\d|5[0-3])", week):
             raise SystemExit(f"Invalid week key: {week}")
