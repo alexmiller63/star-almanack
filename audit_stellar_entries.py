@@ -6,8 +6,7 @@ The authoritative source magnitudes retain their original precision; this audit
 checks only observer-facing presentation:
 - proper name where available;
 - Bayer designation in Greek notation;
-- whole-number V magnitude for reconciled variable stars only;
-- no V magnitude for non-variable stars;
+- whole-number V magnitude whenever an authoritative source magnitude exists;
 - declination band followed by observing season;
 - exactly one calendar representation on the assigned best-visibility date.
 
@@ -25,11 +24,7 @@ ROOT = Path(__file__).parent
 ALMANACK = ROOT / "almanack-expanded.md"
 BAYER = ROOT / "expanded-bayer-visibility-2026.csv"
 BRIGHT = ROOT / "bright-star-visibility-2026.csv"
-VARIABLES = ROOT / "bright-variable-reconciliation.csv"
 
-# These three stars are permanent diagnostic cases.  They deliberately exercise
-# different presentation paths and must continue to survive catalog/generator
-# changes intact.
 PERMANENT_REGRESSION_STARS = (
     ("Enif", "ε Peg"),
     ("Shaula", "λ Sco"),
@@ -101,15 +96,6 @@ def calendar_events() -> dict[str, list[str]]:
     return out
 
 
-def variable_designations() -> set[str]:
-    with VARIABLES.open(encoding="utf-8", newline="") as f:
-        return {
-            (row.get("name") or "").strip().casefold()
-            for row in csv.DictReader(f)
-            if (row.get("name") or "").strip()
-        }
-
-
 def source_rows() -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     index: dict[tuple[str, str], int] = {}
@@ -122,11 +108,6 @@ def source_rows() -> list[dict[str, str]]:
             index[key] = len(rows)
             rows.append(r)
             return
-
-        # Catalogs can contain multiple physical components with the same Bayer
-        # designation and best date (notably alpha Com).  For Almanack display,
-        # prefer the canonical row carrying the proper name instead of allowing
-        # source ordering to decide which component is audited.
         old = rows[index[key]]
         if not (old.get("proper") or "").strip() and (r.get("proper") or "").strip():
             rows[index[key]] = r
@@ -173,11 +154,14 @@ def audit_permanent_regressions(events: dict[str, list[str]], defects: list[str]
             defects.append(
                 f"permanent regression {proper} ({designation}): name/designation pair damaged; entry={entry}"
             )
+        if not re.search(r"\bV\s+[+-]?\d+\b", entry):
+            defects.append(
+                f"permanent regression {proper} ({designation}): whole-number magnitude missing; entry={entry}"
+            )
 
 
 def main() -> None:
     events = calendar_events()
-    variables = variable_designations()
     rows = source_rows()
     defects: list[str] = []
     audited = 0
@@ -188,7 +172,6 @@ def main() -> None:
         con = (r.get("con") or "").strip()
         proper = (r.get("proper") or "").strip()
         designation = bayer_display(code, con)
-        key = designation_key(code, con)
         parts = events.get(best_date, [])
         matches = isolate_entry(parts, proper, designation)
         label = proper or designation
@@ -209,23 +192,19 @@ def main() -> None:
         elif designation not in entry:
             defects.append(f"{best_date} {label}: missing Bayer designation; entry={entry}")
 
-        is_variable = key in variables
         source_mag = (
             (r.get("representative_vmax") or "").strip()
             or (r.get("mag") or "").strip()
             or (r.get("catalog_v") or "").strip()
         )
-        if is_variable:
-            if not source_mag:
-                defects.append(f"{best_date} {label}: variable star has no authoritative source magnitude")
-            else:
-                expected_v = f"V {whole_mag(source_mag)}"
-                if expected_v not in entry:
-                    defects.append(f"{best_date} {label}: expected {expected_v}; entry={entry}")
-                if re.search(r"\bV\s+[+-]?\d+\.\d+", entry):
-                    defects.append(f"{best_date} {label}: decimal magnitude survived Almanack presentation; entry={entry}")
-        elif re.search(r"\bV\s+[+-]?\d", entry):
-            defects.append(f"{best_date} {label}: non-variable star displays V magnitude; entry={entry}")
+        if not source_mag:
+            defects.append(f"{best_date} {label}: no authoritative source magnitude")
+        else:
+            expected_v = f"V {whole_mag(source_mag)}"
+            if expected_v not in entry:
+                defects.append(f"{best_date} {label}: expected {expected_v}; entry={entry}")
+            if re.search(r"\bV\s+[+-]?\d+\.\d+", entry):
+                defects.append(f"{best_date} {label}: decimal magnitude survived Almanack presentation; entry={entry}")
 
         dec = (r.get("dec_deg") or "").strip()
         if dec:
@@ -243,7 +222,7 @@ def main() -> None:
             print(f"- {defect}")
         raise SystemExit(1)
 
-    print("PASS: all catalog-backed stellar entries and permanent regression stars have required presentation.")
+    print("PASS: all catalog-backed stellar entries and permanent regression stars have whole-number magnitudes and required presentation.")
 
 
 if __name__ == "__main__":
