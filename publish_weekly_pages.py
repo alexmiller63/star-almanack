@@ -21,6 +21,7 @@ ROOT = Path(__file__).parent
 SOURCE = ROOT / "almanack-expanded.md"
 OUT = ROOT / "site" / "2026"
 WEEK_RE = re.compile(r"(?m)^## (ISO 2026-W(\d{2}))\s*$")
+H2_RE = re.compile(r"(?m)^##\s+.+$")
 
 ZODIAC_NAMES = {
     "♈": "Aries",
@@ -191,7 +192,12 @@ def main() -> None:
     OUT.mkdir(parents=True)
     week_links=[]
     for idx,match in enumerate(matches):
-        week=int(match.group(2)); start=match.start(); end=matches[idx+1].start() if idx+1<len(matches) else len(text)
+        week=int(match.group(2)); start=match.start()
+        if idx+1 < len(matches):
+            end=matches[idx+1].start()
+        else:
+            next_h2=H2_RE.search(text, match.end())
+            end=next_h2.start() if next_h2 else len(text)
         section=text[start:end].strip(); fragment=markdown_fragment(section)
         target=OUT/f"W{week:02d}"; target.mkdir(parents=True)
         (target/"index.html").write_text(page_shell(f"ISO 2026-W{week:02d}",fragment,week_nav(week)),encoding="utf-8")
