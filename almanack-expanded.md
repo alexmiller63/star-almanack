@@ -1754,7 +1754,15 @@ Last Quarter Moon occurs Tuesday, December 1, and the week brings several contra
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+The Moon is waning after Last Quarter, so evening skies become progressively friendlier to faint autumn targets. Sheratan in Aries and Mothallah in Triangulum give a simple naked-eye framework for returning to the M33 region while the winter constellations begin to claim more of the eastern evening sky.
+
+**Naked eye:** Find the compact pattern of Aries, then the small triangle of Triangulum nearby. The value this week is orientation: learn these modest constellations before trying to extract faint galaxies from the background.
+
+**Binoculars:** Sweep Triangulum slowly. Under a dark sky, M33 is a broad, low-contrast brightening rather than a sharply bounded object. Wide-field binoculars are often more effective than high magnification because they preserve contrast and surrounding reference stars.
+
+**Small telescope:** Use low power first on M33; increasing magnification too quickly can make the galaxy harder to recognize. Under good conditions a small telescope strengthens the central region and hints at uneven texture, but photographic spiral structure should not be expected.
+
+**What to expect:** This is a week for learning how slowly the eye detects faint extended light. Do not expect a galaxy to announce itself like a star. Scan, stop, use averted vision, and allow several seconds for the faint glow to become convincing.
 
 ### Chart
 
@@ -1788,7 +1796,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Mid-December evenings mark the handoff from the autumn constellations toward the bright winter sky. Even when the calendar offers no single spectacular event, this is a valuable week to watch the seasonal sky change: Pegasus and Andromeda move west while Taurus, Auriga, Gemini, and Orion become increasingly prominent.
+
+**Naked eye:** Use the bright winter stars as a large-scale map. Look east and southeast during the evening for the rising winter patterns, then compare them with the autumn constellations farther west. This seasonal motion is one of the easiest ways to develop a working sense of the celestial sphere.
+
+**Binoculars:** Sweep the rich Milky Way fields through Auriga and the region around Taurus. Binoculars excel here because several large clusters and star fields are more impressive with surrounding sky visible than at high telescopic power.
+
+**Small telescope:** Choose compact clusters, double stars, and bright lunar or planetary targets according to conditions. Start at low power and increase only when the target benefits from it.
+
+**What to expect:** A useful Sky Note does not require a rare event. The night sky itself changes week by week. Learning which constellations are arriving, culminating, and departing is observational astronomy, not filler between eclipses or conjunctions.
 
 ### Chart
 
@@ -1822,7 +1838,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+The week begins with the December solstice season and reaches Full Moon on Thursday, December 24. Moonlight will limit faint deep-sky work, but the bright winter constellations provide excellent naked-eye structure and the Moon itself becomes the natural telescopic target.
+
+**Naked eye:** Compare the long winter night with the brilliant seasonal star patterns. Orion, Taurus, Auriga, and Gemini are increasingly well placed in the evening while Perseus remains high in northern skies. Bright moonlight reduces the number of faint stars but leaves the principal constellation shapes easy to follow.
+
+**Binoculars:** Use binoculars on broad stellar groupings and the Moon. The lunar disk is intensely bright, so prolonged binocular viewing can be uncomfortable; observe briefly and never use optical instruments on the Sun. Star clusters remain better choices than low-surface-brightness galaxies under the bright sky.
+
+**Small telescope:** The nearly full Moon shows bright ray systems and large-scale albedo patterns well, although low Sun angles near the terminator usually reveal topographic relief more dramatically than Full Moon does. Bright double stars and compact clusters are also resilient targets.
+
+**What to expect:** Full Moon is poor for faint galaxies but excellent for understanding how observing conditions select the target. A successful session is not measured by how faint an object you can force through the glare; it is measured by choosing something the sky is ready to show.
 
 ### Chart
 
@@ -1856,7 +1880,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+The final ISO week of the 2026 Almanack runs from December 28 into January 3. Last Quarter Moon falls Wednesday, December 30, so the Moon retreats from the evening sky as the week progresses. The result is a useful transition from lunar observing toward darker winter-evening deep-sky work.
+
+**Naked eye:** Re-establish the winter framework with Orion, Taurus, Auriga, Gemini, and Perseus. Notice how much farther west the autumn constellations have moved compared with early October; the change is the accumulated effect of Earth's motion around the Sun.
+
+**Binoculars:** Winter is especially generous to binocular observers. Sweep the large star fields and open clusters before reaching for a telescope. The wide field makes it easier to see associations and cluster shapes that can be fragmented at high magnification.
+
+**Small telescope:** As moonlight becomes less troublesome in the evening, return to compact clusters, nebulae, and double stars. Begin with easy bright objects to establish focus and sky transparency before attempting subtler targets.
+
+**What to expect:** The Almanack ends its ISO year without the sky ending anything at all. This week is a bridge: the observing habits learned through the year—orientation, dark adaptation, instrument choice, and realistic expectations—carry directly into the next cycle.
 
 ### Chart
 
