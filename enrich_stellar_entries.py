@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Enrich catalog-backed calendar entries with observer-facing metadata.
 
-Stars display whole-number V magnitude, Declination-band Season, and observing aid.
-Messier objects display Declination-band Season and observing aid. Authoritative
-source values retain full precision; Almanack presentation is rounded/formatted.
+Stars display observing aid immediately before whole-number V magnitude, followed by
+Declination-band Season. Messier objects display Declination-band Season and observing
+aid. Authoritative source values retain full precision; Almanack presentation is
+rounded/formatted.
 
 Current urban-observer baseline:
   V <= 3.5       -> 👁
@@ -119,12 +120,11 @@ def canonical_star(row: dict[str, str]) -> str:
     mag = whole_mag(source_mag)
     d = date.fromisoformat(row["best_date"])
     parts = [name]
-    if mag:
-        parts.append(f"V {mag}")
-    parts.append(f"{declination_band(row['dec_deg'])} {season_for(d)}")
     equipment = equipment_for(source_mag)
-    if equipment:
-        parts.append(equipment)
+    visibility_magnitude = " ".join(v for v in (equipment, f"V {mag}" if mag else "") if v)
+    if visibility_magnitude:
+        parts.append(visibility_magnitude)
+    parts.append(f"{declination_band(row['dec_deg'])} {season_for(d)}")
     return " — ".join(parts)
 
 
@@ -240,10 +240,10 @@ def main() -> None:
         if info["label"] not in updated:
             raise SystemExit(f"Expected enriched Messier entry not found: {info['label']}")
 
-    expected = "Enif (ε Peg) — V 2 — Tropical Autumn — 👁"
+    expected = "Enif (ε Peg) — 👁 V 2 — Tropical Autumn"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
-    diadem = "Diadem (α Com) — V 4 — Tropical Spring — B"
+    diadem = "Diadem (α Com) — B V 4 — Tropical Spring"
     if diadem not in updated:
         raise SystemExit(f"Expected enriched Diadem entry not found: {diadem}")
     m53 = "M53 — Tropical Spring — 🔭"
