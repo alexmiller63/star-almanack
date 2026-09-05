@@ -20,7 +20,18 @@
         "paths": [["Alp And", "Bet Peg", "Alp Peg", "Gam Peg", "Alp And"]]
       }
     ],
-    "caption": "Pegasus · winged horse · Great Square outlined"
+    "deep_sky_objects": [
+      {
+        "name": "M15",
+        "type": "globular cluster",
+        "ra_deg": 322.4930,
+        "dec_deg": 12.1670,
+        "from_ref": "Eps Peg",
+        "distance_label": "≈4°",
+        "label_offset": [10, 10]
+      }
+    ],
+    "caption": "Pegasus · winged horse · Great Square · Enif ↔ M15"
   },
   "Aquarius": {
     "constellation": "Aqr",
