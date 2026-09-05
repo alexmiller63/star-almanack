@@ -82,7 +82,7 @@ PRESETS = {
     "finder": ViewPreset(
         key="finder",
         title="Finder chart",
-        field_deg=10.0,
+        field_deg=30.0,
         limiting_mag=7.0,
     ),
     "binoculars": ViewPreset(
@@ -238,14 +238,45 @@ def angular_separation_deg(
     return math.degrees(math.acos(max(-1.0, min(1.0, value))))
 
 
-def visible_stars(stars: Iterable[Star], target: Target, preset: ViewPreset) -> list[Star]:
+def view_center(
+    target: Target, stars: Iterable[Star], preset: ViewPreset
+) -> tuple[float, float]:
+    """Return plot center; M35 finder includes Castor and Pollux."""
+    if preset.key == "finder" and target.designation == "M35":
+        anchors = [star for star in stars if star.label in {"Castor", "Pollux"}]
+        if len(anchors) == 2:
+            # Average unit vectors so RA wrap is handled correctly.
+            vectors = []
+            for ra_deg, dec_deg in [(target.ra_deg, target.dec_deg)] + [
+                (star.ra_deg, star.dec_deg) for star in anchors
+            ]:
+                ra = math.radians(ra_deg)
+                dec = math.radians(dec_deg)
+                vectors.append((
+                    math.cos(dec) * math.cos(ra),
+                    math.cos(dec) * math.sin(ra),
+                    math.sin(dec),
+                ))
+            x = sum(v[0] for v in vectors)
+            y = sum(v[1] for v in vectors)
+            z = sum(v[2] for v in vectors)
+            center_ra = math.degrees(math.atan2(y, x)) % 360.0
+            center_dec = math.degrees(math.atan2(z, math.hypot(x, y)))
+            return center_ra, center_dec
+    return target.ra_deg, target.dec_deg
+
+
+def visible_stars(
+    stars: Iterable[Star], center: tuple[float, float], preset: ViewPreset
+) -> list[Star]:
     radius = preset.field_deg / 2.0
+    center_ra, center_dec = center
     return [
         star
         for star in stars
         if star.mag <= preset.limiting_mag
         and angular_separation_deg(
-            star.ra_deg, star.dec_deg, target.ra_deg, target.dec_deg
+            star.ra_deg, star.dec_deg, center_ra, center_dec
         )
         <= radius * 1.05
     ]
@@ -263,10 +294,11 @@ def render_view(
     output: Path,
     dpi: int,
 ) -> None:
-    selected = visible_stars(stars, target, preset)
+    center_ra, center_dec = view_center(target, stars, preset)
+    selected = visible_stars(stars, (center_ra, center_dec), preset)
     projected: list[tuple[float, float, Star]] = []
     for star in selected:
-        xy = tangent_plane(star.ra_deg, star.dec_deg, target.ra_deg, target.dec_deg)
+        xy = tangent_plane(star.ra_deg, star.dec_deg, center_ra, center_dec)
         if xy is not None:
             projected.append((xy[0], xy[1], star))
 
@@ -295,7 +327,20 @@ def render_view(
                     fontsize=7,
                 )
 
-    ax.scatter([0.0], [0.0], marker="+", s=100)
+    target_xy = tangent_plane(
+        target.ra_deg, target.dec_deg, center_ra, center_dec
+    )
+    if preset.key == "finder" and target_xy is not None:
+        tx, ty = target_xy
+        target_circle = plt.Circle((tx, ty), 0.45, fill=False, linewidth=1.0)
+        ax.add_patch(target_circle)
+        ax.annotate(
+            target.designation,
+            (tx, ty),
+            xytext=(6, 6),
+            textcoords="offset points",
+            fontsize=8,
+        )
 
     target_label = target.designation
     if target.name:
