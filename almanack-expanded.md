@@ -82,7 +82,15 @@ The Pleiades (M45) are the week's natural showpiece, reaching their Almanack vis
 
 ### Sky Note
 
-♀ and ♂ are separated by about 2° in the Monday snapshot, forming a close pairing in the sky. ♀ is also about 0° from the Sun, so that part of the configuration is affected by solar glare.
+January 5–11 is a restrained observing week. The Almanack marks α Horologii and α Reticuli on January 7, with Last Quarter Moon on January 10. The Monday planetary snapshot also places Venus and Mars only about 2° apart, but Venus is essentially at the Sun's position, so the apparent pairing is lost in solar glare rather than being a practical observing target.
+
+**Naked eye:** From southern latitudes, use Horologium and Reticulum as orientation targets in the winter sky. α Reticuli is the easier of the two listed stars, while α Horologii is fainter and demands a darker sky. From much of the Northern Hemisphere these constellations are very low or inaccessible, making latitude an important part of the week's observing lesson.
+
+**Binoculars:** Binoculars help most with the southern star fields, where they reveal patterns that may be too faint to trace comfortably with the unaided eye. Start from a recognizable bright-star framework and work into Horologium or Reticulum rather than trying to identify an isolated faint star directly.
+
+**Small telescope:** There is no need to force a telescopic showpiece into this week. Use low power to confirm fields and practice star-hopping, especially if α Horologii is difficult from your site. The telescope's narrower field can make navigation harder, so verify the binocular-scale pattern first.
+
+**What to expect:** The close Venus–Mars geometry is a useful reminder that angular separation alone does not determine observability. A planet can be geometrically close to another object yet effectively unobservable when it lies too near the Sun. After Last Quarter, the Moon becomes progressively less intrusive in the evening, improving dark-sky conditions as the week closes.
 
 ### Chart
 
@@ -788,7 +796,15 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-♂ and ♄ are separated by about 9° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ☿ is also about 12° from the Sun, so that part of the configuration is affected by solar glare.
+The Beltane cross-quarter point falls on May 5, while Denebola and Phecda help establish the spring sky and M109 provides the week's deep-sky challenge near the Big Dipper. Last Quarter Moon on May 9 improves the prospects for darker evening observing as the week progresses.
+
+**Naked eye:** Begin with the Big Dipper and identify Phecda in the bowl. Then look southward toward Leo and Denebola to connect two of the most useful spring navigation regions.
+
+**Binoculars:** Use binoculars primarily to learn the star field around the Dipper and to make the hop toward M109. The galaxy is a difficult binocular target and should not be promised under suburban skies.
+
+**Small telescope:** M109 appears as a faint, elongated or oval gray glow close to the Dipper. Its photographic barred-spiral structure is much subtler visually; dark sky and careful averted vision matter more than excessive magnification.
+
+**What to expect:** The calendar combines a seasonal solar marker with a low-contrast galaxy. That contrast is useful: some Almanack events are obvious to the unaided eye, while others are invitations to slow, patient telescopic detection.
 
 ### Chart
 
@@ -822,7 +838,15 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-☿ lies about 4° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+This is one of the densest galaxy weeks in the Almanack. M98, M106, M99, M61, M84, M100, M85, M86, M49, M87, M88, M89, M90, and M91 appear through the week, with New Moon on May 16 providing exceptionally favorable lunar geometry for the weekend.
+
+**Naked eye:** Learn the framework before hunting galaxies: the Big Dipper, Coma Berenices, and Virgo. From a dark site the loose Coma star cluster itself is a beautiful naked-eye and binocular landmark.
+
+**Binoculars:** Use binoculars to establish the large-scale route through Coma and Virgo. Most of the week's galaxies are telescopic rather than casual binocular targets, but the wide field prevents you from becoming lost in a region where many faint galaxies occupy neighboring fields.
+
+**Small telescope:** This is the week to explore the Virgo Cluster deliberately. M84, M86, and M87 are strong starting points; several other Messier galaxies become detectable as small gray glows under a dark sky. Move slowly and identify the field stars so that one galaxy is not mistaken for another.
+
+**What to expect:** A photograph of the Virgo Cluster can be crowded with obvious galaxies. At the eyepiece many are understated patches with differences in concentration, elongation, and brightness. The accomplishment is learning the geography of the cluster and distinguishing those subtle forms—not seeing photographic spiral detail.
 
 ### Chart
 
@@ -856,7 +880,15 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-☿ lies about 4° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+The spring galaxy sequence continues with M104, M58, M59, M60, M94, and M64, while First Quarter Moon arrives May 23. The Sombrero Galaxy is the week's most distinctive telescopic target, and Cor Caroli supplies an excellent bright-star anchor.
+
+**Naked eye:** Identify Cor Caroli beneath the Big Dipper's handle and use the bright spring constellations to keep your bearings. Farther south, the M104 field is lower for northern observers and benefits from a clear southern horizon.
+
+**Binoculars:** Binoculars are most useful for navigation and for enjoying the broad Coma Berenices and Canes Venatici fields. M94 is among the more concentrated galaxies in this region but should still be treated as a dark-sky binocular challenge.
+
+**Small telescope:** M104 appears as a bright, flattened spindle with a strong central concentration; under favorable conditions its dark dust lane can begin to register. M94 has a compact bright center, while M64 is an oval glow whose famous dark feature requires good conditions and careful viewing.
+
+**What to expect:** The names Sombrero and Black Eye come from structures made conspicuous in photographs. A small telescope usually reveals the galaxies first as gray forms; dust features are subtler second-stage observations rather than guaranteed first impressions.
 
 ### Chart
 
@@ -890,7 +922,15 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-☿ lies about 12° from the Sun in the Monday snapshot; the close geometry is chiefly a solar-glare feature.
+M63 and M53 arrive early in the week, Spica and Mizar provide brilliant navigation landmarks on May 29, and M51, the Whirlpool Galaxy, reaches its Almanack date on May 31—the same day as Full Moon. The target list is excellent, but lunar glare makes the timing challenging.
+
+**Naked eye:** Find Spica in Virgo and Mizar in the Big Dipper's handle. These bright stars remain easy even as the Moon brightens the sky and help maintain the spring framework.
+
+**Binoculars:** M53 is the more practical deep-sky binocular target, appearing as a small concentrated fuzzy point under decent conditions. M51 is possible in binoculars from dark skies but Full Moon makes that substantially harder this week.
+
+**Small telescope:** M53 becomes a concentrated globular glow whose outskirts can begin to look grainy. M51 normally shows a brighter galaxy beside its companion NGC 5195; obvious spiral arms require darker conditions and generally more aperture than the bright-Moon sky this week favors.
+
+**What to expect:** Do not judge the Whirlpool by a Full-Moon attempt. The galaxy's famous spiral structure is a low-contrast feature. Use this week to locate the field, then revisit it under a dark Moon for a fair comparison.
 
 ### Chart
 
@@ -924,7 +964,15 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-♀ and ♃ are separated by about 9° in the Monday snapshot, forming a close pairing in the evening sky after sunset.
+M83, the Southern Pinwheel Galaxy, opens the week and M3 follows on June 3. These two objects make a useful north–south comparison: a low southern face-on galaxy whose accessibility depends strongly on latitude and horizon, and a bright northern globular cluster that is much more forgiving.
+
+**Naked eye:** Use Alkaid at the end of the Big Dipper's handle as a northern landmark. For M83, seek an unobstructed southern horizon; from northern latitudes the galaxy remains low, while southern observers see it much more favorably.
+
+**Binoculars:** M3 is an excellent binocular globular, appearing as a compact round glow. M83 is a much more demanding binocular target because its light is spread over a broad face-on disk and atmospheric extinction can compound the difficulty when it is low.
+
+**Small telescope:** M3 becomes a bright concentrated ball with a grainy outer halo and increasing stellar resolution as aperture grows. M83 can show a compact core and uneven disk under dark transparent conditions, but its photographic spiral pattern should not be expected automatically in a small telescope.
+
+**What to expect:** Declination matters. Two catalog objects with favorable magnitudes can have very different practical visibility because one culminates high while the other is viewed through much more atmosphere. The Almanack's north/tropical/south context is observationally meaningful, not merely classificatory.
 
 ### Chart
 
@@ -958,7 +1006,15 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-♀ and ♃ are separated by about 2° in the Monday snapshot, forming a close pairing in the evening sky after sunset.
+Last Quarter Moon on June 8 helps darken the evening later in the week, while Arcturus and M101 provide a useful contrast between an easy bright-star anchor and a difficult face-on galaxy.
+
+**Naked eye:** Find orange Arcturus first. It is one of the brightest stars in the northern spring sky and a dependable orientation point for the transition toward the summer constellations.
+
+**Binoculars:** M101 is a demanding binocular target because its light is spread across a large area. Under a genuinely dark, transparent sky it may appear as a broad, weak brightening rather than a sharply bounded object.
+
+**Small telescope:** Use low power on M101. Expect a pale, diffuse glow with a somewhat brighter central region; obvious photographic spiral structure is not a realistic expectation in a modest instrument.
+
+**What to expect:** M101 is a classic surface-brightness lesson. A galaxy can have a respectable total magnitude and still be hard to see because its light is spread thinly over the sky.
 
 ### Chart
 
@@ -992,7 +1048,15 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-♀ and ♃ are separated by about 5° in the Monday snapshot, forming a close pairing in the evening sky after sunset. ☽ is also about 2° from the Sun, so that part of the configuration is affected by solar glare.
+New Moon opens the week, Alpha Centauri reaches its Almanack date on June 16, and the June solstice follows on June 21. This is a strong orientation week linking the seasonal turning point with conspicuous northern and southern sky markers.
+
+**Naked eye:** From sufficiently southerly latitudes, Alpha Centauri is one of the brightest stars in the sky and an unmistakable southern landmark. Northern observers should instead use Arcturus, the Big Dipper, and the rising summer constellations to follow the seasonal transition.
+
+**Binoculars:** Sweep the rich southern Milky Way around Centaurus if it is accessible from your latitude. In northern skies, binoculars are excellent for following the growing summer Milky Way as darkness arrives later in the evening.
+
+**Small telescope:** Izar in Boötes is a worthwhile double-star target when seeing is steady. Center it at low power and increase magnification gradually rather than assuming maximum power will give the best view.
+
+**What to expect:** The solstice is a geometric turning point in the Sun's annual path, not a sudden change in the stars. The practical observing effect is seasonal: long northern evenings compress the darkest observing window while southern winter nights lengthen.
 
 ### Chart
 
@@ -1026,7 +1090,15 @@ M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows M
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+M5 reaches its Almanack date on June 26 and is one of the finest globular clusters available to northern and tropical observers. The week also includes M102, giving a useful comparison between a concentrated star cluster and a much subtler galaxy.
+
+**Naked eye:** Use bright stars in Boötes, Libra, and Corona Borealis to orient yourself before moving toward Serpens. The summer sky is beginning to favor globular clusters as the evening view shifts toward the inner Milky Way.
+
+**Binoculars:** M5 can appear as a small, round, misty patch under good conditions. Its concentration makes it much easier to recognize than many galaxies of similar catalog magnitude.
+
+**Small telescope:** M5 becomes a bright, strongly concentrated ball. With sufficient aperture and steady conditions, the outer parts begin to break into individual stars while the core remains densely packed. M102 is far less conspicuous and appears as a slender gray spindle.
+
+**What to expect:** Globular clusters reward aperture in a different way from galaxies. Instead of revealing color or spiral structure, increased resolution gradually turns a smooth glow into a swarm of stars.
 
 ### Chart
 
@@ -1060,7 +1132,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Full Moon falls on June 29, so this is better suited to bright-star observing than faint deep-sky work. Alphecca in Corona Borealis and Unukalhai in Serpens provide a clean summer orientation exercise while moonlight suppresses the fainter background.
+
+**Naked eye:** Find the semicircle of Corona Borealis and identify Alphecca, its brightest star. Then move toward Serpens and Ophiuchus, using the bright Moon as a reminder to concentrate on robust naked-eye patterns rather than faint targets.
+
+**Binoculars:** Binoculars reveal the richer stellar fields around Corona Borealis and Serpens even when the Moon is bright. Keep the Moon out of the field and shield stray light to preserve as much contrast as possible.
+
+**Small telescope:** Favor double stars, bright stellar groupings, and lunar observing. The nearly full Moon is poor for subtle relief but excellent for bright ray systems and large-scale surface markings.
+
+**What to expect:** Bright moonlight changes the target list, not the usefulness of the night. A week dominated by the Moon is a good time to learn constellation structure and save low-surface-brightness galaxies for darker conditions.
 
 ### Chart
 
@@ -1094,7 +1174,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Last Quarter Moon on July 7 improves evening conditions, and M80 and M4 arrive on July 10 and 12 in the rich Scorpius region. They are both globular clusters, but they look very different and make an excellent side-by-side observing lesson.
+
+**Naked eye:** Find Scorpius and its bright reddish star Antares, then trace the curved body of the constellation through Dschubba and Acrab. From northern mid-latitudes the constellation stays low, so choose a clear southern horizon.
+
+**Binoculars:** M4 is the easier and broader target, appearing as a diffuse patch near Antares under a dark sky. M80 is smaller and more concentrated, looking more nearly stellar at first glance.
+
+**Small telescope:** M4 begins to resolve into stars relatively readily and shows a loose structure for a globular cluster. M80 remains a compact, concentrated ball and generally needs more aperture or magnification before its outer stars become grainy.
+
+**What to expect:** Two objects with the same catalog type can present opposite visual personalities. M4 is broad and loose; M80 is compact and dense. Comparing them teaches more than observing either one in isolation.
 
 ### Chart
 
@@ -1128,7 +1216,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+New Moon on July 14 opens a dark-sky week rich in globular clusters. M107 appears the same night, followed by the Great Hercules Cluster M13 on July 16 and M12 on July 18; Antares also marks the southern summer sky on July 13.
+
+**Naked eye:** Use Antares to recognize Scorpius and the Keystone of Hercules to orient yourself farther north. Under a genuinely dark sky M13 can approach naked-eye visibility, but binoculars make identification much easier.
+
+**Binoculars:** M13 is the showpiece, appearing as a compact fuzzy ball in the Keystone. M12 is also a good binocular target from a dark site, while M107 is smaller and more difficult.
+
+**Small telescope:** M13 begins to break into individual stars around its halo and becomes increasingly spectacular with aperture. M12 looks looser and less centrally concentrated; M107 remains subtler. Compare them rather than expecting every globular cluster to look alike.
+
+**What to expect:** Globular clusters are visually rewarding because increasing aperture can actually resolve their stellar structure. They still will not resemble densely saturated photographs, but the transition from unresolved glow to a swarm of faint stars is something the eye can see directly.
 
 ### Chart
 
@@ -1162,7 +1258,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+This is a globular-cluster comparison week. M10 leads on July 20; M19 and M62 follow with First Quarter on July 21; then M9 and M92 arrive July 25. The targets range from relatively easy northern globulars to low southern objects that reward a clear horizon.
+
+**Naked eye:** Find Hercules and Ophiuchus between the bright summer landmarks Vega, Arcturus, and Antares. Rasalgethi and Sabik help define the region even before you begin hunting the clusters.
+
+**Binoculars:** M10 and M92 are the friendlier binocular targets, showing as compact fuzzy stars or small round glows. M19 and M62 sit much farther south and become increasingly sensitive to haze and your observing latitude.
+
+**Small telescope:** Compare M10's bright core and halo with the denser M92. M9 is smaller and fainter. M19 and M62 benefit from observing when they are highest above the southern horizon; aperture helps, but atmospheric transparency can matter just as much.
+
+**What to expect:** Integrated magnitude does not tell the whole story. A low-altitude globular can look harder than a nominally fainter object higher in the sky. This week is an excellent practical lesson in altitude, concentration, and aperture.
 
 ### Chart
 
@@ -1196,7 +1300,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Full Moon on July 29 brightens a week centered on Scorpius. Shaula and Sargas mark the southern constellation, while the Butterfly Cluster M6 and globular cluster M14 appear on July 30. The Moon favors bright stars and the open cluster over faint diffuse detail.
+
+**Naked eye:** Follow Scorpius southward from Antares toward the curved tail and Shaula. From dark southern skies M6 can be detected as a small misty patch, although moonlight makes that harder this week.
+
+**Binoculars:** M6 is the week's best deep-sky target. Its broad collection of bright stars is well suited to a wide binocular field, and its butterfly-like pattern becomes easier to recognize.
+
+**Small telescope:** Use low power on M6 so the whole cluster remains in context. M14 is a much more concentrated globular cluster and will appear primarily as a round glow in a small instrument, especially with the bright Moon nearby.
+
+**What to expect:** Open clusters tolerate moonlight better than faint galaxies and nebulae because their light is concentrated into stars. This is a good week to choose the target that suits the conditions instead of fighting the Full Moon.
 
 ### Chart
 
@@ -1230,7 +1342,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+The southern Milky Way supplies an extraordinary sequence this week: M7 on August 3; M23 on August 4; the Lagoon Nebula M8, Trifid Nebula M20, and M21 on August 5; then M16, M17, M18, and the Sagittarius Star Cloud M24 on August 9. Last Quarter on August 6 leaves progressively darker evening conditions later in the week.
+
+**Naked eye:** Under a dark sky the Sagittarius and Scorpius Milky Way should look mottled and structured rather than uniformly bright. M7 is large enough to stand out as a naked-eye cluster from favorable latitudes.
+
+**Binoculars:** This is binocular territory at its best. Sweep M7, M23, M21, M24, and the star fields around M8 and M17 at low power. M24 is not a compact cluster but a brilliant window into the Milky Way packed with stars.
+
+**Small telescope:** M8 shows bright nebulosity around its embedded cluster; M20 is subtler and its dark lanes require better conditions. M17 can show its characteristic bright bar or swan-like form, while the clusters break into increasingly numerous stars.
+
+**What to expect:** Photographs exaggerate the color and extent of emission nebulae compared with visual observing. Expect pale gray nebulosity, dark lanes, and rich star fields. The wide-field visual experience of the Milky Way is itself the showpiece.
 
 ### Chart
 
@@ -1264,7 +1384,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+New Moon on August 12 lands in the middle of a superb Sagittarius observing week. M28 appears August 10; M25 and M69 on August 12; the bright Sagittarius globular M22 on August 13; M70 and Vega on August 15; and M26 on August 16. Dark skies make this a particularly strong week for comparing clusters against the Milky Way.
+
+**Naked eye:** Locate the Sagittarius Teapot low in the southern sky and brilliant Vega much higher to the north. The contrast between the dense southern Milky Way and the Summer Triangle region gives the sky a large-scale structure worth learning before using optics.
+
+**Binoculars:** M22 is the standout globular, appearing as a conspicuous round glow under a dark sky. M25 is an attractive open cluster and makes an excellent contrast with the unresolved globulars.
+
+**Small telescope:** M22 begins resolving into stars readily and is one of the finest globulars of the summer sky. M28 is smaller and more concentrated; M69 and M70 are subtler, lower-surface-brightness challenges near the Teapot. M26 resolves as a compact open cluster.
+
+**What to expect:** New Moon does not make every object equally easy. Low southern altitude and extinction still matter. But with moonlight removed, this week gives an unusually fair comparison between open clusters and globular clusters of very different concentration.
 
 ### Chart
 
@@ -1298,7 +1426,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+M11, the Wild Duck Cluster, opens the week on August 17, followed by M57, the Ring Nebula, on August 18. First Quarter on August 20 brightens the evening sky, but both objects remain worthwhile targets.
+
+**Naked eye:** Use the Summer Triangle to orient yourself, then trace southward through Aquila toward the rich Milky Way fields of Scutum. M11 lies in a dense stellar region; the Milky Way itself is part of the experience from a dark site.
+
+**Binoculars:** M11 is an excellent binocular target, appearing as a compact hazy concentration that can look almost globular at low power. Binoculars also provide the wide field needed to appreciate how deeply the cluster is embedded in the Milky Way.
+
+**Small telescope:** M11 begins to resolve into a remarkably dense swarm of stars. M57 is a different kind of object: at moderate magnification it appears as a tiny gray disk or smoke ring between Beta and Gamma Lyrae. Increase magnification after locating it.
+
+**What to expect:** M57 will not show the saturated colors of processed photographs. Its visual reward is the delicate annular shape. M11, by contrast, is fundamentally a stellar spectacle and becomes richer as aperture resolves more of its crowded stars.
 
 ### Chart
 
@@ -1332,7 +1468,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Full Moon arrives August 28, followed by M55 and Albireo on August 29. This is a useful week for contrasting a bright double-star target with a diffuse deep-sky object that suffers much more from moonlight.
+
+**Naked eye:** Find the Summer Triangle and Cygnus. Albireo marks the head of the Swan and is easy to locate even with the bright Moon present. Sagittarius remains low toward the south, where M55 lies.
+
+**Binoculars:** M55 can appear as a round fuzzy patch under a dark sky, but the Full Moon will greatly reduce its contrast this week. Binoculars are still useful for locating the Sagittarius field and for enjoying the surrounding Milky Way when conditions permit.
+
+**Small telescope:** Albireo is the week's dependable showpiece. Modest magnification separates its famous pair cleanly and lets observers compare their contrasting apparent colors. M55 appears as a broad globular glow; resolving many member stars generally requires more aperture and darker conditions.
+
+**What to expect:** Moonlight does not affect all targets equally. Albireo remains attractive in a bright sky, while M55 can become frustratingly washed out. The Almanack date identifies the geometry of the target, not a guarantee of ideal sky darkness.
 
 ### Chart
 
@@ -1366,7 +1510,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Last Quarter on September 4 shares the calendar with M27, the Dumbbell Nebula, and Altair. The waning Moon improves evening conditions, making this a strong week for exploring the northern summer Milky Way as autumn approaches.
+
+**Naked eye:** Altair is the southern point of the Summer Triangle and an excellent anchor for the region. From a dark site, follow the Milky Way northward through the faint constellation Vulpecula toward Cygnus.
+
+**Binoculars:** M27 is unusually rewarding for a planetary nebula in binoculars. It appears as a small nonstellar glow, and 10×50-class binoculars can begin to suggest that it is not simply round. Wide-field binoculars also make the surrounding Milky Way rich and easy to explore.
+
+**Small telescope:** M27 becomes an obvious pale patch with a brighter dumbbell or apple-core region. Moderate magnification increases the contrast of its shape, and larger apertures reveal a more extended envelope. M71 and M75 elsewhere in the week are subtler compact cluster targets.
+
+**What to expect:** Photographs give M27 vivid colors and extensive faint structure. Visually, expect a gray luminous form whose shape is much more conspicuous than its color. It is an excellent example of an object that is genuinely satisfying without resembling its photographs.
 
 ### Chart
 
@@ -1400,7 +1552,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+M29 appears on September 10 and New Moon follows September 11, giving the latter part of the week excellent dark-sky potential. Sadr in Cygnus on September 12 provides a bright naked-eye landmark in one of the Milky Way's richest northern fields.
+
+**Naked eye:** Use the Summer Triangle and then identify the cross-shaped body of Cygnus. Sadr lies near the center of the cross. Under a dark sky, the Milky Way through Cygnus is itself one of the week's finest sights.
+
+**Binoculars:** M29 is a small open cluster that stands out as a compact concentration against a very crowded stellar background. Sweep slowly around Sadr and along Cygnus; the binocular field contains far more than the named catalog target.
+
+**Small telescope:** Low to moderate power resolves M29 into its brighter members and makes its compact geometry easier to recognize. Avoid excessive magnification at first, because the surrounding star field is useful for orientation and context.
+
+**What to expect:** M29 is not a dramatic photographic showpiece. Its appeal comes from finding a small organized cluster inside an extraordinarily rich Milky Way field. New Moon makes this an especially good week to appreciate the background sky rather than only the catalog object.
 
 ### Chart
 
@@ -1434,7 +1594,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Delphinus and Deneb give this week a strong naked-eye framework, while M72 and M73 provide a useful contrast between easy star patterns and much subtler telescopic targets. First Quarter on September 18 means the Moon will increasingly brighten the evening sky as the week progresses.
+
+**Naked eye:** Find Deneb, the brilliant northern vertex of the Summer Triangle, then look south and a little east for the small diamond-shaped constellation Delphinus. Sualocin and Rotanev mark its compact pattern and are excellent examples of stars that are easier to identify from a constellation shape than from brightness alone.
+
+**Binoculars:** Delphinus is especially attractive in binoculars because the whole little constellation fits comfortably in one field with surrounding Milky Way stars. Deneb and the Cygnus star fields also reward slow sweeping, particularly before moonlight becomes dominant.
+
+**Small telescope:** M72 is a faint globular cluster in Aquarius and is a much more demanding object than the bright summer globulars. Expect a small, dim glow rather than obvious individual stars in a modest aperture. M73 is not a physical star cluster but a compact asterism: a tiny grouping of stars that becomes apparent with magnification.
+
+**What to expect:** This is a good week for learning that a Messier number does not guarantee a spectacular visual object. M72 is intrinsically subtle in a small telescope, while M73 is essentially a tiny star pattern. The pleasure comes from finding and recognizing them, not from expecting photographic drama.
 
 ### Chart
 
@@ -1468,7 +1636,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+The September 26 Full Moon dominates this week, while the Sun crosses into Libra and the Almanack begins shifting decisively into the autumn sky. With few deep-sky showpieces on the calendar, this is a good week to emphasize orientation, lunar observing, and the seasonal change in the evening constellations.
+
+**Naked eye:** Watch how the evening sky has changed from midsummer: the Summer Triangle is still prominent, but the autumn constellations are taking over the eastern and southeastern sky. The Full Moon is the obvious target near the end of the week and washes out many fainter stars.
+
+**Binoculars:** Use binoculars on the Moon along the terminator before and after Full phase rather than at exact Full Moon, when relief is flatter. Sweeping the surrounding autumn star fields is still worthwhile even under bright moonlight because the larger-scale constellation patterns remain visible.
+
+**Small telescope:** Lunar detail is the main telescopic reward this week. Moderate magnification reveals crater walls, rays, and mare boundaries, especially away from exact Full Moon when low-angle sunlight creates stronger shadows.
+
+**What to expect:** Bright moonlight is not a failed observing night; it simply changes the program. Faint galaxies and nebulae suffer badly, while the Moon, bright double stars, and constellation work remain productive targets.
 
 ### Chart
 
@@ -1502,7 +1678,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+This is a compact but excellent autumn deep-sky week: M15 arrives October 1, followed by M2 and M39 on October 2 and M30 on October 4. Last Quarter Moon on October 3 means the evening sky is becoming progressively friendlier for these targets.
+
+**Naked eye:** Use Pegasus, Aquarius, and Cygnus as the broad framework. Alderamin in Cepheus and Sadalsuud in Aquarius help anchor the northern and southern parts of the autumn sky while the Summer Triangle still lingers to the west.
+
+**Binoculars:** M15 and M2 appear as small round glows under a dark sky. M39 is very different: a loose open cluster whose broad star pattern is especially well suited to binoculars and low-power sweeping. M30 is more difficult in binoculars and benefits from darker conditions and a steady hand.
+
+**Small telescope:** M15 and M2 show bright concentrated cores with grainier outer halos as aperture and magnification increase. M30 is smaller and denser, while M39 remains better appreciated at low power because its stars are spread over a wide field.
+
+**What to expect:** The three globular clusters will not look alike despite belonging to the same class. Compare core concentration, apparent size, and how quickly each fades into the background. M39 provides an instructive contrast because its stars are individually obvious rather than blended into a globular glow.
 
 ### Chart
 
@@ -1578,7 +1762,15 @@ The New Moon on Saturday, October 10 makes this one of the best dark-sky weeks o
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+The week of October 12–18 is comparatively quiet in the Almanack, which makes it useful for learning the autumn sky itself. Alnair (α Gruis) is the brightest listed star of the week, while First Quarter Moon arrives on October 18.
+
+**Naked eye:** From southerly latitudes, look for Alnair in Grus low in the southern autumn sky. Farther north it becomes increasingly low or inaccessible, so use the week instead to consolidate the larger autumn patterns already established around Pegasus, Aquarius, and the surrounding constellations.
+
+**Binoculars:** Sweep the sparse-looking autumn fields rather than expecting a single showpiece object. Binoculars are particularly good for revealing how many stars disappear from naked-eye view while still preserving enough field to recognize the constellation geometry.
+
+**Small telescope:** The listed stars in Tucana, Lacerta, and Piscis Austrinus provide useful pointing and identification exercises. This is a good week to practice accurate star-hopping rather than chasing a difficult deep-sky target simply because a telescope is available.
+
+**What to expect:** Not every observing week needs a spectacular Messier object. The Moon grows toward First Quarter through the week, but there remains useful evening observing time. Treat W42 as an orientation week: learn the autumn framework, compare naked-eye and binocular fields, and notice how strongly your latitude determines which southern stars are practical targets.
 
 ### Chart
 
@@ -1612,7 +1804,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Fomalhaut (α Piscis Austrini) is the standout object of W43, appearing on October 25 after a week that also includes Tiaki (β Gruis) and β Octantis. With no major lunar phase listed during the week itself, this is a good time to use bright southern stars to learn the autumn sky.
+
+**Naked eye:** Fomalhaut is bright and isolated, making it one of the easiest southern autumn stars to recognize. From mid-northern latitudes it appears relatively low in the south; from farther south it stands much higher. Tiaki in Grus is another useful southern marker where visible.
+
+**Binoculars:** Use binoculars to sweep around Fomalhaut and the neighboring fields while preserving enough sky to keep the larger constellation pattern recognizable. The contrast between an isolated bright star and the surrounding sparse-looking field is part of the experience.
+
+**Small telescope:** Fomalhaut itself does not require telescopic power, so use a telescope mainly for careful field identification and for comparing stellar colors and brightnesses. The listed southern stars are useful exercises in pointing accuracy and in understanding how declination affects altitude from your observing site.
+
+**What to expect:** This is an orientation week rather than a deep-sky showcase. The reward is learning where the southern autumn sky sits relative to Pegasus, Aquarius, and the horizon, and seeing how dramatically the same stars change in accessibility with latitude.
 
 ### Chart
 
@@ -1688,7 +1888,15 @@ This week ends with Last Quarter Moon on Sunday, November 1, leaving the first p
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+November 2–8 is deliberately a quiet Almanack week: β Sculptoris is the only listed stellar event. That makes W45 useful as an observing-skills week rather than a checklist of showpieces. Use the autumn sky itself as the target and practice moving confidently from large naked-eye patterns to smaller fields.
+
+**Naked eye:** Begin with the easiest autumn landmarks available from your latitude—Pegasus and Andromeda in the north, and the southern autumn constellations where visible. β Sculptoris is not a prominent naked-eye beacon, so establish the surrounding sky before trying to identify its field.
+
+**Binoculars:** Sweep Sculptor and neighboring southern fields from a dark site. The purpose is orientation: compare the sparse naked-eye appearance with the much richer binocular field and learn which star patterns remain recognizable at increased depth.
+
+**Small telescope:** Use β Sculptoris and other field stars as exercises in precise pointing and star-hopping. Start at low power, verify the field, and increase magnification only when there is a reason; a telescope's narrower field can make navigation harder rather than easier.
+
+**What to expect:** A week without a major Messier object is not an empty week. It is an opportunity to build the observing habits that make difficult objects easier later: dark adaptation, patient field identification, careful comparison with the chart, and awareness of how latitude and sky brightness change what is visible.
 
 ### Chart
 
