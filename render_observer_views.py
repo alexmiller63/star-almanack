@@ -1,43 +1,43 @@
 #!/usr/bin/env python3
 """Render source-driven observer views for Star Almanack.
 
-This script produces three reproducible views from catalog coordinates:
+This script produces three reproducible views from the same upstream stellar
+catalog used by Star Almanack:
 
 * finder     — wide field for locating the target
 * binoculars — 10x50-class view
 * telescope  — 6-inch-class low-power eyepiece view
 
-The renderings are catalog-derived diagrams, not astrophotographs.  The
+The renderings are catalog-derived diagrams, not astrophotographs. The
 Almanack can explain that convention once in its legend/front matter and
 caption individual figures simply as, for example:
 
     Eyepiece view · 6-inch telescope · 50× · 1.2° field
 
-No network access is used.  Star coordinates and magnitudes come only from
-an input catalog supplied on the command line.  The target center is read
-from fixed-objects.yaml so the astronomical source remains upstream of the
-rendering code.
+The target center is read from fixed-objects.yaml. Star positions and
+magnitudes are read directly from an HYG v4.1 CSV, the primary upstream
+stellar catalog already used by Star Almanack's catalog builders. No network
+access is used by this renderer.
 
-Expected star-catalog CSV columns:
+Required HYG v4.1 columns:
 
-    ra_deg,dec_deg,mag[,label]
+    id, ra, dec, mag
 
-Optional proper-motion columns are also accepted:
-
-    pmra_masyr,pmdec_masyr,epoch
-
-`pmra_masyr` is assumed to be mu_alpha*cos(delta), the usual catalog form.
-If proper-motion columns are absent, coordinates are used as supplied.
+The standard HYG fields proper, bayer, and con are used for labels when
+present. The renderer deliberately consumes the full HYG input rather than
+only the curated Bayer/bright/special subsets, because realistic finder,
+binocular, and eyepiece fields require the fainter background stars that are
+not part of those editorial subsets.
 
 Examples:
 
-    python render_observer_views.py M35 stars.csv --view finder
-    python render_observer_views.py M35 stars.csv --view binoculars
-    python render_observer_views.py M35 stars.csv --view telescope
-    python render_observer_views.py M35 stars.csv --view all --out-dir views
+    python render_observer_views.py M35 hyg_v41.csv --view finder
+    python render_observer_views.py M35 hyg_v41.csv --view binoculars
+    python render_observer_views.py M35 hyg_v41.csv --view telescope
+    python render_observer_views.py M35 hyg_v41.csv --view all --out-dir views
 
 SVG is the default output because it is text, scales cleanly in Jekyll, and
-keeps generated binary files out of the source repository.  PNG may be
+keeps generated binary files out of the source repository. PNG may be
 requested explicitly with --format png.
 """
 
@@ -110,6 +110,7 @@ class Star:
     dec_deg: float
     mag: float
     label: str = ""
+    hyg_id: str = ""
 
 
 @dataclass(frozen=True)
@@ -123,9 +124,6 @@ class Target:
 
 def _split_yaml_row(text: str) -> list[str]:
     """Split the simple bracket-row format used by fixed-objects.yaml."""
-    # This source file deliberately uses compact YAML flow sequences.  We do
-    # not need a YAML dependency merely to retrieve designation, coordinates,
-    # and names, but quoted commas must still be respected.
     row = next(csv.reader([text], skipinitialspace=True))
     return [item.strip().strip("'\"") for item in row]
 
@@ -158,57 +156,47 @@ def load_target(path: Path, designation: str) -> Target:
     raise KeyError(f"Target {designation!r} not found in {path}")
 
 
-def apply_proper_motion(
-    ra_deg: float,
-    dec_deg: float,
-    pmra_masyr: float | None,
-    pmdec_masyr: float | None,
-    epoch: float | None,
-    target_epoch: float,
-) -> tuple[float, float]:
-    if pmra_masyr is None or pmdec_masyr is None or epoch is None:
-        return ra_deg, dec_deg
+def hyg_label(row: dict[str, str]) -> str:
+    proper = (row.get("proper") or "").strip()
+    if proper:
+        return proper
 
-    years = target_epoch - epoch
-    cos_dec = math.cos(math.radians(dec_deg))
-    if abs(cos_dec) < 1e-12:
-        dra_deg = 0.0
-    else:
-        dra_deg = (pmra_masyr * years) / (3_600_000.0 * cos_dec)
-    ddec_deg = (pmdec_masyr * years) / 3_600_000.0
-    return (ra_deg + dra_deg) % 360.0, dec_deg + ddec_deg
+    bayer = (row.get("bayer") or "").strip()
+    con = (row.get("con") or "").strip()
+    if bayer and con:
+        return f"{bayer} {con}"
+    return ""
 
 
-def load_stars(path: Path, target_epoch: float) -> list[Star]:
+def load_hyg_stars(path: Path) -> list[Star]:
+    """Load the full upstream HYG v4.1 catalog used by Star Almanack builders."""
     stars: list[Star] = []
-    with path.open("r", encoding="utf-8", newline="") as handle:
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
-        required = {"ra_deg", "dec_deg", "mag"}
+        required = {"id", "ra", "dec", "mag"}
         missing = required - set(reader.fieldnames or [])
         if missing:
             raise ValueError(
-                f"Star catalog is missing required columns: {', '.join(sorted(missing))}"
+                "HYG v4.1 catalog is missing required columns: "
+                + ", ".join(sorted(missing))
             )
 
         for row in reader:
-            ra = float(row["ra_deg"])
-            dec = float(row["dec_deg"])
-            mag = float(row["mag"])
-            label = (row.get("label") or "").strip()
+            ra_text = (row.get("ra") or "").strip()
+            dec_text = (row.get("dec") or "").strip()
+            mag_text = (row.get("mag") or "").strip()
+            if not ra_text or not dec_text or not mag_text:
+                continue
 
-            def optional_float(key: str) -> float | None:
-                value = (row.get(key) or "").strip()
-                return float(value) if value else None
-
-            ra, dec = apply_proper_motion(
-                ra,
-                dec,
-                optional_float("pmra_masyr"),
-                optional_float("pmdec_masyr"),
-                optional_float("epoch"),
-                target_epoch,
+            stars.append(
+                Star(
+                    ra_deg=float(ra_text) * 15.0,
+                    dec_deg=float(dec_text),
+                    mag=float(mag_text),
+                    label=hyg_label(row),
+                    hyg_id=(row.get("id") or "").strip(),
+                )
             )
-            stars.append(Star(ra, dec, mag, label))
     return stars
 
 
@@ -265,8 +253,6 @@ def visible_stars(stars: Iterable[Star], target: Target, preset: ViewPreset) -> 
 
 def marker_area(mag: float, limiting_mag: float) -> float:
     """Map stellar magnitude to a restrained plotted disk area."""
-    # Flux ratio would make bright stars overwhelmingly large.  This compressed
-    # relation retains magnitude hierarchy while remaining readable in print.
     return max(2.0, 5.0 + 5.0 * (limiting_mag - mag))
 
 
@@ -287,9 +273,7 @@ def render_view(
     fig, ax = plt.subplots(figsize=(7.2, 7.2))
     radius = preset.field_deg / 2.0
 
-    # Astronomical charts conventionally put east to the left.  This is also a
-    # useful neutral default for observer diagrams; a later instrument-specific
-    # orientation layer can rotate/flip the view without changing source data.
+    # Astronomical charts conventionally put east to the left.
     ax.set_xlim(radius, -radius)
     ax.set_ylim(-radius, radius)
     ax.set_aspect("equal", adjustable="box")
@@ -301,10 +285,15 @@ def render_view(
         ax.scatter(xs, ys, s=sizes)
 
     if preset.key == "finder":
-        # Label only catalog stars that have supplied labels; no guessed names.
         for x, y, star in projected:
             if star.label and star.mag <= 5.0:
-                ax.annotate(star.label, (x, y), xytext=(4, 4), textcoords="offset points", fontsize=7)
+                ax.annotate(
+                    star.label,
+                    (x, y),
+                    xytext=(4, 4),
+                    textcoords="offset points",
+                    fontsize=7,
+                )
 
     ax.scatter([0.0], [0.0], marker="+", s=100)
 
@@ -319,12 +308,9 @@ def render_view(
     ax.set_ylabel("South   angular offset   North")
     ax.grid(False)
 
-    # Eyepiece and binocular fields are circular.  The finder remains square to
-    # maximize contextual information and make cardinal orientation obvious.
     if preset.key in {"binoculars", "telescope"}:
         circle = plt.Circle((0, 0), radius, fill=False)
         ax.add_patch(circle)
-        ax.set_clip_path(circle)
 
     fig.tight_layout()
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -335,7 +321,11 @@ def render_view(
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("target", help="Fixed-object designation, for example M35")
-    parser.add_argument("star_catalog", type=Path, help="CSV star catalog")
+    parser.add_argument(
+        "hyg_catalog",
+        type=Path,
+        help="full HYG v4.1 CSV used as Star Almanack's upstream stellar catalog",
+    )
     parser.add_argument(
         "--fixed-objects",
         type=Path,
@@ -360,12 +350,6 @@ def parse_args() -> argparse.Namespace:
         default="svg",
         help="output format (default: svg)",
     )
-    parser.add_argument(
-        "--epoch",
-        type=float,
-        default=2026.0,
-        help="target epoch for optional proper-motion propagation (default: 2026.0)",
-    )
     parser.add_argument("--dpi", type=int, default=180, help="PNG/SVG save DPI metadata")
     return parser.parse_args()
 
@@ -373,7 +357,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     target = load_target(args.fixed_objects, args.target)
-    stars = load_stars(args.star_catalog, args.epoch)
+    stars = load_hyg_stars(args.hyg_catalog)
 
     keys = list(PRESETS) if args.view == "all" else [args.view]
     for key in keys:
