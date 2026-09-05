@@ -14,11 +14,14 @@ on:
       - bright-variable-reconciliation.csv
       - messier-visibility-2026.csv
       - weekly-ephemeris-2026.csv
+      - sky-notes-2026.json
+      - image-provenance-2026.json
       - build_bayer_catalog.py
       - compute_bayer_visibility_2026.py
       - compute_bright_star_visibility_2026.py
       - build_expanded_almanack.py
       - enrich_stellar_entries.py
+      - apply_sky_notes.py
       - audit_stellar_entries.py
       - audit_bayer_duplicate_designations.py
       - publish_weekly_pages.py
@@ -39,6 +42,9 @@ jobs:
 
       - name: Enrich stellar entries
         run: python enrich_stellar_entries.py
+
+      - name: Apply curated Sky Notes
+        run: python apply_sky_notes.py
 
       - name: Audit duplicate Bayer designations
         run: python audit_bayer_duplicate_designations.py
@@ -121,9 +127,11 @@ jobs:
           assert 'Diadem (α Com) — B V 4 — Tropical Spring' in diadem, diadem
           assert 'V 4.32' not in diadem, diadem
 
+          assert 'The New Moon on Saturday, October 10' in text, 'Curated W41 Sky Note missing'
+          assert '**Binoculars:** M15 appears as a small, round, misty glow near Enif.' in text, 'W41 binocular guidance missing'
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
-          print('Verified 53 weeks, 371 day rows, 110 Messier objects, observing aid beside whole-number stellar magnitudes, Enif, Shaula, and Diadem')
+          print('Verified 53 weeks, 371 day rows, 110 Messier objects, curated W41 Sky Note, observing aid beside whole-number stellar magnitudes, Enif, Shaula, and Diadem')
           PY
 
       - name: Generate 53 weekly HTML pages
@@ -154,6 +162,8 @@ jobs:
           assert 'V 2.38' not in w41, 'Decimal Enif magnitude survived publication'
           assert 'V2.38' not in w41, 'Old Enif magnitude survived publication'
           assert ' — variable — ' not in w41, 'Old variable word survived publication'
+          assert 'The New Moon on Saturday, October 10' in w41, 'Curated W41 Sky Note missing from published page'
+          assert 'M15 appears as a small, round, misty glow near Enif' in w41, 'W41 binocular guidance missing from published page'
 
           w31 = (root / 'W31' / 'index.html').read_text(encoding='utf-8')
           assert 'Shaula (λ Sco) — 👁 V 2 — Southern Summer' in w31, 'Shaula observing aid/magnitude presentation missing from published W31'
@@ -162,7 +172,7 @@ jobs:
           w22 = (root / 'W22' / 'index.html').read_text(encoding='utf-8')
           assert 'Diadem (α Com) — B V 4 — Tropical Spring' in w22, 'Diadem observing aid/magnitude presentation missing from published W22'
           assert 'V 4.32' not in w22, 'Decimal Diadem magnitude survived publication'
-          print('Verified 53 weekly pages with observing aid beside whole-number stellar magnitudes')
+          print('Verified 53 weekly pages with curated Sky Notes and observing aid beside whole-number stellar magnitudes')
           PY
 
       - name: Commit expanded Almanack and weekly pages
