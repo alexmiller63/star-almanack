@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Add a Greek/Latin Bayer-designation toggle to the 2026 weekly pages.
+"""Add a Greek/Latin notation toggle to the 2026 weekly pages.
 
-Greek symbols remain the default.  Latin mode uses the compact catalog-style
-abbreviations already used by the Almanack source tradition (Gam-2, Eps, etc.).
+Greek mode preserves the Almanack's compact astronomical symbols. Latin mode
+expands Bayer designations, zodiac signs, and ephemeris body symbols to full
+words for readability.
 """
 
 from pathlib import Path
@@ -19,47 +20,92 @@ TOGGLE_CSS = r"""
 @media (prefers-color-scheme:dark) { .bayer-toggle button { background:#1c2a36; border-color:#405567; color:#b6dcff; } .bayer-toggle button[aria-pressed="true"] { background:#eef7ff; color:#102a43; border-color:#eef7ff; } }
 """.strip()
 
-TOGGLE_HTML = r'''<div class="bayer-toggle-wrap"><div class="bayer-toggle" role="group" aria-label="Bayer designation notation"><span class="bayer-toggle-label">Bayer:</span><button type="button" data-bayer-mode="greek" aria-pressed="true">Greek</button><button type="button" data-bayer-mode="latin" aria-pressed="false">Latin</button></div></div>'''
+TOGGLE_HTML = r'''<div class="bayer-toggle-wrap"><div class="bayer-toggle" role="group" aria-label="Astronomical notation"><span class="bayer-toggle-label">Notation:</span><button type="button" data-bayer-mode="greek" aria-pressed="true">Greek</button><button type="button" data-bayer-mode="latin" aria-pressed="false">Latin</button></div></div>'''
 
 TOGGLE_JS = r'''<script>
 (function () {
-  const latin = {
-    'α':'Alp','β':'Bet','γ':'Gam','δ':'Del','ε':'Eps','ζ':'Zet','η':'Eta','θ':'The',
-    'ι':'Iot','κ':'Kap','λ':'Lam','μ':'Mu','ν':'Nu','ξ':'Xi','ο':'Omi','π':'Pi',
-    'ρ':'Rho','σ':'Sig','τ':'Tau','υ':'Ups','φ':'Phi','χ':'Chi','ψ':'Psi','ω':'Ome'
+  const greekNames = {
+    'α':'Alpha','β':'Beta','γ':'Gamma','δ':'Delta','ε':'Epsilon','ζ':'Zeta','η':'Eta','θ':'Theta',
+    'ι':'Iota','κ':'Kappa','λ':'Lambda','μ':'Mu','ν':'Nu','ξ':'Xi','ο':'Omicron','π':'Pi',
+    'ρ':'Rho','σ':'Sigma','τ':'Tau','υ':'Upsilon','φ':'Phi','χ':'Chi','ψ':'Psi','ω':'Omega'
   };
+  const constellations = {
+    And:'Andromedae',Ant:'Antliae',Aps:'Apodis',Aqr:'Aquarii',Aql:'Aquilae',Ara:'Arae',Ari:'Arietis',Aur:'Aurigae',
+    Boo:'Bootis',Cae:'Caeli',Cam:'Camelopardalis',Cnc:'Cancri',CVn:'Canum Venaticorum',CMa:'Canis Majoris',CMi:'Canis Minoris',
+    Cap:'Capricorni',Car:'Carinae',Cas:'Cassiopeiae',Cen:'Centauri',Cep:'Cephei',Cet:'Ceti',Cha:'Chamaeleontis',Cir:'Circini',
+    Col:'Columbae',Com:'Comae Berenices',CrA:'Coronae Australis',CrB:'Coronae Borealis',Crv:'Corvi',Crt:'Crateris',Cru:'Crucis',
+    Cyg:'Cygni',Del:'Delphini',Dor:'Doradus',Dra:'Draconis',Equ:'Equulei',Eri:'Eridani',For:'Fornacis',Gem:'Geminorum',Gru:'Gruis',
+    Her:'Herculis',Hor:'Horologii',Hya:'Hydrae',Hyi:'Hydri',Ind:'Indi',Lac:'Lacertae',Leo:'Leonis',LMi:'Leonis Minoris',Lep:'Leporis',
+    Lib:'Librae',Lup:'Lupi',Lyn:'Lyncis',Lyr:'Lyrae',Men:'Mensae',Mic:'Microscopii',Mon:'Monocerotis',Mus:'Muscae',Nor:'Normae',
+    Oct:'Octantis',Oph:'Ophiuchi',Ori:'Orionis',Pav:'Pavonis',Peg:'Pegasi',Per:'Persei',Phe:'Phoenicis',Pic:'Pictoris',Psc:'Piscium',
+    PsA:'Piscis Austrini',Pup:'Puppis',Pyx:'Pyxidis',Ret:'Reticuli',Sge:'Sagittae',Sgr:'Sagittarii',Sco:'Scorpii',Scl:'Sculptoris',
+    Sct:'Scuti',Ser:'Serpentis',Sex:'Sextantis',Tau:'Tauri',Tel:'Telescopii',Tri:'Trianguli',TrA:'Trianguli Australis',Tuc:'Tucanae',
+    UMa:'Ursae Majoris',UMi:'Ursae Minoris',Vel:'Velorum',Vir:'Virginis',Vol:'Volantis',Vul:'Vulpeculae'
+  };
+  const zodiac = {'♈':'Aries','♉':'Taurus','♊':'Gemini','♋':'Cancer','♌':'Leo','♍':'Virgo','♎':'Libra','♏':'Scorpio','♐':'Sagittarius','♑':'Capricorn','♒':'Aquarius','♓':'Pisces'};
+  const bodies = {'☉':'Sun','☽':'Moon','☿':'Mercury','♀':'Venus','♂':'Mars','♃':'Jupiter','♄':'Saturn'};
   const main = document.querySelector('main');
   if (!main) return;
 
-  const re = /([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?/g;
+  function makeSpan(greek, latin) {
+    const span = document.createElement('span');
+    span.className = 'notation-item';
+    span.dataset.greek = greek;
+    span.dataset.latin = latin;
+    span.textContent = greek;
+    return span;
+  }
+
+  document.querySelectorAll('.zodiac-glyph').forEach(function (span) {
+    const glyph = span.textContent.charAt(0);
+    if (!zodiac[glyph]) return;
+    span.classList.add('notation-item');
+    span.dataset.greek = glyph;
+    span.dataset.latin = zodiac[glyph];
+  });
+
+  const bayerRe = /([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?\s+([A-Z][A-Za-z]{2})\b/g;
+  const symbolRe = /[☉☽☿♀♂♃♄]/g;
+  const greekRe = /([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?/g;
   const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT);
   const nodes = [];
   while (walker.nextNode()) {
-    if (re.test(walker.currentNode.nodeValue)) nodes.push(walker.currentNode);
-    re.lastIndex = 0;
+    const node = walker.currentNode;
+    if (node.parentElement && node.parentElement.closest('.notation-item')) continue;
+    if (bayerRe.test(node.nodeValue) || symbolRe.test(node.nodeValue) || greekRe.test(node.nodeValue)) nodes.push(node);
+    bayerRe.lastIndex = symbolRe.lastIndex = greekRe.lastIndex = 0;
   }
 
-  for (const node of nodes) {
+  function replaceNode(node) {
+    const text = node.nodeValue;
+    const combined = new RegExp(bayerRe.source + '|' + symbolRe.source + '|' + greekRe.source, 'g');
     const frag = document.createDocumentFragment();
     let last = 0;
-    node.nodeValue.replace(re, function (match, letter, number, offset) {
-      frag.append(document.createTextNode(node.nodeValue.slice(last, offset)));
-      const span = document.createElement('span');
-      span.className = 'bayer-letter';
-      span.dataset.greek = match;
-      span.dataset.latin = latin[letter] + (number ? '-' + number : '');
-      span.textContent = match;
-      frag.append(span);
-      last = offset + match.length;
-      return match;
-    });
-    frag.append(document.createTextNode(node.nodeValue.slice(last)));
+    let match;
+    while ((match = combined.exec(text)) !== null) {
+      frag.append(document.createTextNode(text.slice(last, match.index)));
+      const token = match[0];
+      let latin = token;
+      const bm = token.match(/^([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?\s+([A-Z][A-Za-z]{2})$/);
+      if (bm) {
+        latin = greekNames[bm[1]] + (bm[2] || '') + ' ' + (constellations[bm[3]] || bm[3]);
+      } else if (bodies[token]) {
+        latin = bodies[token];
+      } else {
+        const gm = token.match(/^([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?$/);
+        if (gm) latin = greekNames[gm[1]] + (gm[2] || '');
+      }
+      frag.append(makeSpan(token, latin));
+      last = match.index + token.length;
+    }
+    frag.append(document.createTextNode(text.slice(last)));
     node.replaceWith(frag);
   }
+  nodes.forEach(replaceNode);
 
   const buttons = document.querySelectorAll('[data-bayer-mode]');
   function setMode(mode) {
-    document.querySelectorAll('.bayer-letter').forEach(function (span) {
+    document.querySelectorAll('.notation-item').forEach(function (span) {
       span.textContent = mode === 'latin' ? span.dataset.latin : span.dataset.greek;
     });
     buttons.forEach(function (button) {
@@ -98,7 +144,7 @@ def main() -> None:
         raise SystemExit(f"Expected 53 weekly pages, found {len(pages)}")
     for page in pages:
         add_toggle(page)
-    print("Added Greek/Latin Bayer toggle to 53 weekly pages")
+    print("Added Greek/Latin notation toggle to 53 weekly pages")
 
 
 if __name__ == "__main__":
