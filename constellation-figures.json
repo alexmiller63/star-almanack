@@ -51,7 +51,7 @@
         "inset_slug": "water-jar-kilroy-1919",
         "inset_label_offsets": {
           "HIP 110395": [12, 8],
-          "HIP 110960": [30, -13]
+          "HIP 110960": [30, 5]
         },
         "paths": [
           ["HIP 110395", "HIP 110960", "HIP 110672"],
