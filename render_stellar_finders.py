@@ -66,6 +66,8 @@ def all_refs(spec):
     for p in spec.get("figure_paths",[]):r.update(p)
     for a in spec.get("asterisms",[]):
         for p in a.get("paths",[]):r.update(p)
+    for d in spec.get("deep_sky_objects",[]):
+        if d.get("from_ref"):r.add(d["from_ref"])
     return r
 def center_refs(spec):
     r={spec["target"]}
@@ -85,6 +87,22 @@ def draw_boundary(ax,con,center):
     pts=boundary_projected(con,center)
     if len(pts)>=2:
         pts=pts+[pts[0]];ax.plot([p[0] for p in pts],[p[1] for p in pts],lw=1.6,color=BOUNDARY,alpha=.9,linestyle=(0,(4,3)),zorder=1)
+
+def draw_deep_sky_objects(ax,spec,idx,center):
+    for d in spec.get("deep_sky_objects",[]):
+        xy=project(float(d["ra_deg"]),float(d["dec_deg"]),*center)
+        if not xy:continue
+        ax.scatter([xy[0]],[xy[1]],s=130,facecolors="none",edgecolors=ASTERISM_GREEN,linewidths=2.2,zorder=8)
+        label=" · ".join(x for x in (d.get("name",""),d.get("type","")) if x)
+        ax.annotate(label,xy,xytext=tuple(d.get("label_offset",[10,10])),textcoords="offset points",ha="left",va="bottom",fontsize=9,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=.8),zorder=9)
+        ref=d.get("from_ref")
+        if ref and ref in idx:
+            s=idx[ref];fxy=project(s.ra_deg,s.dec_deg,*center)
+            if fxy:
+                ax.annotate("",xy=xy,xytext=fxy,arrowprops=dict(arrowstyle="<->",mutation_scale=20,linewidth=2.6,color=ASTERISM_GREEN,shrinkA=13,shrinkB=13),zorder=7)
+                if d.get("distance_label"):
+                    mx=(xy[0]+fxy[0])/2;my=(xy[1]+fxy[1])/2
+                    ax.annotate(d["distance_label"],(mx,my),xytext=(0,8),textcoords="offset points",ha="center",va="bottom",fontsize=8,color=ASTERISM_GREEN,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=.5),zorder=9)
 
 def render_asterism_inset(spec,a,stars,idx,out_dir):
     refs=sorted(asterism_refs(a));ss=[idx[r] for r in refs];center=spherical_center(ss)
@@ -172,6 +190,8 @@ def render_figure(name,spec,stars,out_dir):
         ss=[idx[r] for p in a.get("paths",[]) for r in p];xy=project(*spherical_center(ss),*center)
         if xy:ax.annotate(a["name"],xy,xytext=tuple(a.get("label_offset",[0,16])),textcoords="offset points",ha="center",fontsize=8,color=color,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1.2),zorder=6)
         if a.get("hide_component_labels",False):hidden_component_labels.update(asterism_refs(a))
+    dsos=spec.get("deep_sky_objects",[])
+    if dsos:draw_deep_sky_objects(ax,spec,idx,center)
     labels={r for p in spec.get("figure_paths",[]) for r in p}
     if not spec.get("show_figure_labels",True):labels=set()
     labels-=hidden_component_labels
@@ -185,7 +205,7 @@ def render_figure(name,spec,stars,out_dir):
     t=idx[target_ref];txy=project(t.ra_deg,t.dec_deg,*center)
     if txy:
         tx,ty=txy;span=ymax-ymin
-        ax.annotate("",xy=(tx,ty+span*.02),xytext=(tx,ty+span*.085),arrowprops=dict(arrowstyle="-|>",mutation_scale=32,linewidth=4.0,color=STAR,shrinkA=0,shrinkB=0),zorder=8)
+        if not dsos:ax.annotate("",xy=(tx,ty+span*.02),xytext=(tx,ty+span*.085),arrowprops=dict(arrowstyle="-|>",mutation_scale=32,linewidth=4.0,color=STAR,shrinkA=0,shrinkB=0),zorder=8)
         ax.annotate(t.target_label(),txy,xytext=(18,0),textcoords="offset points",ha="left",va="center",fontsize=10,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1),zorder=8)
     if tight_aqr:
         for a in spec.get("asterisms",[]):
