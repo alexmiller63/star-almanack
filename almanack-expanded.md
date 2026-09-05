@@ -1183,7 +1183,7 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 | Wed, Aug 26, 2026 | ♍ 4 | — |
 | Thu, Aug 27, 2026 | ♍ 5 | Rukbat (α Sgr) — Southern Summer<br>Arkab Prior (β1 Sgr) — Southern Summer<br>Arkab Posterior (β2 Sgr) — Southern Summer |
 | Fri, Aug 28, 2026 | ♍ 6 | 🌕 Full Moon — 04:18:30 UTC |
-| Sat, Aug 29, 2026 | ♍ 7 | M55<br>Albireo (β1 Cyg) — Northern Summer<br>Anser (α Vul) — Northern Summer |
+| Sat, Aug 29, 2026 | ♍ 7 | M55<br>Albireo (β1 Cyg) — Northern Summer<br>Albireo B (β2 Cyg) — Northern Summer<br>Anser (α Vul) — Northern Summer |
 | Sun, Aug 30, 2026 | ♍ 8 | — |
 
 ### Weekly Classical-Planet Ephemeris
