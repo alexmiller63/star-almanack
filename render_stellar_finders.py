@@ -21,6 +21,9 @@ class Star:
         g=greek_bayer_symbol(self.bayer)
         b=f"{g} {self.con}" if g and self.con!=figure_constellation else g
         return " ".join(x for x in (b,self.proper) if x) or self.hip_ref or f"HYG {self.hyg_id}"
+    def inset_label(self):
+        g=greek_bayer_symbol(self.bayer)
+        return " ".join(x for x in (g,self.proper) if x) or self.hip_ref or f"HYG {self.hyg_id}"
     def target_label(self): return " ".join(x for x in (self.proper,greek_bayer_symbol(self.bayer),self.con) if x)
 
 def greek_bayer_symbol(bayer):
@@ -68,6 +71,10 @@ def center_refs(spec):
     r={spec["target"]}
     for p in spec.get("figure_paths",[]):r.update(p)
     return r
+def asterism_refs(a):
+    r=set()
+    for p in a.get("paths",[]):r.update(p)
+    return r
 def marker_area(m,lim):return max(2,5+5*(lim-m))
 def draw_path(ax,path,index,center,lw,color):
     pts=[project(index[r].ra_deg,index[r].dec_deg,*center) for r in path];pts=[p for p in pts if p]
@@ -77,7 +84,38 @@ def boundary_projected(con,center):
 def draw_boundary(ax,con,center):
     pts=boundary_projected(con,center)
     if len(pts)>=2:
-        pts=pts+[pts[0]];ax.plot([p[0] for p in pts],[p[1] for p in pts],lw=2.0,color=BOUNDARY,alpha=.98,zorder=1)
+        pts=pts+[pts[0]];ax.plot([p[0] for p in pts],[p[1] for p in pts],lw=1.6,color=BOUNDARY,alpha=.9,linestyle=(0,(4,3)),zorder=1)
+
+def render_asterism_inset(spec,a,stars,idx,out_dir):
+    refs=sorted(asterism_refs(a));ss=[idx[r] for r in refs];center=spherical_center(ss)
+    pts=[project(s.ra_deg,s.dec_deg,*center) for s in ss]
+    xs=[p[0] for p in pts if p];ys=[p[1] for p in pts if p]
+    xspan=max(max(xs)-min(xs),2.5);yspan=max(max(ys)-min(ys),2.5)
+    padx=max(2.2,xspan*.65);pady=max(2.0,yspan*.75)
+    xmin,xmax=min(xs)-padx,max(xs)+padx;ymin,ymax=min(ys)-pady,max(ys)+pady
+    vis=[s for s in stars if s.mag<=7 and (p:=project(s.ra_deg,s.dec_deg,*center)) and xmin<=p[0]<=xmax and ymin<=p[1]<=ymax]
+    proj=[(*project(s.ra_deg,s.dec_deg,*center),s) for s in vis]
+    fig,ax=plt.subplots(figsize=(7.2,5.8),facecolor=NIGHT);ax.set_facecolor(NIGHT)
+    ax.set_xlim(xmax,xmin);ax.set_ylim(ymin,ymax);ax.set_aspect("equal")
+    if proj:ax.scatter([p[0] for p in proj],[p[1] for p in proj],s=[marker_area(p[2].mag,7) for p in proj],color=STAR,zorder=3)
+    for p in a.get("paths",[]):draw_path(ax,p,idx,center,4.0,ASTERISM_GREEN)
+    label_offsets=a.get("inset_label_offsets",{})
+    for r in refs:
+        s=idx[r];xy=project(s.ra_deg,s.dec_deg,*center)
+        if not xy:continue
+        if r in label_offsets:
+            off=tuple(label_offsets[r])
+            ha="right" if off[0]<0 else "left";va="top" if off[1]<0 else "bottom"
+        else:
+            off=(-10,8) if xy[0]<0 else (10,8);ha="right" if off[0]<0 else "left";va="bottom"
+        ax.annotate(s.inset_label(),xy,xytext=off,textcoords="offset points",ha=ha,va=va,fontsize=10,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1),zorder=6)
+    ax.set_title(a["name"],color=TEXT,fontsize=15,pad=12)
+    ax.text(.5,.015,"Binocular identification · Greek letter + proper name",transform=ax.transAxes,ha="center",va="bottom",fontsize=8,color=TEXT)
+    ax.text(.5,-.04,"East ←                                      → West",transform=ax.transAxes,ha="center",va="top",fontsize=8,color=TEXT)
+    ax.set_xticks([]);ax.set_yticks([]);ax.grid(False)
+    for sp in ax.spines.values():sp.set_visible(False)
+    slug=a.get("inset_slug",a["name"].lower().replace(" ","-"));out=out_dir/f"{slug}-inset.svg"
+    fig.tight_layout();fig.savefig(out,bbox_inches="tight",facecolor=fig.get_facecolor());plt.close(fig);return out
 
 def render_figure(name,spec,stars,out_dir):
     idx=star_index(stars);missing=sorted(r for r in all_refs(spec) if r not in idx)
@@ -97,38 +135,44 @@ def render_figure(name,spec,stars,out_dir):
     ax.set_xlim(xmax,xmin);ax.set_ylim(ymin,ymax);ax.set_aspect("equal");draw_boundary(ax,spec["constellation"],center)
     if proj:ax.scatter([p[0] for p in proj],[p[1] for p in proj],s=[marker_area(p[2].mag,7) for p in proj],color=STAR,zorder=3)
     for p in spec.get("figure_paths",[]):draw_path(ax,p,idx,center,2.7,FIGURE_BLUE)
+    hidden_component_labels=set()
     for a in spec.get("asterisms",[]):
         if tight_aqr and a["name"]!="Water Jar":continue
         color=ASTERISM_GREEN if a["name"]=="Water Jar" else FIGURE_BLUE;lw=3.5 if a["name"]=="Water Jar" else 2.8
         for p in a.get("paths",[]):draw_path(ax,p,idx,center,lw,color)
         ss=[idx[r] for p in a.get("paths",[]) for r in p];xy=project(*spherical_center(ss),*center)
         if xy:ax.annotate(a["name"],xy,xytext=tuple(a.get("label_offset",[0,16])),textcoords="offset points",ha="center",fontsize=8,color=color,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1.2),zorder=6)
+        if a.get("hide_component_labels",False):hidden_component_labels.update(asterism_refs(a))
     labels={r for p in spec.get("figure_paths",[]) for r in p}
-    target_ref=spec["target"]
-    label_offsets=spec.get("label_offsets",{})
+    if not spec.get("show_figure_labels",True):labels=set()
+    labels-=hidden_component_labels
+    target_ref=spec["target"];label_offsets=spec.get("label_offsets",{})
     for r in sorted(labels):
         if r==target_ref:continue
         s=idx[r];xy=project(s.ra_deg,s.dec_deg,*center);lab=s.display_label(spec["constellation"])
         if xy:
-            off=tuple(label_offsets.get(r,[5,5]))
-            ha="right" if off[0]<0 else "left"
-            va="top" if off[1]<0 else "bottom"
+            off=tuple(label_offsets.get(r,[5,5]));ha="right" if off[0]<0 else "left";va="top" if off[1]<0 else "bottom"
             ax.annotate(lab,xy,xytext=off,textcoords="offset points",ha=ha,va=va,fontsize=7.5,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=.6),zorder=6)
     t=idx[target_ref];txy=project(t.ra_deg,t.dec_deg,*center)
     if txy:
         tx,ty=txy;span=ymax-ymin
-        ax.annotate("",xy=(tx,ty+span*.025),xytext=(tx,ty+span*.16),arrowprops=dict(arrowstyle="-|>",mutation_scale=34,linewidth=4.0,color=STAR,shrinkA=0,shrinkB=0),zorder=8)
-        ax.annotate(t.target_label(),txy,xytext=(16,0),textcoords="offset points",ha="left",va="center",fontsize=10,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1),zorder=8)
+        ax.annotate("",xy=(tx,ty+span*.02),xytext=(tx,ty+span*.085),arrowprops=dict(arrowstyle="-|>",mutation_scale=32,linewidth=4.0,color=STAR,shrinkA=0,shrinkB=0),zorder=8)
+        ax.annotate(t.target_label(),txy,xytext=(18,0),textcoords="offset points",ha="left",va="center",fontsize=10,color=TEXT,bbox=dict(facecolor=NIGHT,edgecolor="none",pad=1),zorder=8)
     ax.set_title(f"{t.target_label()} Finder",color=TEXT,fontsize=14,pad=12)
     ax.text(.5,.015,spec["caption"],transform=ax.transAxes,ha="center",va="bottom",fontsize=8,color=TEXT)
     ax.text(.5,-.035,"East ←                                      → West",transform=ax.transAxes,ha="center",va="top",fontsize=8,color=TEXT)
     ax.set_xticks([]);ax.set_yticks([]);ax.grid(False)
     for sp in ax.spines.values():sp.set_visible(False)
     out_dir.mkdir(parents=True,exist_ok=True);out=out_dir/f"{spec['target_name'].lower()}-finder.svg"
-    fig.tight_layout();fig.savefig(out,bbox_inches="tight",facecolor=fig.get_facecolor());plt.close(fig);return out
+    fig.tight_layout();fig.savefig(out,bbox_inches="tight",facecolor=fig.get_facecolor());plt.close(fig)
+    outputs=[out]
+    for a in spec.get("asterisms",[]):
+        if a.get("inset",False):outputs.append(render_asterism_inset(spec,a,stars,idx,out_dir))
+    return outputs
 
 def main():
     p=argparse.ArgumentParser();p.add_argument("hyg_catalog",type=Path);p.add_argument("--config",type=Path,default=Path("constellation-figures.json"));p.add_argument("--figure",default="all");p.add_argument("--out-dir",type=Path,default=Path("observer-views/W41"));a=p.parse_args()
     specs=json.loads(a.config.read_text());stars=load_hyg(a.hyg_catalog);names=list(specs) if a.figure.lower()=="all" else [a.figure]
-    for n in names:print(f"wrote {render_figure(n,specs[n],stars,a.out_dir)}")
+    for n in names:
+        for out in render_figure(n,specs[n],stars,a.out_dir):print(f"wrote {out}")
 if __name__=="__main__":main()
