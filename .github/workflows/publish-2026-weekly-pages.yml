@@ -29,6 +29,22 @@ jobs:
       - name: Add Greek Latin Bayer toggle
         run: python add_greek_latin_toggle.py
 
+      - name: Refine portrait calendar columns
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          old = "table.calendar th:first-child,table.calendar td:first-child{width:22%}table.calendar th:nth-child(2),table.calendar td:nth-child(2){width:22%}table.calendar th:nth-child(3),table.calendar td:nth-child(3){width:56%}"
+          new = "table.calendar th:first-child,table.calendar td:first-child{width:27%}table.calendar th:nth-child(2),table.calendar td:nth-child(2){width:23%}table.calendar th:nth-child(3),table.calendar td:nth-child(3){width:50%}table.calendar td:first-child{font-size:.82rem;line-height:1.3}"
+          pages = sorted(Path('site/2026').glob('W??/index.html'))
+          for page in pages:
+              text = page.read_text(encoding='utf-8')
+              if old not in text:
+                  raise SystemExit(f'Expected portrait calendar CSS not found in {page}')
+              page.write_text(text.replace(old, new, 1), encoding='utf-8')
+          print('Refined portrait calendar to 27% date, 23% zodiac, 50% events')
+          PY
+
       - name: Add Kilroy deployment diagnostic to W01
         run: |
           python - <<'PY'
@@ -67,8 +83,10 @@ jobs:
               assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
               assert 'width:16%' in text, f'Narrow desktop date width missing in {page}'
               assert 'width:8%' in text, f'Narrow desktop zodiac width missing in {page}'
-              assert 'width:22%' in text, f'Refined portrait date/zodiac width missing in {page}'
-              assert 'width:56%' in text, f'Refined portrait events width missing in {page}'
+              assert 'width:27%' in text, f'Refined portrait date width missing in {page}'
+              assert 'width:23%' in text, f'Refined portrait zodiac width missing in {page}'
+              assert 'width:50%' in text, f'Refined portrait events width missing in {page}'
+              assert 'font-size:.82rem;line-height:1.3' in text, f'Compact portrait date typography missing in {page}'
               assert 'flex-direction:column' in text, f'Stacked portrait zodiac layout missing in {page}'
               assert 'white-space:normal;text-align:center;font-size:.86rem' in text, f'Portrait zodiac wrapping rule missing in {page}'
               assert 'data-bayer-mode="greek"' in text, f'Greek notation toggle missing in {page}'
@@ -95,7 +113,7 @@ jobs:
           index = (root / 'index.html').read_text(encoding='utf-8')
           links = re.findall(r'href="W\d{2}/"', index)
           assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages, Greek/Symbols/Latin/Mixed Learner notation, asterisms, meteor showers, refined portrait calendar layout, Kilroy diagnostic, copyright, W53 boundary, and navigation')
+          print('Verified 53 weekly pages with refined portrait calendar layout and existing Almanack validations')
           PY
 
       - name: Commit published pages
