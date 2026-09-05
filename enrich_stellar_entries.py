@@ -1,24 +1,9 @@
 #!/usr/bin/env python3
-"""Enrich every stellar calendar entry with consistent observer-facing metadata.
+"""Enrich catalog-backed calendar entries with observer-facing metadata.
 
-Source files:
-- expanded-bayer-visibility-2026.csv: authoritative α/β Bayer identity, coordinates, magnitude, date
-- bright-star-visibility-2026.csv: authoritative V<=2.50 bright-star layer and dates
-
-Output:
-- rewrites stellar entries in almanack-expanded.md after build_expanded_almanack.py
-
-Display convention:
-  Proper name (Bayer) — V N — Declination-band Season
-
-The authoritative source magnitude remains decimal. Almanack calendar text rounds
-stellar magnitudes to the nearest whole number; chart presentation uses one decimal
-place. Every catalog-backed stellar entry with an authoritative source magnitude
-displays that magnitude.
-
-Declination Band is derived from declination using the tropics (±23.44°):
-Northern / Tropical / Southern. Season is the northern-calendar observing season
-of the best-visibility civil date: Winter / Spring / Summer / Autumn.
+Stars display whole-number V magnitude plus Declination-band Season.
+Messier objects display Declination-band Season. Authoritative source values
+retain their full precision; only Almanack presentation is rounded/formatted.
 """
 from __future__ import annotations
 
@@ -33,6 +18,8 @@ ROOT = Path(__file__).parent
 TARGET = ROOT / "almanack-expanded.md"
 BAYER = ROOT / "expanded-bayer-visibility-2026.csv"
 BRIGHT = ROOT / "bright-star-visibility-2026.csv"
+MESSIER = ROOT / "messier-visibility-2026.csv"
+FIXED_OBJECTS = ROOT / "fixed-objects.yaml"
 
 GREEK = {
     "Alp": "α", "Bet": "β", "Gam": "γ", "Del": "δ", "Eps": "ε",
@@ -42,14 +29,12 @@ GREEK = {
     "Phi": "φ", "Chi": "χ", "Psi": "ψ", "Ome": "ω",
 }
 
-
-def bayer_display(code: str, con: str) -> str:
-    m = re.fullmatch(r"([A-Z][a-z]{2})(?:-?(\d+))?", (code or "").strip())
-    if not m:
-        return f"{code} {con}".strip()
-    symbol = GREEK.get(m.group(1), m.group(1))
-    suffix = m.group(2) or ""
-    return f"{symbol}{suffix} {con}".strip()
+ROW_RE = re.compile(
+    r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| )([^|]*)( \|)$"
+)
+MONTHS = {m: i for i, m in enumerate(
+    ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1
+)}
 
 
 def declination_band(dec_deg: str) -> str:
@@ -73,7 +58,6 @@ def season_for(d: date) -> str:
 
 
 def whole_mag(value: str) -> str:
-    """Round an authoritative decimal magnitude to a whole Almanack magnitude."""
     value = (value or "").strip()
     if not value:
         return ""
@@ -84,17 +68,22 @@ def whole_mag(value: str) -> str:
     return str(int(rounded))
 
 
+def bayer_display(code: str, con: str) -> str:
+    m = re.fullmatch(r"([A-Z][a-z]{2})(?:-?(\d+))?", (code or "").strip())
+    if not m:
+        return f"{code} {con}".strip()
+    return f"{GREEK.get(m.group(1), m.group(1))}{m.group(2) or ''} {con}".strip()
+
+
 def latin_key(code: str, con: str) -> str:
     m = re.fullmatch(r"([A-Z][a-z]{2})(?:-?(\d+))?", (code or "").strip())
     if not m:
         return f"{code} {con}".strip().casefold()
-    suffix = m.group(2)
-    if suffix:
-        return f"{m.group(1).casefold()} {suffix} {con}".strip().casefold()
-    return f"{m.group(1).casefold()} {con}".strip().casefold()
+    suffix = f" {m.group(2)}" if m.group(2) else ""
+    return f"{m.group(1).casefold()}{suffix} {con}".strip().casefold()
 
 
-def canonical(row: dict[str, str]) -> str:
+def canonical_star(row: dict[str, str]) -> str:
     proper = (row.get("proper") or "").strip()
     code = (row.get("bayer_code") or row.get("bayer") or "").strip()
     con = (row.get("con") or "").strip()
@@ -118,45 +107,72 @@ def aliases(row: dict[str, str]) -> list[str]:
     code = (row.get("bayer_code") or row.get("bayer") or "").strip()
     con = (row.get("con") or "").strip()
     short = bayer_display(code, con)
-    vals = [proper, designation if designation.startswith(tuple(GREEK.values())) else "", short]
-    return [v for v in vals if v]
+    return [v for v in (proper, designation if designation.startswith(tuple(GREEK.values())) else "", short) if v]
 
 
 def load_stars() -> dict[str, list[tuple[list[str], str]]]:
     by_date: dict[str, list[tuple[list[str], str]]] = defaultdict(list)
     seen = set()
-
     with BRIGHT.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             row = dict(row)
             row["bayer_code"] = row.get("bayer", "")
             key = (row["best_date"], (row.get("proper") or "").casefold(), latin_key(row.get("bayer", ""), row.get("con", "")))
             seen.add(key)
-            by_date[row["best_date"]].append((aliases(row), canonical(row)))
-
+            by_date[row["best_date"]].append((aliases(row), canonical_star(row)))
     with BAYER.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             key = (row["best_date"], (row.get("proper") or "").casefold(), latin_key(row.get("bayer_code", ""), row.get("con", "")))
-            if key in seen:
-                continue
-            by_date[row["best_date"]].append((aliases(row), canonical(row)))
+            if key not in seen:
+                by_date[row["best_date"]].append((aliases(row), canonical_star(row)))
     return by_date
 
 
-ROW_RE = re.compile(
-    r"(?m)^(\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| )([^|]*)( \|)$"
-)
-MONTHS = {m: i for i, m in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
+def load_messier_declinations() -> dict[str, str]:
+    """Read Messier declinations from the repository source-of-truth inventory.
+
+    fixed-objects.yaml stores each Messier record as one CSV-like YAML flow row;
+    csv.reader safely handles quoted names while we use only id and declination.
+    """
+    out: dict[str, str] = {}
+    for raw in FIXED_OBJECTS.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not re.match(r"^- \[M\d{1,3},", line):
+            continue
+        payload = line[3:-1] if line.endswith("]") else line[3:]
+        fields = next(csv.reader([payload], skipinitialspace=True))
+        if len(fields) >= 7:
+            out[fields[0].strip().upper()] = fields[6].strip()
+    return out
+
+
+def load_messier() -> dict[str, dict[str, str]]:
+    decs = load_messier_declinations()
+    out: dict[str, dict[str, str]] = {}
+    with MESSIER.open(encoding="utf-8", newline="") as f:
+        rows = list(csv.DictReader(f))
+    if len(rows) != 110:
+        raise SystemExit(f"Expected 110 Messier visibility rows, found {len(rows)}")
+    for row in rows:
+        name = row["messier"].upper()
+        dec = decs.get(name)
+        if dec is None:
+            raise SystemExit(f"Missing source declination for {name}")
+        d = date.fromisoformat(row["best_date"])
+        out[name] = {
+            "best_date": row["best_date"],
+            "label": f"{name} — {declination_band(dec)} {season_for(d)}",
+        }
+    return out
 
 
 def alias_matches(part: str, alias: str) -> bool:
-    """Match one raw stellar token without swallowing a longer proper name."""
     p = part.strip().casefold()
     a = alias.strip().casefold()
     return p == a or p.startswith(a + " (") or p.startswith(a + " —")
 
 
-def enrich_cell(date_iso: str, cell: str, stars: dict[str, list[tuple[list[str], str]]]) -> str:
+def enrich_cell(date_iso: str, cell: str, stars, messier) -> str:
     if not cell.strip() or cell.strip() == "—":
         return cell
     parts = cell.split("<br>")
@@ -168,6 +184,13 @@ def enrich_cell(date_iso: str, cell: str, stars: dict[str, list[tuple[list[str],
             if any(alias_matches(part, alias) for alias in star_aliases if alias):
                 replacement = label
                 break
+        if replacement is None:
+            m = re.fullmatch(r"\s*(M\d{1,3})(?:\s+—.*)?\s*", part, flags=re.IGNORECASE)
+            if m:
+                name = m.group(1).upper()
+                info = messier.get(name)
+                if info and info["best_date"] == date_iso:
+                    replacement = info["label"]
         out.append(replacement or part)
     deduped = []
     seen = set()
@@ -181,13 +204,19 @@ def enrich_cell(date_iso: str, cell: str, stars: dict[str, list[tuple[list[str],
 def main() -> None:
     text = TARGET.read_text(encoding="utf-8")
     stars = load_stars()
+    messier = load_messier()
 
     def repl(m: re.Match[str]) -> str:
         d = date(int(m.group(4)), MONTHS[m.group(2)], int(m.group(3))).isoformat()
-        return m.group(1) + enrich_cell(d, m.group(5), stars) + m.group(6)
+        return m.group(1) + enrich_cell(d, m.group(5), stars, messier) + m.group(6)
 
     updated = ROW_RE.sub(repl, text)
-    TARGET.write_text(updated, encoding="utf-8")
+
+    # Systemic Messier regression: every one of the 110 catalog entries must now
+    # carry its declination band and observing season on its computed date.
+    for name, info in messier.items():
+        if info["label"] not in updated:
+            raise SystemExit(f"Expected enriched Messier entry not found: {info['label']}")
 
     expected = "Enif (ε Peg) — V 2 — Tropical Autumn"
     if expected not in updated:
@@ -199,7 +228,9 @@ def main() -> None:
         raise SystemExit("Decimal stellar magnitude survived Almanack rendering")
     if " — variable — " in updated:
         raise SystemExit("Obsolete variable word survived")
-    print("Enriched stellar calendar entries; whole-number catalog magnitudes PASS")
+
+    TARGET.write_text(updated, encoding="utf-8")
+    print("Enriched stellar and all 110 Messier calendar entries; catalog metadata PASS")
 
 
 if __name__ == "__main__":
