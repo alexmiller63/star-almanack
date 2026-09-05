@@ -94,25 +94,26 @@ jobs:
               if proper:
                   events = calendar_events.get(r['best_date'], '')
                   assert proper in events, f'No calendar representation found for {proper} on {r["best_date"]}'
-                  whole_mag = str(round(float(r['representative_vmax'])))
                   variable = proper.casefold() in variable_names
-                  expected_mag = f"V {whole_mag}" if variable else whole_mag
-                  assert re.search(rf'(?<![A-Za-z0-9]){re.escape(expected_mag)}(?![0-9.])', events), (
-                      f'Expected {expected_mag} for {proper} on {r["best_date"]}; events={events}'
-                  )
                   if variable:
-                      assert f"V {whole_mag}" in events, f'Variable marker/magnitude missing for {proper} on {r["best_date"]}'
+                      mag = (r.get('representative_vmax') or '').strip()
+                      assert mag, f'Variable star {proper} has no source magnitude'
+                      expected_mag = f"V {mag}"
+                      assert expected_mag in events, f'Expected {expected_mag} for variable {proper} on {r["best_date"]}; events={events}'
                   else:
-                      assert f"V {whole_mag}" not in events, f'Non-variable star incorrectly marked V for {proper} on {r["best_date"]}'
+                      assert not re.search(r'\bV\s+[+-]?\d', events), (
+                          f'Non-variable star incorrectly marked with V magnitude for {proper}; events={events}'
+                      )
 
           enif = calendar_events.get('2026-10-05', '')
-          assert 'Enif (ε Peg) — V 2 — Tropical Autumn' in enif, enif
+          assert 'Enif (ε Peg) — V 2.38 — Tropical Autumn' in enif, enif
+          assert 'V 2 —' not in enif, enif
           assert 'V2.38' not in enif, enif
           assert ' — variable — ' not in enif, enif
 
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
-          print('Verified 53 weeks, 371 day rows, 110 Messier objects, bright-star metadata, and Enif enrichment')
+          print('Verified 53 weeks, 371 day rows, 110 Messier objects, variable-only stellar magnitudes, and Enif enrichment')
           PY
 
       - name: Generate 53 weekly HTML pages
@@ -139,7 +140,8 @@ jobs:
               assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
 
           w41 = (root / 'W41' / 'index.html').read_text(encoding='utf-8')
-          assert 'Enif (ε Peg) — V 2 — Tropical Autumn' in w41, 'Enif metadata missing from published W41'
+          assert 'Enif (ε Peg) — V 2.38 — Tropical Autumn' in w41, 'Enif metadata missing from published W41'
+          assert 'V 2 —' not in w41, 'Rounded Enif magnitude survived publication'
           assert 'V2.38' not in w41, 'Old Enif magnitude survived publication'
           assert ' — variable — ' not in w41, 'Old variable word survived publication'
           print('Verified 53 weekly pages and enriched Enif publication')
