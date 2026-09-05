@@ -19,6 +19,7 @@ on:
       - compute_bright_star_visibility_2026.py
       - build_expanded_almanack.py
       - enrich_stellar_entries.py
+      - audit_stellar_entries.py
       - publish_weekly_pages.py
       - .github/workflows/build-2026-expanded-almanack.yml
 
@@ -37,6 +38,9 @@ jobs:
 
       - name: Enrich stellar entries
         run: python enrich_stellar_entries.py
+
+      - name: Audit every catalog-backed stellar entry
+        run: python audit_stellar_entries.py
 
       - name: Verify expanded Almanack structure and stellar metadata
         run: |
