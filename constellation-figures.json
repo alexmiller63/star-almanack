@@ -26,7 +26,7 @@
     "constellation": "Aqr",
     "target": "Alp Aqr",
     "target_name": "Sadalmelik",
-    "field_deg": 50.0,
+    "field_deg": 58.0,
     "figure_cutoff": 4.0,
     "exception_cutoff": 4.5,
     "exceptions": ["The Aqr"],
