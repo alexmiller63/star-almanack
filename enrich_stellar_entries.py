@@ -167,6 +167,18 @@ ROW_RE = re.compile(
 MONTHS = {m: i for i, m in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
 
 
+def alias_matches(part: str, alias: str) -> bool:
+    """Match one raw stellar token without swallowing a longer proper name.
+
+    Example: the alias ``Albireo`` must not match the separate raw token
+    ``Albireo B``. Exact raw names and already-formatted canonical entries are
+    accepted.
+    """
+    p = part.strip().casefold()
+    a = alias.strip().casefold()
+    return p == a or p.startswith(a + " (") or p.startswith(a + " —")
+
+
 def enrich_cell(date_iso: str, cell: str, stars: dict[str, list[tuple[list[str], str]]]) -> str:
     if not cell.strip() or cell.strip() == "—":
         return cell
@@ -175,9 +187,8 @@ def enrich_cell(date_iso: str, cell: str, stars: dict[str, list[tuple[list[str],
     out = []
     for part in parts:
         replacement = None
-        folded = part.casefold()
         for star_aliases, label in candidates:
-            if any(alias.casefold() in folded for alias in star_aliases if alias):
+            if any(alias_matches(part, alias) for alias in star_aliases if alias):
                 replacement = label
                 break
         out.append(replacement or part)
