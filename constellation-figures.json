@@ -16,9 +16,8 @@
     "asterisms": [
       {
         "name": "Great Square of Pegasus",
-        "paths": [
-          ["Alp And", "Bet Peg", "Alp Peg", "Gam Peg", "Alp And"]
-        ]
+        "label_offset": [0, 18],
+        "paths": [["Alp And", "Bet Peg", "Alp Peg", "Gam Peg", "Alp And"]]
       }
     ],
     "caption": "Pegasus · winged horse · Great Square outlined"
@@ -41,9 +40,8 @@
     "asterisms": [
       {
         "name": "Water Jar",
-        "paths": [
-          ["Gam Aqr", "Zet Aqr", "Eta Aqr", "Pi Aqr", "Gam Aqr"]
-        ]
+        "label_offset": [0, 24],
+        "paths": [["Gam Aqr", "Zet Aqr", "Eta Aqr", "Pi Aqr", "Gam Aqr"]]
       }
     ],
     "caption": "Aquarius · water-bearer · Water Jar outlined"
