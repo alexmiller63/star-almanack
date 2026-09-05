@@ -134,3 +134,9 @@ Observing-aid notation is Almanack-wide, not restricted to Special Mentions. Sta
 The classification is practical rather than a statement of an absolute physiological detection limit. For a multiple system, classify the actual observing task: Sirius itself is a naked-eye target, while observing Sirius B is a telescope task. Variable objects may require context when their practical visibility changes substantially with brightness.
 
 For urban Natural Philosophers, the Almanack should explicitly recommend astronomical binoculars as a particularly useful first instrument. Binoculars recover many stars hidden by city light pollution, enrich open clusters, make a number of Messier objects approachable, provide a wide field with both eyes, and require very little setup. The **B** class is therefore a first-class observing mode, not shorthand for an inferior telescope target.
+
+## 2026-09-04 — Urban observer equipment principle
+
+The Almanack's observing-aid recommendation should answer **“What should a city observer take outside to enjoy this object?”**, not “Could an exceptional observer possibly detect this object without optics under favorable or dark-sky conditions?” Light pollution therefore justifies a conservative naked-eye classification, and objects that are technically naked-eye under dark skies may deliberately receive a binocular recommendation for an urban observer.
+
+Binocular observing is a positive, first-class category and supports the Almanack's role as an advertisement for binocular astronomy. The notation remains **👁** for naked eye, **B** for binoculars, and **🔭** for telescope. Exact magnitude/equipment borders are not yet settled and must not be treated as final merely because provisional thresholds exist in implementation code. Extended objects such as galaxies and nebulae may also require classification beyond integrated magnitude alone.
