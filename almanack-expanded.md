@@ -50,6 +50,8 @@ The Pleiades (M45, the Pleiades, an open cluster) are the week's natural showpie
 
 **What to expect:** Photographs show blue reflection nebulosity around the Pleiades; ordinary visual observing usually emphasizes the stars, not vivid blue nebulosity. The binocular view may be the most aesthetically satisfying view of all.
 
+**Meteor shower:** The Quadrantids peak on January 3. Their maximum is usually sharp, but bright moonlight is an important limitation in 2026.
+
 ### Chart
 
 `ISO2026-W1-chart.png` — chart slot.
@@ -91,6 +93,8 @@ January 5–11 is a restrained observing week. The Almanack marks α Horologii a
 **Small telescope:** There is no need to force a telescopic showpiece into this week. Use low power to confirm fields and practice star-hopping, especially if α Horologii is difficult from your site. The telescope's narrower field can make navigation harder, so verify the binocular-scale pattern first.
 
 **What to expect:** The close Venus–Mars geometry is a useful reminder that angular separation alone does not determine observability. A planet can be geometrically close to another object yet effectively unobservable when it lies too near the Sun. After Last Quarter, the Moon becomes progressively less intrusive in the evening, improving dark-sky conditions as the week closes.
+
+**Asterism:** Orion's Belt is an easy three-star anchor for winter orientation; follow the Belt southeast toward Sirius and northwest toward Aldebaran.
 
 ### Chart
 
@@ -217,6 +221,8 @@ This is one of the year's strongest winter observing weeks: M42, the Great Nebul
 **Small telescope:** M42, the Great Nebula in Orion, a diffuse nebula is transformed: the bright central nebula shows shape and texture, and the Trapezium resolves into a tiny stellar grouping. M1, the Crab Nebula, a supernova remnant is much subtler, usually a dim gray oval rather than the colorful filamentary Crab seen in photographs.
 
 **What to expect:** M42, the Great Nebula in Orion, a diffuse nebula is unusually impressive visually, but even it will not resemble a long-exposure image. Color is generally muted or absent to the eye; structure, contrast, and the embedded stars are the visual rewards.
+
+**Asterism:** The Winter Triangle—Sirius, Procyon, and Betelgeuse—gives a large naked-eye frame for the season's bright-star field.
 
 ### Chart
 
@@ -385,6 +391,8 @@ M47, M46, and M93 (NGC 2447), an open cluster make this a strong open-cluster we
 **Small telescope:** M46 (NGC 2437), an open cluster blossoms into many faint stars, while M47 (NGC 2422), an open cluster remains a looser pattern of brighter ones. Comparing them at the same magnification is more informative than simply checking both off a list.
 
 **What to expect:** Catalog objects of the same type are not visually interchangeable. Stellar brightness, richness, concentration, and distance combine to give each open cluster a distinct appearance.
+
+**Asterism:** The Winter Hexagon links Capella, Aldebaran, Rigel, Sirius, Procyon, and Pollux into a broad guide around the winter sky.
 
 ### Chart
 
@@ -680,6 +688,8 @@ New Moon on April 17 is followed immediately by M95, M96, and M105 (NGC 3379), a
 
 **What to expect:** Photographs emphasize spiral structure and color that a small telescope usually will not show. Success begins with detecting shape, concentration, and orientation—not reproducing an image from an observatory.
 
+**Asterism:** The Sickle of Leo, beginning at Regulus, is the easiest pattern for tracing the head and mane of Leo.
+
 ### Chart
 
 `ISO2026-W16-chart.png` — chart slot.
@@ -721,6 +731,8 @@ Dubhe and Merak mark the Big Dipper's bowl on April 23, followed by the Owl Nebu
 **Small telescope:** M97, the Owl Nebula, a planetary nebula is a round, diffuse planetary nebula; the famous dark 'eyes' are subtle and may require larger aperture, excellent conditions, or a nebula filter. M108 (NGC 3556), a spiral galaxy is an elongated, low-surface-brightness galaxy nearby.
 
 **What to expect:** Catalog photographs can make the Owl's face seem obvious. At a modest eyepiece the first achievement is simply seeing the pale round disk. Fine internal contrast is a second-stage observation.
+
+**Meteor shower:** The April Lyrids peak on April 22, with the nominal 2026 maximum near 19:40 UT. The expected ZHR is about 18, and moonlight should not be a major obstacle.
 
 ### Chart
 
@@ -806,6 +818,8 @@ The Beltane cross-quarter point falls on May 5, while Denebola and Phecda help e
 
 **What to expect:** The calendar combines a seasonal solar marker with a low-contrast galaxy. That contrast is useful: some Almanack events are obvious to the unaided eye, while others are invitations to slow, patient telescopic detection.
 
+**Meteor shower:** The η-Aquariids peak on May 6. The shower can be strong, especially from lower latitudes and the Southern Hemisphere, but the waning gibbous Moon interferes in 2026.
+
 ### Chart
 
 `ISO2026-W19-chart.png` — chart slot.
@@ -847,6 +861,8 @@ This is one of the densest galaxy weeks in the Almanack. M98, M106, M99, M61, M8
 **Small telescope:** This is the week to explore the Virgo Cluster deliberately. M84, M86, and M87 (NGC 4486), an elliptical galaxy are strong starting points; several other Messier galaxies become detectable as small gray glows under a dark sky. Move slowly and identify the field stars so that one galaxy is not mistaken for another.
 
 **What to expect:** A photograph of the Virgo Cluster can be crowded with obvious galaxies. At the eyepiece many are understated patches with differences in concentration, elongation, and brightness. The accomplishment is learning the geography of the cluster and distinguishing those subtle forms—not seeing photographic spiral detail.
+
+**Asterism:** The Big Dipper is an observing tool as much as a familiar pattern: its pointer stars lead to Polaris, while the handle arcs toward Arcturus.
 
 ### Chart
 
@@ -973,6 +989,8 @@ M83, the Southern Pinwheel Galaxy, opens the week and M3 (NGC 5272), a globular 
 **Small telescope:** M3 (NGC 5272), a globular cluster becomes a bright concentrated ball with a grainy outer halo and increasing stellar resolution as aperture grows. M83, the Southern Pinwheel, a spiral galaxy can show a compact core and uneven disk under dark transparent conditions, but its photographic spiral pattern should not be expected automatically in a small telescope.
 
 **What to expect:** Declination matters. Two catalog objects with favorable magnitudes can have very different practical visibility because one culminates high while the other is viewed through much more atmosphere. The Almanack's north/tropical/south context is observationally meaningful, not merely classificatory.
+
+**Asterism:** The Spring Triangle—Arcturus, Spica, and Regulus—provides a wide seasonal framework for finding the brighter spring constellations.
 
 ### Chart
 
@@ -1184,6 +1202,8 @@ Last Quarter Moon on July 7 improves evening conditions, and M80 (NGC 6093), a g
 
 **What to expect:** Two objects with the same catalog type can present opposite visual personalities. M4 (NGC 6121), a globular cluster is broad and loose; M80 (NGC 6093), a globular cluster is compact and dense. Comparing them teaches more than observing either one in isolation.
 
+**Asterism:** The Keystone of Hercules is a compact four-star doorway into Hercules and a practical starting point for locating the Great Hercules Globular.
+
 ### Chart
 
 `ISO2026-W28-chart.png` — chart slot.
@@ -1310,6 +1330,10 @@ Full Moon on July 29 brightens a week centered on Scorpius. Shaula and Sargas ma
 
 **What to expect:** Open clusters tolerate moonlight better than faint galaxies and nebulae because their light is concentrated into stars. This is a good week to choose the target that suits the conditions instead of fighting the Full Moon.
 
+**Asterism:** The Teapot of Sagittarius is one of the best summer Milky Way anchors; its spout points into the richest star-cloud region toward the Galactic center.
+
+**Meteor showers:** The Southern δ-Aquariids and α-Capricornids both reach maximum around July 31. The δ-Aquariids provide the higher rate, while the α-Capricornids are noted for slower meteors and occasional bright events.
+
 ### Chart
 
 `ISO2026-W31-chart.png` — chart slot.
@@ -1393,6 +1417,10 @@ New Moon on August 12 lands in the middle of a superb Sagittarius observing week
 **Small telescope:** M22, the Sagittarius Cluster, a globular cluster begins resolving into stars readily and is one of the finest globulars of the summer sky. M28 (NGC 6626), a globular cluster is smaller and more concentrated; M69 (NGC 6637), a globular cluster and M70 (NGC 6681), a globular cluster are subtler, lower-surface-brightness challenges near the Teapot. M26 (NGC 6694), an open cluster resolves as a compact open cluster.
 
 **What to expect:** New Moon does not make every object equally easy. Low southern altitude and extinction still matter. But with moonlight removed, this week gives an unusually fair comparison between open clusters and globular clusters of very different concentration.
+
+**Asterism:** The Summer Triangle—Vega, Deneb, and Altair—dominates the evening sky and provides a large-scale map for Lyra, Cygnus, and Aquila.
+
+**Meteor shower:** The Perseids peak around August 13 with a nominal ZHR near 100. New Moon falls on August 12, making 2026 especially favorable for dark-sky observing.
 
 ### Chart
 
@@ -1519,6 +1547,8 @@ Last Quarter on September 4 shares the calendar with M27, the Dumbbell Nebula, a
 **Small telescope:** M27, the Dumbbell Nebula, a planetary nebula becomes an obvious pale patch with a brighter dumbbell or apple-core region. Moderate magnification increases the contrast of its shape, and larger apertures reveal a more extended envelope. M71 (NGC 6838), a globular cluster and M75 (NGC 6864), a globular cluster elsewhere in the week are subtler compact cluster targets.
 
 **What to expect:** Photographs give M27, the Dumbbell Nebula, a planetary nebula vivid colors and extensive faint structure. Visually, expect a gray luminous form whose shape is much more conspicuous than its color. It is an excellent example of an object that is genuinely satisfying without resembling its photographs.
+
+**Asterism:** The Northern Cross, formed by the brightest stars of Cygnus, lies along the Milky Way and is a useful bridge between Deneb and the rich star fields to the south.
 
 ### Chart
 
@@ -1688,6 +1718,8 @@ This is a compact but excellent autumn deep-sky week: M15, the Great Pegasus Glo
 
 **What to expect:** The three globular clusters will not look alike despite belonging to the same class. Compare core concentration, apparent size, and how quickly each fades into the background. M39 (NGC 7092), an open cluster provides an instructive contrast because its stars are individually obvious rather than blended into a globular glow.
 
+**Asterism:** The Great Square of Pegasus is the principal autumn signpost; its four corners open paths toward Andromeda, Pisces, and the fainter autumn constellations.
+
 ### Chart
 
 `ISO2026-W40-chart.png` — chart slot.
@@ -1813,6 +1845,8 @@ Fomalhaut (α Piscis Austrini) is the standout object of W43, appearing on Octob
 **Small telescope:** Fomalhaut itself does not require telescopic power, so use a telescope mainly for careful field identification and for comparing stellar colors and brightnesses. The listed southern stars are useful exercises in pointing accuracy and in understanding how declination affects altitude from your observing site.
 
 **What to expect:** This is an orientation week rather than a deep-sky showcase. The reward is learning where the southern autumn sky sits relative to Pegasus, Aquarius, and the horizon, and seeing how dramatically the same stars change in accessibility with latitude.
+
+**Meteor shower:** The Orionids peak on October 21 with a typical ZHR of 20 or more. The 2026 maximum is favorably placed with little moonlight interference.
 
 ### Chart
 
@@ -1940,6 +1974,8 @@ New Moon falls on Monday, November 9, giving the week an excellent dark-sky begi
 
 **What to expect:** Dark sky matters as much as aperture for faint extended objects. The New Moon does not make objects intrinsically brighter; it lowers the bright background against which they must be detected.
 
+**Asterism:** The Circlet of Pisces is a subtle but useful small-ring pattern southwest of the Great Square, especially under darker skies.
+
 ### Chart
 
 `ISO2026-W46-chart.png` — chart slot.
@@ -1981,6 +2017,8 @@ The week culminates on Friday, November 20 with M31, the Andromeda Galaxy, toget
 **Small telescope:** The nucleus of M31, the Andromeda Galaxy, a spiral galaxy becomes more concentrated, M32 (NGC 221), an elliptical galaxy is much easier to separate from the background, and M110 (NGC 205), an elliptical galaxy may appear as a dim elongated glow under good conditions. A small telescope usually does not reveal the colorful spiral detail familiar from photographs.
 
 **What to expect:** Most of M31, the Andromeda Galaxy, a spiral galaxy's visible light at the eyepiece is gray-white. The outer disk extends far beyond the bright core but is low in surface brightness, so dark adaptation and averted vision are more important than simply adding magnification.
+
+**Meteor shower:** The Leonids peak on November 17, with the regular nodal maximum near 23:45 UT and an expected ZHR around 15. Moonlight should not seriously hinder the peak.
 
 ### Chart
 
@@ -2108,6 +2146,8 @@ The Moon is waning after Last Quarter, so evening skies become progressively fri
 
 **What to expect:** This is a week for learning how slowly the eye detects faint extended light. Do not expect a galaxy to announce itself like a star. Scan, stop, use averted vision, and allow several seconds for the faint glow to become convincing.
 
+**Asterism:** Cassiopeia's familiar W shape is a strong northern anchor and a practical guide into the dense Milky Way fields of Cassiopeia and Perseus.
+
 ### Chart
 
 `ISO2026-W50-chart.png` — chart slot.
@@ -2150,6 +2190,8 @@ Mid-December evenings mark the handoff from the autumn constellations toward the
 
 **What to expect:** A useful Sky Note does not require a rare event. The night sky itself changes week by week. Learning which constellations are arriving, culminating, and departing is observational astronomy, not filler between eclipses or conjunctions.
 
+**Meteor shower:** The Geminids peak on December 14 and are the year's strongest dependable shower, with a nominal ZHR near 150. Only a waxing crescent Moon is present near maximum.
+
 ### Chart
 
 `ISO2026-W51-chart.png` — chart slot.
@@ -2191,6 +2233,8 @@ The week begins with the December solstice season and reaches Full Moon on Thurs
 **Small telescope:** The nearly full Moon shows bright ray systems and large-scale albedo patterns well, although low Sun angles near the terminator usually reveal topographic relief more dramatically than Full Moon does. Bright double stars and compact clusters are also resilient targets.
 
 **What to expect:** Full Moon is poor for faint galaxies but excellent for understanding how observing conditions select the target. A successful session is not measured by how faint an object you can force through the glare; it is measured by choosing something the sky is ready to show.
+
+**Meteor shower:** The Ursids peak on December 22 near 22:00 UT. A nearly full Moon makes the 2026 return difficult for visual observing.
 
 ### Chart
 
