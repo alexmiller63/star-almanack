@@ -6,6 +6,7 @@ on:
     paths:
       - almanack-expanded.md
       - publish_weekly_pages.py
+      - add_greek_latin_toggle.py
       - .github/workflows/publish-2026-weekly-pages.yml
 
 permissions:
@@ -20,6 +21,9 @@ jobs:
 
       - name: Generate 53 weekly HTML pages
         run: python publish_weekly_pages.py
+
+      - name: Add Greek Latin Bayer toggle
+        run: python add_greek_latin_toggle.py
 
       - name: Validate publishing output
         run: |
@@ -50,11 +54,18 @@ jobs:
               assert 'width:8%' in text, f'Narrow desktop zodiac width missing in {page}'
               assert 'width:20%' in text, f'Narrow mobile date width missing in {page}'
               assert 'width:11%' in text, f'Narrow mobile zodiac width missing in {page}'
+              assert 'data-bayer-mode="greek"' in text, f'Greek Bayer toggle missing in {page}'
+              assert 'data-bayer-mode="latin"' in text, f'Latin Bayer toggle missing in {page}'
+              assert "'γ':'Gam'" in text, f'Greek/Latin mapping missing in {page}'
+              assert '© 2026 Alexander Ferrari Miller. All rights reserved.' in text, f'Copyright footer missing in {page}'
+
+          w53 = (root / 'W53' / 'index.html').read_text(encoding='utf-8')
+          assert 'Expanded α and β Star Catalog' not in w53, 'Catalog leaked into W53'
 
           index = (root / 'index.html').read_text(encoding='utf-8')
           links = re.findall(r'href="W\d{2}/"', index)
           assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages, index, tables, narrow columns, and navigation')
+          print('Verified 53 weekly pages, Greek/Latin toggle, copyright, W53 boundary, tables, narrow columns, and navigation')
           PY
 
       - name: Commit published pages
