@@ -536,7 +536,15 @@ M67 appears on March 17, New Moon follows on March 19, and the March equinox arr
 
 ### Sky Note
 
-☿ and ♂ are separated by about 7° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ♄ is also about 2° from the Sun, so that part of the configuration is affected by solar glare.
+The calendar is dominated by bright spring stars rather than a Messier showpiece, making this a useful orientation week. Alphard, the solitary bright star of Hydra, reaches its Almanack date on March 28 while First Quarter Moon brightens the middle of the week.
+
+**Naked eye:** Find Alphard and notice how isolated it appears. Hydra is enormous but mostly faint; tracing even part of its winding form is a better exercise in sky familiarity than looking for a spectacular object.
+
+**Binoculars:** Sweep along Hydra's region and compare the sparse-looking naked-eye sky with the much richer binocular field. Use Alphard repeatedly as the anchor so you do not lose orientation.
+
+**Small telescope:** This is a good week for bright double stars and compact targets selected from a chart rather than for forcing a particular faint galaxy through moonlight.
+
+**What to expect:** Not every week needs a headline object. Learning a large, faint constellation and its anchor star builds the navigation skill that makes later deep-sky observing easier.
 
 ### Chart
 
@@ -570,7 +578,15 @@ M67 appears on March 17, New Moon follows on March 19, and the March equinox arr
 
 ### Sky Note
 
-☿ and ♂ are separated by about 9° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ♄ is also about 4° from the Sun, so that part of the configuration is affected by solar glare.
+M81 and M82 reach their Almanack date on April 4, but Full Moon occurs April 2. The galaxies are therefore a useful lesson in how moonlight changes an otherwise excellent target pair.
+
+**Naked eye:** Use the Big Dipper as the northern signpost. Its bowl and handle are much easier to recognize than the galaxies themselves and provide the framework for the star-hop.
+
+**Binoculars:** Under a dark sky M81 can be found in binoculars and M82 may be detectable nearby, but bright moonlight greatly reduces their contrast. Treat a binocular detection this week as conditions-dependent rather than guaranteed.
+
+**Small telescope:** M81 appears as a bright oval glow with a concentrated center; M82 is narrower and more elongated. The contrasting shapes are the principal visual reward, not photographic spiral arms or dust detail.
+
+**What to expect:** Return to this pair on a moonless night if the Full Moon makes them disappointing. A difficult view under poor conditions says little about what the same telescope can show against a darker sky.
 
 ### Chart
 
@@ -604,7 +620,15 @@ M67 appears on March 17, New Moon follows on March 19, and the March equinox arr
 
 ### Sky Note
 
-☿ and ♂ are separated by about 8° in the Monday snapshot, forming a close pairing in the morning sky before sunrise. ♄ is also about 10° from the Sun, so that part of the configuration is affected by solar glare.
+Regulus and Algieba make Leo the week's natural observing framework while Last Quarter Moon on April 10 improves evening darkness. This is a good transition from winter star fields into the galaxy-rich spring sky.
+
+**Naked eye:** Find Regulus at the base of Leo's Sickle and trace the curved pattern upward. Leo is one of the easiest spring constellations to learn and becomes a launch point for later galaxy hunting.
+
+**Binoculars:** Sweep the Sickle and surrounding fields. Binoculars reinforce Leo's geometry and reveal many field stars without losing the recognizable constellation shape.
+
+**Small telescope:** Algieba is an excellent telescopic double-star target when seeing permits, providing a bright alternative to faint galaxies. Increase magnification gradually after centering it at low power.
+
+**What to expect:** Spring is famous for galaxies, but bright stars and doubles remain valuable targets, especially while learning the star patterns needed to locate the fainter objects.
 
 ### Chart
 
@@ -638,7 +662,15 @@ M67 appears on March 17, New Moon follows on March 19, and the March equinox arr
 
 ### Sky Note
 
-♂ and ♄ are separated by about 5° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+New Moon on April 17 is followed immediately by M95, M96, and M105 on April 18–19, making this one of the better spring weeks for attempting galaxies in Leo.
+
+**Naked eye:** Establish Leo first with Regulus and the Sickle, then identify the rear of the constellation. The galaxies themselves are not naked-eye targets; the constellation is your map.
+
+**Binoculars:** These galaxies are challenging binocular objects and require genuinely dark skies. Use binoculars primarily for the star-hop and for fixing the correct field before changing instruments.
+
+**Small telescope:** M95 and M96 appear as small gray glows, while M105 has a more concentrated elliptical appearance. Moderate aperture and dark adaptation matter more than high magnification.
+
+**What to expect:** Photographs emphasize spiral structure and color that a small telescope usually will not show. Success begins with detecting shape, concentration, and orientation—not reproducing an image from an observatory.
 
 ### Chart
 
@@ -672,7 +704,15 @@ M67 appears on March 17, New Moon follows on March 19, and the March equinox arr
 
 ### Sky Note
 
-♂ and ♄ are separated by about 0° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+Dubhe and Merak mark the Big Dipper's bowl on April 23, followed by the Owl Nebula M97 and galaxy M108 on April 25. First Quarter Moon means contrast will not be ideal, but the star-hop is unusually convenient.
+
+**Naked eye:** Find Dubhe and Merak, the two pointer stars normally used to locate Polaris. This week use the same familiar part of the Dipper as the starting region for deep-sky work.
+
+**Binoculars:** Binoculars are best used to establish the field around the bowl stars. M97 and M108 are substantially more difficult than an open cluster and should not be expected casually in ordinary suburban binocular observing.
+
+**Small telescope:** M97 is a round, diffuse planetary nebula; the famous dark 'eyes' are subtle and may require larger aperture, excellent conditions, or a nebula filter. M108 is an elongated, low-surface-brightness galaxy nearby.
+
+**What to expect:** Catalog photographs can make the Owl's face seem obvious. At a modest eyepiece the first achievement is simply seeing the pale round disk. Fine internal contrast is a second-stage observation.
 
 ### Chart
 
@@ -706,7 +746,15 @@ M67 appears on March 17, New Moon follows on March 19, and the March equinox arr
 
 ### Sky Note
 
-♂ and ♄ are separated by about 5° in the Monday snapshot, forming a close pairing in the morning sky before sunrise.
+M65 and M66 reach their Almanack dates on April 27–28, but Full Moon follows May 1. These galaxies are worth knowing, yet this particular week demonstrates why timing within the week matters.
+
+**Naked eye:** Use Leo's bright outline to establish the galaxy field. Observe earlier in the week and place the Moon behind a building or other obstruction when possible to reduce stray light.
+
+**Binoculars:** M65 and M66 are difficult binocular targets except under dark transparent skies. Binoculars remain valuable for locating the correct region even when the galaxies themselves do not emerge.
+
+**Small telescope:** Both galaxies appear as elongated gray glows, with brighter central regions becoming apparent as conditions improve. Low-to-moderate power is usually more productive than pushing magnification.
+
+**What to expect:** If the galaxies disappear into moonlit sky, that is an observing result rather than a failure. Low surface brightness is vulnerable to background light, and the same objects can become straightforward when revisited under a dark Moon.
 
 ### Chart
 
