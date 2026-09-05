@@ -51,7 +51,7 @@
         "inset_slug": "water-jar",
         "inset_label_offsets": {
           "HIP 110395": [12, 8],
-          "HIP 110960": [12, -28]
+          "HIP 110960": [12, -23]
         },
         "paths": [
           ["HIP 110395", "HIP 110960", "HIP 110672"],
