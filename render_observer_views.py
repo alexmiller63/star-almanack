@@ -24,10 +24,12 @@ Required HYG v4.1 columns:
     id, ra, dec, mag
 
 The standard HYG fields proper, bayer, and con are used for labels when
-present. The renderer deliberately consumes the full HYG input rather than
-only the curated Bayer/bright/special subsets, because realistic finder,
-binocular, and eyepiece fields require the fainter background stars that are
-not part of those editorial subsets.
+present. Finder labels use Greek Bayer symbols plus proper names when a proper
+name exists, without repeating the constellation abbreviation. The renderer
+deliberately consumes the full HYG input rather than only the curated
+Bayer/bright/special subsets, because realistic finder, binocular, and
+eyepiece fields require the fainter background stars that are not part of
+those editorial subsets.
 
 Examples:
 
@@ -104,6 +106,34 @@ PRESETS = {
 }
 
 
+GREEK_BAYER = {
+    "Alp": "α",
+    "Bet": "β",
+    "Gam": "γ",
+    "Del": "δ",
+    "Eps": "ε",
+    "Zet": "ζ",
+    "Eta": "η",
+    "The": "θ",
+    "Iot": "ι",
+    "Kap": "κ",
+    "Lam": "λ",
+    "Mu": "μ",
+    "Nu": "ν",
+    "Xi": "ξ",
+    "Omi": "ο",
+    "Pi": "π",
+    "Rho": "ρ",
+    "Sig": "σ",
+    "Tau": "τ",
+    "Ups": "υ",
+    "Phi": "φ",
+    "Chi": "χ",
+    "Psi": "ψ",
+    "Ome": "ω",
+}
+
+
 @dataclass
 class Star:
     ra_deg: float
@@ -156,15 +186,30 @@ def load_target(path: Path, designation: str) -> Target:
     raise KeyError(f"Target {designation!r} not found in {path}")
 
 
+def greek_bayer_symbol(bayer: str) -> str:
+    """Convert HYG's Bayer abbreviation to a Greek glyph when possible."""
+    if not bayer:
+        return ""
+    prefix = bayer[:3].title()
+    symbol = GREEK_BAYER.get(prefix)
+    if not symbol:
+        return bayer
+    suffix = bayer[3:]
+    return f"{symbol}{suffix}"
+
+
 def hyg_label(row: dict[str, str]) -> str:
+    """Finder label: Greek Bayer symbol plus proper name; no constellation tag."""
     proper = (row.get("proper") or "").strip()
+    bayer = (row.get("bayer") or "").strip()
+    greek = greek_bayer_symbol(bayer)
+
+    if greek and proper:
+        return f"{greek} {proper}"
     if proper:
         return proper
-
-    bayer = (row.get("bayer") or "").strip()
-    con = (row.get("con") or "").strip()
-    if bayer and con:
-        return f"{bayer} {con}"
+    if greek:
+        return greek
     return ""
 
 
@@ -243,7 +288,11 @@ def view_center(
 ) -> tuple[float, float]:
     """Return plot center; M35 finder includes Castor and Pollux."""
     if preset.key == "finder" and target.designation == "M35":
-        anchors = [star for star in stars if star.label in {"Castor", "Pollux"}]
+        anchors = [
+            star
+            for star in stars
+            if star.label.endswith(" Castor") or star.label.endswith(" Pollux")
+        ]
         if len(anchors) == 2:
             # Average unit vectors so RA wrap is handled correctly.
             vectors = []
