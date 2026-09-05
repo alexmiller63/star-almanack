@@ -29,6 +29,17 @@ jobs:
       - name: Add Greek Latin Bayer toggle
         run: python add_greek_latin_toggle.py
 
+      - name: Add Kilroy deployment diagnostic to W01
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          page = Path('site/2026/W01/index.html')
+          text = page.read_text(encoding='utf-8')
+          marker = '<p id="kilroy-deployment-diagnostic" style="text-align:center;font-family:system-ui,sans-serif;font-weight:700;border:2px solid currentColor;padding:.5rem;margin:1rem 0">KILROY WAS HERE — BUILD 2026-09-05 01:34 PDT</p>'
+          text = text.replace('<main class="wrap">', '<main class="wrap">' + marker, 1)
+          page.write_text(text, encoding='utf-8')
+          PY
+
       - name: Validate publishing output
         run: |
           python - <<'PY'
@@ -71,6 +82,9 @@ jobs:
               assert "'☉':'Sun'" in text and "'♄':'Saturn'" in text, f'Full ephemeris-body mapping missing in {page}'
               assert '© 2026 Alexander Ferrari Miller. All rights reserved.' in text, f'Copyright footer missing in {page}'
 
+          w01 = (root / 'W01' / 'index.html').read_text(encoding='utf-8')
+          assert 'KILROY WAS HERE — BUILD 2026-09-05 01:34 PDT' in w01, 'Kilroy deployment diagnostic missing from W01'
+
           w33 = (root / 'W33' / 'index.html').read_text(encoding='utf-8')
           assert 'Summer Triangle' in w33, 'Summer Triangle asterism note missing from W33'
           assert 'Perseids' in w33 and 'August 13' in w33, 'Perseid meteor-shower note missing from W33'
@@ -81,7 +95,7 @@ jobs:
           index = (root / 'index.html').read_text(encoding='utf-8')
           links = re.findall(r'href="W\d{2}/"', index)
           assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages, Greek/Symbols/Latin/Mixed Learner notation, asterisms, meteor showers, refined portrait calendar layout, copyright, W53 boundary, and navigation')
+          print('Verified 53 weekly pages, Greek/Symbols/Latin/Mixed Learner notation, asterisms, meteor showers, refined portrait calendar layout, Kilroy diagnostic, copyright, W53 boundary, and navigation')
           PY
 
       - name: Commit published pages
