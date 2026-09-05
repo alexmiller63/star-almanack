@@ -1510,7 +1510,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+This week ends with Last Quarter Moon on Sunday, November 1, leaving the first part of the evening increasingly useful for deep-sky observing. M52 is the featured binocular-and-telescope target in the northern autumn sky. Use Cassiopeia's familiar W-shaped pattern as the naked-eye starting point before moving into the richer Milky Way star fields around it.
+
+**Naked eye:** Cassiopeia is the key signpost. Its five bright stars form one of the easiest autumn patterns to recognize, and the surrounding Milky Way region becomes much more obvious from a dark site.
+
+**Binoculars:** Sweep outward from Cassiopeia into the neighboring star fields. M52 is compact enough to look like a small misty patch sprinkled against a dense stellar background; binoculars are particularly good at showing the cluster in context.
+
+**Small telescope:** M52 resolves into many faint stars, with the degree of resolution depending strongly on aperture, sky darkness, and magnification. Moderate power begins to separate the cluster from the surrounding field while retaining enough context to make its concentration obvious.
+
+**What to expect:** An open cluster does not resemble a processed photograph in the eyepiece. The reward is the gradual emergence of individual stars from a haze-like patch as aperture and magnification increase.
 
 ### Chart
 
@@ -1578,7 +1586,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+New Moon falls on Monday, November 9, giving the week an excellent dark-sky beginning. By Thursday, Alpheratz (α Andromedae) and Caph (β Cassiopeiae) provide two bright northern-autumn anchors that help connect the Great Square of Pegasus, Andromeda, and Cassiopeia into one large observing region.
+
+**Naked eye:** Start with the Great Square of Pegasus. Alpheratz is the northeastern corner of the Square and also belongs to Andromeda. From there, move toward the chain of Andromeda stars and then northward to Cassiopeia's W. With little moonlight, the large-scale geometry of these constellations is much easier to learn.
+
+**Binoculars:** This is an especially good week for wide-field sweeps between Andromeda and Cassiopeia. The binocular view shows many more stars than the naked eye while preserving the shapes of the constellations well enough to teach star-hopping.
+
+**Small telescope:** Use the telescope after first locating targets with the eye or binoculars. The narrow field makes faint objects more detailed but can make navigation harder, so this week is a good exercise in moving from wide-field orientation to telescopic inspection.
+
+**What to expect:** Dark sky matters as much as aperture for faint extended objects. The New Moon does not make objects intrinsically brighter; it lowers the bright background against which they must be detected.
 
 ### Chart
 
@@ -1612,7 +1628,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+The week culminates on Friday, November 20 with M31, the Andromeda Galaxy, together with its companions M32 and M110. This is an ideal week for showing why binoculars and telescopes reveal different aspects of the same target. First Quarter Moon occurs Tuesday, so the darkest contrast will generally be found by observing away from the Moon or before moonlight becomes dominant.
+
+**Naked eye:** Under a genuinely dark sky, M31 can be detected as an elongated, diffuse patch rather than a point of light. Begin with Alpheratz and the Andromeda star chain, then use the brighter stars as stepping stones toward the galaxy.
+
+**Binoculars:** Binoculars are often the most satisfying first view of M31 because the galaxy is very large on the sky. Expect a bright central glow fading gradually outward, with the broad shape easier to appreciate than in a narrow telescopic field. M32 may be difficult in small binoculars and M110 is substantially more challenging.
+
+**Small telescope:** The nucleus of M31 becomes more concentrated, M32 is much easier to separate from the background, and M110 may appear as a dim elongated glow under good conditions. A small telescope usually does not reveal the colorful spiral detail familiar from photographs.
+
+**What to expect:** Most of M31's visible light at the eyepiece is gray-white. The outer disk extends far beyond the bright core but is low in surface brightness, so dark adaptation and averted vision are more important than simply adding magnification.
 
 ### Chart
 
@@ -1646,7 +1670,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Full Moon occurs Tuesday, November 24, so this is not the strongest week for faint galaxies and nebulae. Instead, use the bright sky to learn the autumn framework: Cassiopeia, Andromeda, Pegasus, and the conspicuous stars Cih (γ Cassiopeiae) and Mirach (β Andromedae).
+
+**Naked eye:** Concentrate on constellation shapes and bright-star identification. Moonlight suppresses faint background stars, which can actually make the principal patterns easier for a beginner to recognize.
+
+**Binoculars:** Binoculars remain useful around bright stars and open star fields even under moonlight. Sweep along the Andromeda chain through Mirach and compare how many field stars remain visible as you move closer to or farther from the Moon.
+
+**Small telescope:** Favor double stars, bright stellar fields, and lunar observing over very faint deep-sky targets. The Moon itself rewards modest magnification, especially along the terminator where shadows make relief obvious.
+
+**What to expect:** A bright Moon can erase low-contrast galaxies and nebulae without ruining the entire observing session. This is a good week to learn that choosing the right target for the conditions is part of observational astronomy.
 
 ### Chart
 
@@ -1680,7 +1712,15 @@ Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
 
 ### Sky Note
 
-Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.
+Last Quarter Moon occurs Tuesday, December 1, and the week brings several contrasting deep-sky targets: M33 in Triangulum, M74 in Pisces, M103 in Cassiopeia, and the Little Dumbbell Nebula M76 in Perseus. Together they make an excellent lesson in surface brightness and instrument choice.
+
+**Naked eye:** Use the small constellation Triangulum and the larger shapes of Cassiopeia and Perseus as the orientation framework. M33 is sometimes reported with the unaided eye from exceptionally dark sites, but it is a difficult low-contrast test and should not be expected under ordinary suburban skies.
+
+**Binoculars:** M33 is the standout binocular challenge. Rather than looking for a crisp boundary, look for a very broad, faint brightening of the background. M103 is easier as a compact star cluster and benefits from the wide field around Cassiopeia.
+
+**Small telescope:** M74 is a difficult face-on galaxy whose low surface brightness makes dark sky more valuable than excessive magnification. M76 is much smaller and responds better to telescopic magnification, appearing as a compact gray nebular patch; M103 begins to resolve cleanly into individual stars.
+
+**What to expect:** Integrated magnitude can be misleading. A large galaxy can have plenty of total light yet still be hard to see because that light is spread over a large area. This week is a practical demonstration of why surface brightness matters.
 
 ### Chart
 
