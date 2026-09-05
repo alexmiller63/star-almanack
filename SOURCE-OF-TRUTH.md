@@ -50,7 +50,7 @@ Authoritative/generated fixed-object data are carried in the repository Messier 
 
 `build_expanded_almanack.py` combines the calendar and fixed-object catalogs into `almanack-expanded.md`.
 
-`enrich_stellar_entries.py` is the mandatory stellar presentation pass. It reads the Bayer visibility catalog, bright-star visibility catalog, and reconciled bright-variable data and normalizes catalog-backed stellar entries so the published Almanack does not discard Bayer designation, decimal magnitude, known-variable status, declination band, or observing season.
+`enrich_stellar_entries.py` is the mandatory stellar presentation pass. It reads the Bayer visibility catalog, bright-star visibility catalog, and reconciled bright-variable data and normalizes catalog-backed stellar entries so the published Almanack preserves Bayer designation, known-variable status, declination band, and observing season while applying the Almanack magnitude-display rule.
 
 `publish_weekly_pages.py` converts the integrated and enriched Almanack into the weekly pages under `site/2026/W01/` through `site/2026/W53/`.
 
@@ -62,20 +62,25 @@ The weekly HTML is output, not source.
 
 ## Required stellar display fields
 
-Every observer-facing stellar entry SHALL preserve and display, when applicable:
+Every observer-facing Almanack stellar entry SHALL display, when applicable:
 
 - proper name;
 - Bayer designation, using the Greek letter rather than the three-letter Latin code;
 - constellation via the Bayer constellation abbreviation;
-- decimal visual magnitude, not merely a whole-number magnitude class;
-- variable-star status when the reconciled variable-star source identifies the star as variable;
+- variable-star magnitude as a whole number, prefixed by `V`;
+- no magnitude for non-variable stars;
 - declination band derived consistently from declination;
 - observing season;
 - best-visibility civil date and ISO week placement.
 
-The compact canonical calendar form is:
+The authoritative catalog magnitude remains decimal. Presentation precision depends on output:
 
-`Proper name (Bayer) — Vmag — variable [when catalogued] — Declination-band Season`
+- **Almanack calendar text:** whole-number magnitude for variable stars only.
+- **Charts:** magnitude to 1 decimal place.
+
+The compact canonical Almanack form is:
+
+`Proper name (Bayer) — V whole-number-magnitude [when variable] — Declination-band Season`
 
 Declination Band is derived from declination using the tropical boundaries:
 
@@ -87,8 +92,6 @@ Season is derived from the best-visibility civil date using Winter, Spring, Summ
 
 Declination Band SHALL precede Season in observer-facing stellar entries.
 
-A presentation layer MUST NOT discard authoritative catalog fields merely to shorten an entry. Compact presentation may abbreviate wording, but it must preserve the required information above.
-
 ## Example: Enif
 
 The authoritative bright-star visibility row for Enif identifies:
@@ -99,9 +102,10 @@ The authoritative bright-star visibility row for Enif identifies:
 - decimal V magnitude: `2.38`;
 - best date: `2026-10-05` (`2026-W41-1`).
 
-The variable-star reconciliation identifies `eps Peg` as variable. The canonical observer-facing entry is therefore:
+The variable-star reconciliation identifies `eps Peg` as variable. Therefore:
 
-`Enif (ε Peg) — V2.38 — variable — Tropical Autumn`
+- Almanack: `Enif (ε Peg) — V 2 — Tropical Autumn`
+- Chart magnitude: `2.4`
 
 Here `Tropical` is the Declination Band and `Autumn` is the Season.
 
