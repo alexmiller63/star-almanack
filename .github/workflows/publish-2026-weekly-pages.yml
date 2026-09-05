@@ -51,7 +51,7 @@ jobs:
           from pathlib import Path
           page = Path('site/2026/W01/index.html')
           text = page.read_text(encoding='utf-8')
-          marker = '<p id="kilroy-deployment-diagnostic" style="text-align:center;font-family:system-ui,sans-serif;font-weight:700;border:2px solid currentColor;padding:.5rem;margin:1rem 0">KILROY WAS HERE — BUILD 2026-09-05 01:34 PDT</p>'
+          marker = '<p id="kilroy-deployment-diagnostic" style="text-align:center;font-family:system-ui,sans-serif;font-weight:700;border:2px solid currentColor;padding:.5rem;margin:1rem 0">KILROY WAS HERE — BUILD 2026-09-05 02:12 PDT</p>'
           text = text.replace('<main class="wrap">', '<main class="wrap">' + marker, 1)
           page.write_text(text, encoding='utf-8')
           PY
@@ -103,7 +103,7 @@ jobs:
               assert '© 2026 Alexander Ferrari Miller. All rights reserved.' in text, f'Copyright footer missing in {page}'
 
           w01 = (root / 'W01' / 'index.html').read_text(encoding='utf-8')
-          assert 'KILROY WAS HERE — BUILD 2026-09-05 01:34 PDT' in w01, 'Kilroy deployment diagnostic missing from W01'
+          assert 'KILROY WAS HERE — BUILD 2026-09-05 02:12 PDT' in w01, 'Kilroy deployment diagnostic missing from W01'
 
           w33 = (root / 'W33' / 'index.html').read_text(encoding='utf-8')
           assert 'Summer Triangle' in w33, 'Summer Triangle asterism note missing from W33'
