@@ -30,7 +30,7 @@
     "figure_cutoff": 4.0,
     "exception_cutoff": 4.5,
     "exceptions": [],
-    "show_figure_labels": false,
+    "show_figure_labels": true,
     "figure_paths": [
       ["HIP 109074", "HIP 110395", "HIP 110960", "HIP 110672", "HIP 109074", "HIP 106278", "HIP 102618"],
       ["HIP 111497", "HIP 110960"],
@@ -45,6 +45,10 @@
         "hide_component_labels": true,
         "inset": true,
         "inset_slug": "water-jar",
+        "inset_label_offsets": {
+          "HIP 110395": [12, 8],
+          "HIP 110960": [12, 8]
+        },
         "paths": [
           ["HIP 110395", "HIP 110960", "HIP 110672"],
           ["HIP 111497", "HIP 110960"]
