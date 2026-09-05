@@ -10,12 +10,14 @@ Output:
 - rewrites stellar entries in almanack-expanded.md after build_expanded_almanack.py
 
 Display convention:
-  Proper name (Bayer) — V N.NN — Declination-band Season
+  Proper name (Bayer) — V N — Declination-band Season
   or, for non-variable stars:
   Proper name (Bayer) — Declination-band Season
 
-The source decimal magnitude is preserved for variable stars only. V precedes the
-magnitude only for variable stars; non-variable stars do not display a magnitude.
+The authoritative source magnitude remains decimal. Almanack calendar text rounds
+variable-star magnitudes to the nearest whole number; chart presentation uses one
+decimal place. V precedes the magnitude only for variable stars; non-variable stars
+do not display a magnitude.
 
 Declination Band is derived from declination using the tropics (±23.44°):
 Northern / Tropical / Southern. Season is the northern-calendar observing season
@@ -27,6 +29,7 @@ import csv
 import re
 from collections import defaultdict
 from datetime import date
+from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -73,16 +76,16 @@ def season_for(d: date) -> str:
     return "Winter"
 
 
-def clean_mag(value: str) -> str:
-    """Preserve the catalog decimal magnitude rather than rounding it."""
+def whole_mag(value: str) -> str:
+    """Round an authoritative decimal magnitude to a whole Almanack magnitude."""
     value = (value or "").strip()
     if not value:
         return ""
     try:
-        float(value)
-    except ValueError:
+        rounded = Decimal(value).quantize(Decimal("1"), rounding=ROUND_HALF_UP)
+    except InvalidOperation:
         return value
-    return value
+    return str(int(rounded))
 
 
 def variable_keys() -> set[str]:
@@ -101,6 +104,9 @@ def latin_key(code: str, con: str) -> str:
     m = re.fullmatch(r"([A-Z][a-z]{2})(?:-?(\d+))?", (code or "").strip())
     if not m:
         return f"{code} {con}".strip().casefold()
+    suffix = m.group(2)
+    if suffix:
+        return f"{m.group(1).casefold()} {suffix} {con}".strip().casefold()
     return f"{m.group(1).casefold()} {con}".strip().casefold()
 
 
@@ -112,7 +118,8 @@ def canonical(row: dict[str, str], variables: set[str]) -> str:
     if not designation or not designation.startswith(tuple(GREEK.values())):
         designation = bayer_display(code, con)
     name = f"{proper} ({designation})" if proper else designation
-    mag = clean_mag(row.get("mag") or row.get("representative_vmax") or row.get("catalog_v") or "")
+    source_mag = row.get("mag") or row.get("representative_vmax") or row.get("catalog_v") or ""
+    mag = whole_mag(source_mag)
     d = date.fromisoformat(row["best_date"])
     parts = [name]
     is_variable = latin_key(code, con) in variables
@@ -194,14 +201,14 @@ def main() -> None:
     updated = ROW_RE.sub(repl, text)
     TARGET.write_text(updated, encoding="utf-8")
 
-    expected = "Enif (ε Peg) — V 2.38 — Tropical Autumn"
+    expected = "Enif (ε Peg) — V 2 — Tropical Autumn"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
-    if "Enif (ε Peg) — V 2 — Tropical Autumn" in updated:
-        raise SystemExit("Rounded Enif magnitude survived")
+    if "Enif (ε Peg) — V 2.38 — Tropical Autumn" in updated:
+        raise SystemExit("Decimal Enif magnitude survived Almanack rendering")
     if " — variable — " in updated:
         raise SystemExit("Obsolete variable word survived")
-    print("Enriched stellar calendar entries; variable-only magnitude regression PASS")
+    print("Enriched stellar calendar entries; whole-number Almanack magnitudes PASS")
 
 
 if __name__ == "__main__":
