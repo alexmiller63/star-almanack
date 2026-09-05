@@ -32,10 +32,10 @@
     "exceptions": [],
     "show_figure_labels": true,
     "figure_paths": [
-      ["HIP 109074", "HIP 110395", "HIP 110960", "HIP 110672", "HIP 109074", "HIP 106278", "HIP 102618"],
+      ["Alp Aqr", "HIP 110395", "HIP 110960", "HIP 110672", "Alp Aqr", "HIP 106278", "HIP 102618"],
       ["HIP 111497", "HIP 110960"],
       ["HIP 106278", "HIP 109139"],
-      ["HIP 109074", "HIP 110003", "HIP 112961", "HIP 114724", "HIP 114855", "HIP 115438"],
+      ["Alp Aqr", "HIP 110003", "HIP 112961", "HIP 114724", "HIP 114855", "HIP 115438"],
       ["HIP 112961", "HIP 112716", "HIP 113136", "HIP 114855", "HIP 114341"]
     ],
     "label_offsets": {
