@@ -152,3 +152,25 @@ For Gemini, M35 is the Messier object within the constellation Gemini and should
 The historical-priority question remains open. Numbered zodiac degrees are ancient and are not the claimed innovation. There is at least a modern precedent for astrology publications describing numbered sign or “season” days counted from solar ingress, so the Star Almanack should not claim priority without a deeper historical search. The precise research question is: **Who first published a complete system of numbered Zodiac Days, with Day 1 beginning at solar ingress and the count continuing until the next ingress?** Research should distinguish occasional phrases such as “first day of Aries,” degree numbering, and isolated season-day counts from a systematic twelve-sign calendrical presentation.
 
 The essay **“Get Over It”** fits this methodology: astronomy and astrology can be presented together without pretending that constellations and zodiac signs have identical boundaries or meanings. Define each system correctly, then let both describe the same sky in their appropriate roles.
+
+## 2026-09-05 — Solar-station chain of custody
+
+Preserve a strict chain of custody for solar ingresses, quarter days, and cross-quarter days:
+
+**Star Almanack calculation → authoritative source data → Jekyll publication → independent external verification.**
+
+The astronomical source of truth is the Star Almanack computational pipeline, not a published ephemeris table and not the website HTML. Solar-station times are calculated from the Sun's apparent geocentric tropical ecliptic longitude. The 12 zodiac ingresses occur at 30° intervals; the quarter points are 0°, 90°, 180°, and 270°; the cross-quarter points are 45°, 135°, 225°, and 315°. For completeness, the computational framework may solve all 24 stations at 15° intervals, while only named or editorially selected stations need be published.
+
+`ISO2026.md` is the preserved 2026 ingress record and explicitly states that the ingress times are calculated by Star Almanack from apparent solar longitude, with published ephemerides used independently for validation only. `quarter-and-cross-quarter-days.yaml` preserves the same apparent-geocentric solar-longitude convention for the eight seasonal stations.
+
+The September equinox provides the custody example. The Star Almanack source already contains the calculated Libra ingress / September equinox at **2026-09-23 00:05:13 UTC**. An externally rounded **00:05 UTC** value was briefly introduced into the published W39 page during editing. That value must not be treated as the source simply because it agrees. The published page was corrected to the full internally calculated **00:05:13 UTC** value from the source-of-truth record.
+
+When several names describe the same astronomical instant, they must share one timestamp rather than repeating the same time after each alias. Example:
+
+**September Equinox — First Point of Libra — Mabon — ♎ Libra ingress (180°) — 00:05:13 UTC**
+
+The same presentation rule applies to the March equinox and any other coincident named event.
+
+External authorities such as USNO, NASA, JPL Horizons, or independent published ingress tables are verification sources only. They may confirm the definition, precision, and plausibility of a Star Almanack result, but they do not overwrite or become the source of the published value. If a discrepancy appears, investigate the Almanack computation and its frame/time-scale conventions rather than silently substituting an external number.
+
+Architectural custody remains explicit: Python owns astronomical computation and source normalization; Jekyll owns page assembly and presentation; generated HTML is output, never source of truth; provenance verification is an independent audit layer after publication.
