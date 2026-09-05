@@ -57,3 +57,5 @@ jobs:
           fi
           git commit -m "Render M35 finder binocular and telescope views"
           git push
+
+# Trigger regeneration after finder framing refinement.
