@@ -10,6 +10,8 @@ checks only observer-facing presentation:
 - no V magnitude for non-variable stars;
 - declination band followed by observing season;
 - exactly one calendar representation on the assigned best-visibility date.
+
+Permanent regression stars: Enif, Shaula, and alpha Comae Berenices (Diadem).
 """
 from __future__ import annotations
 
@@ -24,6 +26,15 @@ ALMANACK = ROOT / "almanack-expanded.md"
 BAYER = ROOT / "expanded-bayer-visibility-2026.csv"
 BRIGHT = ROOT / "bright-star-visibility-2026.csv"
 VARIABLES = ROOT / "bright-variable-reconciliation.csv"
+
+# These three stars are permanent diagnostic cases.  They deliberately exercise
+# different presentation paths and must continue to survive catalog/generator
+# changes intact.
+PERMANENT_REGRESSION_STARS = (
+    ("Enif", "ε Peg"),
+    ("Shaula", "λ Sco"),
+    ("Diadem", "α Com"),
+)
 
 GREEK = {
     "Alp": "α", "Bet": "β", "Gam": "γ", "Del": "δ", "Eps": "ε",
@@ -101,25 +112,33 @@ def variable_designations() -> set[str]:
 
 def source_rows() -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
-    seen: set[tuple[str, str]] = set()
+    index: dict[tuple[str, str], int] = {}
+
+    def add_or_prefer_named(r: dict[str, str], code: str) -> None:
+        r = dict(r)
+        r["_code"] = code
+        key = (r["best_date"], designation_key(code, r.get("con", "")))
+        if key not in index:
+            index[key] = len(rows)
+            rows.append(r)
+            return
+
+        # Catalogs can contain multiple physical components with the same Bayer
+        # designation and best date (notably alpha Com).  For Almanack display,
+        # prefer the canonical row carrying the proper name instead of allowing
+        # source ordering to decide which component is audited.
+        old = rows[index[key]]
+        if not (old.get("proper") or "").strip() and (r.get("proper") or "").strip():
+            rows[index[key]] = r
 
     with BRIGHT.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
-            r = dict(row)
-            r["_code"] = r.get("bayer", "")
-            key = (r["best_date"], designation_key(r.get("bayer", ""), r.get("con", "")))
-            seen.add(key)
-            rows.append(r)
+            add_or_prefer_named(row, row.get("bayer", ""))
 
     with BAYER.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
-            r = dict(row)
-            r["_code"] = r.get("bayer_code", "")
-            key = (r["best_date"], designation_key(r.get("bayer_code", ""), r.get("con", "")))
-            if key in seen:
-                continue
-            seen.add(key)
-            rows.append(r)
+            add_or_prefer_named(row, row.get("bayer_code", ""))
+
     return rows
 
 
@@ -135,6 +154,25 @@ def isolate_entry(parts: list[str], proper: str, designation: str) -> list[str]:
         if matches:
             return matches
     return [part for part in parts if canonical_name_match(part, designation)]
+
+
+def audit_permanent_regressions(events: dict[str, list[str]], defects: list[str]) -> None:
+    all_entries = [entry for parts in events.values() for entry in parts]
+    for proper, designation in PERMANENT_REGRESSION_STARS:
+        matches = [
+            entry for entry in all_entries
+            if canonical_name_match(entry, proper) or canonical_name_match(entry, designation)
+        ]
+        if len(matches) != 1:
+            defects.append(
+                f"permanent regression {proper} ({designation}): expected exactly one calendar entry, found {len(matches)}"
+            )
+            continue
+        entry = matches[0]
+        if proper not in entry or designation not in entry:
+            defects.append(
+                f"permanent regression {proper} ({designation}): name/designation pair damaged; entry={entry}"
+            )
 
 
 def main() -> None:
@@ -195,14 +233,17 @@ def main() -> None:
             if expected_tail not in entry:
                 defects.append(f"{best_date} {label}: expected {expected_tail}; entry={entry}")
 
+    audit_permanent_regressions(events, defects)
+
     print(f"Audited {audited} isolated stellar entries from {len(rows)} catalog-backed placements.")
+    print("Permanent regression stars: Enif, Shaula, Diadem (α Com).")
     if defects:
         print(f"FAIL: {len(defects)} stellar presentation defects")
         for defect in defects:
             print(f"- {defect}")
         raise SystemExit(1)
 
-    print("PASS: all catalog-backed stellar entries have required Bayer/variable-magnitude/band/season presentation.")
+    print("PASS: all catalog-backed stellar entries and permanent regression stars have required presentation.")
 
 
 if __name__ == "__main__":
