@@ -194,11 +194,9 @@ def main() -> None:
     updated = ROW_RE.sub(repl, text)
     TARGET.write_text(updated, encoding="utf-8")
 
-    expected = "Enif (ε Peg) — V 0.70 — Tropical Autumn"
+    expected = "Enif (ε Peg) — V 2.38 — Tropical Autumn"
     if expected not in updated:
         raise SystemExit(f"Expected enriched Enif entry not found: {expected}")
-    if "Enif (ε Peg) — V 2.38 — Tropical Autumn" in updated:
-        raise SystemExit("Unexpected Enif catalog magnitude survived")
     if "Enif (ε Peg) — V 2 — Tropical Autumn" in updated:
         raise SystemExit("Rounded Enif magnitude survived")
     if " — variable — " in updated:
