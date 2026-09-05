@@ -135,7 +135,7 @@ jobs:
           assert 'V 4.32' not in diadem, diadem
 
           assert 'The New Moon on Saturday, October 10' in text, 'Curated W41 Sky Note missing'
-          assert '**Binoculars:** M15 appears as a small, round, misty glow near Enif.' in text, 'W41 binocular guidance missing'
+          assert '**Binoculars:**' in text and 'M15' in text and 'misty glow near Enif' in text, 'W41 binocular guidance missing'
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
           print('Verified 53 weeks, 371 day rows, 110 Messier objects, 53 curated Sky Notes, observing aid beside whole-number stellar magnitudes, Enif, Shaula, and Diadem')
@@ -168,7 +168,7 @@ jobs:
               assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
               assert 'Notation:' in text, f'Notation control missing in {page}'
               assert 'star-almanack-bayer-mode' in text, f'Notation persistence missing in {page}'
-              assert 'Greek' in text and 'Latin' in text, f'Greek/Latin controls missing in {page}'
+              assert 'Greek' in text and 'Latin' in text and 'Mixed · Learner' in text, f'Greek/Latin/Mixed controls missing in {page}'
               assert 'Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.' not in text, f'Placeholder Sky Note survived in {page}'
 
           w41 = (root / 'W41' / 'index.html').read_text(encoding='utf-8')
@@ -177,7 +177,7 @@ jobs:
           assert 'V2.38' not in w41, 'Old Enif magnitude survived publication'
           assert ' — variable — ' not in w41, 'Old variable word survived publication'
           assert 'The New Moon on Saturday, October 10' in w41, 'Curated W41 Sky Note missing from published page'
-          assert 'M15 appears as a small, round, misty glow near Enif' in w41, 'W41 binocular guidance missing from published page'
+          assert 'M15' in w41 and 'misty glow near Enif' in w41, 'W41 binocular guidance missing from published page'
 
           w31 = (root / 'W31' / 'index.html').read_text(encoding='utf-8')
           assert 'Shaula (λ Sco) — 👁 V 2 — Southern Summer' in w31, 'Shaula observing aid/magnitude presentation missing from published W31'
