@@ -116,8 +116,10 @@ def source_rows() -> list[dict[str, str]]:
             r = dict(row)
             r["_code"] = r.get("bayer_code", "")
             key = (r["best_date"], designation_key(r.get("bayer_code", ""), r.get("con", "")))
-            if key not in seen:
-                rows.append(r)
+            if key in seen:
+                continue
+            seen.add(key)
+            rows.append(r)
     return rows
 
 
