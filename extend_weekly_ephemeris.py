@@ -95,14 +95,14 @@ def rows_from_almanack() -> dict[str, dict[str, str]]:
         section = text[match.start():end]
         table = re.search(
             r"(?ms)\|\s*☉ Sun\s*\|\s*☽ Moon\s*\|\s*☿ Mercury\s*\|\s*♀ Venus\s*\|\s*♂ Mars\s*\|\s*♃ Jupiter\s*\|\s*♄ Saturn\s*\|"
-            r"\s*\n\s*\|[^\n]+\|\s*\n\s*\|\s*([^\n]+?)\s*\|",
+            r"\s*\n\s*\|[^\n]+\|\s*\n\s*\|\s*([^\n]+)\s*\|\s*(?:\n|$)",
             section,
         )
         if not table:
             raise RuntimeError(f"Could not recover base ephemeris for 2026-W{week:02d}")
         values = [cell.strip() for cell in table.group(1).split("|")]
         if len(values) != 7:
-            raise RuntimeError(f"Expected 7 base values for 2026-W{week:02d}, found {len(values)}")
+            raise RuntimeError(f"Expected 7 base values for 2026-W{week:02d}, found {len(values)}: {values}")
         monday = date.fromisocalendar(2026, week, 1)
         row = {"iso_week": f"2026-W{week:02d}", "monday_utc": monday.isoformat()}
         for field, value in zip(BASE_FIELDS[2:], values):
