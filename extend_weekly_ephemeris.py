@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Extend the 2026 weekly ephemeris with Uranus, Neptune, and Ceres.
 
-The existing Sun-through-Saturn values are preserved. If the CSV contains
-only a partial ISO-year extract, the complete 53-week base is recovered from
-the already-published Almanack source before the new columns are added.
+The existing Sun-through-Saturn values are preserved. The historical source
+is split: almanack.md contains the early ISO weeks and weekly-ephemeris-2026.csv
+contains the later weeks. This program merges those 2 existing sources into a
+complete 53-week CSV before adding the new bodies.
 
 The 3 added observer-oriented bodies are obtained from NASA/JPL Horizons as
 apparent, geocentric, ecliptic-of-date longitudes (Horizons observer quantity
@@ -31,11 +32,7 @@ ROOT = Path(__file__).parent
 CSV_PATH = ROOT / "weekly-ephemeris-2026.csv"
 ALMANACK_PATH = ROOT / "almanack.md"
 HORIZONS_API = "https://ssd.jpl.nasa.gov/api/horizons.api"
-TARGETS = {
-    "uranus": "799",
-    "neptune": "899",
-    "ceres": "1;",
-}
+TARGETS = {"uranus": "799", "neptune": "899", "ceres": "1;"}
 SIGNS = "♈♉♊♋♌♍♎♏♐♑♒♓"
 BASE_FIELDS = ["iso_week", "monday_utc", "sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn"]
 
@@ -88,17 +85,13 @@ def horizons_longitudes(command: str) -> list[float]:
     return values
 
 
-def recover_base_rows() -> list[dict[str, str]]:
-    """Recover the complete existing 7-body weekly table from almanack.md."""
+def rows_from_almanack() -> dict[str, dict[str, str]]:
     text = ALMANACK_PATH.read_text(encoding="utf-8")
-    week_matches = list(re.finditer(r"(?m)^## ISO 2026-W(\d{2})\s*$", text))
-    if len(week_matches) != 53:
-        raise RuntimeError(f"Expected 53 Almanack week sections, found {len(week_matches)}")
-
-    rows = []
-    for i, match in enumerate(week_matches):
+    matches = list(re.finditer(r"(?m)^## ISO 2026-W(\d{2})\s*$", text))
+    result = {}
+    for i, match in enumerate(matches):
         week = int(match.group(1))
-        end = week_matches[i + 1].start() if i + 1 < len(week_matches) else len(text)
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
         section = text[match.start():end]
         table = re.search(
             r"(?ms)\|\s*☉ Sun\s*\|\s*☽ Moon\s*\|\s*☿ Mercury\s*\|\s*♀ Venus\s*\|\s*♂ Mars\s*\|\s*♃ Jupiter\s*\|\s*♄ Saturn\s*\|"
@@ -106,19 +99,16 @@ def recover_base_rows() -> list[dict[str, str]]:
             section,
         )
         if not table:
-            raise RuntimeError(f"Could not recover the 7-body ephemeris table for 2026-W{week:02d}")
+            raise RuntimeError(f"Could not recover base ephemeris for 2026-W{week:02d}")
         values = [cell.strip() for cell in table.group(1).split("|")]
         if len(values) != 7:
             raise RuntimeError(f"Expected 7 base values for 2026-W{week:02d}, found {len(values)}")
         monday = date.fromisocalendar(2026, week, 1)
-        row = {
-            "iso_week": f"2026-W{week:02d}",
-            "monday_utc": monday.isoformat(),
-        }
+        row = {"iso_week": f"2026-W{week:02d}", "monday_utc": monday.isoformat()}
         for field, value in zip(BASE_FIELDS[2:], values):
             row[field] = value
-        rows.append(row)
-    return rows
+        result[row["iso_week"]] = row
+    return result
 
 
 def zodiac(longitude_deg: float) -> str:
@@ -135,9 +125,16 @@ def main() -> None:
     if current_fields[:9] != BASE_FIELDS:
         raise SystemExit(f"Unexpected weekly ephemeris columns: {current_fields}")
 
-    rows = current_rows if len(current_rows) == 53 else recover_base_rows()
-    if len(current_rows) != 53:
-        print(f"Recovered full 53-week base ephemeris from almanack.md (CSV had {len(current_rows)} rows)")
+    combined = rows_from_almanack()
+    for row in current_rows:
+        combined[row["iso_week"]] = {key: row[key] for key in BASE_FIELDS}
+
+    expected_keys = [f"2026-W{week:02d}" for week in range(1, 54)]
+    missing = [key for key in expected_keys if key not in combined]
+    if missing:
+        raise SystemExit(f"Missing base ephemeris weeks after source merge: {missing}")
+    rows = [combined[key] for key in expected_keys]
+    print(f"Merged base ephemeris from almanack.md and CSV into {len(rows)} ISO weeks")
 
     generated = {name: horizons_longitudes(command) for name, command in TARGETS.items()}
     for i, row in enumerate(rows):
