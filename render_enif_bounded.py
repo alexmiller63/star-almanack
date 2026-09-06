@@ -33,7 +33,10 @@ def draw_enif_m15_objects(ax,spec,idx,center):
         if not xy:continue
         ax.scatter([xy[0]],[xy[1]],s=180,facecolors="none",edgecolors=HIGHLIGHT_YELLOW,linewidths=2.6,zorder=8)
         label=" · ".join(x for x in (d.get("name",""),d.get("type","")) if x)
-        ax.annotate(label,xy,xytext=tuple(d.get("label_offset",[10,10])),textcoords="offset points",ha="left",va="bottom",fontsize=9,color=r.TEXT,bbox=dict(facecolor=r.NIGHT,edgecolor="none",pad=.8),zorder=9)
+        # Put the complete M15 label to the left.  Its right edge sits one
+        # character-width beyond the cluster ring, leaving room for the
+        # word "cluster" to shift left by its full width plus one character.
+        ax.annotate(label,xy,xytext=(-18,10),textcoords="offset points",ha="right",va="bottom",fontsize=9,color=r.TEXT,bbox=dict(facecolor=r.NIGHT,edgecolor="none",pad=.8),zorder=9)
         ref=d.get("from_ref")
         if ref and ref in idx:
             s=idx[ref];fxy=r.project(s.ra_deg,s.dec_deg,*center)
