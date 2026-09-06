@@ -1,0 +1,70 @@
+name: Extend Weekly Ephemeris
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - extend_weekly_ephemeris.py
+      - sync_weekly_ephemeris_tables.py
+      - .github/workflows/extend-weekly-ephemeris.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: star-almanack-extend-weekly-ephemeris
+  cancel-in-progress: false
+
+jobs:
+  extend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Calculate Uranus Neptune and Ceres
+        run: python extend_weekly_ephemeris.py
+
+      - name: Synchronize all 53 weekly tables
+        run: python sync_weekly_ephemeris_tables.py
+
+      - name: Validate extended ephemeris
+        run: |
+          python - <<'PY'
+          import csv
+          import re
+          from pathlib import Path
+
+          with open('weekly-ephemeris-2026.csv', newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          assert len(rows) == 53
+          assert list(rows[0]) == ['iso_week','monday_utc','sun','moon','mercury','venus','mars','jupiter','saturn','uranus','neptune','ceres']
+          assert all(r['uranus'] and r['neptune'] and r['ceres'] for r in rows)
+
+          text = Path('almanack.md').read_text(encoding='utf-8')
+          assert text.count('### Weekly Solar-System Ephemeris') == 53
+          assert text.count('**Extended targets:**') == 53
+          assert text.count('| ♅ Uranus | ♆ Neptune | ⚳ Ceres |') == 53
+          assert 'Pluto' not in '\n'.join(line for line in text.splitlines() if 'Ephemeris' in line or 'Extended targets' in line or line.startswith('| ♅ Uranus'))
+          print('Validated 53 weeks with Uranus, Neptune, and Ceres; Pluto excluded')
+          PY
+
+      - name: Commit generated ephemeris and source tables
+        run: |
+          git add weekly-ephemeris-2026.csv almanack.md
+          if git diff --cached --quiet; then
+            echo 'No ephemeris changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Add Uranus Neptune and Ceres to weekly ephemerides'
+          git pull --rebase origin main
+          git push
