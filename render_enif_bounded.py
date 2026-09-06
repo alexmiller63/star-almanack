@@ -3,6 +3,7 @@
 from __future__ import annotations
 import argparse
 import json
+import math
 from pathlib import Path
 
 import render_stellar_finders as r
@@ -89,7 +90,7 @@ def center_refs_without_label_only_paths(spec):
 
 
 def draw_enif_m15_objects(ax, spec, idx, center):
-    """Draw M15 and two outward arrows sharing one common tail."""
+    """Draw M15 and two clearly separate arrows sharing one common tail."""
     for d in spec.get("deep_sky_objects", []):
         xy = r.project(float(d["ra_deg"]), float(d["dec_deg"]), *center)
         if not xy:
@@ -112,12 +113,19 @@ def draw_enif_m15_objects(ax, spec, idx, center):
         if not fxy:
             continue
 
-        # The two arrows share exactly one tail at the midpoint. Each arrowhead
-        # stops visibly short of its target rather than landing on the star/object.
-        joint = ((xy[0] + fxy[0]) / 2, (xy[1] + fxy[1]) / 2)
+        # Put the shared tail off the direct Enif-M15 line so the two arrows
+        # form an unmistakable V rather than looking like a double-headed arrow.
+        mx = (xy[0] + fxy[0]) / 2
+        my = (xy[1] + fxy[1]) / 2
+        dx = xy[0] - fxy[0]
+        dy = xy[1] - fxy[1]
+        length = max(math.hypot(dx, dy), 1e-6)
+        # Unit normal to the Enif-M15 line, displaced by 2.8 projected degrees.
+        joint = (mx - dy / length * 2.8, my + dx / length * 2.8)
+
         arrow = dict(
             arrowstyle="-|>", mutation_scale=22, linewidth=2.6,
-            color=r.ASTERISM_GREEN, shrinkA=0, shrinkB=16,
+            color=r.ASTERISM_GREEN, shrinkA=0, shrinkB=18,
         )
         ax.annotate("", xy=fxy, xytext=joint, arrowprops=arrow, zorder=7)
         ax.annotate("", xy=xy, xytext=joint, arrowprops=arrow, zorder=7)
@@ -156,7 +164,7 @@ def main():
 
     # Mark Alpheratz and Algenib as label-only figure refs. Markab and Scheat are
     # already part of the Martz/MacRobert Pegasus figure, so all 4 Square corners
-    # will now receive star labels without adding any extra connecting line.
+    # receive star labels without adding extra connecting lines.
     spec["figure_paths"] = list(spec.get("figure_paths", [])) + [["Alp And"], ["Gam Peg"]]
 
     r.IAU_BOUNDARIES_J2000["Peg"] = PEG_BOUNDARY_J2000
