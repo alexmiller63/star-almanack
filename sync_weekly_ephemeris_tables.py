@@ -68,6 +68,10 @@ def main():
                 raise SystemExit(f"{key} is missing {required}")
 
     text = target.read_text(encoding="utf-8")
+    # Keep the source introduction consistent with the expanded builder's
+    # terminology after adding Uranus, Neptune, and Ceres.
+    text = text.replace("53 weekly classical-planet snapshots", "53 weekly Solar-System snapshots")
+
     weeks = [int(x) for x in re.findall(r"(?m)^## ISO 2026-W(\d{2})\s*$", text)]
     if not weeks:
         raise SystemExit(f"No ISO 2026 week sections found in {target}")
