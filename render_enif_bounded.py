@@ -67,6 +67,7 @@ def make_great_square_green(svg_path:Path):
 def main():
     p=argparse.ArgumentParser();p.add_argument("hyg_catalog",type=Path);p.add_argument("--config",type=Path,default=Path("constellation-figures.json"));p.add_argument("--out-dir",type=Path,default=Path("observer-views/W41"));a=p.parse_args()
     specs=json.loads(a.config.read_text(encoding="utf-8"));stars=r.load_hyg(a.hyg_catalog);spec=specs["Pegasus"]
+    spec["chart_title"]="Enif M15 Finder"
     spec["figure_paths"]=list(spec.get("figure_paths",[]))+[["Alp And"],["Gam Peg"]]
     r.IAU_BOUNDARIES_J2000["Peg"]=PEG_BOUNDARY_J2000;r.draw_boundary=draw_boundary_tight;r.center_refs=center_refs_without_label_only_paths;r.draw_deep_sky_objects=draw_enif_m15_objects
     outputs=r.render_figure("Pegasus",spec,stars,a.out_dir);enif=next(path for path in outputs if path.name=="enif-finder.svg")
