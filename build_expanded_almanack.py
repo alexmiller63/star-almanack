@@ -13,7 +13,7 @@ bright_text = (ROOT / "bright-star-visibility-2026.csv").read_text(encoding="utf
 
 legacy_intro = """## Working Integrated Almanack
 
-This working edition integrates the supplied 2026 zodiac calendar, best-visibility dates for 100 selected stars and Messier objects, lunar phases, Wheel-of-the-Year points, named full moons, and the 53 weekly classical-planet snapshots.
+This working edition integrates the supplied 2026 zodiac calendar, best-visibility dates for 100 selected stars and Messier objects, lunar phases, Wheel-of-the-Year points, named full moons, and the 53 weekly Solar-System snapshots.
 
 Planetary positions are geocentric tropical ecliptic longitudes sampled Monday at 00:00 UTC. Weekly chart filenames are reserved for later insertion using the approved chart model.
 
@@ -21,7 +21,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 """
 expanded_intro = """## Working Integrated Almanack
 
-This working edition covers the complete 53-week ISO 2026 week-year and integrates the supplied zodiac calendar, all 110 Messier objects, the audited α/β Bayer catalog, the second-magnitude naked-eye star layer, lunar phases, Wheel-of-the-Year points, named full moons, and weekly classical-planet snapshots.
+This working edition covers the complete 53-week ISO 2026 week-year and integrates the supplied zodiac calendar, all 110 Messier objects, the audited α/β Bayer catalog, the second-magnitude naked-eye star layer, lunar phases, Wheel-of-the-Year points, named full moons, and weekly Solar-System snapshots.
 
 Planetary positions are geocentric tropical ecliptic longitudes sampled Monday at 00:00 UTC. Fixed-object best-visibility dates use the Star Almanack observer-first visibility rule. Weekly chart filenames are reserved for later insertion using the approved chart model.
 
@@ -86,12 +86,17 @@ if len(weeks) < 53:
         return sign, (d - last_date).days + 1
 
     def ephem_table(row):
-        cols = [("☉ Sun", row["sun"]), ("☽ Moon", row["moon"]), ("☿ Mercury", row["mercury"]),
-                ("♀ Venus", row["venus"]), ("♂ Mars", row["mars"]), ("♃ Jupiter", row["jupiter"]),
-                ("♄ Saturn", row["saturn"])]
-        return ("| " + " | ".join(x[0] for x in cols) + " |\n"
-                "|---:|---:|---:|---:|---:|---:|\n"
-                "| " + " | ".join(x[1] for x in cols) + " |")
+        primary = [("☉ Sun", row["sun"]), ("☽ Moon", row["moon"]), ("☿ Mercury", row["mercury"]),
+                   ("♀ Venus", row["venus"]), ("♂ Mars", row["mars"]), ("♃ Jupiter", row["jupiter"]),
+                   ("♄ Saturn", row["saturn"])]
+        extended = [("♅ Uranus", row["uranus"]), ("♆ Neptune", row["neptune"]), ("⚳ Ceres", row["ceres"])]
+
+        def render(cols):
+            return ("| " + " | ".join(x[0] for x in cols) + " |\n"
+                    "|" + "|".join("---:" for _ in cols) + "|\n"
+                    "| " + " | ".join(x[1] for x in cols) + " |")
+
+        return render(primary) + "\n\n**Extended targets:**\n\n" + render(extended)
 
     sign_names = {"♈":"Aries","♉":"Taurus","♊":"Gemini","♋":"Cancer","♌":"Leo","♍":"Virgo",
                   "♎":"Libra","♏":"Scorpio","♐":"Sagittarius","♑":"Capricorn","♒":"Aquarius","♓":"Pisces"}
@@ -115,7 +120,7 @@ if len(weeks) < 53:
             f"**Civil dates:** {monday:%b %d, %Y} – {sunday:%b %d, %Y}\n\n"
             "### Calendar\n\n| Date | Zodiac day | Events |\n|---|---|---|\n"
             + "\n".join(rows) + "\n\n"
-            "### Weekly Classical-Planet Ephemeris\n\n"
+            "### Weekly Solar-System Ephemeris\n\n"
             f"**Snapshot:** {monday:%B %-d, %Y} · 00:00 UTC\n\n"
             + ephem_table(ephemeris[key]) + "\n\n"
             "### Sky Note\n\nWeekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC.\n\n"

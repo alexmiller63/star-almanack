@@ -34,7 +34,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Jan 04, 2026 | ♑ 15 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Dec 29, 2025 · 00:00 UTC
 
@@ -43,6 +43,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♑ 7°31′ | ♈ 22°56′ | ♐ 24°06′ | ♑ 5°26′ | ♑ 10°24′ | ♋ 21°45′ | ♓ 26°00′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 28°02′ | ♓ 29°28′ | ♈ 6°27′ |
 
 ### Sky Note
 
@@ -78,7 +86,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Jan 11, 2026 | ♑ 22 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jan 5, 2026 · 00:00 UTC
 
@@ -87,6 +95,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♑ 14°39′ | ♌ 6°11′ | ♑ 4°48′ | ♑ 14°14′ | ♑ 15°46′ | ♋ 20°50′ | ♓ 26°25′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°51′ | ♓ 29°34′ | ♈ 7°57′ |
 
 ### Sky Note
 
@@ -122,7 +138,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Jan 18, 2026 | ♑ 29 | 🌑 New Moon — 19:52:06 UTC |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jan 12, 2026 · 00:00 UTC
 
@@ -131,6 +147,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♑ 21°47′ | ♏ 6°30′ | ♑ 15°48′ | ♑ 23°03′ | ♑ 21°09′ | ♋ 19°53′ | ♓ 26°54′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°41′ | ♓ 29°41′ | ♈ 9°38′ |
 
 ### Sky Note
 
@@ -166,7 +190,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Jan 25, 2026 | ♒ 6 | Best visibility: M38 — Open Cluster — Northern Winter |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jan 19, 2026 · 00:00 UTC
 
@@ -175,6 +199,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♑ 28°54′ | ♒ 0°53′ | ♑ 27°11′ | ♒ 1°51′ | ♑ 26°35′ | ♋ 18°57′ | ♓ 27°27′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°34′ | ♓ 29°49′ | ♈ 11°29′ |
 
 ### Sky Note
 
@@ -210,7 +242,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Feb 01, 2026 | ♒ 13 | 🌕 Full Moon — 22:09:16 UTC — Wolf Moon |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jan 26, 2026 · 00:00 UTC
 
@@ -219,6 +251,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♒ 6°02′ | ♉ 3°26′ | ♒ 9°00′ | ♒ 10°39′ | ♒ 2°02′ | ♋ 18°04′ | ♓ 28°04′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°30′ | ♓ 29°59′ | ♈ 13°28′ |
 
 ### Sky Note
 
@@ -254,7 +294,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Feb 08, 2026 | ♒ 20 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Feb 2, 2026 · 00:00 UTC
 
@@ -263,6 +303,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♒ 13°08′ | ♌ 14°09′ | ♒ 21°15′ | ♒ 19°26′ | ♒ 7°31′ | ♋ 17°15′ | ♓ 28°44′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°28′ | ♈ 0°10′ | ♈ 15°36′ |
 
 ### Sky Note
 
@@ -298,7 +346,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Feb 15, 2026 | ♒ 27 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Feb 9, 2026 · 00:00 UTC
 
@@ -307,6 +355,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♒ 20°14′ | ♏ 14°27′ | ♓ 3°34′ | ♒ 28°13′ | ♒ 13°00′ | ♋ 16°32′ | ♓ 29°28′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°28′ | ♈ 0°22′ | ♈ 17°50′ |
 
 ### Sky Note
 
@@ -342,7 +398,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Feb 22, 2026 | ♓ 5 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Feb 16, 2026 · 00:00 UTC
 
@@ -351,6 +407,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♒ 27°19′ | ♒ 9°22′ | ♓ 14°41′ | ♓ 6°59′ | ♒ 18°30′ | ♋ 15°57′ | ♈ 0°13′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°31′ | ♈ 0°36′ | ♈ 20°10′ |
 
 ### Sky Note
 
@@ -386,7 +450,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Mar 01, 2026 | ♓ 12 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Feb 23, 2026 · 00:00 UTC
 
@@ -395,6 +459,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♓ 4°22′ | ♉ 14°22′ | ♓ 21°41′ | ♓ 15°44′ | ♒ 24°01′ | ♋ 15°31′ | ♈ 1°01′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°37′ | ♈ 0°50′ | ♈ 22°36′ |
 
 ### Sky Note
 
@@ -430,7 +502,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Mar 08, 2026 | ♓ 19 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 2, 2026 · 00:00 UTC
 
@@ -439,6 +511,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♓ 11°25′ | ♌ 22°53′ | ♓ 21°28′ | ♓ 24°28′ | ♒ 29°32′ | ♋ 15°13′ | ♈ 1°51′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°45′ | ♈ 1°05′ | ♈ 25°06′ |
 
 ### Sky Note
 
@@ -474,7 +554,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Mar 15, 2026 | ♓ 26 | Best visibility: M44 — Beehive Cluster — Tropical Winter |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 9, 2026 · 00:00 UTC
 
@@ -483,6 +563,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♓ 18°25′ | ♏ 22°14′ | ♓ 15°19′ | ♈ 3°10′ | ♓ 5°03′ | ♋ 15°06′ | ♈ 2°41′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 27°56′ | ♈ 1°20′ | ♈ 27°40′ |
 
 ### Sky Note
 
@@ -518,7 +606,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Mar 22, 2026 | ♈ 3 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 16, 2026 · 00:00 UTC
 
@@ -527,6 +615,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♓ 25°24′ | ♒ 17°19′ | ♓ 9°41′ | ♈ 11°52′ | ♓ 10°34′ | ♋ 15°08′ | ♈ 3°33′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 28°09′ | ♈ 1°36′ | ♉ 0°18′ |
 
 ### Sky Note
 
@@ -562,7 +658,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Mar 29, 2026 | ♈ 10 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 23, 2026 · 00:00 UTC
 
@@ -571,6 +667,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♈ 2°22′ | ♉ 24°59′ | ♓ 8°43′ | ♈ 20°32′ | ♓ 16°04′ | ♋ 15°19′ | ♈ 4°25′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 28°24′ | ♈ 1°52′ | ♉ 2°59′ |
 
 ### Sky Note
 
@@ -606,7 +710,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Apr 05, 2026 | ♈ 17 | Best visibility: M81 — Bode's Galaxy — Arctic<br>Best visibility: M82 — Cigar Galaxy — Arctic |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 30, 2026 · 00:00 UTC
 
@@ -615,6 +719,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♈ 9°18′ | ♍ 2°27′ | ♓ 12°07′ | ♈ 29°11′ | ♓ 21°33′ | ♋ 15°39′ | ♈ 5°18′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 28°41′ | ♈ 2°08′ | ♉ 5°42′ |
 
 ### Sky Note
 
@@ -650,7 +762,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Apr 12, 2026 | ♈ 24 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Apr 6, 2026 · 00:00 UTC
 
@@ -659,6 +771,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♈ 16°12′ | ♐ 0°14′ | ♓ 18°33′ | ♉ 7°47′ | ♓ 27°01′ | ♋ 16°09′ | ♈ 6°10′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 28°59′ | ♈ 2°23′ | ♉ 8°28′ |
 
 ### Sky Note
 
@@ -694,7 +814,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Apr 19, 2026 | ♈ 31 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Apr 13, 2026 · 00:00 UTC
 
@@ -703,6 +823,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♈ 23°05′ | ♒ 25°10′ | ♓ 27°04′ | ♉ 16°22′ | ♈ 2°29′ | ♋ 16°46′ | ♈ 7°02′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 29°19′ | ♈ 2°39′ | ♉ 11°15′ |
 
 ### Sky Note
 
@@ -738,7 +866,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Apr 26, 2026 | ♉ 7 | Best visibility: M97 — Owl Nebula — Northern Spring |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Apr 20, 2026 · 00:00 UTC
 
@@ -747,6 +875,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♈ 29°56′ | ♊ 4°47′ | ♈ 7°11′ | ♉ 24°55′ | ♈ 7°54′ | ♋ 17°31′ | ♈ 7°52′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♉ 29°41′ | ♈ 2°54′ | ♉ 14°04′ |
 
 ### Sky Note
 
@@ -782,7 +918,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, May 03, 2026 | ♉ 14 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Apr 27, 2026 · 00:00 UTC
 
@@ -791,6 +927,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♉ 6°45′ | ♍ 12°26′ | ♈ 18°44′ | ♊ 3°26′ | ♈ 13°18′ | ♋ 18°22′ | ♈ 8°41′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♊ 0°03′ | ♈ 3°08′ | ♉ 16°54′ |
 
 ### Sky Note
 
@@ -826,7 +970,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, May 10, 2026 | ♉ 21 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, May 4, 2026 · 00:00 UTC
 
@@ -835,6 +979,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♉ 13°33′ | ♐ 8°41′ | ♉ 1°42′ | ♊ 11°55′ | ♈ 18°40′ | ♋ 19°20′ | ♈ 9°29′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♊ 0°27′ | ♈ 3°21′ | ♉ 19°45′ |
 
 ### Sky Note
 
@@ -870,7 +1022,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, May 17, 2026 | ♉ 28 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, May 11, 2026 · 00:00 UTC
 
@@ -879,6 +1031,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♉ 20°20′ | ♓ 3°23′ | ♉ 16°02′ | ♊ 20°21′ | ♈ 24°00′ | ♋ 20°24′ | ♈ 10°14′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♊ 0°50′ | ♈ 3°34′ | ♉ 22°37′ |
 
 ### Sky Note
 
@@ -914,7 +1074,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, May 24, 2026 | ♊ 4 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, May 18, 2026 · 00:00 UTC
 
@@ -923,6 +1083,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♉ 27°05′ | ♊ 13°44′ | ♊ 1°14′ | ♊ 28°45′ | ♈ 29°18′ | ♋ 21°33′ | ♈ 10°57′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♊ 1°15′ | ♈ 3°45′ | ♉ 25°29′ |
 
 ### Sky Note
 
@@ -958,7 +1126,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, May 31, 2026 | ♊ 11 | 🌕 Full Moon — 08:45:16 UTC — Flower Moon<br>Best visibility: M51 — Whirlpool Galaxy — Northern Spring |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, May 25, 2026 · 00:00 UTC
 
@@ -967,6 +1135,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♊ 3°49′ | ♍ 22°18′ | ♊ 16°02′ | ♋ 7°06′ | ♉ 4°33′ | ♋ 22°47′ | ♈ 11°38′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♊ 1°39′ | ♈ 3°55′ | ♉ 28°22′ |
 
 ### Sky Note
 
@@ -1002,7 +1178,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Jun 07, 2026 | ♊ 18 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jun 1, 2026 · 00:00 UTC
 
@@ -1011,6 +1187,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♊ 10°32′ | ♐ 17°29′ | ♊ 29°09′ | ♋ 15°24′ | ♉ 9°46′ | ♋ 24°04′ | ♈ 12°15′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♊ 2°04′ | ♈ 4°04′ | ♊ 1°14′ |
 
 ### Sky Note
 
@@ -1046,7 +1230,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Jun 14, 2026 | ♊ 25 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jun 8, 2026 · 00:00 UTC
 
@@ -1055,6 +1239,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♊ 17°14′ | ♓ 12°16′ | ♋ 10°01′ | ♋ 23°38′ | ♉ 14°56′ | ♋ 25°25′ | ♈ 12°48′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♊ 2°28′ | ♈ 4°11′ | ♊ 4°06′ |
 
 ### Sky Note
 
@@ -1090,7 +1282,7 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 | Sun, Jun 21, 2026 | ♋ (Cancer) 1 | 🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jun 15, 2026 · 00:00 UTC
 
@@ -1099,6 +1291,14 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 |---:|---:|---:|---:|---:|---:|---:|
 
 | ♊ 23°56′ | ♊ 22°12′ | ♋ 18°24′ | ♌ 1°48′ | ♉ 20°03′ | ♋ 26°49′ | ♈ 13°18′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+
+|---:|---:|---:|
+
+| ♊ 2°52′ | ♈ 4°17′ | ♊ 6°58′ |
 
 ### Sky Note
 
