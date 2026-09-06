@@ -6,6 +6,7 @@ on:
     paths:
       - 'render_stellar_finders.py'
       - 'render_enif_bounded.py'
+      - 'render_aquarius_highlight.py'
       - 'constellation-figures.json'
       - '.github/workflows/render-stellar-finders.yml'
 
@@ -38,6 +39,7 @@ jobs:
           rm -rf observer-views/W41
           python render_stellar_finders.py /tmp/hygdata_v41.csv --figure all --out-dir observer-views/W41
           python render_enif_bounded.py /tmp/hygdata_v41.csv --out-dir observer-views/W41
+          python render_aquarius_highlight.py /tmp/hygdata_v41.csv --out-dir observer-views/W41
 
       - name: Validate generated SVGs
         run: |
@@ -46,6 +48,7 @@ jobs:
           grep -q '<svg' observer-views/W41/enif-finder.svg
           grep -q '<svg' observer-views/W41/sadalmelik-finder.svg
           grep -q 'stroke: #c4ccd8; stroke-width: 0.9' observer-views/W41/enif-finder.svg
+          grep -q '#ffd84d' observer-views/W41/sadalmelik-finder.svg
           test "$(find observer-views/W41 -maxdepth 1 -name '*-finder.svg' | wc -l)" -eq 2
 
       - name: Commit generated finder charts
