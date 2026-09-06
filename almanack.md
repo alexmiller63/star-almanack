@@ -2,7 +2,7 @@
 
 ## Working Integrated Almanack
 
-This working edition integrates the supplied 2026 zodiac calendar, best-visibility dates for 100 selected stars and Messier objects, lunar phases, Wheel-of-the-Year points, named full moons, and the 53 weekly classical-planet snapshots.
+This working edition integrates the supplied 2026 zodiac calendar, best-visibility dates for 100 selected stars and Messier objects, lunar phases, Wheel-of-the-Year points, named full moons, and the 53 weekly Solar-System snapshots.
 
 Planetary positions are geocentric tropical ecliptic longitudes sampled Monday at 00:00 UTC. Weekly chart filenames are reserved for later insertion using the approved chart model.
 
