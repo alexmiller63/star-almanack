@@ -6,7 +6,7 @@
 
 ## Working Integrated Almanack
 
-This working edition covers the complete 53-week ISO 2026 week-year and integrates the supplied zodiac calendar, all 110 Messier objects, the audited α/β Bayer catalog, the second-magnitude naked-eye star layer, lunar phases, Wheel-of-the-Year points, named full moons, and weekly classical-planet snapshots.
+This working edition covers the complete 53-week ISO 2026 week-year and integrates the supplied zodiac calendar, all 110 Messier objects, the audited α/β Bayer catalog, the second-magnitude naked-eye star layer, lunar phases, Wheel-of-the-Year points, named full moons, and weekly Solar-System snapshots.
 
 Planetary positions are geocentric tropical ecliptic longitudes sampled Monday at 00:00 UTC. Fixed-object best-visibility dates use the Star Almanack observer-first visibility rule. Weekly chart filenames are reserved for later insertion using the approved chart model.
 
@@ -30,13 +30,19 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 | Sat, Jan 03, 2026 | ♑ 14 | 🌕 Full Moon — 10:02:55 UTC — Moon After Yule |
 | Sun, Jan 04, 2026 | ♑ 15 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Dec 29, 2025 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♑ 7°31′ | ♈ 22°56′ | ♐ 24°06′ | ♑ 5°26′ | ♑ 10°24′ | ♋ 21°45′ | ♓ 26°00′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 28°02′ | ♓ 29°28′ | ♈ 6°27′ |
 
 ### Sky Note
 
@@ -74,13 +80,19 @@ The Pleiades (M45, the Pleiades, an open cluster) are the week's natural showpie
 | Sat, Jan 10, 2026 | ♑ 21 | 🌗 Last Quarter — 15:48:28 UTC |
 | Sun, Jan 11, 2026 | ♑ 22 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jan 5, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♑ 14°39′ | ♌ 6°11′ | ♑ 4°48′ | ♑ 14°14′ | ♑ 15°46′ | ♋ 20°50′ | ♓ 26°25′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°51′ | ♓ 29°34′ | ♈ 7°57′ |
 
 ### Sky Note
 
@@ -118,13 +130,19 @@ January 5–11 is a restrained observing week. The Almanack marks α Horologii a
 | Sat, Jan 17, 2026 | ♑ 28 | α Cam — B V 4 — Northern Winter |
 | Sun, Jan 18, 2026 | ♑ 29 | 🌑 New Moon — 19:52:06 UTC |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jan 12, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♑ 21°47′ | ♏ 6°30′ | ♑ 15°48′ | ♑ 23°03′ | ♑ 21°09′ | ♋ 19°53′ | ♓ 26°54′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°41′ | ♓ 29°41′ | ♈ 9°38′ |
 
 ### Sky Note
 
@@ -160,13 +178,19 @@ Aldebaran anchors Taurus on Monday and New Moon arrives Sunday, making the latte
 | Sat, Jan 24, 2026 | ♒ 5 | Bellatrix (γ Ori) — 👁 V 2 — Tropical Winter<br>Elnath (β Tau) — 👁 V 2 — Northern Winter<br>M79 — Globular Cluster — Southern Winter — 🔭 |
 | Sun, Jan 25, 2026 | ♒ 6 | M38 — Open Cluster — Northern Winter — B<br>Nihal (β Lep) — 👁 V 3 — Tropical Winter |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jan 19, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♑ 28°54′ | ♒ 0°53′ | ♑ 27°11′ | ♒ 1°51′ | ♑ 26°35′ | ♋ 18°57′ | ♓ 27°27′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°34′ | ♓ 29°49′ | ♈ 11°29′ |
 
 ### Sky Note
 
@@ -202,13 +226,19 @@ Rigel and Capella dominate the bright-star calendar this week, while M79 (NGC 19
 | Sat, Jan 31, 2026 | ♒ 12 | Betelgeuse (α Ori) — 👁 V 0 — Tropical Winter |
 | Sun, Feb 01, 2026 | ♒ 13 | 🌕 Full Moon — 22:09:16 UTC — Wolf Moon<br>Menkalinan (β Aur) — 👁 V 2 — Northern Winter |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jan 26, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♒ 6°02′ | ♉ 3°26′ | ♒ 9°00′ | ♒ 10°39′ | ♒ 2°02′ | ♋ 18°04′ | ♓ 28°04′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°30′ | ♓ 29°59′ | ♈ 13°28′ |
 
 ### Sky Note
 
@@ -246,13 +276,19 @@ This is one of the year's strongest winter observing weeks: M42, the Great Nebul
 | Sat, Feb 07, 2026 | ♒ 19 | Canopus (α Car) — 👁 V -1 — Southern Winter<br>Mirzam (β CMa) — 👁 V 2 — Tropical Winter |
 | Sun, Feb 08, 2026 | ♒ 20 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Feb 2, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♒ 13°08′ | ♌ 14°09′ | ♒ 21°15′ | ♒ 19°26′ | ♒ 7°31′ | ♋ 17°15′ | ♓ 28°44′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°28′ | ♈ 0°10′ | ♈ 15°36′ |
 
 ### Sky Note
 
@@ -288,13 +324,19 @@ M35 (NGC 2168), an open cluster in Gemini is the principal deep-sky target, whil
 | Sat, Feb 14, 2026 | ♒ 26 | — |
 | Sun, Feb 15, 2026 | ♒ 27 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Feb 9, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♒ 20°14′ | ♏ 14°27′ | ♓ 3°34′ | ♒ 28°13′ | ♒ 13°00′ | ♋ 16°32′ | ♓ 29°28′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°28′ | ♈ 0°22′ | ♈ 17°50′ |
 
 ### Sky Note
 
@@ -330,13 +372,19 @@ Last Quarter Moon opens darker evening opportunities, and M41 (NGC 2287), an ope
 | Sat, Feb 21, 2026 | ♓ 4 | — |
 | Sun, Feb 22, 2026 | ♓ 5 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Feb 16, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♒ 27°19′ | ♒ 9°22′ | ♓ 14°41′ | ♓ 6°59′ | ♒ 18°30′ | ♋ 15°57′ | ♈ 0°13′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°31′ | ♈ 0°36′ | ♈ 20°10′ |
 
 ### Sky Note
 
@@ -372,13 +420,19 @@ New Moon on February 17 gives this week a dark-sky advantage, and M50 (NGC 2323)
 | Sat, Feb 28, 2026 | ♓ 11 | Pollux (β Gem) — 👁 V 1 — Northern Winter |
 | Sun, Mar 01, 2026 | ♓ 12 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Feb 23, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♓ 4°22′ | ♉ 14°22′ | ♓ 21°41′ | ♓ 15°44′ | ♒ 24°01′ | ♋ 15°31′ | ♈ 1°01′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°37′ | ♈ 0°50′ | ♈ 22°36′ |
 
 ### Sky Note
 
@@ -416,13 +470,19 @@ M47, M46, and M93 (NGC 2447), an open cluster make this a strong open-cluster we
 | Sat, Mar 07, 2026 | ♓ 18 | γ2 Vel — 👁 V 2 — Southern Winter |
 | Sun, Mar 08, 2026 | ♓ 19 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 2, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♓ 11°25′ | ♌ 22°53′ | ♓ 21°28′ | ♓ 24°28′ | ♒ 29°32′ | ♋ 15°13′ | ♈ 1°51′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°45′ | ♈ 1°05′ | ♈ 25°06′ |
 
 ### Sky Note
 
@@ -458,13 +518,19 @@ Full Moon on March 3 makes faint extended objects difficult, but M48 (NGC 2548),
 | Sat, Mar 14, 2026 | ♓ 25 | — |
 | Sun, Mar 15, 2026 | ♓ 26 | M44 Beehive Cluster — Open Cluster — Tropical Winter — B<br>β Pyx — B V 4 — Southern Winter |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 9, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♓ 18°25′ | ♏ 22°14′ | ♓ 15°19′ | ♈ 3°10′ | ♓ 5°03′ | ♋ 15°06′ | ♈ 2°41′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 27°56′ | ♈ 1°20′ | ♈ 27°40′ |
 
 ### Sky Note
 
@@ -500,13 +566,19 @@ Last Quarter Moon on March 11 improves evening conditions, and M44, the Beehive 
 | Sat, Mar 21, 2026 | ♈ 2 | α Vol — B V 4 — Southern Spring |
 | Sun, Mar 22, 2026 | ♈ 3 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 16, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♓ 25°24′ | ♒ 17°19′ | ♓ 9°41′ | ♈ 11°52′ | ♓ 10°34′ | ♋ 15°08′ | ♈ 3°33′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 28°09′ | ♈ 1°36′ | ♉ 0°18′ |
 
 ### Sky Note
 
@@ -542,13 +614,19 @@ M67 (NGC 2682), an open cluster appears on March 17, New Moon follows on March 1
 | Sat, Mar 28, 2026 | ♈ 9 | Alphard (α Hya) — 👁 V 2 — Tropical Spring |
 | Sun, Mar 29, 2026 | ♈ 10 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 23, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♈ 2°22′ | ♉ 24°59′ | ♓ 8°43′ | ♈ 20°32′ | ♓ 16°04′ | ♋ 15°19′ | ♈ 4°25′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 28°24′ | ♈ 1°52′ | ♉ 2°59′ |
 
 ### Sky Note
 
@@ -584,13 +662,19 @@ The calendar is dominated by bright spring stars rather than a Messier showpiece
 | Sat, Apr 04, 2026 | ♈ 16 | M81 Bode's Galaxy — Spiral Galaxy — Northern Spring — B<br>M82 Cigar Galaxy — Irregular Galaxy — Northern Spring — 🔭 |
 | Sun, Apr 05, 2026 | ♈ 17 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Mar 30, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♈ 9°18′ | ♍ 2°27′ | ♓ 12°07′ | ♈ 29°11′ | ♓ 21°33′ | ♋ 15°39′ | ♈ 5°18′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 28°41′ | ♈ 2°08′ | ♉ 5°42′ |
 
 ### Sky Note
 
@@ -626,13 +710,19 @@ M81, the Bode's Galaxy, a spiral galaxy and M82, the Cigar Galaxy, an irregular 
 | Sat, Apr 11, 2026 | ♈ 23 | — |
 | Sun, Apr 12, 2026 | ♈ 24 | Algieba (γ1 Leo) — 👁 V 2 — Tropical Spring |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Apr 6, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♈ 16°12′ | ♐ 0°14′ | ♓ 18°33′ | ♉ 7°47′ | ♓ 27°01′ | ♋ 16°09′ | ♈ 6°10′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 28°59′ | ♈ 2°23′ | ♉ 8°28′ |
 
 ### Sky Note
 
@@ -668,13 +758,19 @@ Regulus and Algieba make Leo the week's natural observing framework while Last Q
 | Sat, Apr 18, 2026 | ♈ 30 | M95 — Barred Galaxy — Tropical Spring — 🔭 |
 | Sun, Apr 19, 2026 | ♈ 31 | M96 — Spiral Galaxy — Tropical Spring — 🔭<br>M105 — Elliptical Galaxy — Tropical Spring — 🔭 |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Apr 13, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♈ 23°05′ | ♒ 25°10′ | ♓ 27°04′ | ♉ 16°22′ | ♈ 2°29′ | ♋ 16°46′ | ♈ 7°02′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 29°19′ | ♈ 2°39′ | ♉ 11°15′ |
 
 ### Sky Note
 
@@ -712,13 +808,19 @@ New Moon on April 17 is followed immediately by M95, M96, and M105 (NGC 3379), a
 | Sat, Apr 25, 2026 | ♉ 6 | M97 Owl Nebula — Planetary Nebula — Northern Spring — 🔭<br>M108 — Spiral Galaxy — Northern Spring — 🔭<br>β Crt — B V 4 — Tropical Spring |
 | Sun, Apr 26, 2026 | ♉ 7 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Apr 20, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♈ 29°56′ | ♊ 4°47′ | ♈ 7°11′ | ♉ 24°55′ | ♈ 7°54′ | ♋ 17°31′ | ♈ 7°52′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♉ 29°41′ | ♈ 2°54′ | ♉ 14°04′ |
 
 ### Sky Note
 
@@ -756,13 +858,19 @@ Dubhe and Merak mark the Big Dipper's bowl on April 23, followed by the Owl Nebu
 | Sat, May 02, 2026 | ♉ 13 | — |
 | Sun, May 03, 2026 | ♉ 14 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Apr 27, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♉ 6°45′ | ♍ 12°26′ | ♈ 18°44′ | ♊ 3°26′ | ♈ 13°18′ | ♋ 18°22′ | ♈ 8°41′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 0°03′ | ♈ 3°08′ | ♉ 16°54′ |
 
 ### Sky Note
 
@@ -798,13 +906,19 @@ M65 (NGC 3623), a spiral galaxy and M66 (NGC 3627), a spiral galaxy reach their 
 | Sat, May 09, 2026 | ♉ 20 | 🌗 Last Quarter — 21:10:33 UTC |
 | Sun, May 10, 2026 | ♉ 21 | Alchiba (α Crv) — B V 4 — Southern Spring |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, May 4, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♉ 13°33′ | ♐ 8°41′ | ♉ 1°42′ | ♊ 11°55′ | ♈ 18°40′ | ♋ 19°20′ | ♈ 9°29′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 0°27′ | ♈ 3°21′ | ♉ 19°45′ |
 
 ### Sky Note
 
@@ -842,13 +956,19 @@ The Beltane cross-quarter point falls on May 5, while Denebola and Phecda help e
 | Sat, May 16, 2026 | ♉ 27 | 🌑 New Moon — 20:01:01 UTC<br>Gacrux (γ Cru) — 👁 V 2 — Southern Spring<br>M49 — Elliptical Galaxy — Tropical Spring — 🔭<br>M87 — Elliptical Galaxy — Tropical Spring — 🔭<br>M88 — Spiral Galaxy — Tropical Spring — 🔭 |
 | Sun, May 17, 2026 | ♉ 28 | M89 — Elliptical Galaxy — Tropical Spring — 🔭<br>M90 — Spiral Galaxy — Tropical Spring — 🔭<br>M91 — Barred Galaxy — Tropical Spring — 🔭<br>Chara (β CVn) — B V 4 — Northern Spring<br>Kraz (β Crv) — 👁 V 3 — Tropical Spring<br>α Mus — 👁 V 3 — Southern Spring |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, May 11, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♉ 20°20′ | ♓ 3°23′ | ♉ 16°02′ | ♊ 20°21′ | ♈ 24°00′ | ♋ 20°24′ | ♈ 10°14′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 0°50′ | ♈ 3°34′ | ♉ 22°37′ |
 
 ### Sky Note
 
@@ -886,13 +1006,19 @@ This is one of the densest galaxy weeks in the Almanack. M98, M106, M99, M61, M8
 | Sat, May 23, 2026 | ♊ 3 | 🌓 First Quarter — 11:10:57 UTC<br>M64 Black Eye Galaxy — Spiral Galaxy — Tropical Spring — 🔭 |
 | Sun, May 24, 2026 | ♊ 4 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, May 18, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♉ 27°05′ | ♊ 13°44′ | ♊ 1°14′ | ♊ 28°45′ | ♈ 29°18′ | ♋ 21°33′ | ♈ 10°57′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 1°15′ | ♈ 3°45′ | ♉ 25°29′ |
 
 ### Sky Note
 
@@ -928,13 +1054,19 @@ The spring galaxy sequence continues with M104, M58, M59, M60, M94, and M64, whi
 | Sat, May 30, 2026 | ♊ 10 | — |
 | Sun, May 31, 2026 | ♊ 11 | 🌕 Full Moon — 08:45:16 UTC — Flower Moon<br>M51 Whirlpool Galaxy — Spiral Galaxy — Northern Spring — 🔭 |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, May 25, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♊ 3°49′ | ♍ 22°18′ | ♊ 16°02′ | ♋ 7°06′ | ♉ 4°33′ | ♋ 22°47′ | ♈ 11°38′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 1°39′ | ♈ 3°55′ | ♉ 28°22′ |
 
 ### Sky Note
 
@@ -970,13 +1102,19 @@ M63, the Sunflower Galaxy, a spiral galaxy and M53 (NGC 5024), a globular cluste
 | Sat, Jun 06, 2026 | ♊ 17 | — |
 | Sun, Jun 07, 2026 | ♊ 18 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jun 1, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♊ 10°32′ | ♐ 17°29′ | ♊ 29°09′ | ♋ 15°24′ | ♉ 9°46′ | ♋ 24°04′ | ♈ 12°15′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 2°04′ | ♈ 4°04′ | ♊ 1°14′ |
 
 ### Sky Note
 
@@ -1014,13 +1152,19 @@ M83, the Southern Pinwheel Galaxy, opens the week and M3 (NGC 5272), a globular 
 | Sat, Jun 13, 2026 | ♊ 24 | — |
 | Sun, Jun 14, 2026 | ♊ 25 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jun 8, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♊ 17°14′ | ♓ 12°16′ | ♋ 10°01′ | ♋ 23°38′ | ♉ 14°56′ | ♋ 25°25′ | ♈ 12°48′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 2°28′ | ♈ 4°11′ | ♊ 4°06′ |
 
 ### Sky Note
 
@@ -1056,13 +1200,19 @@ Last Quarter Moon on June 8 helps darken the evening later in the week, while Ar
 | Sat, Jun 20, 2026 | ♊ 31 | — |
 | Sun, Jun 21, 2026 | ♋ (Cancer) 1 | 🌓 First Quarter — 21:55:20 UTC<br>June Solstice — First Point of Cancer — Litha — 08:24:31 UTC<br>♋ Cancer ingress (90°) — 08:24:31 UTC<br>β Lup — 👁 V 3 — Southern Summer |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** Monday, Jun 15, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
 |---:|---:|---:|---:|---:|---:|---:|
 | ♊ 23°56′ | ♊ 22°12′ | ♋ 18°24′ | ♌ 1°48′ | ♉ 20°03′ | ♋ 26°49′ | ♈ 13°18′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 2°52′ | ♈ 4°17′ | ♊ 6°58′ |
 
 ### Sky Note
 
@@ -1098,13 +1248,19 @@ New Moon opens the week, Alpha Centauri reaches its Almanack date on June 16, an
 | Sat, Jun 27, 2026 | ♋ 7 | — |
 | Sun, Jun 28, 2026 | ♋ 8 | Nusakan (β CrB) — B V 4 — Northern Summer |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** June 22, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♋ 0°37′ | ♎ 1°39′ | ♋ 24°00′ | ♌ 9°54′ | ♉ 25°07′ | ♋ 28°15′ | ♈ 13°44′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 3°14′ | ♈ 4°21′ | ♊ 9°49′ |
 
 ### Sky Note
 
@@ -1140,13 +1296,19 @@ M5 (NGC 5904), a globular cluster reaches its Almanack date on June 26 and is on
 | Sat, Jul 04, 2026 | ♋ 14 | — |
 | Sun, Jul 05, 2026 | ♋ 15 | β TrA — 👁 V 3 — Southern Summer |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** June 29, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♋ 7°18′ | ♐ 26°23′ | ♋ 26°14′ | ♌ 17°55′ | ♊ 0°08′ | ♋ 29°44′ | ♈ 14°06′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 3°36′ | ♈ 4°24′ | ♊ 12°39′ |
 
 ### Sky Note
 
@@ -1182,13 +1344,19 @@ Full Moon falls on June 29, so this is better suited to bright-star observing th
 | Sat, Jul 11, 2026 | ♋ 21 | — |
 | Sun, Jul 12, 2026 | ♋ 22 | M4 — Globular Cluster — Southern Summer — B |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** July 6, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♋ 13°58′ | ♓ 21°50′ | ♋ 24°49′ | ♌ 25°50′ | ♊ 5°06′ | ♌ 1°14′ | ♈ 14°23′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 3°57′ | ♈ 4°25′ | ♊ 15°27′ |
 
 ### Sky Note
 
@@ -1226,13 +1394,19 @@ Last Quarter Moon on July 7 improves evening conditions, and M80 (NGC 6093), a g
 | Sat, Jul 18, 2026 | ♋ 28 | M12 — Globular Cluster — Tropical Summer — B<br>Atria (α TrA) — 👁 V 2 — Southern Summer<br>Larawag (ε Sco) — 👁 V 2 — Southern Summer |
 | Sun, Jul 19, 2026 | ♋ 29 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** July 13, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♋ 20°39′ | ♋ 0°46′ | ♋ 20°44′ | ♍ 3°38′ | ♊ 10°01′ | ♌ 2°46′ | ♈ 14°35′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 4°16′ | ♈ 4°25′ | ♊ 18°15′ |
 
 ### Sky Note
 
@@ -1268,13 +1442,19 @@ New Moon on July 14 opens a dark-sky week rich in globular clusters. M107 (NGC 6
 | Sat, Jul 25, 2026 | ♌ 4 | M9 — Globular Cluster — Tropical Summer — 🔭<br>M92 — Globular Cluster — Northern Summer — B |
 | Sun, Jul 26, 2026 | ♌ 5 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** July 20, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♋ 27°20′ | ♎ 10°19′ | ♋ 17°01′ | ♍ 11°18′ | ♊ 14°52′ | ♌ 4°18′ | ♈ 14°43′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 4°34′ | ♈ 4°23′ | ♊ 21°00′ |
 
 ### Sky Note
 
@@ -1310,13 +1490,19 @@ This is a globular-cluster comparison week. M10 (NGC 6254), a globular cluster l
 | Sat, Aug 01, 2026 | ♌ 11 | Cebalrai (β Oph) — 👁 V 3 — Tropical Summer |
 | Sun, Aug 02, 2026 | ♌ 12 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** July 27, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♌ 4°01′ | ♑ 5°05′ | ♋ 16°46′ | ♍ 18°49′ | ♊ 19°41′ | ♌ 5°51′ | ♈ 14°45′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 4°50′ | ♈ 4°19′ | ♊ 23°43′ |
 
 ### Sky Note
 
@@ -1356,13 +1542,19 @@ Full Moon on July 29 brightens a week centered on Scorpius. Shaula and Sargas ma
 | Sat, Aug 08, 2026 | ♌ 18 | — |
 | Sun, Aug 09, 2026 | ♌ 19 | M16 Eagle Nebula — Open Cluster — Tropical Summer — B<br>M17 Omega Nebula — Diffuse Nebula — Tropical Summer — B<br>M18 — Open Cluster — Tropical Summer — B<br>M24 Sagittarius Star Cloud — Milky Way — Tropical Summer — B |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** August 3, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♌ 10°42′ | ♈ 1°51′ | ♋ 21°19′ | ♍ 26°08′ | ♊ 24°25′ | ♌ 7°24′ | ♈ 14°42′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°04′ | ♈ 4°14′ | ♊ 26°24′ |
 
 ### Sky Note
 
@@ -1398,13 +1590,19 @@ The southern Milky Way supplies an extraordinary sequence this week: M7, the Pto
 | Sat, Aug 15, 2026 | ♌ 25 | M70 — Globular Cluster — Southern Summer — 🔭<br>Vega (α Lyr) — 👁 V 0 — Northern Summer |
 | Sun, Aug 16, 2026 | ♌ 26 | M26 — Open Cluster — Tropical Summer — 🔭 |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** August 10, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♌ 17°25′ | ♋ 9°58′ | ♌ 0°30′ | ♎ 3°12′ | ♊ 29°06′ | ♌ 8°57′ | ♈ 14°35′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°16′ | ♈ 4°08′ | ♊ 29°02′ |
 
 ### Sky Note
 
@@ -1444,13 +1642,19 @@ New Moon on August 12 lands in the middle of a superb Sagittarius observing week
 | Sat, Aug 22, 2026 | ♌ 32 | — |
 | Sun, Aug 23, 2026 | ♍ (Virgo) 1 | M56 — Globular Cluster — Northern Summer — 🔭<br>Meridiana (α CrA) — B V 4 — Southern Summer |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** August 17, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♌ 24°08′ | ♎ 18°27′ | ♌ 13°05′ | ♎ 10°00′ | ♋ 3°43′ | ♌ 10°29′ | ♈ 14°22′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°26′ | ♈ 4°00′ | ♋ 1°36′ |
 
 ### Sky Note
 
@@ -1486,13 +1690,19 @@ M11, the Wild Duck Cluster, opens the week on August 17, followed by M57, the Ri
 | Sat, Aug 29, 2026 | ♍ 7 | M55 — Globular Cluster — Southern Summer — B<br>Albireo (β1 Cyg) — 👁 V 3 — Northern Summer<br>Albireo B (β2 Cyg) — B V 5 — Northern Summer<br>Anser (α Vul) — B V 4 — Northern Summer |
 | Sun, Aug 30, 2026 | ♍ 8 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** August 24, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♍ 0°52′ | ♑ 13°25′ | ♌ 27°05′ | ♎ 16°25′ | ♋ 8°16′ | ♌ 12°00′ | ♈ 14°05′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°34′ | ♈ 3°51′ | ♋ 4°07′ |
 
 ### Sky Note
 
@@ -1528,13 +1738,19 @@ Full Moon arrives August 28, followed by M55 (NGC 6809), a globular cluster and 
 | Sat, Sep 05, 2026 | ♍ 14 | M75 — Globular Cluster — Tropical Summer — 🔭<br>Alshain (β Aql) — B V 4 — Tropical Summer |
 | Sun, Sep 06, 2026 | ♍ 15 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** August 31, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♍ 7°38′ | ♈ 11°53′ | ♍ 10°48′ | ♎ 22°22′ | ♋ 12°46′ | ♌ 13°29′ | ♈ 13°44′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°39′ | ♈ 3°41′ | ♋ 6°33′ |
 
 ### Sky Note
 
@@ -1572,13 +1788,19 @@ Last Quarter on September 4 shares the calendar with M27, the Dumbbell Nebula, a
 | Sat, Sep 12, 2026 | ♍ 21 | Dabih (β Cap) — 👁 V 3 — Tropical Summer<br>Sadr (γ Cyg) — 👁 V 2 — Northern Summer |
 | Sun, Sep 13, 2026 | ♍ 22 | Peacock (α Pav) — 👁 V 2 — Southern Summer |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** September 7, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♍ 14°24′ | ♋ 19°58′ | ♍ 23°39′ | ♎ 27°43′ | ♋ 17°10′ | ♌ 14°57′ | ♈ 13°19′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°41′ | ♈ 3°31′ | ♋ 8°53′ |
 
 ### Sky Note
 
@@ -1614,13 +1836,19 @@ M29 (NGC 6913), an open cluster appears on September 10 and New Moon follows Sep
 | Sat, Sep 19, 2026 | ♍ 28 | M73 — AST — Tropical Summer — 🔭<br>β Pav — 👁 V 3 — Southern Summer<br>Aljanah (ε Cyg) — 👁 V 2 — Northern Summer |
 | Sun, Sep 20, 2026 | ♍ 29 | α Mic — B V 5 — Southern Summer |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** September 14, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♍ 21°13′ | ♎ 26°25′ | ♎ 5°31′ | ♏ 2°16′ | ♋ 21°31′ | ♌ 16°22′ | ♈ 12°51′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°42′ | ♈ 3°20′ | ♋ 11°08′ |
 
 ### Sky Note
 
@@ -1656,13 +1884,19 @@ Delphinus and Deneb give this week a strong naked-eye framework, while M72 (NGC 
 | Sat, Sep 26, 2026 | ♎ 4 | 🌕 Full Moon — 16:49:02 UTC |
 | Sun, Sep 27, 2026 | ♎ 5 | Kitalpha (α Equ) — B V 4 — Tropical Autumn |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** September 21, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♍ 28°02′ | ♑ 21°21′ | ♎ 16°29′ | ♏ 5°48′ | ♋ 25°46′ | ♌ 17°44′ | ♈ 12°21′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°39′ | ♈ 3°08′ | ♋ 13°16′ |
 
 ### Sky Note
 
@@ -1700,13 +1934,19 @@ The September 26 Full Moon dominates this week, while the Sun crosses into Libra
 | Sat, Oct 03, 2026 | ♎ 11 | 🌗 Last Quarter — 13:25:02 UTC |
 | Sun, Oct 04, 2026 | ♎ 12 | M30 — Globular Cluster — Tropical Autumn — B |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** September 28, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♎ 4°54′ | ♈ 21°28′ | ♎ 26°37′ | ♏ 7°58′ | ♋ 29°56′ | ♌ 19°03′ | ♈ 11°49′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°34′ | ♈ 2°57′ | ♋ 15°16′ |
 
 ### Sky Note
 
@@ -1744,13 +1984,19 @@ This is a compact but excellent autumn deep-sky week: M15, the Great Pegasus Glo
 | Sat, Oct 10, 2026 | ♎ 18 | 🌑 New Moon — 15:50:01 UTC |
 | Sun, Oct 11, 2026 | ♎ 19 | Sadalmelik (α Aqr) — 👁 V 3 — Tropical Autumn |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** October 5, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♎ 11°46′ | ♌ 0°38′ | ♏ 5°48′ | ♏ 8°26′ | ♌ 4°00′ | ♌ 20°18′ | ♈ 11°16′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°27′ | ♈ 2°45′ | ♋ 17°08′ |
 
 ### Sky Note
 
@@ -1786,13 +2032,19 @@ The New Moon on Saturday, October 10 makes this one of the best dark-sky weeks o
 | Sat, Oct 17, 2026 | ♎ 25 | — |
 | Sun, Oct 18, 2026 | ♎ 26 | 🌓 First Quarter — 16:12:35 UTC<br>α Lac — B V 4 — Northern Autumn<br>β PsA — B V 4 — Southern Autumn |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** October 12, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♎ 18°41′ | ♏ 4°35′ | ♏ 13°41′ | ♏ 7°00′ | ♌ 7°58′ | ♌ 21°28′ | ♈ 10°43′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°18′ | ♈ 2°34′ | ♋ 18°49′ |
 
 ### Sky Note
 
@@ -1828,13 +2080,19 @@ The week of October 12–18 is comparatively quiet in the Almanack, which makes 
 | Sat, Oct 24, 2026 | ♏ 2 | — |
 | Sun, Oct 25, 2026 | ♏ 3 | Fomalhaut (α PsA) — 👁 V 1 — Southern Autumn |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** October 19, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♎ 25°37′ | ♑ 29°10′ | ♏ 19°21′ | ♏ 3°48′ | ♌ 11°49′ | ♌ 22°34′ | ♈ 10°11′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 5°06′ | ♈ 2°23′ | ♋ 20°18′ |
 
 ### Sky Note
 
@@ -1872,13 +2130,19 @@ Fomalhaut (α Piscis Austrini) is the standout object of W43, appearing on Octob
 | Sat, Oct 31, 2026 | ♏ 9 | — |
 | Sun, Nov 01, 2026 | ♏ 10 | 🌗 Last Quarter — 20:28:27 UTC<br>M52 — Open Cluster — Northern Autumn — B |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** October 26, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♏ 2°35′ | ♉ 0°15′ | ♏ 20°47′ | ♎ 29°37′ | ♌ 15°33′ | ♌ 23°33′ | ♈ 9°41′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 4°53′ | ♈ 2°13′ | ♋ 21°35′ |
 
 ### Sky Note
 
@@ -1914,13 +2178,19 @@ This week ends with Last Quarter Moon on Sunday, November 1, leaving the first p
 | Sat, Nov 07, 2026 | ♏ 16 | — |
 | Sun, Nov 08, 2026 | ♏ 17 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** November 2, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♏ 9°35′ | ♌ 11°28′ | ♏ 15°30′ | ♎ 25°46′ | ♌ 19°07′ | ♌ 24°27′ | ♈ 9°13′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 4°38′ | ♈ 2°04′ | ♋ 22°36′ |
 
 ### Sky Note
 
@@ -1956,13 +2226,19 @@ November 2–8 is deliberately a quiet Almanack week: β Sculptoris is the only 
 | Sat, Nov 14, 2026 | ♏ 23 | — |
 | Sun, Nov 15, 2026 | ♏ 24 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** November 9, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♏ 16°36′ | ♏ 13°15′ | ♏ 7°07′ | ♎ 23°23′ | ♌ 22°32′ | ♌ 25°13′ | ♈ 8°49′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 4°22′ | ♈ 1°56′ | ♋ 23°22′ |
 
 ### Sky Note
 
@@ -2000,13 +2276,19 @@ New Moon falls on Monday, November 9, giving the week an excellent dark-sky begi
 | Sat, Nov 21, 2026 | ♏ 30 | — |
 | Sun, Nov 22, 2026 | ♐ (Sagittarius) 1 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** November 16, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♏ 23°38′ | ♒ 7°13′ | ♏ 5°31′ | ♎ 22°57′ | ♌ 25°46′ | ♌ 25°52′ | ♈ 8°29′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 4°05′ | ♈ 1°49′ | ♋ 23°49′ |
 
 ### Sky Note
 
@@ -2044,13 +2326,19 @@ The week culminates on Friday, November 20 with M31, the Andromeda Galaxy, toget
 | Sat, Nov 28, 2026 | ♐ 7 | — |
 | Sun, Nov 29, 2026 | ♐ 8 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** November 23, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♐ 0°42′ | ♉ 8°19′ | ♏ 11°22′ | ♎ 24°24′ | ♌ 28°47′ | ♌ 26°23′ | ♈ 8°13′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 3°48′ | ♈ 1°44′ | ♋ 23°57′ |
 
 ### Sky Note
 
@@ -2086,13 +2374,19 @@ Full Moon occurs Tuesday, November 24, so this is not the strongest week for fai
 | Sat, Dec 05, 2026 | ♐ 14 | — |
 | Sun, Dec 06, 2026 | ♐ 15 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** November 30, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♐ 7°47′ | ♌ 21°47′ | ♏ 20°36′ | ♎ 27°27′ | ♍ 1°34′ | ♌ 26°45′ | ♈ 8°02′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 3°30′ | ♈ 1°40′ | ♋ 23°44′ |
 
 ### Sky Note
 
@@ -2128,13 +2422,19 @@ Last Quarter Moon occurs Tuesday, December 1, and the week brings several contra
 | Sat, Dec 12, 2026 | ♐ 21 | — |
 | Sun, Dec 13, 2026 | ♐ 22 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** December 7, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♐ 14°53′ | ♏ 22°20′ | ♐ 0°58′ | ♏ 1°46′ | ♍ 4°03′ | ♌ 26°58′ | ♈ 7°57′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 3°13′ | ♈ 1°37′ | ♋ 23°11′ |
 
 ### Sky Note
 
@@ -2172,13 +2472,19 @@ The Moon is waning after Last Quarter, so evening skies become progressively fri
 | Sat, Dec 19, 2026 | ♐ 28 | β For — B V 4 — Southern Autumn |
 | Sun, Dec 20, 2026 | ♐ 29 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** December 14, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♐ 22°00′ | ♒ 15°44′ | ♐ 11°41′ | ♏ 7°02′ | ♍ 6°13′ | ♌ 27°01′ | ♈ 7°56′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 2°56′ | ♈ 1°37′ | ♋ 22°18′ |
 
 ### Sky Note
 
@@ -2216,13 +2522,19 @@ Mid-December evenings mark the handoff from the autumn constellations toward the
 | Sat, Dec 26, 2026 | ♑ 6 | — |
 | Sun, Dec 27, 2026 | ♑ 7 | Mirfak (α Per) — 👁 V 2 — Northern Winter |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** December 21, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♐ 29°07′ | ♉ 16°16′ | ♐ 22°32′ | ♏ 13°01′ | ♍ 7°59′ | ♌ 26°55′ | ♈ 8°01′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 2°40′ | ♈ 1°38′ | ♋ 21°07′ |
 
 ### Sky Note
 
@@ -2260,13 +2572,19 @@ The week begins with the December solstice season and reaches Full Moon on Thurs
 | Sat, Jan 02, 2027 | ♑ 13 | — |
 | Sun, Jan 03, 2027 | ♑ 14 | — |
 
-### Weekly Classical-Planet Ephemeris
+### Weekly Solar-System Ephemeris
 
 **Snapshot:** December 28, 2026 · 00:00 UTC
 
 | ☉ Sun | ☽ Moon | ☿ Mercury | ♀ Venus | ♂ Mars | ♃ Jupiter | ♄ Saturn |
-|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|
 | ♑ 6°15′ | ♍ 1°04′ | ♑ 3°32′ | ♏ 19°33′ | ♍ 9°20′ | ♌ 26°40′ | ♈ 8°12′ |
+
+**Extended targets:**
+
+| ♅ Uranus | ♆ Neptune | ⚳ Ceres |
+|---:|---:|---:|
+| ♊ 2°26′ | ♈ 1°41′ | ♋ 19°41′ |
 
 ### Sky Note
 
