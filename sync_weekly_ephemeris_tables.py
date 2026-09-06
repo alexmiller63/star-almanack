@@ -1,19 +1,23 @@
 #!/usr/bin/env python3
-"""Synchronize all 53 Almanack week sections from weekly-ephemeris-2026.csv.
+"""Synchronize Almanack week sections from weekly-ephemeris-2026.csv.
 
 The familiar 7-body table is retained for compact/mobile readability. Uranus,
 Neptune, and Ceres appear immediately below it as an Extended targets table in
 the same Weekly Solar-System Ephemeris section.
+
+By default this updates almanack.md, whose historical source contains only the
+early ISO weeks. A different Markdown target can be supplied as argv[1], which
+allows the same code to synchronize the generated 53-week expanded Almanack.
 """
 from __future__ import annotations
 
 import csv
 import re
+import sys
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-SOURCE = ROOT / "almanack.md"
 EPHEMERIS = ROOT / "weekly-ephemeris-2026.csv"
 
 PRIMARY = [
@@ -53,6 +57,7 @@ def replacement(row):
 
 
 def main():
+    target = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "almanack.md"
     with EPHEMERIS.open(encoding="utf-8", newline="") as f:
         rows = {row["iso_week"]: row for row in csv.DictReader(f)}
     if len(rows) != 53:
@@ -62,21 +67,25 @@ def main():
             if not row.get(required):
                 raise SystemExit(f"{key} is missing {required}")
 
-    text = SOURCE.read_text(encoding="utf-8")
+    text = target.read_text(encoding="utf-8")
+    weeks = [int(x) for x in re.findall(r"(?m)^## ISO 2026-W(\d{2})\s*$", text)]
+    if not weeks:
+        raise SystemExit(f"No ISO 2026 week sections found in {target}")
+
     changed = 0
-    for week in range(1, 54):
+    for week in weeks:
         key = f"2026-W{week:02d}"
         section_re = re.compile(
             rf"(?ms)(^## ISO {re.escape(key)}\s*$.*?)(^### Weekly (?:Classical-Planet|Solar-System) Ephemeris\s*$.*?)(?=^### Sky Note\s*$)"
         )
         match = section_re.search(text)
         if not match:
-            raise SystemExit(f"Could not locate ephemeris section for {key}")
+            raise SystemExit(f"Could not locate ephemeris section for {key} in {target}")
         text = text[:match.start()] + match.group(1) + replacement(rows[key]) + text[match.end():]
         changed += 1
 
-    SOURCE.write_text(text, encoding="utf-8")
-    print(f"Synchronized {changed} weekly Solar-System ephemeris sections")
+    target.write_text(text, encoding="utf-8")
+    print(f"Synchronized {changed} weekly Solar-System ephemeris sections in {target}")
 
 
 if __name__ == "__main__":
