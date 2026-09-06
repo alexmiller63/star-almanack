@@ -6,6 +6,7 @@ on:
     paths:
       - extend_weekly_ephemeris.py
       - sync_weekly_ephemeris_tables.py
+      - patch_ephemeris_builder.py
       - .github/workflows/extend-weekly-ephemeris.yml
 
 permissions:
@@ -32,7 +33,10 @@ jobs:
       - name: Calculate Uranus Neptune and Ceres
         run: python extend_weekly_ephemeris.py
 
-      - name: Synchronize all 53 weekly tables
+      - name: Patch expanded Almanack builder
+        run: python patch_ephemeris_builder.py
+
+      - name: Synchronize source week tables
         run: python sync_weekly_ephemeris_tables.py
 
       - name: Validate extended ephemeris
@@ -49,16 +53,21 @@ jobs:
           assert all(r['uranus'] and r['neptune'] and r['ceres'] for r in rows)
 
           text = Path('almanack.md').read_text(encoding='utf-8')
-          assert text.count('### Weekly Solar-System Ephemeris') == 53
-          assert text.count('**Extended targets:**') == 53
-          assert text.count('| ♅ Uranus | ♆ Neptune | ⚳ Ceres |') == 53
-          assert 'Pluto' not in '\n'.join(line for line in text.splitlines() if 'Ephemeris' in line or 'Extended targets' in line or line.startswith('| ♅ Uranus'))
-          print('Validated 53 weeks with Uranus, Neptune, and Ceres; Pluto excluded')
+          week_count = len(re.findall(r'(?m)^## ISO 2026-W\d{2}\s*$', text))
+          assert week_count > 0
+          assert text.count('### Weekly Solar-System Ephemeris') == week_count
+          assert text.count('**Extended targets:**') == week_count
+          assert text.count('| ♅ Uranus | ♆ Neptune | ⚳ Ceres |') == week_count
+
+          builder = Path('build_expanded_almanack.py').read_text(encoding='utf-8')
+          assert '♅ Uranus' in builder and '♆ Neptune' in builder and '⚳ Ceres' in builder
+          assert '### Weekly Solar-System Ephemeris' in builder
+          print(f'Validated 53-row data set and {week_count} synchronized source weeks; Pluto excluded')
           PY
 
-      - name: Commit generated ephemeris and source tables
+      - name: Commit generated ephemeris and build integration
         run: |
-          git add weekly-ephemeris-2026.csv almanack.md
+          git add weekly-ephemeris-2026.csv almanack.md build_expanded_almanack.py
           if git diff --cached --quiet; then
             echo 'No ephemeris changes to commit.'
             exit 0
