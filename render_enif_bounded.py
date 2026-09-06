@@ -79,6 +79,57 @@ def draw_boundary_tight(ax, con, center):
         ax.set_ylim(min(ys) - pady, max(ys) + pady)
 
 
+def center_refs_without_label_only_paths(spec):
+    """Keep 1-star paths available for labels without moving the chart center."""
+    refs = {spec["target"]}
+    for path in spec.get("figure_paths", []):
+        if len(path) >= 2:
+            refs.update(path)
+    return refs
+
+
+def draw_enif_m15_objects(ax, spec, idx, center):
+    """Draw M15 and two outward arrows sharing one common tail."""
+    for d in spec.get("deep_sky_objects", []):
+        xy = r.project(float(d["ra_deg"]), float(d["dec_deg"]), *center)
+        if not xy:
+            continue
+        ax.scatter(
+            [xy[0]], [xy[1]], s=130, facecolors="none",
+            edgecolors=r.ASTERISM_GREEN, linewidths=2.2, zorder=8,
+        )
+        label = " · ".join(x for x in (d.get("name", ""), d.get("type", "")) if x)
+        ax.annotate(
+            label, xy, xytext=tuple(d.get("label_offset", [10, 10])),
+            textcoords="offset points", ha="left", va="bottom", fontsize=9,
+            color=r.TEXT, bbox=dict(facecolor=r.NIGHT, edgecolor="none", pad=.8), zorder=9,
+        )
+        ref = d.get("from_ref")
+        if not ref or ref not in idx:
+            continue
+        s = idx[ref]
+        fxy = r.project(s.ra_deg, s.dec_deg, *center)
+        if not fxy:
+            continue
+
+        # The two arrows share exactly one tail at the midpoint. Each arrowhead
+        # stops visibly short of its target rather than landing on the star/object.
+        joint = ((xy[0] + fxy[0]) / 2, (xy[1] + fxy[1]) / 2)
+        arrow = dict(
+            arrowstyle="-|>", mutation_scale=22, linewidth=2.6,
+            color=r.ASTERISM_GREEN, shrinkA=0, shrinkB=16,
+        )
+        ax.annotate("", xy=fxy, xytext=joint, arrowprops=arrow, zorder=7)
+        ax.annotate("", xy=xy, xytext=joint, arrowprops=arrow, zorder=7)
+
+        if d.get("distance_label"):
+            ax.annotate(
+                d["distance_label"], joint, xytext=(0, 9), textcoords="offset points",
+                ha="center", va="bottom", fontsize=8, color=r.ASTERISM_GREEN,
+                bbox=dict(facecolor=r.NIGHT, edgecolor="none", pad=.5), zorder=9,
+            )
+
+
 def add_axes_frame(svg_path: Path):
     """Stroke the axes background rectangle after Matplotlib hides its spines."""
     text = svg_path.read_text(encoding="utf-8")
@@ -101,9 +152,19 @@ def main():
 
     specs = json.loads(a.config.read_text(encoding="utf-8"))
     stars = r.load_hyg(a.hyg_catalog)
+    spec = specs["Pegasus"]
+
+    # Mark Alpheratz and Algenib as label-only figure refs. Markab and Scheat are
+    # already part of the Martz/MacRobert Pegasus figure, so all 4 Square corners
+    # will now receive star labels without adding any extra connecting line.
+    spec["figure_paths"] = list(spec.get("figure_paths", [])) + [["Alp And"], ["Gam Peg"]]
+
     r.IAU_BOUNDARIES_J2000["Peg"] = PEG_BOUNDARY_J2000
     r.draw_boundary = draw_boundary_tight
-    outputs = r.render_figure("Pegasus", specs["Pegasus"], stars, a.out_dir)
+    r.center_refs = center_refs_without_label_only_paths
+    r.draw_deep_sky_objects = draw_enif_m15_objects
+
+    outputs = r.render_figure("Pegasus", spec, stars, a.out_dir)
     enif = next(path for path in outputs if path.name == "enif-finder.svg")
     add_axes_frame(enif)
     print(f"bounded {enif}")
