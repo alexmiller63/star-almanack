@@ -74,12 +74,9 @@ table.calendar td:nth-child(2) { white-space:nowrap; text-align:center; }
 table.calendar td:nth-child(3) { line-height:1.6; }
 .ephemeris-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0 2rem; border-radius:.5rem; }
 .ephemeris-scroll table { margin:0; }
-table.ephemeris { display:table; font-size:.9rem; }
-table.ephemeris th,table.ephemeris td { text-align:center; }
-table.ephemeris td { white-space:nowrap; padding-top:.8rem; padding-bottom:.8rem; }
-table.ephemeris:not(.extended-ephemeris) { min-width:44rem; }
-table.extended-ephemeris { min-width:32rem; table-layout:auto; }
-table.extended-ephemeris th,table.extended-ephemeris td { width:25%; }
+table.ephemeris { display:table; font-size:.9rem; min-width:44rem; }
+table.ephemeris th,table.ephemeris td { text-align:center; white-space:nowrap; }
+table.ephemeris td { padding-top:.8rem; padding-bottom:.8rem; }
 .almanack-glyph { display:inline-block; font-family:'Apple Symbols','Arial Unicode MS','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif; font-variant-emoji:text; color:currentColor; -webkit-text-fill-color:currentColor; line-height:1; transform:scale(var(--glyph-scale)); transform-origin:50% 55%; vertical-align:-.04em; }
 code { background:#eef1f3; padding:.1rem .3rem; border-radius:.25rem; font-size:.9em; }
 .weekgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:.7rem; padding:0; margin:1.5rem 0 0; list-style:none; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
