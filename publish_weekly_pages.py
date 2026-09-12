@@ -38,10 +38,22 @@ ZODIAC_NAMES = {
     "♓": "Pisces",
 }
 
+# Every symbolic mark rendered by the Almanack uses this one class.  The
+# visual enlargement is a transform, not font-size, so changing the scale does
+# not change table measurements, wrapping, row height, or column widths.
+ASTRONOMY_GLYPHS = "☉☽☿♀♂♃♄♅♆⚳♇☄"
+GREEK_GLYPHS = "αβγδεζηθικλμνξοπρστυφχψω"
+PHASE_GLYPHS = "🌑🌒🌓🌔🌕🌖🌗🌘"
+OBSERVING_GLYPHS = "👁🔭"
+GLYPH_CHARS = "".join(ZODIAC_NAMES) + ASTRONOMY_GLYPHS + GREEK_GLYPHS + PHASE_GLYPHS + OBSERVING_GLYPHS
+GLYPH_RE = re.compile("[" + re.escape(GLYPH_CHARS) + "]")
+TEXT_PRESENTATION_GLYPHS = set(ZODIAC_NAMES) | set(ASTRONOMY_GLYPHS)
+BINOCULAR_AID_RE = re.compile(r"(?<![A-Za-z0-9])B(?=(?:\s+V\s+\d|\s*(?:$|—|@@BR@@)))")
+
 EXTENDED_EPHEMERIS_BODIES = ("Uranus", "Neptune", "Ceres", "Pluto")
 
 CSS = """
-:root { color-scheme: light dark; --ink:#202833; --muted:#66717d; --navy:#102a43; --link:#245c86; --paper:#fffdf8; --page:#eee9df; --rule:#d8d2c8; --soft-blue:#edf4f8; }
+:root { color-scheme: light dark; --ink:#202833; --muted:#66717d; --navy:#102a43; --link:#245c86; --paper:#fffdf8; --page:#eee9df; --rule:#d8d2c8; --soft-blue:#edf4f8; --glyph-scale:2; }
 * { box-sizing: border-box; }
 html { font-size:17px; }
 body { margin:0; font-family:Georgia,'Times New Roman',serif; line-height:1.65; background:var(--page); color:var(--ink); -webkit-font-smoothing:antialiased; }
@@ -79,7 +91,7 @@ table.ephemeris th,table.ephemeris td { text-align:center; }
 table.ephemeris td { white-space:nowrap; padding-top:.8rem; padding-bottom:.8rem; }
 table.extended-ephemeris { table-layout:fixed; }
 table.extended-ephemeris th,table.extended-ephemeris td { width:25%; }
-.zodiac-glyph { font-family:'Apple Symbols','Arial Unicode MS','Segoe UI Symbol','Noto Sans Symbols 2',serif; font-variant-emoji:text; color:currentColor; -webkit-text-fill-color:currentColor; }
+.almanack-glyph { display:inline-block; font-family:'Apple Symbols','Arial Unicode MS','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif; font-variant-emoji:text; color:currentColor; -webkit-text-fill-color:currentColor; line-height:1; margin-inline:.25em; transform:scale(var(--glyph-scale)); transform-origin:50% 55%; vertical-align:-.04em; }
 code { background:#eef1f3; padding:.1rem .3rem; border-radius:.25rem; font-size:.9em; }
 .weekgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:.7rem; padding:0; margin:1.5rem 0 0; list-style:none; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 .weekgrid a,.weekgrid a:visited { display:block; padding:.85rem .9rem; border:1px solid #cbd3da; border-radius:.5rem; text-decoration:none; text-align:center; background:#fff; color:var(--link); font-weight:650; }
@@ -90,17 +102,18 @@ footer .wrap { padding-top:1.3rem; padding-bottom:1.3rem; opacity:.9; }
 """.strip()
 
 
-def zodiac_glyph(glyph: str) -> str:
-    return f'<span class="zodiac-glyph">{html.escape(glyph)}&#xfe0e;</span>'
+def glyph_markup(glyph: str) -> str:
+    variation = "&#xfe0e;" if glyph in TEXT_PRESENTATION_GLYPHS else ""
+    return f'<span class="almanack-glyph">{html.escape(glyph)}{variation}</span>'
 
 
 def inline_markup(text: str) -> str:
     sentinel = "@@BR@@"
     text = text.replace("<br>", sentinel)
+    text = text.replace("\ufe0f", "").replace("\ufe0e", "")
     text = html.escape(text)
-    for glyph in ZODIAC_NAMES:
-        text = text.replace(glyph + "\ufe0f", glyph).replace(glyph + "\ufe0e", glyph)
-        text = text.replace(glyph, zodiac_glyph(glyph))
+    text = GLYPH_RE.sub(lambda match: glyph_markup(match.group(0)), text)
+    text = BINOCULAR_AID_RE.sub(lambda match: glyph_markup(match.group(0)), text)
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", text)
@@ -118,7 +131,7 @@ def format_zodiac_cell(text: str) -> str:
         glyph = stripped[0]
         remainder = re.sub(rf"^\({re.escape(ZODIAC_NAMES[glyph])}\)\s*", "", stripped[1:].strip())
         spacer = " " if remainder else ""
-        return f"{zodiac_glyph(glyph)}{spacer}{inline_markup(remainder)}"
+        return f"{glyph_markup(glyph)}{spacer}{inline_markup(remainder)}"
     return inline_markup(text)
 
 
