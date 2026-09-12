@@ -72,18 +72,21 @@ table.calendar th:nth-child(3),table.calendar td:nth-child(3) { width:76%; }
 table.calendar td:first-child { white-space:nowrap; font-weight:600; }
 table.calendar td:nth-child(2) { white-space:nowrap; text-align:center; }
 table.calendar td:nth-child(3) { line-height:1.6; }
-table.ephemeris { font-size:.9rem; }
+.ephemeris-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0 2rem; border-radius:.5rem; }
+.ephemeris-scroll table { margin:0; }
+table.ephemeris { display:table; font-size:.9rem; }
 table.ephemeris th,table.ephemeris td { text-align:center; }
 table.ephemeris td { white-space:nowrap; padding-top:.8rem; padding-bottom:.8rem; }
-table.extended-ephemeris { table-layout:fixed; }
+table.ephemeris:not(.extended-ephemeris) { min-width:44rem; }
+table.extended-ephemeris { min-width:32rem; table-layout:auto; }
 table.extended-ephemeris th,table.extended-ephemeris td { width:25%; }
-.almanack-glyph { display:inline-block; font-family:'Apple Symbols','Arial Unicode MS','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif; font-variant-emoji:text; color:currentColor; -webkit-text-fill-color:currentColor; line-height:1; margin-inline:.25em; transform:scale(var(--glyph-scale)); transform-origin:50% 55%; vertical-align:-.04em; }
+.almanack-glyph { display:inline-block; font-family:'Apple Symbols','Arial Unicode MS','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif; font-variant-emoji:text; color:currentColor; -webkit-text-fill-color:currentColor; line-height:1; transform:scale(var(--glyph-scale)); transform-origin:50% 55%; vertical-align:-.04em; }
 code { background:#eef1f3; padding:.1rem .3rem; border-radius:.25rem; font-size:.9em; }
 .weekgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:.7rem; padding:0; margin:1.5rem 0 0; list-style:none; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 .weekgrid a,.weekgrid a:visited { display:block; padding:.85rem .9rem; border:1px solid #cbd3da; border-radius:.5rem; text-decoration:none; text-align:center; background:#fff; color:var(--link); font-weight:650; }
 footer { font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:.88rem; }
 footer .wrap { padding-top:1.3rem; padding-bottom:1.3rem; opacity:.9; }
-@media (max-width:760px) { html{font-size:16px}.wrap{padding-left:1rem;padding-right:1rem}main.wrap{padding:1.35rem 1rem 2.5rem;box-shadow:none}nav.weeknav{gap:.4rem;margin-bottom:1.5rem}nav.weeknav a,nav.weeknav a:visited,nav.weeknav span{min-width:0;padding:.6rem .45rem}table{font-size:.9rem}table.calendar{display:table;width:100%;table-layout:fixed;overflow:hidden}table.calendar th,table.calendar td{padding:.6rem .55rem}table.calendar th:first-child,table.calendar td:first-child{width:20%;min-width:0}table.calendar th:nth-child(2),table.calendar td:nth-child(2){width:11%;min-width:0}table.calendar th:nth-child(3),table.calendar td:nth-child(3){width:69%;min-width:0}table.calendar td:first-child{white-space:normal}table.calendar td:nth-child(2){white-space:nowrap}table.calendar td:nth-child(3){overflow-wrap:anywhere}table.ephemeris{font-size:.86rem}table.ephemeris:not(.extended-ephemeris){display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}table.extended-ephemeris{display:table;width:100%;table-layout:fixed;overflow:hidden}table.extended-ephemeris th,table.extended-ephemeris td{width:auto;min-width:0;padding:.65rem .45rem}.weekgrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:760px) { html{font-size:16px}.wrap{padding-left:1rem;padding-right:1rem}main.wrap{padding:1.35rem 1rem 2.5rem;box-shadow:none}nav.weeknav{gap:.4rem;margin-bottom:1.5rem}nav.weeknav a,nav.weeknav a:visited,nav.weeknav span{min-width:0;padding:.6rem .45rem}table{font-size:.9rem}table.calendar{display:table;width:100%;table-layout:fixed;overflow:hidden}table.calendar th,table.calendar td{padding:.6rem .55rem}table.calendar th:first-child,table.calendar td:first-child{width:20%;min-width:0}table.calendar th:nth-child(2),table.calendar td:nth-child(2){width:11%;min-width:0}table.calendar th:nth-child(3),table.calendar td:nth-child(3){width:69%;min-width:0}table.calendar td:first-child{white-space:normal}table.calendar td:nth-child(2){white-space:nowrap}table.calendar td:nth-child(3){overflow-wrap:anywhere}table.ephemeris{font-size:.86rem}table.ephemeris th,table.ephemeris td{padding-left:.45rem;padding-right:.45rem}.weekgrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (prefers-color-scheme:dark) { :root{--ink:#dce6ef;--muted:#a7b4c0;--link:#9fd0ff;--paper:#17212b;--page:#10171f;--rule:#394957;--soft-blue:#203549}body{background:var(--page);color:var(--ink)}main.wrap{background:var(--paper);box-shadow:none}h1,h2,h3,strong{color:#f1f7fb}th{background:#223444;color:#eef7ff}th,td{border-color:#40505e}table{border-color:#40505e}tbody tr:nth-child(even) td{background:#1b2732}code{background:#263643}.weekgrid a,.weekgrid a:visited,nav.weeknav a,nav.weeknav a:visited{background:#1c2a36;border-color:#405567;color:#b6dcff}nav.weeknav span{background:#1a242d;border-color:#384956;color:#7f909f} }
 """.strip()
 
@@ -154,7 +157,9 @@ def parse_table(lines: list[str], start: int) -> tuple[str, int]:
         table_class = ' class="calendar"'
     else:
         table_class = ""
-    out = [f"<table{table_class}><thead><tr>"]
+    scroll_ephemeris = is_ephemeris or is_extended_ephemeris
+    out = ['<div class="ephemeris-scroll">'] if scroll_ephemeris else []
+    out.append(f"<table{table_class}><thead><tr>")
     if is_ephemeris:
         out.extend(f"<th>{inline_markup(c.split()[0])}</th>" for c in head)
     else:
@@ -167,6 +172,8 @@ def parse_table(lines: list[str], start: int) -> tuple[str, int]:
             out.append(f"<td>{cell}</td>")
         out.append("</tr>")
     out.append("</tbody></table>")
+    if scroll_ephemeris:
+        out.append("</div>")
     return "".join(out), i
 
 
