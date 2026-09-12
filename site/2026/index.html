@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026 Weekly Almanack · Star Almanack</title><style>:root { color-scheme: light dark; --ink:#202833; --muted:#66717d; --navy:#102a43; --link:#245c86; --paper:#fffdf8; --page:#eee9df; --rule:#d8d2c8; --soft-blue:#edf4f8; }
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026 Weekly Almanack · Star Almanack</title><style>:root { color-scheme: light dark; --ink:#202833; --muted:#66717d; --navy:#102a43; --link:#245c86; --paper:#fffdf8; --page:#eee9df; --rule:#d8d2c8; --soft-blue:#edf4f8; --glyph-scale:2; }
 * { box-sizing: border-box; }
 html { font-size:17px; }
 body { margin:0; font-family:Georgia,'Times New Roman',serif; line-height:1.65; background:var(--page); color:var(--ink); -webkit-font-smoothing:antialiased; }
@@ -36,7 +36,7 @@ table.ephemeris th,table.ephemeris td { text-align:center; }
 table.ephemeris td { white-space:nowrap; padding-top:.8rem; padding-bottom:.8rem; }
 table.extended-ephemeris { table-layout:fixed; }
 table.extended-ephemeris th,table.extended-ephemeris td { width:25%; }
-.zodiac-glyph { font-family:'Apple Symbols','Arial Unicode MS','Segoe UI Symbol','Noto Sans Symbols 2',serif; font-variant-emoji:text; color:currentColor; -webkit-text-fill-color:currentColor; }
+.almanack-glyph { display:inline-block; font-family:'Apple Symbols','Arial Unicode MS','Segoe UI Symbol','Noto Sans Symbols 2',system-ui,sans-serif; font-variant-emoji:text; color:currentColor; -webkit-text-fill-color:currentColor; line-height:1; margin-inline:.25em; transform:scale(var(--glyph-scale)); transform-origin:50% 55%; vertical-align:-.04em; }
 code { background:#eef1f3; padding:.1rem .3rem; border-radius:.25rem; font-size:.9em; }
 .weekgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:.7rem; padding:0; margin:1.5rem 0 0; list-style:none; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 .weekgrid a,.weekgrid a:visited { display:block; padding:.85rem .9rem; border:1px solid #cbd3da; border-radius:.5rem; text-decoration:none; text-align:center; background:#fff; color:var(--link); font-weight:650; }
