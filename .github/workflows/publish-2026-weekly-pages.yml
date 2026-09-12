@@ -112,6 +112,9 @@ jobs:
               assert "Cen:'Centauri'" in text, f'Full constellation genitive mapping missing in {page}'
               assert "'♒':'Aquarius'" in text, f'Full zodiac-name mapping missing in {page}'
               assert "'☉':'Sun'" in text and "'♄':'Saturn'" in text, f'Full ephemeris-body mapping missing in {page}'
+              assert '.almanack-glyph {' in text, f'Uniform glyph class missing in {page}'
+              assert 'transform:scale(var(--glyph-scale))' in text, f'Layout-independent glyph scaling missing in {page}'
+              assert 'zodiac-glyph' not in text, f'Legacy glyph sizing class leaked into {page}'
               assert '© 2026 Alexander Ferrari Miller. All rights reserved.' in text, f'Copyright footer missing in {page}'
 
           w01 = (root / 'W01' / 'index.html').read_text(encoding='utf-8')
@@ -119,7 +122,8 @@ jobs:
 
           w41 = (root / 'W41' / 'index.html').read_text(encoding='utf-8')
           assert 'KILROY WAS HERE — W41 EXTENDED EPHEMERIS' in w41, 'Kilroy deployment diagnostic missing from W41'
-          assert '♅ Uranus' in w41 and '♆ Neptune' in w41 and '⚳ Ceres' in w41, 'Extended targets missing from W41'
+          for glyph, name in [('♅','Uranus'), ('♆','Neptune'), ('⚳','Ceres')]:
+              assert glyph in w41 and name in w41, f'Extended target {name} missing from W41'
 
           w33 = (root / 'W33' / 'index.html').read_text(encoding='utf-8')
           assert 'Summer Triangle' in w33, 'Summer Triangle asterism note missing from W33'
@@ -131,7 +135,7 @@ jobs:
           index = (root / 'index.html').read_text(encoding='utf-8')
           links = re.findall(r'href="W\d{2}/"', index)
           assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages with W41 Kilroy and extended ephemeris')
+          print('Verified 53 weekly pages with uniform glyph rendering and extended ephemeris')
           PY
 
       - name: Commit published pages
