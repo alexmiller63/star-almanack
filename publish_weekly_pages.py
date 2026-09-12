@@ -24,32 +24,18 @@ WEEK_RE = re.compile(r"(?m)^## (ISO 2026-W(\d{2}))\s*$")
 H2_RE = re.compile(r"(?m)^##\s+.+$")
 
 ZODIAC_NAMES = {
-    "♈": "Aries",
-    "♉": "Taurus",
-    "♊": "Gemini",
-    "♋": "Cancer",
-    "♌": "Leo",
-    "♍": "Virgo",
-    "♎": "Libra",
-    "♏": "Scorpio",
-    "♐": "Sagittarius",
-    "♑": "Capricorn",
-    "♒": "Aquarius",
-    "♓": "Pisces",
+    "♈": "Aries", "♉": "Taurus", "♊": "Gemini", "♋": "Cancer",
+    "♌": "Leo", "♍": "Virgo", "♎": "Libra", "♏": "Scorpio",
+    "♐": "Sagittarius", "♑": "Capricorn", "♒": "Aquarius", "♓": "Pisces",
 }
 
-# Every symbolic mark rendered by the Almanack uses this one class.  The
-# visual enlargement is a transform, not font-size, so changing the scale does
-# not change table measurements, wrapping, row height, or column widths.
-ASTRONOMY_GLYPHS = "☉☽☿♀♂♃♄♅♆⚳♇☄"
-GREEK_GLYPHS = "αβγδεζηθικλμνξοπρστυφχψω"
-PHASE_GLYPHS = "🌑🌒🌓🌔🌕🌖🌗🌘"
-OBSERVING_GLYPHS = "👁🔭"
-GLYPH_CHARS = "".join(ZODIAC_NAMES) + ASTRONOMY_GLYPHS + GREEK_GLYPHS + PHASE_GLYPHS + OBSERVING_GLYPHS
-GLYPH_RE = re.compile("[" + re.escape(GLYPH_CHARS) + "]")
-TEXT_PRESENTATION_GLYPHS = set(ZODIAC_NAMES) | set(ASTRONOMY_GLYPHS)
+# Glyphs whose displayed value never becomes a Latin word can be sized at
+# publish time.  Zodiac, Bayer Greek, and the seven classical ephemeris-body
+# symbols are notation sources instead: the notation layer renders only their
+# glyph leaf with .almanack-glyph, so Latin words are never enlarged.
+STATIC_GLYPHS = "♅♆⚳♇☄🌑🌒🌓🌔🌕🌖🌗🌘👁🔭"
+STATIC_GLYPH_RE = re.compile("[" + re.escape(STATIC_GLYPHS) + "]")
 BINOCULAR_AID_RE = re.compile(r"(?<![A-Za-z0-9])B(?=(?:\s+V\s+\d|\s*(?:$|—|@@BR@@)))")
-
 EXTENDED_EPHEMERIS_BODIES = ("Uranus", "Neptune", "Ceres", "Pluto")
 
 CSS = """
@@ -103,8 +89,11 @@ footer .wrap { padding-top:1.3rem; padding-bottom:1.3rem; opacity:.9; }
 
 
 def glyph_markup(glyph: str) -> str:
-    variation = "&#xfe0e;" if glyph in TEXT_PRESENTATION_GLYPHS else ""
-    return f'<span class="almanack-glyph">{html.escape(glyph)}{variation}</span>'
+    return f'<span class="almanack-glyph">{html.escape(glyph)}</span>'
+
+
+def zodiac_source(glyph: str) -> str:
+    return f'<span class="zodiac-notation-source">{html.escape(glyph)}&#xfe0e;</span>'
 
 
 def inline_markup(text: str) -> str:
@@ -112,7 +101,9 @@ def inline_markup(text: str) -> str:
     text = text.replace("<br>", sentinel)
     text = text.replace("\ufe0f", "").replace("\ufe0e", "")
     text = html.escape(text)
-    text = GLYPH_RE.sub(lambda match: glyph_markup(match.group(0)), text)
+    for glyph in ZODIAC_NAMES:
+        text = text.replace(glyph, zodiac_source(glyph))
+    text = STATIC_GLYPH_RE.sub(lambda match: glyph_markup(match.group(0)), text)
     text = BINOCULAR_AID_RE.sub(lambda match: glyph_markup(match.group(0)), text)
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
@@ -131,7 +122,7 @@ def format_zodiac_cell(text: str) -> str:
         glyph = stripped[0]
         remainder = re.sub(rf"^\({re.escape(ZODIAC_NAMES[glyph])}\)\s*", "", stripped[1:].strip())
         spacer = " " if remainder else ""
-        return f"{glyph_markup(glyph)}{spacer}{inline_markup(remainder)}"
+        return f"{zodiac_source(glyph)}{spacer}{inline_markup(remainder)}"
     return inline_markup(text)
 
 
@@ -218,11 +209,9 @@ def main() -> None:
     week_links=[]
     for idx,match in enumerate(matches):
         week=int(match.group(2)); start=match.start()
-        if idx+1 < len(matches):
-            end=matches[idx+1].start()
+        if idx+1 < len(matches): end=matches[idx+1].start()
         else:
-            next_h2=H2_RE.search(text, match.end())
-            end=next_h2.start() if next_h2 else len(text)
+            next_h2=H2_RE.search(text, match.end()); end=next_h2.start() if next_h2 else len(text)
         section=text[start:end].strip(); fragment=markdown_fragment(section)
         target=OUT/f"W{week:02d}"; target.mkdir(parents=True)
         (target/"index.html").write_text(page_shell(f"ISO 2026-W{week:02d}",fragment,week_nav(week)),encoding="utf-8")
