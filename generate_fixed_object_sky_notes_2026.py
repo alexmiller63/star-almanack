@@ -5,15 +5,17 @@ The output is observer-first prose for three equipment levels: naked eye,
 binoculars, and telescope. It is generated from the authoritative fixed-object
 catalog plus the frozen Milky Way boundary; no network access is required.
 
-This is an ISO-year publication layer: only rows whose stored ISO week date is
-in ISO 2026 are emitted. The descriptive observing guidance is otherwise based
-on fixed-object properties and is not treated as an intrinsic annual property.
+This is an ISO-year publication layer. Some legacy catalog rows store a full
+ISO week date (``2026-W08-7``), while Bayer rows store the compact form
+(``W08-7``). Compact values are given their ISO week-numbering year from the
+stored best-visibility civil date, so year-boundary behavior is not guessed.
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -22,7 +24,7 @@ import yaml
 from in_milky_way import in_milky_way
 
 GALAXY_TYPES = {"SG", "BG", "LG", "EG", "IG"}
-ISO_YEAR_PREFIX = "2026-W"
+TARGET_ISO_YEAR = 2026
 
 
 def record_from_row(fields: list[str], row: list[Any]) -> dict[str, Any]:
@@ -52,6 +54,25 @@ def magnitude(r: dict[str, Any]) -> float | None:
         return None if value in (None, "") else float(value)
     except (TypeError, ValueError):
         return None
+
+
+def canonical_iso(r: dict[str, Any]) -> str:
+    """Return YYYY-Www-d, deriving ISO year for legacy compact values."""
+    raw = str(r.get("iso") or "")
+    if not raw:
+        return ""
+    if raw[:4].isdigit() and len(raw) >= 10 and raw[4:6] == "-W":
+        return raw
+    if not raw.startswith("W"):
+        raise ValueError(f"unrecognized ISO week date: {raw!r}")
+
+    best = r.get("best")
+    if isinstance(best, date):
+        civil = best
+    else:
+        civil = date.fromisoformat(str(best))
+    iso_year = civil.isocalendar().year
+    return f"{iso_year}-{raw}"
 
 
 def milky_way_clause(inside: bool) -> str:
@@ -182,8 +203,10 @@ def generate(source: Path, output: Path) -> tuple[int, int]:
             if not isinstance(row, list):
                 continue
             r = record_from_row(fields, row)
-            iso = str(r.get("iso") or "")
-            if not r.get("best") or not iso.startswith(ISO_YEAR_PREFIX):
+            if not r.get("best") or not r.get("iso"):
+                continue
+            iso = canonical_iso(r)
+            if not iso.startswith(f"{TARGET_ISO_YEAR}-W"):
                 continue
 
             ra = float(r["ra_h"])
