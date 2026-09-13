@@ -22,14 +22,50 @@ on:
         default: ''
         type: string
 
+permissions:
+  contents: write
+
 jobs:
-  range:
+  generate:
     runs-on: ubuntu-latest
     steps:
       - name: Check out Star Almanack
         uses: actions/checkout@v4
+
       - name: Resolve requested ISO weeks
+        id: weeks
         run: |
-          python generator_week_range.py \
+          WEEKS=$(python generator_week_range.py \
+            '${{ inputs.start_year }}' '${{ inputs.start_week }}' \
+            '${{ inputs.end_year }}' '${{ inputs.end_week }}' --format csv)
+          echo "weeks=$WEEKS" >> "$GITHUB_OUTPUT"
+          echo "$WEEKS"
+
+      - name: Generate requested calendar pages
+        run: |
+          python generate_calendar_range.py \
             '${{ inputs.start_year }}' '${{ inputs.start_week }}' \
             '${{ inputs.end_year }}' '${{ inputs.end_week }}'
+
+      - name: Apply notation controls
+        run: python add_greek_latin_toggle.py
+
+      - name: Commit requested calendar pages
+        env:
+          WEEKS: ${{ steps.weeks.outputs.weeks }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          IFS=',' read -ra ITEMS <<< "$WEEKS"
+          for iso in "${ITEMS[@]}"; do
+            year="${iso%%-W*}"
+            week="W${iso##*-W}"
+            git add "site/$year/$week/index.html"
+          done
+          if git diff --cached --quiet; then
+            echo 'No calendar changes.'
+            exit 0
+          fi
+          git commit -m "Generate calendar $WEEKS"
+          git pull --rebase origin main
+          git push
