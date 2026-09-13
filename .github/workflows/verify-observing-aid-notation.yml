@@ -1,0 +1,63 @@
+name: Verify Observing Aid Notation
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: Year
+        required: true
+        default: '2026'
+      week:
+        description: ISO week
+        required: true
+        default: '41'
+
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Install Chromium
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --save-dev playwright
+          npx playwright install --with-deps chromium
+      - name: Verify observing aids in all notation modes
+        env:
+          YEAR: ${{ inputs.year }}
+          WEEK: ${{ inputs.week }}
+        run: |
+          node <<'JS'
+          const { chromium } = require('playwright');
+          (async()=>{
+            const year=process.env.YEAR, week=String(process.env.WEEK).padStart(2,'0');
+            const url=`https://alexmiller63.github.io/AlexanderFerrariMiller.com/almanack/${year}/W${week}/?aidverify=${Date.now()}`;
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:390,height:844}});
+            try {
+              const response=await page.goto(url,{waitUntil:'networkidle',timeout:60000});
+              if(!response || !response.ok()) throw new Error(`Page load failed: ${response&&response.status()} ${url}`);
+              await page.locator('table.calendar').waitFor({state:'visible',timeout:15000});
+              const click=mode=>page.locator(`button[data-bayer-mode="${mode}"]`).click();
+              const state=()=>page.evaluate(()=>[...document.querySelectorAll('table.calendar .observing-aid')].map(el=>({text:el.innerText.trim(),glyphs:el.querySelectorAll('.almanack-glyph').length})));
+
+              await click('greek');
+              let aids=await state();
+              if(!aids.length) throw new Error('No notation-aware observing aids found.');
+              if(aids.some(a=>a.glyphs!==1)) throw new Error(`Greek/Symbols must render aid glyphs: ${JSON.stringify(aids)}`);
+
+              await click('latin');
+              aids=await state();
+              const latin=new Set(['Naked eye','Binoculars','Telescope']);
+              if(aids.some(a=>!latin.has(a.text)||a.glyphs!==0)) throw new Error(`Latin must render aid words: ${JSON.stringify(aids)}`);
+              if(year==='2026'&&week==='41'&&!aids.some(a=>a.text==='Naked eye')) throw new Error('W41 Latin regression: Naked eye missing.');
+
+              await click('mixed');
+              aids=await state();
+              const mixed=new Set(['👁 Naked eye','B Binoculars','🔭 Telescope']);
+              if(aids.some(a=>!mixed.has(a.text))) throw new Error(`Mixed Learner must render glyph plus word: ${JSON.stringify(aids)}`);
+
+              console.log(`PASS: observing-aid notation verified on ${year}-W${week}`);
+            } finally { await browser.close(); }
+          })().catch(e=>{console.error(e.stack||e);process.exit(1)});
+          JS
