@@ -20,12 +20,10 @@ BODIES = [('☉','Sun'),('☽','Moon'),('☿','Mercury'),('♀','Venus'),('♂',
 def legend_items(items):
     return ''.join(f'<span class="legend-item"><span class="almanack-glyph">{g}&#xfe0e;</span> {name}</span>' for g,name in items)
 
-LEGEND = (
-    '<aside class="notation-legend" aria-label="Astronomical notation legend">'
+LEGEND = ('<aside class="notation-legend" aria-label="Astronomical notation legend">'
     '<p><strong>Greek alphabet</strong></p><div class="legend-line">'+legend_items(GREEK)+'</div>'
     '<p><strong>Zodiac</strong></p><div class="legend-line">'+legend_items(ZODIAC)+'</div>'
-    '<p><strong>Ephemerides</strong></p><div class="legend-line">'+legend_items(BODIES)+'</div></aside>'
-)
+    '<p><strong>Ephemerides</strong></p><div class="legend-line">'+legend_items(BODIES)+'</div></aside>')
 
 JS = r'''<script>(function(){
 const g={'α':'Alpha','β':'Beta','γ':'Gamma','δ':'Delta','ε':'Epsilon','ζ':'Zeta','η':'Eta','θ':'Theta','ι':'Iota','κ':'Kappa','λ':'Lambda','μ':'Mu','ν':'Nu','ξ':'Xi','ο':'Omicron','π':'Pi','ρ':'Rho','σ':'Sigma','τ':'Tau','υ':'Upsilon','φ':'Phi','χ':'Chi','ψ':'Psi','ω':'Omega'};
@@ -38,11 +36,10 @@ function render(s,value){s.replaceChildren();let a=Array.from(value);if(a.length
 document.querySelectorAll('.zodiac-notation-source').forEach(s=>{let x=s.textContent.charAt(0);if(z[x]){s.className='notation-item';s.dataset.greek=x+VS;s.dataset.latin=z[x];s.dataset.mixed=x+VS+'\n'+z[x]}});
 document.querySelectorAll('table.calendar tbody td:nth-child(3)').forEach(td=>{td.innerHTML=td.innerHTML.replace(/ — ([^<—]+?) — /g,' — <span class="visibility-magnitude">$1</span> — ')});
 let main=document.querySelector('main'),re=/([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?\s+([A-Z][A-Za-z]{2})\b|[☉☽☿♀♂♃♄]|([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?/g,n=[];let w=document.createTreeWalker(main,NodeFilter.SHOW_TEXT);while(w.nextNode()){if(!w.currentNode.parentElement.closest('.notation-item,.almanack-glyph')&&re.test(w.currentNode.nodeValue))n.push(w.currentNode);re.lastIndex=0}
-n.forEach(node=>{let t=node.nodeValue,f=document.createDocumentFragment(),last=0,m;re.lastIndex=0;while((m=re.exec(t))){f.append(document.createTextNode(t.slice(last,m.index)));let x=m[0],greek=x,latin=x,mixed=x,bm=x.match(/^([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?\s+([A-Z][A-Za-z]{2})$/),gm=x.match(/^([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?$/);if(bm){let suffix=bm[2]||'',con=c[bm[3]]||bm[3];greek=bm[1]+suffix+' '+con;latin=g[bm[1]]+suffix+' '+con;mixed=bm[1]+suffix+' '+g[bm[1]]+suffix+' '+con}else if(b[x]){greek=x+VS;latin=b[x];mixed=x+VS+' '+b[x]}else if(gm){greek=gm[1]+(gm[2]||'');latin=g[gm[1]]+(gm[2]||'');mixed=greek+' '+latin}f.append(span(greek,latin,mixed));last=m.index+x.length}f.append(document.createTextNode(t.slice(last)));node.replaceWith(f)});
+n.forEach(node=>{let t=node.nodeValue,f=document.createDocumentFragment(),last=0,m;re.lastIndex=0;while((m=re.exec(t))){f.append(document.createTextNode(t.slice(last,m.index)));let x=m[0],greek=x,latin=x,mixed=x,bm=x.match(/^([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?\s+([A-Z][A-Za-z]{2})$/),gm=x.match(/^([αβγδεζηθικλμνξοπρστυφχψω])(\d+)?$/);if(bm){let suffix=bm[2]||'',abbr=bm[3],con=c[abbr]||abbr;greek=bm[1]+suffix+' '+abbr;latin=g[bm[1]]+suffix+' '+con;mixed=bm[1]+suffix+' '+g[bm[1]]+suffix+' '+con}else if(b[x]){greek=x+VS;latin=b[x];mixed=x+VS+' '+b[x]}else if(gm){greek=gm[1]+(gm[2]||'');latin=g[gm[1]]+(gm[2]||'');mixed=greek+' '+latin}f.append(span(greek,latin,mixed));last=m.index+x.length}f.append(document.createTextNode(t.slice(last)));node.replaceWith(f)});
 document.querySelectorAll('table.calendar tbody td:nth-child(2)').forEach(td=>{let txt=td.textContent.trim(),m=txt.match(/^([^\d]*?)(\d+)$/);if(!m)return;let number=m[2],nodes=Array.from(td.childNodes);td.classList.add('zodiac-day');nodes.forEach(node=>{if(node.nodeType===3)node.nodeValue=node.nodeValue.replace(/\s*\d+\s*$/,'')});let d=document.createElement('span');d.className='zodiac-day-number';d.textContent=number;td.append(d)});
 let buttons=document.querySelectorAll('[data-bayer-mode]');function setMode(mode){document.querySelectorAll('.notation-item').forEach(s=>render(s,s.dataset[mode]||s.dataset.greek));buttons.forEach(x=>x.setAttribute('aria-pressed',x.dataset.bayerMode===mode?'true':'false'));try{localStorage.setItem('star-almanack-bayer-mode',mode)}catch(_){}}buttons.forEach(x=>x.addEventListener('click',()=>setMode(x.dataset.bayerMode)));let initial='greek';try{let s=localStorage.getItem('star-almanack-bayer-mode');if(s==='latin'||s==='greek'||s==='mixed')initial=s}catch(_){}setMode(initial)
 })();</script>'''
-
 
 def add(path: Path) -> None:
     text = path.read_text(encoding="utf-8")
@@ -53,12 +50,10 @@ def add(path: Path) -> None:
     text = text.replace("</body>", JS + "</body>", 1)
     path.write_text(text, encoding="utf-8")
 
-
 def main() -> None:
     pages = sorted(ROOT.glob("W??/index.html"))
     if len(pages) != 53: raise SystemExit(f"Expected 53 weekly pages, found {len(pages)}")
     for page in pages: add(page)
     print("Added Greek/Symbols, Latin, and Mixed Learner notation modes with bottom legend to 53 weekly pages")
-
 
 if __name__ == "__main__": main()
