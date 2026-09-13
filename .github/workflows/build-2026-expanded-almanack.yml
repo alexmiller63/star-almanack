@@ -14,6 +14,7 @@ on:
       - bright-variable-reconciliation.csv
       - messier-visibility-2026.csv
       - weekly-ephemeris-2026.csv
+      - constellation-figures.json
       - sky-notes-2026.json
       - 'sky-notes-2026/**'
       - image-provenance-2026.json
@@ -58,11 +59,13 @@ jobs:
       - name: Audit every catalog-backed stellar entry
         run: python audit_stellar_entries.py
 
-      - name: Verify expanded Almanack structure and stellar metadata
+      - name: Verify expanded Almanack structure, Sky Notes, and artwork descriptors
         run: |
           test -f almanack-expanded.md
+          test -f sky-note-artwork-descriptors-2026.json
           python - <<'PY'
           import csv
+          import json
           import re
           from datetime import date, datetime
           from decimal import Decimal, ROUND_HALF_UP
@@ -85,6 +88,23 @@ jobs:
           assert all(note.strip() and note.strip() != placeholder for note in sky_notes), 'Missing or placeholder Sky Note survived'
           assert '**Asterism:**' in calendar_text, 'Asterism emphasis missing from Sky Notes'
           assert '**Meteor shower:**' in calendar_text or '**Meteor showers:**' in calendar_text, 'Meteor-shower highlights missing from Sky Notes'
+
+          descriptors = json.loads(Path('sky-note-artwork-descriptors-2026.json').read_text(encoding='utf-8'))
+          figures = json.loads(Path('constellation-figures.json').read_text(encoding='utf-8'))
+          assert descriptors.get('year') == 2026
+          items = descriptors.get('descriptors', [])
+          assert items, 'Sky Notes produced no artwork descriptors'
+          for item in items:
+              assert item['constellation'] in figures, item
+              assert item['figure_source'] == 'constellation-figures.json', item
+              assert item['figure_standard'] == 'accepted Martz/MacRobert stick figure', item
+              assert item['constellation_line_color'] == 'blue', item
+              assert item['featured_asterism_color'] == 'green', item
+          w41 = next((item for item in items if item['week'] == 'W41' and item['constellation'] == 'Pegasus'), None)
+          assert w41, 'W41 Pegasus artwork descriptor missing'
+          assert 'Great Square of Pegasus' in w41['featured_asterisms'], w41
+          assert 'Enif' in w41['circle_targets'], w41
+          assert 'M15' in w41['circle_targets'], w41
 
           calendar_events = {}
           row_re = re.compile(r'(?m)^\| (?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([A-Z][a-z]{2}) (\d{2}), (2025|2026|2027) \| [^|]+ \| ([^|]*) \|$')
@@ -144,14 +164,14 @@ jobs:
           assert '**Binoculars:**' in text and 'M15' in text and 'misty glow near Enif' in text, 'W41 binocular guidance missing'
           assert 'Beta Reticuli' in text or 'β Ret' in text, 'β Reticuli missing from expanded Almanack'
           assert '2027-01-01' in Path('expanded-bayer-visibility-2026.csv').read_text(encoding='utf-8'), 'Expected a Bayer visibility date on 2027-01-01'
-          print('Verified 53 weeks, 371 day rows, 110 Messier objects, 53 curated Sky Notes, asterisms, meteor showers, observing aid beside whole-number stellar magnitudes, Enif, Shaula, and Diadem')
+          print('Verified 53 weeks, 371 day rows, 110 Messier objects, 53 curated Sky Notes, shared-data planetary notes, and accepted-figure artwork descriptors')
           PY
 
-      - name: Commit expanded Almanack source
+      - name: Commit expanded Almanack source and Sky Note artwork descriptors
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add almanack-expanded.md
+          git add almanack-expanded.md sky-note-artwork-descriptors-2026.json
           if git diff --cached --quiet; then
             echo "No source changes."
             exit 0
