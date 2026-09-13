@@ -44,23 +44,6 @@ jobs:
         with:
           ref: main
 
-      - name: Repair builder introduction compatibility
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          path = Path('build_expanded_almanack.py')
-          text = path.read_text(encoding='utf-8')
-          old = 'and the 53 weekly classical-planet snapshots.'
-          new = 'and the 53 weekly Solar-System snapshots.'
-          if old in text:
-              path.write_text(text.replace(old, new, 1), encoding='utf-8')
-              print('Updated builder to match the canonical Almanack introduction.')
-          elif new in text:
-              print('Builder introduction already matches the canonical Almanack source.')
-          else:
-              raise SystemExit('Could not locate the expected Almanack introduction phrase in build_expanded_almanack.py')
-          PY
-
       - name: Build expanded Almanack
         run: python build_expanded_almanack.py
 
@@ -188,7 +171,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add build_expanded_almanack.py almanack-expanded.md sky-note-artwork-descriptors-2026.json
+          git add almanack-expanded.md sky-note-artwork-descriptors-2026.json
           if git diff --cached --quiet; then
             echo "No source changes."
             exit 0
