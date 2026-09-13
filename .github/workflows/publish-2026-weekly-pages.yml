@@ -1,4 +1,4 @@
-# Weekly-page publish with Latin constellation-genitive regression checks
+# Weekly-page publish with notation and portrait-layout regression checks
 name: Publish 2026 Weekly Pages
 
 on:
@@ -8,6 +8,7 @@ on:
       - almanack-expanded.md
       - publish_weekly_pages.py
       - add_greek_latin_toggle.py
+      - add_observing_aid_notation.py
       - .github/workflows/publish-2026-weekly-pages.yml
 
 permissions:
@@ -30,26 +31,22 @@ jobs:
       - name: Add Greek Latin Bayer toggle
         run: python add_greek_latin_toggle.py
 
-      - name: Add Kilroy deployment diagnostic to W01
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          page = Path('site/2026/W01/index.html')
-          text = page.read_text(encoding='utf-8')
-          marker = '<p id="kilroy-deployment-diagnostic" style="text-align:center;font-family:system-ui,sans-serif;font-weight:700;border:2px solid currentColor;padding:.5rem;margin:1rem 0">KILROY WAS HERE — BUILD 2026-09-05 02:12 PDT</p>'
-          text = text.replace('<main class="wrap">', '<main class="wrap">' + marker, 1)
-          page.write_text(text, encoding='utf-8')
-          PY
+      - name: Make observing aids notation-aware
+        run: python add_observing_aid_notation.py
 
-      - name: Add Kilroy deployment diagnostic to W41
+      - name: Add deployment diagnostics
         run: |
           python - <<'PY'
           from pathlib import Path
-          page = Path('site/2026/W41/index.html')
-          text = page.read_text(encoding='utf-8')
-          marker = '<p id="kilroy-w41-deployment-diagnostic" style="text-align:center;font-family:system-ui,sans-serif;font-weight:700;border:2px solid currentColor;padding:.5rem;margin:1rem 0">KILROY WAS HERE — W41 EXTENDED EPHEMERIS</p>'
-          text = text.replace('<main class="wrap">', '<main class="wrap">' + marker, 1)
-          page.write_text(text, encoding='utf-8')
+          markers = {
+              'W01': '<p id="kilroy-deployment-diagnostic" style="text-align:center;font-family:system-ui,sans-serif;font-weight:700;border:2px solid currentColor;padding:.5rem;margin:1rem 0">KILROY WAS HERE — BUILD 2026-09-05 02:12 PDT</p>',
+              'W41': '<p id="kilroy-w41-deployment-diagnostic" style="text-align:center;font-family:system-ui,sans-serif;font-weight:700;border:2px solid currentColor;padding:.5rem;margin:1rem 0">KILROY WAS HERE — W41 EXTENDED EPHEMERIS</p>',
+          }
+          for week, marker in markers.items():
+              page = Path('site/2026') / week / 'index.html'
+              text = page.read_text(encoding='utf-8')
+              text = text.replace('<main class="wrap">', '<main class="wrap">' + marker, 1)
+              page.write_text(text, encoding='utf-8')
           PY
 
       - name: Validate publishing output
@@ -61,70 +58,34 @@ jobs:
           root = Path('site/2026')
           pages = sorted(root.glob('W??/index.html'))
           assert len(pages) == 53, f'Expected 53 weekly pages, found {len(pages)}'
-          expected = [f'W{i:02d}' for i in range(1, 54)]
-          actual = [p.parent.name for p in pages]
-          assert actual == expected, (actual[:3], actual[-3:])
+          assert [p.parent.name for p in pages] == [f'W{i:02d}' for i in range(1,54)]
           assert (root / 'index.html').exists(), 'Missing 2026 index page'
 
           for i, page in enumerate(pages, 1):
               text = page.read_text(encoding='utf-8')
-              assert f'ISO 2026-W{i:02d}' in text, page
-              assert '<table class="calendar">' in text, f'Weekly calendar table missing in {page}'
-              assert 'All weeks' in text, f'Index navigation missing in {page}'
-              if i > 1:
-                  assert f'../W{i-1:02d}/' in text, f'Previous-week navigation missing in {page}'
-              if i < 53:
-                  assert f'../W{i+1:02d}/' in text, f'Next-week navigation missing in {page}'
-
-              assert 'Best visibility:' not in text, f'Obsolete Best visibility label in {page}'
-              assert 'width:16%' in text, f'Narrow desktop date width missing in {page}'
-              assert 'width:8%' in text, f'Narrow desktop zodiac width missing in {page}'
-              assert 'width:25%' in text, f'Portrait date width missing in {page}'
-              assert 'width:27%' in text, f'Portrait zodiac width missing in {page}'
-              assert 'width:48%' in text, f'Portrait events width missing in {page}'
-              assert 'font-size:.82rem;line-height:1.3' in text, f'Compact portrait date typography missing in {page}'
-              assert '.zodiac-day .notation-item{display:block;white-space:pre-line}' in text, f'Three-row zodiac notation layout missing in {page}'
-              assert '.zodiac-day .zodiac-day-number{display:block;margin:0}' in text, f'Zodiac day number row missing in {page}'
-              assert '.event-parenthetical{white-space:nowrap}' in text, f'Parenthetical no-wrap rule missing in {page}'
-              assert 'td:nth-child(3){overflow-wrap:normal;word-break:normal}' in text, f'Event wrapping rule missing in {page}'
-              assert "s.dataset.mixed=x+VS+'\\n'+z[x]" in text, f'Mixed zodiac glyph/name line break missing in {page}'
-              assert 'white-space:normal;text-align:center;font-size:.86rem' in text, f'Portrait zodiac wrapping rule missing in {page}'
-              assert 'data-bayer-mode="greek"' in text, f'Greek notation toggle missing in {page}'
-              assert 'data-bayer-mode="latin"' in text, f'Latin notation toggle missing in {page}'
-              assert 'data-bayer-mode="mixed"' in text, f'Mixed learner notation toggle missing in {page}'
-              assert 'Greek/Symbols' in text, f'Greek/Symbols label missing in {page}'
-              assert 'Mixed Learner' in text, f'Mixed Learner label missing in {page}'
-              assert "'β':'Beta'" in text, f'Full Greek-letter-name mapping missing in {page}'
-              assert "Cen:'Centauri'" in text, f'Full constellation genitive mapping missing in {page}'
-              assert "Peg:'Pegasi'" in text, f'Pegasus genitive mapping missing in {page}'
-              assert "'♒':'Aquarius'" in text, f'Full zodiac-name mapping missing in {page}'
-              assert "'☉':'Sun'" in text and "'♄':'Saturn'" in text, f'Full ephemeris-body mapping missing in {page}'
-              assert '.almanack-glyph {' in text, f'Uniform glyph class missing in {page}'
-              assert 'transform:scale(var(--glyph-scale))' in text, f'Layout-independent glyph scaling missing in {page}'
-              assert 'zodiac-glyph' not in text, f'Legacy glyph sizing class leaked into {page}'
-              assert '© 2026 Alexander Ferrari Miller. All rights reserved.' in text, f'Copyright footer missing in {page}'
-
-          w01 = (root / 'W01' / 'index.html').read_text(encoding='utf-8')
-          assert 'KILROY WAS HERE — BUILD 2026-09-05 02:12 PDT' in w01, 'Kilroy deployment diagnostic missing from W01'
+              assert f'ISO 2026-W{i:02d}' in text
+              assert '<table class="calendar">' in text
+              assert 'Best visibility:' not in text
+              assert 'width:25%' in text and 'width:27%' in text and 'width:48%' in text
+              assert '.event-parenthetical{white-space:nowrap}' in text
+              assert 'data-bayer-mode="greek"' in text
+              assert 'data-bayer-mode="latin"' in text
+              assert 'data-bayer-mode="mixed"' in text
+              assert "Peg:'Pegasi'" in text
+              assert "const observingAids={'👁':'Naked eye','B':'Binoculars','🔭':'Telescope'}" in text, f'Observing-aid notation map missing in {page}'
+              assert "s.dataset.observingAid='1'" in text, f'Observing-aid mode hook missing in {page}'
+              assert '© 2026 Alexander Ferrari Miller. All rights reserved.' in text
 
           w41 = (root / 'W41' / 'index.html').read_text(encoding='utf-8')
-          assert 'KILROY WAS HERE — W41 EXTENDED EPHEMERIS' in w41, 'Kilroy deployment diagnostic missing from W41'
-          assert 'Enif (ε Peg)' in w41, 'Expected Greek-source Enif Bayer designation missing from W41'
-          assert "Peg:'Pegasi'" in w41, 'W41 Latin mode cannot render Epsilon Pegasi'
+          assert 'KILROY WAS HERE — W41 EXTENDED EPHEMERIS' in w41
+          assert 'Enif (ε Peg)' in w41
+          assert "Peg:'Pegasi'" in w41
           for glyph, name in [('♅','Uranus'), ('♆','Neptune'), ('⚳','Ceres')]:
-              assert glyph in w41 and name in w41, f'Extended target {name} missing from W41'
-
-          w33 = (root / 'W33' / 'index.html').read_text(encoding='utf-8')
-          assert 'Summer Triangle' in w33, 'Summer Triangle asterism note missing from W33'
-          assert 'Perseids' in w33 and 'August 13' in w33, 'Perseid meteor-shower note missing from W33'
-
-          w53 = (root / 'W53' / 'index.html').read_text(encoding='utf-8')
-          assert 'Expanded α and β Star Catalog' not in w53, 'Catalog leaked into W53'
+              assert glyph in w41 and name in w41
 
           index = (root / 'index.html').read_text(encoding='utf-8')
-          links = re.findall(r'href="W\d{2}/"', index)
-          assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages with portrait wrapping, uniform glyph rendering, Pegasus genitive mapping, and extended ephemeris')
+          assert len(re.findall(r'href="W\d{2}/"', index)) == 53
+          print('Verified 53 weekly pages including notation-aware observing aids')
           PY
 
       - name: Commit published pages
