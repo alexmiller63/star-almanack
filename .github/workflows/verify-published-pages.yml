@@ -24,7 +24,7 @@ jobs:
           npm install --save-dev playwright
           npx playwright install --with-deps chromium
 
-      - name: Verify the published page in Chromium
+      - name: Verify canonical GitHub Pages deployment in Chromium
         env:
           YEAR: ${{ inputs.year }}
           WEEK: ${{ inputs.week }}
@@ -35,35 +35,64 @@ jobs:
           (async () => {
             const year = process.env.YEAR;
             const week = String(process.env.WEEK).padStart(2, '0');
-            const url = `https://alexmiller63.github.io/almanack/${year}/W${week}/?verify=${Date.now()}`;
+
+            // Canonical GitHub Pages deployment from start/rememberme.yaml.
+            // Do not use the historical standalone star-almanack Pages path.
+            const canonicalBase = 'https://alexmiller63.github.io/AlexanderFerrariMiller.com';
+            const canonicalPath = `/almanack/${year}/W${week}/`;
+            const url = `${canonicalBase}${canonicalPath}?verify=${Date.now()}`;
 
             const browser = await chromium.launch({ headless: true });
             const page = await browser.newPage();
             try {
-              const response = await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+              const response = await page.goto(url, {
+                waitUntil: 'networkidle',
+                timeout: 60000
+              });
+
               if (!response || !response.ok()) {
-                throw new Error(`Published page did not load successfully: ${response && response.status()} ${url}`);
+                throw new Error(`Canonical Pages page did not load successfully: ${response && response.status()} ${url}`);
               }
 
-              await page.locator('button[data-bayer-mode="mixed"]').click();
+              const finalUrl = new URL(page.url());
+              const expectedHost = 'alexmiller63.github.io';
+              const expectedPrefix = `/AlexanderFerrariMiller.com${canonicalPath}`;
+              if (finalUrl.hostname !== expectedHost || !finalUrl.pathname.startsWith(expectedPrefix)) {
+                throw new Error(`Chromium was redirected away from canonical GitHub Pages. Final URL: ${page.url()}`);
+              }
 
-              const calendarText = await page.locator('table.calendar').innerText();
-              console.log(`Published URL: ${url}`);
+              const calendar = page.locator('table.calendar');
+              await calendar.waitFor({ state: 'visible', timeout: 15000 });
+
+              const mixedButton = page.locator('button[data-bayer-mode="mixed"]');
+              await mixedButton.waitFor({ state: 'visible', timeout: 15000 });
+              await mixedButton.click();
+
+              const calendarText = await calendar.innerText();
+              console.log(`Canonical Pages URL: ${page.url()}`);
               console.log('Rendered calendar text:');
               console.log(calendarText);
 
+              // W41 is the regression case that exposed stale deployment content.
+              // A green result must mean Chromium sees the current rendered wording,
+              // not merely that repository source or a different deployment is correct.
               if (year === '2026' && week === '41') {
                 const expected = 'Enif (ε Epsilon Pegasi)';
                 const stale = 'Enif (ε Epsilon Peg)';
+
                 if (!calendarText.includes(expected)) {
-                  throw new Error(`W41 Chromium check failed: expected rendered text "${expected}".`);
+                  throw new Error(
+                    `STALE OR WRONG DEPLOYMENT: expected rendered text "${expected}" on canonical GitHub Pages.`
+                  );
                 }
                 if (calendarText.includes(stale)) {
-                  throw new Error(`W41 Chromium check failed: stale rendered text "${stale}" is still present.`);
+                  throw new Error(
+                    `STALE DEPLOYMENT: rendered text "${stale}" is still present on canonical GitHub Pages.`
+                  );
                 }
               }
 
-              console.log(`PASS: Chromium verified the rendered published page for ${year}-W${week}.`);
+              console.log(`PASS: Chromium verified canonical GitHub Pages for ${year}-W${week}.`);
             } finally {
               await browser.close();
             }
