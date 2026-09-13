@@ -43,7 +43,7 @@ jobs:
             const url = `${canonicalBase}${canonicalPath}?verify=${Date.now()}`;
 
             const browser = await chromium.launch({ headless: true });
-            const page = await browser.newPage();
+            const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
             try {
               const response = await page.goto(url, {
                 waitUntil: 'networkidle',
@@ -64,10 +64,65 @@ jobs:
               const calendar = page.locator('table.calendar');
               await calendar.waitFor({ state: 'visible', timeout: 15000 });
 
-              const mixedButton = page.locator('button[data-bayer-mode="mixed"]');
-              await mixedButton.waitFor({ state: 'visible', timeout: 15000 });
-              await mixedButton.click();
+              // Portrait Latin mode is the regression surface for both reported layout bugs:
+              // long zodiac names must fit, and Bayer parentheticals must not split across lines.
+              const latinButton = page.locator('button[data-bayer-mode="latin"]');
+              await latinButton.waitFor({ state: 'visible', timeout: 15000 });
+              await latinButton.click();
 
+              const layout = await page.evaluate(() => {
+                const zodiac = [...document.querySelectorAll('table.calendar tbody td:nth-child(2)')].map((el) => ({
+                  text: el.innerText.trim(),
+                  clientWidth: el.clientWidth,
+                  scrollWidth: el.scrollWidth,
+                }));
+                const parentheticals = [...document.querySelectorAll('.event-parenthetical')].map((el) => {
+                  const rects = [...el.getClientRects()];
+                  const cell = el.closest('td');
+                  const r = el.getBoundingClientRect();
+                  const c = cell.getBoundingClientRect();
+                  return {
+                    text: el.innerText,
+                    lineFragments: rects.length,
+                    left: r.left,
+                    right: r.right,
+                    cellLeft: c.left,
+                    cellRight: c.right,
+                  };
+                });
+                return { zodiac, parentheticals };
+              });
+
+              const overflowingZodiac = layout.zodiac.filter(x => x.scrollWidth > x.clientWidth + 1);
+              if (overflowingZodiac.length) {
+                throw new Error(`ZODIAC OVERFLOW: ${JSON.stringify(overflowingZodiac)}`);
+              }
+
+              const wrappedParentheticals = layout.parentheticals.filter(x =>
+                x.lineFragments !== 1 || x.left < x.cellLeft - 1 || x.right > x.cellRight + 1
+              );
+              if (wrappedParentheticals.length) {
+                throw new Error(`PARENTHETICAL WRAP/OVERFLOW: ${JSON.stringify(wrappedParentheticals)}`);
+              }
+
+              const latinCalendarText = await calendar.innerText();
+              if (year === '2026' && week === '05') {
+                if (!latinCalendarText.includes('Aquarius')) {
+                  throw new Error('W05 regression: Aquarius is missing in Latin mode.');
+                }
+                if (!latinCalendarText.includes('Mintaka (Delta Orionis)')) {
+                  throw new Error('W05 regression: Mintaka parenthetical did not render intact as (Delta Orionis).');
+                }
+                if (!latinCalendarText.includes('Arneb (Alpha Leporis)')) {
+                  throw new Error('W05 regression: Arneb parenthetical did not render intact as (Alpha Leporis).');
+                }
+                if (layout.parentheticals.length === 0) {
+                  throw new Error('W05 regression: no event parenthetical wrappers were rendered.');
+                }
+              }
+
+              const mixedButton = page.locator('button[data-bayer-mode="mixed"]');
+              await mixedButton.click();
               const calendarText = await calendar.innerText();
               console.log(`Canonical Pages URL: ${page.url()}`);
               console.log('Rendered calendar text:');
@@ -92,7 +147,7 @@ jobs:
                 }
               }
 
-              console.log(`PASS: Chromium verified canonical GitHub Pages for ${year}-W${week}.`);
+              console.log(`PASS: Chromium verified canonical GitHub Pages portrait layout for ${year}-W${week}.`);
             } finally {
               await browser.close();
             }
