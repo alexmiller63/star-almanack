@@ -56,6 +56,8 @@ The Pleiades (M45, the Pleiades, an open cluster) are the week's natural showpie
 
 **What to expect:** Photographs show blue reflection nebulosity around the Pleiades; ordinary visual observing usually emphasizes the stars, not vivid blue nebulosity. The binocular view may be the most aesthetically satisfying view of all.
 
+**Planet watch:** Venus and Mars are about 5.0° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 **Meteor shower:** The Quadrantids peak on January 3. Their maximum is usually sharp, but bright moonlight is an important limitation in 2026.
 
 ### Chart
@@ -108,6 +110,8 @@ January 5–11 is a restrained observing week. The Almanack marks α Horologii a
 
 **Asterism:** Orion's Belt is an easy three-star anchor for winter orientation; follow the Belt southeast toward Sirius and northwest toward Aldebaran.
 
+**Planet watch:** Venus and Mars are about 1.5° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W2-chart.png` — chart slot.
@@ -156,6 +160,8 @@ Aldebaran anchors Taurus on Monday and New Moon arrives Sunday, making the latte
 
 **What to expect:** Aldebaran lies along the Hyades line of sight but is not a member of the cluster. This is a useful reminder that patterns on the sky can combine objects at very different distances.
 
+**Planet watch:** Venus and Mars are about 1.9° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W3-chart.png` — chart slot.
@@ -203,6 +209,8 @@ Rigel and Capella dominate the bright-star calendar this week, while M79 (NGC 19
 **Small telescope:** M38 (NGC 1912), an open cluster resolves increasingly into stars. M79 (NGC 1904), a globular cluster in Lepus is a globular cluster and appears much more compact: a small concentrated glow whose outer parts may begin to look grainy with sufficient aperture.
 
 **What to expect:** Open and globular clusters can have similar catalog magnitudes yet look completely different. Structure and angular size matter as much as the magnitude number.
+
+**Planet watch:** Mercury and Mars are about 0.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 ### Chart
 
@@ -254,6 +262,8 @@ This is one of the year's strongest winter observing weeks: M42, the Great Nebul
 
 **Asterism:** The Winter Triangle—Sirius, Procyon, and Betelgeuse—gives a large naked-eye frame for the season's bright-star field.
 
+**Planet watch:** Mercury and Venus are about 1.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W5-chart.png` — chart slot.
@@ -301,6 +311,8 @@ M35 (NGC 2168), an open cluster in Gemini is the principal deep-sky target, whil
 **Small telescope:** M35 (NGC 2168), an open cluster resolves into a large population of stars and tolerates moderate magnification while still retaining its cluster character.
 
 **What to expect:** Low altitude can make a brilliant star such as Canopus shimmer and change color dramatically. That is atmospheric refraction and turbulence, not intrinsic variability on a seconds-long timescale.
+
+**Planet watch:** Mercury and Venus are about 1.8° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 ### Chart
 
@@ -496,6 +508,8 @@ Full Moon on March 3 makes faint extended objects difficult, but M48 (NGC 2548),
 
 **What to expect:** Moonlight hurts diffuse objects most severely. Pointlike cluster stars retain contrast better, so an open cluster can rescue an observing session that would be disappointing for galaxies.
 
+**Planet watch:** Mercury and Venus are about 3.0° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W10-chart.png` — chart slot.
@@ -544,6 +558,8 @@ Last Quarter Moon on March 11 improves evening conditions, and M44, the Beehive 
 
 **What to expect:** The naked-eye haze is unresolved starlight. Watching that haze turn into dozens of points through binoculars is one of the simplest demonstrations of what optical aid actually does.
 
+**Planet watch:** Venus and Saturn are about 0.5° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W11-chart.png` — chart slot.
@@ -591,6 +607,8 @@ M67 (NGC 2682), an open cluster appears on March 17, New Moon follows on March 1
 **Small telescope:** M67 (NGC 2682), an open cluster rewards aperture and moderate magnification, resolving into a dense population of relatively faint stars. It is a better telescopic target than M44, the Beehive Cluster, an open cluster precisely because it is more compact.
 
 **What to expect:** Two open clusters in the same constellation can demand different instruments. M44, the Beehive Cluster, an open cluster favors breadth; M67 (NGC 2682), an open cluster favors resolution. Instrument choice should follow the angular scale of the object.
+
+**Planet watch:** Mercury and Mars are about 0.9° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 ### Chart
 
@@ -786,6 +804,8 @@ New Moon on April 17 is followed immediately by M95, M96, and M105 (NGC 3379), a
 
 **Asterism:** The Sickle of Leo, beginning at Regulus, is the easiest pattern for tracing the head and mane of Leo.
 
+**Planet watch:** Mars and Saturn are about 4.5° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W16-chart.png` — chart slot.
@@ -833,6 +853,8 @@ Dubhe and Merak mark the Big Dipper's bowl on April 23, followed by the Owl Nebu
 **Small telescope:** M97, the Owl Nebula, a planetary nebula is a round, diffuse planetary nebula; the famous dark 'eyes' are subtle and may require larger aperture, excellent conditions, or a nebula filter. M108 (NGC 3556), a spiral galaxy is an elongated, low-surface-brightness galaxy nearby.
 
 **What to expect:** Catalog photographs can make the Owl's face seem obvious. At a modest eyepiece the first achievement is simply seeing the pale round disk. Fine internal contrast is a second-stage observation.
+
+**Planet watch:** Mars and Saturn are about 0.0° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 **Meteor shower:** The April Lyrids peak on April 22, with the nominal 2026 maximum near 19:40 UT. The expected ZHR is about 18, and moonlight should not be a major obstacle.
 
@@ -883,6 +905,8 @@ M65 (NGC 3623), a spiral galaxy and M66 (NGC 3627), a spiral galaxy reach their 
 **Small telescope:** Both galaxies appear as elongated gray glows, with brighter central regions becoming apparent as conditions improve. Low-to-moderate power is usually more productive than pushing magnification.
 
 **What to expect:** If the galaxies disappear into moonlit sky, that is an observing result rather than a failure. Low surface brightness is vulnerable to background light, and the same objects can become straightforward when revisited under a dark Moon.
+
+**Planet watch:** Mars and Saturn are about 4.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 ### Chart
 
@@ -1178,6 +1202,8 @@ Last Quarter Moon on June 8 helps darken the evening later in the week, while Ar
 
 **What to expect:** M101, the Pinwheel Galaxy, a spiral galaxy is a classic surface-brightness lesson. A galaxy can have a respectable total magnitude and still be hard to see because its light is spread thinly over the sky.
 
+**Planet watch:** Venus and Jupiter are about 1.8° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W24-chart.png` — chart slot.
@@ -1225,6 +1251,8 @@ New Moon opens the week, Alpha Centauri reaches its Almanack date on June 16, an
 **Small telescope:** Izar in Boötes is a worthwhile double-star target when seeing is steady. Center it at low power and increase magnification gradually rather than assuming maximum power will give the best view.
 
 **What to expect:** The solstice is a geometric turning point in the Sun's annual path, not a sudden change in the stars. The practical observing effect is seasonal: long northern evenings compress the darkest observing window while southern winter nights lengthen.
+
+**Planet watch:** Venus and Jupiter are about 5.0° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 ### Chart
 
@@ -1274,6 +1302,8 @@ M5 (NGC 5904), a globular cluster reaches its Almanack date on June 26 and is on
 
 **What to expect:** Globular clusters reward aperture in a different way from galaxies. Instead of revealing color or spiral structure, increased resolution gradually turns a smooth glow into a swarm of stars.
 
+**Planet watch:** Mercury and Jupiter are about 4.2° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W26-chart.png` — chart slot.
@@ -1321,6 +1351,8 @@ Full Moon falls on June 29, so this is better suited to bright-star observing th
 **Small telescope:** Favor double stars, bright stellar groupings, and lunar observing. The nearly full Moon is poor for subtle relief but excellent for bright ray systems and large-scale surface markings.
 
 **What to expect:** Bright moonlight changes the target list, not the usefulness of the night. A week dominated by the Moon is a good time to learn constellation structure and save low-surface-brightness galaxies for darker conditions.
+
+**Planet watch:** Mercury and Jupiter are about 3.5° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 ### Chart
 
@@ -1668,6 +1700,8 @@ M11, the Wild Duck Cluster, opens the week on August 17, followed by M57, the Ri
 
 **What to expect:** M57, the Ring Nebula, a planetary nebula will not show the saturated colors of processed photographs. Its visual reward is the delicate annular shape. M11, by contrast, is fundamentally a stellar spectacle and becomes richer as aperture resolves more of its crowded stars.
 
+**Planet watch:** Mercury and Jupiter are about 2.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W34-chart.png` — chart slot.
@@ -2010,6 +2044,8 @@ The New Moon on Saturday, October 10 makes this one of the best dark-sky weeks o
 
 **What to expect:** Deep-sky objects are visually subtle. A globular cluster such as M15, the Great Pegasus Globular, a globular cluster is normally gray-white at the eyepiece, not a saturated-color photograph. Give your eyes time to dark-adapt, use averted vision, and compare the binocular and telescope views rather than treating one as simply 'better.' The wide-field binocular view gives context; the telescope gives concentration and structure.
 
+**Planet watch:** Mercury and Venus are about 2.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W41-chart.png` — chart slot.
@@ -2254,6 +2290,8 @@ New Moon falls on Monday, November 9, giving the week an excellent dark-sky begi
 
 **Asterism:** The Circlet of Pisces is a subtle but useful small-ring pattern southwest of the Great Square, especially under darker skies.
 
+**Planet watch:** Mars and Jupiter are about 2.7° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W46-chart.png` — chart slot.
@@ -2301,6 +2339,8 @@ The week culminates on Friday, November 20 with M31, the Andromeda Galaxy, toget
 **Small telescope:** The nucleus of M31, the Andromeda Galaxy, a spiral galaxy becomes more concentrated, M32 (NGC 221), an elliptical galaxy is much easier to separate from the background, and M110 (NGC 205), an elliptical galaxy may appear as a dim elongated glow under good conditions. A small telescope usually does not reveal the colorful spiral detail familiar from photographs.
 
 **What to expect:** Most of M31, the Andromeda Galaxy, a spiral galaxy's visible light at the eyepiece is gray-white. The outer disk extends far beyond the bright core but is low in surface brightness, so dark adaptation and averted vision are more important than simply adding magnification.
+
+**Planet watch:** Mars and Jupiter are about 0.1° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 **Meteor shower:** The Leonids peak on November 17, with the regular nodal maximum near 23:45 UT and an expected ZHR around 15. Moonlight should not seriously hinder the peak.
 
@@ -2352,6 +2392,8 @@ Full Moon occurs Tuesday, November 24, so this is not the strongest week for fai
 
 **What to expect:** A bright Moon can erase low-contrast galaxies and nebulae without ruining the entire observing session. This is a good week to learn that choosing the right target for the conditions is part of observational astronomy.
 
+**Planet watch:** Mars and Jupiter are about 2.4° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
 ### Chart
 
 `ISO2026-W48-chart.png` — chart slot.
@@ -2399,6 +2441,8 @@ Last Quarter Moon occurs Tuesday, December 1, and the week brings several contra
 **Small telescope:** M74 (NGC 628), a spiral galaxy is a difficult face-on galaxy whose low surface brightness makes dark sky more valuable than excessive magnification. M76, the Little Dumbbell Nebula, a planetary nebula is much smaller and responds better to telescopic magnification, appearing as a compact gray nebular patch; M103 (NGC 581), an open cluster begins to resolve cleanly into individual stars.
 
 **What to expect:** Integrated magnitude can be misleading. A large galaxy can have plenty of total light yet still be hard to see because that light is spread over a large area. This week is a practical demonstration of why surface brightness matters.
+
+**Planet watch:** Mars and Jupiter are about 4.8° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
 ### Chart
 

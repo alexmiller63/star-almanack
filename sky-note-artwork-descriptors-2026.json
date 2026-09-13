@@ -1,0 +1,126 @@
+{
+  "year": 2026,
+  "purpose": "Sky Notes artwork-generator handoff",
+  "descriptors": [
+    {
+      "week": "W38",
+      "constellation": "Aquarius",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [],
+      "circle_targets": [],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    },
+    {
+      "week": "W40",
+      "constellation": "Pegasus",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [
+        "Great Square of Pegasus"
+      ],
+      "circle_targets": [
+        "M15"
+      ],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    },
+    {
+      "week": "W41",
+      "constellation": "Pegasus",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [
+        "Great Square of Pegasus"
+      ],
+      "circle_targets": [
+        "Enif",
+        "M15"
+      ],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    },
+    {
+      "week": "W42",
+      "constellation": "Pegasus",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [
+        "Great Square of Pegasus"
+      ],
+      "circle_targets": [],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    },
+    {
+      "week": "W43",
+      "constellation": "Pegasus",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [
+        "Great Square of Pegasus"
+      ],
+      "circle_targets": [],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    },
+    {
+      "week": "W45",
+      "constellation": "Pegasus",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [
+        "Great Square of Pegasus"
+      ],
+      "circle_targets": [],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    },
+    {
+      "week": "W46",
+      "constellation": "Pegasus",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [
+        "Great Square of Pegasus"
+      ],
+      "circle_targets": [],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    },
+    {
+      "week": "W48",
+      "constellation": "Pegasus",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [
+        "Great Square of Pegasus"
+      ],
+      "circle_targets": [],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    },
+    {
+      "week": "W51",
+      "constellation": "Pegasus",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [
+        "Great Square of Pegasus"
+      ],
+      "circle_targets": [],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    }
+  ]
+}
