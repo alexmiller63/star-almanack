@@ -1,0 +1,35 @@
+name: Calendar Generator
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_year:
+        description: Start year
+        required: true
+        type: string
+      start_week:
+        description: Start week
+        required: true
+        type: string
+      end_year:
+        description: End year (blank = one week)
+        required: false
+        default: ''
+        type: string
+      end_week:
+        description: End week (blank = one week)
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  range:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Star Almanack
+        uses: actions/checkout@v4
+      - name: Resolve requested ISO weeks
+        run: |
+          python generator_week_range.py \
+            '${{ inputs.start_year }}' '${{ inputs.start_week }}' \
+            '${{ inputs.end_year }}' '${{ inputs.end_week }}'
