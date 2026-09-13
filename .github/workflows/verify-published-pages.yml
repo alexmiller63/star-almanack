@@ -1,0 +1,74 @@
+name: Verify Published Calendar Page
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: Year
+        required: true
+        default: '2026'
+      week:
+        description: ISO week
+        required: true
+        default: '41'
+
+jobs:
+  chromium:
+    name: Chromium rendered-page verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Install Playwright Chromium
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --save-dev playwright
+          npx playwright install --with-deps chromium
+
+      - name: Verify the published page in Chromium
+        env:
+          YEAR: ${{ inputs.year }}
+          WEEK: ${{ inputs.week }}
+        run: |
+          node <<'JS'
+          const { chromium } = require('playwright');
+
+          (async () => {
+            const year = process.env.YEAR;
+            const week = String(process.env.WEEK).padStart(2, '0');
+            const url = `https://alexmiller63.github.io/almanack/${year}/W${week}/?verify=${Date.now()}`;
+
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage();
+            try {
+              const response = await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+              if (!response || !response.ok()) {
+                throw new Error(`Published page did not load successfully: ${response && response.status()} ${url}`);
+              }
+
+              await page.locator('button[data-bayer-mode="mixed"]').click();
+
+              const calendarText = await page.locator('table.calendar').innerText();
+              console.log(`Published URL: ${url}`);
+              console.log('Rendered calendar text:');
+              console.log(calendarText);
+
+              if (year === '2026' && week === '41') {
+                const expected = 'Enif (ε Epsilon Pegasi)';
+                const stale = 'Enif (ε Epsilon Peg)';
+                if (!calendarText.includes(expected)) {
+                  throw new Error(`W41 Chromium check failed: expected rendered text "${expected}".`);
+                }
+                if (calendarText.includes(stale)) {
+                  throw new Error(`W41 Chromium check failed: stale rendered text "${stale}" is still present.`);
+                }
+              }
+
+              console.log(`PASS: Chromium verified the rendered published page for ${year}-W${week}.`);
+            } finally {
+              await browser.close();
+            }
+          })().catch(err => {
+            console.error(err.stack || err);
+            process.exit(1);
+          });
+          JS
