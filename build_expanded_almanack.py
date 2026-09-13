@@ -11,14 +11,6 @@ source = (ROOT / "ISO2026.md").read_text(encoding="utf-8")
 bayer_text = (ROOT / "expanded-bayer-visibility-2026.csv").read_text(encoding="utf-8")
 bright_text = (ROOT / "bright-star-visibility-2026.csv").read_text(encoding="utf-8")
 
-legacy_intro = """## Working Integrated Almanack
-
-This working edition integrates the supplied 2026 zodiac calendar, best-visibility dates for 100 selected stars and Messier objects, lunar phases, Wheel-of-the-Year points, named full moons, and the 53 weekly Solar-System snapshots.
-
-Planetary positions are geocentric tropical ecliptic longitudes sampled Monday at 00:00 UTC. Weekly chart filenames are reserved for later insertion using the approved chart model.
-
-> **Validation status:** The source material reports 100/100 best-visibility calculations passing their recalculation check and all 50 lunar phases matching the USNO comparison. The 371 weekly planetary positions remain representatively checked rather than fully independently audited.
-"""
 expanded_intro = """## Working Integrated Almanack
 
 This working edition covers the complete 53-week ISO 2026 week-year and integrates the supplied zodiac calendar, all 110 Messier objects, the audited α/β Bayer catalog, the second-magnitude naked-eye star layer, lunar phases, Wheel-of-the-Year points, named full moons, and weekly Solar-System snapshots.
@@ -27,9 +19,17 @@ Planetary positions are geocentric tropical ecliptic longitudes sampled Monday a
 
 > **Validation status:** The generated expanded Almanack is checked by repository CI for all 53 ISO weeks and 371 civil-date rows, all 110 Messier objects on their computed best-visibility dates, fixed-object placement completeness, and the reconciled second-magnitude star layer. The source material also reports all 50 lunar phases matching the USNO comparison. The weekly planetary positions remain representatively checked rather than fully independently audited.
 """
-if legacy_intro not in calendar:
-    raise SystemExit("Expected legacy Almanack introduction was not found")
-calendar = calendar.replace(legacy_intro, expanded_intro, 1)
+
+# Replace the introductory section structurally.  Build wiring must not depend
+# on the exact prose inside that section; only the stable Markdown headings
+# delimit the section to replace.
+intro_heading = "## Working Integrated Almanack"
+first_week_heading = "## ISO 2026-W01"
+intro_start = calendar.find(intro_heading)
+first_week_start = calendar.find(first_week_heading)
+if intro_start < 0 or first_week_start < 0 or first_week_start <= intro_start:
+    raise SystemExit("Expected Almanack structural headings were not found")
+calendar = calendar[:intro_start] + expanded_intro.rstrip() + "\n\n" + calendar[first_week_start:]
 
 with (ROOT / "expanded-bayer-visibility-2026.csv").open(encoding="utf-8", newline="") as f:
     bayer_rows = list(csv.DictReader(f))
