@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+"""Make observing-aid glyphs participate in Greek/Latin/Mixed notation modes.
+
+Greek/Symbols: glyph only (👁, B, 🔭)
+Latin: words only (Naked eye, Binoculars, Telescope)
+Mixed Learner: glyph plus word
+"""
+from pathlib import Path
+
+ROOT = Path(__file__).parent / "site" / "2026"
+
+OLD_RENDER = "function render(s,value){s.replaceChildren();let a=Array.from(value);if(a.length&&glyphs.has(a[0])){let q=document.createElement('span');q.className='almanack-glyph';q.textContent=a[0]+VS;s.append(q);let rest=a.slice(1).join('').replace(/^\\ufe0e/,'');if(rest)s.append(document.createTextNode(rest))}else{s.textContent=value}}"
+
+NEW_RENDER = "function render(s,value){s.replaceChildren();if(s.dataset.observingAid==='1'&&value===s.dataset.greek){let q=document.createElement('span');q.className='almanack-glyph';q.textContent=value;s.append(q);return}let a=Array.from(value);if(a.length&&glyphs.has(a[0])){let q=document.createElement('span');q.className='almanack-glyph';q.textContent=a[0]+VS;s.append(q);let rest=a.slice(1).join('').replace(/^\\ufe0e/,'');if(rest)s.append(document.createTextNode(rest))}else{s.textContent=value}}"
+
+ANCHOR = "document.querySelectorAll('.zodiac-notation-source').forEach(s=>{let x=s.textContent.charAt(0);if(z[x]){s.className='notation-item';s.dataset.greek=x+VS;s.dataset.latin=z[x];s.dataset.mixed=x+VS+'\\n'+z[x]}});"
+
+AID_JS = r"""
+const observingAids={'👁':'Naked eye','B':'Binoculars','🔭':'Telescope'};
+document.querySelectorAll('table.calendar tbody td:nth-child(3) .almanack-glyph').forEach(s=>{let x=s.textContent.replace(VS,'').trim();if(observingAids[x]){s.className='notation-item observing-aid';s.dataset.observingAid='1';s.dataset.greek=x;s.dataset.latin=observingAids[x];s.dataset.mixed=x+' '+observingAids[x]}});
+""".strip()
+
+
+def patch(page: Path) -> None:
+    text = page.read_text(encoding="utf-8")
+    if "const observingAids=" in text:
+        return
+    if OLD_RENDER not in text:
+        raise SystemExit(f"Notation render function not found in {page}")
+    if ANCHOR not in text:
+        raise SystemExit(f"Notation initialization anchor not found in {page}")
+    text = text.replace(OLD_RENDER, NEW_RENDER, 1)
+    text = text.replace(ANCHOR, ANCHOR + "\n" + AID_JS, 1)
+    page.write_text(text, encoding="utf-8")
+
+
+def main() -> None:
+    pages = sorted(ROOT.glob("W??/index.html"))
+    if len(pages) != 53:
+        raise SystemExit(f"Expected 53 weekly pages, found {len(pages)}")
+    for page in pages:
+        patch(page)
+    print("Added notation-aware observing aids to 53 weekly pages")
+
+
+if __name__ == "__main__":
+    main()
