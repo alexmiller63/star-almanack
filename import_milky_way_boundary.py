@@ -47,7 +47,10 @@ def main() -> int:
         "definition": "Star Almanack Milky Way bounded region",
         "rule": "inside the d3-celestial/Vieira outermost visible contour (feature ol1)",
         "boundary_inclusive": True,
-        "coordinate_system": "equatorial longitude/declination in degrees; longitude = RA * 15",
+        "coordinate_system": (
+            "J2000 equatorial GeoJSON longitude/declination in degrees; "
+            "RA 0..12h maps to longitude 0..180 deg and RA 12..24h maps to -180..0 deg"
+        ),
         "source": {
             "project": "d3-celestial",
             "repository": "ofrohn/d3-celestial",
