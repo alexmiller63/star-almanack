@@ -1,0 +1,58 @@
+name: Import Milky Way boundary
+
+"on":
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/import-milky-way-boundary.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Star Almanack
+        uses: actions/checkout@v4
+
+      - name: Download and freeze outer Milky Way contour
+        run: python import_milky_way_boundary.py
+
+      - name: Validate membership tool
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import in_milky_way
+
+          path = Path('data/milky-way/vieira-outer.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          geometry = data['geometry']
+
+          if geometry['type'] == 'MultiPolygon':
+              lon, dec = geometry['coordinates'][0][0][0]
+          elif geometry['type'] == 'Polygon':
+              lon, dec = geometry['coordinates'][0][0]
+          else:
+              raise SystemExit(f"Unexpected geometry type: {geometry['type']}")
+
+          # A stored boundary vertex is inside because the operational region
+          # is boundary-inclusive.
+          assert in_milky_way.in_milky_way(lon / 15.0, dec), (lon, dec)
+          # The celestial north pole is outside the selected visible contour.
+          assert not in_milky_way.in_milky_way(0.0, 90.0)
+          print('Milky Way membership validation PASS')
+          PY
+
+      - name: Commit frozen boundary
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/milky-way/vieira-outer.json
+          if git diff --cached --quiet; then
+            echo "Boundary already current"
+            exit 0
+          fi
+          git commit -m "Freeze Milky Way outer boundary"
+          git push
