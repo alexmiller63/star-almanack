@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Apply curated observer-first Sky Notes to the generated 2026 Almanack."""
+"""Apply curated observer-first Sky Notes to the generated 2026 Almanack.
+
+Planetary context is consumed from the Star Almanack's canonical weekly
+planetary data file.  This module does not query Horizons or any other external
+ephemeris service.  It also emits machine-readable artwork descriptors that
+reference the accepted constellation-figure definitions.
+"""
 from pathlib import Path
 import csv
 import io
@@ -11,6 +17,9 @@ ALMANACK = ROOT / "almanack-expanded.md"
 NOTES = ROOT / "sky-notes-2026.json"
 NOTES_DIR = ROOT / "sky-notes-2026"
 FIXED_OBJECTS = ROOT / "fixed-objects.yaml"
+WEEKLY_EPHEMERIS = ROOT / "weekly-ephemeris-2026.csv"
+CONSTELLATION_FIGURES = ROOT / "constellation-figures.json"
+ARTWORK_DESCRIPTORS = ROOT / "sky-note-artwork-descriptors-2026.json"
 EXPECTED_WEEKS = {f"W{i:02d}" for i in range(1, 54)}
 PLACEHOLDER_NOTE = "Weekly geocentric tropical planetary positions, sampled Monday at 00:00 UTC."
 
@@ -61,6 +70,16 @@ TYPE_NAMES = {
     "EG": "elliptical galaxy",
     "IG": "irregular galaxy",
 }
+
+PLANET_FIELDS = ("mercury", "venus", "mars", "jupiter", "saturn")
+PLANET_NAMES = {
+    "mercury": "Mercury",
+    "venus": "Venus",
+    "mars": "Mars",
+    "jupiter": "Jupiter",
+    "saturn": "Saturn",
+}
+SIGNS = "♈♉♊♋♌♍♎♏♐♑♒♓"
 
 
 def replace_week_note(text: str, week: str, note: str) -> str:
@@ -125,7 +144,6 @@ def expand_messier_mentions(note: str, catalog: dict[str, tuple[str | None, str 
 
     def repl(match: re.Match[str]) -> str:
         designation = "M" + match.group(1)
-        # Do not double-expand notes that are already editorially expanded.
         tail = note[match.end():match.end() + 3]
         if tail.startswith(",") or tail.startswith(" ("):
             return designation
@@ -141,11 +159,68 @@ def expand_messier_mentions(note: str, catalog: dict[str, tuple[str | None, str 
     return pattern.sub(repl, note)
 
 
-def enrich_observer_note(week: str, note: str) -> str:
+def zodiac_longitude(value: str) -> float:
+    """Parse the Almanack's zodiac notation into absolute tropical longitude."""
+    m = re.fullmatch(r"\s*([♈♉♊♋♌♍♎♏♐♑♒♓])\s*(\d{1,2})°(\d{2})′\s*", value)
+    if not m:
+        raise ValueError(f"Unrecognized zodiac value: {value!r}")
+    return SIGNS.index(m.group(1)) * 30.0 + int(m.group(2)) + int(m.group(3)) / 60.0
+
+
+def angular_separation(a: float, b: float) -> float:
+    d = abs(a - b) % 360.0
+    return min(d, 360.0 - d)
+
+
+def load_planetary_context() -> dict[str, dict[str, str]]:
+    """Load already-calculated Almanack weekly positions; never query a service here."""
+    with WEEKLY_EPHEMERIS.open(encoding="utf-8", newline="") as f:
+        rows = list(csv.DictReader(f))
+    result = {}
+    for row in rows:
+        key = row.get("iso_week", "")
+        m = re.fullmatch(r"2026-(W\d{2})", key)
+        if not m:
+            continue
+        result[m.group(1)] = row
+    missing = sorted(EXPECTED_WEEKS - set(result))
+    if missing:
+        raise SystemExit(f"Canonical weekly planetary data missing weeks: {missing}")
+    return result
+
+
+def planetary_note(row: dict[str, str]) -> str | None:
+    """Report only unusually close planet-planet longitude groupings.
+
+    This intentionally uses the shared Almanack snapshot rather than computing
+    another ephemeris inside Sky Notes. A 5° threshold keeps the prose selective.
+    """
+    positions = {field: zodiac_longitude(row[field]) for field in PLANET_FIELDS}
+    candidates = []
+    fields = list(PLANET_FIELDS)
+    for i, left in enumerate(fields):
+        for right in fields[i + 1:]:
+            separation = angular_separation(positions[left], positions[right])
+            if separation <= 5.0:
+                candidates.append((separation, left, right))
+    if not candidates:
+        return None
+    separation, left, right = min(candidates)
+    return (
+        f"**Planet watch:** {PLANET_NAMES[left]} and {PLANET_NAMES[right]} are "
+        f"about {separation:.1f}° apart in tropical longitude at the Almanack's "
+        "Monday 00:00 UTC weekly snapshot."
+    )
+
+
+def enrich_observer_note(week: str, note: str, planetary: dict[str, dict[str, str]]) -> str:
     """Append high-value observer anchors without displacing the curated prose."""
     additions = []
     if week in ASTERISM_NOTES:
         additions.append(ASTERISM_NOTES[week])
+    pnote = planetary_note(planetary[week])
+    if pnote:
+        additions.append(pnote)
     if week in METEOR_NOTES:
         additions.append(METEOR_NOTES[week])
     if not additions:
@@ -178,10 +253,70 @@ def load_notes() -> dict:
     return weeks
 
 
+def artwork_descriptor_for(week: str, note: str, figures: dict) -> dict | None:
+    """Create an artwork-generator handoff only when an accepted figure applies."""
+    text = note.lower()
+    chosen = None
+    if any(token in text for token in ("pegasus", "enif", "great square", "m15")):
+        chosen = "Pegasus"
+    elif any(token in text for token in ("aquarius", "sadalmelik", "water jar")):
+        chosen = "Aquarius"
+    if not chosen or chosen not in figures:
+        return None
+
+    figure = figures[chosen]
+    featured = []
+    for asterism in figure.get("asterisms", []):
+        if asterism["name"].lower() in text or (
+            chosen == "Pegasus" and asterism["name"] == "Great Square of Pegasus"
+        ):
+            featured.append(asterism["name"])
+
+    targets = []
+    if figure.get("target_name") and figure["target_name"].lower() in text:
+        targets.append(figure["target_name"])
+    for obj in figure.get("deep_sky_objects", []):
+        if obj["name"].lower() in text:
+            targets.append(obj["name"])
+
+    return {
+        "week": week,
+        "constellation": chosen,
+        "figure_source": "constellation-figures.json",
+        "figure_standard": "accepted Martz/MacRobert stick figure",
+        "constellation_line_color": "blue",
+        "featured_asterism_color": "green",
+        "featured_asterisms": featured,
+        "circle_targets": targets,
+        "instructions": (
+            "Use the accepted figure paths exactly; do not invent a replacement stick figure. "
+            "Draw the constellation in blue, emphasize the featured asterism in green, and circle "
+            "named observing targets when present."
+        ),
+    }
+
+
+def write_artwork_descriptors(weeks: dict) -> int:
+    figures = json.loads(CONSTELLATION_FIGURES.read_text(encoding="utf-8"))
+    descriptors = []
+    for week, payload in sorted(weeks.items()):
+        descriptor = artwork_descriptor_for(week, payload.get("note", ""), figures)
+        if descriptor:
+            descriptors.append(descriptor)
+    output = {
+        "year": 2026,
+        "purpose": "Sky Notes artwork-generator handoff",
+        "descriptors": descriptors,
+    }
+    ARTWORK_DESCRIPTORS.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return len(descriptors)
+
+
 def main():
     text = ALMANACK.read_text(encoding="utf-8")
     weeks = load_notes()
     messier_catalog = load_messier_catalog()
+    planetary = load_planetary_context()
     for week, payload in sorted(weeks.items()):
         note = payload.get("note", "").strip()
         if not re.fullmatch(r"W(?:0[1-9]|[1-4]\d|5[0-3])", week):
@@ -190,11 +325,15 @@ def main():
             raise SystemExit(f"Empty note for {week}")
         if note == PLACEHOLDER_NOTE:
             raise SystemExit(f"Placeholder Sky Note survived for {week}")
-        note = enrich_observer_note(week, note)
+        note = enrich_observer_note(week, note, planetary)
         note = expand_messier_mentions(note, messier_catalog)
         text = replace_week_note(text, week, note)
     ALMANACK.write_text(text, encoding="utf-8")
-    print("Applied curated Sky Notes for all 53 weeks with expanded Messier prose, asterism anchors, and 2026 meteor-shower highlights")
+    descriptor_count = write_artwork_descriptors(weeks)
+    print(
+        "Applied curated Sky Notes for all 53 weeks using shared Almanack planetary data; "
+        f"wrote {descriptor_count} accepted-figure artwork descriptors"
+    )
 
 
 if __name__ == "__main__":
