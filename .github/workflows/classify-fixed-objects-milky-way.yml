@@ -48,12 +48,12 @@ jobs:
 
       - name: Commit classification sidecar
         run: |
-          if git diff --quiet -- fixed-object-milky-way.csv; then
-            echo 'No classification changes.'
-            exit 0
-          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add fixed-object-milky-way.csv
+          if git diff --cached --quiet; then
+            echo 'No classification changes.'
+            exit 0
+          fi
           git commit -m 'Classify fixed objects by Milky Way region'
           git push
