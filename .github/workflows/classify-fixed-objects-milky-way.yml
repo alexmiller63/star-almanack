@@ -28,6 +28,24 @@ jobs:
       - name: Install YAML parser
         run: python -m pip install --disable-pip-version-check pyyaml
 
+      - name: Validate Milky Way landmarks
+        run: |
+          python - <<'PY'
+          from in_milky_way import in_milky_way
+
+          checks = [
+              ('M8 Lagoon Nebula', 18.06333333, -24.38333333, True),
+              ('M44 Beehive Cluster', 8.66833333, 19.98333333, False),
+              ('M31 Andromeda Galaxy', 0.69666667, 41.26666667, False),
+              ('north celestial pole', 0.0, 90.0, False),
+          ]
+          for label, ra, dec, expected in checks:
+              actual = in_milky_way(ra, dec)
+              if actual != expected:
+                  raise SystemExit(f'{label}: expected {expected}, got {actual}')
+          print('Milky Way landmark validation PASS')
+          PY
+
       - name: Classify all fixed objects
         run: python classify_fixed_objects_milky_way.py
 
