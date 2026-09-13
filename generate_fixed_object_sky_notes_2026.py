@@ -2,11 +2,12 @@
 """Generate deterministic 2026 observing notes for fixed Almanack objects.
 
 The output is observer-first prose for three equipment levels: naked eye,
-binoculars, and telescope.  It is generated from the authoritative fixed-object
+binoculars, and telescope. It is generated from the authoritative fixed-object
 catalog plus the frozen Milky Way boundary; no network access is required.
 
-Only catalog rows carrying both ``best`` and ``iso`` are included, because this
-file is the 2026 publication layer rather than a timeless master catalog.
+This is an ISO-year publication layer: only rows whose stored ISO week date is
+in ISO 2026 are emitted. The descriptive observing guidance is otherwise based
+on fixed-object properties and is not treated as an intrinsic annual property.
 """
 
 from __future__ import annotations
@@ -20,23 +21,8 @@ import yaml
 
 from in_milky_way import in_milky_way
 
-TYPE_NAMES = {
-    "SN": "supernova remnant",
-    "GC": "globular cluster",
-    "OC": "open cluster",
-    "DN": "diffuse nebula",
-    "PN": "planetary nebula",
-    "AS": "asterism",
-    "DS": "double star",
-    "MW": "Milky Way star cloud",
-    "SG": "spiral galaxy",
-    "BG": "barred spiral galaxy",
-    "LG": "lenticular galaxy",
-    "EG": "elliptical galaxy",
-    "IG": "irregular galaxy",
-}
-
 GALAXY_TYPES = {"SG", "BG", "LG", "EG", "IG"}
+ISO_YEAR_PREFIX = "2026-W"
 
 
 def record_from_row(fields: list[str], row: list[Any]) -> dict[str, Any]:
@@ -82,19 +68,17 @@ def star_notes(r: dict[str, Any], inside: bool) -> tuple[str, str, str]:
     elif mag <= 2.0:
         naked = f"Bright and easy to see unaided; use {name} as a primary landmark for the surrounding constellation."
     elif mag <= 4.0:
-        naked = f"Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern."
+        naked = "Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern."
     elif mag <= 5.5:
-        naked = f"Visible unaided from a reasonably dark site, but easier after full dark adaptation."
+        naked = "Visible unaided from a reasonably dark site, but easier after full dark adaptation."
     else:
-        naked = f"Near or beyond the practical unaided-eye limit for many observers; use optical aid for a reliable identification."
+        naked = "Near or beyond the practical unaided-eye limit for many observers; use optical aid for a reliable identification."
 
     binocular = (
         "Binoculars isolate the star from the surrounding pattern and make star-hopping easier."
         + milky_way_clause(inside)
     )
-    telescope = (
-        "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
-    )
+    telescope = "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
     return naked, binocular, telescope
 
 
@@ -104,8 +88,6 @@ def messier_notes(r: dict[str, Any], inside: bool) -> tuple[str, str, str]:
     mag = magnitude(r)
     mw = milky_way_clause(inside)
 
-    # A few famous large, integrated-light objects have naked-eye behavior that
-    # cannot be inferred safely from integrated magnitude alone.
     if obj == "M31":
         naked = "Visible as an elongated misty patch from a dark site; use averted vision when skyglow is present."
     elif obj == "M33":
@@ -193,16 +175,17 @@ def generate(source: Path, output: Path) -> tuple[int, int]:
         fields = schemas.get(category)
         if not isinstance(fields, list):
             continue
-        required = {"ra_h", "dec_deg", "best", "iso"}
-        if not required.issubset(fields):
+        if not {"ra_h", "dec_deg", "best", "iso"}.issubset(fields):
             continue
 
         for row in rows:
             if not isinstance(row, list):
                 continue
             r = record_from_row(fields, row)
-            if not r.get("best") or not r.get("iso"):
+            iso = str(r.get("iso") or "")
+            if not r.get("best") or not iso.startswith(ISO_YEAR_PREFIX):
                 continue
+
             ra = float(r["ra_h"])
             dec = float(r["dec_deg"])
             inside = in_milky_way(ra, dec)
@@ -215,7 +198,7 @@ def generate(source: Path, output: Path) -> tuple[int, int]:
                     "name": display_name(category, r),
                     "constellation": str(r.get("con") or ""),
                     "best": str(r.get("best") or ""),
-                    "iso": str(r.get("iso") or ""),
+                    "iso": iso,
                     "in_milky_way": "yes" if inside else "no",
                     "naked_eye": naked,
                     "binoculars": binocular,
