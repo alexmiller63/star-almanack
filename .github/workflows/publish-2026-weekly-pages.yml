@@ -1,4 +1,4 @@
-# Extended ephemeris publish: Uranus, Neptune, and Ceres
+# Weekly-page publish with Latin constellation-genitive regression checks
 name: Publish 2026 Weekly Pages
 
 on:
@@ -110,6 +110,7 @@ jobs:
               assert 'Mixed Learner' in text, f'Mixed Learner label missing in {page}'
               assert "'β':'Beta'" in text, f'Full Greek-letter-name mapping missing in {page}'
               assert "Cen:'Centauri'" in text, f'Full constellation genitive mapping missing in {page}'
+              assert "Peg:'Pegasi'" in text, f'Pegasus genitive mapping missing in {page}'
               assert "'♒':'Aquarius'" in text, f'Full zodiac-name mapping missing in {page}'
               assert "'☉':'Sun'" in text and "'♄':'Saturn'" in text, f'Full ephemeris-body mapping missing in {page}'
               assert '.almanack-glyph {' in text, f'Uniform glyph class missing in {page}'
@@ -122,6 +123,8 @@ jobs:
 
           w41 = (root / 'W41' / 'index.html').read_text(encoding='utf-8')
           assert 'KILROY WAS HERE — W41 EXTENDED EPHEMERIS' in w41, 'Kilroy deployment diagnostic missing from W41'
+          assert 'Enif (ε Peg)' in w41, 'Expected Greek-source Enif Bayer designation missing from W41'
+          assert "Peg:'Pegasi'" in w41, 'W41 Latin mode cannot render Epsilon Pegasi'
           for glyph, name in [('♅','Uranus'), ('♆','Neptune'), ('⚳','Ceres')]:
               assert glyph in w41 and name in w41, f'Extended target {name} missing from W41'
 
@@ -135,7 +138,7 @@ jobs:
           index = (root / 'index.html').read_text(encoding='utf-8')
           links = re.findall(r'href="W\d{2}/"', index)
           assert len(links) == 53, f'Expected 53 week links on index, found {len(links)}'
-          print('Verified 53 weekly pages with uniform glyph rendering and extended ephemeris')
+          print('Verified 53 weekly pages with uniform glyph rendering, Pegasus genitive mapping, and extended ephemeris')
           PY
 
       - name: Commit published pages
