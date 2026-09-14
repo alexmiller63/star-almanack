@@ -3,17 +3,16 @@
 from __future__ import annotations
 
 import argparse
-import calendar
 import datetime as dt
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 OWNED_SECTIONS = (
     ("calendar", "Calendar"),
-    ("solar-system-ephemeris", "Weekly Solar-System Ephemeris"),
+    ("ephemeris", "Weekly Solar-System Ephemeris"),
     ("sky-note", "Sky Note"),
-    ("observing-descriptors", "Observer Descriptors"),
-    ("chart", "Chart"),
+    ("planet-finder", "Planet Finder"),
+    ("artwork", "Artwork"),
 )
 
 
