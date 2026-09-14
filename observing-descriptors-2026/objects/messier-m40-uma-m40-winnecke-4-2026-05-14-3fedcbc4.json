@@ -1,0 +1,22 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W20-4",
+  "best_visibility_date": "2026-05-14",
+  "identity": {
+    "category": "messier",
+    "designation": "M40",
+    "display_name": "M40 — Winnecke 4",
+    "constellation": "UMa"
+  },
+  "context": {
+    "in_visible_milky_way": false
+  },
+  "observing": {
+    "naked_eye": "Not normally identifiable as a distinct object to the unaided eye.",
+    "binoculars": "Binoculars may show the pair as elongated or separated if the components are wide enough.",
+    "telescope": "Use moderate power to separate the components cleanly and compare their relative brightness."
+  },
+  "relationships": [],
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

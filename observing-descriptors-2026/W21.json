@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W21",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M104 — Sombrero Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-1",
+      "href": "objects/messier-m104-vir-m104-sombrero-galaxy-2026-05-18-4bcba0c1.json"
+    },
+    {
+      "display_name": "M64 — Black Eye Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-5",
+      "href": "objects/messier-m64-com-m64-black-eye-galaxy-2026-05-22-3552bdc5.json"
+    },
+    {
+      "display_name": "M58",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-1",
+      "href": "objects/messier-m58-vir-m58-2026-05-18-6e2d4eef.json"
+    },
+    {
+      "display_name": "M68",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-1",
+      "href": "objects/messier-m68-hya-m68-2026-05-18-6cc19585.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M104 — Sombrero Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-1",
+      "href": "objects/messier-m104-vir-m104-sombrero-galaxy-2026-05-18-4bcba0c1.json"
+    },
+    {
+      "display_name": "M64 — Black Eye Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-5",
+      "href": "objects/messier-m64-com-m64-black-eye-galaxy-2026-05-22-3552bdc5.json"
+    },
+    {
+      "display_name": "M58",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-1",
+      "href": "objects/messier-m58-vir-m58-2026-05-18-6e2d4eef.json"
+    },
+    {
+      "display_name": "M68",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-1",
+      "href": "objects/messier-m68-hya-m68-2026-05-18-6cc19585.json"
+    },
+    {
+      "display_name": "M59",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-2",
+      "href": "objects/messier-m59-vir-m59-2026-05-19-225ad6e8.json"
+    },
+    {
+      "display_name": "M60",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W21-2",
+      "href": "objects/messier-m60-vir-m60-2026-05-19-c5413808.json"
+    }
+  ],
+  "curated_routes": []
+}

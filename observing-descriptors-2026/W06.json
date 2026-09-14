@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W06",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M35",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W06-3",
+      "href": "objects/messier-m35-gem-m35-2026-02-04-7b15a5d4.json"
+    },
+    {
+      "display_name": "α Car — Canopus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W06-6",
+      "href": "objects/bayer-car-car-car-canopus-2026-02-07-9bce7731.json"
+    },
+    {
+      "display_name": "β CMa — Mirzam",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W06-6",
+      "href": "objects/bayer-cma-cma-cma-mirzam-2026-02-07-263b22aa.json"
+    },
+    {
+      "display_name": "α Men",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W06-3",
+      "href": "objects/bayer-men-men-men-2026-02-04-f2962b50.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M35",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W06-3",
+      "href": "objects/messier-m35-gem-m35-2026-02-04-7b15a5d4.json"
+    },
+    {
+      "display_name": "α Car — Canopus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W06-6",
+      "href": "objects/bayer-car-car-car-canopus-2026-02-07-9bce7731.json"
+    },
+    {
+      "display_name": "β CMa — Mirzam",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W06-6",
+      "href": "objects/bayer-cma-cma-cma-mirzam-2026-02-07-263b22aa.json"
+    },
+    {
+      "display_name": "α Men",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W06-3",
+      "href": "objects/bayer-men-men-men-2026-02-04-f2962b50.json"
+    },
+    {
+      "display_name": "M1 — Crab Nebula",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W05-1",
+      "href": "objects/messier-m1-tau-m1-crab-nebula-2026-01-26-280d091b.json"
+    },
+    {
+      "display_name": "M42 — Great Nebula in Orion",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W05-1",
+      "href": "objects/messier-m42-ori-m42-great-nebula-in-orion-2026-01-26-688ffd08.json"
+    }
+  ],
+  "curated_routes": []
+}

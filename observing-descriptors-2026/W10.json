@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W10",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M48",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W10-7",
+      "href": "objects/messier-m48-hya-m48-2026-03-08-c4b92120.json"
+    },
+    {
+      "display_name": "M44 — Beehive Cluster",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W11-7",
+      "href": "objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json"
+    },
+    {
+      "display_name": "M47",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W09-4",
+      "href": "objects/messier-m47-pup-m47-2026-02-26-925da75e.json"
+    },
+    {
+      "display_name": "M46",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W09-5",
+      "href": "objects/messier-m46-pup-m46-2026-02-27-7133fe53.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M48",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W10-7",
+      "href": "objects/messier-m48-hya-m48-2026-03-08-c4b92120.json"
+    },
+    {
+      "display_name": "M44 — Beehive Cluster",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W11-7",
+      "href": "objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json"
+    },
+    {
+      "display_name": "M47",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W09-4",
+      "href": "objects/messier-m47-pup-m47-2026-02-26-925da75e.json"
+    },
+    {
+      "display_name": "M46",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W09-5",
+      "href": "objects/messier-m46-pup-m46-2026-02-27-7133fe53.json"
+    },
+    {
+      "display_name": "M93",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W09-6",
+      "href": "objects/messier-m93-pup-m93-2026-02-28-fdba5aa5.json"
+    },
+    {
+      "display_name": "β CMi — Gomeisa",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W09-2",
+      "href": "objects/bayer-cmi-cmi-cmi-gomeisa-2026-02-24-e20e8722.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W09-5",
+  "best_visibility_date": "2026-02-27",
+  "identity": {
+    "category": "bayer",
+    "designation": "α Mon",
+    "display_name": "α Mon",
+    "constellation": "Mon"
+  },
+  "context": {
+    "in_visible_milky_way": false
+  },
+  "observing": {
+    "naked_eye": "Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern.",
+    "binoculars": "Binoculars isolate the star from the surrounding pattern and make star-hopping easier.",
+    "telescope": "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
+  },
+  "relationships": [],
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

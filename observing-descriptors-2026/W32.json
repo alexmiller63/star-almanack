@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W32",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M7 — Ptolemy's Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-1",
+      "href": "objects/messier-m7-sco-m7-ptolemy-s-cluster-2026-08-03-166d1653.json"
+    },
+    {
+      "display_name": "M20 — Trifid Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-4",
+      "href": "objects/messier-m20-sgr-m20-trifid-nebula-2026-08-06-a8677098.json"
+    },
+    {
+      "display_name": "M8 — Lagoon Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-4",
+      "href": "objects/messier-m8-sgr-m8-lagoon-nebula-2026-08-06-d80c12f6.json"
+    },
+    {
+      "display_name": "M24 — Sagittarius Star Cloud",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-7",
+      "href": "objects/messier-m24-sgr-m24-sagittarius-star-cloud-2026-08-09-2850f1bd.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M7 — Ptolemy's Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-1",
+      "href": "objects/messier-m7-sco-m7-ptolemy-s-cluster-2026-08-03-166d1653.json"
+    },
+    {
+      "display_name": "M20 — Trifid Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-4",
+      "href": "objects/messier-m20-sgr-m20-trifid-nebula-2026-08-06-a8677098.json"
+    },
+    {
+      "display_name": "M8 — Lagoon Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-4",
+      "href": "objects/messier-m8-sgr-m8-lagoon-nebula-2026-08-06-d80c12f6.json"
+    },
+    {
+      "display_name": "M24 — Sagittarius Star Cloud",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-7",
+      "href": "objects/messier-m24-sgr-m24-sagittarius-star-cloud-2026-08-09-2850f1bd.json"
+    },
+    {
+      "display_name": "M23",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-2",
+      "href": "objects/messier-m23-sgr-m23-2026-08-04-f097fbbb.json"
+    },
+    {
+      "display_name": "M21",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W32-4",
+      "href": "objects/messier-m21-sgr-m21-2026-08-06-a64221b5.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W24",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M101 — Pinwheel Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-1",
+      "href": "objects/messier-m101-uma-m101-pinwheel-galaxy-2026-06-08-3b84fc58.json"
+    },
+    {
+      "display_name": "α Dra — Thuban",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-1",
+      "href": "objects/bayer-dra-dra-dra-thuban-2026-06-08-654fc72c.json"
+    },
+    {
+      "display_name": "β Cen — Hadar",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-1",
+      "href": "objects/bayer-cen-cen-cen-hadar-2026-06-08-1f4592e4.json"
+    },
+    {
+      "display_name": "α Boo — Arcturus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-4",
+      "href": "objects/bayer-boo-boo-boo-arcturus-2026-06-11-4d988adb.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M101 — Pinwheel Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-1",
+      "href": "objects/messier-m101-uma-m101-pinwheel-galaxy-2026-06-08-3b84fc58.json"
+    },
+    {
+      "display_name": "α Dra — Thuban",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-1",
+      "href": "objects/bayer-dra-dra-dra-thuban-2026-06-08-654fc72c.json"
+    },
+    {
+      "display_name": "β Cen — Hadar",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-1",
+      "href": "objects/bayer-cen-cen-cen-hadar-2026-06-08-1f4592e4.json"
+    },
+    {
+      "display_name": "α Boo — Arcturus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-4",
+      "href": "objects/bayer-boo-boo-boo-arcturus-2026-06-11-4d988adb.json"
+    },
+    {
+      "display_name": "proxima-centauri — Proxima Centauri",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W24-7",
+      "href": "objects/special-proxima-centauri-cen-proxima-centauri-proxima-centauri-2-94e9cad0.json"
+    },
+    {
+      "display_name": "M83 — Southern Pinwheel",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W23-1",
+      "href": "objects/messier-m83-hya-m83-southern-pinwheel-2026-06-01-6d1fbe67.json"
+    }
+  ],
+  "curated_routes": []
+}

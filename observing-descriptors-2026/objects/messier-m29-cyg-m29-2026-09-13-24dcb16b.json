@@ -1,0 +1,22 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W37-7",
+  "best_visibility_date": "2026-09-13",
+  "identity": {
+    "category": "messier",
+    "designation": "M29",
+    "display_name": "M29",
+    "constellation": "Cyg"
+  },
+  "context": {
+    "in_visible_milky_way": true
+  },
+  "observing": {
+    "naked_eye": "Not normally a distinct naked-eye object; locate the surrounding constellation first.",
+    "binoculars": "An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.",
+    "telescope": "Low to moderate power resolves many more members; use a wide field first so the cluster remains visually coherent."
+  },
+  "relationships": [],
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W33",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M16 — Eagle Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-1",
+      "href": "objects/messier-m16-ser-m16-eagle-nebula-2026-08-10-1d5760cb.json"
+    },
+    {
+      "display_name": "M17 — Omega Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-1",
+      "href": "objects/messier-m17-sgr-m17-omega-nebula-2026-08-10-f0ed0d9f.json"
+    },
+    {
+      "display_name": "M22 — Sagittarius Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-5",
+      "href": "objects/messier-m22-sgr-m22-sagittarius-cluster-2026-08-14-e3ac85f3.json"
+    },
+    {
+      "display_name": "M18",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-1",
+      "href": "objects/messier-m18-sgr-m18-2026-08-10-ab41c9b1.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M16 — Eagle Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-1",
+      "href": "objects/messier-m16-ser-m16-eagle-nebula-2026-08-10-1d5760cb.json"
+    },
+    {
+      "display_name": "M17 — Omega Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-1",
+      "href": "objects/messier-m17-sgr-m17-omega-nebula-2026-08-10-f0ed0d9f.json"
+    },
+    {
+      "display_name": "M22 — Sagittarius Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-5",
+      "href": "objects/messier-m22-sgr-m22-sagittarius-cluster-2026-08-14-e3ac85f3.json"
+    },
+    {
+      "display_name": "M18",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-1",
+      "href": "objects/messier-m18-sgr-m18-2026-08-10-ab41c9b1.json"
+    },
+    {
+      "display_name": "M28",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-2",
+      "href": "objects/messier-m28-sgr-m28-2026-08-11-783f29ca.json"
+    },
+    {
+      "display_name": "M25",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W33-4",
+      "href": "objects/messier-m25-sgr-m25-2026-08-13-5138263c.json"
+    }
+  ],
+  "curated_routes": []
+}

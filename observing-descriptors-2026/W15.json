@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W15",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "α Leo — Regulus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W15-3",
+      "href": "objects/bayer-leo-leo-leo-regulus-2026-04-08-051e70a8.json"
+    },
+    {
+      "display_name": "α Sex",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W15-3",
+      "href": "objects/bayer-sex-sex-sex-2026-04-08-e768af04.json"
+    },
+    {
+      "display_name": "M81 — Bode's Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json"
+    },
+    {
+      "display_name": "M82 — Cigar Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m82-uma-m82-cigar-galaxy-2026-04-05-b22924a4.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Leo — Regulus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W15-3",
+      "href": "objects/bayer-leo-leo-leo-regulus-2026-04-08-051e70a8.json"
+    },
+    {
+      "display_name": "α Sex",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W15-3",
+      "href": "objects/bayer-sex-sex-sex-2026-04-08-e768af04.json"
+    },
+    {
+      "display_name": "M81 — Bode's Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json"
+    },
+    {
+      "display_name": "M82 — Cigar Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m82-uma-m82-cigar-galaxy-2026-04-05-b22924a4.json"
+    },
+    {
+      "display_name": "M95",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W16-6",
+      "href": "objects/messier-m95-leo-m95-2026-04-18-d9c6755d.json"
+    },
+    {
+      "display_name": "M105",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W16-7",
+      "href": "objects/messier-m105-leo-m105-2026-04-19-239c7d95.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W25",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "α Cen — Rigil Kentaurus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-2",
+      "href": "objects/bayer-cen-cen-cen-rigil-kentaurus-2026-06-16-953447fa.json"
+    },
+    {
+      "display_name": "α Lib — Zubenelgenubi",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-5",
+      "href": "objects/bayer-lib-lib-lib-zubenelgenubi-2026-06-19-7c6c2595.json"
+    },
+    {
+      "display_name": "β UMi — Kochab",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-5",
+      "href": "objects/bayer-umi-umi-umi-kochab-2026-06-19-d0adb962.json"
+    },
+    {
+      "display_name": "α Cir",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-3",
+      "href": "objects/bayer-cir-cir-cir-2026-06-17-c793b98c.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Cen — Rigil Kentaurus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-2",
+      "href": "objects/bayer-cen-cen-cen-rigil-kentaurus-2026-06-16-953447fa.json"
+    },
+    {
+      "display_name": "α Lib — Zubenelgenubi",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-5",
+      "href": "objects/bayer-lib-lib-lib-zubenelgenubi-2026-06-19-7c6c2595.json"
+    },
+    {
+      "display_name": "β UMi — Kochab",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-5",
+      "href": "objects/bayer-umi-umi-umi-kochab-2026-06-19-d0adb962.json"
+    },
+    {
+      "display_name": "α Cir",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-3",
+      "href": "objects/bayer-cir-cir-cir-2026-06-17-c793b98c.json"
+    },
+    {
+      "display_name": "α Lup",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-3",
+      "href": "objects/bayer-lup-lup-lup-2026-06-17-10730c5a.json"
+    },
+    {
+      "display_name": "α Aps",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W25-4",
+      "href": "objects/bayer-aps-aps-aps-2026-06-18-0b14416a.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W35",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M56",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-2",
+      "href": "objects/messier-m56-lyr-m56-2026-08-25-e5a3a7fa.json"
+    },
+    {
+      "display_name": "α Sgr — Rukbat",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-4",
+      "href": "objects/bayer-sgr-sgr-sgr-rukbat-2026-08-27-2780902e.json"
+    },
+    {
+      "display_name": "β Sgr — Arkab",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-4",
+      "href": "objects/bayer-sgr-sgr-sgr-arkab-2026-08-27-06d80076.json"
+    },
+    {
+      "display_name": "α Vul — Anser",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-6",
+      "href": "objects/bayer-vul-vul-vul-anser-2026-08-29-51804105.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M56",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-2",
+      "href": "objects/messier-m56-lyr-m56-2026-08-25-e5a3a7fa.json"
+    },
+    {
+      "display_name": "α Sgr — Rukbat",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-4",
+      "href": "objects/bayer-sgr-sgr-sgr-rukbat-2026-08-27-2780902e.json"
+    },
+    {
+      "display_name": "β Sgr — Arkab",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-4",
+      "href": "objects/bayer-sgr-sgr-sgr-arkab-2026-08-27-06d80076.json"
+    },
+    {
+      "display_name": "α Vul — Anser",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-6",
+      "href": "objects/bayer-vul-vul-vul-anser-2026-08-29-51804105.json"
+    },
+    {
+      "display_name": "β Cyg — Albireo",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-6",
+      "href": "objects/bayer-cyg-cyg-cyg-albireo-2026-08-29-5ffdf32b.json"
+    },
+    {
+      "display_name": "β CrA",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W35-1",
+      "href": "objects/bayer-cra-cra-cra-2026-08-24-aa53c13a.json"
+    }
+  ],
+  "curated_routes": []
+}

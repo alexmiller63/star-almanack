@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W47",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M31 — Andromeda Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/messier-m31-and-m31-andromeda-galaxy-2026-11-20-0c4146dd.json"
+    },
+    {
+      "display_name": "M110",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/messier-m110-and-m110-2026-11-20-d5725731.json"
+    },
+    {
+      "display_name": "M32",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/messier-m32-and-m32-2026-11-20-7af6d341.json"
+    },
+    {
+      "display_name": "α Phe — Ankaa",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-1",
+      "href": "objects/bayer-phe-phe-phe-ankaa-2026-11-16-ca6e7aa7.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M31 — Andromeda Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/messier-m31-and-m31-andromeda-galaxy-2026-11-20-0c4146dd.json"
+    },
+    {
+      "display_name": "M110",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/messier-m110-and-m110-2026-11-20-d5725731.json"
+    },
+    {
+      "display_name": "M32",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/messier-m32-and-m32-2026-11-20-7af6d341.json"
+    },
+    {
+      "display_name": "α Phe — Ankaa",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-1",
+      "href": "objects/bayer-phe-phe-phe-ankaa-2026-11-16-ca6e7aa7.json"
+    },
+    {
+      "display_name": "α Cas — Schedar",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/bayer-cas-cas-cas-schedar-2026-11-20-83e9e42f.json"
+    },
+    {
+      "display_name": "β Cet — Diphda",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/bayer-cet-cet-cet-diphda-2026-11-20-483c3905.json"
+    }
+  ],
+  "curated_routes": []
+}

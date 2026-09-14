@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W36",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M27 — Dumbbell Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-7",
+      "href": "objects/messier-m27-vul-m27-dumbbell-nebula-2026-09-06-87dc3f17.json"
+    },
+    {
+      "display_name": "M55",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-2",
+      "href": "objects/messier-m55-sgr-m55-2026-09-01-5f837de0.json"
+    },
+    {
+      "display_name": "M71",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-6",
+      "href": "objects/messier-m71-sge-m71-2026-09-05-85c0e1d0.json"
+    },
+    {
+      "display_name": "α Sge — Sham",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-2",
+      "href": "objects/bayer-sge-sge-sge-sham-2026-09-01-77326ab7.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M27 — Dumbbell Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-7",
+      "href": "objects/messier-m27-vul-m27-dumbbell-nebula-2026-09-06-87dc3f17.json"
+    },
+    {
+      "display_name": "M55",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-2",
+      "href": "objects/messier-m55-sgr-m55-2026-09-01-5f837de0.json"
+    },
+    {
+      "display_name": "M71",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-6",
+      "href": "objects/messier-m71-sge-m71-2026-09-05-85c0e1d0.json"
+    },
+    {
+      "display_name": "α Sge — Sham",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-2",
+      "href": "objects/bayer-sge-sge-sge-sham-2026-09-01-77326ab7.json"
+    },
+    {
+      "display_name": "α Aql — Altair",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-5",
+      "href": "objects/bayer-aql-aql-aql-altair-2026-09-04-82833fab.json"
+    },
+    {
+      "display_name": "β Aql — Alshain",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W36-6",
+      "href": "objects/bayer-aql-aql-aql-alshain-2026-09-05-2e253834.json"
+    }
+  ],
+  "curated_routes": []
+}

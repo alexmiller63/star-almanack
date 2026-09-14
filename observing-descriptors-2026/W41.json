@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W41",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "α Aqr — Sadalmelik",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W41-7",
+      "href": "objects/bayer-aqr-aqr-aqr-sadalmelik-2026-10-11-28291ff7.json"
+    },
+    {
+      "display_name": "M15 — Great Pegasus Globular",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W40-4",
+      "href": "objects/messier-m15-peg-m15-great-pegasus-globular-2026-10-01-12227e32.json"
+    },
+    {
+      "display_name": "M2",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W40-5",
+      "href": "objects/messier-m2-aqr-m2-2026-10-02-cbaf7b1e.json"
+    },
+    {
+      "display_name": "M39",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W40-5",
+      "href": "objects/messier-m39-cyg-m39-2026-10-02-16de7d63.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Aqr — Sadalmelik",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W41-7",
+      "href": "objects/bayer-aqr-aqr-aqr-sadalmelik-2026-10-11-28291ff7.json"
+    },
+    {
+      "display_name": "M15 — Great Pegasus Globular",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W40-4",
+      "href": "objects/messier-m15-peg-m15-great-pegasus-globular-2026-10-01-12227e32.json"
+    },
+    {
+      "display_name": "M2",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W40-5",
+      "href": "objects/messier-m2-aqr-m2-2026-10-02-cbaf7b1e.json"
+    },
+    {
+      "display_name": "M39",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W40-5",
+      "href": "objects/messier-m39-cyg-m39-2026-10-02-16de7d63.json"
+    },
+    {
+      "display_name": "M30",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W40-7",
+      "href": "objects/messier-m30-cap-m30-2026-10-04-4e130fe4.json"
+    },
+    {
+      "display_name": "α Cep — Alderamin",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W40-1",
+      "href": "objects/bayer-cep-cep-cep-alderamin-2026-09-28-a5181ec5.json"
+    }
+  ],
+  "curated_routes": []
+}

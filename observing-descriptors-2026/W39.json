@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W39",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M72",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-1",
+      "href": "objects/messier-m72-aqr-m72-2026-09-21-a761b3e6.json"
+    },
+    {
+      "display_name": "M73",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-3",
+      "href": "objects/messier-m73-aqr-m73-2026-09-23-60551d00.json"
+    },
+    {
+      "display_name": "α Equ — Kitalpha",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-7",
+      "href": "objects/bayer-equ-equ-equ-kitalpha-2026-09-27-69c036a0.json"
+    },
+    {
+      "display_name": "β Mic",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-1",
+      "href": "objects/bayer-mic-mic-mic-2026-09-21-e3cc6e98.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M72",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-1",
+      "href": "objects/messier-m72-aqr-m72-2026-09-21-a761b3e6.json"
+    },
+    {
+      "display_name": "M73",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-3",
+      "href": "objects/messier-m73-aqr-m73-2026-09-23-60551d00.json"
+    },
+    {
+      "display_name": "α Equ — Kitalpha",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-7",
+      "href": "objects/bayer-equ-equ-equ-kitalpha-2026-09-27-69c036a0.json"
+    },
+    {
+      "display_name": "β Mic",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-1",
+      "href": "objects/bayer-mic-mic-mic-2026-09-21-e3cc6e98.json"
+    },
+    {
+      "display_name": "β Ind",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-2",
+      "href": "objects/bayer-ind-ind-ind-2026-09-22-d01713c5.json"
+    },
+    {
+      "display_name": "α Oct",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W39-4",
+      "href": "objects/bayer-oct-oct-oct-2026-09-24-813dc80f.json"
+    }
+  ],
+  "curated_routes": []
+}

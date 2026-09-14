@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W13",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "β Car — Miaplacidus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-2",
+      "href": "objects/bayer-car-car-car-miaplacidus-2026-03-24-61fad61e.json"
+    },
+    {
+      "display_name": "α Hya — Alphard",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-6",
+      "href": "objects/bayer-hya-hya-hya-alphard-2026-03-28-c3447e24.json"
+    },
+    {
+      "display_name": "α Lyn",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-4",
+      "href": "objects/bayer-lyn-lyn-lyn-2026-03-26-76398d9d.json"
+    },
+    {
+      "display_name": "β Lyn",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-4",
+      "href": "objects/bayer-lyn-lyn-lyn-2026-03-26-f20da8b8.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "β Car — Miaplacidus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-2",
+      "href": "objects/bayer-car-car-car-miaplacidus-2026-03-24-61fad61e.json"
+    },
+    {
+      "display_name": "α Hya — Alphard",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-6",
+      "href": "objects/bayer-hya-hya-hya-alphard-2026-03-28-c3447e24.json"
+    },
+    {
+      "display_name": "α Lyn",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-4",
+      "href": "objects/bayer-lyn-lyn-lyn-2026-03-26-76398d9d.json"
+    },
+    {
+      "display_name": "β Lyn",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-4",
+      "href": "objects/bayer-lyn-lyn-lyn-2026-03-26-f20da8b8.json"
+    },
+    {
+      "display_name": "β Ant",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W13-7",
+      "href": "objects/bayer-ant-ant-ant-2026-03-29-0896ca34.json"
+    },
+    {
+      "display_name": "M81 — Bode's Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json"
+    }
+  ],
+  "curated_routes": []
+}

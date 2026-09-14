@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W30",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M10",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-1",
+      "href": "objects/messier-m10-oph-m10-2026-07-20-9895b265.json"
+    },
+    {
+      "display_name": "M19",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-2",
+      "href": "objects/messier-m19-oph-m19-2026-07-21-71412f83.json"
+    },
+    {
+      "display_name": "M62",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-2",
+      "href": "objects/messier-m62-oph-m62-2026-07-21-acb443e4.json"
+    },
+    {
+      "display_name": "M9",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-6",
+      "href": "objects/messier-m9-oph-m9-2026-07-25-407e360a.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M10",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-1",
+      "href": "objects/messier-m10-oph-m10-2026-07-20-9895b265.json"
+    },
+    {
+      "display_name": "M19",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-2",
+      "href": "objects/messier-m19-oph-m19-2026-07-21-71412f83.json"
+    },
+    {
+      "display_name": "M62",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-2",
+      "href": "objects/messier-m62-oph-m62-2026-07-21-acb443e4.json"
+    },
+    {
+      "display_name": "M9",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-6",
+      "href": "objects/messier-m9-oph-m9-2026-07-25-407e360a.json"
+    },
+    {
+      "display_name": "M92",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-6",
+      "href": "objects/messier-m92-her-m92-2026-07-25-4993ef74.json"
+    },
+    {
+      "display_name": "α Her — Rasalgethi",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W30-5",
+      "href": "objects/bayer-her-her-her-rasalgethi-2026-07-24-95074704.json"
+    }
+  ],
+  "curated_routes": []
+}

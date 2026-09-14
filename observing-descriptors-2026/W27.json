@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W27",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "α CrB — Alphecca",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W27-2",
+      "href": "objects/bayer-crb-crb-crb-alphecca-2026-06-30-e66303f6.json"
+    },
+    {
+      "display_name": "α Ser — Unukalhai",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W27-4",
+      "href": "objects/bayer-ser-ser-ser-unukalhai-2026-07-02-8cfac4cf.json"
+    },
+    {
+      "display_name": "β Ser — Chow",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W27-4",
+      "href": "objects/bayer-ser-ser-ser-chow-2026-07-02-d345a1ce.json"
+    },
+    {
+      "display_name": "β TrA",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W27-7",
+      "href": "objects/bayer-tra-tra-tra-2026-07-05-e33f3e51.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α CrB — Alphecca",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W27-2",
+      "href": "objects/bayer-crb-crb-crb-alphecca-2026-06-30-e66303f6.json"
+    },
+    {
+      "display_name": "α Ser — Unukalhai",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W27-4",
+      "href": "objects/bayer-ser-ser-ser-unukalhai-2026-07-02-8cfac4cf.json"
+    },
+    {
+      "display_name": "β Ser — Chow",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W27-4",
+      "href": "objects/bayer-ser-ser-ser-chow-2026-07-02-d345a1ce.json"
+    },
+    {
+      "display_name": "β TrA",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W27-7",
+      "href": "objects/bayer-tra-tra-tra-2026-07-05-e33f3e51.json"
+    },
+    {
+      "display_name": "M102 — Spindle Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W26-2",
+      "href": "objects/messier-m102-dra-m102-spindle-galaxy-2026-06-23-0596629e.json"
+    },
+    {
+      "display_name": "M5",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W26-5",
+      "href": "objects/messier-m5-ser-m5-2026-06-26-45b25479.json"
+    }
+  ],
+  "curated_routes": []
+}

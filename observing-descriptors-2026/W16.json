@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W16",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M95",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-6",
+      "href": "objects/messier-m95-leo-m95-2026-04-18-d9c6755d.json"
+    },
+    {
+      "display_name": "M105",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-7",
+      "href": "objects/messier-m105-leo-m105-2026-04-19-239c7d95.json"
+    },
+    {
+      "display_name": "M96",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-7",
+      "href": "objects/messier-m96-leo-m96-2026-04-19-8fd0a74b.json"
+    },
+    {
+      "display_name": "α Ant",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-1",
+      "href": "objects/bayer-ant-ant-ant-2026-04-13-e9b07f58.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M95",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-6",
+      "href": "objects/messier-m95-leo-m95-2026-04-18-d9c6755d.json"
+    },
+    {
+      "display_name": "M105",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-7",
+      "href": "objects/messier-m105-leo-m105-2026-04-19-239c7d95.json"
+    },
+    {
+      "display_name": "M96",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-7",
+      "href": "objects/messier-m96-leo-m96-2026-04-19-8fd0a74b.json"
+    },
+    {
+      "display_name": "α Ant",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-1",
+      "href": "objects/bayer-ant-ant-ant-2026-04-13-e9b07f58.json"
+    },
+    {
+      "display_name": "β LMi",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-2",
+      "href": "objects/bayer-lmi-lmi-lmi-2026-04-14-429633b3.json"
+    },
+    {
+      "display_name": "β Sex",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W16-2",
+      "href": "objects/bayer-sex-sex-sex-2026-04-14-d7ea299a.json"
+    }
+  ],
+  "curated_routes": []
+}

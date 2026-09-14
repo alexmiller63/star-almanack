@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W52",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "α Cet — Menkar",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-2",
+      "href": "objects/bayer-cet-cet-cet-menkar-2026-12-22-7cad3493.json"
+    },
+    {
+      "display_name": "β Per — Algol",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-4",
+      "href": "objects/bayer-per-per-per-algol-2026-12-24-88621d96.json"
+    },
+    {
+      "display_name": "α For — Fornacis",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-5",
+      "href": "objects/bayer-for-for-for-fornacis-2026-12-25-f3d12107.json"
+    },
+    {
+      "display_name": "α Per — Mirfak",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-7",
+      "href": "objects/bayer-per-per-per-mirfak-2026-12-27-7efdf84d.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Cet — Menkar",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-2",
+      "href": "objects/bayer-cet-cet-cet-menkar-2026-12-22-7cad3493.json"
+    },
+    {
+      "display_name": "β Per — Algol",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-4",
+      "href": "objects/bayer-per-per-per-algol-2026-12-24-88621d96.json"
+    },
+    {
+      "display_name": "α For — Fornacis",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-5",
+      "href": "objects/bayer-for-for-for-fornacis-2026-12-25-f3d12107.json"
+    },
+    {
+      "display_name": "α Per — Mirfak",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-7",
+      "href": "objects/bayer-per-per-per-mirfak-2026-12-27-7efdf84d.json"
+    },
+    {
+      "display_name": "β Hor",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W52-2",
+      "href": "objects/bayer-hor-hor-hor-2026-12-22-fefd8a92.json"
+    },
+    {
+      "display_name": "M34",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W51-5",
+      "href": "objects/messier-m34-per-m34-2026-12-18-d943988e.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W31",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M6 — Butterfly Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-5",
+      "href": "objects/messier-m6-sco-m6-butterfly-cluster-2026-07-31-05ce5336.json"
+    },
+    {
+      "display_name": "M14",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-4",
+      "href": "objects/messier-m14-oph-m14-2026-07-30-02cbc9d3.json"
+    },
+    {
+      "display_name": "β Dra — Rastaban",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-2",
+      "href": "objects/bayer-dra-dra-dra-rastaban-2026-07-28-8253bc5a.json"
+    },
+    {
+      "display_name": "α Oph — Rasalhague",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-3",
+      "href": "objects/bayer-oph-oph-oph-rasalhague-2026-07-29-e32add36.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M6 — Butterfly Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-5",
+      "href": "objects/messier-m6-sco-m6-butterfly-cluster-2026-07-31-05ce5336.json"
+    },
+    {
+      "display_name": "M14",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-4",
+      "href": "objects/messier-m14-oph-m14-2026-07-30-02cbc9d3.json"
+    },
+    {
+      "display_name": "β Dra — Rastaban",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-2",
+      "href": "objects/bayer-dra-dra-dra-rastaban-2026-07-28-8253bc5a.json"
+    },
+    {
+      "display_name": "α Oph — Rasalhague",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-3",
+      "href": "objects/bayer-oph-oph-oph-rasalhague-2026-07-29-e32add36.json"
+    },
+    {
+      "display_name": "β Oph — Cebalrai",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-6",
+      "href": "objects/bayer-oph-oph-oph-cebalrai-2026-08-01-ca6a83e6.json"
+    },
+    {
+      "display_name": "β Ara",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W31-1",
+      "href": "objects/bayer-ara-ara-ara-2026-07-27-9ac76e1d.json"
+    }
+  ],
+  "curated_routes": []
+}

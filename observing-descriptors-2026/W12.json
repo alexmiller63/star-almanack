@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W12",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M67",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W12-3",
+      "href": "objects/messier-m67-cnc-m67-2026-03-18-78e29b7e.json"
+    },
+    {
+      "display_name": "α Cnc — Acubens",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W12-5",
+      "href": "objects/bayer-cnc-cnc-cnc-acubens-2026-03-20-5909f566.json"
+    },
+    {
+      "display_name": "α Pyx",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W12-1",
+      "href": "objects/bayer-pyx-pyx-pyx-2026-03-16-4fd6717d.json"
+    },
+    {
+      "display_name": "α Vol",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W12-6",
+      "href": "objects/bayer-vol-vol-vol-2026-03-21-363e3382.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M67",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W12-3",
+      "href": "objects/messier-m67-cnc-m67-2026-03-18-78e29b7e.json"
+    },
+    {
+      "display_name": "α Cnc — Acubens",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W12-5",
+      "href": "objects/bayer-cnc-cnc-cnc-acubens-2026-03-20-5909f566.json"
+    },
+    {
+      "display_name": "α Pyx",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W12-1",
+      "href": "objects/bayer-pyx-pyx-pyx-2026-03-16-4fd6717d.json"
+    },
+    {
+      "display_name": "α Vol",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W12-6",
+      "href": "objects/bayer-vol-vol-vol-2026-03-21-363e3382.json"
+    },
+    {
+      "display_name": "M44 — Beehive Cluster",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W11-7",
+      "href": "objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json"
+    },
+    {
+      "display_name": "β Cnc — Tarf",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W11-1",
+      "href": "objects/bayer-cnc-cnc-cnc-tarf-2026-03-09-694821e6.json"
+    }
+  ],
+  "curated_routes": []
+}

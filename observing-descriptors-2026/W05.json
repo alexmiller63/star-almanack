@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W05",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M1 — Crab Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-1",
+      "href": "objects/messier-m1-tau-m1-crab-nebula-2026-01-26-280d091b.json"
+    },
+    {
+      "display_name": "M42 — Great Nebula in Orion",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-1",
+      "href": "objects/messier-m42-ori-m42-great-nebula-in-orion-2026-01-26-688ffd08.json"
+    },
+    {
+      "display_name": "M43 — De Mairan's Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-1",
+      "href": "objects/messier-m43-ori-m43-de-mairan-s-nebula-2026-01-26-677d62b2.json"
+    },
+    {
+      "display_name": "M36",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-2",
+      "href": "objects/messier-m36-aur-m36-2026-01-27-d4cb38c4.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M1 — Crab Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-1",
+      "href": "objects/messier-m1-tau-m1-crab-nebula-2026-01-26-280d091b.json"
+    },
+    {
+      "display_name": "M42 — Great Nebula in Orion",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-1",
+      "href": "objects/messier-m42-ori-m42-great-nebula-in-orion-2026-01-26-688ffd08.json"
+    },
+    {
+      "display_name": "M43 — De Mairan's Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-1",
+      "href": "objects/messier-m43-ori-m43-de-mairan-s-nebula-2026-01-26-677d62b2.json"
+    },
+    {
+      "display_name": "M36",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-2",
+      "href": "objects/messier-m36-aur-m36-2026-01-27-d4cb38c4.json"
+    },
+    {
+      "display_name": "M78",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-4",
+      "href": "objects/messier-m78-ori-m78-2026-01-29-3657f146.json"
+    },
+    {
+      "display_name": "M37",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W05-6",
+      "href": "objects/messier-m37-aur-m37-2026-01-31-3a6d51dd.json"
+    }
+  ],
+  "curated_routes": []
+}

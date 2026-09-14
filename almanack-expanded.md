@@ -60,6 +60,20 @@ The Pleiades (M45, the Pleiades, an open cluster) are the week's natural showpie
 
 **Meteor shower:** The Quadrantids peak on January 3. Their maximum is usually sharp, but bright moonlight is an important limitation in 2026.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M45 — Pleiades:** Naked eye: An obvious compact star group to the unaided eye; count how many Pleiads you can distinguish. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out.
+
+**Descriptor 2 — α Hor:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W02-3.
+
+**Descriptor 3 — α Ret:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W02-3.
+
+**Descriptor 4 — β Ret:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W53-5.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W01.json) · [M45 — Pleiades](../descriptors/objects/messier-m45-tau-m45-pleiades-2026-01-01-5476efbf.json) · [α Hor](../descriptors/objects/bayer-hor-hor-hor-2026-01-07-6796d040.json) · [α Ret](../descriptors/objects/bayer-ret-ret-ret-2026-01-07-81af55e5.json) · [β Ret](../descriptors/objects/bayer-ret-ret-ret-2027-01-01-f2256c3b.json) · [α Tau — Aldebaran](../descriptors/objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json)
+
 ### Chart
 
 `ISO2026-W1-chart.png` — chart slot.
@@ -112,6 +126,20 @@ January 5–11 is a restrained observing week. The Almanack marks α Horologii a
 
 **Planet watch:** Venus and Mars are about 1.5° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Hor:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α Ret:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — M45 — Pleiades:** Naked eye: An obvious compact star group to the unaided eye; count how many Pleiads you can distinguish. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. Nearby best visibility: 2026-W01-4.
+
+**Descriptor 4 — α Tau — Aldebaran:** Naked eye: Bright and easy to see unaided; use Aldebaran as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W03-1.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W02.json) · [α Hor](../descriptors/objects/bayer-hor-hor-hor-2026-01-07-6796d040.json) · [α Ret](../descriptors/objects/bayer-ret-ret-ret-2026-01-07-81af55e5.json) · [M45 — Pleiades](../descriptors/objects/messier-m45-tau-m45-pleiades-2026-01-01-5476efbf.json) · [α Tau — Aldebaran](../descriptors/objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json) · [α Dor](../descriptors/objects/bayer-dor-dor-dor-2026-01-12-dbe75ecf.json)
+
 ### Chart
 
 `ISO2026-W2-chart.png` — chart slot.
@@ -162,6 +190,20 @@ Aldebaran anchors Taurus on Monday and New Moon arrives Sunday, making the latte
 
 **Planet watch:** Venus and Mars are about 1.9° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Tau — Aldebaran:** Naked eye: Bright and easy to see unaided; use Aldebaran as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α Dor:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — α Cae:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β Cae:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W03.json) · [α Tau — Aldebaran](../descriptors/objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json) · [α Dor](../descriptors/objects/bayer-dor-dor-dor-2026-01-12-dbe75ecf.json) · [α Cae](../descriptors/objects/bayer-cae-cae-cae-2026-01-13-02c2c4e0.json) · [β Cae](../descriptors/objects/bayer-cae-cae-cae-2026-01-14-158f83e9.json) · [α Cam](../descriptors/objects/bayer-cam-cam-cam-2026-01-17-917f06ad.json)
+
 ### Chart
 
 `ISO2026-W3-chart.png` — chart slot.
@@ -211,6 +253,20 @@ Rigel and Capella dominate the bright-star calendar this week, while M79 (NGC 19
 **What to expect:** Open and globular clusters can have similar catalog magnitudes yet look completely different. Structure and angular size matter as much as the magnitude number.
 
 **Planet watch:** Mercury and Mars are about 0.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M79:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 2 — M38:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — β Eri — Cursa:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β Ori — Rigel:** Naked eye: Bright and easy to see unaided; use Rigel as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W04.json) · [M79](../descriptors/objects/messier-m79-lep-m79-2026-01-24-49aeff92.json) · [M38](../descriptors/objects/messier-m38-aur-m38-2026-01-25-be09f0eb.json) · [β Eri — Cursa](../descriptors/objects/bayer-eri-eri-eri-cursa-2026-01-20-fcdc085f.json) · [β Ori — Rigel](../descriptors/objects/bayer-ori-ori-ori-rigel-2026-01-21-9efdef42.json) · [α Aur — Capella](../descriptors/objects/bayer-aur-aur-aur-capella-2026-01-22-493d6bbe.json)
 
 ### Chart
 
@@ -264,6 +320,20 @@ This is one of the year's strongest winter observing weeks: M42, the Great Nebul
 
 **Planet watch:** Mercury and Venus are about 1.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M1 — Crab Nebula:** Naked eye: Not normally visible as a distinct nebula to the unaided eye. Binoculars: Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification.
+
+**Descriptor 2 — M42 — Great Nebula in Orion:** Naked eye: Visible unaided as the hazy middle 'star' of Orion's Sword beneath the Belt. Binoculars: Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification.
+
+**Descriptor 3 — M43 — De Mairan's Nebula:** Naked eye: Not normally visible as a distinct nebula to the unaided eye. Binoculars: Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification.
+
+**Descriptor 4 — M36:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W05.json) · [M1 — Crab Nebula](../descriptors/objects/messier-m1-tau-m1-crab-nebula-2026-01-26-280d091b.json) · [M42 — Great Nebula in Orion](../descriptors/objects/messier-m42-ori-m42-great-nebula-in-orion-2026-01-26-688ffd08.json) · [M43 — De Mairan's Nebula](../descriptors/objects/messier-m43-ori-m43-de-mairan-s-nebula-2026-01-26-677d62b2.json) · [M36](../descriptors/objects/messier-m36-aur-m36-2026-01-27-d4cb38c4.json) · [M78](../descriptors/objects/messier-m78-ori-m78-2026-01-29-3657f146.json)
+
 ### Chart
 
 `ISO2026-W5-chart.png` — chart slot.
@@ -314,6 +384,20 @@ M35 (NGC 2168), an open cluster in Gemini is the principal deep-sky target, whil
 
 **Planet watch:** Mercury and Venus are about 1.8° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M35:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — α Car — Canopus:** Naked eye: Bright and easy to see unaided; use Canopus as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β CMa — Mirzam:** Naked eye: Bright and easy to see unaided; use Mirzam as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Men:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W06.json) · [M35](../descriptors/objects/messier-m35-gem-m35-2026-02-04-7b15a5d4.json) · [α Car — Canopus](../descriptors/objects/bayer-car-car-car-canopus-2026-02-07-9bce7731.json) · [β CMa — Mirzam](../descriptors/objects/bayer-cma-cma-cma-mirzam-2026-02-07-263b22aa.json) · [α Men](../descriptors/objects/bayer-men-men-men-2026-02-04-f2962b50.json) · [M1 — Crab Nebula](../descriptors/objects/messier-m1-tau-m1-crab-nebula-2026-01-26-280d091b.json)
+
 ### Chart
 
 `ISO2026-W6-chart.png` — chart slot.
@@ -362,6 +446,20 @@ Last Quarter Moon opens darker evening opportunities, and M41 (NGC 2287), an ope
 
 **What to expect:** Open clusters are among the most forgiving urban and suburban deep-sky objects. Unlike a faint galaxy, M41 (NGC 2287), an open cluster is made of pointlike stars, so moderate light pollution does not erase it as quickly.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M41:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out.
+
+**Descriptor 2 — α CMa — Sirius:** Naked eye: Bright and easy to see unaided; use Sirius as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Mon:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — α Pic:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W07.json) · [M41](../descriptors/objects/messier-m41-cma-m41-2026-02-13-898cfb00.json) · [α CMa — Sirius](../descriptors/objects/bayer-cma-cma-cma-sirius-2026-02-13-73ac49d0.json) · [β Mon](../descriptors/objects/bayer-mon-mon-mon-2026-02-09-c41493fd.json) · [α Pic](../descriptors/objects/bayer-pic-pic-pic-2026-02-13-845a6c50.json) · [M35](../descriptors/objects/messier-m35-gem-m35-2026-02-04-7b15a5d4.json)
+
 ### Chart
 
 `ISO2026-W7-chart.png` — chart slot.
@@ -409,6 +507,20 @@ New Moon on February 17 gives this week a dark-sky advantage, and M50 (NGC 2323)
 **Small telescope:** Low and moderate power resolve M50 (NGC 2323), an open cluster into a loose, attractive cluster. Keep enough field around it to distinguish the cluster from the dense background.
 
 **What to expect:** Some constellations are poor naked-eye signposts even when they contain good telescopic objects. Star-hopping from bright neighboring stars is often more effective than forcing yourself to see every constellation boundary.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M50:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — M41:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. Nearby best visibility: 2026-W07-5.
+
+**Descriptor 3 — M47:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W09-4.
+
+**Descriptor 4 — M46:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W09-5.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W08.json) · [M50](../descriptors/objects/messier-m50-mon-m50-2026-02-17-48dc9a40.json) · [M41](../descriptors/objects/messier-m41-cma-m41-2026-02-13-898cfb00.json) · [M47](../descriptors/objects/messier-m47-pup-m47-2026-02-26-925da75e.json) · [M46](../descriptors/objects/messier-m46-pup-m46-2026-02-27-7133fe53.json) · [M93](../descriptors/objects/messier-m93-pup-m93-2026-02-28-fdba5aa5.json)
 
 ### Chart
 
@@ -460,6 +572,20 @@ M47, M46, and M93 (NGC 2447), an open cluster make this a strong open-cluster we
 
 **Asterism:** The Winter Hexagon links Capella, Aldebaran, Rigel, Sirius, Procyon, and Pollux into a broad guide around the winter sky.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M47:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — M46:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — M93:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — β CMi — Gomeisa:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W09.json) · [M47](../descriptors/objects/messier-m47-pup-m47-2026-02-26-925da75e.json) · [M46](../descriptors/objects/messier-m46-pup-m46-2026-02-27-7133fe53.json) · [M93](../descriptors/objects/messier-m93-pup-m93-2026-02-28-fdba5aa5.json) · [β CMi — Gomeisa](../descriptors/objects/bayer-cmi-cmi-cmi-gomeisa-2026-02-24-e20e8722.json) · [α Gem — Castor](../descriptors/objects/bayer-gem-gem-gem-castor-2026-02-26-f4430833.json)
+
 ### Chart
 
 `ISO2026-W9-chart.png` — chart slot.
@@ -509,6 +635,20 @@ Full Moon on March 3 makes faint extended objects difficult, but M48 (NGC 2548),
 **What to expect:** Moonlight hurts diffuse objects most severely. Pointlike cluster stars retain contrast better, so an open cluster can rescue an observing session that would be disappointing for galaxies.
 
 **Planet watch:** Mercury and Venus are about 3.0° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M48:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out.
+
+**Descriptor 2 — M44 — Beehive Cluster:** Naked eye: Visible to the unaided eye as a soft patch in Cancer under a dark sky. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. Nearby best visibility: 2026-W11-7.
+
+**Descriptor 3 — M47:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W09-4.
+
+**Descriptor 4 — M46:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W09-5.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W10.json) · [M48](../descriptors/objects/messier-m48-hya-m48-2026-03-08-c4b92120.json) · [M44 — Beehive Cluster](../descriptors/objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json) · [M47](../descriptors/objects/messier-m47-pup-m47-2026-02-26-925da75e.json) · [M46](../descriptors/objects/messier-m46-pup-m46-2026-02-27-7133fe53.json) · [M93](../descriptors/objects/messier-m93-pup-m93-2026-02-28-fdba5aa5.json)
 
 ### Chart
 
@@ -560,6 +700,20 @@ Last Quarter Moon on March 11 improves evening conditions, and M44, the Beehive 
 
 **Planet watch:** Venus and Saturn are about 0.5° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M44 — Beehive Cluster:** Naked eye: Visible to the unaided eye as a soft patch in Cancer under a dark sky. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out.
+
+**Descriptor 2 — β Cnc — Tarf:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — α Cha:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β Vol:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W11.json) · [M44 — Beehive Cluster](../descriptors/objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json) · [β Cnc — Tarf](../descriptors/objects/bayer-cnc-cnc-cnc-tarf-2026-03-09-694821e6.json) · [α Cha](../descriptors/objects/bayer-cha-cha-cha-2026-03-09-5f17d344.json) · [β Vol](../descriptors/objects/bayer-vol-vol-vol-2026-03-11-e1f2e40f.json) · [β Pyx](../descriptors/objects/bayer-pyx-pyx-pyx-2026-03-15-38e9e47d.json)
+
 ### Chart
 
 `ISO2026-W11-chart.png` — chart slot.
@@ -610,6 +764,20 @@ M67 (NGC 2682), an open cluster appears on March 17, New Moon follows on March 1
 
 **Planet watch:** Mercury and Mars are about 0.9° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M67:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out.
+
+**Descriptor 2 — α Cnc — Acubens:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — α Pyx:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — α Vol:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W12.json) · [M67](../descriptors/objects/messier-m67-cnc-m67-2026-03-18-78e29b7e.json) · [α Cnc — Acubens](../descriptors/objects/bayer-cnc-cnc-cnc-acubens-2026-03-20-5909f566.json) · [α Pyx](../descriptors/objects/bayer-pyx-pyx-pyx-2026-03-16-4fd6717d.json) · [α Vol](../descriptors/objects/bayer-vol-vol-vol-2026-03-21-363e3382.json) · [M44 — Beehive Cluster](../descriptors/objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json)
+
 ### Chart
 
 `ISO2026-W12-chart.png` — chart slot.
@@ -657,6 +825,20 @@ The calendar is dominated by bright spring stars rather than a Messier showpiece
 **Small telescope:** This is a good week for bright double stars and compact targets selected from a chart rather than for forcing a particular faint galaxy through moonlight.
 
 **What to expect:** Not every week needs a headline object. Learning a large, faint constellation and its anchor star builds the navigation skill that makes later deep-sky observing easier.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — β Car — Miaplacidus:** Naked eye: Bright and easy to see unaided; use Miaplacidus as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α Hya — Alphard:** Naked eye: Bright and easy to see unaided; use Alphard as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — α Lyn:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β Lyn:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W13.json) · [β Car — Miaplacidus](../descriptors/objects/bayer-car-car-car-miaplacidus-2026-03-24-61fad61e.json) · [α Hya — Alphard](../descriptors/objects/bayer-hya-hya-hya-alphard-2026-03-28-c3447e24.json) · [α Lyn](../descriptors/objects/bayer-lyn-lyn-lyn-2026-03-26-76398d9d.json) · [β Lyn](../descriptors/objects/bayer-lyn-lyn-lyn-2026-03-26-f20da8b8.json) · [β Ant](../descriptors/objects/bayer-ant-ant-ant-2026-03-29-0896ca34.json)
 
 ### Chart
 
@@ -706,6 +888,20 @@ M81, the Bode's Galaxy, a spiral galaxy and M82, the Cigar Galaxy, an irregular 
 
 **What to expect:** Return to this pair on a moonless night if the Full Moon makes them disappointing. A difficult view under poor conditions says little about what the same telescope can show against a darker sky.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M81 — Bode's Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M82 — Cigar Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — β Car — Miaplacidus:** Naked eye: Bright and easy to see unaided; use Miaplacidus as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W13-2.
+
+**Descriptor 4 — α Hya — Alphard:** Naked eye: Bright and easy to see unaided; use Alphard as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W13-6.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W14.json) · [M81 — Bode's Galaxy](../descriptors/objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json) · [M82 — Cigar Galaxy](../descriptors/objects/messier-m82-uma-m82-cigar-galaxy-2026-04-05-b22924a4.json) · [β Car — Miaplacidus](../descriptors/objects/bayer-car-car-car-miaplacidus-2026-03-24-61fad61e.json) · [α Hya — Alphard](../descriptors/objects/bayer-hya-hya-hya-alphard-2026-03-28-c3447e24.json) · [α Leo — Regulus](../descriptors/objects/bayer-leo-leo-leo-regulus-2026-04-08-051e70a8.json)
+
 ### Chart
 
 `ISO2026-W14-chart.png` — chart slot.
@@ -753,6 +949,20 @@ Regulus and Algieba make Leo the week's natural observing framework while Last Q
 **Small telescope:** Algieba is an excellent telescopic double-star target when seeing permits, providing a bright alternative to faint galaxies. Increase magnification gradually after centering it at low power.
 
 **What to expect:** Spring is famous for galaxies, but bright stars and doubles remain valuable targets, especially while learning the star patterns needed to locate the fainter objects.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Leo — Regulus:** Naked eye: Bright and easy to see unaided; use Regulus as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α Sex:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — M81 — Bode's Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W14-7.
+
+**Descriptor 4 — M82 — Cigar Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W14-7.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W15.json) · [α Leo — Regulus](../descriptors/objects/bayer-leo-leo-leo-regulus-2026-04-08-051e70a8.json) · [α Sex](../descriptors/objects/bayer-sex-sex-sex-2026-04-08-e768af04.json) · [M81 — Bode's Galaxy](../descriptors/objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json) · [M82 — Cigar Galaxy](../descriptors/objects/messier-m82-uma-m82-cigar-galaxy-2026-04-05-b22924a4.json) · [M95](../descriptors/objects/messier-m95-leo-m95-2026-04-18-d9c6755d.json)
 
 ### Chart
 
@@ -806,6 +1016,20 @@ New Moon on April 17 is followed immediately by M95, M96, and M105 (NGC 3379), a
 
 **Planet watch:** Mars and Saturn are about 4.5° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M95:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M105:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — M96:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 4 — α Ant:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W16.json) · [M95](../descriptors/objects/messier-m95-leo-m95-2026-04-18-d9c6755d.json) · [M105](../descriptors/objects/messier-m105-leo-m105-2026-04-19-239c7d95.json) · [M96](../descriptors/objects/messier-m96-leo-m96-2026-04-19-8fd0a74b.json) · [α Ant](../descriptors/objects/bayer-ant-ant-ant-2026-04-13-e9b07f58.json) · [β LMi](../descriptors/objects/bayer-lmi-lmi-lmi-2026-04-14-429633b3.json)
+
 ### Chart
 
 `ISO2026-W16-chart.png` — chart slot.
@@ -858,6 +1082,20 @@ Dubhe and Merak mark the Big Dipper's bowl on April 23, followed by the Owl Nebu
 
 **Meteor shower:** The April Lyrids peak on April 22, with the nominal 2026 maximum near 19:40 UT. The expected ZHR is about 18, and moonlight should not be a major obstacle.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M97 — Owl Nebula:** Naked eye: Not normally identifiable as a distinct object to the unaided eye. Binoculars: Usually stellar or nearly stellar in binoculars; careful comparison with nearby stars is the key.
+
+**Descriptor 2 — M108:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — α LMi — Praecipua:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Crt — Alkes:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W17.json) · [M97 — Owl Nebula](../descriptors/objects/messier-m97-uma-m97-owl-nebula-2026-04-26-3bb12882.json) · [M108](../descriptors/objects/messier-m108-uma-m108-2026-04-25-7796ef07.json) · [α LMi — Praecipua](../descriptors/objects/bayer-lmi-lmi-lmi-praecipua-2026-04-21-9a5d1b77.json) · [α Crt — Alkes](../descriptors/objects/bayer-crt-crt-crt-alkes-2026-04-22-a04b3286.json) · [α UMa — Dubhe](../descriptors/objects/bayer-uma-uma-uma-dubhe-2026-04-23-b4b98106.json)
+
 ### Chart
 
 `ISO2026-W17-chart.png` — chart slot.
@@ -907,6 +1145,20 @@ M65 (NGC 3623), a spiral galaxy and M66 (NGC 3627), a spiral galaxy reach their 
 **What to expect:** If the galaxies disappear into moonlit sky, that is an observing result rather than a failure. Low surface brightness is vulnerable to background light, and the same objects can become straightforward when revisited under a dark Moon.
 
 **Planet watch:** Mars and Saturn are about 4.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M65:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M66:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — M97 — Owl Nebula:** Naked eye: Not normally identifiable as a distinct object to the unaided eye. Binoculars: Usually stellar or nearly stellar in binoculars; careful comparison with nearby stars is the key. Nearby best visibility: 2026-W17-7.
+
+**Descriptor 4 — M108:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W17-6.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W18.json) · [M65](../descriptors/objects/messier-m65-leo-m65-2026-04-27-62881cf3.json) · [M66](../descriptors/objects/messier-m66-leo-m66-2026-04-28-a20d8149.json) · [M97 — Owl Nebula](../descriptors/objects/messier-m97-uma-m97-owl-nebula-2026-04-26-3bb12882.json) · [M108](../descriptors/objects/messier-m108-uma-m108-2026-04-25-7796ef07.json) · [M109](../descriptors/objects/messier-m109-uma-m109-2026-05-07-949e4751.json)
 
 ### Chart
 
@@ -958,6 +1210,20 @@ The Beltane cross-quarter point falls on May 5, while Denebola and Phecda help e
 
 **Meteor shower:** The η-Aquariids peak on May 6. The shower can be strong, especially from lower latitudes and the Southern Hemisphere, but the waning gibbous Moon interferes in 2026.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M109:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — β Leo — Denebola:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Vir — Zavijava:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Crv — Alchiba:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W19.json) · [M109](../descriptors/objects/messier-m109-uma-m109-2026-05-07-949e4751.json) · [β Leo — Denebola](../descriptors/objects/bayer-leo-leo-leo-denebola-2026-05-05-af0ba6ac.json) · [β Vir — Zavijava](../descriptors/objects/bayer-vir-vir-vir-zavijava-2026-05-06-1022eced.json) · [α Crv — Alchiba](../descriptors/objects/bayer-crv-crv-crv-alchiba-2026-05-10-36d82d67.json) · [β Hya](../descriptors/objects/bayer-hya-hya-hya-2026-05-06-fabf1125.json)
+
 ### Chart
 
 `ISO2026-W19-chart.png` — chart slot.
@@ -1008,6 +1274,20 @@ This is one of the densest galaxy weeks in the Almanack. M98, M106, M99, M61, M8
 
 **Asterism:** The Big Dipper is an observing tool as much as a familiar pattern: its pointer stars lead to Polaris, while the handle arcs toward Arcturus.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M40 — Winnecke 4:** Naked eye: Not normally identifiable as a distinct object to the unaided eye. Binoculars: Binoculars may show the pair as elongated or separated if the components are wide enough.
+
+**Descriptor 2 — M98:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — M106:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 4 — M99:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W20.json) · [M40 — Winnecke 4](../descriptors/objects/messier-m40-uma-m40-winnecke-4-2026-05-14-3fedcbc4.json) · [M98](../descriptors/objects/messier-m98-com-m98-2026-05-12-92e48400.json) · [M106](../descriptors/objects/messier-m106-cvn-m106-2026-05-13-672e0515.json) · [M99](../descriptors/objects/messier-m99-com-m99-2026-05-13-901f74b1.json) · [M100](../descriptors/objects/messier-m100-com-m100-2026-05-14-c9df0eda.json)
+
 ### Chart
 
 `ISO2026-W20-chart.png` — chart slot.
@@ -1056,6 +1336,20 @@ The spring galaxy sequence continues with M104, M58, M59, M60, M94, and M64, whi
 
 **What to expect:** The names Sombrero and Black Eye come from structures made conspicuous in photographs. A small telescope usually reveals the galaxies first as gray forms; dust features are subtler second-stage observations rather than guaranteed first impressions.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M104 — Sombrero Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M64 — Black Eye Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — M58:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 4 — M68:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W21.json) · [M104 — Sombrero Galaxy](../descriptors/objects/messier-m104-vir-m104-sombrero-galaxy-2026-05-18-4bcba0c1.json) · [M64 — Black Eye Galaxy](../descriptors/objects/messier-m64-com-m64-black-eye-galaxy-2026-05-22-3552bdc5.json) · [M58](../descriptors/objects/messier-m58-vir-m58-2026-05-18-6e2d4eef.json) · [M68](../descriptors/objects/messier-m68-hya-m68-2026-05-18-6cc19585.json) · [M59](../descriptors/objects/messier-m59-vir-m59-2026-05-19-225ad6e8.json)
+
 ### Chart
 
 `ISO2026-W21-chart.png` — chart slot.
@@ -1103,6 +1397,20 @@ M63, the Sunflower Galaxy, a spiral galaxy and M53 (NGC 5024), a globular cluste
 **Small telescope:** M53 (NGC 5024), a globular cluster becomes a concentrated globular glow whose outskirts can begin to look grainy. M51, the Whirlpool Galaxy, a spiral galaxy normally shows a brighter galaxy beside its companion NGC 5195; obvious spiral arms require darker conditions and generally more aperture than the bright-Moon sky this week favors.
 
 **What to expect:** Do not judge the Whirlpool by a Full-Moon attempt. The galaxy's famous spiral structure is a low-contrast feature. Use this week to locate the field, then revisit it under a dark Moon for a fair comparison.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M63 — Sunflower Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M51 — Whirlpool Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — M53:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 4 — α Com — Diadem:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W22.json) · [M63 — Sunflower Galaxy](../descriptors/objects/messier-m63-cvn-m63-sunflower-galaxy-2026-05-27-b2ad9fc5.json) · [M51 — Whirlpool Galaxy](../descriptors/objects/messier-m51-cvn-m51-whirlpool-galaxy-2026-05-31-a14ee142.json) · [M53](../descriptors/objects/messier-m53-com-m53-2026-05-26-562d5765.json) · [α Com — Diadem](../descriptors/objects/bayer-com-com-com-diadem-2026-05-26-ea8c82a5.json) · [α Vir — Spica](../descriptors/objects/bayer-vir-vir-vir-spica-2026-05-29-e62757e5.json)
 
 ### Chart
 
@@ -1154,6 +1462,20 @@ M83, the Southern Pinwheel Galaxy, opens the week and M3 (NGC 5272), a globular 
 
 **Asterism:** The Spring Triangle—Arcturus, Spica, and Regulus—provides a wide seasonal framework for finding the brighter spring constellations.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M83 — Southern Pinwheel:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M3:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 3 — M63 — Sunflower Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W22-3.
+
+**Descriptor 4 — M51 — Whirlpool Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W22-7.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W23.json) · [M83 — Southern Pinwheel](../descriptors/objects/messier-m83-hya-m83-southern-pinwheel-2026-06-01-6d1fbe67.json) · [M3](../descriptors/objects/messier-m3-cvn-m3-2026-06-03-a204d71d.json) · [M63 — Sunflower Galaxy](../descriptors/objects/messier-m63-cvn-m63-sunflower-galaxy-2026-05-27-b2ad9fc5.json) · [M51 — Whirlpool Galaxy](../descriptors/objects/messier-m51-cvn-m51-whirlpool-galaxy-2026-05-31-a14ee142.json) · [M101 — Pinwheel Galaxy](../descriptors/objects/messier-m101-uma-m101-pinwheel-galaxy-2026-06-08-3b84fc58.json)
+
 ### Chart
 
 `ISO2026-W23-chart.png` — chart slot.
@@ -1203,6 +1525,20 @@ Last Quarter Moon on June 8 helps darken the evening later in the week, while Ar
 **What to expect:** M101, the Pinwheel Galaxy, a spiral galaxy is a classic surface-brightness lesson. A galaxy can have a respectable total magnitude and still be hard to see because its light is spread thinly over the sky.
 
 **Planet watch:** Venus and Jupiter are about 1.8° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M101 — Pinwheel Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — α Dra — Thuban:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Cen — Hadar:** Naked eye: Bright and easy to see unaided; use Hadar as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Boo — Arcturus:** Naked eye: Bright and easy to see unaided; use Arcturus as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W24.json) · [M101 — Pinwheel Galaxy](../descriptors/objects/messier-m101-uma-m101-pinwheel-galaxy-2026-06-08-3b84fc58.json) · [α Dra — Thuban](../descriptors/objects/bayer-dra-dra-dra-thuban-2026-06-08-654fc72c.json) · [β Cen — Hadar](../descriptors/objects/bayer-cen-cen-cen-hadar-2026-06-08-1f4592e4.json) · [α Boo — Arcturus](../descriptors/objects/bayer-boo-boo-boo-arcturus-2026-06-11-4d988adb.json) · [proxima-centauri — Proxima Centauri](../descriptors/objects/special-proxima-centauri-cen-proxima-centauri-proxima-centauri-2-94e9cad0.json)
 
 ### Chart
 
@@ -1254,6 +1590,20 @@ New Moon opens the week, Alpha Centauri reaches its Almanack date on June 16, an
 
 **Planet watch:** Venus and Jupiter are about 5.0° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Cen — Rigil Kentaurus:** Naked eye: Bright and easy to see unaided; use Rigil Kentaurus as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α Lib — Zubenelgenubi:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β UMi — Kochab:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Cir:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W25.json) · [α Cen — Rigil Kentaurus](../descriptors/objects/bayer-cen-cen-cen-rigil-kentaurus-2026-06-16-953447fa.json) · [α Lib — Zubenelgenubi](../descriptors/objects/bayer-lib-lib-lib-zubenelgenubi-2026-06-19-7c6c2595.json) · [β UMi — Kochab](../descriptors/objects/bayer-umi-umi-umi-kochab-2026-06-19-d0adb962.json) · [α Cir](../descriptors/objects/bayer-cir-cir-cir-2026-06-17-c793b98c.json) · [α Lup](../descriptors/objects/bayer-lup-lup-lup-2026-06-17-10730c5a.json)
+
 ### Chart
 
 `ISO2026-W25-chart.png` — chart slot.
@@ -1303,6 +1653,20 @@ M5 (NGC 5904), a globular cluster reaches its Almanack date on June 26 and is on
 **What to expect:** Globular clusters reward aperture in a different way from galaxies. Instead of revealing color or spiral structure, increased resolution gradually turns a smooth glow into a swarm of stars.
 
 **Planet watch:** Mercury and Jupiter are about 4.2° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M102 — Spindle Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M5:** Naked eye: At a dark site it can be glimpsed unaided as a tiny diffuse point, especially with averted vision. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 3 — β Boo — Nekkar:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β Lib — Zubeneschamali:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W26.json) · [M102 — Spindle Galaxy](../descriptors/objects/messier-m102-dra-m102-spindle-galaxy-2026-06-23-0596629e.json) · [M5](../descriptors/objects/messier-m5-ser-m5-2026-06-26-45b25479.json) · [β Boo — Nekkar](../descriptors/objects/bayer-boo-boo-boo-nekkar-2026-06-22-65e55fdc.json) · [β Lib — Zubeneschamali](../descriptors/objects/bayer-lib-lib-lib-zubeneschamali-2026-06-25-ba5fcae6.json) · [β CrB — Nusakan](../descriptors/objects/bayer-crb-crb-crb-nusakan-2026-06-28-903b2370.json)
 
 ### Chart
 
@@ -1354,6 +1718,20 @@ Full Moon falls on June 29, so this is better suited to bright-star observing th
 
 **Planet watch:** Mercury and Jupiter are about 3.5° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α CrB — Alphecca:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α Ser — Unukalhai:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Ser — Chow:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β TrA:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W27.json) · [α CrB — Alphecca](../descriptors/objects/bayer-crb-crb-crb-alphecca-2026-06-30-e66303f6.json) · [α Ser — Unukalhai](../descriptors/objects/bayer-ser-ser-ser-unukalhai-2026-07-02-8cfac4cf.json) · [β Ser — Chow](../descriptors/objects/bayer-ser-ser-ser-chow-2026-07-02-d345a1ce.json) · [β TrA](../descriptors/objects/bayer-tra-tra-tra-2026-07-05-e33f3e51.json) · [M102 — Spindle Galaxy](../descriptors/objects/messier-m102-dra-m102-spindle-galaxy-2026-06-23-0596629e.json)
+
 ### Chart
 
 `ISO2026-W27-chart.png` — chart slot.
@@ -1404,6 +1782,20 @@ Last Quarter Moon on July 7 improves evening conditions, and M80 (NGC 6093), a g
 
 **Asterism:** The Keystone of Hercules is a compact four-star doorway into Hercules and a practical starting point for locating the Great Hercules Globular.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M80:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — M4:** Naked eye: At a dark site it can be glimpsed unaided as a tiny diffuse point, especially with averted vision. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — β Sco — Acrab:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — M13 — Great Hercules Globular:** Naked eye: At a dark site it can be glimpsed unaided as a tiny diffuse point, especially with averted vision. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. Nearby best visibility: 2026-W29-4.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W28.json) · [M80](../descriptors/objects/messier-m80-sco-m80-2026-07-10-ebdf499b.json) · [M4](../descriptors/objects/messier-m4-sco-m4-2026-07-12-7835cc27.json) · [β Sco — Acrab](../descriptors/objects/bayer-sco-sco-sco-acrab-2026-07-07-996e76f3.json) · [M13 — Great Hercules Globular](../descriptors/objects/messier-m13-her-m13-great-hercules-globular-2026-07-16-14baa2ea.json) · [M107](../descriptors/objects/messier-m107-oph-m107-2026-07-14-21e7ad6d.json)
+
 ### Chart
 
 `ISO2026-W28-chart.png` — chart slot.
@@ -1452,6 +1844,20 @@ New Moon on July 14 opens a dark-sky week rich in globular clusters. M107 (NGC 6
 
 **What to expect:** Globular clusters are visually rewarding because increasing aperture can actually resolve their stellar structure. They still will not resemble densely saturated photographs, but the transition from unresolved glow to a swarm of faint stars is something the eye can see directly.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M13 — Great Hercules Globular:** Naked eye: At a dark site it can be glimpsed unaided as a tiny diffuse point, especially with averted vision. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 2 — M107:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 3 — M12:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 4 — α Sco — Antares:** Naked eye: Bright and easy to see unaided; use Antares as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W29.json) · [M13 — Great Hercules Globular](../descriptors/objects/messier-m13-her-m13-great-hercules-globular-2026-07-16-14baa2ea.json) · [M107](../descriptors/objects/messier-m107-oph-m107-2026-07-14-21e7ad6d.json) · [M12](../descriptors/objects/messier-m12-oph-m12-2026-07-17-4d9e9899.json) · [α Sco — Antares](../descriptors/objects/bayer-sco-sco-sco-antares-2026-07-13-2c63b842.json) · [β Her — Kornephoros](../descriptors/objects/bayer-her-her-her-kornephoros-2026-07-13-c3a2fb20.json)
+
 ### Chart
 
 `ISO2026-W29-chart.png` — chart slot.
@@ -1499,6 +1905,20 @@ This is a globular-cluster comparison week. M10 (NGC 6254), a globular cluster l
 **Small telescope:** Compare M10 (NGC 6254), a globular cluster's bright core and halo with the denser M92 (NGC 6341), a globular cluster. M9 (NGC 6333), a globular cluster is smaller and fainter. M19 (NGC 6273), a globular cluster and M62 (NGC 6266), a globular cluster benefit from observing when they are highest above the southern horizon; aperture helps, but atmospheric transparency can matter just as much.
 
 **What to expect:** Integrated magnitude does not tell the whole story. A low-altitude globular can look harder than a nominally fainter object higher in the sky. This week is an excellent practical lesson in altitude, concentration, and aperture.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M10:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 2 — M19:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — M62:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — M9:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W30.json) · [M10](../descriptors/objects/messier-m10-oph-m10-2026-07-20-9895b265.json) · [M19](../descriptors/objects/messier-m19-oph-m19-2026-07-21-71412f83.json) · [M62](../descriptors/objects/messier-m62-oph-m62-2026-07-21-acb443e4.json) · [M9](../descriptors/objects/messier-m9-oph-m9-2026-07-25-407e360a.json) · [M92](../descriptors/objects/messier-m92-her-m92-2026-07-25-4993ef74.json)
 
 ### Chart
 
@@ -1552,6 +1972,20 @@ Full Moon on July 29 brightens a week centered on Scorpius. Shaula and Sargas ma
 
 **Meteor showers:** The Southern δ-Aquariids and α-Capricornids both reach maximum around July 31. The δ-Aquariids provide the higher rate, while the α-Capricornids are noted for slower meteors and occasional bright events.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M6 — Butterfly Cluster:** Naked eye: Visible unaided as a small stellar haze or loose knot under a dark sky. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — M14:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 3 — β Dra — Rastaban:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Oph — Rasalhague:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W31.json) · [M6 — Butterfly Cluster](../descriptors/objects/messier-m6-sco-m6-butterfly-cluster-2026-07-31-05ce5336.json) · [M14](../descriptors/objects/messier-m14-oph-m14-2026-07-30-02cbc9d3.json) · [β Dra — Rastaban](../descriptors/objects/bayer-dra-dra-dra-rastaban-2026-07-28-8253bc5a.json) · [α Oph — Rasalhague](../descriptors/objects/bayer-oph-oph-oph-rasalhague-2026-07-29-e32add36.json) · [β Oph — Cebalrai](../descriptors/objects/bayer-oph-oph-oph-cebalrai-2026-08-01-ca6a83e6.json)
+
 ### Chart
 
 `ISO2026-W31-chart.png` — chart slot.
@@ -1599,6 +2033,20 @@ The southern Milky Way supplies an extraordinary sequence this week: M7, the Pto
 **Small telescope:** M8, the Lagoon Nebula, a diffuse nebula shows bright nebulosity around its embedded cluster; M20, the Trifid Nebula, a diffuse nebula is subtler and its dark lanes require better conditions. M17, the Omega Nebula, a diffuse nebula can show its characteristic bright bar or swan-like form, while the clusters break into increasingly numerous stars.
 
 **What to expect:** Photographs exaggerate the color and extent of emission nebulae compared with visual observing. Expect pale gray nebulosity, dark lanes, and rich star fields. The wide-field visual experience of the Milky Way is itself the showpiece.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M7 — Ptolemy's Cluster:** Naked eye: Visible unaided as a small stellar haze or loose knot under a dark sky. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — M20 — Trifid Nebula:** Naked eye: Not normally visible as a distinct nebula to the unaided eye. Binoculars: Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — M8 — Lagoon Nebula:** Naked eye: Not normally visible as a distinct nebula to the unaided eye. Binoculars: Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — M24 — Sagittarius Star Cloud:** Naked eye: A conspicuous bright star cloud in a dark summer Milky Way; scan for the dense glow rather than a compact object. Binoculars: Sweep slowly across the star cloud: binoculars break the glow into innumerable stars, knots, and dark lanes. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W32.json) · [M7 — Ptolemy's Cluster](../descriptors/objects/messier-m7-sco-m7-ptolemy-s-cluster-2026-08-03-166d1653.json) · [M20 — Trifid Nebula](../descriptors/objects/messier-m20-sgr-m20-trifid-nebula-2026-08-06-a8677098.json) · [M8 — Lagoon Nebula](../descriptors/objects/messier-m8-sgr-m8-lagoon-nebula-2026-08-06-d80c12f6.json) · [M24 — Sagittarius Star Cloud](../descriptors/objects/messier-m24-sgr-m24-sagittarius-star-cloud-2026-08-09-2850f1bd.json) · [M23](../descriptors/objects/messier-m23-sgr-m23-2026-08-04-f097fbbb.json)
 
 ### Chart
 
@@ -1652,6 +2100,20 @@ New Moon on August 12 lands in the middle of a superb Sagittarius observing week
 
 **Meteor shower:** The Perseids peak around August 13 with a nominal ZHR near 100. New Moon falls on August 12, making 2026 especially favorable for dark-sky observing.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M16 — Eagle Nebula:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — M17 — Omega Nebula:** Naked eye: Not normally visible as a distinct nebula to the unaided eye. Binoculars: Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — M22 — Sagittarius Cluster:** Naked eye: At a dark site it can be glimpsed unaided as a tiny diffuse point, especially with averted vision. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — M18:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W33.json) · [M16 — Eagle Nebula](../descriptors/objects/messier-m16-ser-m16-eagle-nebula-2026-08-10-1d5760cb.json) · [M17 — Omega Nebula](../descriptors/objects/messier-m17-sgr-m17-omega-nebula-2026-08-10-f0ed0d9f.json) · [M22 — Sagittarius Cluster](../descriptors/objects/messier-m22-sgr-m22-sagittarius-cluster-2026-08-14-e3ac85f3.json) · [M18](../descriptors/objects/messier-m18-sgr-m18-2026-08-10-ab41c9b1.json) · [M28](../descriptors/objects/messier-m28-sgr-m28-2026-08-11-783f29ca.json)
+
 ### Chart
 
 `ISO2026-W33-chart.png` — chart slot.
@@ -1702,6 +2164,20 @@ M11, the Wild Duck Cluster, opens the week on August 17, followed by M57, the Ri
 
 **Planet watch:** Mercury and Jupiter are about 2.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M11 — Wild Duck Cluster:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — M57 — Ring Nebula:** Naked eye: Not normally identifiable as a distinct object to the unaided eye. Binoculars: Usually stellar or nearly stellar in binoculars; careful comparison with nearby stars is the key.
+
+**Descriptor 3 — M26:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — M54:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W34.json) · [M11 — Wild Duck Cluster](../descriptors/objects/messier-m11-sct-m11-wild-duck-cluster-2026-08-18-76e16199.json) · [M57 — Ring Nebula](../descriptors/objects/messier-m57-lyr-m57-ring-nebula-2026-08-19-6f2cdae3.json) · [M26](../descriptors/objects/messier-m26-sct-m26-2026-08-17-5f705469.json) · [M54](../descriptors/objects/messier-m54-sgr-m54-2026-08-20-ce836bbc.json) · [β Lyr — Sheliak](../descriptors/objects/bayer-lyr-lyr-lyr-sheliak-2026-08-18-e1344040.json)
+
 ### Chart
 
 `ISO2026-W34-chart.png` — chart slot.
@@ -1749,6 +2225,20 @@ Full Moon arrives August 28, followed by M55 (NGC 6809), a globular cluster and 
 **Small telescope:** Albireo is the week's dependable showpiece. Modest magnification separates its famous pair cleanly and lets observers compare their contrasting apparent colors. M55 (NGC 6809), a globular cluster appears as a broad globular glow; resolving many member stars generally requires more aperture and darker conditions.
 
 **What to expect:** Moonlight does not affect all targets equally. Albireo remains attractive in a bright sky, while M55 (NGC 6809), a globular cluster can become frustratingly washed out. The Almanack date identifies the geometry of the target, not a guarantee of ideal sky darkness.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M56:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — α Sgr — Rukbat:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Sgr — Arkab:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Vul — Anser:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W35.json) · [M56](../descriptors/objects/messier-m56-lyr-m56-2026-08-25-e5a3a7fa.json) · [α Sgr — Rukbat](../descriptors/objects/bayer-sgr-sgr-sgr-rukbat-2026-08-27-2780902e.json) · [β Sgr — Arkab](../descriptors/objects/bayer-sgr-sgr-sgr-arkab-2026-08-27-06d80076.json) · [α Vul — Anser](../descriptors/objects/bayer-vul-vul-vul-anser-2026-08-29-51804105.json) · [β Cyg — Albireo](../descriptors/objects/bayer-cyg-cyg-cyg-albireo-2026-08-29-5ffdf32b.json)
 
 ### Chart
 
@@ -1800,6 +2290,20 @@ Last Quarter on September 4 shares the calendar with M27, the Dumbbell Nebula, a
 
 **Asterism:** The Northern Cross, formed by the brightest stars of Cygnus, lies along the Milky Way and is a useful bridge between Deneb and the rich star fields to the south.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M27 — Dumbbell Nebula:** Naked eye: Not normally identifiable as a distinct object to the unaided eye. Binoculars: Usually stellar or nearly stellar in binoculars; careful comparison with nearby stars is the key. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — M55:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 3 — M71:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — α Sge — Sham:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W36.json) · [M27 — Dumbbell Nebula](../descriptors/objects/messier-m27-vul-m27-dumbbell-nebula-2026-09-06-87dc3f17.json) · [M55](../descriptors/objects/messier-m55-sgr-m55-2026-09-01-5f837de0.json) · [M71](../descriptors/objects/messier-m71-sge-m71-2026-09-05-85c0e1d0.json) · [α Sge — Sham](../descriptors/objects/bayer-sge-sge-sge-sham-2026-09-01-77326ab7.json) · [α Aql — Altair](../descriptors/objects/bayer-aql-aql-aql-altair-2026-09-04-82833fab.json)
+
 ### Chart
 
 `ISO2026-W36-chart.png` — chart slot.
@@ -1848,6 +2352,20 @@ M29 (NGC 6913), an open cluster appears on September 10 and New Moon follows Sep
 
 **What to expect:** M29 (NGC 6913), an open cluster is not a dramatic photographic showpiece. Its appeal comes from finding a small organized cluster inside an extraordinarily rich Milky Way field. New Moon makes this an especially good week to appreciate the background sky rather than only the catalog object.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M75:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 2 — M29:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — α Cap — Algedi:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β Cap — Dabih:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W37.json) · [M75](../descriptors/objects/messier-m75-sgr-m75-2026-09-08-b2e1d2a2.json) · [M29](../descriptors/objects/messier-m29-cyg-m29-2026-09-13-24dcb16b.json) · [α Cap — Algedi](../descriptors/objects/bayer-cap-cap-cap-algedi-2026-09-11-a2712f84.json) · [β Cap — Dabih](../descriptors/objects/bayer-cap-cap-cap-dabih-2026-09-12-29011240.json) · [α Pav — Peacock](../descriptors/objects/bayer-pav-pav-pav-peacock-2026-09-13-567008c1.json)
+
 ### Chart
 
 `ISO2026-W37-chart.png` — chart slot.
@@ -1895,6 +2413,20 @@ Delphinus and Deneb give this week a strong naked-eye framework, while M72 (NGC 
 **Small telescope:** M72 (NGC 6981), a globular cluster is a faint globular cluster in Aquarius and is a much more demanding object than the bright summer globulars. Expect a small, dim glow rather than obvious individual stars in a modest aperture. M73 (NGC 6994), an ast is not a physical star cluster but a compact asterism: a tiny grouping of stars that becomes apparent with magnification.
 
 **What to expect:** This is a good week for learning that a Messier number does not guarantee a spectacular visual object. M72 (NGC 6981), a globular cluster is intrinsically subtle in a small telescope, while M73 (NGC 6994), an ast is essentially a tiny star pattern. The pleasure comes from finding and recognizing them, not from expecting photographic drama.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Del — Sualocin:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — β Del — Rotanev:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — α Cyg — Deneb:** Naked eye: Bright and easy to see unaided; use Deneb as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — α Ind:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W38.json) · [α Del — Sualocin](../descriptors/objects/bayer-del-del-del-sualocin-2026-09-17-228a2601.json) · [β Del — Rotanev](../descriptors/objects/bayer-del-del-del-rotanev-2026-09-17-c76f6fba.json) · [α Cyg — Deneb](../descriptors/objects/bayer-cyg-cyg-cyg-deneb-2026-09-18-9b10791c.json) · [α Ind](../descriptors/objects/bayer-ind-ind-ind-2026-09-17-185f0f38.json) · [β Pav](../descriptors/objects/bayer-pav-pav-pav-2026-09-19-901975a5.json)
 
 ### Chart
 
@@ -1946,6 +2478,20 @@ The September 26 Full Moon dominates this week, while the Sun crosses into Libra
 
 **What to expect:** Bright moonlight is not a failed observing night; it simply changes the program. Faint galaxies and nebulae suffer badly, while the Moon, bright double stars, and constellation work remain productive targets.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M72:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 2 — M73:** Naked eye: Use the surrounding constellation as the naked-eye framework for locating this object. Binoculars: Binoculars provide the most useful first optical view and help confirm the surrounding star field.
+
+**Descriptor 3 — α Equ — Kitalpha:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β Mic:** Naked eye: Near or beyond the practical unaided-eye limit for many observers; use optical aid for a reliable identification. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W39.json) · [M72](../descriptors/objects/messier-m72-aqr-m72-2026-09-21-a761b3e6.json) · [M73](../descriptors/objects/messier-m73-aqr-m73-2026-09-23-60551d00.json) · [α Equ — Kitalpha](../descriptors/objects/bayer-equ-equ-equ-kitalpha-2026-09-27-69c036a0.json) · [β Mic](../descriptors/objects/bayer-mic-mic-mic-2026-09-21-e3cc6e98.json) · [β Ind](../descriptors/objects/bayer-ind-ind-ind-2026-09-22-d01713c5.json)
+
 ### Chart
 
 `ISO2026-W39-chart.png` — chart slot.
@@ -1995,6 +2541,20 @@ This is a compact but excellent autumn deep-sky week: M15, the Great Pegasus Glo
 **What to expect:** The three globular clusters will not look alike despite belonging to the same class. Compare core concentration, apparent size, and how quickly each fades into the background. M39 (NGC 7092), an open cluster provides an instructive contrast because its stars are individually obvious rather than blended into a globular glow.
 
 **Asterism:** The Great Square of Pegasus is the principal autumn signpost; its four corners open paths toward Andromeda, Pisces, and the fainter autumn constellations.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M15 — Great Pegasus Globular:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 2 — M2:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Descriptor 3 — M39:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — M30:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W40.json) · [M15 — Great Pegasus Globular](../descriptors/objects/messier-m15-peg-m15-great-pegasus-globular-2026-10-01-12227e32.json) · [M2](../descriptors/objects/messier-m2-aqr-m2-2026-10-02-cbaf7b1e.json) · [M39](../descriptors/objects/messier-m39-cyg-m39-2026-10-02-16de7d63.json) · [M30](../descriptors/objects/messier-m30-cap-m30-2026-10-04-4e130fe4.json) · [α Cep — Alderamin](../descriptors/objects/bayer-cep-cep-cep-alderamin-2026-09-28-a5181ec5.json)
 
 ### Chart
 
@@ -2046,6 +2606,20 @@ The New Moon on Saturday, October 10 makes this one of the best dark-sky weeks o
 
 **Planet watch:** Mercury and Venus are about 2.6° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Aqr — Sadalmelik:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — M15 — Great Pegasus Globular:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. Nearby best visibility: 2026-W40-4.
+
+**Descriptor 3 — M2:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. Nearby best visibility: 2026-W40-5.
+
+**Descriptor 4 — M39:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W40-5.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W41.json) · [α Aqr — Sadalmelik](../descriptors/objects/bayer-aqr-aqr-aqr-sadalmelik-2026-10-11-28291ff7.json) · [M15 — Great Pegasus Globular](../descriptors/objects/messier-m15-peg-m15-great-pegasus-globular-2026-10-01-12227e32.json) · [M2](../descriptors/objects/messier-m2-aqr-m2-2026-10-02-cbaf7b1e.json) · [M39](../descriptors/objects/messier-m39-cyg-m39-2026-10-02-16de7d63.json) · [M30](../descriptors/objects/messier-m30-cap-m30-2026-10-04-4e130fe4.json)
+
 ### Chart
 
 `ISO2026-W41-chart.png` — chart slot.
@@ -2093,6 +2667,20 @@ The week of October 12–18 is comparatively quiet in the Almanack, which makes 
 **Small telescope:** The listed stars in Tucana, Lacerta, and Piscis Austrinus provide useful pointing and identification exercises. This is a good week to practice accurate star-hopping rather than chasing a difficult deep-sky target simply because a telescope is available.
 
 **What to expect:** Not every observing week needs a spectacular Messier object. The Moon grows toward First Quarter through the week, but there remains useful evening observing time. Treat W42 as an orientation week: learn the autumn framework, compare naked-eye and binocular fields, and notice how strongly your latitude determines which southern stars are practical targets.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Gru — Alnair:** Naked eye: Bright and easy to see unaided; use Alnair as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α Tuc:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Lac:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — α Lac:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W42.json) · [α Gru — Alnair](../descriptors/objects/bayer-gru-gru-gru-alnair-2026-10-12-a41b02cb.json) · [α Tuc](../descriptors/objects/bayer-tuc-tuc-tuc-2026-10-15-a1bd3069.json) · [β Lac](../descriptors/objects/bayer-lac-lac-lac-2026-10-16-9896c855.json) · [α Lac](../descriptors/objects/bayer-lac-lac-lac-2026-10-18-a233f0f3.json) · [β PsA](../descriptors/objects/bayer-psa-psa-psa-2026-10-18-4c434519.json)
 
 ### Chart
 
@@ -2144,6 +2732,20 @@ Fomalhaut (α Piscis Austrini) is the standout object of W43, appearing on Octob
 
 **Meteor shower:** The Orionids peak on October 21 with a typical ZHR of 20 or more. The 2026 maximum is favorably placed with little moonlight interference.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — β Gru — Tiaki:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α PsA — Fomalhaut:** Naked eye: Bright and easy to see unaided; use Fomalhaut as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Oct:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — M52:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W44-7.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W43.json) · [β Gru — Tiaki](../descriptors/objects/bayer-gru-gru-gru-tiaki-2026-10-21-8eecb1d5.json) · [α PsA — Fomalhaut](../descriptors/objects/bayer-psa-psa-psa-fomalhaut-2026-10-25-0d70b747.json) · [β Oct](../descriptors/objects/bayer-oct-oct-oct-2026-10-22-403a7154.json) · [M52](../descriptors/objects/messier-m52-cas-m52-2026-11-01-744a9724.json) · [α Gru — Alnair](../descriptors/objects/bayer-gru-gru-gru-alnair-2026-10-12-a41b02cb.json)
+
 ### Chart
 
 `ISO2026-W43-chart.png` — chart slot.
@@ -2192,6 +2794,20 @@ This week ends with Last Quarter Moon on Sunday, November 1, leaving the first p
 
 **What to expect:** An open cluster does not resemble a processed photograph in the eyepiece. The reward is the gradual emergence of individual stars from a haze-like patch as aperture and magnification increase.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M52:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 2 — α Peg — Markab:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Peg — Scheat:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β Psc — Fumalsamakah:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W44.json) · [M52](../descriptors/objects/messier-m52-cas-m52-2026-11-01-744a9724.json) · [α Peg — Markab](../descriptors/objects/bayer-peg-peg-peg-markab-2026-10-27-23c4bb0c.json) · [β Peg — Scheat](../descriptors/objects/bayer-peg-peg-peg-scheat-2026-10-27-0c3e5c37.json) · [β Psc — Fumalsamakah](../descriptors/objects/bayer-psc-psc-psc-fumalsamakah-2026-10-27-10757e2d.json) · [β Gru — Tiaki](../descriptors/objects/bayer-gru-gru-gru-tiaki-2026-10-21-8eecb1d5.json)
+
 ### Chart
 
 `ISO2026-W44-chart.png` — chart slot.
@@ -2239,6 +2855,20 @@ November 2–8 is deliberately a quiet Almanack week: β Sculptoris is the only 
 **Small telescope:** Use β Sculptoris and other field stars as exercises in precise pointing and star-hopping. Start at low power, verify the field, and increase magnification only when there is a reason; a telescope's narrower field can make navigation harder rather than easier.
 
 **What to expect:** A week without a major Messier object is not an empty week. It is an opportunity to build the observing habits that make difficult objects easier later: dark adaptation, patient field identification, careful comparison with the chart, and awareness of how latitude and sky brightness change what is visible.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — β Scl:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — M52:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W44-7.
+
+**Descriptor 3 — α Peg — Markab:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W44-2.
+
+**Descriptor 4 — β Peg — Scheat:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W44-2.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W45.json) · [β Scl](../descriptors/objects/bayer-scl-scl-scl-2026-11-03-2a2cc659.json) · [M52](../descriptors/objects/messier-m52-cas-m52-2026-11-01-744a9724.json) · [α Peg — Markab](../descriptors/objects/bayer-peg-peg-peg-markab-2026-10-27-23c4bb0c.json) · [β Peg — Scheat](../descriptors/objects/bayer-peg-peg-peg-scheat-2026-10-27-0c3e5c37.json) · [β Psc — Fumalsamakah](../descriptors/objects/bayer-psc-psc-psc-fumalsamakah-2026-10-27-10757e2d.json)
 
 ### Chart
 
@@ -2292,6 +2922,20 @@ New Moon falls on Monday, November 9, giving the week an excellent dark-sky begi
 
 **Planet watch:** Mars and Jupiter are about 2.7° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α And — Alpheratz:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — β Cas — Caph:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — M31 — Andromeda Galaxy:** Naked eye: Visible as an elongated misty patch from a dark site; use averted vision when skyglow is present. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W47-5.
+
+**Descriptor 4 — M110:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W47-5.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W46.json) · [α And — Alpheratz](../descriptors/objects/bayer-and-and-and-alpheratz-2026-11-12-c6121f64.json) · [β Cas — Caph](../descriptors/objects/bayer-cas-cas-cas-caph-2026-11-12-ba61dff7.json) · [M31 — Andromeda Galaxy](../descriptors/objects/messier-m31-and-m31-andromeda-galaxy-2026-11-20-0c4146dd.json) · [M110](../descriptors/objects/messier-m110-and-m110-2026-11-20-d5725731.json) · [M32](../descriptors/objects/messier-m32-and-m32-2026-11-20-7af6d341.json)
+
 ### Chart
 
 `ISO2026-W46-chart.png` — chart slot.
@@ -2344,6 +2988,20 @@ The week culminates on Friday, November 20 with M31, the Andromeda Galaxy, toget
 
 **Meteor shower:** The Leonids peak on November 17, with the regular nodal maximum near 23:45 UT and an expected ZHR around 15. Moonlight should not seriously hinder the peak.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M31 — Andromeda Galaxy:** Naked eye: Visible as an elongated misty patch from a dark site; use averted vision when skyglow is present. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M110:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — M32:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 4 — α Phe — Ankaa:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W47.json) · [M31 — Andromeda Galaxy](../descriptors/objects/messier-m31-and-m31-andromeda-galaxy-2026-11-20-0c4146dd.json) · [M110](../descriptors/objects/messier-m110-and-m110-2026-11-20-d5725731.json) · [M32](../descriptors/objects/messier-m32-and-m32-2026-11-20-7af6d341.json) · [α Phe — Ankaa](../descriptors/objects/bayer-phe-phe-phe-ankaa-2026-11-16-ca6e7aa7.json) · [α Cas — Schedar](../descriptors/objects/bayer-cas-cas-cas-schedar-2026-11-20-83e9e42f.json)
+
 ### Chart
 
 `ISO2026-W47-chart.png` — chart slot.
@@ -2393,6 +3051,20 @@ Full Moon occurs Tuesday, November 24, so this is not the strongest week for fai
 **What to expect:** A bright Moon can erase low-contrast galaxies and nebulae without ruining the entire observing session. This is a good week to learn that choosing the right target for the conditions is part of observational astronomy.
 
 **Planet watch:** Mars and Jupiter are about 2.4° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — β And — Mirach:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — α Scl:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — β Phe:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — M31 — Andromeda Galaxy:** Naked eye: Visible as an elongated misty patch from a dark site; use averted vision when skyglow is present. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W47-5.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W48.json) · [β And — Mirach](../descriptors/objects/bayer-and-and-and-mirach-2026-11-27-132b02e8.json) · [α Scl](../descriptors/objects/bayer-scl-scl-scl-2026-11-24-95efcbc3.json) · [β Phe](../descriptors/objects/bayer-phe-phe-phe-2026-11-26-a144ca93.json) · [M31 — Andromeda Galaxy](../descriptors/objects/messier-m31-and-m31-andromeda-galaxy-2026-11-20-0c4146dd.json) · [M33 — Triangulum Galaxy](../descriptors/objects/messier-m33-tri-m33-triangulum-galaxy-2026-12-02-d44b502c.json)
 
 ### Chart
 
@@ -2444,6 +3116,20 @@ Last Quarter Moon occurs Tuesday, December 1, and the week brings several contra
 
 **Planet watch:** Mars and Jupiter are about 4.8° apart in tropical longitude at the Almanack's Monday 00:00 UTC weekly snapshot.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M33 — Triangulum Galaxy:** Naked eye: A demanding naked-eye target: exceptionally dark, transparent skies and averted vision are usually required. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 2 — M76 — Little Dumbbell Nebula:** Naked eye: Not normally identifiable as a distinct object to the unaided eye. Binoculars: Usually stellar or nearly stellar in binoculars; careful comparison with nearby stars is the key. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 3 — M103:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Descriptor 4 — M74:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W49.json) · [M33 — Triangulum Galaxy](../descriptors/objects/messier-m33-tri-m33-triangulum-galaxy-2026-12-02-d44b502c.json) · [M76 — Little Dumbbell Nebula](../descriptors/objects/messier-m76-per-m76-little-dumbbell-nebula-2026-12-04-95a6ca8a.json) · [M103](../descriptors/objects/messier-m103-cas-m103-2026-12-02-34b44fbf.json) · [M74](../descriptors/objects/messier-m74-psc-m74-2026-12-03-094bce63.json) · [α Eri — Achernar](../descriptors/objects/bayer-eri-eri-eri-achernar-2026-12-03-20948b33.json)
+
 ### Chart
 
 `ISO2026-W49-chart.png` — chart slot.
@@ -2493,6 +3179,20 @@ The Moon is waning after Last Quarter, so evening skies become progressively fri
 **What to expect:** This is a week for learning how slowly the eye detects faint extended light. Do not expect a galaxy to announce itself like a star. Scan, stop, use averted vision, and allow several seconds for the faint glow to become convincing.
 
 **Asterism:** Cassiopeia's familiar W shape is a strong northern anchor and a practical guide into the dense Milky Way fields of Cassiopeia and Perseus.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Tri — Mothallah:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — β Ari — Sheratan:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — α Hyi — Head of Hydrus:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Psc — Alrescha:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W50.json) · [α Tri — Mothallah](../descriptors/objects/bayer-tri-tri-tri-mothallah-2026-12-07-c5e038a8.json) · [β Ari — Sheratan](../descriptors/objects/bayer-ari-ari-ari-sheratan-2026-12-07-28075713.json) · [α Hyi — Head of Hydrus](../descriptors/objects/bayer-hyi-hyi-hyi-head-of-hydrus-2026-12-08-c52a6c23.json) · [α Psc — Alrescha](../descriptors/objects/bayer-psc-psc-psc-alrescha-2026-12-09-f63f52df.json) · [α Ari — Hamal](../descriptors/objects/bayer-ari-ari-ari-hamal-2026-12-10-1b858435.json)
 
 ### Chart
 
@@ -2544,6 +3244,20 @@ Mid-December evenings mark the handoff from the autumn constellations toward the
 
 **Meteor shower:** The Geminids peak on December 14 and are the year's strongest dependable shower, with a nominal ZHR near 150. Only a waxing crescent Moon is present near maximum.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — M34:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out.
+
+**Descriptor 2 — M77:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
+
+**Descriptor 3 — α UMi — Polaris:** Naked eye: Bright and easy to see unaided; use Polaris as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — β For:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W51.json) · [M34](../descriptors/objects/messier-m34-per-m34-2026-12-18-d943988e.json) · [M77](../descriptors/objects/messier-m77-cet-m77-2026-12-18-0a6caa6a.json) · [α UMi — Polaris](../descriptors/objects/bayer-umi-umi-umi-polaris-2026-12-16-b83d5577.json) · [β For](../descriptors/objects/bayer-for-for-for-2026-12-19-4fa36476.json) · [α Tri — Mothallah](../descriptors/objects/bayer-tri-tri-tri-mothallah-2026-12-07-c5e038a8.json)
+
 ### Chart
 
 `ISO2026-W51-chart.png` — chart slot.
@@ -2594,6 +3308,20 @@ The week begins with the December solstice season and reaches Full Moon on Thurs
 
 **Meteor shower:** The Ursids peak on December 22 near 22:00 UT. A nearly full Moon makes the 2026 return difficult for visual observing.
 
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — α Cet — Menkar:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — β Per — Algol:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 3 — α For — Fornacis:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 4 — α Per — Mirfak:** Naked eye: Bright and easy to see unaided; use Mirfak as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W52.json) · [α Cet — Menkar](../descriptors/objects/bayer-cet-cet-cet-menkar-2026-12-22-7cad3493.json) · [β Per — Algol](../descriptors/objects/bayer-per-per-per-algol-2026-12-24-88621d96.json) · [α For — Fornacis](../descriptors/objects/bayer-for-for-for-fornacis-2026-12-25-f3d12107.json) · [α Per — Mirfak](../descriptors/objects/bayer-per-per-per-mirfak-2026-12-27-7efdf84d.json) · [β Hor](../descriptors/objects/bayer-hor-hor-hor-2026-12-22-fefd8a92.json)
+
 ### Chart
 
 `ISO2026-W52-chart.png` — chart slot.
@@ -2641,6 +3369,20 @@ The final ISO week of the 2026 Almanack runs from December 28 into January 3. La
 **Small telescope:** As moonlight becomes less troublesome in the evening, return to compact clusters, nebulae, and double stars. Begin with easy bright objects to establish focus and sky transparency before attempting subtler targets.
 
 **What to expect:** The Almanack ends its ISO year without the sky ending anything at all. This week is a bridge: the observing habits learned through the year—orientation, dark adaptation, instrument choice, and realistic expectations—carry directly into the next cycle.
+
+#### Observer descriptors
+
+The following observer guidance is derived from the machine-readable records for this week.
+
+**Descriptor 1 — β Ret:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Descriptor 2 — M45 — Pleiades:** Naked eye: An obvious compact star group to the unaided eye; count how many Pleiads you can distinguish. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. Nearby best visibility: 2026-W01-4.
+
+**Descriptor 3 — α Cet — Menkar:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W52-2.
+
+**Descriptor 4 — β Per — Algol:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W52-4.
+
+**Machine-readable descriptors:** [Week index](../descriptors/W53.json) · [β Ret](../descriptors/objects/bayer-ret-ret-ret-2027-01-01-f2256c3b.json) · [M45 — Pleiades](../descriptors/objects/messier-m45-tau-m45-pleiades-2026-01-01-5476efbf.json) · [α Cet — Menkar](../descriptors/objects/bayer-cet-cet-cet-menkar-2026-12-22-7cad3493.json) · [β Per — Algol](../descriptors/objects/bayer-per-per-per-algol-2026-12-24-88621d96.json) · [α For — Fornacis](../descriptors/objects/bayer-for-for-for-fornacis-2026-12-25-f3d12107.json)
 
 ### Chart
 

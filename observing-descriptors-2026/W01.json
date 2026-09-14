@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W01",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M45 — Pleiades",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W01-4",
+      "href": "objects/messier-m45-tau-m45-pleiades-2026-01-01-5476efbf.json"
+    },
+    {
+      "display_name": "α Hor",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W02-3",
+      "href": "objects/bayer-hor-hor-hor-2026-01-07-6796d040.json"
+    },
+    {
+      "display_name": "α Ret",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W02-3",
+      "href": "objects/bayer-ret-ret-ret-2026-01-07-81af55e5.json"
+    },
+    {
+      "display_name": "β Ret",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W53-5",
+      "href": "objects/bayer-ret-ret-ret-2027-01-01-f2256c3b.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M45 — Pleiades",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W01-4",
+      "href": "objects/messier-m45-tau-m45-pleiades-2026-01-01-5476efbf.json"
+    },
+    {
+      "display_name": "α Hor",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W02-3",
+      "href": "objects/bayer-hor-hor-hor-2026-01-07-6796d040.json"
+    },
+    {
+      "display_name": "α Ret",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W02-3",
+      "href": "objects/bayer-ret-ret-ret-2026-01-07-81af55e5.json"
+    },
+    {
+      "display_name": "β Ret",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W53-5",
+      "href": "objects/bayer-ret-ret-ret-2027-01-01-f2256c3b.json"
+    },
+    {
+      "display_name": "α Tau — Aldebaran",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W03-1",
+      "href": "objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json"
+    },
+    {
+      "display_name": "α Cet — Menkar",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W52-2",
+      "href": "objects/bayer-cet-cet-cet-menkar-2026-12-22-7cad3493.json"
+    }
+  ],
+  "curated_routes": []
+}

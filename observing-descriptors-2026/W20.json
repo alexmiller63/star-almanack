@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W20",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M40 — Winnecke 4",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-4",
+      "href": "objects/messier-m40-uma-m40-winnecke-4-2026-05-14-3fedcbc4.json"
+    },
+    {
+      "display_name": "M98",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-2",
+      "href": "objects/messier-m98-com-m98-2026-05-12-92e48400.json"
+    },
+    {
+      "display_name": "M106",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-3",
+      "href": "objects/messier-m106-cvn-m106-2026-05-13-672e0515.json"
+    },
+    {
+      "display_name": "M99",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-3",
+      "href": "objects/messier-m99-com-m99-2026-05-13-901f74b1.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M40 — Winnecke 4",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-4",
+      "href": "objects/messier-m40-uma-m40-winnecke-4-2026-05-14-3fedcbc4.json"
+    },
+    {
+      "display_name": "M98",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-2",
+      "href": "objects/messier-m98-com-m98-2026-05-12-92e48400.json"
+    },
+    {
+      "display_name": "M106",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-3",
+      "href": "objects/messier-m106-cvn-m106-2026-05-13-672e0515.json"
+    },
+    {
+      "display_name": "M99",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-3",
+      "href": "objects/messier-m99-com-m99-2026-05-13-901f74b1.json"
+    },
+    {
+      "display_name": "M100",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-4",
+      "href": "objects/messier-m100-com-m100-2026-05-14-c9df0eda.json"
+    },
+    {
+      "display_name": "M61",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W20-4",
+      "href": "objects/messier-m61-vir-m61-2026-05-14-1058aa4d.json"
+    }
+  ],
+  "curated_routes": []
+}
