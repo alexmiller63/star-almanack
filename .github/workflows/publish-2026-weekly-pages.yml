@@ -9,6 +9,7 @@ on:
       - publish_weekly_pages.py
       - add_greek_latin_toggle.py
       - add_observing_aid_notation.py
+      - 'observing-descriptors-2026/**'
       - .github/workflows/publish-2026-weekly-pages.yml
 
 permissions:
@@ -60,11 +61,22 @@ jobs:
           assert len(pages) == 53, f'Expected 53 weekly pages, found {len(pages)}'
           assert [p.parent.name for p in pages] == [f'W{i:02d}' for i in range(1,54)]
           assert (root / 'index.html').exists(), 'Missing 2026 index page'
+          descriptor_root = root / 'descriptors'
+          descriptor_weeks = sorted(descriptor_root.glob('W??.json'))
+          descriptor_objects = sorted((descriptor_root / 'objects').glob('*.json'))
+          descriptor_routes = sorted((descriptor_root / 'routes').glob('*.json'))
+          assert len(descriptor_weeks) == 53, f'Expected 53 weekly descriptor indexes, found {len(descriptor_weeks)}'
+          assert descriptor_objects, 'Published object descriptors missing'
+          assert descriptor_routes, 'Published route descriptors missing'
 
           for i, page in enumerate(pages, 1):
               text = page.read_text(encoding='utf-8')
               assert f'ISO 2026-W{i:02d}' in text
               assert '<table class="calendar">' in text
+              assert text.count('href="../descriptors/') == 6, (
+                  page, text.count('href="../descriptors/')
+              )
+              assert 'Observer descriptors' in text
               assert 'Best visibility:' not in text
               assert 'width:25%' in text and 'width:27%' in text and 'width:48%' in text
               assert '.event-parenthetical{white-space:nowrap}' in text

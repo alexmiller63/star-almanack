@@ -53,6 +53,9 @@ jobs:
       - name: Apply curated Sky Notes
         run: python apply_sky_notes.py
 
+      - name: Recreate observing descriptors and derive weekly guidance
+        run: python generate_observing_descriptors.py
+
       - name: Audit duplicate Bayer designations
         run: python audit_bayer_duplicate_designations.py
 
@@ -167,20 +170,55 @@ jobs:
           print('Verified 53 weeks, 371 day rows, 110 Messier objects, 53 curated Sky Notes, shared-data planetary notes, and accepted-figure artwork descriptors')
           PY
 
+      - name: Validate machine-readable observing descriptors
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          root = Path("observing-descriptors-2026")
+          weeks = sorted(root.glob("W??.json"))
+          objects = sorted((root / "objects").glob("*.json"))
+          routes = sorted((root / "routes").glob("*.json"))
+          assert len(weeks) == 53, f"Expected 53 weekly descriptor indexes, found {len(weeks)}"
+          assert objects, "No object descriptors generated"
+          assert routes, "No curated route descriptors generated"
+          for path in weeks:
+              payload = json.loads(path.read_text(encoding="utf-8"))
+              assert len(payload["inline_descriptors"]) == 4, path
+              assert len(payload["linked_descriptors"]) == 6, path
+          text = Path("almanack-expanded.md").read_text(encoding="utf-8")
+          assert text.count("#### Observer descriptors") == 53
+          links = re.findall(r"\]\(\.\./descriptors/[^)]+\.json\)", text)
+          assert len(links) == 53 * 6, f"Expected 318 descriptor links, found {len(links)}"
+          route = json.loads((root / "routes" / "pegasus-enif-m15.json").read_text(encoding="utf-8"))
+          assert route["applies_to"] == ["Enif", "M15"]
+          assert "Enif" in route["human_guidance"] and "M15" in route["human_guidance"]
+          print(f"Validated {len(objects)} object descriptors, 53 weekly indexes, and {len(routes)} curated routes")
+          PY
+
       - name: Verify regenerative build is idempotent
         run: |
-          sha256sum almanack-expanded.md sky-note-artwork-descriptors-2026.json > /tmp/star-almanack-before.sha256
+          {
+            sha256sum almanack-expanded.md sky-note-artwork-descriptors-2026.json
+            find observing-descriptors-2026 -type f -print0 | sort -z | xargs -0 sha256sum
+          } > /tmp/star-almanack-before.sha256
           python build_expanded_almanack.py
           python enrich_stellar_entries.py
           python apply_sky_notes.py
-          sha256sum almanack-expanded.md sky-note-artwork-descriptors-2026.json > /tmp/star-almanack-after.sha256
+          python generate_observing_descriptors.py
+          {
+            sha256sum almanack-expanded.md sky-note-artwork-descriptors-2026.json
+            find observing-descriptors-2026 -type f -print0 | sort -z | xargs -0 sha256sum
+          } > /tmp/star-almanack-after.sha256
           diff -u /tmp/star-almanack-before.sha256 /tmp/star-almanack-after.sha256
 
       - name: Commit expanded Almanack source and Sky Note artwork descriptors
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add almanack-expanded.md sky-note-artwork-descriptors-2026.json
+          git add almanack-expanded.md sky-note-artwork-descriptors-2026.json observing-descriptors-2026
           if git diff --cached --quiet; then
             echo "No source changes."
             exit 0

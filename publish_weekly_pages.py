@@ -101,6 +101,11 @@ def inline_markup(text: str) -> str:
     text = text.replace("<br>", sentinel)
     text = text.replace("\ufe0f", "").replace("\ufe0e", "")
     text = html.escape(text)
+    text = re.sub(
+        r"\[([^\]]+)\]\(((?:\.\./)?descriptors/[A-Za-z0-9_./-]+\.json)\)",
+        lambda match: f'<a href="{match.group(2)}">{match.group(1)}</a>',
+        text,
+    )
     for glyph in ZODIAC_NAMES:
         text = text.replace(glyph, zodiac_source(glyph))
     text = STATIC_GLYPH_RE.sub(lambda match: glyph_markup(match.group(0)), text)
@@ -210,6 +215,10 @@ def main() -> None:
     if len(matches) != 53: raise SystemExit(f"Expected 53 ISO week sections, found {len(matches)}")
     if OUT.exists(): shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
+    descriptor_source = ROOT / "observing-descriptors-2026"
+    if not descriptor_source.exists():
+        raise SystemExit("Missing observing-descriptors-2026; rebuild the Almanack source first")
+    shutil.copytree(descriptor_source, OUT / "descriptors")
     week_links=[]
     for idx,match in enumerate(matches):
         week=int(match.group(2)); start=match.start()
