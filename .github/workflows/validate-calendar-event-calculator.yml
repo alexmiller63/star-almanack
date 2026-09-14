@@ -65,12 +65,12 @@ jobs:
 
           years = list(range(start, end + 1))
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
-              output.write(f"start_year={start}\\n")
-              output.write(f"end_year={end}\\n")
-              output.write(f"includes_2026={str(start <= 2026 <= end).lower()}\\n")
-              output.write("years<<EOF\\n")
-              output.write("\\n".join(str(year) for year in years))
-              output.write("\\nEOF\\n")
+              output.write(f"start_year={start}\n")
+              output.write(f"end_year={end}\n")
+              output.write(f"includes_2026={str(start <= 2026 <= end).lower()}\n")
+              output.write("years<<EOF\n")
+              output.write("\n".join(str(year) for year in years))
+              output.write("\nEOF\n")
           print(f"Requested years: {start}-{end}")
 
       - name: Calculate requested calendar events
