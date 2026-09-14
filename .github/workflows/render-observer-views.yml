@@ -38,6 +38,7 @@ jobs:
           python render_observer_views.py M35 /tmp/hygdata_v41.csv \
             --view all \
             --out-dir observer-views/M35 \
+            --replace-output-dir \
             --format svg
 
       - name: Validate outputs

@@ -15,6 +15,7 @@ from __future__ import annotations
 import html
 import re
 import shutil
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -203,9 +204,27 @@ def page_shell(title: str, body: str, nav: str = "") -> str:
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} · Star Almanack</title><style>{CSS}</style></head><body><header><div class="wrap"><div class="brand"><a href="/almanack/2026/">Star Almanack</a></div><div class="subtitle">Alexander Ferrari Miller</div></div></header><main class="wrap">{nav}{body}{nav}</main><footer><div class="wrap">© 2026 Alexander Ferrari Miller. All rights reserved.</div></footer></body></html>'''
 
 
-def week_nav(week: int) -> str:
-    prev = f'<a href="../W{week-1:02d}/">← W{week-1:02d}</a>' if week > 1 else '<span>← Previous</span>'
-    nxt = f'<a href="../W{week+1:02d}/">W{week+1:02d} →</a>' if week < 53 else '<span>Next →</span>'
+def week_link(current_year: int, target_year: int, target_week: int, label: str) -> str:
+    href = f"../W{target_week:02d}/" if current_year == target_year else f"../../{target_year}/W{target_week:02d}/"
+    return f'<a href="{href}">{label}</a>'
+
+
+def week_nav(year: int, week: int, first_year: int, last_year: int) -> str:
+    if (year, week) == (first_year, 1):
+        prev = '<span>← Previous</span>'
+    elif week > 1:
+        prev = week_link(year, year, week - 1, f"← W{week-1:02d}")
+    else:
+        prior_week = date(year - 1, 12, 28).isocalendar().week
+        prev = week_link(year, year - 1, prior_week, f"← {year-1}-W{prior_week:02d}")
+
+    final_week = date(year, 12, 28).isocalendar().week
+    if (year, week) == (last_year, final_week):
+        nxt = '<span>Next →</span>'
+    elif week < final_week:
+        nxt = week_link(year, year, week + 1, f"W{week+1:02d} →")
+    else:
+        nxt = week_link(year, year + 1, 1, f"{year+1}-W01 →")
     return f'<nav class="weeknav">{prev}<a href="../">All weeks</a>{nxt}</nav>'
 
 
@@ -227,7 +246,7 @@ def main() -> None:
             next_h2=H2_RE.search(text, match.end()); end=next_h2.start() if next_h2 else len(text)
         section=text[start:end].strip(); fragment=markdown_fragment(section)
         target=OUT/f"W{week:02d}"; target.mkdir(parents=True)
-        (target/"index.html").write_text(page_shell(f"ISO 2026-W{week:02d}",fragment,week_nav(week)),encoding="utf-8")
+        (target/"index.html").write_text(page_shell(f"ISO 2026-W{week:02d}",fragment,week_nav(2026, week, 2026, 2026)),encoding="utf-8")
         week_links.append(f'<li><a href="W{week:02d}/">ISO 2026-W{week:02d}</a></li>')
     index_body='<h1>2026 Weekly Almanack</h1><p>Select an ISO week.</p><ul class="weekgrid">'+"".join(week_links)+"</ul>"
     (OUT/"index.html").write_text(page_shell("2026 Weekly Almanack",index_body),encoding="utf-8")

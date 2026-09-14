@@ -1,0 +1,101 @@
+name: Populate Scaffold Owner
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: ISO year
+        required: true
+        type: string
+      owner:
+        description: Generated section owner
+        required: true
+        type: choice
+        options:
+          - calendar
+          - ephemeris
+          - planet-finder
+          - artwork
+
+permissions:
+  contents: write
+
+concurrency:
+  group: populate-scaffold-${{ inputs.year }}-${{ inputs.owner }}
+  cancel-in-progress: false
+
+jobs:
+  populate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify scaffold ownership contracts
+        run: python -m unittest tests.test_scaffold_population -v
+
+      - name: Recreate selected owner output
+        env:
+          OWNER: ${{ inputs.owner }}
+          YEAR: ${{ inputs.year }}
+        run: |
+          case "$OWNER" in
+            calendar) python populate_scaffold_calendar.py "$YEAR" ;;
+            ephemeris) python populate_scaffold_ephemeris.py "$YEAR" ;;
+            planet-finder) python populate_scaffold_planet_finders.py "$YEAR" ;;
+            artwork) python populate_scaffold_artwork.py "$YEAR" ;;
+            *) echo "Unknown owner: $OWNER" >&2; exit 1 ;;
+          esac
+
+      - name: Verify ownership and idempotence
+        env:
+          OWNER: ${{ inputs.owner }}
+          YEAR: ${{ inputs.year }}
+        run: |
+          python - <<'PY'
+          import hashlib
+          import os
+          import subprocess
+          from pathlib import Path
+
+          owner = os.environ["OWNER"]
+          year = os.environ["YEAR"]
+          script = {
+              "calendar": "populate_scaffold_calendar.py",
+              "ephemeris": "populate_scaffold_ephemeris.py",
+              "planet-finder": "populate_scaffold_planet_finders.py",
+              "artwork": "populate_scaffold_artwork.py",
+          }[owner]
+          paths = [Path(f"year-scaffolds/almanack-{year}.md")]
+          if owner == "planet-finder":
+              paths.extend(sorted(Path(f"planet-finder-descriptors-{year}").glob("W??.json")))
+          if owner == "artwork":
+              paths.extend(sorted(Path(f"artwork-descriptors-{year}").glob("W??.json")))
+          before = [(path, hashlib.sha256(path.read_bytes()).hexdigest()) for path in paths]
+          subprocess.run(["python", script, year], check=True)
+          after = [(path, hashlib.sha256(path.read_bytes()).hexdigest()) for path in paths]
+          assert before == after, f"{owner} generation is not idempotent"
+          print(f"Validated regenerative {owner} output for {year}")
+          PY
+
+      - name: Commit regenerated owner output
+        env:
+          OWNER: ${{ inputs.owner }}
+          YEAR: ${{ inputs.year }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "year-scaffolds/almanack-$YEAR.md"
+          if [ "$OWNER" = planet-finder ]; then git add "planet-finder-descriptors-$YEAR"; fi
+          if [ "$OWNER" = artwork ]; then git add "artwork-descriptors-$YEAR"; fi
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git commit -m "Populate $YEAR scaffold $OWNER sections"
+          git pull --rebase origin main
+          git push origin HEAD:main

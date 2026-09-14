@@ -49,6 +49,7 @@ import argparse
 import csv
 import math
 import re
+import shutil
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -445,11 +446,18 @@ def parse_args() -> argparse.Namespace:
         help="output format (default: svg)",
     )
     parser.add_argument("--dpi", type=int, default=180, help="PNG/SVG save DPI metadata")
+    parser.add_argument(
+        "--replace-output-dir",
+        action="store_true",
+        help="delete and recreate the owned output directory before rendering",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    if args.replace_output_dir and args.out_dir.exists():
+        shutil.rmtree(args.out_dir)
     target = load_target(args.fixed_objects, args.target)
     stars = load_hyg_stars(args.hyg_catalog)
 

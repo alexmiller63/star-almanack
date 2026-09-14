@@ -134,6 +134,21 @@ All generators MUST be idempotent: running the same generator twice with the
 same inputs and selected range must produce byte-for-byte identical owned
 output. CI shall verify this invariant for the integrated Almanack build.
 
+The owner-specific scaffold populators are:
+
+- `populate_scaffold_calendar.py` — Calendar blocks from `calendar-events-YYYY.json`;
+- `populate_scaffold_ephemeris.py` — ephemeris blocks from `weekly-ephemeris-YYYY.csv`;
+- `populate_scaffold_sky_notes.py` — Sky Note blocks and observing descriptors;
+- `populate_scaffold_planet_finders.py` — Planet Finder blocks and descriptors;
+- `populate_scaffold_artwork.py` — Artwork blocks and descriptor handoffs.
+
+The weekly-page publisher owns each complete generated HTML page. Therefore
+`publish_weekly_pages.py` recreates the page shell and its navigation menus,
+`add_greek_latin_toggle.py` adds the notation menu and legend to that clean
+page, and `add_observing_aid_notation.py` extends the notation layer for the
+observing-aid symbols. These publication elements are outside the 5 weekly
+scaffold-owner blocks.
+
 ## Year scaffold generation
 
 The year-scaffold generator accepts a required start year and an optional end
