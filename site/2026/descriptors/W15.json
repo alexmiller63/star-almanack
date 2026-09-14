@@ -70,5 +70,10 @@
       "href": "objects/messier-m105-leo-m105-2026-04-19-239c7d95.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

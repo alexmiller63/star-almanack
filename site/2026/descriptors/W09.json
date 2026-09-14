@@ -70,5 +70,10 @@
       "href": "objects/bayer-cmi-cmi-cmi-procyon-2026-02-27-e0edd81f.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

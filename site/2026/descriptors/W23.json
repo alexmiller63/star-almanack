@@ -70,5 +70,10 @@
       "href": "objects/messier-m53-com-m53-2026-05-26-562d5765.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

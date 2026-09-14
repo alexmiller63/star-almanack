@@ -70,5 +70,10 @@
       "href": "objects/bayer-aps-aps-aps-2026-06-18-0b14416a.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

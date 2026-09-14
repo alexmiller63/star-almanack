@@ -70,5 +70,10 @@
       "href": "objects/bayer-cet-cet-cet-menkar-2026-12-22-7cad3493.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

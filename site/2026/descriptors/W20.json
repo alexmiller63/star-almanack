@@ -70,5 +70,10 @@
       "href": "objects/messier-m61-vir-m61-2026-05-14-1058aa4d.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

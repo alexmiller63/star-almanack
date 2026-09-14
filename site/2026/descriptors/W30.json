@@ -70,5 +70,10 @@
       "href": "objects/bayer-her-her-her-rasalgethi-2026-07-24-95074704.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

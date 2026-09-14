@@ -70,5 +70,10 @@
       "href": "objects/bayer-aql-aql-aql-alshain-2026-09-05-2e253834.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

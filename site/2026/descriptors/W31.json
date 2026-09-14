@@ -70,5 +70,10 @@
       "href": "objects/bayer-ara-ara-ara-2026-07-27-9ac76e1d.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

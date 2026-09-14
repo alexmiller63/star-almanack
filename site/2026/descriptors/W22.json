@@ -70,5 +70,10 @@
       "href": "objects/bayer-com-com-com-2026-05-26-7a0d5446.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

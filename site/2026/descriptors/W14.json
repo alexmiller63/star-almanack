@@ -70,5 +70,10 @@
       "href": "objects/bayer-lyn-lyn-lyn-2026-03-26-76398d9d.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

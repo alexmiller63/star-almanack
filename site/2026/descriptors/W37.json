@@ -70,5 +70,10 @@
       "href": "objects/messier-m27-vul-m27-dumbbell-nebula-2026-09-06-87dc3f17.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

@@ -70,5 +70,10 @@
       "href": "objects/bayer-oct-oct-oct-2026-09-24-813dc80f.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

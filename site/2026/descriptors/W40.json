@@ -70,5 +70,10 @@
       "href": "objects/bayer-cep-cep-cep-alfirk-2026-10-01-da7363b7.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }
