@@ -38,8 +38,7 @@ jobs:
 
       - name: Render W41 finders
         run: |
-          rm -rf observer-views/W41
-          python render_stellar_finders.py /tmp/hygdata_v41.csv --figure all --out-dir observer-views/W41
+          python render_stellar_finders.py /tmp/hygdata_v41.csv --figure all --out-dir observer-views/W41 --replace-output-dir
           python render_aquarius_highlight.py /tmp/hygdata_v41.csv --out-dir observer-views/W41
           python render_enif_bounded.py /tmp/hygdata_v41.csv --out-dir observer-views/W41
 

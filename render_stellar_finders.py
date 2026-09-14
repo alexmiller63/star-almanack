@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render catalog-driven stellar finder charts with constellation figures."""
 from __future__ import annotations
-import argparse, csv, json, math
+import argparse, csv, json, math, shutil
 from dataclasses import dataclass
 from pathlib import Path
 import matplotlib.pyplot as plt
@@ -223,8 +223,23 @@ def render_figure(name,spec,stars,out_dir):
     return outputs
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument("hyg_catalog",type=Path);p.add_argument("--config",type=Path,default=Path("constellation-figures.json"));p.add_argument("--figure",default="all");p.add_argument("--out-dir",type=Path,default=Path("observer-views/W41"));a=p.parse_args()
-    specs=json.loads(a.config.read_text());stars=load_hyg(a.hyg_catalog);names=list(specs) if a.figure.lower()=="all" else [a.figure]
+    p=argparse.ArgumentParser()
+    p.add_argument("hyg_catalog",type=Path)
+    p.add_argument("--config",type=Path,default=Path("constellation-figures.json"))
+    p.add_argument("--figure",default="all")
+    p.add_argument("--out-dir",type=Path,default=Path("observer-views/W41"))
+    p.add_argument(
+        "--replace-output-dir",
+        action="store_true",
+        help="delete and recreate the owned output directory before rendering",
+    )
+    a=p.parse_args()
+    if a.replace_output_dir and a.out_dir.exists():
+        shutil.rmtree(a.out_dir)
+    specs=json.loads(a.config.read_text())
+    stars=load_hyg(a.hyg_catalog)
+    names=list(specs) if a.figure.lower()=="all" else [a.figure]
     for n in names:
-        for out in render_figure(n,specs[n],stars,a.out_dir):print(f"wrote {out}")
+        for out in render_figure(n,specs[n],stars,a.out_dir):
+            print(f"wrote {out}")
 if __name__=="__main__":main()
