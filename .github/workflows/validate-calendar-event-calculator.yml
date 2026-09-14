@@ -38,7 +38,12 @@ jobs:
           import datetime as dt
           import json
           import re
+          import sys
           from pathlib import Path
+
+          sys.path.insert(0, "star-almanack-elp82b")
+          import eclipse_engine
+          import lunar_elp
 
           accepted = Path("ISO2026.md").read_text(encoding="utf-8")
           calculated = json.loads(Path("calendar-events-2026.json").read_text(encoding="utf-8"))
@@ -107,6 +112,28 @@ jobs:
               f"accepted={worst_reference[2].isoformat()} "
               f"signed_difference={signed_phase_error:+.0f}s"
           )
+          print("ELP table contributions at the two First Quarter candidates:")
+          for label, stamp in (
+              ("accepted", worst_reference[2]),
+              ("calculated", dt.datetime.fromisoformat(worst_calculated["utc"].replace("Z", "+00:00"))),
+          ):
+              jd_utc = eclipse_engine.gregorian_to_jd(
+                  stamp.year,
+                  stamp.month,
+                  stamp.day,
+                  (
+                      stamp.hour
+                      + (stamp.minute + stamp.second / 60.0) / 60.0
+                  ) / 24.0,
+              )
+              result = lunar_elp.evaluate(
+                  lunar_elp.load_normalized(Path("star-almanack-elp82b/elp82b-manifest.json")),
+                  eclipse_engine.utc_to_tdb_approx(jd_utc),
+              )
+              print(
+                  f"  {label}: lunar longitude={result.spherical.longitude_rad * 180.0 / 3.141592653589793:.9f}° "
+                  f"table_sums={[round(value, 6) for value in result.table_sums]}"
+              )
           assert max(phase_errors) <= 120, max(phase_errors)
           print(f"2026 regression PASS: ingress max {max(ingress_errors):.0f}s; phase max {max(phase_errors):.0f}s")
           PY
