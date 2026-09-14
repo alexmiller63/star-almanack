@@ -1,0 +1,99 @@
+name: Validate Calendar Event Calculator
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Prepare official ELP2000-82B coefficients
+        working-directory: star-almanack-elp82b
+        run: |
+          python lunar_elp.py bootstrap data/elp82b
+          python lunar_elp.py verify data/elp82b
+          python normalize_elp82b.py data/elp82b elp82b-manifest.json
+
+      - name: Calculate 2026 regression and 2027 events
+        run: |
+          python generate_calendar_events.py 2026
+          python generate_calendar_events.py 2027
+
+      - name: Compare against accepted 2026 calendar
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          import re
+          from pathlib import Path
+
+          accepted = Path("ISO2026.md").read_text(encoding="utf-8")
+          calculated = json.loads(Path("calendar-events-2026.json").read_text(encoding="utf-8"))
+
+          accepted_ingresses = {}
+          for symbol, stamp in re.findall(
+              r"\| (♈|♉|♊|♋|♌|♍|♎|♏|♐|♑|♒|♓) \([^|]+\) \| \d+° \| (2026-\d\d-\d\d \d\d:\d\d:\d\d) \|",
+              accepted,
+          ):
+              accepted_ingresses[symbol] = dt.datetime.fromisoformat(stamp).replace(tzinfo=dt.timezone.utc)
+
+          accepted_phases = []
+          for symbol, name, stamp in re.findall(
+              r"\| ([🌑🌓🌕🌗]) ([^|]+?) \| (2026-\d\d-\d\d \d\d:\d\d:\d\d) \|",
+              accepted,
+          ):
+              accepted_phases.append((symbol, name.strip(), dt.datetime.fromisoformat(stamp).replace(tzinfo=dt.timezone.utc)))
+
+          assert len(accepted_ingresses) == 12
+          assert len(accepted_phases) in range(48, 52)
+          assert len(calculated["zodiac_ingresses"]) == 12
+          assert len(calculated["lunar_phases"]) == len(accepted_phases)
+
+          ingress_errors = []
+          for event in calculated["zodiac_ingresses"]:
+              actual = dt.datetime.fromisoformat(event["utc"].replace("Z", "+00:00"))
+              error = abs((actual - accepted_ingresses[event["symbol"]]).total_seconds())
+              ingress_errors.append(error)
+
+          phase_errors = []
+          for event, reference in zip(calculated["lunar_phases"], accepted_phases):
+              symbol, _, accepted_time = reference
+              assert event["symbol"] == symbol
+              actual = dt.datetime.fromisoformat(event["utc"].replace("Z", "+00:00"))
+              phase_errors.append(abs((actual - accepted_time).total_seconds()))
+
+          assert max(ingress_errors) <= 120, max(ingress_errors)
+          assert max(phase_errors) <= 120, max(phase_errors)
+          print(f"2026 regression PASS: ingress max {max(ingress_errors):.0f}s; phase max {max(phase_errors):.0f}s")
+          PY
+
+      - name: Verify deterministic output
+        run: |
+          sha256sum calendar-events-2026.json calendar-events-2027.json > /tmp/calendar-before.sha256
+          python generate_calendar_events.py 2026
+          python generate_calendar_events.py 2027
+          sha256sum calendar-events-2026.json calendar-events-2027.json > /tmp/calendar-after.sha256
+          diff -u /tmp/calendar-before.sha256 /tmp/calendar-after.sha256
+
+      - name: Commit validated event data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add calendar-events-2026.json calendar-events-2027.json
+          if git diff --cached --quiet; then
+            echo "Calendar event data already current."
+            exit 0
+          fi
+          git commit -m "Calculate 2026-2027 calendar events"
+          git pull --rebase origin main
+          git push origin HEAD:main
