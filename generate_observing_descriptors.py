@@ -139,9 +139,26 @@ def main() -> None:
         week = f"W{number:02d}"
         selected = relevant_rows(rows, number, 6)
         inline = selected[:4]
+        heading = f"## ISO {YEAR}-{week}"
+        section_start = text.find(heading)
+        next_section = re.search(
+            rf"(?m)^## ISO {YEAR}-W\\d{{2}}\\s*$",
+            text[section_start + len(heading):],
+        )
+        section_end = (
+            section_start + len(heading) + next_section.start()
+            if next_section else len(text)
+        )
+        context = text[section_start:section_end].casefold()
+        selected_identity = " ".join(
+            f"{row['object']} {row['name']}" for row in selected
+        ).casefold()
         selected_routes = [
             route for route in routes
-            if sum(route_matches(route, row) for row in selected) >= 2
+            if all(
+                token.casefold() in context or token.casefold() in selected_identity
+                for token in route.get("applies_to", [])
+            )
         ]
         links = []
         items = []
