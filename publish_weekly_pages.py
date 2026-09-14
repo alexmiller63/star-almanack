@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish the expanded 2026 Star Almanack as 53 static weekly HTML pages.
+"""Publish generated Star Almanack scaffolds as static weekly HTML pages.
 
 Input:  almanack-expanded.md
 Output: site/2026/index.html and site/2026/W01..W53/index.html
@@ -13,10 +13,14 @@ paragraphs, bold/emphasis, inline code, and pipe tables.
 from __future__ import annotations
 
 import html
+import argparse
 import re
 import shutil
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
+
+from iso_week_range import IsoWeek, IsoWeekRange
+from scaffold_sections import scaffold_weeks
 
 ROOT = Path(__file__).parent
 SOURCE = ROOT / "almanack-expanded.md"
@@ -103,7 +107,7 @@ def inline_markup(text: str) -> str:
     text = text.replace("\ufe0f", "").replace("\ufe0e", "")
     text = html.escape(text)
     text = re.sub(
-        r"\[([^\]]+)\]\(((?:\.\./)?descriptors/[A-Za-z0-9_./-]+\.json)\)",
+        r"\[([^\]]+)\]\(((?:\.\./)+[A-Za-z0-9_./-]+\.json)\)",
         lambda match: f'<a href="{match.group(2)}">{match.group(1)}</a>',
         text,
     )
@@ -200,8 +204,8 @@ def markdown_fragment(md: str) -> str:
     flush_para(); return "\n".join(out)
 
 
-def page_shell(title: str, body: str, nav: str = "") -> str:
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} · Star Almanack</title><style>{CSS}</style></head><body><header><div class="wrap"><div class="brand"><a href="/almanack/2026/">Star Almanack</a></div><div class="subtitle">Alexander Ferrari Miller</div></div></header><main class="wrap">{nav}{body}{nav}</main><footer><div class="wrap">© 2026 Alexander Ferrari Miller. All rights reserved.</div></footer></body></html>'''
+def page_shell(year: int, title: str, body: str, nav: str = "", brand_href: str = "./") -> str:
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} · Star Almanack</title><style>{CSS}</style></head><body><header><div class="wrap"><div class="brand"><a href="{brand_href}">Star Almanack</a></div><div class="subtitle">Alexander Ferrari Miller</div></div></header><main class="wrap">{nav}{body}{nav}</main><footer><div class="wrap">© {year} Alexander Ferrari Miller. All rights reserved.</div></footer></body></html>'''
 
 
 def week_link(current_year: int, target_year: int, target_week: int, label: str) -> str:
@@ -228,7 +232,81 @@ def week_nav(year: int, week: int, first_year: int, last_year: int) -> str:
     return f'<nav class="weeknav">{prev}<a href="../">All weeks</a>{nxt}</nav>'
 
 
+def week_nav_for_range(year: int, week: int, week_range: IsoWeekRange) -> str:
+    current = IsoWeek(year, week)
+    if current == week_range.first:
+        prev = '<span>← Previous</span>'
+    else:
+        prior_date = current.monday - timedelta(days=7)
+        prior_iso = prior_date.isocalendar()
+        prev = week_link(year, prior_iso.year, prior_iso.week,
+                         f"← {'' if prior_iso.year == year else str(prior_iso.year) + '-'}W{prior_iso.week:02d}")
+    if current == week_range.last:
+        nxt = '<span>Next →</span>'
+    else:
+        next_date = current.monday + timedelta(days=7)
+        next_iso = next_date.isocalendar()
+        nxt = week_link(year, next_iso.year, next_iso.week,
+                        f"{'' if next_iso.year == year else str(next_iso.year) + '-'}W{next_iso.week:02d} →")
+    return f'<nav class="weeknav">{prev}<a href="../">All weeks</a>{nxt}</nav>'
+
+
+def publish_range(week_range: IsoWeekRange, root: Path = ROOT) -> int:
+    total = 0
+    for year, expected_weeks in week_range.by_year().items():
+        source = root / "year-scaffolds" / f"almanack-{year}.md"
+        if not source.exists():
+            raise SystemExit(f"Missing populated scaffold: {source}")
+        text = source.read_text(encoding="utf-8")
+        actual_weeks = scaffold_weeks(text, year)
+        if actual_weeks != expected_weeks:
+            raise SystemExit(f"Scaffold range mismatch for {year}: {actual_weeks} != {expected_weeks}")
+        matches = list(re.finditer(rf"(?m)^## (ISO {year}-W(\d{{2}}))\s*$", text))
+        out = root / "site" / str(year)
+        if out.exists():
+            shutil.rmtree(out)
+        out.mkdir(parents=True)
+        copies = {
+            root / f"observing-descriptors-{year}": out / "descriptors",
+            root / f"planet-finder-descriptors-{year}": out / f"planet-finder-descriptors-{year}",
+            root / f"artwork-descriptors-{year}": out / f"artwork-descriptors-{year}",
+        }
+        for source_dir, target_dir in copies.items():
+            if not source_dir.exists():
+                raise SystemExit(f"Missing published descriptor source: {source_dir}")
+            shutil.copytree(source_dir, target_dir)
+        links = []
+        for index, match in enumerate(matches):
+            week = int(match.group(2))
+            end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+            fragment = markdown_fragment(text[match.start():end].strip())
+            target = out / f"W{week:02d}"
+            target.mkdir()
+            nav = week_nav_for_range(year, week, week_range)
+            (target / "index.html").write_text(
+                page_shell(year, f"ISO {year}-W{week:02d}", fragment, nav, "../"), encoding="utf-8"
+            )
+            links.append(f'<li><a href="W{week:02d}/">ISO {year}-W{week:02d}</a></li>')
+        index_body = f'<h1>{year} Weekly Almanack</h1><p>Select an ISO week.</p><ul class="weekgrid">' + "".join(links) + "</ul>"
+        (out / "index.html").write_text(page_shell(year, f"{year} Weekly Almanack", index_body), encoding="utf-8")
+        total += len(matches)
+        print(f"Published {len(matches)} weekly pages to {out}")
+    return total
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("first_iso_week", nargs="?")
+    parser.add_argument("last_iso_week", nargs="?")
+    parser.add_argument("--root", type=Path, default=ROOT)
+    args = parser.parse_args()
+    if args.first_iso_week:
+        if not args.last_iso_week:
+            raise SystemExit("last_iso_week is required")
+        requested = IsoWeekRange.parse(args.first_iso_week, args.last_iso_week)
+        total = publish_range(requested, args.root)
+        print(f"Published {total} pages for {requested.first} through {requested.last}")
+        return
     text = SOURCE.read_text(encoding="utf-8")
     matches = list(WEEK_RE.finditer(text))
     if len(matches) != 53: raise SystemExit(f"Expected 53 ISO week sections, found {len(matches)}")
@@ -246,10 +324,10 @@ def main() -> None:
             next_h2=H2_RE.search(text, match.end()); end=next_h2.start() if next_h2 else len(text)
         section=text[start:end].strip(); fragment=markdown_fragment(section)
         target=OUT/f"W{week:02d}"; target.mkdir(parents=True)
-        (target/"index.html").write_text(page_shell(f"ISO 2026-W{week:02d}",fragment,week_nav(2026, week, 2026, 2026)),encoding="utf-8")
+        (target/"index.html").write_text(page_shell(2026, f"ISO 2026-W{week:02d}",fragment,week_nav(2026, week, 2026, 2026),"../"),encoding="utf-8")
         week_links.append(f'<li><a href="W{week:02d}/">ISO 2026-W{week:02d}</a></li>')
     index_body='<h1>2026 Weekly Almanack</h1><p>Select an ISO week.</p><ul class="weekgrid">'+"".join(week_links)+"</ul>"
-    (OUT/"index.html").write_text(page_shell("2026 Weekly Almanack",index_body),encoding="utf-8")
+    (OUT/"index.html").write_text(page_shell(2026, "2026 Weekly Almanack",index_body),encoding="utf-8")
     print("Published 53 weekly pages to",OUT)
 
 

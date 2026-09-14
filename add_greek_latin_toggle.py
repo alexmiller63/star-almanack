@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-"""Add the Greek/Latin/Mixed notation teaching layer to the 2026 weekly pages."""
+"""Add the Greek/Latin/Mixed notation teaching layer to published weekly pages."""
+import argparse
 from pathlib import Path
+
+from iso_week_range import IsoWeekRange
 
 ROOT = Path(__file__).parent / "site" / "2026"
 
@@ -52,9 +55,19 @@ def add(path: Path) -> None:
     path.write_text(text, encoding="utf-8")
 
 def main() -> None:
-    pages = sorted(ROOT.glob("W??/index.html"))
-    if len(pages) != 53: raise SystemExit(f"Expected 53 weekly pages, found {len(pages)}")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("first_iso_week", nargs="?")
+    parser.add_argument("last_iso_week", nargs="?")
+    parser.add_argument("--site-root", type=Path, default=Path(__file__).parent / "site")
+    args = parser.parse_args()
+    if args.first_iso_week:
+        requested = IsoWeekRange.parse(args.first_iso_week, args.last_iso_week)
+        pages = [args.site_root / str(item.year) / f"W{item.week:02d}" / "index.html" for item in requested.weeks()]
+    else:
+        pages = sorted(ROOT.glob("W??/index.html"))
+    missing = [page for page in pages if not page.exists()]
+    if missing: raise SystemExit(f"Missing weekly pages: {missing[:5]}")
     for page in pages: add(page)
-    print("Added Greek/Symbols, Latin, and Mixed Learner notation modes with bottom legend to 53 weekly pages")
+    print(f"Added Greek/Symbols, Latin, and Mixed Learner notation modes with bottom legend to {len(pages)} weekly pages")
 
 if __name__ == "__main__": main()

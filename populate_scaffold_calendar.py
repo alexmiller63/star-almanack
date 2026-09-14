@@ -7,7 +7,7 @@ import datetime as dt
 import json
 from pathlib import Path
 
-from scaffold_sections import iso_week_count, replace_owner_blocks, write_atomic
+from scaffold_sections import iso_week_count, replace_owner_blocks, scaffold_weeks, write_atomic
 
 ROOT = Path(__file__).resolve().parent
 SIGN_NAMES = {
@@ -45,10 +45,11 @@ def load_events(source_dir: Path, days: list[dt.date]) -> tuple[list[dict], list
     return ingresses, phases
 
 
-def render_calendar(year: int, source_dir: Path) -> dict[int, str]:
+def render_calendar(year: int, source_dir: Path, weeks: tuple[int, ...] | None = None) -> dict[int, str]:
+    selected = weeks or tuple(range(1, iso_week_count(year) + 1))
     days = [
         dt.date.fromisocalendar(year, week, weekday)
-        for week in range(1, iso_week_count(year) + 1)
+        for week in selected
         for weekday in range(1, 8)
     ]
     ingresses, phases = load_events(source_dir, days)
@@ -66,7 +67,7 @@ def render_calendar(year: int, source_dir: Path) -> dict[int, str]:
         )
 
     rendered: dict[int, str] = {}
-    for week in range(1, iso_week_count(year) + 1):
+    for week in selected:
         rows = []
         for weekday in range(1, 8):
             day = dt.date.fromisocalendar(year, week, weekday)
@@ -90,9 +91,11 @@ def main() -> None:
     scaffold = args.root / "year-scaffolds" / f"almanack-{args.year}.md"
     if not scaffold.exists():
         raise SystemExit(f"Missing scaffold: {scaffold}")
-    blocks = render_calendar(args.year, args.root)
+    text = scaffold.read_text(encoding="utf-8")
+    selected = scaffold_weeks(text, args.year)
+    blocks = render_calendar(args.year, args.root, selected)
     updated = replace_owner_blocks(
-        scaffold.read_text(encoding="utf-8"), args.year, "calendar", blocks.__getitem__
+        text, args.year, "calendar", blocks.__getitem__
     )
     write_atomic(scaffold, updated)
     print(f"Recreated {len(blocks)} Calendar blocks for {args.year}")

@@ -5,11 +5,10 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import shutil
 from pathlib import Path
 
 from populate_scaffold_ephemeris import load_rows
-from scaffold_sections import replace_owner_blocks, write_atomic
+from scaffold_sections import replace_owner_blocks, scaffold_weeks, write_atomic
 
 ROOT = Path(__file__).resolve().parent
 PLANETS = (
@@ -36,11 +35,15 @@ def main() -> None:
     source = args.root / f"weekly-ephemeris-{args.year}.csv"
     if not scaffold.exists() or not source.exists():
         raise SystemExit(f"Missing scaffold or weekly ephemeris for {args.year}")
-    rows = load_rows(source, args.year)
+    text = scaffold.read_text(encoding="utf-8")
+    selected = scaffold_weeks(text, args.year)
+    all_rows = load_rows(source, args.year)
+    missing = sorted(set(selected) - set(all_rows))
+    if missing:
+        raise ValueError(f"Ephemeris is missing scaffold weeks for {args.year}: {missing}")
+    rows = {week: all_rows[week] for week in selected}
     output = args.root / f"planet-finder-descriptors-{args.year}"
-    if output.exists():
-        shutil.rmtree(output)
-    output.mkdir(parents=True)
+    output.mkdir(parents=True, exist_ok=True)
     blocks: dict[int, str] = {}
     for week, row in rows.items():
         week_id = f"W{week:02d}"
@@ -64,7 +67,7 @@ def main() -> None:
             f"(../planet-finder-descriptors-{args.year}/{week_id}.json)"
         )
     updated = replace_owner_blocks(
-        scaffold.read_text(encoding="utf-8"), args.year, "planet-finder", blocks.__getitem__
+        text, args.year, "planet-finder", blocks.__getitem__
     )
     write_atomic(scaffold, updated)
     print(f"Recreated {len(blocks)} Planet Finder blocks and descriptors for {args.year}")

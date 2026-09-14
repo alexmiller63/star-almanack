@@ -92,6 +92,10 @@ class ScaffoldPopulationTests(unittest.TestCase):
                 "descriptors": [{"week": "W01", "constellation": "Orion",
                                  "figure_source": "constellation-figures.json"}],
             }), encoding="utf-8")
+            for directory in (root / f"planet-finder-descriptors-{year}",
+                              root / f"artwork-descriptors-{year}"):
+                directory.mkdir()
+                (directory / "preserved.json").write_text('{"curated": true}\n', encoding="utf-8")
             scripts = ("populate_scaffold_calendar.py", "populate_scaffold_ephemeris.py",
                        "populate_scaffold_planet_finders.py", "populate_scaffold_artwork.py")
             for script in scripts:
@@ -108,6 +112,8 @@ class ScaffoldPopulationTests(unittest.TestCase):
             self.assertEqual(text.count("**Snapshot:**"), iso_week_count(year))
             self.assertEqual(len(list((root / f"planet-finder-descriptors-{year}").glob("W??.json"))), iso_week_count(year))
             self.assertEqual(len(list((root / f"artwork-descriptors-{year}").glob("W??.json"))), iso_week_count(year))
+            self.assertTrue((root / f"planet-finder-descriptors-{year}" / "preserved.json").exists())
+            self.assertTrue((root / f"artwork-descriptors-{year}" / "preserved.json").exists())
 
 
 if __name__ == "__main__":

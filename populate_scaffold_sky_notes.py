@@ -8,8 +8,9 @@ import datetime as dt
 import hashlib
 import json
 import re
-import shutil
 from pathlib import Path
+
+from scaffold_sections import scaffold_weeks, write_atomic
 
 ROOT = Path(__file__).resolve().parent
 BEGIN = "<!-- BEGIN GENERATED: sky-note -->"
@@ -55,7 +56,8 @@ def replace_block(text: str, year: int, week: int, body: str) -> str:
     start = text.find(heading)
     if start < 0:
         raise RuntimeError(f"Missing {heading}")
-    next_heading = text.find(f"## ISO {year}-W{week + 1:02d}", start) if week < week_count(year) else len(text)
+    next_match = re.search(rf"(?m)^## ISO {year}-W\d{{2}}\s*$", text[start + len(heading):])
+    next_heading = start + len(heading) + next_match.start() if next_match else len(text)
     section = text[start:next_heading]
     begin = section.find(BEGIN)
     end = section.find(END)
@@ -70,12 +72,13 @@ def replace_block(text: str, year: int, week: int, body: str) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("year", type=int)
+    parser.add_argument("--root", type=Path, default=ROOT)
     args = parser.parse_args()
     year = args.year
-    scaffold = ROOT / "year-scaffolds" / f"almanack-{year}.md"
-    source = ROOT / f"fixed-object-sky-notes-{year}.csv"
-    routes_source = ROOT / "curated-observing-routes.json"
-    out = ROOT / f"observing-descriptors-{year}"
+    scaffold = args.root / "year-scaffolds" / f"almanack-{year}.md"
+    source = args.root / f"fixed-object-sky-notes-{year}.csv"
+    routes_source = args.root / "curated-observing-routes.json"
+    out = args.root / f"observing-descriptors-{year}"
     if not scaffold.exists() or not source.exists():
         raise SystemExit(f"Missing scaffold or fixed-object source for {year}")
 
@@ -83,12 +86,10 @@ def main() -> None:
         rows = list(csv.DictReader(handle))
     routes = json.loads(routes_source.read_text(encoding="utf-8")).get("routes", [])
 
-    if out.exists():
-        shutil.rmtree(out)
     objects_dir = out / "objects"
     routes_dir = out / "routes"
-    objects_dir.mkdir(parents=True)
-    routes_dir.mkdir(parents=True)
+    objects_dir.mkdir(parents=True, exist_ok=True)
+    routes_dir.mkdir(parents=True, exist_ok=True)
     hrefs: dict[int, str] = {}
 
     for index, row in enumerate(rows):
@@ -121,7 +122,8 @@ def main() -> None:
         )
 
     text = scaffold.read_text(encoding="utf-8")
-    for week in range(1, week_count(year) + 1):
+    selected_weeks = scaffold_weeks(text, year)
+    for week in selected_weeks:
         choices = selected(rows, year, week)
         identities = " ".join(f"{row['object']} {row['name']}" for row in choices).casefold()
         chosen_routes = [
@@ -170,8 +172,8 @@ def main() -> None:
         )
         text = replace_block(text, year, week, "\n\n".join(paragraphs))
 
-    scaffold.write_text(text, encoding="utf-8")
-    print(f"Recreated {week_count(year)} Sky Note blocks and descriptor indexes for {year}")
+    write_atomic(scaffold, text)
+    print(f"Recreated {len(selected_weeks)} Sky Note blocks and descriptor indexes for {year}")
 
 
 if __name__ == "__main__":

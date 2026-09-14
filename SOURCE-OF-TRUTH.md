@@ -111,20 +111,25 @@ Here `Tropical` is the Declination Band and `Autumn` is the Season.
 
 ## Regenerative generator ownership
 
-Every generated artifact is disposable. A generator owns a precisely bounded
-section or output directory and MUST discard that owned output before rebuilding
-it solely from authoritative inputs. Generated Markdown, HTML, JSON, SVG, and
-other rendered output MUST NOT be treated as source for the next run.
+A generator owns a precisely bounded section or published output tree and MUST
+discard that owned rendered output before rebuilding it solely from authoritative
+inputs. Generated Markdown sections and published HTML MUST NOT be treated as
+source for the next run.
+
+Machine-readable descriptors are durable source records. Generators update the
+requested descriptor files atomically and MUST NOT destroy a descriptor directory
+or remove unrelated descriptor records.
 
 For a selected ISO-week range, destruction is limited to the selected owners:
 
 - the Calendar Generator recreates each selected Calendar section;
 - the Ephemeris Generator recreates each selected ephemeris section;
-- the Sky Notes Generator recreates each selected Sky Note section, including
-  its descriptor relationships and links;
-- the Planet Finder Generator recreates each selected finder section and its
-  owned files;
-- the Artwork Generator recreates each selected artwork directory.
+- the Sky Notes Generator recreates each selected Sky Note section and updates
+  its requested descriptor relationships and links;
+- the Planet Finder Generator recreates each selected finder section and updates
+  its requested descriptors;
+- the Artwork Generator recreates each selected artwork section and updates its
+  requested descriptor handoffs.
 
 A missing or invalid authoritative input MUST stop generation. It MUST NOT cause
 old generated output to be retained as a fallback. Publication happens only
@@ -149,20 +154,22 @@ page, and `add_observing_aid_notation.py` extends the notation layer for the
 observing-aid symbols. These publication elements are outside the 5 weekly
 scaffold-owner blocks.
 
-## Year scaffold generation
+## ISO-week range generation
 
-The year-scaffold generator accepts a required start year and an optional end
-year. A blank end year means the start year only. When supplied, the end year
-is inclusive and MUST NOT be earlier than the start year.
+The integrated generator accepts a required first ISO week and last ISO week in
+`YYYY-Www` form. Both boundaries are inclusive. The last week MUST NOT precede
+the first, and a week number is valid only when it exists in its ISO year.
 
-For each requested year, the generator derives the valid ISO week count and all
-Monday-through-Sunday civil-date boundaries from ISO 8601 rules. It MUST
-recreate that year's scaffold from those rules, never by copying a previously
-generated year. Every weekly scaffold exposes the 5 canonical owned slots:
+For each year touched by the range, the generator derives the selected weeks and
+their Monday-through-Sunday civil-date boundaries from ISO 8601 rules. It MUST
+recreate that year's selected scaffold from those rules, never by copying a
+previously generated year. Every weekly scaffold exposes the 5 canonical owned slots:
 Calendar, Ephemeris, Sky Note, Planet Finder, and Artwork.
 
-A range run treats each year independently. Repeating a run with identical
-inputs MUST produce byte-for-byte identical scaffolds.
+A range run treats each year independently. `Build Everything` runs the complete
+dependency chain, page publication, notation menu, and legend. Debug image
+renderers are excluded. Repeating a run with identical inputs MUST produce
+byte-for-byte identical generated output without deleting descriptor records.
 
 ## Maintenance rule
 

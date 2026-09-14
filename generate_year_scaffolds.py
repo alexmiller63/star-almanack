@@ -6,6 +6,8 @@ import argparse
 import datetime as dt
 from pathlib import Path
 
+from iso_week_range import IsoWeekRange, range_from_legacy_years
+
 ROOT = Path(__file__).resolve().parent
 OWNED_SECTIONS = (
     ("calendar", "Calendar"),
@@ -33,8 +35,8 @@ def section(owner: str, title: str) -> str:
     )
 
 
-def render_year(year: int) -> str:
-    week_count = iso_week_count(year)
+def render_year(year: int, weeks: tuple[int, ...] | None = None) -> str:
+    selected = weeks or tuple(range(1, iso_week_count(year) + 1))
     parts = [
         f"# Star Almanack — ISO {year}",
         "",
@@ -46,9 +48,9 @@ def render_year(year: int) -> str:
             "marked sections."
         ),
         "",
-        f"**ISO weeks:** {week_count}",
+        f"**ISO weeks:** {len(selected)}",
     ]
-    for week in range(1, week_count + 1):
+    for week in selected:
         monday = dt.date.fromisocalendar(year, week, 1)
         sunday = dt.date.fromisocalendar(year, week, 7)
         parts.extend(
@@ -86,17 +88,34 @@ def generate(start_year: int, end_year: int | None, output_dir: Path) -> list[Pa
     return written
 
 
+def generate_range(week_range: IsoWeekRange, output_dir: Path) -> list[Path]:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    written = []
+    for year, weeks in week_range.by_year().items():
+        target = output_dir / f"almanack-{year}.md"
+        temporary = target.with_suffix(".md.tmp")
+        temporary.write_text(render_year(year, weeks), encoding="utf-8")
+        temporary.replace(target)
+        written.append(target)
+        print(f"Recreated {target.relative_to(ROOT)} for {year}-W{weeks[0]:02d} through {year}-W{weeks[-1]:02d}")
+    return written
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("start_year", type=int)
-    parser.add_argument("end_year", type=int, nargs="?")
+    parser.add_argument("first", help="First ISO week (YYYY-Www), or legacy start year")
+    parser.add_argument("last", nargs="?", help="Last ISO week (YYYY-Www), or legacy end year")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "year-scaffolds")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
-    generate(args.start_year, args.end_year, args.output_dir)
+    if "-W" in args.first:
+        generate_range(IsoWeekRange.parse(args.first, args.last), args.output_dir)
+    else:
+        legacy = range_from_legacy_years(int(args.first), int(args.last) if args.last else None)
+        generate_range(legacy, args.output_dir)
 
 
 if __name__ == "__main__":

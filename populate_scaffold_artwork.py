@@ -4,10 +4,9 @@ from __future__ import annotations
 
 import argparse
 import json
-import shutil
 from pathlib import Path
 
-from scaffold_sections import iso_week_count, replace_owner_blocks, write_atomic
+from scaffold_sections import iso_week_count, replace_owner_blocks, scaffold_weeks, write_atomic
 
 ROOT = Path(__file__).resolve().parent
 
@@ -31,12 +30,12 @@ def main() -> None:
             raise ValueError(f"Invalid artwork descriptor week: {week!r}")
         by_week.setdefault(week, []).append(descriptor)
 
+    text = scaffold.read_text(encoding="utf-8")
+    selected = scaffold_weeks(text, args.year)
     output = args.root / f"artwork-descriptors-{args.year}"
-    if output.exists():
-        shutil.rmtree(output)
-    output.mkdir(parents=True)
+    output.mkdir(parents=True, exist_ok=True)
     blocks: dict[int, str] = {}
-    for week in range(1, iso_week_count(args.year) + 1):
+    for week in selected:
         week_id = f"W{week:02d}"
         descriptors = by_week.get(week_id, [])
         week_payload = {
@@ -61,7 +60,7 @@ def main() -> None:
                 f"(../artwork-descriptors-{args.year}/{week_id}.json)"
             )
     updated = replace_owner_blocks(
-        scaffold.read_text(encoding="utf-8"), args.year, "artwork", blocks.__getitem__
+        text, args.year, "artwork", blocks.__getitem__
     )
     write_atomic(scaffold, updated)
     print(f"Recreated {len(blocks)} Artwork blocks and descriptor files for {args.year}")

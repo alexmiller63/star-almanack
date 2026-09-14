@@ -7,7 +7,7 @@ import csv
 import datetime as dt
 from pathlib import Path
 
-from scaffold_sections import iso_week_count, replace_owner_blocks, write_atomic
+from scaffold_sections import replace_owner_blocks, scaffold_weeks, write_atomic
 
 ROOT = Path(__file__).resolve().parent
 PRIMARY = (("☉ Sun", "sun"), ("☽ Moon", "moon"), ("☿ Mercury", "mercury"),
@@ -31,14 +31,19 @@ def load_rows(path: Path, year: int) -> dict[int, dict[str, str]]:
     if not rows or not required_fields.issubset(rows[0]):
         raise ValueError(f"Missing required ephemeris columns in {path}")
     result: dict[int, dict[str, str]] = {}
-    for week, row in enumerate(rows, 1):
+    for row in rows:
+        try:
+            key_year, week_text = row["iso_week"].split("-W")
+            week = int(week_text)
+        except (ValueError, KeyError) as exc:
+            raise ValueError(f"Invalid ephemeris ISO week: {row.get('iso_week')!r}") from exc
+        if int(key_year) != year or week in result:
+            raise ValueError(f"Unexpected or duplicate ephemeris week: {row['iso_week']}")
         expected_key = f"{year}-W{week:02d}"
         expected_date = dt.date.fromisocalendar(year, week, 1).isoformat()
         if row["iso_week"] != expected_key or row["monday_utc"] != expected_date:
             raise ValueError(f"Unexpected ephemeris row {week}: {row['iso_week']}, {row['monday_utc']}")
         result[week] = row
-    if len(result) != iso_week_count(year):
-        raise ValueError(f"Expected {iso_week_count(year)} ephemeris rows for {year}, found {len(result)}")
     return result
 
 
@@ -51,7 +56,12 @@ def main() -> None:
     source = args.root / f"weekly-ephemeris-{args.year}.csv"
     if not scaffold.exists() or not source.exists():
         raise SystemExit(f"Missing scaffold or weekly ephemeris for {args.year}")
+    text = scaffold.read_text(encoding="utf-8")
+    selected = scaffold_weeks(text, args.year)
     rows = load_rows(source, args.year)
+    missing = sorted(set(selected) - set(rows))
+    if missing:
+        raise ValueError(f"Ephemeris is missing scaffold weeks for {args.year}: {missing}")
 
     def render(week: int) -> str:
         row = rows[week]
@@ -64,10 +74,10 @@ def main() -> None:
         )
 
     updated = replace_owner_blocks(
-        scaffold.read_text(encoding="utf-8"), args.year, "ephemeris", render
+        text, args.year, "ephemeris", render
     )
     write_atomic(scaffold, updated)
-    print(f"Recreated {len(rows)} ephemeris blocks for {args.year}")
+    print(f"Recreated {len(selected)} ephemeris blocks for {args.year}")
 
 
 if __name__ == "__main__":

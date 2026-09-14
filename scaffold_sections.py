@@ -12,6 +12,15 @@ def iso_week_count(year: int) -> int:
     return dt.date(year, 12, 28).isocalendar().week
 
 
+def scaffold_weeks(text: str, year: int) -> tuple[int, ...]:
+    weeks = tuple(int(value) for value in re.findall(rf"(?m)^## ISO {year}-W(\d{{2}})\s*$", text))
+    if not weeks:
+        raise RuntimeError(f"No ISO {year} week sections found")
+    if len(weeks) != len(set(weeks)) or tuple(sorted(weeks)) != weeks:
+        raise RuntimeError(f"ISO {year} scaffold weeks must be unique and ordered")
+    return weeks
+
+
 def replace_owner_blocks(
     text: str,
     year: int,
@@ -21,9 +30,9 @@ def replace_owner_blocks(
     """Replace every block owned by *owner*, leaving all other bytes alone."""
     begin = f"<!-- BEGIN GENERATED: {owner} -->"
     end = f"<!-- END GENERATED: {owner} -->"
-    weeks = iso_week_count(year)
+    weeks = scaffold_weeks(text, year)
 
-    for week in range(1, weeks + 1):
+    for week in weeks:
         heading = f"## ISO {year}-W{week:02d}"
         start = text.find(heading)
         if start < 0:
@@ -41,7 +50,7 @@ def replace_owner_blocks(
         section = section[:block_start] + replacement + section[block_end:]
         text = text[:start] + section + text[stop:]
 
-    if text.count(begin) != weeks or text.count(end) != weeks:
+    if text.count(begin) != len(weeks) or text.count(end) != len(weeks):
         raise RuntimeError(f"Unexpected {owner} ownership-marker count for {year}")
     return text
 
