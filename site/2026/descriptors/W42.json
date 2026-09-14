@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W42",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "α Gru — Alnair",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-1",
+      "href": "objects/bayer-gru-gru-gru-alnair-2026-10-12-a41b02cb.json"
+    },
+    {
+      "display_name": "α Tuc",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-4",
+      "href": "objects/bayer-tuc-tuc-tuc-2026-10-15-a1bd3069.json"
+    },
+    {
+      "display_name": "β Lac",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-5",
+      "href": "objects/bayer-lac-lac-lac-2026-10-16-9896c855.json"
+    },
+    {
+      "display_name": "α Lac",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-7",
+      "href": "objects/bayer-lac-lac-lac-2026-10-18-a233f0f3.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Gru — Alnair",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-1",
+      "href": "objects/bayer-gru-gru-gru-alnair-2026-10-12-a41b02cb.json"
+    },
+    {
+      "display_name": "α Tuc",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-4",
+      "href": "objects/bayer-tuc-tuc-tuc-2026-10-15-a1bd3069.json"
+    },
+    {
+      "display_name": "β Lac",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-5",
+      "href": "objects/bayer-lac-lac-lac-2026-10-16-9896c855.json"
+    },
+    {
+      "display_name": "α Lac",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-7",
+      "href": "objects/bayer-lac-lac-lac-2026-10-18-a233f0f3.json"
+    },
+    {
+      "display_name": "β PsA",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W42-7",
+      "href": "objects/bayer-psa-psa-psa-2026-10-18-4c434519.json"
+    },
+    {
+      "display_name": "α Aqr — Sadalmelik",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W41-7",
+      "href": "objects/bayer-aqr-aqr-aqr-sadalmelik-2026-10-11-28291ff7.json"
+    }
+  ],
+  "curated_routes": []
+}

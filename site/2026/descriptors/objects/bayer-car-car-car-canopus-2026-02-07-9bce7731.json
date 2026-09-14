@@ -1,0 +1,22 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W06-6",
+  "best_visibility_date": "2026-02-07",
+  "identity": {
+    "category": "bayer",
+    "designation": "α Car",
+    "display_name": "α Car — Canopus",
+    "constellation": "Car"
+  },
+  "context": {
+    "in_visible_milky_way": false
+  },
+  "observing": {
+    "naked_eye": "Bright and easy to see unaided; use Canopus as a primary landmark for the surrounding constellation.",
+    "binoculars": "Binoculars isolate the star from the surrounding pattern and make star-hopping easier.",
+    "telescope": "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
+  },
+  "relationships": [],
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

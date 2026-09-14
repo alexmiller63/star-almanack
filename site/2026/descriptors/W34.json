@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W34",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M11 — Wild Duck Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-2",
+      "href": "objects/messier-m11-sct-m11-wild-duck-cluster-2026-08-18-76e16199.json"
+    },
+    {
+      "display_name": "M57 — Ring Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-3",
+      "href": "objects/messier-m57-lyr-m57-ring-nebula-2026-08-19-6f2cdae3.json"
+    },
+    {
+      "display_name": "M26",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-1",
+      "href": "objects/messier-m26-sct-m26-2026-08-17-5f705469.json"
+    },
+    {
+      "display_name": "M54",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-4",
+      "href": "objects/messier-m54-sgr-m54-2026-08-20-ce836bbc.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M11 — Wild Duck Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-2",
+      "href": "objects/messier-m11-sct-m11-wild-duck-cluster-2026-08-18-76e16199.json"
+    },
+    {
+      "display_name": "M57 — Ring Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-3",
+      "href": "objects/messier-m57-lyr-m57-ring-nebula-2026-08-19-6f2cdae3.json"
+    },
+    {
+      "display_name": "M26",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-1",
+      "href": "objects/messier-m26-sct-m26-2026-08-17-5f705469.json"
+    },
+    {
+      "display_name": "M54",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-4",
+      "href": "objects/messier-m54-sgr-m54-2026-08-20-ce836bbc.json"
+    },
+    {
+      "display_name": "β Lyr — Sheliak",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-2",
+      "href": "objects/bayer-lyr-lyr-lyr-sheliak-2026-08-18-e1344040.json"
+    },
+    {
+      "display_name": "α CrA — Alfecca Meridiana",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W34-7",
+      "href": "objects/bayer-cra-cra-cra-alfecca-meridiana-2026-08-23-a29acf2f.json"
+    }
+  ],
+  "curated_routes": []
+}

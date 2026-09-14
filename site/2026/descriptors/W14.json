@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W14",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M81 — Bode's Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json"
+    },
+    {
+      "display_name": "M82 — Cigar Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m82-uma-m82-cigar-galaxy-2026-04-05-b22924a4.json"
+    },
+    {
+      "display_name": "β Car — Miaplacidus",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W13-2",
+      "href": "objects/bayer-car-car-car-miaplacidus-2026-03-24-61fad61e.json"
+    },
+    {
+      "display_name": "α Hya — Alphard",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W13-6",
+      "href": "objects/bayer-hya-hya-hya-alphard-2026-03-28-c3447e24.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M81 — Bode's Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json"
+    },
+    {
+      "display_name": "M82 — Cigar Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W14-7",
+      "href": "objects/messier-m82-uma-m82-cigar-galaxy-2026-04-05-b22924a4.json"
+    },
+    {
+      "display_name": "β Car — Miaplacidus",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W13-2",
+      "href": "objects/bayer-car-car-car-miaplacidus-2026-03-24-61fad61e.json"
+    },
+    {
+      "display_name": "α Hya — Alphard",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W13-6",
+      "href": "objects/bayer-hya-hya-hya-alphard-2026-03-28-c3447e24.json"
+    },
+    {
+      "display_name": "α Leo — Regulus",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W15-3",
+      "href": "objects/bayer-leo-leo-leo-regulus-2026-04-08-051e70a8.json"
+    },
+    {
+      "display_name": "α Lyn",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W13-4",
+      "href": "objects/bayer-lyn-lyn-lyn-2026-03-26-76398d9d.json"
+    }
+  ],
+  "curated_routes": []
+}

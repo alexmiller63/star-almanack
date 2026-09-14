@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W22",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M63 — Sunflower Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-3",
+      "href": "objects/messier-m63-cvn-m63-sunflower-galaxy-2026-05-27-b2ad9fc5.json"
+    },
+    {
+      "display_name": "M51 — Whirlpool Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-7",
+      "href": "objects/messier-m51-cvn-m51-whirlpool-galaxy-2026-05-31-a14ee142.json"
+    },
+    {
+      "display_name": "M53",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-2",
+      "href": "objects/messier-m53-com-m53-2026-05-26-562d5765.json"
+    },
+    {
+      "display_name": "α Com — Diadem",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-2",
+      "href": "objects/bayer-com-com-com-diadem-2026-05-26-ea8c82a5.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M63 — Sunflower Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-3",
+      "href": "objects/messier-m63-cvn-m63-sunflower-galaxy-2026-05-27-b2ad9fc5.json"
+    },
+    {
+      "display_name": "M51 — Whirlpool Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-7",
+      "href": "objects/messier-m51-cvn-m51-whirlpool-galaxy-2026-05-31-a14ee142.json"
+    },
+    {
+      "display_name": "M53",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-2",
+      "href": "objects/messier-m53-com-m53-2026-05-26-562d5765.json"
+    },
+    {
+      "display_name": "α Com — Diadem",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-2",
+      "href": "objects/bayer-com-com-com-diadem-2026-05-26-ea8c82a5.json"
+    },
+    {
+      "display_name": "α Vir — Spica",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-5",
+      "href": "objects/bayer-vir-vir-vir-spica-2026-05-29-e62757e5.json"
+    },
+    {
+      "display_name": "β Com",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W22-2",
+      "href": "objects/bayer-com-com-com-2026-05-26-7a0d5446.json"
+    }
+  ],
+  "curated_routes": []
+}

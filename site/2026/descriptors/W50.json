@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W50",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "α Tri — Mothallah",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-1",
+      "href": "objects/bayer-tri-tri-tri-mothallah-2026-12-07-c5e038a8.json"
+    },
+    {
+      "display_name": "β Ari — Sheratan",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-1",
+      "href": "objects/bayer-ari-ari-ari-sheratan-2026-12-07-28075713.json"
+    },
+    {
+      "display_name": "α Hyi — Head of Hydrus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-2",
+      "href": "objects/bayer-hyi-hyi-hyi-head-of-hydrus-2026-12-08-c52a6c23.json"
+    },
+    {
+      "display_name": "α Psc — Alrescha",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-3",
+      "href": "objects/bayer-psc-psc-psc-alrescha-2026-12-09-f63f52df.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Tri — Mothallah",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-1",
+      "href": "objects/bayer-tri-tri-tri-mothallah-2026-12-07-c5e038a8.json"
+    },
+    {
+      "display_name": "β Ari — Sheratan",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-1",
+      "href": "objects/bayer-ari-ari-ari-sheratan-2026-12-07-28075713.json"
+    },
+    {
+      "display_name": "α Hyi — Head of Hydrus",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-2",
+      "href": "objects/bayer-hyi-hyi-hyi-head-of-hydrus-2026-12-08-c52a6c23.json"
+    },
+    {
+      "display_name": "α Psc — Alrescha",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-3",
+      "href": "objects/bayer-psc-psc-psc-alrescha-2026-12-09-f63f52df.json"
+    },
+    {
+      "display_name": "α Ari — Hamal",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-4",
+      "href": "objects/bayer-ari-ari-ari-hamal-2026-12-10-1b858435.json"
+    },
+    {
+      "display_name": "β Tri",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W50-4",
+      "href": "objects/bayer-tri-tri-tri-2026-12-10-8313454c.json"
+    }
+  ],
+  "curated_routes": []
+}

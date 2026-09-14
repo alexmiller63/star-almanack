@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W45",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "β Scl",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W45-2",
+      "href": "objects/bayer-scl-scl-scl-2026-11-03-2a2cc659.json"
+    },
+    {
+      "display_name": "M52",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W44-7",
+      "href": "objects/messier-m52-cas-m52-2026-11-01-744a9724.json"
+    },
+    {
+      "display_name": "α Peg — Markab",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W44-2",
+      "href": "objects/bayer-peg-peg-peg-markab-2026-10-27-23c4bb0c.json"
+    },
+    {
+      "display_name": "β Peg — Scheat",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W44-2",
+      "href": "objects/bayer-peg-peg-peg-scheat-2026-10-27-0c3e5c37.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "β Scl",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W45-2",
+      "href": "objects/bayer-scl-scl-scl-2026-11-03-2a2cc659.json"
+    },
+    {
+      "display_name": "M52",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W44-7",
+      "href": "objects/messier-m52-cas-m52-2026-11-01-744a9724.json"
+    },
+    {
+      "display_name": "α Peg — Markab",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W44-2",
+      "href": "objects/bayer-peg-peg-peg-markab-2026-10-27-23c4bb0c.json"
+    },
+    {
+      "display_name": "β Peg — Scheat",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W44-2",
+      "href": "objects/bayer-peg-peg-peg-scheat-2026-10-27-0c3e5c37.json"
+    },
+    {
+      "display_name": "β Psc — Fumalsamakah",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W44-2",
+      "href": "objects/bayer-psc-psc-psc-fumalsamakah-2026-10-27-10757e2d.json"
+    },
+    {
+      "display_name": "α And — Alpheratz",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W46-4",
+      "href": "objects/bayer-and-and-and-alpheratz-2026-11-12-c6121f64.json"
+    }
+  ],
+  "curated_routes": []
+}

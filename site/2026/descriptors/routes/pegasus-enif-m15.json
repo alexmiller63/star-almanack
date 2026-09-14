@@ -1,0 +1,39 @@
+{
+  "schema": "star-almanack.observing-route.v1",
+  "id": "pegasus-enif-m15",
+  "title": "Pegasus neck through Enif to M15",
+  "applies_to": [
+    "Enif",
+    "M15"
+  ],
+  "equipment": [
+    "naked_eye",
+    "binoculars",
+    "small_telescope"
+  ],
+  "relationships": [
+    {
+      "from": "Great Square of Pegasus",
+      "via": [
+        "Markab",
+        "Homam",
+        "Biham",
+        "Enif"
+      ],
+      "to": "M15"
+    }
+  ],
+  "human_guidance": "Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.",
+  "sources": [
+    {
+      "name": "EarthSky — Pegasus the Flying Horse",
+      "url": "https://earthsky.org/constellations/pegasus-the-winged-horse-autumn-skies/",
+      "supports": "The established Markab–Homam–Biham–Enif continuation to M15."
+    },
+    {
+      "name": "NASA Science — Messier 15",
+      "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-15/",
+      "supports": "M15 identity, Pegasus location, binocular visibility, and observing season."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W05-1",
+  "best_visibility_date": "2026-01-26",
+  "identity": {
+    "category": "messier",
+    "designation": "M42",
+    "display_name": "M42 — Great Nebula in Orion",
+    "constellation": "Ori"
+  },
+  "context": {
+    "in_visible_milky_way": false
+  },
+  "observing": {
+    "naked_eye": "Visible unaided as the hazy middle 'star' of Orion's Sword beneath the Belt.",
+    "binoculars": "Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification.",
+    "telescope": "Use low to moderate power to trace the nebular form; a suitable narrowband nebula filter can improve contrast on emission-rich regions."
+  },
+  "relationships": [],
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

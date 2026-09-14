@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W48",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "β And — Mirach",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W48-5",
+      "href": "objects/bayer-and-and-and-mirach-2026-11-27-132b02e8.json"
+    },
+    {
+      "display_name": "α Scl",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W48-2",
+      "href": "objects/bayer-scl-scl-scl-2026-11-24-95efcbc3.json"
+    },
+    {
+      "display_name": "β Phe",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W48-4",
+      "href": "objects/bayer-phe-phe-phe-2026-11-26-a144ca93.json"
+    },
+    {
+      "display_name": "M31 — Andromeda Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/messier-m31-and-m31-andromeda-galaxy-2026-11-20-0c4146dd.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "β And — Mirach",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W48-5",
+      "href": "objects/bayer-and-and-and-mirach-2026-11-27-132b02e8.json"
+    },
+    {
+      "display_name": "α Scl",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W48-2",
+      "href": "objects/bayer-scl-scl-scl-2026-11-24-95efcbc3.json"
+    },
+    {
+      "display_name": "β Phe",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W48-4",
+      "href": "objects/bayer-phe-phe-phe-2026-11-26-a144ca93.json"
+    },
+    {
+      "display_name": "M31 — Andromeda Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W47-5",
+      "href": "objects/messier-m31-and-m31-andromeda-galaxy-2026-11-20-0c4146dd.json"
+    },
+    {
+      "display_name": "M33 — Triangulum Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W49-3",
+      "href": "objects/messier-m33-tri-m33-triangulum-galaxy-2026-12-02-d44b502c.json"
+    },
+    {
+      "display_name": "M76 — Little Dumbbell Nebula",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W49-5",
+      "href": "objects/messier-m76-per-m76-little-dumbbell-nebula-2026-12-04-95a6ca8a.json"
+    }
+  ],
+  "curated_routes": []
+}

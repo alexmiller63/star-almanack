@@ -1,0 +1,22 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W04-6",
+  "best_visibility_date": "2026-01-24",
+  "identity": {
+    "category": "messier",
+    "designation": "M79",
+    "display_name": "M79",
+    "constellation": "Lep"
+  },
+  "context": {
+    "in_visible_milky_way": false
+  },
+  "observing": {
+    "naked_eye": "Not normally a naked-eye target; use the surrounding star pattern to reach its position.",
+    "binoculars": "Appears as a compact, round glow with a brighter center; steady binocular support improves detection.",
+    "telescope": "Moderate to high power concentrates the core and, with sufficient aperture and good seeing, begins to resolve stars around the outskirts."
+  },
+  "relationships": [],
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

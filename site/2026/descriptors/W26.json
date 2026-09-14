@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W26",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M102 — Spindle Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-2",
+      "href": "objects/messier-m102-dra-m102-spindle-galaxy-2026-06-23-0596629e.json"
+    },
+    {
+      "display_name": "M5",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-5",
+      "href": "objects/messier-m5-ser-m5-2026-06-26-45b25479.json"
+    },
+    {
+      "display_name": "β Boo — Nekkar",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-1",
+      "href": "objects/bayer-boo-boo-boo-nekkar-2026-06-22-65e55fdc.json"
+    },
+    {
+      "display_name": "β Lib — Zubeneschamali",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-4",
+      "href": "objects/bayer-lib-lib-lib-zubeneschamali-2026-06-25-ba5fcae6.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M102 — Spindle Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-2",
+      "href": "objects/messier-m102-dra-m102-spindle-galaxy-2026-06-23-0596629e.json"
+    },
+    {
+      "display_name": "M5",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-5",
+      "href": "objects/messier-m5-ser-m5-2026-06-26-45b25479.json"
+    },
+    {
+      "display_name": "β Boo — Nekkar",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-1",
+      "href": "objects/bayer-boo-boo-boo-nekkar-2026-06-22-65e55fdc.json"
+    },
+    {
+      "display_name": "β Lib — Zubeneschamali",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-4",
+      "href": "objects/bayer-lib-lib-lib-zubeneschamali-2026-06-25-ba5fcae6.json"
+    },
+    {
+      "display_name": "β CrB — Nusakan",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-7",
+      "href": "objects/bayer-crb-crb-crb-nusakan-2026-06-28-903b2370.json"
+    },
+    {
+      "display_name": "β Cir",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W26-5",
+      "href": "objects/bayer-cir-cir-cir-2026-06-26-b841a8de.json"
+    }
+  ],
+  "curated_routes": []
+}

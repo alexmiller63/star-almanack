@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W49",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M33 — Triangulum Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-3",
+      "href": "objects/messier-m33-tri-m33-triangulum-galaxy-2026-12-02-d44b502c.json"
+    },
+    {
+      "display_name": "M76 — Little Dumbbell Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-5",
+      "href": "objects/messier-m76-per-m76-little-dumbbell-nebula-2026-12-04-95a6ca8a.json"
+    },
+    {
+      "display_name": "M103",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-3",
+      "href": "objects/messier-m103-cas-m103-2026-12-02-34b44fbf.json"
+    },
+    {
+      "display_name": "M74",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-4",
+      "href": "objects/messier-m74-psc-m74-2026-12-03-094bce63.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M33 — Triangulum Galaxy",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-3",
+      "href": "objects/messier-m33-tri-m33-triangulum-galaxy-2026-12-02-d44b502c.json"
+    },
+    {
+      "display_name": "M76 — Little Dumbbell Nebula",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-5",
+      "href": "objects/messier-m76-per-m76-little-dumbbell-nebula-2026-12-04-95a6ca8a.json"
+    },
+    {
+      "display_name": "M103",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-3",
+      "href": "objects/messier-m103-cas-m103-2026-12-02-34b44fbf.json"
+    },
+    {
+      "display_name": "M74",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-4",
+      "href": "objects/messier-m74-psc-m74-2026-12-03-094bce63.json"
+    },
+    {
+      "display_name": "α Eri — Achernar",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W49-4",
+      "href": "objects/bayer-eri-eri-eri-achernar-2026-12-03-20948b33.json"
+    },
+    {
+      "display_name": "β And — Mirach",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W48-5",
+      "href": "objects/bayer-and-and-and-mirach-2026-11-27-132b02e8.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W18",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M65",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W18-1",
+      "href": "objects/messier-m65-leo-m65-2026-04-27-62881cf3.json"
+    },
+    {
+      "display_name": "M66",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W18-2",
+      "href": "objects/messier-m66-leo-m66-2026-04-28-a20d8149.json"
+    },
+    {
+      "display_name": "M97 — Owl Nebula",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W17-7",
+      "href": "objects/messier-m97-uma-m97-owl-nebula-2026-04-26-3bb12882.json"
+    },
+    {
+      "display_name": "M108",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W17-6",
+      "href": "objects/messier-m108-uma-m108-2026-04-25-7796ef07.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M65",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W18-1",
+      "href": "objects/messier-m65-leo-m65-2026-04-27-62881cf3.json"
+    },
+    {
+      "display_name": "M66",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W18-2",
+      "href": "objects/messier-m66-leo-m66-2026-04-28-a20d8149.json"
+    },
+    {
+      "display_name": "M97 — Owl Nebula",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W17-7",
+      "href": "objects/messier-m97-uma-m97-owl-nebula-2026-04-26-3bb12882.json"
+    },
+    {
+      "display_name": "M108",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W17-6",
+      "href": "objects/messier-m108-uma-m108-2026-04-25-7796ef07.json"
+    },
+    {
+      "display_name": "M109",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W19-4",
+      "href": "objects/messier-m109-uma-m109-2026-05-07-949e4751.json"
+    },
+    {
+      "display_name": "α LMi — Praecipua",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W17-2",
+      "href": "objects/bayer-lmi-lmi-lmi-praecipua-2026-04-21-9a5d1b77.json"
+    }
+  ],
+  "curated_routes": []
+}

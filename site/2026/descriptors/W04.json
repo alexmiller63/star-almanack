@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W04",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M79",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-6",
+      "href": "objects/messier-m79-lep-m79-2026-01-24-49aeff92.json"
+    },
+    {
+      "display_name": "M38",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-7",
+      "href": "objects/messier-m38-aur-m38-2026-01-25-be09f0eb.json"
+    },
+    {
+      "display_name": "β Eri — Cursa",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-2",
+      "href": "objects/bayer-eri-eri-eri-cursa-2026-01-20-fcdc085f.json"
+    },
+    {
+      "display_name": "β Ori — Rigel",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-3",
+      "href": "objects/bayer-ori-ori-ori-rigel-2026-01-21-9efdef42.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M79",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-6",
+      "href": "objects/messier-m79-lep-m79-2026-01-24-49aeff92.json"
+    },
+    {
+      "display_name": "M38",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-7",
+      "href": "objects/messier-m38-aur-m38-2026-01-25-be09f0eb.json"
+    },
+    {
+      "display_name": "β Eri — Cursa",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-2",
+      "href": "objects/bayer-eri-eri-eri-cursa-2026-01-20-fcdc085f.json"
+    },
+    {
+      "display_name": "β Ori — Rigel",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-3",
+      "href": "objects/bayer-ori-ori-ori-rigel-2026-01-21-9efdef42.json"
+    },
+    {
+      "display_name": "α Aur — Capella",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-4",
+      "href": "objects/bayer-aur-aur-aur-capella-2026-01-22-493d6bbe.json"
+    },
+    {
+      "display_name": "β Tau — Elnath",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W04-6",
+      "href": "objects/bayer-tau-tau-tau-elnath-2026-01-24-885219fe.json"
+    }
+  ],
+  "curated_routes": []
+}

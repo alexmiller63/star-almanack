@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W23",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M83 — Southern Pinwheel",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W23-1",
+      "href": "objects/messier-m83-hya-m83-southern-pinwheel-2026-06-01-6d1fbe67.json"
+    },
+    {
+      "display_name": "M3",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W23-3",
+      "href": "objects/messier-m3-cvn-m3-2026-06-03-a204d71d.json"
+    },
+    {
+      "display_name": "M63 — Sunflower Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W22-3",
+      "href": "objects/messier-m63-cvn-m63-sunflower-galaxy-2026-05-27-b2ad9fc5.json"
+    },
+    {
+      "display_name": "M51 — Whirlpool Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W22-7",
+      "href": "objects/messier-m51-cvn-m51-whirlpool-galaxy-2026-05-31-a14ee142.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M83 — Southern Pinwheel",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W23-1",
+      "href": "objects/messier-m83-hya-m83-southern-pinwheel-2026-06-01-6d1fbe67.json"
+    },
+    {
+      "display_name": "M3",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W23-3",
+      "href": "objects/messier-m3-cvn-m3-2026-06-03-a204d71d.json"
+    },
+    {
+      "display_name": "M63 — Sunflower Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W22-3",
+      "href": "objects/messier-m63-cvn-m63-sunflower-galaxy-2026-05-27-b2ad9fc5.json"
+    },
+    {
+      "display_name": "M51 — Whirlpool Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W22-7",
+      "href": "objects/messier-m51-cvn-m51-whirlpool-galaxy-2026-05-31-a14ee142.json"
+    },
+    {
+      "display_name": "M101 — Pinwheel Galaxy",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W24-1",
+      "href": "objects/messier-m101-uma-m101-pinwheel-galaxy-2026-06-08-3b84fc58.json"
+    },
+    {
+      "display_name": "M53",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W22-2",
+      "href": "objects/messier-m53-com-m53-2026-05-26-562d5765.json"
+    }
+  ],
+  "curated_routes": []
+}

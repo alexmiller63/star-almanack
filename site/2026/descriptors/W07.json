@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W07",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M41",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W07-5",
+      "href": "objects/messier-m41-cma-m41-2026-02-13-898cfb00.json"
+    },
+    {
+      "display_name": "α CMa — Sirius",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W07-5",
+      "href": "objects/bayer-cma-cma-cma-sirius-2026-02-13-73ac49d0.json"
+    },
+    {
+      "display_name": "β Mon",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W07-1",
+      "href": "objects/bayer-mon-mon-mon-2026-02-09-c41493fd.json"
+    },
+    {
+      "display_name": "α Pic",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W07-5",
+      "href": "objects/bayer-pic-pic-pic-2026-02-13-845a6c50.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M41",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W07-5",
+      "href": "objects/messier-m41-cma-m41-2026-02-13-898cfb00.json"
+    },
+    {
+      "display_name": "α CMa — Sirius",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W07-5",
+      "href": "objects/bayer-cma-cma-cma-sirius-2026-02-13-73ac49d0.json"
+    },
+    {
+      "display_name": "β Mon",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W07-1",
+      "href": "objects/bayer-mon-mon-mon-2026-02-09-c41493fd.json"
+    },
+    {
+      "display_name": "α Pic",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W07-5",
+      "href": "objects/bayer-pic-pic-pic-2026-02-13-845a6c50.json"
+    },
+    {
+      "display_name": "M35",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W06-3",
+      "href": "objects/messier-m35-gem-m35-2026-02-04-7b15a5d4.json"
+    },
+    {
+      "display_name": "M50",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W08-2",
+      "href": "objects/messier-m50-mon-m50-2026-02-17-48dc9a40.json"
+    }
+  ],
+  "curated_routes": []
+}

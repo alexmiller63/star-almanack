@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W11",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M44 — Beehive Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-7",
+      "href": "objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json"
+    },
+    {
+      "display_name": "β Cnc — Tarf",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-1",
+      "href": "objects/bayer-cnc-cnc-cnc-tarf-2026-03-09-694821e6.json"
+    },
+    {
+      "display_name": "α Cha",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-1",
+      "href": "objects/bayer-cha-cha-cha-2026-03-09-5f17d344.json"
+    },
+    {
+      "display_name": "β Vol",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-3",
+      "href": "objects/bayer-vol-vol-vol-2026-03-11-e1f2e40f.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M44 — Beehive Cluster",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-7",
+      "href": "objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json"
+    },
+    {
+      "display_name": "β Cnc — Tarf",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-1",
+      "href": "objects/bayer-cnc-cnc-cnc-tarf-2026-03-09-694821e6.json"
+    },
+    {
+      "display_name": "α Cha",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-1",
+      "href": "objects/bayer-cha-cha-cha-2026-03-09-5f17d344.json"
+    },
+    {
+      "display_name": "β Vol",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-3",
+      "href": "objects/bayer-vol-vol-vol-2026-03-11-e1f2e40f.json"
+    },
+    {
+      "display_name": "β Pyx",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W11-7",
+      "href": "objects/bayer-pyx-pyx-pyx-2026-03-15-38e9e47d.json"
+    },
+    {
+      "display_name": "M48",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W10-7",
+      "href": "objects/messier-m48-hya-m48-2026-03-08-c4b92120.json"
+    }
+  ],
+  "curated_routes": []
+}

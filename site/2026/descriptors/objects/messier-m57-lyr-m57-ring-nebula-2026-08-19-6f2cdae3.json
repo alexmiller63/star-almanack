@@ -1,0 +1,22 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W34-3",
+  "best_visibility_date": "2026-08-19",
+  "identity": {
+    "category": "messier",
+    "designation": "M57",
+    "display_name": "M57 — Ring Nebula",
+    "constellation": "Lyr"
+  },
+  "context": {
+    "in_visible_milky_way": false
+  },
+  "observing": {
+    "naked_eye": "Not normally identifiable as a distinct object to the unaided eye.",
+    "binoculars": "Usually stellar or nearly stellar in binoculars; careful comparison with nearby stars is the key.",
+    "telescope": "Moderate to high power reveals the small nebular disk or ring-like structure; a nebula filter can help separate it from the stellar field."
+  },
+  "relationships": [],
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

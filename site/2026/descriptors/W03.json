@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W03",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "α Tau — Aldebaran",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-1",
+      "href": "objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json"
+    },
+    {
+      "display_name": "α Dor",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-1",
+      "href": "objects/bayer-dor-dor-dor-2026-01-12-dbe75ecf.json"
+    },
+    {
+      "display_name": "α Cae",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-2",
+      "href": "objects/bayer-cae-cae-cae-2026-01-13-02c2c4e0.json"
+    },
+    {
+      "display_name": "β Cae",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-3",
+      "href": "objects/bayer-cae-cae-cae-2026-01-14-158f83e9.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Tau — Aldebaran",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-1",
+      "href": "objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json"
+    },
+    {
+      "display_name": "α Dor",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-1",
+      "href": "objects/bayer-dor-dor-dor-2026-01-12-dbe75ecf.json"
+    },
+    {
+      "display_name": "α Cae",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-2",
+      "href": "objects/bayer-cae-cae-cae-2026-01-13-02c2c4e0.json"
+    },
+    {
+      "display_name": "β Cae",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-3",
+      "href": "objects/bayer-cae-cae-cae-2026-01-14-158f83e9.json"
+    },
+    {
+      "display_name": "α Cam",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W03-6",
+      "href": "objects/bayer-cam-cam-cam-2026-01-17-917f06ad.json"
+    },
+    {
+      "display_name": "M79",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W04-6",
+      "href": "objects/messier-m79-lep-m79-2026-01-24-49aeff92.json"
+    }
+  ],
+  "curated_routes": []
+}

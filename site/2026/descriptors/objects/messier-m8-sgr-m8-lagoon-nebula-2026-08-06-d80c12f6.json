@@ -1,0 +1,22 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W32-4",
+  "best_visibility_date": "2026-08-06",
+  "identity": {
+    "category": "messier",
+    "designation": "M8",
+    "display_name": "M8 — Lagoon Nebula",
+    "constellation": "Sgr"
+  },
+  "context": {
+    "in_visible_milky_way": true
+  },
+  "observing": {
+    "naked_eye": "Not normally visible as a distinct nebula to the unaided eye.",
+    "binoculars": "Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.",
+    "telescope": "Use low to moderate power to trace the nebular form; a suitable narrowband nebula filter can improve contrast on emission-rich regions."
+  },
+  "relationships": [],
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

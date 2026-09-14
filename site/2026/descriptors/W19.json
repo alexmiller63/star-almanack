@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W19",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M109",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-4",
+      "href": "objects/messier-m109-uma-m109-2026-05-07-949e4751.json"
+    },
+    {
+      "display_name": "β Leo — Denebola",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-2",
+      "href": "objects/bayer-leo-leo-leo-denebola-2026-05-05-af0ba6ac.json"
+    },
+    {
+      "display_name": "β Vir — Zavijava",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-3",
+      "href": "objects/bayer-vir-vir-vir-zavijava-2026-05-06-1022eced.json"
+    },
+    {
+      "display_name": "α Crv — Alchiba",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-7",
+      "href": "objects/bayer-crv-crv-crv-alchiba-2026-05-10-36d82d67.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M109",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-4",
+      "href": "objects/messier-m109-uma-m109-2026-05-07-949e4751.json"
+    },
+    {
+      "display_name": "β Leo — Denebola",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-2",
+      "href": "objects/bayer-leo-leo-leo-denebola-2026-05-05-af0ba6ac.json"
+    },
+    {
+      "display_name": "β Vir — Zavijava",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-3",
+      "href": "objects/bayer-vir-vir-vir-zavijava-2026-05-06-1022eced.json"
+    },
+    {
+      "display_name": "α Crv — Alchiba",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-7",
+      "href": "objects/bayer-crv-crv-crv-alchiba-2026-05-10-36d82d67.json"
+    },
+    {
+      "display_name": "β Hya",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W19-3",
+      "href": "objects/bayer-hya-hya-hya-2026-05-06-fabf1125.json"
+    },
+    {
+      "display_name": "M40 — Winnecke 4",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W20-4",
+      "href": "objects/messier-m40-uma-m40-winnecke-4-2026-05-14-3fedcbc4.json"
+    }
+  ],
+  "curated_routes": []
+}

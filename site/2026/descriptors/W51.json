@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W51",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M34",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W51-5",
+      "href": "objects/messier-m34-per-m34-2026-12-18-d943988e.json"
+    },
+    {
+      "display_name": "M77",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W51-5",
+      "href": "objects/messier-m77-cet-m77-2026-12-18-0a6caa6a.json"
+    },
+    {
+      "display_name": "α UMi — Polaris",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W51-3",
+      "href": "objects/bayer-umi-umi-umi-polaris-2026-12-16-b83d5577.json"
+    },
+    {
+      "display_name": "β For",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W51-6",
+      "href": "objects/bayer-for-for-for-2026-12-19-4fa36476.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M34",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W51-5",
+      "href": "objects/messier-m34-per-m34-2026-12-18-d943988e.json"
+    },
+    {
+      "display_name": "M77",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W51-5",
+      "href": "objects/messier-m77-cet-m77-2026-12-18-0a6caa6a.json"
+    },
+    {
+      "display_name": "α UMi — Polaris",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W51-3",
+      "href": "objects/bayer-umi-umi-umi-polaris-2026-12-16-b83d5577.json"
+    },
+    {
+      "display_name": "β For",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W51-6",
+      "href": "objects/bayer-for-for-for-2026-12-19-4fa36476.json"
+    },
+    {
+      "display_name": "α Tri — Mothallah",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W50-1",
+      "href": "objects/bayer-tri-tri-tri-mothallah-2026-12-07-c5e038a8.json"
+    },
+    {
+      "display_name": "β Ari — Sheratan",
+      "relationship_to_week": "nearby_best_visibility",
+      "iso_week_date": "2026-W50-1",
+      "href": "objects/bayer-ari-ari-ari-sheratan-2026-12-07-28075713.json"
+    }
+  ],
+  "curated_routes": []
+}

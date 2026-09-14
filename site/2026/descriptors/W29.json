@@ -1,0 +1,74 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2026-W29",
+  "selection_policy": {
+    "inline_descriptor_count": 4,
+    "linked_descriptor_count": 6,
+    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
+  },
+  "inline_descriptors": [
+    {
+      "display_name": "M13 — Great Hercules Globular",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-4",
+      "href": "objects/messier-m13-her-m13-great-hercules-globular-2026-07-16-14baa2ea.json"
+    },
+    {
+      "display_name": "M107",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-2",
+      "href": "objects/messier-m107-oph-m107-2026-07-14-21e7ad6d.json"
+    },
+    {
+      "display_name": "M12",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-5",
+      "href": "objects/messier-m12-oph-m12-2026-07-17-4d9e9899.json"
+    },
+    {
+      "display_name": "α Sco — Antares",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-1",
+      "href": "objects/bayer-sco-sco-sco-antares-2026-07-13-2c63b842.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M13 — Great Hercules Globular",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-4",
+      "href": "objects/messier-m13-her-m13-great-hercules-globular-2026-07-16-14baa2ea.json"
+    },
+    {
+      "display_name": "M107",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-2",
+      "href": "objects/messier-m107-oph-m107-2026-07-14-21e7ad6d.json"
+    },
+    {
+      "display_name": "M12",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-5",
+      "href": "objects/messier-m12-oph-m12-2026-07-17-4d9e9899.json"
+    },
+    {
+      "display_name": "α Sco — Antares",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-1",
+      "href": "objects/bayer-sco-sco-sco-antares-2026-07-13-2c63b842.json"
+    },
+    {
+      "display_name": "β Her — Kornephoros",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-1",
+      "href": "objects/bayer-her-her-her-kornephoros-2026-07-13-c3a2fb20.json"
+    },
+    {
+      "display_name": "α TrA — Atria",
+      "relationship_to_week": "best_visibility",
+      "iso_week_date": "2026-W29-6",
+      "href": "objects/bayer-tra-tra-tra-atria-2026-07-18-abc44981.json"
+    }
+  ],
+  "curated_routes": []
+}
