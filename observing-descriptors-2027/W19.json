@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W19",
+  "inline_descriptors": [
+    {
+      "display_name": "M98",
+      "iso_week_date": "2027-W19-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m98-8764d4b9.json"
+    },
+    {
+      "display_name": "M106",
+      "iso_week_date": "2027-W19-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m106-06731975.json"
+    },
+    {
+      "display_name": "M99",
+      "iso_week_date": "2027-W19-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m99-fc881839.json"
+    },
+    {
+      "display_name": "M100",
+      "iso_week_date": "2027-W19-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m100-8f98a3b2.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M98",
+      "iso_week_date": "2027-W19-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m98-8764d4b9.json"
+    },
+    {
+      "display_name": "M106",
+      "iso_week_date": "2027-W19-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m106-06731975.json"
+    },
+    {
+      "display_name": "M99",
+      "iso_week_date": "2027-W19-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m99-fc881839.json"
+    },
+    {
+      "display_name": "M100",
+      "iso_week_date": "2027-W19-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m100-8f98a3b2.json"
+    },
+    {
+      "display_name": "M40 — Winnecke 4",
+      "iso_week_date": "2027-W19-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m40-winnecke-4-8cea94df.json"
+    },
+    {
+      "display_name": "M61",
+      "iso_week_date": "2027-W19-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m61-6523d4fe.json"
+    }
+  ],
+  "curated_routes": []
+}

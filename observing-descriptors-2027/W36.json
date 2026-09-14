@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W36",
+  "inline_descriptors": [
+    {
+      "display_name": "M27 — Dumbbell Nebula",
+      "iso_week_date": "2027-W36-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m27-dumbbell-nebula-d4ae641a.json"
+    },
+    {
+      "display_name": "M75",
+      "iso_week_date": "2027-W36-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m75-382deb1a.json"
+    },
+    {
+      "display_name": "α Cap — Algedi",
+      "iso_week_date": "2027-W36-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cap-algedi-b204cd76.json"
+    },
+    {
+      "display_name": "β Cap — Dabih",
+      "iso_week_date": "2027-W36-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cap-dabih-698403e4.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M27 — Dumbbell Nebula",
+      "iso_week_date": "2027-W36-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m27-dumbbell-nebula-d4ae641a.json"
+    },
+    {
+      "display_name": "M75",
+      "iso_week_date": "2027-W36-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m75-382deb1a.json"
+    },
+    {
+      "display_name": "α Cap — Algedi",
+      "iso_week_date": "2027-W36-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cap-algedi-b204cd76.json"
+    },
+    {
+      "display_name": "β Cap — Dabih",
+      "iso_week_date": "2027-W36-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cap-dabih-698403e4.json"
+    },
+    {
+      "display_name": "M55",
+      "iso_week_date": "2027-W35-3",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m55-6b286b56.json"
+    },
+    {
+      "display_name": "M71",
+      "iso_week_date": "2027-W35-7",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m71-68f6d48e.json"
+    }
+  ],
+  "curated_routes": []
+}

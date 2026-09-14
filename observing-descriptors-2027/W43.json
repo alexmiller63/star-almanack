@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W43",
+  "inline_descriptors": [
+    {
+      "display_name": "α PsA — Fomalhaut",
+      "iso_week_date": "2027-W43-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/psa-fomalhaut-2d232c9f.json"
+    },
+    {
+      "display_name": "α Peg — Markab",
+      "iso_week_date": "2027-W43-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/peg-markab-219aef95.json"
+    },
+    {
+      "display_name": "β Peg — Scheat",
+      "iso_week_date": "2027-W43-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/peg-scheat-44ce40f7.json"
+    },
+    {
+      "display_name": "β Psc — Fumalsamakah",
+      "iso_week_date": "2027-W43-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/psc-fumalsamakah-f6572be9.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α PsA — Fomalhaut",
+      "iso_week_date": "2027-W43-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/psa-fomalhaut-2d232c9f.json"
+    },
+    {
+      "display_name": "α Peg — Markab",
+      "iso_week_date": "2027-W43-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/peg-markab-219aef95.json"
+    },
+    {
+      "display_name": "β Peg — Scheat",
+      "iso_week_date": "2027-W43-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/peg-scheat-44ce40f7.json"
+    },
+    {
+      "display_name": "β Psc — Fumalsamakah",
+      "iso_week_date": "2027-W43-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/psc-fumalsamakah-f6572be9.json"
+    },
+    {
+      "display_name": "M52",
+      "iso_week_date": "2027-W44-1",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m52-ac721de8.json"
+    },
+    {
+      "display_name": "α Lac",
+      "iso_week_date": "2027-W42-1",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/lac-7fe73c3b.json"
+    }
+  ],
+  "curated_routes": []
+}

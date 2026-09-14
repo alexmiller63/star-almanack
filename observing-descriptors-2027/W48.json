@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W48",
+  "inline_descriptors": [
+    {
+      "display_name": "M103",
+      "iso_week_date": "2027-W48-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m103-8af7ca85.json"
+    },
+    {
+      "display_name": "M33 — Triangulum Galaxy",
+      "iso_week_date": "2027-W48-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m33-triangulum-galaxy-11c27f21.json"
+    },
+    {
+      "display_name": "M74",
+      "iso_week_date": "2027-W48-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m74-be9319fe.json"
+    },
+    {
+      "display_name": "M76 — Little Dumbbell Nebula",
+      "iso_week_date": "2027-W48-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m76-little-dumbbell-nebula-06d91b6a.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M103",
+      "iso_week_date": "2027-W48-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m103-8af7ca85.json"
+    },
+    {
+      "display_name": "M33 — Triangulum Galaxy",
+      "iso_week_date": "2027-W48-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m33-triangulum-galaxy-11c27f21.json"
+    },
+    {
+      "display_name": "M74",
+      "iso_week_date": "2027-W48-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m74-be9319fe.json"
+    },
+    {
+      "display_name": "M76 — Little Dumbbell Nebula",
+      "iso_week_date": "2027-W48-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m76-little-dumbbell-nebula-06d91b6a.json"
+    },
+    {
+      "display_name": "α Eri — Achernar",
+      "iso_week_date": "2027-W48-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/eri-achernar-578d5120.json"
+    },
+    {
+      "display_name": "α Scl",
+      "iso_week_date": "2027-W47-3",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/scl-a6b60b3a.json"
+    }
+  ],
+  "curated_routes": []
+}

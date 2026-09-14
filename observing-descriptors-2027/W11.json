@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W11",
+  "inline_descriptors": [
+    {
+      "display_name": "M44 — Beehive Cluster",
+      "iso_week_date": "2027-W11-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m44-beehive-cluster-d0421978.json"
+    },
+    {
+      "display_name": "M67",
+      "iso_week_date": "2027-W11-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m67-fbff4ca3.json"
+    },
+    {
+      "display_name": "β Pyx",
+      "iso_week_date": "2027-W11-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/pyx-2c1374ab.json"
+    },
+    {
+      "display_name": "α Pyx",
+      "iso_week_date": "2027-W11-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/pyx-584a536a.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M44 — Beehive Cluster",
+      "iso_week_date": "2027-W11-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m44-beehive-cluster-d0421978.json"
+    },
+    {
+      "display_name": "M67",
+      "iso_week_date": "2027-W11-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m67-fbff4ca3.json"
+    },
+    {
+      "display_name": "β Pyx",
+      "iso_week_date": "2027-W11-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/pyx-2c1374ab.json"
+    },
+    {
+      "display_name": "α Pyx",
+      "iso_week_date": "2027-W11-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/pyx-584a536a.json"
+    },
+    {
+      "display_name": "α Cnc — Acubens",
+      "iso_week_date": "2027-W11-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cnc-acubens-54c54d04.json"
+    },
+    {
+      "display_name": "M48",
+      "iso_week_date": "2027-W10-1",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m48-a1e4b62c.json"
+    }
+  ],
+  "curated_routes": []
+}

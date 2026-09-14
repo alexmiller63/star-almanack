@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W29",
+  "inline_descriptors": [
+    {
+      "display_name": "M10",
+      "iso_week_date": "2027-W29-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m10-aa164a9f.json"
+    },
+    {
+      "display_name": "M62",
+      "iso_week_date": "2027-W29-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m62-ba4fa000.json"
+    },
+    {
+      "display_name": "M19",
+      "iso_week_date": "2027-W29-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m19-c0b3a757.json"
+    },
+    {
+      "display_name": "M92",
+      "iso_week_date": "2027-W29-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m92-8606e305.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M10",
+      "iso_week_date": "2027-W29-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m10-aa164a9f.json"
+    },
+    {
+      "display_name": "M62",
+      "iso_week_date": "2027-W29-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m62-ba4fa000.json"
+    },
+    {
+      "display_name": "M19",
+      "iso_week_date": "2027-W29-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m19-c0b3a757.json"
+    },
+    {
+      "display_name": "M92",
+      "iso_week_date": "2027-W29-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m92-8606e305.json"
+    },
+    {
+      "display_name": "α Her — Rasalgethi",
+      "iso_week_date": "2027-W29-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/her-rasalgethi-6a4deb2d.json"
+    },
+    {
+      "display_name": "M4",
+      "iso_week_date": "2027-W28-1",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m4-a7a93203.json"
+    }
+  ],
+  "curated_routes": []
+}

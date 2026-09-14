@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W04",
+  "inline_descriptors": [
+    {
+      "display_name": "M38",
+      "iso_week_date": "2027-W04-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m38-58cfa063.json"
+    },
+    {
+      "display_name": "M1 — Crab Nebula",
+      "iso_week_date": "2027-W04-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m1-crab-nebula-b7b959c9.json"
+    },
+    {
+      "display_name": "M36",
+      "iso_week_date": "2027-W04-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m36-a4607ef9.json"
+    },
+    {
+      "display_name": "M42 — Great Nebula in Orion",
+      "iso_week_date": "2027-W04-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m42-great-nebula-in-orion-905c43d4.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M38",
+      "iso_week_date": "2027-W04-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m38-58cfa063.json"
+    },
+    {
+      "display_name": "M1 — Crab Nebula",
+      "iso_week_date": "2027-W04-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m1-crab-nebula-b7b959c9.json"
+    },
+    {
+      "display_name": "M36",
+      "iso_week_date": "2027-W04-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m36-a4607ef9.json"
+    },
+    {
+      "display_name": "M42 — Great Nebula in Orion",
+      "iso_week_date": "2027-W04-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m42-great-nebula-in-orion-905c43d4.json"
+    },
+    {
+      "display_name": "M43 — De Mairan's Nebula",
+      "iso_week_date": "2027-W04-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m43-de-mairan-s-nebula-4d5d75ec.json"
+    },
+    {
+      "display_name": "M78",
+      "iso_week_date": "2027-W04-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m78-1a433315.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W22",
+  "inline_descriptors": [
+    {
+      "display_name": "M51 — Whirlpool Galaxy",
+      "iso_week_date": "2027-W22-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m51-whirlpool-galaxy-ad65dce1.json"
+    },
+    {
+      "display_name": "M83 — Southern Pinwheel",
+      "iso_week_date": "2027-W22-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m83-southern-pinwheel-eab8c147.json"
+    },
+    {
+      "display_name": "M3",
+      "iso_week_date": "2027-W22-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m3-276d51e8.json"
+    },
+    {
+      "display_name": "M53",
+      "iso_week_date": "2027-W21-4",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m53-f1b08875.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M51 — Whirlpool Galaxy",
+      "iso_week_date": "2027-W22-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m51-whirlpool-galaxy-ad65dce1.json"
+    },
+    {
+      "display_name": "M83 — Southern Pinwheel",
+      "iso_week_date": "2027-W22-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m83-southern-pinwheel-eab8c147.json"
+    },
+    {
+      "display_name": "M3",
+      "iso_week_date": "2027-W22-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m3-276d51e8.json"
+    },
+    {
+      "display_name": "M53",
+      "iso_week_date": "2027-W21-4",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m53-f1b08875.json"
+    },
+    {
+      "display_name": "M63 — Sunflower Galaxy",
+      "iso_week_date": "2027-W21-4",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m63-sunflower-galaxy-b9746793.json"
+    },
+    {
+      "display_name": "M101 — Pinwheel Galaxy",
+      "iso_week_date": "2027-W23-2",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m101-pinwheel-galaxy-e0bd545a.json"
+    }
+  ],
+  "curated_routes": []
+}

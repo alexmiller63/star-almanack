@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W24",
+  "inline_descriptors": [
+    {
+      "display_name": "proxima-centauri — Proxima Centauri",
+      "iso_week_date": "2027-W24-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/proxima-centauri-proxima-centauri-964116ea.json"
+    },
+    {
+      "display_name": "α Cen — Rigil Kentaurus",
+      "iso_week_date": "2027-W24-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cen-rigil-kentaurus-ef857a02.json"
+    },
+    {
+      "display_name": "α Cir",
+      "iso_week_date": "2027-W24-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cir-b221e56f.json"
+    },
+    {
+      "display_name": "α Lup",
+      "iso_week_date": "2027-W24-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lup-dad5ff9c.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "proxima-centauri — Proxima Centauri",
+      "iso_week_date": "2027-W24-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/proxima-centauri-proxima-centauri-964116ea.json"
+    },
+    {
+      "display_name": "α Cen — Rigil Kentaurus",
+      "iso_week_date": "2027-W24-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cen-rigil-kentaurus-ef857a02.json"
+    },
+    {
+      "display_name": "α Cir",
+      "iso_week_date": "2027-W24-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cir-b221e56f.json"
+    },
+    {
+      "display_name": "α Lup",
+      "iso_week_date": "2027-W24-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lup-dad5ff9c.json"
+    },
+    {
+      "display_name": "α Aps",
+      "iso_week_date": "2027-W24-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/aps-24736981.json"
+    },
+    {
+      "display_name": "α Lib — Zubenelgenubi",
+      "iso_week_date": "2027-W24-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lib-zubenelgenubi-cd398279.json"
+    }
+  ],
+  "curated_routes": []
+}

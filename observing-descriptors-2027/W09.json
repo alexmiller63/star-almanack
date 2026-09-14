@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W09",
+  "inline_descriptors": [
+    {
+      "display_name": "β Gem — Pollux",
+      "iso_week_date": "2027-W09-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/gem-pollux-48f17b4d.json"
+    },
+    {
+      "display_name": "M47",
+      "iso_week_date": "2027-W08-5",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m47-cc804918.json"
+    },
+    {
+      "display_name": "M46",
+      "iso_week_date": "2027-W08-7",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m46-3e24fdb6.json"
+    },
+    {
+      "display_name": "M93",
+      "iso_week_date": "2027-W08-7",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m93-a9237cff.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "β Gem — Pollux",
+      "iso_week_date": "2027-W09-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/gem-pollux-48f17b4d.json"
+    },
+    {
+      "display_name": "M47",
+      "iso_week_date": "2027-W08-5",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m47-cc804918.json"
+    },
+    {
+      "display_name": "M46",
+      "iso_week_date": "2027-W08-7",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m46-3e24fdb6.json"
+    },
+    {
+      "display_name": "M93",
+      "iso_week_date": "2027-W08-7",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m93-a9237cff.json"
+    },
+    {
+      "display_name": "M48",
+      "iso_week_date": "2027-W10-1",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m48-a1e4b62c.json"
+    },
+    {
+      "display_name": "β CMi — Gomeisa",
+      "iso_week_date": "2027-W08-3",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/cmi-gomeisa-82d1e8fc.json"
+    }
+  ],
+  "curated_routes": []
+}

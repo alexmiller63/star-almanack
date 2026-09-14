@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W06",
+  "inline_descriptors": [
+    {
+      "display_name": "M41",
+      "iso_week_date": "2027-W06-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m41-128af0fe.json"
+    },
+    {
+      "display_name": "α Car — Canopus",
+      "iso_week_date": "2027-W06-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/car-canopus-d7d05c2d.json"
+    },
+    {
+      "display_name": "β Mon",
+      "iso_week_date": "2027-W06-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/mon-f7a42a50.json"
+    },
+    {
+      "display_name": "α CMa — Sirius",
+      "iso_week_date": "2027-W06-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cma-sirius-bcc37603.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M41",
+      "iso_week_date": "2027-W06-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m41-128af0fe.json"
+    },
+    {
+      "display_name": "α Car — Canopus",
+      "iso_week_date": "2027-W06-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/car-canopus-d7d05c2d.json"
+    },
+    {
+      "display_name": "β Mon",
+      "iso_week_date": "2027-W06-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/mon-f7a42a50.json"
+    },
+    {
+      "display_name": "α CMa — Sirius",
+      "iso_week_date": "2027-W06-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cma-sirius-bcc37603.json"
+    },
+    {
+      "display_name": "α Pic",
+      "iso_week_date": "2027-W06-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/pic-c9ae6c50.json"
+    },
+    {
+      "display_name": "M35",
+      "iso_week_date": "2027-W05-4",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m35-40b1bfe6.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W49",
+  "inline_descriptors": [
+    {
+      "display_name": "α Tri — Mothallah",
+      "iso_week_date": "2027-W49-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/tri-mothallah-f9f108c9.json"
+    },
+    {
+      "display_name": "β Ari — Sheratan",
+      "iso_week_date": "2027-W49-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ari-sheratan-4d24c687.json"
+    },
+    {
+      "display_name": "α Hyi — Head of Hydrus",
+      "iso_week_date": "2027-W49-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/hyi-head-of-hydrus-1ad73b46.json"
+    },
+    {
+      "display_name": "α Psc — Alrescha",
+      "iso_week_date": "2027-W49-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/psc-alrescha-03a5ac21.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Tri — Mothallah",
+      "iso_week_date": "2027-W49-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/tri-mothallah-f9f108c9.json"
+    },
+    {
+      "display_name": "β Ari — Sheratan",
+      "iso_week_date": "2027-W49-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ari-sheratan-4d24c687.json"
+    },
+    {
+      "display_name": "α Hyi — Head of Hydrus",
+      "iso_week_date": "2027-W49-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/hyi-head-of-hydrus-1ad73b46.json"
+    },
+    {
+      "display_name": "α Psc — Alrescha",
+      "iso_week_date": "2027-W49-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/psc-alrescha-03a5ac21.json"
+    },
+    {
+      "display_name": "α Ari — Hamal",
+      "iso_week_date": "2027-W49-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ari-hamal-b0a8e9fc.json"
+    },
+    {
+      "display_name": "β Tri",
+      "iso_week_date": "2027-W49-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/tri-3693bbcd.json"
+    }
+  ],
+  "curated_routes": []
+}

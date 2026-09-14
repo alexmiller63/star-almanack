@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W32",
+  "inline_descriptors": [
+    {
+      "display_name": "M16 — Eagle Nebula",
+      "iso_week_date": "2027-W32-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m16-eagle-nebula-a5c3856c.json"
+    },
+    {
+      "display_name": "M18",
+      "iso_week_date": "2027-W32-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m18-75af950a.json"
+    },
+    {
+      "display_name": "M24 — Sagittarius Star Cloud",
+      "iso_week_date": "2027-W32-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m24-sagittarius-star-cloud-cbbfd4c9.json"
+    },
+    {
+      "display_name": "M17 — Omega Nebula",
+      "iso_week_date": "2027-W32-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m17-omega-nebula-0064bca4.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M16 — Eagle Nebula",
+      "iso_week_date": "2027-W32-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m16-eagle-nebula-a5c3856c.json"
+    },
+    {
+      "display_name": "M18",
+      "iso_week_date": "2027-W32-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m18-75af950a.json"
+    },
+    {
+      "display_name": "M24 — Sagittarius Star Cloud",
+      "iso_week_date": "2027-W32-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m24-sagittarius-star-cloud-cbbfd4c9.json"
+    },
+    {
+      "display_name": "M17 — Omega Nebula",
+      "iso_week_date": "2027-W32-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m17-omega-nebula-0064bca4.json"
+    },
+    {
+      "display_name": "M28",
+      "iso_week_date": "2027-W32-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m28-a03d3cac.json"
+    },
+    {
+      "display_name": "M25",
+      "iso_week_date": "2027-W32-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m25-b770be8b.json"
+    }
+  ],
+  "curated_routes": []
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W12",
+  "inline_descriptors": [
+    {
+      "display_name": "α Vol",
+      "iso_week_date": "2027-W12-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/vol-4cfeba32.json"
+    },
+    {
+      "display_name": "β Car — Miaplacidus",
+      "iso_week_date": "2027-W12-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/car-miaplacidus-a3e0e192.json"
+    },
+    {
+      "display_name": "β Lyn",
+      "iso_week_date": "2027-W12-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lyn-94f1b2fa.json"
+    },
+    {
+      "display_name": "α Lyn",
+      "iso_week_date": "2027-W12-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lyn-1d9df30c.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "α Vol",
+      "iso_week_date": "2027-W12-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/vol-4cfeba32.json"
+    },
+    {
+      "display_name": "β Car — Miaplacidus",
+      "iso_week_date": "2027-W12-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/car-miaplacidus-a3e0e192.json"
+    },
+    {
+      "display_name": "β Lyn",
+      "iso_week_date": "2027-W12-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lyn-94f1b2fa.json"
+    },
+    {
+      "display_name": "α Lyn",
+      "iso_week_date": "2027-W12-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lyn-1d9df30c.json"
+    },
+    {
+      "display_name": "α Hya — Alphard",
+      "iso_week_date": "2027-W12-7",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/hya-alphard-043c67dc.json"
+    },
+    {
+      "display_name": "M44 — Beehive Cluster",
+      "iso_week_date": "2027-W11-1",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m44-beehive-cluster-d0421978.json"
+    }
+  ],
+  "curated_routes": []
+}

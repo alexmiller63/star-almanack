@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W16",
+  "inline_descriptors": [
+    {
+      "display_name": "M105",
+      "iso_week_date": "2027-W16-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m105-ca0f1737.json"
+    },
+    {
+      "display_name": "M96",
+      "iso_week_date": "2027-W16-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m96-eed34bac.json"
+    },
+    {
+      "display_name": "α LMi — Praecipua",
+      "iso_week_date": "2027-W16-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lmi-praecipua-fd23f56e.json"
+    },
+    {
+      "display_name": "α Crt — Alkes",
+      "iso_week_date": "2027-W16-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/crt-alkes-cef76d35.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M105",
+      "iso_week_date": "2027-W16-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m105-ca0f1737.json"
+    },
+    {
+      "display_name": "M96",
+      "iso_week_date": "2027-W16-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m96-eed34bac.json"
+    },
+    {
+      "display_name": "α LMi — Praecipua",
+      "iso_week_date": "2027-W16-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/lmi-praecipua-fd23f56e.json"
+    },
+    {
+      "display_name": "α Crt — Alkes",
+      "iso_week_date": "2027-W16-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/crt-alkes-cef76d35.json"
+    },
+    {
+      "display_name": "β UMa — Merak",
+      "iso_week_date": "2027-W16-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/uma-merak-7eef757b.json"
+    },
+    {
+      "display_name": "α UMa — Dubhe",
+      "iso_week_date": "2027-W16-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/uma-dubhe-582570c1.json"
+    }
+  ],
+  "curated_routes": []
+}

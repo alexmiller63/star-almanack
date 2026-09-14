@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2027,
+  "iso_week_date": "2027-W13-1",
+  "best_visibility_date": "2027-03-29",
+  "identity": {
+    "category": "bayer",
+    "designation": "β Ant",
+    "display_name": "β Ant",
+    "constellation": "Ant"
+  },
+  "observing": {
+    "naked_eye": "Visible unaided from a reasonably dark site, but easier after full dark adaptation.",
+    "binoculars": "Binoculars isolate the star from the surrounding pattern and make star-hopping easier.",
+    "telescope": "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
+  },
+  "generated_from": "fixed-object-sky-notes-2027.csv"
+}

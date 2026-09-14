@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W26",
+  "inline_descriptors": [
+    {
+      "display_name": "β CrB — Nusakan",
+      "iso_week_date": "2027-W26-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/crb-nusakan-f028abb1.json"
+    },
+    {
+      "display_name": "α CrB — Alphecca",
+      "iso_week_date": "2027-W26-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/crb-alphecca-63efbdb4.json"
+    },
+    {
+      "display_name": "α Ser — Unukalhai",
+      "iso_week_date": "2027-W26-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ser-unukalhai-d748ba4d.json"
+    },
+    {
+      "display_name": "β Ser — Chow",
+      "iso_week_date": "2027-W26-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ser-chow-4f2269eb.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "β CrB — Nusakan",
+      "iso_week_date": "2027-W26-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/crb-nusakan-f028abb1.json"
+    },
+    {
+      "display_name": "α CrB — Alphecca",
+      "iso_week_date": "2027-W26-3",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/crb-alphecca-63efbdb4.json"
+    },
+    {
+      "display_name": "α Ser — Unukalhai",
+      "iso_week_date": "2027-W26-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ser-unukalhai-d748ba4d.json"
+    },
+    {
+      "display_name": "β Ser — Chow",
+      "iso_week_date": "2027-W26-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ser-chow-4f2269eb.json"
+    },
+    {
+      "display_name": "M102 — Spindle Galaxy",
+      "iso_week_date": "2027-W25-3",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m102-spindle-galaxy-e61ced71.json"
+    },
+    {
+      "display_name": "M5",
+      "iso_week_date": "2027-W25-6",
+      "relationship_to_week": "nearby_best_visibility",
+      "href": "objects/m5-a75b10d6.json"
+    }
+  ],
+  "curated_routes": []
+}

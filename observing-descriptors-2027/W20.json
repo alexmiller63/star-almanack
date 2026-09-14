@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W20",
+  "inline_descriptors": [
+    {
+      "display_name": "M89",
+      "iso_week_date": "2027-W20-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m89-905852dc.json"
+    },
+    {
+      "display_name": "M91",
+      "iso_week_date": "2027-W20-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m91-4b9fab57.json"
+    },
+    {
+      "display_name": "M104 — Sombrero Galaxy",
+      "iso_week_date": "2027-W20-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m104-sombrero-galaxy-801c3962.json"
+    },
+    {
+      "display_name": "M58",
+      "iso_week_date": "2027-W20-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m58-349a2824.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M89",
+      "iso_week_date": "2027-W20-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m89-905852dc.json"
+    },
+    {
+      "display_name": "M91",
+      "iso_week_date": "2027-W20-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m91-4b9fab57.json"
+    },
+    {
+      "display_name": "M104 — Sombrero Galaxy",
+      "iso_week_date": "2027-W20-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m104-sombrero-galaxy-801c3962.json"
+    },
+    {
+      "display_name": "M58",
+      "iso_week_date": "2027-W20-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m58-349a2824.json"
+    },
+    {
+      "display_name": "M68",
+      "iso_week_date": "2027-W20-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m68-90625783.json"
+    },
+    {
+      "display_name": "M90",
+      "iso_week_date": "2027-W20-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m90-140452a4.json"
+    }
+  ],
+  "curated_routes": []
+}

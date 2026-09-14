@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2027,
+  "iso_week_date": "2027-W38-4",
+  "best_visibility_date": "2027-09-23",
+  "identity": {
+    "category": "messier",
+    "designation": "M73",
+    "display_name": "M73",
+    "constellation": "Aqr"
+  },
+  "observing": {
+    "naked_eye": "Use the surrounding constellation as the naked-eye framework for locating this object.",
+    "binoculars": "Binoculars provide the most useful first optical view and help confirm the surrounding star field.",
+    "telescope": "Start at low power, center the target, and increase magnification only when the object benefits from it."
+  },
+  "generated_from": "fixed-object-sky-notes-2027.csv"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2027,
+  "iso_week_date": "2027-W04-7",
+  "best_visibility_date": "2027-01-31",
+  "identity": {
+    "category": "bayer",
+    "designation": "α Ori",
+    "display_name": "α Ori — Betelgeuse",
+    "constellation": "Ori"
+  },
+  "observing": {
+    "naked_eye": "Bright and easy to see unaided; use Betelgeuse as a primary landmark for the surrounding constellation.",
+    "binoculars": "Binoculars isolate the star from the surrounding pattern and make star-hopping easier.",
+    "telescope": "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
+  },
+  "generated_from": "fixed-object-sky-notes-2027.csv"
+}

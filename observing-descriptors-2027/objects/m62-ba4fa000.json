@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2027,
+  "iso_week_date": "2027-W29-3",
+  "best_visibility_date": "2027-07-21",
+  "identity": {
+    "category": "messier",
+    "designation": "M62",
+    "display_name": "M62",
+    "constellation": "Oph"
+  },
+  "observing": {
+    "naked_eye": "Not normally a naked-eye target; use the surrounding star pattern to reach its position.",
+    "binoculars": "Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.",
+    "telescope": "Moderate to high power concentrates the core and, with sufficient aperture and good seeing, begins to resolve stars around the outskirts."
+  },
+  "generated_from": "fixed-object-sky-notes-2027.csv"
+}

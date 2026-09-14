@@ -1,0 +1,69 @@
+{
+  "schema": "star-almanack.observing-week.v1",
+  "iso_week": "2027-W30",
+  "inline_descriptors": [
+    {
+      "display_name": "M9",
+      "iso_week_date": "2027-W30-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m9-01d2b1fb.json"
+    },
+    {
+      "display_name": "M14",
+      "iso_week_date": "2027-W30-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m14-7c075a4e.json"
+    },
+    {
+      "display_name": "M6 — Butterfly Cluster",
+      "iso_week_date": "2027-W30-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m6-butterfly-cluster-6bd9dee5.json"
+    },
+    {
+      "display_name": "β Ara",
+      "iso_week_date": "2027-W30-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ara-8dc69def.json"
+    }
+  ],
+  "linked_descriptors": [
+    {
+      "display_name": "M9",
+      "iso_week_date": "2027-W30-1",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m9-01d2b1fb.json"
+    },
+    {
+      "display_name": "M14",
+      "iso_week_date": "2027-W30-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m14-7c075a4e.json"
+    },
+    {
+      "display_name": "M6 — Butterfly Cluster",
+      "iso_week_date": "2027-W30-6",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m6-butterfly-cluster-6bd9dee5.json"
+    },
+    {
+      "display_name": "β Ara",
+      "iso_week_date": "2027-W30-2",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ara-8dc69def.json"
+    },
+    {
+      "display_name": "α Ara",
+      "iso_week_date": "2027-W30-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ara-9c777e3f.json"
+    },
+    {
+      "display_name": "β Dra — Rastaban",
+      "iso_week_date": "2027-W30-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/dra-rastaban-e72efd49.json"
+    }
+  ],
+  "curated_routes": []
+}
