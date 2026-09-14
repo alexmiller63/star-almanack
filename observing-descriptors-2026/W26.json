@@ -70,5 +70,10 @@
       "href": "objects/bayer-cir-cir-cir-2026-06-26-b841a8de.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

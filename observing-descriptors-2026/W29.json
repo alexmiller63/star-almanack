@@ -70,5 +70,10 @@
       "href": "objects/bayer-tra-tra-tra-atria-2026-07-18-abc44981.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

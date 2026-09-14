@@ -70,5 +70,10 @@
       "href": "objects/messier-m40-uma-m40-winnecke-4-2026-05-14-3fedcbc4.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

@@ -70,5 +70,10 @@
       "href": "objects/messier-m37-aur-m37-2026-01-31-3a6d51dd.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

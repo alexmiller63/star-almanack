@@ -70,5 +70,10 @@
       "href": "objects/bayer-cma-cma-cma-sirius-2026-02-13-73ac49d0.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

@@ -70,5 +70,10 @@
       "href": "objects/bayer-cep-cep-cep-alderamin-2026-09-28-a5181ec5.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

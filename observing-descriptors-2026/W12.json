@@ -70,5 +70,10 @@
       "href": "objects/bayer-cnc-cnc-cnc-tarf-2026-03-09-694821e6.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

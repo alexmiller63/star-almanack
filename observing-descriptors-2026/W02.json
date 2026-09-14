@@ -70,5 +70,10 @@
       "href": "objects/bayer-cae-cae-cae-2026-01-13-02c2c4e0.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

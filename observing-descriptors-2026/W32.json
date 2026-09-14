@@ -70,5 +70,10 @@
       "href": "objects/messier-m21-sgr-m21-2026-08-06-a64221b5.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

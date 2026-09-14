@@ -70,5 +70,10 @@
       "href": "objects/messier-m42-ori-m42-great-nebula-in-orion-2026-01-26-688ffd08.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

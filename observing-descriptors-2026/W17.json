@@ -70,5 +70,10 @@
       "href": "objects/bayer-uma-uma-uma-merak-2026-04-23-49b54d2b.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

@@ -70,5 +70,10 @@
       "href": "objects/messier-m48-hya-m48-2026-03-08-c4b92120.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

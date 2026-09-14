@@ -70,5 +70,10 @@
       "href": "objects/bayer-cmi-cmi-cmi-gomeisa-2026-02-24-e20e8722.json"
     }
   ],
-  "curated_routes": []
+  "curated_routes": [
+    {
+      "id": "pegasus-enif-m15",
+      "href": "routes/pegasus-enif-m15.json"
+    }
+  ]
 }

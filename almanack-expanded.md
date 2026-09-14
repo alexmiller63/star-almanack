@@ -72,6 +72,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — β Ret:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W53-5.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W01.json) · [M45 — Pleiades](../descriptors/objects/messier-m45-tau-m45-pleiades-2026-01-01-5476efbf.json) · [α Hor](../descriptors/objects/bayer-hor-hor-hor-2026-01-07-6796d040.json) · [α Ret](../descriptors/objects/bayer-ret-ret-ret-2026-01-07-81af55e5.json) · [β Ret](../descriptors/objects/bayer-ret-ret-ret-2027-01-01-f2256c3b.json) · [α Tau — Aldebaran](../descriptors/objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json)
 
 ### Chart
@@ -138,6 +140,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Tau — Aldebaran:** Naked eye: Bright and easy to see unaided; use Aldebaran as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W03-1.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W02.json) · [α Hor](../descriptors/objects/bayer-hor-hor-hor-2026-01-07-6796d040.json) · [α Ret](../descriptors/objects/bayer-ret-ret-ret-2026-01-07-81af55e5.json) · [M45 — Pleiades](../descriptors/objects/messier-m45-tau-m45-pleiades-2026-01-01-5476efbf.json) · [α Tau — Aldebaran](../descriptors/objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json) · [α Dor](../descriptors/objects/bayer-dor-dor-dor-2026-01-12-dbe75ecf.json)
 
 ### Chart
@@ -202,6 +206,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — β Cae:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W03.json) · [α Tau — Aldebaran](../descriptors/objects/bayer-tau-tau-tau-aldebaran-2026-01-12-e020f61a.json) · [α Dor](../descriptors/objects/bayer-dor-dor-dor-2026-01-12-dbe75ecf.json) · [α Cae](../descriptors/objects/bayer-cae-cae-cae-2026-01-13-02c2c4e0.json) · [β Cae](../descriptors/objects/bayer-cae-cae-cae-2026-01-14-158f83e9.json) · [α Cam](../descriptors/objects/bayer-cam-cam-cam-2026-01-17-917f06ad.json)
 
 ### Chart
@@ -265,6 +271,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — β Eri — Cursa:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
 **Descriptor 4 — β Ori — Rigel:** Naked eye: Bright and easy to see unaided; use Rigel as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W04.json) · [M79](../descriptors/objects/messier-m79-lep-m79-2026-01-24-49aeff92.json) · [M38](../descriptors/objects/messier-m38-aur-m38-2026-01-25-be09f0eb.json) · [β Eri — Cursa](../descriptors/objects/bayer-eri-eri-eri-cursa-2026-01-20-fcdc085f.json) · [β Ori — Rigel](../descriptors/objects/bayer-ori-ori-ori-rigel-2026-01-21-9efdef42.json) · [α Aur — Capella](../descriptors/objects/bayer-aur-aur-aur-capella-2026-01-22-493d6bbe.json)
 
@@ -332,6 +340,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — M36:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W05.json) · [M1 — Crab Nebula](../descriptors/objects/messier-m1-tau-m1-crab-nebula-2026-01-26-280d091b.json) · [M42 — Great Nebula in Orion](../descriptors/objects/messier-m42-ori-m42-great-nebula-in-orion-2026-01-26-688ffd08.json) · [M43 — De Mairan's Nebula](../descriptors/objects/messier-m43-ori-m43-de-mairan-s-nebula-2026-01-26-677d62b2.json) · [M36](../descriptors/objects/messier-m36-aur-m36-2026-01-27-d4cb38c4.json) · [M78](../descriptors/objects/messier-m78-ori-m78-2026-01-29-3657f146.json)
 
 ### Chart
@@ -396,6 +406,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Men:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W06.json) · [M35](../descriptors/objects/messier-m35-gem-m35-2026-02-04-7b15a5d4.json) · [α Car — Canopus](../descriptors/objects/bayer-car-car-car-canopus-2026-02-07-9bce7731.json) · [β CMa — Mirzam](../descriptors/objects/bayer-cma-cma-cma-mirzam-2026-02-07-263b22aa.json) · [α Men](../descriptors/objects/bayer-men-men-men-2026-02-04-f2962b50.json) · [M1 — Crab Nebula](../descriptors/objects/messier-m1-tau-m1-crab-nebula-2026-01-26-280d091b.json)
 
 ### Chart
@@ -458,6 +470,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Pic:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W07.json) · [M41](../descriptors/objects/messier-m41-cma-m41-2026-02-13-898cfb00.json) · [α CMa — Sirius](../descriptors/objects/bayer-cma-cma-cma-sirius-2026-02-13-73ac49d0.json) · [β Mon](../descriptors/objects/bayer-mon-mon-mon-2026-02-09-c41493fd.json) · [α Pic](../descriptors/objects/bayer-pic-pic-pic-2026-02-13-845a6c50.json) · [M35](../descriptors/objects/messier-m35-gem-m35-2026-02-04-7b15a5d4.json)
 
 ### Chart
@@ -519,6 +533,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — M47:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W09-4.
 
 **Descriptor 4 — M46:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W09-5.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W08.json) · [M50](../descriptors/objects/messier-m50-mon-m50-2026-02-17-48dc9a40.json) · [M41](../descriptors/objects/messier-m41-cma-m41-2026-02-13-898cfb00.json) · [M47](../descriptors/objects/messier-m47-pup-m47-2026-02-26-925da75e.json) · [M46](../descriptors/objects/messier-m46-pup-m46-2026-02-27-7133fe53.json) · [M93](../descriptors/objects/messier-m93-pup-m93-2026-02-28-fdba5aa5.json)
 
@@ -584,6 +600,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — β CMi — Gomeisa:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W09.json) · [M47](../descriptors/objects/messier-m47-pup-m47-2026-02-26-925da75e.json) · [M46](../descriptors/objects/messier-m46-pup-m46-2026-02-27-7133fe53.json) · [M93](../descriptors/objects/messier-m93-pup-m93-2026-02-28-fdba5aa5.json) · [β CMi — Gomeisa](../descriptors/objects/bayer-cmi-cmi-cmi-gomeisa-2026-02-24-e20e8722.json) · [α Gem — Castor](../descriptors/objects/bayer-gem-gem-gem-castor-2026-02-26-f4430833.json)
 
 ### Chart
@@ -647,6 +665,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — M47:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W09-4.
 
 **Descriptor 4 — M46:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W09-5.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W10.json) · [M48](../descriptors/objects/messier-m48-hya-m48-2026-03-08-c4b92120.json) · [M44 — Beehive Cluster](../descriptors/objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json) · [M47](../descriptors/objects/messier-m47-pup-m47-2026-02-26-925da75e.json) · [M46](../descriptors/objects/messier-m46-pup-m46-2026-02-27-7133fe53.json) · [M93](../descriptors/objects/messier-m93-pup-m93-2026-02-28-fdba5aa5.json)
 
@@ -712,6 +732,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — β Vol:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W11.json) · [M44 — Beehive Cluster](../descriptors/objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json) · [β Cnc — Tarf](../descriptors/objects/bayer-cnc-cnc-cnc-tarf-2026-03-09-694821e6.json) · [α Cha](../descriptors/objects/bayer-cha-cha-cha-2026-03-09-5f17d344.json) · [β Vol](../descriptors/objects/bayer-vol-vol-vol-2026-03-11-e1f2e40f.json) · [β Pyx](../descriptors/objects/bayer-pyx-pyx-pyx-2026-03-15-38e9e47d.json)
 
 ### Chart
@@ -776,6 +798,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Vol:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W12.json) · [M67](../descriptors/objects/messier-m67-cnc-m67-2026-03-18-78e29b7e.json) · [α Cnc — Acubens](../descriptors/objects/bayer-cnc-cnc-cnc-acubens-2026-03-20-5909f566.json) · [α Pyx](../descriptors/objects/bayer-pyx-pyx-pyx-2026-03-16-4fd6717d.json) · [α Vol](../descriptors/objects/bayer-vol-vol-vol-2026-03-21-363e3382.json) · [M44 — Beehive Cluster](../descriptors/objects/messier-m44-cnc-m44-beehive-cluster-2026-03-15-13185f9e.json)
 
 ### Chart
@@ -837,6 +861,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — α Lyn:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
 **Descriptor 4 — β Lyn:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W13.json) · [β Car — Miaplacidus](../descriptors/objects/bayer-car-car-car-miaplacidus-2026-03-24-61fad61e.json) · [α Hya — Alphard](../descriptors/objects/bayer-hya-hya-hya-alphard-2026-03-28-c3447e24.json) · [α Lyn](../descriptors/objects/bayer-lyn-lyn-lyn-2026-03-26-76398d9d.json) · [β Lyn](../descriptors/objects/bayer-lyn-lyn-lyn-2026-03-26-f20da8b8.json) · [β Ant](../descriptors/objects/bayer-ant-ant-ant-2026-03-29-0896ca34.json)
 
@@ -900,6 +926,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Hya — Alphard:** Naked eye: Bright and easy to see unaided; use Alphard as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. Nearby best visibility: 2026-W13-6.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W14.json) · [M81 — Bode's Galaxy](../descriptors/objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json) · [M82 — Cigar Galaxy](../descriptors/objects/messier-m82-uma-m82-cigar-galaxy-2026-04-05-b22924a4.json) · [β Car — Miaplacidus](../descriptors/objects/bayer-car-car-car-miaplacidus-2026-03-24-61fad61e.json) · [α Hya — Alphard](../descriptors/objects/bayer-hya-hya-hya-alphard-2026-03-28-c3447e24.json) · [α Leo — Regulus](../descriptors/objects/bayer-leo-leo-leo-regulus-2026-04-08-051e70a8.json)
 
 ### Chart
@@ -961,6 +989,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — M81 — Bode's Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W14-7.
 
 **Descriptor 4 — M82 — Cigar Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W14-7.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W15.json) · [α Leo — Regulus](../descriptors/objects/bayer-leo-leo-leo-regulus-2026-04-08-051e70a8.json) · [α Sex](../descriptors/objects/bayer-sex-sex-sex-2026-04-08-e768af04.json) · [M81 — Bode's Galaxy](../descriptors/objects/messier-m81-uma-m81-bode-s-galaxy-2026-04-05-691fd512.json) · [M82 — Cigar Galaxy](../descriptors/objects/messier-m82-uma-m82-cigar-galaxy-2026-04-05-b22924a4.json) · [M95](../descriptors/objects/messier-m95-leo-m95-2026-04-18-d9c6755d.json)
 
@@ -1028,6 +1058,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Ant:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W16.json) · [M95](../descriptors/objects/messier-m95-leo-m95-2026-04-18-d9c6755d.json) · [M105](../descriptors/objects/messier-m105-leo-m105-2026-04-19-239c7d95.json) · [M96](../descriptors/objects/messier-m96-leo-m96-2026-04-19-8fd0a74b.json) · [α Ant](../descriptors/objects/bayer-ant-ant-ant-2026-04-13-e9b07f58.json) · [β LMi](../descriptors/objects/bayer-lmi-lmi-lmi-2026-04-14-429633b3.json)
 
 ### Chart
@@ -1094,6 +1126,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Crt — Alkes:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W17.json) · [M97 — Owl Nebula](../descriptors/objects/messier-m97-uma-m97-owl-nebula-2026-04-26-3bb12882.json) · [M108](../descriptors/objects/messier-m108-uma-m108-2026-04-25-7796ef07.json) · [α LMi — Praecipua](../descriptors/objects/bayer-lmi-lmi-lmi-praecipua-2026-04-21-9a5d1b77.json) · [α Crt — Alkes](../descriptors/objects/bayer-crt-crt-crt-alkes-2026-04-22-a04b3286.json) · [α UMa — Dubhe](../descriptors/objects/bayer-uma-uma-uma-dubhe-2026-04-23-b4b98106.json)
 
 ### Chart
@@ -1157,6 +1191,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — M97 — Owl Nebula:** Naked eye: Not normally identifiable as a distinct object to the unaided eye. Binoculars: Usually stellar or nearly stellar in binoculars; careful comparison with nearby stars is the key. Nearby best visibility: 2026-W17-7.
 
 **Descriptor 4 — M108:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W17-6.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W18.json) · [M65](../descriptors/objects/messier-m65-leo-m65-2026-04-27-62881cf3.json) · [M66](../descriptors/objects/messier-m66-leo-m66-2026-04-28-a20d8149.json) · [M97 — Owl Nebula](../descriptors/objects/messier-m97-uma-m97-owl-nebula-2026-04-26-3bb12882.json) · [M108](../descriptors/objects/messier-m108-uma-m108-2026-04-25-7796ef07.json) · [M109](../descriptors/objects/messier-m109-uma-m109-2026-05-07-949e4751.json)
 
@@ -1222,6 +1258,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Crv — Alchiba:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W19.json) · [M109](../descriptors/objects/messier-m109-uma-m109-2026-05-07-949e4751.json) · [β Leo — Denebola](../descriptors/objects/bayer-leo-leo-leo-denebola-2026-05-05-af0ba6ac.json) · [β Vir — Zavijava](../descriptors/objects/bayer-vir-vir-vir-zavijava-2026-05-06-1022eced.json) · [α Crv — Alchiba](../descriptors/objects/bayer-crv-crv-crv-alchiba-2026-05-10-36d82d67.json) · [β Hya](../descriptors/objects/bayer-hya-hya-hya-2026-05-06-fabf1125.json)
 
 ### Chart
@@ -1286,6 +1324,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — M99:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W20.json) · [M40 — Winnecke 4](../descriptors/objects/messier-m40-uma-m40-winnecke-4-2026-05-14-3fedcbc4.json) · [M98](../descriptors/objects/messier-m98-com-m98-2026-05-12-92e48400.json) · [M106](../descriptors/objects/messier-m106-cvn-m106-2026-05-13-672e0515.json) · [M99](../descriptors/objects/messier-m99-com-m99-2026-05-13-901f74b1.json) · [M100](../descriptors/objects/messier-m100-com-m100-2026-05-14-c9df0eda.json)
 
 ### Chart
@@ -1348,6 +1388,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — M68:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W21.json) · [M104 — Sombrero Galaxy](../descriptors/objects/messier-m104-vir-m104-sombrero-galaxy-2026-05-18-4bcba0c1.json) · [M64 — Black Eye Galaxy](../descriptors/objects/messier-m64-com-m64-black-eye-galaxy-2026-05-22-3552bdc5.json) · [M58](../descriptors/objects/messier-m58-vir-m58-2026-05-18-6e2d4eef.json) · [M68](../descriptors/objects/messier-m68-hya-m68-2026-05-18-6cc19585.json) · [M59](../descriptors/objects/messier-m59-vir-m59-2026-05-19-225ad6e8.json)
 
 ### Chart
@@ -1409,6 +1451,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — M53:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
 
 **Descriptor 4 — α Com — Diadem:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W22.json) · [M63 — Sunflower Galaxy](../descriptors/objects/messier-m63-cvn-m63-sunflower-galaxy-2026-05-27-b2ad9fc5.json) · [M51 — Whirlpool Galaxy](../descriptors/objects/messier-m51-cvn-m51-whirlpool-galaxy-2026-05-31-a14ee142.json) · [M53](../descriptors/objects/messier-m53-com-m53-2026-05-26-562d5765.json) · [α Com — Diadem](../descriptors/objects/bayer-com-com-com-diadem-2026-05-26-ea8c82a5.json) · [α Vir — Spica](../descriptors/objects/bayer-vir-vir-vir-spica-2026-05-29-e62757e5.json)
 
@@ -1474,6 +1518,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — M51 — Whirlpool Galaxy:** Naked eye: Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars. Binoculars: Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial. Nearby best visibility: 2026-W22-7.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W23.json) · [M83 — Southern Pinwheel](../descriptors/objects/messier-m83-hya-m83-southern-pinwheel-2026-06-01-6d1fbe67.json) · [M3](../descriptors/objects/messier-m3-cvn-m3-2026-06-03-a204d71d.json) · [M63 — Sunflower Galaxy](../descriptors/objects/messier-m63-cvn-m63-sunflower-galaxy-2026-05-27-b2ad9fc5.json) · [M51 — Whirlpool Galaxy](../descriptors/objects/messier-m51-cvn-m51-whirlpool-galaxy-2026-05-31-a14ee142.json) · [M101 — Pinwheel Galaxy](../descriptors/objects/messier-m101-uma-m101-pinwheel-galaxy-2026-06-08-3b84fc58.json)
 
 ### Chart
@@ -1537,6 +1583,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — β Cen — Hadar:** Naked eye: Bright and easy to see unaided; use Hadar as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
 **Descriptor 4 — α Boo — Arcturus:** Naked eye: Bright and easy to see unaided; use Arcturus as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W24.json) · [M101 — Pinwheel Galaxy](../descriptors/objects/messier-m101-uma-m101-pinwheel-galaxy-2026-06-08-3b84fc58.json) · [α Dra — Thuban](../descriptors/objects/bayer-dra-dra-dra-thuban-2026-06-08-654fc72c.json) · [β Cen — Hadar](../descriptors/objects/bayer-cen-cen-cen-hadar-2026-06-08-1f4592e4.json) · [α Boo — Arcturus](../descriptors/objects/bayer-boo-boo-boo-arcturus-2026-06-11-4d988adb.json) · [proxima-centauri — Proxima Centauri](../descriptors/objects/special-proxima-centauri-cen-proxima-centauri-proxima-centauri-2-94e9cad0.json)
 
@@ -1602,6 +1650,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Cir:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W25.json) · [α Cen — Rigil Kentaurus](../descriptors/objects/bayer-cen-cen-cen-rigil-kentaurus-2026-06-16-953447fa.json) · [α Lib — Zubenelgenubi](../descriptors/objects/bayer-lib-lib-lib-zubenelgenubi-2026-06-19-7c6c2595.json) · [β UMi — Kochab](../descriptors/objects/bayer-umi-umi-umi-kochab-2026-06-19-d0adb962.json) · [α Cir](../descriptors/objects/bayer-cir-cir-cir-2026-06-17-c793b98c.json) · [α Lup](../descriptors/objects/bayer-lup-lup-lup-2026-06-17-10730c5a.json)
 
 ### Chart
@@ -1665,6 +1715,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — β Boo — Nekkar:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
 **Descriptor 4 — β Lib — Zubeneschamali:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W26.json) · [M102 — Spindle Galaxy](../descriptors/objects/messier-m102-dra-m102-spindle-galaxy-2026-06-23-0596629e.json) · [M5](../descriptors/objects/messier-m5-ser-m5-2026-06-26-45b25479.json) · [β Boo — Nekkar](../descriptors/objects/bayer-boo-boo-boo-nekkar-2026-06-22-65e55fdc.json) · [β Lib — Zubeneschamali](../descriptors/objects/bayer-lib-lib-lib-zubeneschamali-2026-06-25-ba5fcae6.json) · [β CrB — Nusakan](../descriptors/objects/bayer-crb-crb-crb-nusakan-2026-06-28-903b2370.json)
 
@@ -1730,6 +1782,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — β TrA:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W27.json) · [α CrB — Alphecca](../descriptors/objects/bayer-crb-crb-crb-alphecca-2026-06-30-e66303f6.json) · [α Ser — Unukalhai](../descriptors/objects/bayer-ser-ser-ser-unukalhai-2026-07-02-8cfac4cf.json) · [β Ser — Chow](../descriptors/objects/bayer-ser-ser-ser-chow-2026-07-02-d345a1ce.json) · [β TrA](../descriptors/objects/bayer-tra-tra-tra-2026-07-05-e33f3e51.json) · [M102 — Spindle Galaxy](../descriptors/objects/messier-m102-dra-m102-spindle-galaxy-2026-06-23-0596629e.json)
 
 ### Chart
@@ -1794,6 +1848,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — M13 — Great Hercules Globular:** Naked eye: At a dark site it can be glimpsed unaided as a tiny diffuse point, especially with averted vision. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. Nearby best visibility: 2026-W29-4.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W28.json) · [M80](../descriptors/objects/messier-m80-sco-m80-2026-07-10-ebdf499b.json) · [M4](../descriptors/objects/messier-m4-sco-m4-2026-07-12-7835cc27.json) · [β Sco — Acrab](../descriptors/objects/bayer-sco-sco-sco-acrab-2026-07-07-996e76f3.json) · [M13 — Great Hercules Globular](../descriptors/objects/messier-m13-her-m13-great-hercules-globular-2026-07-16-14baa2ea.json) · [M107](../descriptors/objects/messier-m107-oph-m107-2026-07-14-21e7ad6d.json)
 
 ### Chart
@@ -1856,6 +1912,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Sco — Antares:** Naked eye: Bright and easy to see unaided; use Antares as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W29.json) · [M13 — Great Hercules Globular](../descriptors/objects/messier-m13-her-m13-great-hercules-globular-2026-07-16-14baa2ea.json) · [M107](../descriptors/objects/messier-m107-oph-m107-2026-07-14-21e7ad6d.json) · [M12](../descriptors/objects/messier-m12-oph-m12-2026-07-17-4d9e9899.json) · [α Sco — Antares](../descriptors/objects/bayer-sco-sco-sco-antares-2026-07-13-2c63b842.json) · [β Her — Kornephoros](../descriptors/objects/bayer-her-her-her-kornephoros-2026-07-13-c3a2fb20.json)
 
 ### Chart
@@ -1917,6 +1975,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — M62:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
 
 **Descriptor 4 — M9:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W30.json) · [M10](../descriptors/objects/messier-m10-oph-m10-2026-07-20-9895b265.json) · [M19](../descriptors/objects/messier-m19-oph-m19-2026-07-21-71412f83.json) · [M62](../descriptors/objects/messier-m62-oph-m62-2026-07-21-acb443e4.json) · [M9](../descriptors/objects/messier-m9-oph-m9-2026-07-25-407e360a.json) · [M92](../descriptors/objects/messier-m92-her-m92-2026-07-25-4993ef74.json)
 
@@ -1984,6 +2044,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Oph — Rasalhague:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W31.json) · [M6 — Butterfly Cluster](../descriptors/objects/messier-m6-sco-m6-butterfly-cluster-2026-07-31-05ce5336.json) · [M14](../descriptors/objects/messier-m14-oph-m14-2026-07-30-02cbc9d3.json) · [β Dra — Rastaban](../descriptors/objects/bayer-dra-dra-dra-rastaban-2026-07-28-8253bc5a.json) · [α Oph — Rasalhague](../descriptors/objects/bayer-oph-oph-oph-rasalhague-2026-07-29-e32add36.json) · [β Oph — Cebalrai](../descriptors/objects/bayer-oph-oph-oph-cebalrai-2026-08-01-ca6a83e6.json)
 
 ### Chart
@@ -2045,6 +2107,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — M8 — Lagoon Nebula:** Naked eye: Not normally visible as a distinct nebula to the unaided eye. Binoculars: Look for a low-contrast patch against the surrounding field; dark adaptation matters more than high magnification. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
 
 **Descriptor 4 — M24 — Sagittarius Star Cloud:** Naked eye: A conspicuous bright star cloud in a dark summer Milky Way; scan for the dense glow rather than a compact object. Binoculars: Sweep slowly across the star cloud: binoculars break the glow into innumerable stars, knots, and dark lanes. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W32.json) · [M7 — Ptolemy's Cluster](../descriptors/objects/messier-m7-sco-m7-ptolemy-s-cluster-2026-08-03-166d1653.json) · [M20 — Trifid Nebula](../descriptors/objects/messier-m20-sgr-m20-trifid-nebula-2026-08-06-a8677098.json) · [M8 — Lagoon Nebula](../descriptors/objects/messier-m8-sgr-m8-lagoon-nebula-2026-08-06-d80c12f6.json) · [M24 — Sagittarius Star Cloud](../descriptors/objects/messier-m24-sgr-m24-sagittarius-star-cloud-2026-08-09-2850f1bd.json) · [M23](../descriptors/objects/messier-m23-sgr-m23-2026-08-04-f097fbbb.json)
 
@@ -2112,6 +2176,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — M18:** Naked eye: Not normally a distinct naked-eye object; locate the surrounding constellation first. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W33.json) · [M16 — Eagle Nebula](../descriptors/objects/messier-m16-ser-m16-eagle-nebula-2026-08-10-1d5760cb.json) · [M17 — Omega Nebula](../descriptors/objects/messier-m17-sgr-m17-omega-nebula-2026-08-10-f0ed0d9f.json) · [M22 — Sagittarius Cluster](../descriptors/objects/messier-m22-sgr-m22-sagittarius-cluster-2026-08-14-e3ac85f3.json) · [M18](../descriptors/objects/messier-m18-sgr-m18-2026-08-10-ab41c9b1.json) · [M28](../descriptors/objects/messier-m28-sgr-m28-2026-08-11-783f29ca.json)
 
 ### Chart
@@ -2176,6 +2242,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — M54:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W34.json) · [M11 — Wild Duck Cluster](../descriptors/objects/messier-m11-sct-m11-wild-duck-cluster-2026-08-18-76e16199.json) · [M57 — Ring Nebula](../descriptors/objects/messier-m57-lyr-m57-ring-nebula-2026-08-19-6f2cdae3.json) · [M26](../descriptors/objects/messier-m26-sct-m26-2026-08-17-5f705469.json) · [M54](../descriptors/objects/messier-m54-sgr-m54-2026-08-20-ce836bbc.json) · [β Lyr — Sheliak](../descriptors/objects/bayer-lyr-lyr-lyr-sheliak-2026-08-18-e1344040.json)
 
 ### Chart
@@ -2237,6 +2305,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — β Sgr — Arkab:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
 **Descriptor 4 — α Vul — Anser:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W35.json) · [M56](../descriptors/objects/messier-m56-lyr-m56-2026-08-25-e5a3a7fa.json) · [α Sgr — Rukbat](../descriptors/objects/bayer-sgr-sgr-sgr-rukbat-2026-08-27-2780902e.json) · [β Sgr — Arkab](../descriptors/objects/bayer-sgr-sgr-sgr-arkab-2026-08-27-06d80076.json) · [α Vul — Anser](../descriptors/objects/bayer-vul-vul-vul-anser-2026-08-29-51804105.json) · [β Cyg — Albireo](../descriptors/objects/bayer-cyg-cyg-cyg-albireo-2026-08-29-5ffdf32b.json)
 
@@ -2302,6 +2372,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — α Sge — Sham:** Naked eye: Visible unaided from a reasonably dark site, but easier after full dark adaptation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W36.json) · [M27 — Dumbbell Nebula](../descriptors/objects/messier-m27-vul-m27-dumbbell-nebula-2026-09-06-87dc3f17.json) · [M55](../descriptors/objects/messier-m55-sgr-m55-2026-09-01-5f837de0.json) · [M71](../descriptors/objects/messier-m71-sge-m71-2026-09-05-85c0e1d0.json) · [α Sge — Sham](../descriptors/objects/bayer-sge-sge-sge-sham-2026-09-01-77326ab7.json) · [α Aql — Altair](../descriptors/objects/bayer-aql-aql-aql-altair-2026-09-04-82833fab.json)
 
 ### Chart
@@ -2364,6 +2436,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — β Cap — Dabih:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W37.json) · [M75](../descriptors/objects/messier-m75-sgr-m75-2026-09-08-b2e1d2a2.json) · [M29](../descriptors/objects/messier-m29-cyg-m29-2026-09-13-24dcb16b.json) · [α Cap — Algedi](../descriptors/objects/bayer-cap-cap-cap-algedi-2026-09-11-a2712f84.json) · [β Cap — Dabih](../descriptors/objects/bayer-cap-cap-cap-dabih-2026-09-12-29011240.json) · [α Pav — Peacock](../descriptors/objects/bayer-pav-pav-pav-peacock-2026-09-13-567008c1.json)
 
 ### Chart
@@ -2425,6 +2499,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — α Cyg — Deneb:** Naked eye: Bright and easy to see unaided; use Deneb as a primary landmark for the surrounding constellation. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich.
 
 **Descriptor 4 — α Ind:** Naked eye: Readily visible unaided under ordinary dark-sky conditions; identify it from the surrounding constellation pattern. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W38.json) · [α Del — Sualocin](../descriptors/objects/bayer-del-del-del-sualocin-2026-09-17-228a2601.json) · [β Del — Rotanev](../descriptors/objects/bayer-del-del-del-rotanev-2026-09-17-c76f6fba.json) · [α Cyg — Deneb](../descriptors/objects/bayer-cyg-cyg-cyg-deneb-2026-09-18-9b10791c.json) · [α Ind](../descriptors/objects/bayer-ind-ind-ind-2026-09-17-185f0f38.json) · [β Pav](../descriptors/objects/bayer-pav-pav-pav-2026-09-19-901975a5.json)
 
@@ -2490,6 +2566,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — β Mic:** Naked eye: Near or beyond the practical unaided-eye limit for many observers; use optical aid for a reliable identification. Binoculars: Binoculars isolate the star from the surrounding pattern and make star-hopping easier.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W39.json) · [M72](../descriptors/objects/messier-m72-aqr-m72-2026-09-21-a761b3e6.json) · [M73](../descriptors/objects/messier-m73-aqr-m73-2026-09-23-60551d00.json) · [α Equ — Kitalpha](../descriptors/objects/bayer-equ-equ-equ-kitalpha-2026-09-27-69c036a0.json) · [β Mic](../descriptors/objects/bayer-mic-mic-mic-2026-09-21-e3cc6e98.json) · [β Ind](../descriptors/objects/bayer-ind-ind-ind-2026-09-22-d01713c5.json)
 
 ### Chart
@@ -2554,6 +2632,8 @@ The following observer guidance is derived from the machine-readable records for
 
 **Descriptor 4 — M30:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection.
 
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
+
 **Machine-readable descriptors:** [Week index](../descriptors/W40.json) · [M15 — Great Pegasus Globular](../descriptors/objects/messier-m15-peg-m15-great-pegasus-globular-2026-10-01-12227e32.json) · [M2](../descriptors/objects/messier-m2-aqr-m2-2026-10-02-cbaf7b1e.json) · [M39](../descriptors/objects/messier-m39-cyg-m39-2026-10-02-16de7d63.json) · [M30](../descriptors/objects/messier-m30-cap-m30-2026-10-04-4e130fe4.json) · [α Cep — Alderamin](../descriptors/objects/bayer-cep-cep-cep-alderamin-2026-09-28-a5181ec5.json)
 
 ### Chart
@@ -2617,6 +2697,8 @@ The following observer guidance is derived from the machine-readable records for
 **Descriptor 3 — M2:** Naked eye: Not normally a naked-eye target; use the surrounding star pattern to reach its position. Binoculars: Appears as a compact, round glow with a brighter center; steady binocular support improves detection. Nearby best visibility: 2026-W40-5.
 
 **Descriptor 4 — M39:** Naked eye: Possible unaided from a dark site as a faint unresolved patch; binoculars make identification much easier. Binoculars: An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out. The field lies within the Almanack's visible Milky Way boundary, so the background is especially star-rich. Nearby best visibility: 2026-W40-5.
+
+**Guiding route:** Use the Great Square to identify Markab, follow the neck stars Homam and Biham to Enif, then continue the same line a little more than 4° to M15.
 
 **Machine-readable descriptors:** [Week index](../descriptors/W41.json) · [α Aqr — Sadalmelik](../descriptors/objects/bayer-aqr-aqr-aqr-sadalmelik-2026-10-11-28291ff7.json) · [M15 — Great Pegasus Globular](../descriptors/objects/messier-m15-peg-m15-great-pegasus-globular-2026-10-01-12227e32.json) · [M2](../descriptors/objects/messier-m2-aqr-m2-2026-10-02-cbaf7b1e.json) · [M39](../descriptors/objects/messier-m39-cyg-m39-2026-10-02-16de7d63.json) · [M30](../descriptors/objects/messier-m30-cap-m30-2026-10-04-4e130fe4.json)
 
