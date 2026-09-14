@@ -9,8 +9,12 @@ import math
 import sys
 from pathlib import Path
 
+import erfa
+import spiceypy as spice
+
 ROOT = Path(__file__).resolve().parent
 ELP_DIR = ROOT / "star-almanack-elp82b"
+DE441_KERNEL = ROOT / "star-almanack-microkernel.bsp"
 sys.path.insert(0, str(ELP_DIR))
 
 import eclipse_engine
@@ -43,20 +47,46 @@ def datetime_utc(jd: float) -> dt.datetime:
     return dt.datetime.fromtimestamp(unix, UTC)
 
 
+_solar_kernel_loaded = False
+
+
+def ensure_solar_kernel_loaded() -> None:
+    global _solar_kernel_loaded
+    if _solar_kernel_loaded:
+        return
+    if not DE441_KERNEL.exists():
+        raise FileNotFoundError(f"DE441 microkernel not found: {DE441_KERNEL}")
+    spice.furnsh(str(DE441_KERNEL))
+    _solar_kernel_loaded = True
+
+
 def sun_longitude(jd_tdb: float) -> float:
-    d = jd_tdb - 2451543.5
-    perihelion = (282.9404 + 0.0000470935 * d) * DEG
-    eccentricity = 0.016709 - 0.000000001151 * d
-    mean_anomaly = (356.0470 + 0.9856002585 * d) * DEG
-    mean_anomaly %= 2.0 * math.pi
-    eccentric_anomaly = mean_anomaly
-    for _ in range(12):
-        eccentric_anomaly -= (
-            eccentric_anomaly - eccentricity * math.sin(eccentric_anomaly) - mean_anomaly
-        ) / (1.0 - eccentricity * math.cos(eccentric_anomaly))
-    x = math.cos(eccentric_anomaly) - eccentricity
-    y = math.sqrt(1.0 - eccentricity * eccentricity) * math.sin(eccentric_anomaly)
-    return (math.atan2(y, x) + perihelion) % (2.0 * math.pi)
+    """Apparent geocentric tropical solar longitude from the DE441 microkernel."""
+    ensure_solar_kernel_loaded()
+    et = (jd_tdb - 2451545.0) * 86400.0
+    position, _ = spice.spkpos(
+        "SUN",
+        et,
+        "J2000",
+        "LT+S",
+        "EARTH",
+    )
+
+    # ICRS/J2000 -> true equator and equinox of date (IAU 2006/2000A),
+    # then true equatorial -> true ecliptic using the true obliquity.
+    date1 = 2451545.0
+    date2 = jd_tdb - date1
+    true_equatorial = erfa.pnm06a(date1, date2) @ position
+    mean_obliquity = erfa.obl06(date1, date2)
+    _, nutation_obliquity = erfa.nut06a(date1, date2)
+    true_obliquity = mean_obliquity + nutation_obliquity
+
+    x = float(true_equatorial[0])
+    y = (
+        math.cos(true_obliquity) * float(true_equatorial[1])
+        + math.sin(true_obliquity) * float(true_equatorial[2])
+    )
+    return math.atan2(y, x) % (2.0 * math.pi)
 
 
 def angular_error(angle: float, target: float) -> float:
@@ -147,7 +177,7 @@ def calculate(year: int, normalized: dict) -> dict:
         "schema": "star-almanack.calendar-events.v1",
         "year": year,
         "engines": {
-            "solar": "Star Almanack compact apparent geocentric Sun",
+            "solar": "JPL DE441 apparent geocentric Sun; IAU 2006/2000A true ecliptic of date",
             "lunar": "ELP2000-82B, all normalized terms",
         },
         "zodiac_ingresses": ingresses,
