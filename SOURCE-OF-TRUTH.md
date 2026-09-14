@@ -134,6 +134,21 @@ All generators MUST be idempotent: running the same generator twice with the
 same inputs and selected range must produce byte-for-byte identical owned
 output. CI shall verify this invariant for the integrated Almanack build.
 
+## Year scaffold generation
+
+The year-scaffold generator accepts a required start year and an optional end
+year. A blank end year means the start year only. When supplied, the end year
+is inclusive and MUST NOT be earlier than the start year.
+
+For each requested year, the generator derives the valid ISO week count and all
+Monday-through-Sunday civil-date boundaries from ISO 8601 rules. It MUST
+recreate that year's scaffold from those rules, never by copying a previously
+generated year. Every weekly scaffold exposes the 5 canonical owned slots:
+Calendar, Ephemeris, Sky Note, Planet Finder, and Artwork.
+
+A range run treats each year independently. Repeating a run with identical
+inputs MUST produce byte-for-byte identical scaffolds.
+
 ## Maintenance rule
 
 When a stellar entry is wrong or incomplete, correct the appropriate catalog, visibility computation, or enrichment source and regenerate. Do not hand-patch a single weekly HTML page except while diagnosing a rendering problem.
