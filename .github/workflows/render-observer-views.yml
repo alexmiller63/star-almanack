@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install renderer dependency
-        run: python -m pip install matplotlib
+        run: python -m pip install matplotlib==3.10.6
 
       - name: Fetch pinned HYG v4.1 catalog
         run: |
@@ -46,6 +46,17 @@ jobs:
           test -s observer-views/M35/M35-finder.svg
           test -s observer-views/M35/M35-binoculars.svg
           test -s observer-views/M35/M35-telescope.svg
+
+      - name: Verify deterministic regeneration
+        run: |
+          sha256sum observer-views/M35/*.svg > /tmp/observer-views-before.sha256
+          python render_observer_views.py M35 /tmp/hygdata_v41.csv \
+            --view all \
+            --out-dir observer-views/M35 \
+            --replace-output-dir \
+            --format svg
+          sha256sum observer-views/M35/*.svg > /tmp/observer-views-after.sha256
+          diff -u /tmp/observer-views-before.sha256 /tmp/observer-views-after.sha256
 
       - name: Commit generated SVG views
         run: |

@@ -56,6 +56,8 @@ from typing import Iterable
 
 import matplotlib.pyplot as plt
 
+plt.rcParams["svg.hashsalt"] = "star-almanack-observer-view-v1"
+
 
 @dataclass(frozen=True)
 class ViewPreset:
@@ -409,7 +411,12 @@ def render_view(
 
     fig.tight_layout()
     output.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(output, dpi=dpi, bbox_inches="tight")
+    metadata = (
+        {"Creator": "Star Almanack observer-view renderer", "Date": None}
+        if output.suffix.lower() == ".svg"
+        else {"Software": "Star Almanack observer-view renderer"}
+    )
+    fig.savefig(output, dpi=dpi, bbox_inches="tight", metadata=metadata)
     plt.close(fig)
 
 
