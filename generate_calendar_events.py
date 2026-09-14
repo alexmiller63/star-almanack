@@ -89,6 +89,30 @@ def sun_longitude(jd_tdb: float) -> float:
     return math.atan2(y, x) % (2.0 * math.pi)
 
 
+def sun_longitude_j2000(jd_tdb: float) -> float:
+    """Geocentric solar longitude in the mean ecliptic J2000 frame.
+
+    ELP2000-82B returns lunar longitude in this frame, so lunar phase
+    elongations must compare the Moon and Sun in the same coordinates.
+    """
+    ensure_solar_kernel_loaded()
+    et = (jd_tdb - 2451545.0) * 86400.0
+    position, _ = spice.spkpos(
+        "SUN",
+        et,
+        "J2000",
+        "LT+S",
+        "EARTH",
+    )
+    mean_obliquity = erfa.obl06(2451545.0, 0.0)
+    x = float(position[0])
+    y = (
+        math.cos(mean_obliquity) * float(position[1])
+        + math.sin(mean_obliquity) * float(position[2])
+    )
+    return math.atan2(y, x) % (2.0 * math.pi)
+
+
 def angular_error(angle: float, target: float) -> float:
     return math.atan2(math.sin(angle - target), math.cos(angle - target))
 
@@ -156,7 +180,7 @@ def calculate(year: int, normalized: dict) -> dict:
     for target_degrees, symbol, name in PHASES:
         target = target_degrees * DEG
         function = lambda jd, target=target: angular_error(
-            moon_longitude(jd) - sun_longitude(eclipse_engine.utc_to_tdb_approx(jd)), target
+            moon_longitude(jd) - sun_longitude_j2000(eclipse_engine.utc_to_tdb_approx(jd)), target
         )
         for root in crossings(function, start, end, 0.75):
             moment = datetime_utc(root)
