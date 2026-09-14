@@ -3,15 +3,25 @@ name: Build Everything
 on:
   workflow_dispatch:
     inputs:
-      first_iso_week:
-        description: First ISO week (YYYY-Www)
+      start_year:
+        description: Start year
         required: true
-        default: 2025-W01
+        default: '2025'
         type: string
-      last_iso_week:
-        description: Last ISO week (YYYY-Www)
+      start_week:
+        description: Start week
         required: true
-        default: 2028-W52
+        default: '01'
+        type: string
+      end_year:
+        description: End year
+        required: true
+        default: '2028'
+        type: string
+      end_week:
+        description: End week
+        required: true
+        default: '52'
         type: string
 
 permissions:
@@ -25,8 +35,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      FIRST_ISO_WEEK: ${{ inputs.first_iso_week }}
-      LAST_ISO_WEEK: ${{ inputs.last_iso_week }}
+      START_YEAR: ${{ inputs.start_year }}
+      START_WEEK: ${{ inputs.start_week }}
+      END_YEAR: ${{ inputs.end_year }}
+      END_WEEK: ${{ inputs.end_week }}
     steps:
       - name: Check out Star Almanack
         uses: actions/checkout@v4
@@ -37,6 +49,26 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Resolve and validate ISO-week range
+        run: |
+          python - <<'PY'
+          import os
+
+          from iso_week_range import IsoWeekRange
+
+          try:
+              first = f"{int(os.environ['START_YEAR']):04d}-W{int(os.environ['START_WEEK']):02d}"
+              last = f"{int(os.environ['END_YEAR']):04d}-W{int(os.environ['END_WEEK']):02d}"
+              requested = IsoWeekRange.parse(first, last)
+          except ValueError as error:
+              raise SystemExit(f"Invalid requested week range: {error}") from error
+
+          with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as output:
+              output.write(f"FIRST_ISO_WEEK={requested.first}\n")
+              output.write(f"LAST_ISO_WEEK={requested.last}\n")
+          print(f"Building {requested.first} through {requested.last} ({len(requested)} weeks)")
+          PY
 
       - name: Install calculation dependencies
         run: python -m pip install --disable-pip-version-check pyyaml spiceypy pyerfa
