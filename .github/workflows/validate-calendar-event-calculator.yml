@@ -17,6 +17,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install astronomical calculation dependencies
+        run: python -m pip install --disable-pip-version-check spiceypy pyerfa
+
       - name: Prepare official ELP2000-82B coefficients
         working-directory: star-almanack-elp82b
         run: |
