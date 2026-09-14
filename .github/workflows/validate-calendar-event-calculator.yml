@@ -2,6 +2,17 @@ name: Validate Calendar Event Calculator
 
 on:
   workflow_dispatch:
+    inputs:
+      start_year:
+        description: "First year to calculate"
+        required: true
+        default: "2026"
+        type: string
+      end_year:
+        description: "Last year to calculate; leave blank for one year"
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: write
@@ -27,12 +38,51 @@ jobs:
           python lunar_elp.py verify data/elp82b
           python normalize_elp82b.py data/elp82b elp82b-manifest.json
 
-      - name: Calculate 2026 regression and 2027 events
+      - name: Resolve requested year range
+        id: years
+        env:
+          START_YEAR: ${{ inputs.start_year }}
+          END_YEAR: ${{ inputs.end_year }}
         run: |
-          python generate_calendar_events.py 2026
-          python generate_calendar_events.py 2027
+          python - <<'PY'
+          import os
+          import sys
+
+          try:
+              start = int(os.environ["START_YEAR"])
+              end_text = os.environ["END_YEAR"].strip()
+              end = start if not end_text else int(end_text)
+          except ValueError:
+              print("start_year and end_year must be integer years", file=sys.stderr)
+              raise SystemExit(1)
+
+          if start < 1900 or start > 2200 or end < 1900 or end > 2200:
+              print("years must be between 1900 and 2200", file=sys.stderr)
+              raise SystemExit(1)
+          if end < start:
+              print("end_year must be greater than or equal to start_year", file=sys.stderr)
+              raise SystemExit(1)
+
+          years = list(range(start, end + 1))
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"start_year={start}\\n")
+              output.write(f"end_year={end}\\n")
+              output.write(f"includes_2026={str(start <= 2026 <= end).lower()}\\n")
+              output.write("years<<EOF\\n")
+              output.write("\\n".join(str(year) for year in years))
+              output.write("\\nEOF\\n")
+          print(f"Requested years: {start}-{end}")
+
+      - name: Calculate requested calendar events
+        env:
+          YEARS: ${{ steps.years.outputs.years }}
+        run: |
+          while read -r year; do
+            [ -z "$year" ] || python generate_calendar_events.py "$year"
+          done <<< "$YEARS"
 
       - name: Compare against accepted 2026 calendar
+        if: steps.years.outputs.includes_2026 == 'true'
         run: |
           python - <<'PY'
           import datetime as dt
@@ -50,14 +100,14 @@ jobs:
 
           accepted_ingresses = {}
           for symbol, stamp in re.findall(
-              r"\| (♈|♉|♊|♋|♌|♍|♎|♏|♐|♑|♒|♓) \([^|]+\) \| \d+° \| (2026-\d\d-\d\d \d\d:\d\d:\d\d) \|",
+              r"\\| (♈|♉|♊|♋|♌|♍|♎|♏|♐|♑|♒|♓) \\([^|]+\\) \\| \\d+° \\| (2026-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d) \\|",
               accepted,
           ):
               accepted_ingresses[symbol] = dt.datetime.fromisoformat(stamp).replace(tzinfo=dt.timezone.utc)
 
           accepted_phases = []
           for symbol, name, stamp in re.findall(
-              r"\| ([🌑🌓🌕🌗]) ([^|]+?) \| (2026-\d\d-\d\d \d\d:\d\d:\d\d) \|",
+              r"\\| ([🌑🌓🌕🌗]) ([^|]+?) \\| (2026-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d) \\|",
               accepted,
           ):
               accepted_phases.append((symbol, name.strip(), dt.datetime.fromisoformat(stamp).replace(tzinfo=dt.timezone.utc)))
@@ -139,22 +189,37 @@ jobs:
           PY
 
       - name: Verify deterministic output
+        env:
+          YEARS: ${{ steps.years.outputs.years }}
         run: |
-          sha256sum calendar-events-2026.json calendar-events-2027.json > /tmp/calendar-before.sha256
-          python generate_calendar_events.py 2026
-          python generate_calendar_events.py 2027
-          sha256sum calendar-events-2026.json calendar-events-2027.json > /tmp/calendar-after.sha256
+          : > /tmp/calendar-before.sha256
+          while read -r year; do
+            [ -z "$year" ] || sha256sum "calendar-events-$year.json" >> /tmp/calendar-before.sha256
+          done <<< "$YEARS"
+          while read -r year; do
+            [ -z "$year" ] || python generate_calendar_events.py "$year"
+          done <<< "$YEARS"
+          : > /tmp/calendar-after.sha256
+          while read -r year; do
+            [ -z "$year" ] || sha256sum "calendar-events-$year.json" >> /tmp/calendar-after.sha256
+          done <<< "$YEARS"
           diff -u /tmp/calendar-before.sha256 /tmp/calendar-after.sha256
 
       - name: Commit validated event data
+        env:
+          YEARS: ${{ steps.years.outputs.years }}
+          START_YEAR: ${{ steps.years.outputs.start_year }}
+          END_YEAR: ${{ steps.years.outputs.end_year }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add calendar-events-2026.json calendar-events-2027.json
+          while read -r year; do
+            [ -z "$year" ] || git add "calendar-events-$year.json"
+          done <<< "$YEARS"
           if git diff --cached --quiet; then
             echo "Calendar event data already current."
             exit 0
           fi
-          git commit -m "Calculate 2026-2027 calendar events"
+          git commit -m "Calculate $START_YEAR-$END_YEAR calendar events"
           git pull --rebase origin main
           git push origin HEAD:main
