@@ -1,0 +1,58 @@
+{
+  "schema": "star-almanack.planet-finder.v1",
+  "iso_week": "2026-W40",
+  "snapshot_utc": "2026-09-28T00:00:00Z",
+  "coordinate_system": "geocentric tropical ecliptic longitude of date",
+  "planets": [
+    {
+      "name": "Mercury",
+      "notation": "♎ 26°37′",
+      "sign": "♎",
+      "degrees": 26,
+      "minutes": 37
+    },
+    {
+      "name": "Venus",
+      "notation": "♏ 7°58′",
+      "sign": "♏",
+      "degrees": 7,
+      "minutes": 58
+    },
+    {
+      "name": "Mars",
+      "notation": "♋ 29°56′",
+      "sign": "♋",
+      "degrees": 29,
+      "minutes": 56
+    },
+    {
+      "name": "Jupiter",
+      "notation": "♌ 19°03′",
+      "sign": "♌",
+      "degrees": 19,
+      "minutes": 3
+    },
+    {
+      "name": "Saturn",
+      "notation": "♈ 11°49′",
+      "sign": "♈",
+      "degrees": 11,
+      "minutes": 49
+    },
+    {
+      "name": "Uranus",
+      "notation": "♊ 5°34′",
+      "sign": "♊",
+      "degrees": 5,
+      "minutes": 34
+    },
+    {
+      "name": "Neptune",
+      "notation": "♈ 2°57′",
+      "sign": "♈",
+      "degrees": 2,
+      "minutes": 57
+    }
+  ],
+  "generated_from": "weekly-ephemeris-2026.csv"
+}

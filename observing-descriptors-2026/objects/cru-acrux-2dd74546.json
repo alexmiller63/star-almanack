@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W20-5",
+  "best_visibility_date": "2026-05-15",
+  "identity": {
+    "category": "bayer",
+    "designation": "α Cru",
+    "display_name": "α Cru — Acrux",
+    "constellation": "Cru"
+  },
+  "observing": {
+    "naked_eye": "Bright and easy to see unaided; use Acrux as a primary landmark for the surrounding constellation.",
+    "binoculars": "Binoculars isolate the star from the surrounding pattern and make star-hopping easier.",
+    "telescope": "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
+  },
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

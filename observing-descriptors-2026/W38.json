@@ -1,79 +1,69 @@
 {
   "schema": "star-almanack.observing-week.v1",
   "iso_week": "2026-W38",
-  "selection_policy": {
-    "inline_descriptor_count": 4,
-    "linked_descriptor_count": 6,
-    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
-  },
   "inline_descriptors": [
     {
       "display_name": "α Del — Sualocin",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W38-4",
-      "href": "objects/bayer-del-del-del-sualocin-2026-09-17-228a2601.json"
-    },
-    {
-      "display_name": "β Del — Rotanev",
       "relationship_to_week": "best_visibility",
-      "iso_week_date": "2026-W38-4",
-      "href": "objects/bayer-del-del-del-rotanev-2026-09-17-c76f6fba.json"
-    },
-    {
-      "display_name": "α Cyg — Deneb",
-      "relationship_to_week": "best_visibility",
-      "iso_week_date": "2026-W38-5",
-      "href": "objects/bayer-cyg-cyg-cyg-deneb-2026-09-18-9b10791c.json"
+      "href": "objects/del-sualocin-51810bce.json"
     },
     {
       "display_name": "α Ind",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W38-4",
-      "href": "objects/bayer-ind-ind-ind-2026-09-17-185f0f38.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ind-f579bf4c.json"
+    },
+    {
+      "display_name": "β Del — Rotanev",
+      "iso_week_date": "2026-W38-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/del-rotanev-8a492592.json"
+    },
+    {
+      "display_name": "α Cyg — Deneb",
+      "iso_week_date": "2026-W38-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cyg-deneb-bf22e2a5.json"
     }
   ],
   "linked_descriptors": [
     {
       "display_name": "α Del — Sualocin",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W38-4",
-      "href": "objects/bayer-del-del-del-sualocin-2026-09-17-228a2601.json"
-    },
-    {
-      "display_name": "β Del — Rotanev",
       "relationship_to_week": "best_visibility",
-      "iso_week_date": "2026-W38-4",
-      "href": "objects/bayer-del-del-del-rotanev-2026-09-17-c76f6fba.json"
-    },
-    {
-      "display_name": "α Cyg — Deneb",
-      "relationship_to_week": "best_visibility",
-      "iso_week_date": "2026-W38-5",
-      "href": "objects/bayer-cyg-cyg-cyg-deneb-2026-09-18-9b10791c.json"
+      "href": "objects/del-sualocin-51810bce.json"
     },
     {
       "display_name": "α Ind",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W38-4",
-      "href": "objects/bayer-ind-ind-ind-2026-09-17-185f0f38.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/ind-f579bf4c.json"
+    },
+    {
+      "display_name": "β Del — Rotanev",
+      "iso_week_date": "2026-W38-4",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/del-rotanev-8a492592.json"
+    },
+    {
+      "display_name": "α Cyg — Deneb",
+      "iso_week_date": "2026-W38-5",
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cyg-deneb-bf22e2a5.json"
     },
     {
       "display_name": "β Pav",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W38-6",
-      "href": "objects/bayer-pav-pav-pav-2026-09-19-901975a5.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/pav-7a81e0bc.json"
     },
     {
       "display_name": "α Mic",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W38-7",
-      "href": "objects/bayer-mic-mic-mic-2026-09-20-af7775cf.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/mic-827bb265.json"
     }
   ],
-  "curated_routes": [
-    {
-      "id": "pegasus-enif-m15",
-      "href": "routes/pegasus-enif-m15.json"
-    }
-  ]
+  "curated_routes": []
 }

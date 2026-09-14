@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.artwork-week.v1",
+  "iso_week": "2026-W39",
+  "descriptors": [
+    {
+      "week": "W39",
+      "constellation": "Aquarius",
+      "figure_source": "constellation-figures.json",
+      "figure_standard": "accepted Martz/MacRobert stick figure",
+      "constellation_line_color": "blue",
+      "featured_asterism_color": "green",
+      "featured_asterisms": [],
+      "circle_targets": [],
+      "instructions": "Use the accepted figure paths exactly; do not invent a replacement stick figure. Draw the constellation in blue, emphasize the featured asterism in green, and circle named observing targets when present."
+    }
+  ],
+  "generated_from": "sky-note-artwork-descriptors-2026.json"
+}

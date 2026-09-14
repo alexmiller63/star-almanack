@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W17-7",
+  "best_visibility_date": "2026-04-26",
+  "identity": {
+    "category": "messier",
+    "designation": "M97",
+    "display_name": "M97 — Owl Nebula",
+    "constellation": "UMa"
+  },
+  "observing": {
+    "naked_eye": "Not normally identifiable as a distinct object to the unaided eye.",
+    "binoculars": "Usually stellar or nearly stellar in binoculars; careful comparison with nearby stars is the key.",
+    "telescope": "Moderate to high power reveals the small nebular disk or ring-like structure; a nebula filter can help separate it from the stellar field."
+  },
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

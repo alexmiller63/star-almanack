@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W49-4",
+  "best_visibility_date": "2026-12-03",
+  "identity": {
+    "category": "messier",
+    "designation": "M74",
+    "display_name": "M74",
+    "constellation": "Psc"
+  },
+  "observing": {
+    "naked_eye": "Not normally visible to the unaided eye; begin with a star-hop from nearby bright stars.",
+    "binoculars": "Under a dark sky, look for a faint diffuse glow with a brighter central concentration; sky transparency is crucial.",
+    "telescope": "Begin at low power to secure the galaxy, then increase magnification moderately to examine the core, elongation, and any visible structure."
+  },
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

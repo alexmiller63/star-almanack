@@ -1,79 +1,69 @@
 {
   "schema": "star-almanack.observing-week.v1",
   "iso_week": "2026-W37",
-  "selection_policy": {
-    "inline_descriptor_count": 4,
-    "linked_descriptor_count": 6,
-    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
-  },
   "inline_descriptors": [
     {
       "display_name": "M75",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-2",
-      "href": "objects/messier-m75-sgr-m75-2026-09-08-b2e1d2a2.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m75-d9ae43ba.json"
     },
     {
       "display_name": "M29",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-7",
-      "href": "objects/messier-m29-cyg-m29-2026-09-13-24dcb16b.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m29-8da936fe.json"
     },
     {
       "display_name": "α Cap — Algedi",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-5",
-      "href": "objects/bayer-cap-cap-cap-algedi-2026-09-11-a2712f84.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cap-algedi-3f69854e.json"
     },
     {
       "display_name": "β Cap — Dabih",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-6",
-      "href": "objects/bayer-cap-cap-cap-dabih-2026-09-12-29011240.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cap-dabih-6d1f5796.json"
     }
   ],
   "linked_descriptors": [
     {
       "display_name": "M75",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-2",
-      "href": "objects/messier-m75-sgr-m75-2026-09-08-b2e1d2a2.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m75-d9ae43ba.json"
     },
     {
       "display_name": "M29",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-7",
-      "href": "objects/messier-m29-cyg-m29-2026-09-13-24dcb16b.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m29-8da936fe.json"
     },
     {
       "display_name": "α Cap — Algedi",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-5",
-      "href": "objects/bayer-cap-cap-cap-algedi-2026-09-11-a2712f84.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cap-algedi-3f69854e.json"
     },
     {
       "display_name": "β Cap — Dabih",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-6",
-      "href": "objects/bayer-cap-cap-cap-dabih-2026-09-12-29011240.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cap-dabih-6d1f5796.json"
     },
     {
       "display_name": "α Pav — Peacock",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W37-7",
-      "href": "objects/bayer-pav-pav-pav-peacock-2026-09-13-567008c1.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/pav-peacock-825a4208.json"
     },
     {
-      "display_name": "M27 — Dumbbell Nebula",
+      "display_name": "M55",
+      "iso_week_date": "2026-W36-2",
       "relationship_to_week": "nearby_best_visibility",
-      "iso_week_date": "2026-W36-7",
-      "href": "objects/messier-m27-vul-m27-dumbbell-nebula-2026-09-06-87dc3f17.json"
+      "href": "objects/m55-d411b138.json"
     }
   ],
-  "curated_routes": [
-    {
-      "id": "pegasus-enif-m15",
-      "href": "routes/pegasus-enif-m15.json"
-    }
-  ]
+  "curated_routes": []
 }

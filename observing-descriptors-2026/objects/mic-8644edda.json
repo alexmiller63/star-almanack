@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W39-1",
+  "best_visibility_date": "2026-09-21",
+  "identity": {
+    "category": "bayer",
+    "designation": "β Mic",
+    "display_name": "β Mic",
+    "constellation": "Mic"
+  },
+  "observing": {
+    "naked_eye": "Near or beyond the practical unaided-eye limit for many observers; use optical aid for a reliable identification.",
+    "binoculars": "Binoculars isolate the star from the surrounding pattern and make star-hopping easier.",
+    "telescope": "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
+  },
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

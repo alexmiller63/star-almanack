@@ -1,79 +1,69 @@
 {
   "schema": "star-almanack.observing-week.v1",
   "iso_week": "2026-W40",
-  "selection_policy": {
-    "inline_descriptor_count": 4,
-    "linked_descriptor_count": 6,
-    "ordering": "same-week first, then nearest best-visibility week; Messier objects preferred"
-  },
   "inline_descriptors": [
     {
       "display_name": "M15 — Great Pegasus Globular",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-4",
-      "href": "objects/messier-m15-peg-m15-great-pegasus-globular-2026-10-01-12227e32.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m15-great-pegasus-globular-7c10d868.json"
     },
     {
       "display_name": "M2",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-5",
-      "href": "objects/messier-m2-aqr-m2-2026-10-02-cbaf7b1e.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m2-42eb0165.json"
     },
     {
       "display_name": "M39",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-5",
-      "href": "objects/messier-m39-cyg-m39-2026-10-02-16de7d63.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m39-fb01a03a.json"
     },
     {
       "display_name": "M30",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-7",
-      "href": "objects/messier-m30-cap-m30-2026-10-04-4e130fe4.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m30-fb596a86.json"
     }
   ],
   "linked_descriptors": [
     {
       "display_name": "M15 — Great Pegasus Globular",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-4",
-      "href": "objects/messier-m15-peg-m15-great-pegasus-globular-2026-10-01-12227e32.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m15-great-pegasus-globular-7c10d868.json"
     },
     {
       "display_name": "M2",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-5",
-      "href": "objects/messier-m2-aqr-m2-2026-10-02-cbaf7b1e.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m2-42eb0165.json"
     },
     {
       "display_name": "M39",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-5",
-      "href": "objects/messier-m39-cyg-m39-2026-10-02-16de7d63.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m39-fb01a03a.json"
     },
     {
       "display_name": "M30",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-7",
-      "href": "objects/messier-m30-cap-m30-2026-10-04-4e130fe4.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/m30-fb596a86.json"
     },
     {
       "display_name": "α Cep — Alderamin",
-      "relationship_to_week": "best_visibility",
       "iso_week_date": "2026-W40-1",
-      "href": "objects/bayer-cep-cep-cep-alderamin-2026-09-28-a5181ec5.json"
+      "relationship_to_week": "best_visibility",
+      "href": "objects/cep-alderamin-a27b557b.json"
     },
     {
-      "display_name": "β Cep — Alfirk",
+      "display_name": "β Equ",
+      "iso_week_date": "2026-W40-2",
       "relationship_to_week": "best_visibility",
-      "iso_week_date": "2026-W40-4",
-      "href": "objects/bayer-cep-cep-cep-alfirk-2026-10-01-da7363b7.json"
+      "href": "objects/equ-bdc84079.json"
     }
   ],
-  "curated_routes": [
-    {
-      "id": "pegasus-enif-m15",
-      "href": "routes/pegasus-enif-m15.json"
-    }
-  ]
+  "curated_routes": []
 }

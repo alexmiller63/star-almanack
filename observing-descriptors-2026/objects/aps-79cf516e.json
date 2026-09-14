@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W29-4",
+  "best_visibility_date": "2026-07-16",
+  "identity": {
+    "category": "bayer",
+    "designation": "β Aps",
+    "display_name": "β Aps",
+    "constellation": "Aps"
+  },
+  "observing": {
+    "naked_eye": "Visible unaided from a reasonably dark site, but easier after full dark adaptation.",
+    "binoculars": "Binoculars isolate the star from the surrounding pattern and make star-hopping easier.",
+    "telescope": "A telescope sharpens the local field and helps inspect nearby companions; the star itself remains an unresolved point of light."
+  },
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}

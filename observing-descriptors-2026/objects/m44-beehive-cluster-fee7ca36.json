@@ -1,0 +1,18 @@
+{
+  "schema": "star-almanack.observing-object.v1",
+  "iso_year": 2026,
+  "iso_week_date": "2026-W11-7",
+  "best_visibility_date": "2026-03-15",
+  "identity": {
+    "category": "messier",
+    "designation": "M44",
+    "display_name": "M44 — Beehive Cluster",
+    "constellation": "Cnc"
+  },
+  "observing": {
+    "naked_eye": "Visible to the unaided eye as a soft patch in Cancer under a dark sky.",
+    "binoculars": "An excellent binocular target: the cluster separates from the field and its brightest members begin to stand out.",
+    "telescope": "Low to moderate power resolves many more members; use a wide field first so the cluster remains visually coherent."
+  },
+  "generated_from": "fixed-object-sky-notes-2026.csv"
+}
