@@ -1,69 +1,140 @@
-name: Generate 2026 fixed-object sky notes
+name: Generate fixed-object Sky Notes
 
 "on":
   workflow_dispatch:
+    inputs:
+      start_year:
+        description: First ISO year
+        required: true
+        default: "2026"
+        type: string
+      end_year:
+        description: Last ISO year
+        required: true
+        default: "2028"
+        type: string
   push:
     paths:
       - fixed-objects.yaml
       - in_milky_way.py
+      - compute_bayer_visibility_2026.py
       - data/milky-way/vieira-outer.json
-      - generate_fixed_object_sky_notes_2026.py
+      - generate_fixed_object_sky_notes.py
       - .github/workflows/generate-fixed-object-sky-notes-2026.yml
 
 permissions:
   contents: write
 
+concurrency:
+  group: star-almanack-fixed-object-sky-notes
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
+    env:
+      START_YEAR: ${{ inputs.start_year || '2026' }}
+      END_YEAR: ${{ inputs.end_year || '2028' }}
+
     steps:
       - name: Check out Star Almanack
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install YAML parser
         run: python -m pip install --disable-pip-version-check pyyaml
 
-      - name: Generate observing notes
-        run: python generate_fixed_object_sky_notes_2026.py
+      - name: Destroy and recreate requested yearly Sky Notes
+        run: |
+          python generate_fixed_object_sky_notes.py \
+            --start-year "$START_YEAR" \
+            --end-year "$END_YEAR"
 
-      - name: Validate output
+      - name: Validate yearly outputs and preserved visibility rule
         run: |
           python - <<'PY'
           import csv
+          import os
           from pathlib import Path
 
-          p = Path('fixed-object-sky-notes-2026.csv')
-          rows = list(csv.DictReader(p.open(encoding='utf-8')))
-          if not rows:
-              raise SystemExit('No observing notes generated')
-          required = {'naked_eye', 'binoculars', 'telescope', 'iso', 'in_milky_way'}
-          if not required.issubset(rows[0]):
-              raise SystemExit('Missing output columns')
-          if any(not r['naked_eye'] or not r['binoculars'] or not r['telescope'] for r in rows):
-              raise SystemExit('Blank observing note found')
-          if any(not r['iso'].startswith('2026-W') for r in rows):
-              raise SystemExit('Non-ISO-2026 row found')
-          lookup = {(r['category'], r['object'], r['constellation']): r for r in rows}
-          if lookup[('messier', 'M8', 'Sgr')]['in_milky_way'] != 'yes':
-              raise SystemExit('M8 Milky Way classification lost')
-          if lookup[('messier', 'M31', 'And')]['in_milky_way'] != 'no':
-              raise SystemExit('M31 Milky Way classification lost')
-          print(f'rows={len(rows)} validation=PASS')
+          from compute_bayer_visibility_2026 import REGRESSION
+          from generate_fixed_object_sky_notes import best_visibility_for_iso_year
+
+          start = int(os.environ["START_YEAR"])
+          end = int(os.environ["END_YEAR"])
+          required = {
+              "category", "object", "name", "constellation", "best", "iso",
+              "in_milky_way", "naked_eye", "binoculars", "telescope",
+          }
+          counts = set()
+          for year in range(start, end + 1):
+              path = Path(f"fixed-object-sky-notes-{year}.csv")
+              rows = list(csv.DictReader(path.open(encoding="utf-8")))
+              assert rows, f"No observing notes generated for {year}"
+              assert required.issubset(rows[0]), f"Missing output columns for {year}"
+              assert all(r["iso"].startswith(f"{year}-W") for r in rows)
+              assert all(r["naked_eye"] and r["binoculars"] and r["telescope"] for r in rows)
+              lookup = {(r["category"], r["object"], r["constellation"]): r for r in rows}
+              assert lookup[("messier", "M8", "Sgr")]["in_milky_way"] == "yes"
+              assert lookup[("messier", "M31", "And")]["in_milky_way"] == "no"
+              counts.add(len(rows))
+              print(f"{year}: rows={len(rows)} validation=PASS")
+          assert len(counts) == 1, f"Yearly catalog counts differ: {counts}"
+
+          if start <= 2026 <= end:
+              from compute_bayer_visibility_2026 import REGRESSION_BAYER
+
+              with Path("expanded-bayer-stars.csv").open(encoding="utf-8", newline="") as handle:
+                  stars = list(csv.DictReader(handle))
+              by_name = {
+                  row["proper"]: float(row["ra_h"])
+                  for row in stars if (row.get("proper") or "").strip()
+              }
+              by_bayer = {
+                  (row["bayer_code"], row["con"]): float(row["ra_h"])
+                  for row in stars
+              }
+              for name, expected in REGRESSION.items():
+                  ra = (
+                      by_bayer[REGRESSION_BAYER[name]]
+                      if name in REGRESSION_BAYER
+                      else by_name[name]
+                  )
+                  _, actual_date = best_visibility_for_iso_year(ra, 2026)
+                  assert actual_date.isoformat() == expected, (
+                      name, expected, actual_date.isoformat()
+                  )
+              print("Best-visibility regression: 15/15 PASS")
           PY
 
-      - name: Commit observing notes
+      - name: Verify regenerative output is idempotent
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add fixed-object-sky-notes-2026.csv
+          for year in $(seq "$START_YEAR" "$END_YEAR"); do
+            sha256sum "fixed-object-sky-notes-$year.csv"
+          done > /tmp/sky-notes-before.sha256
+          python generate_fixed_object_sky_notes.py \
+            --start-year "$START_YEAR" \
+            --end-year "$END_YEAR"
+          for year in $(seq "$START_YEAR" "$END_YEAR"); do
+            sha256sum "fixed-object-sky-notes-$year.csv"
+          done > /tmp/sky-notes-after.sha256
+          diff -u /tmp/sky-notes-before.sha256 /tmp/sky-notes-after.sha256
+
+      - name: Commit regenerated yearly Sky Notes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fixed-object-sky-notes-*.csv
           if git diff --cached --quiet; then
-            echo 'No sky-note changes.'
+            echo "No Sky Note changes."
             exit 0
           fi
-          git commit -m 'Generate 2026 fixed-object sky notes'
+          git commit -m "Generate fixed-object Sky Notes $START_YEAR-$END_YEAR"
+          git pull --rebase origin main
           git push
