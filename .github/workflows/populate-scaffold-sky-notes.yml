@@ -1,0 +1,75 @@
+name: Populate Scaffold Sky Notes
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: ISO year
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: populate-scaffold-sky-notes
+  cancel-in-progress: false
+
+jobs:
+  populate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Recreate Sky Notes
+        run: python populate_scaffold_sky_notes.py "${{ inputs.year }}"
+
+      - name: Validate ownership and idempotence
+        env:
+          YEAR: ${{ inputs.year }}
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import hashlib
+          import os
+          import subprocess
+          from pathlib import Path
+
+          year = int(os.environ["YEAR"])
+          weeks = dt.date(year, 12, 28).isocalendar().week
+          scaffold = Path(f"year-scaffolds/almanack-{year}.md")
+          descriptors = Path(f"observing-descriptors-{year}")
+          text = scaffold.read_text(encoding="utf-8")
+          assert text.count("<!-- BEGIN GENERATED: sky-note -->") == weeks
+          assert text.count("The following observer guidance is derived") == weeks
+          assert len(list(descriptors.glob("W??.json"))) == weeks
+
+          def digest_tree():
+              paths = [scaffold, *sorted(p for p in descriptors.rglob("*") if p.is_file())]
+              return [(str(path), hashlib.sha256(path.read_bytes()).hexdigest()) for path in paths]
+
+          before = digest_tree()
+          subprocess.run(["python", "populate_scaffold_sky_notes.py", str(year)], check=True)
+          assert before == digest_tree(), "Sky Note generation is not idempotent"
+          print(f"Validated {weeks} regenerated Sky Note blocks for {year}")
+          PY
+
+      - name: Commit regenerated Sky Notes
+        env:
+          YEAR: ${{ inputs.year }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "year-scaffolds/almanack-$YEAR.md" "observing-descriptors-$YEAR"
+          if git diff --cached --quiet; then
+            echo "No Sky Note changes."
+            exit 0
+          fi
+          git commit -m "Populate $YEAR scaffold Sky Notes"
+          git pull --rebase origin main
+          git push origin HEAD:main
