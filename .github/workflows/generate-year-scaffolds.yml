@@ -1,0 +1,103 @@
+name: Generate Year Scaffolds
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_year:
+        description: Start year
+        required: true
+        type: string
+      end_year:
+        description: End year (blank means start year only)
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-year-scaffolds
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Recreate requested year scaffolds
+        env:
+          START_YEAR: ${{ inputs.start_year }}
+          END_YEAR: ${{ inputs.end_year }}
+        run: |
+          args=("$START_YEAR")
+          if [ -n "$END_YEAR" ]; then
+            args+=("$END_YEAR")
+          fi
+          python generate_year_scaffolds.py "${args[@]}"
+
+      - name: Validate structure and idempotence
+        env:
+          START_YEAR: ${{ inputs.start_year }}
+          END_YEAR: ${{ inputs.end_year }}
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import hashlib
+          import os
+          import subprocess
+          from pathlib import Path
+
+          start = int(os.environ["START_YEAR"])
+          end_text = os.environ.get("END_YEAR", "").strip()
+          end = int(end_text) if end_text else start
+          assert end >= start, "End year cannot be earlier than start year"
+
+          before = {}
+          for year in range(start, end + 1):
+              path = Path(f"year-scaffolds/almanack-{year}.md")
+              text = path.read_text(encoding="utf-8")
+              weeks = dt.date(year, 12, 28).isocalendar().week
+              assert text.count(f"## ISO {year}-W") == weeks
+              for owner in (
+                  "calendar",
+                  "solar-system-ephemeris",
+                  "sky-note",
+                  "observing-descriptors",
+                  "chart",
+              ):
+                  assert text.count(f"<!-- BEGIN GENERATED: {owner} -->") == weeks
+                  assert text.count(f"<!-- END GENERATED: {owner} -->") == weeks
+              before[path] = hashlib.sha256(path.read_bytes()).hexdigest()
+
+          command = ["python", "generate_year_scaffolds.py", str(start)]
+          if end_text:
+              command.append(str(end))
+          subprocess.run(command, check=True)
+
+          after = {
+              path: hashlib.sha256(path.read_bytes()).hexdigest()
+              for path in before
+          }
+          assert before == after, "Scaffold generation is not idempotent"
+          print(f"Validated regenerative scaffolds for {start} through {end}")
+          PY
+
+      - name: Commit requested scaffolds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add year-scaffolds
+          if git diff --cached --quiet; then
+            echo "No scaffold changes."
+            exit 0
+          fi
+          git commit -m "Generate ISO year scaffolds"
+          git pull --rebase origin main
+          git push origin HEAD:main
