@@ -167,6 +167,15 @@ jobs:
           print('Verified 53 weeks, 371 day rows, 110 Messier objects, 53 curated Sky Notes, shared-data planetary notes, and accepted-figure artwork descriptors')
           PY
 
+      - name: Verify regenerative build is idempotent
+        run: |
+          sha256sum almanack-expanded.md sky-note-artwork-descriptors-2026.json > /tmp/star-almanack-before.sha256
+          python build_expanded_almanack.py
+          python enrich_stellar_entries.py
+          python apply_sky_notes.py
+          sha256sum almanack-expanded.md sky-note-artwork-descriptors-2026.json > /tmp/star-almanack-after.sha256
+          diff -u /tmp/star-almanack-before.sha256 /tmp/star-almanack-after.sha256
+
       - name: Commit expanded Almanack source and Sky Note artwork descriptors
         run: |
           git config user.name "github-actions[bot]"

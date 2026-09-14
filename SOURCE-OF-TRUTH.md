@@ -109,6 +109,31 @@ The variable-star reconciliation identifies `eps Peg` as variable. Therefore:
 
 Here `Tropical` is the Declination Band and `Autumn` is the Season.
 
+## Regenerative generator ownership
+
+Every generated artifact is disposable. A generator owns a precisely bounded
+section or output directory and MUST discard that owned output before rebuilding
+it solely from authoritative inputs. Generated Markdown, HTML, JSON, SVG, and
+other rendered output MUST NOT be treated as source for the next run.
+
+For a selected ISO-week range, destruction is limited to the selected owners:
+
+- the Calendar Generator recreates each selected Calendar section;
+- the Ephemeris Generator recreates each selected ephemeris section;
+- the Sky Notes Generator recreates each selected Sky Note section, including
+  its descriptor relationships and links;
+- the Planet Finder Generator recreates each selected finder section and its
+  owned files;
+- the Artwork Generator recreates each selected artwork directory.
+
+A missing or invalid authoritative input MUST stop generation. It MUST NOT cause
+old generated output to be retained as a fallback. Publication happens only
+after the recreated output validates successfully.
+
+All generators MUST be idempotent: running the same generator twice with the
+same inputs and selected range must produce byte-for-byte identical owned
+output. CI shall verify this invariant for the integrated Almanack build.
+
 ## Maintenance rule
 
 When a stellar entry is wrong or incomplete, correct the appropriate catalog, visibility computation, or enrichment source and regenerate. Do not hand-patch a single weekly HTML page except while diagnosing a rendering problem.
