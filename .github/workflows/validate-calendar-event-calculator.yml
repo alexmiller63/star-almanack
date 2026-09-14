@@ -85,9 +85,9 @@ jobs:
                       f"accepted={accepted_ingresses[event['symbol']].isoformat()} "
                       f"difference={error:.0f}s"
                   )
+          worst_event = calculated["zodiac_ingresses"][worst_ingress]
           print(
-              f"  worst: {calculated["zodiac_ingresses"][worst_ingress]["symbol"]} "
-              f"{ingress_errors[worst_ingress]:.0f}s"
+              f"  worst: {worst_event['symbol']} {worst_ingress and ingress_errors[worst_ingress]:.0f}s"
           )
           assert max(ingress_errors) <= 120, max(ingress_errors)
 
