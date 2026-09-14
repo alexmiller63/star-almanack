@@ -67,10 +67,10 @@ jobs:
               assert text.count(f"## ISO {year}-W") == weeks
               for owner in (
                   "calendar",
-                  "solar-system-ephemeris",
+                  "ephemeris",
                   "sky-note",
-                  "observing-descriptors",
-                  "chart",
+                  "planet-finder",
+                  "artwork",
               ):
                   assert text.count(f"<!-- BEGIN GENERATED: {owner} -->") == weeks
                   assert text.count(f"<!-- END GENERATED: {owner} -->") == weeks
