@@ -92,7 +92,21 @@ jobs:
           assert max(ingress_errors) <= 120, max(ingress_errors)
 
           worst_phase = max(range(len(phase_errors)), key=phase_errors.__getitem__)
-          print(f"Lunar-phase maximum difference: {phase_errors[worst_phase]:.0f}s")
+          worst_calculated = calculated["lunar_phases"][worst_phase]
+          worst_reference = accepted_phases[worst_phase]
+          signed_phase_error = (
+              dt.datetime.fromisoformat(worst_calculated["utc"].replace("Z", "+00:00"))
+              - worst_reference[2]
+          ).total_seconds()
+          print(
+              f"Lunar-phase maximum difference: {phase_errors[worst_phase]:.0f}s"
+          )
+          print(
+              f"  worst: {worst_calculated['symbol']} {worst_calculated['name']}: "
+              f"calculated={worst_calculated['utc']} "
+              f"accepted={worst_reference[2].isoformat()} "
+              f"signed_difference={signed_phase_error:+.0f}s"
+          )
           assert max(phase_errors) <= 120, max(phase_errors)
           print(f"2026 regression PASS: ingress max {max(ingress_errors):.0f}s; phase max {max(phase_errors):.0f}s")
           PY
