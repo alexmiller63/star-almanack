@@ -1,0 +1,63 @@
+name: Acquire IAU Constellation Boundaries
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: acquire-iau-constellation-boundaries
+  cancel-in-progress: false
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Acquire authoritative IAU boundary snapshot
+        run: python acquire_iau_constellation_boundaries.py
+
+      - name: Verify snapshot manifest
+        run: |
+          python - <<'PY'
+          import csv
+          import hashlib
+          import json
+          from pathlib import Path
+
+          root = Path('source-data/iau/constellation-boundaries')
+          provenance = json.loads((root / 'provenance.json').read_text(encoding='utf-8'))
+          with (root / 'manifest.csv').open(encoding='utf-8', newline='') as f:
+              rows = list(csv.DictReader(f))
+
+          expected = provenance['authoritative_inventory']
+          assert len(rows) == provenance['authoritative_inventory_count']
+          assert sorted(row['iau_abbreviation'] for row in rows) == expected
+
+          for row in rows:
+              path = Path(row['local_path'])
+              data = path.read_bytes()
+              assert len(data) == int(row['byte_size'])
+              assert hashlib.sha256(data).hexdigest() == row['sha256']
+
+          print(f"Verified {len(rows)} authoritative boundary resources")
+          PY
+
+      - name: Commit preserved snapshot
+        run: |
+          if git diff --quiet -- source-data/iau/constellation-boundaries && \
+             git ls-files --error-unmatch source-data/iau/constellation-boundaries/provenance.json >/dev/null 2>&1; then
+            echo "Snapshot already preserved; nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source-data/iau/constellation-boundaries
+          git commit -m "Preserve authoritative IAU constellation boundary snapshot"
+          git push
