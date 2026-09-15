@@ -32,7 +32,7 @@ TXT_LINK_RE = re.compile(
     re.IGNORECASE,
 )
 ROW_RE = re.compile(
-    r"^\s*\d{1,2}\s+\d{1,2}\s+\d{1,2}(?:\.\d+)?\|\s*[+-]?\d+(?:\.\d+)?\|(?P<abbr>[A-Za-z]{3})\s*$"
+    r"^\s*\d{1,2}\s+\d{1,2}\s+\d{1,2}(?:\.\d+)?\|\s*[+-]?\d+(?:\.\d+)?\|(?P<label>[A-Za-z]{3}\d*)\s*$"
 )
 
 
@@ -67,7 +67,11 @@ def boundary_abbreviation(data: bytes, url: str) -> str:
         if not match:
             raise RuntimeError(f"invalid boundary row in {url}: {line!r}")
         data_rows += 1
-        abbreviations.add(match.group("abbr").upper())
+        label = match.group("label").upper()
+        # The IAU boundary resources label the two Serpens polygons SER1 and
+        # SER2.  The numeric suffix identifies the resource/polygon, while the
+        # underlying IAU constellation abbreviation remains SER.
+        abbreviations.add(label[:3])
     if not data_rows:
         raise RuntimeError(f"no boundary coordinate rows in {url}")
     if len(abbreviations) != 1:
