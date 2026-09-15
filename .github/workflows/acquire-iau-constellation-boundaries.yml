@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
 
       - name: Acquire authoritative IAU boundary snapshot
-        run: python acquire_iau_constellation_boundaries.py
+        run: python acquire_iau_constellation_boundaries.py --replace
 
       - name: Verify snapshot manifest
         run: |
@@ -28,6 +28,7 @@ jobs:
           import csv
           import hashlib
           import json
+          from collections import Counter
           from pathlib import Path
 
           root = Path('source-data/iau/constellation-boundaries')
@@ -35,29 +36,38 @@ jobs:
           with (root / 'manifest.csv').open(encoding='utf-8', newline='') as f:
               rows = list(csv.DictReader(f))
 
-          expected = provenance['authoritative_inventory']
-          assert len(rows) == provenance['authoritative_inventory_count']
-          assert sorted(row['iau_abbreviation'] for row in rows) == expected
+          assert provenance['authoritative_resource_count'] == 89
+          assert provenance['unique_constellation_count'] == 88
+          assert len(rows) == 89
+          counts = Counter(row['iau_abbreviation'] for row in rows)
+          assert len(counts) == 88
+          assert counts['SER'] == 2
+          assert all(count == 1 for abbr, count in counts.items() if abbr != 'SER')
+
+          expected_urls = sorted(provenance['authoritative_inventory'])
+          assert sorted(row['source_url'] for row in rows) == expected_urls
+          assert len({row['resource_filename'] for row in rows}) == 89
 
           for row in rows:
-              path = Path(row['local_path'])
+              path = root / row['local_path']
               data = path.read_bytes()
               assert len(data) == int(row['byte_size'])
               assert hashlib.sha256(data).hexdigest() == row['sha256']
 
-          print(f"Verified {len(rows)} authoritative boundary resources")
+          index_data = (root / provenance['index_local_path']).read_bytes()
+          assert hashlib.sha256(index_data).hexdigest() == provenance['index_sha256']
+          print('Verified 89 boundary resources representing 88 IAU constellations; SER occurs twice')
           PY
 
       - name: Commit preserved snapshot
         run: |
-          if git diff --quiet -- source-data/iau/constellation-boundaries && \
-             git ls-files --error-unmatch source-data/iau/constellation-boundaries/provenance.json >/dev/null 2>&1; then
-            echo "Snapshot already preserved; nothing to commit."
+          if git diff --quiet -- source-data/iau/constellation-boundaries; then
+            echo "Snapshot unchanged; nothing to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add source-data/iau/constellation-boundaries
-          git commit -m "Preserve authoritative IAU constellation boundary snapshot"
+          git commit -m "Correct IAU boundary snapshot for split Serpens"
           git push
